@@ -1,12 +1,12 @@
-name = "dream-ai-lab"
+name = "dreamailab"
 compatibility_date = "2024-01-01"
 
-[build]
-command = "npm run build:static"
-output_directory = "out"
+# 정적 사이트 (Next.js export → out/)
+[assets]
+directory = "./out"
 
 [env.production]
-name = "dream-ai-lab-production"
+name = "dreamailab-production"
 
 [env.staging]
-name = "dream-ai-lab-staging" 
+name = "dreamailab-staging" 
