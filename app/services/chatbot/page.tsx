@@ -141,6 +141,7 @@ export default function ChatbotService() {
       <Header />
       
       {/* Hero Section */}
+      {/* 1. Hero Section */}
       <section className="bg-gradient-to-br from-primary-600 to-secondary-600 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
@@ -304,7 +305,25 @@ export default function ChatbotService() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* 7. Service Status */}
+      <section className="py-12 bg-white">
+        <div className="max-w-3xl mx-auto px-4 text-center">
+          <span className="inline-block px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-semibold mb-4">Live Service</span>
+          <p className="text-gray-600">법률이AI·히포크라테스AI·마음이AI·자람이AI 등 전문 분야별 AI 챗봇이 서비스 중입니다.</p>
+        </div>
+      </section>
+
+      {/* 8. Ecosystem Connection */}
+      <section className="py-12 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">DAL 생태계와의 연결</h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">AI 챗봇 서비스들은 DAL AI 플랫폼 기반으로, 각 전문 도메인(법률·의료·정신건강·발달장애 등)을 연결합니다. 자람이·토탈케어로그와 데이터 연동.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* 9. CTA */}
       <section className="py-16 lg:py-24 bg-gradient-to-r from-primary-600 to-secondary-600 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-6">

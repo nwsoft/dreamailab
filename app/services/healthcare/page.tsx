@@ -16,7 +16,7 @@ export default function HealthcareService() {
     <div className="min-h-screen bg-gray-50">
       <Header />
 
-      {/* ========== Hero Section ========== */}
+      {/* 1. Hero Section */}
       <section className="bg-gradient-to-br from-primary-700 to-secondary-600 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
@@ -32,13 +32,65 @@ export default function HealthcareService() {
               <span className="bg-white/10 border border-white/20 text-white px-3 py-1 rounded-full">전방향(생활·교육·건강)</span>
               <span className="bg-white/10 border border-white/20 text-white px-3 py-1 rounded-full">AI 디지털케어로그</span>
             </div>
+            <div className="mt-6">
+              <span className="inline-block px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-semibold">Live Service</span>
+            </div>
           </div>
         </div>
       </section>
 
-      
+      {/* 2. Problem Definition */}
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">올바른 의료 문화 — 정보 비대칭을 줄입니다</h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">
+              과장·광고 중심의 정보 대신, <strong>근거 기반</strong> 설명과 <strong>투명한 기대치</strong>를 제공합니다. 사용자가 스스로 이해하고 결정하도록 돕습니다.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div className="bg-gray-50 rounded-xl p-6 shadow">
+              <h3 className="font-bold text-gray-900 mb-2">근거 기반 설명(XAI)</h3>
+              <p className="text-sm text-gray-700">권고·경보에는 <strong>이유</strong>와 <strong>근거</strong>(가이드라인·공식 라벨·통계)를 함께 제시합니다.</p>
+            </div>
+            <div className="bg-gray-50 rounded-xl p-6 shadow">
+              <h3 className="font-bold text-gray-900 mb-2">과잉 진료 예방</h3>
+              <p className="text-sm text-gray-700">고위험·비가역 결정은 <strong>세컨드 오피니언</strong>·경과 관찰 옵션을 안내해 성급한 결정을 줄입니다.</p>
+            </div>
+            <div className="bg-gray-50 rounded-xl p-6 shadow">
+              <h3 className="font-bold text-gray-900 mb-2">광고·과장 검증</h3>
+              <p className="text-sm text-gray-700">미용·한방·치과 등 다양한 치료에 대해 <strong>기대 효과·한계·부작용</strong>을 교육적으로 설명합니다.</p>
+            </div>
+          </div>
+          <div className="text-center mb-10">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">산업 트렌드 — 광고 중심에서 케어 성과 중심으로</h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">
+              <strong>광고·마케팅 중심</strong>에서 <strong>케어 성과 중심</strong>으로. 이제 블로그·검색 노출이 아니라 AI 케어로그가 선택 기준입니다.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-white rounded-xl p-6 shadow-lg">
+              <h3 className="font-bold text-gray-900 mb-2 text-lg">🏥 병원</h3>
+              <p className="text-sm text-gray-700"><strong>변화 전:</strong> 광고·내원 후 단절</p>
+              <p className="text-sm text-gray-700"><strong>변화 후:</strong> 케어로그 기반 리드 → 진료 준비 단축 → 재내원율↑</p>
+            </div>
+            <div className="bg-white rounded-xl p-6 shadow-lg">
+              <h3 className="font-bold text-gray-900 mb-2 text-lg">🏪 약국</h3>
+              <p className="text-sm text-gray-700"><strong>변화 전:</strong> 단발 판매</p>
+              <p className="text-sm text-gray-700"><strong>변화 후:</strong> 복약 순응도 → 리필 자동화 → 구독 모델</p>
+            </div>
+            <div className="bg-white rounded-xl p-6 shadow-lg">
+              <h3 className="font-bold text-gray-900 mb-2 text-lg">📢 마케팅</h3>
+              <p className="text-sm text-gray-700"><strong>변화 전:</strong> 광고비 소진·효과 불명</p>
+              <p className="text-sm text-gray-700"><strong>변화 후:</strong> 케어 성과로 평가 → 신뢰 기반 매칭</p>
+            </div>
+          </div>
+          <p className="mt-6 text-center text-xs text-gray-500">본 서비스는 의료교육·의사결정을 돕는 정보 제공을 목표로 하며, 구체적 진단·치료는 의료전문가 판단을 따릅니다.</p>
+        </div>
+      </section>
 
-      {/* ========== 1. 토탈케어로그란 무엇인가 ========== */}
+      {/* 3. Solution */}
+      {/* 토탈케어로그란 무엇인가 */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -84,55 +136,8 @@ export default function HealthcareService() {
         </div>
       </section>
 
-      {/* ========== 2. 어떻게 작동하나 — 디지털케어로그 파이프라인 ========== */}
-      <section className="py-16 lg:py-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">어떻게 작동하나 — 디지털케어로그 파이프라인</h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">
-              수집 → 표준화 → AI 분석 → 권고 → 연계, 5단계로 일상 데이터를 <strong>실사용 증거(RWE)</strong>로 전환합니다.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
-            <div className="bg-white rounded-xl p-6 shadow-lg text-center">
-              <div className="text-3xl mb-2">📥</div>
-              <h3 className="font-bold text-gray-900 mb-2">1. 수집</h3>
-              <p className="text-sm text-gray-700">앱·음성·웨어러블·설문으로 자동/수동 수집</p>
-            </div>
-            <div className="bg-white rounded-xl p-6 shadow-lg text-center">
-              <div className="text-3xl mb-2">🔧</div>
-              <h3 className="font-bold text-gray-900 mb-2">2. 표준화</h3>
-              <p className="text-sm text-gray-700">통일된 스키마로 정규화 (의료 상호운용성)</p>
-            </div>
-            <div className="bg-white rounded-xl p-6 shadow-lg text-center">
-              <div className="text-3xl mb-2">🧠</div>
-              <h3 className="font-bold text-gray-900 mb-2">3. AI 분석</h3>
-              <p className="text-sm text-gray-700">개인 기준치·추세·이상치·트리거 탐지</p>
-            </div>
-            <div className="bg-white rounded-xl p-6 shadow-lg text-center">
-              <div className="text-3xl mb-2">💡</div>
-              <h3 className="font-bold text-gray-900 mb-2">4. 권고</h3>
-              <p className="text-sm text-gray-700">
-                행동 가이드·복약 스케줄·식단 개선 제안을 통해, 
-                의료진과 상의할 수 있는 <strong>질문 포인트</strong>를 정리해 줍니다.
-              </p>
-            </div>
-            <div className="bg-white rounded-xl p-6 shadow-lg text-center">
-              <div className="text-3xl mb-2">🔗</div>
-              <h3 className="font-bold text-gray-900 mb-2">5. 연계</h3>
-              <p className="text-sm text-gray-700">병원/약국/요양/가족과 리포트·알림 공유</p>
-            </div>
-          </div>
-          <div className="mt-8 bg-cyan-600 text-white rounded-xl p-6 shadow-lg">
-            <p className="text-center text-lg font-semibold">
-              이 파이프라인은 <strong>RWE(실사용 증거)</strong> 생성으로 이어집니다. 자세한 연구 협력과 학습 방법은 
-              <a href="#rwe" className="underline font-bold">아래 '데이터·연구 협력(RWE)'</a>에서 확인하세요.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* ========== 3. 전 생애 케어 흐름 — 한눈에 ========== */}
+      {/* 4. User Workflow */}
+      {/* 전 생애 케어 흐름 — 한눈에 */}
       <section className="py-12 lg:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
@@ -171,98 +176,8 @@ export default function HealthcareService() {
         </div>
       </section>
 
-      {/* ========== 4. 설명 가능한 AI(XAI) — 환자가 이해하는 내 치료 ========== */}
-      <section className="py-16 lg:py-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">설명 가능한 AI(XAI) — 환자가 이해하는 내 치료</h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">
-              “무슨 치료를 받는지, 이 약이 왜 필요한지, 내 몸은 어떻게 변하는지”를 <strong>쉬운 언어</strong>와 <strong>시각 자료</strong>로 설명합니다.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            <div className="bg-white rounded-xl p-6 shadow">
-              <h3 className="font-bold text-gray-900 mb-2">처방·검사 요약</h3>
-              <p className="text-sm text-gray-700">무엇을, 왜 했는지 한 줄 요약과 근거 출처 링크.</p>
-            </div>
-            <div className="bg-white rounded-xl p-6 shadow">
-              <h3 className="font-bold text-gray-900 mb-2">약물 설명</h3>
-              <p className="text-sm text-gray-700">성분·목적·주의·상호작용을 이해하기 쉬운 용어로.</p>
-            </div>
-            <div className="bg-white rounded-xl p-6 shadow">
-              <h3 className="font-bold text-gray-900 mb-2">내 몸의 변화</h3>
-              <p className="text-sm text-gray-700">혈압·수면·활동과 증상의 <strong>상관관계</strong>를 그래프로.</p>
-            </div>
-            <div className="bg-white rounded-xl p-6 shadow">
-              <h3 className="font-bold text-gray-900 mb-2">왜 이 권고?</h3>
-              <p className="text-sm text-gray-700">권고 이유·대안·주의점을 함께 제시(XAI 철학).</p>
-            </div>
-          </div>
 
-          {/* 미니 환자 리포트 예시 */}
-          <div className="mt-10 bg-white rounded-2xl p-8 shadow">
-            <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">환자 리포트 예시 (요약)</h3>
-            <div className="overflow-x-auto">
-              <table className="min-w-full text-sm border border-gray-200 rounded-lg overflow-hidden">
-                <thead className="bg-gray-50">
-                  <tr>
-                    <th className="px-4 py-2 text-left font-semibold text-gray-900">항목</th>
-                    <th className="px-4 py-2 text-left font-semibold text-gray-900">요약</th>
-                    <th className="px-4 py-2 text-left font-semibold text-gray-900">메모</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-gray-200">
-                  <tr>
-                    <td className="px-4 py-2 font-medium text-gray-900">약물 A</td>
-                    <td className="px-4 py-2 text-gray-700">혈압 조절 목적, 아침 복용 권장</td>
-                    <td className="px-4 py-2 text-gray-700">졸림 시 취침 전으로 조정</td>
-                  </tr>
-                  <tr>
-                    <td className="px-4 py-2 font-medium text-gray-900">검사 결과</td>
-                    <td className="px-4 py-2 text-gray-700">최근 2주 평균 혈압 하락 추세</td>
-                    <td className="px-4 py-2 text-gray-700">염분 섭취·수면 시간과 상관</td>
-                  </tr>
-                  <tr>
-                    <td className="px-4 py-2 font-medium text-gray-900">권고</td>
-                    <td className="px-4 py-2 text-gray-700">저염 식단·수분 섭취·저녁 산책 20분</td>
-                    <td className="px-4 py-2 text-gray-700">가이드라인 링크 제공</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <p className="mt-3 text-center text-xs text-gray-500">PDF로 저장·공유 가능. 어려운 용어는 쉬운 설명과 함께 제공합니다.</p>
-          </div>
-        </div>
-      </section>
-
-      {/* ========== 5. 올바른 의료 문화 — 정보 비대칭 해소 ========== */}
-      <section className="py-16 lg:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">올바른 의료 문화 — 정보 비대칭을 줄입니다</h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">
-              과장·광고 중심의 정보 대신, <strong>근거 기반</strong> 설명과 <strong>투명한 기대치</strong>를 제공합니다. 사용자가 스스로 이해하고 결정하도록 돕습니다.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-gray-50 rounded-xl p-6 shadow">
-              <h3 className="font-bold text-gray-900 mb-2">근거 기반 설명(XAI)</h3>
-              <p className="text-sm text-gray-700">권고·경보에는 <strong>이유</strong>와 <strong>근거</strong>(가이드라인·공식 라벨·통계)를 함께 제시합니다.</p>
-            </div>
-            <div className="bg-gray-50 rounded-xl p-6 shadow">
-              <h3 className="font-bold text-gray-900 mb-2">과잉 진료 예방</h3>
-              <p className="text-sm text-gray-700">고위험·비가역 결정은 <strong>세컨드 오피니언</strong>·경과 관찰 옵션을 안내해 성급한 결정을 줄입니다.</p>
-            </div>
-            <div className="bg-gray-50 rounded-xl p-6 shadow">
-              <h3 className="font-bold text-gray-900 mb-2">광고·과장 검증</h3>
-              <p className="text-sm text-gray-700">미용·한방·치과 등 다양한 치료에 대해 <strong>기대 효과·한계·부작용</strong>을 교육적으로 설명합니다.</p>
-            </div>
-          </div>
-          <p className="mt-6 text-center text-xs text-gray-500">본 서비스는 의료교육·의사결정을 돕는 정보 제공을 목표로 하며, 구체적 진단·치료는 의료전문가 판단을 따릅니다.</p>
-        </div>
-      </section>
-
-      {/* ========== 6. 사용자 체감 예시 (일반 + 항암 + 한방) ========== */}
+      {/* 4. User Workflow — 사용자 체감 예시 */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -328,99 +243,119 @@ export default function HealthcareService() {
         </div>
       </section>
 
-      {/* ========== 4. 산업 트렌드 변화 ========== */}
+      {/* 5. Technology Advantage (Short) */}
       <section className="py-16 lg:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">산업 트렌드를 어떻게 변경하나</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">어떻게 작동하나 — 디지털케어로그 파이프라인</h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
-              <strong>광고·마케팅 중심</strong>에서 <strong>케어 성과 중심</strong>으로. 이제 블로그·검색 노출이 아니라 AI 케어로그가 선택 기준입니다.
+              수집 → 표준화 → AI 분석 → 권고 → 연계, 5단계로 일상 데이터를 <strong>실사용 증거(RWE)</strong>로 전환합니다.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-white rounded-xl p-6 shadow-lg">
-              <h3 className="font-bold text-gray-900 mb-2 text-lg">🏥 병원 비즈니스</h3>
-              <p className="text-sm text-gray-700 mb-3"><strong>변화 전:</strong> 광고·전화 유도·내원 후 단절</p>
-              <p className="text-sm text-gray-700"><strong>변화 후:</strong> 케어로그 기반 리드 추천 → 진료 준비 시간 단축 → 재내원율↑ → 성과 기반 수익</p>
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+            <div className="bg-white rounded-xl p-6 shadow-lg text-center">
+              <div className="text-3xl mb-2">📥</div>
+              <h3 className="font-bold text-gray-900 mb-2">1. 수집</h3>
+              <p className="text-sm text-gray-700">앱·음성·웨어러블·설문으로 자동/수동 수집</p>
             </div>
-            <div className="bg-white rounded-xl p-6 shadow-lg">
-              <h3 className="font-bold text-gray-900 mb-2 text-lg">🏪 약국 비즈니스</h3>
-              <p className="text-sm text-gray-700 mb-3"><strong>변화 전:</strong> 단발 판매·복약 상담 없음</p>
-              <p className="text-sm text-gray-700"><strong>변화 후:</strong> 복약 순응도 관리 → 리필 자동화 → 영양제 맞춤 추천 → 구독 수익 모델</p>
+            <div className="bg-white rounded-xl p-6 shadow-lg text-center">
+              <div className="text-3xl mb-2">🔧</div>
+              <h3 className="font-bold text-gray-900 mb-2">2. 표준화</h3>
+              <p className="text-sm text-gray-700">통일된 스키마로 정규화 (의료 상호운용성)</p>
             </div>
-            <div className="bg-white rounded-xl p-6 shadow-lg">
-              <h3 className="font-bold text-gray-900 mb-2 text-lg">📢 마케팅 모델</h3>
-              <p className="text-sm text-gray-700 mb-3"><strong>변화 전:</strong> 검색 노출·광고비 소진·효과 불명</p>
-              <p className="text-sm text-gray-700"><strong>변화 후:</strong> 케어 성과(예후·순응도)로 평가 → 신뢰 기반 매칭 → 광고비 절감</p>
+            <div className="bg-white rounded-xl p-6 shadow-lg text-center">
+              <div className="text-3xl mb-2">🧠</div>
+              <h3 className="font-bold text-gray-900 mb-2">3. AI 분석</h3>
+              <p className="text-sm text-gray-700">개인 기준치·추세·이상치·트리거 탐지</p>
+            </div>
+            <div className="bg-white rounded-xl p-6 shadow-lg text-center">
+              <div className="text-3xl mb-2">💡</div>
+              <h3 className="font-bold text-gray-900 mb-2">4. 권고</h3>
+              <p className="text-sm text-gray-700">
+                행동 가이드·복약 스케줄·식단 개선 제안을 통해, 
+                의료진과 상의할 수 있는 <strong>질문 포인트</strong>를 정리해 줍니다.
+              </p>
+            </div>
+            <div className="bg-white rounded-xl p-6 shadow-lg text-center">
+              <div className="text-3xl mb-2">🔗</div>
+              <h3 className="font-bold text-gray-900 mb-2">5. 연계</h3>
+              <p className="text-sm text-gray-700">병원/약국/요양/가족과 리포트·알림 공유</p>
             </div>
           </div>
-          <div className="mt-8 bg-indigo-600 text-white rounded-xl p-6 shadow-lg text-center">
-            <p className="text-lg font-semibold">
-              <span className="text-yellow-300">핵심:</span> 이제 환자는 <strong>블로그 후기</strong>가 아니라 <strong>AI 케어로그 데이터</strong>로 병원·약국을 선택합니다.
+          <div className="mt-8 bg-cyan-600 text-white rounded-xl p-6 shadow-lg">
+            <p className="text-center text-lg font-semibold">
+              이 파이프라인은 <strong>RWE(실사용 증거)</strong> 생성으로 이어집니다. 자세한 연구 협력과 학습 방법은 
+              <a href="#rwe" className="underline font-bold">아래 '데이터·연구 협력(RWE)'</a>에서 확인하세요.
             </p>
-          </div>
-
-          {/* 산업 관점 Before → After 상세 비교 */}
-          <div className="mt-10">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">이전 → 이후 비교 (산업 관점)</h3>
-            <div className="overflow-x-auto">
-              <table className="min-w-full bg-white border border-gray-200 rounded-xl overflow-hidden">
-                <thead className="bg-gray-50">
-                  <tr>
-                    <th className="px-6 py-3 text-left text-sm font-semibold text-gray-900">항목</th>
-                    <th className="px-6 py-3 text-left text-sm font-semibold text-gray-900">이전(전통)</th>
-                    <th className="px-6 py-3 text-left text-sm font-semibold text-gray-900">이후(AI 디지털케어로그)</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-gray-200">
-                  <tr>
-                    <td className="px-6 py-4 text-sm font-medium text-gray-900">데이터 확보</td>
-                    <td className="px-6 py-4 text-sm text-gray-700">진료실 중심, 단발·부분 기록</td>
-                    <td className="px-6 py-4 text-sm text-gray-700">일상 로그 표준화(RWE), 장기 축적</td>
-                  </tr>
-                  <tr>
-                    <td className="px-6 py-4 text-sm font-medium text-gray-900">사용자 획득</td>
-                    <td className="px-6 py-4 text-sm text-gray-700">광고·전화 유도, 후기·노출 경쟁</td>
-                    <td className="px-6 py-4 text-sm text-gray-700">케어 성과 기반 추천·매칭, 네트워크 효과</td>
-                  </tr>
-                  <tr>
-                    <td className="px-6 py-4 text-sm font-medium text-gray-900">의사결정/상담</td>
-                    <td className="px-6 py-4 text-sm text-gray-700">주관·부분 정보 의존</td>
-                    <td className="px-6 py-4 text-sm text-gray-700">AI 요약·이상치·트리거 분석 기반</td>
-                  </tr>
-                  <tr>
-                    <td className="px-6 py-4 text-sm font-medium text-gray-900">사후관리/리텐션</td>
-                    <td className="px-6 py-4 text-sm text-gray-700">내원 후 단절, 재내원 유도 어려움</td>
-                    <td className="px-6 py-4 text-sm text-gray-700">항시 상담·알림·리포트 루프, 재내원율↑</td>
-                  </tr>
-                  <tr>
-                    <td className="px-6 py-4 text-sm font-medium text-gray-900">수익모델</td>
-                    <td className="px-6 py-4 text-sm text-gray-700">시술/처방 단발 매출, 광고비 의존</td>
-                    <td className="px-6 py-4 text-sm text-gray-700">장기 구독·리필·성과 기반 정산</td>
-                  </tr>
-                  <tr>
-                    <td className="px-6 py-4 text-sm font-medium text-gray-900">KPI/평가</td>
-                    <td className="px-6 py-4 text-sm text-gray-700">클릭·전화·노출 지표</td>
-                    <td className="px-6 py-4 text-sm text-gray-700">순응도·예후 개선·재내원율</td>
-                  </tr>
-                  <tr>
-                    <td className="px-6 py-4 text-sm font-medium text-gray-900">파트너십/채널</td>
-                    <td className="px-6 py-4 text-sm text-gray-700">개별 제휴·광고 채널 의존</td>
-                    <td className="px-6 py-4 text-sm text-gray-700">자람이에서 축적한 매칭 채널·지역 네트워크 공유</td>
-                  </tr>
-                  <tr>
-                    <td className="px-6 py-4 text-sm font-medium text-gray-900">규제·표준 대응</td>
-                    <td className="px-6 py-4 text-sm text-gray-700">비표준 데이터·연동 어려움</td>
-                    <td className="px-6 py-4 text-sm text-gray-700">의료 상호운용성 표준 기반 스키마·감사/동의 이력</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
           </div>
         </div>
       </section>
 
-      {/* ========== 8. 병원·약국 연계 (입점 파트너 대시보드) ========== */}
+      {/* 5. Technology Advantage — XAI (계속) */}
+      <section className="py-16 lg:py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">설명 가능한 AI(XAI) — 환자가 이해하는 내 치료</h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">
+              "무슨 치료를 받는지, 이 약이 왜 필요한지, 내 몸은 어떻게 변하는지"를 <strong>쉬운 언어</strong>와 <strong>시각 자료</strong>로 설명합니다.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div className="bg-white rounded-xl p-6 shadow">
+              <h3 className="font-bold text-gray-900 mb-2">처방·검사 요약</h3>
+              <p className="text-sm text-gray-700">무엇을, 왜 했는지 한 줄 요약과 근거 출처 링크.</p>
+            </div>
+            <div className="bg-white rounded-xl p-6 shadow">
+              <h3 className="font-bold text-gray-900 mb-2">약물 설명</h3>
+              <p className="text-sm text-gray-700">성분·목적·주의·상호작용을 이해하기 쉬운 용어로.</p>
+            </div>
+            <div className="bg-white rounded-xl p-6 shadow">
+              <h3 className="font-bold text-gray-900 mb-2">내 몸의 변화</h3>
+              <p className="text-sm text-gray-700">혈압·수면·활동과 증상의 <strong>상관관계</strong>를 그래프로.</p>
+            </div>
+            <div className="bg-white rounded-xl p-6 shadow">
+              <h3 className="font-bold text-gray-900 mb-2">왜 이 권고?</h3>
+              <p className="text-sm text-gray-700">권고 이유·대안·주의점을 함께 제시(XAI 철학).</p>
+            </div>
+          </div>
+
+          <div className="mt-10 bg-white rounded-2xl p-8 shadow">
+            <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">환자 리포트 예시 (요약)</h3>
+            <div className="overflow-x-auto">
+              <table className="min-w-full text-sm border border-gray-200 rounded-lg overflow-hidden">
+                <thead className="bg-gray-50">
+                  <tr>
+                    <th className="px-4 py-2 text-left font-semibold text-gray-900">항목</th>
+                    <th className="px-4 py-2 text-left font-semibold text-gray-900">요약</th>
+                    <th className="px-4 py-2 text-left font-semibold text-gray-900">메모</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-200">
+                  <tr>
+                    <td className="px-4 py-2 font-medium text-gray-900">약물 A</td>
+                    <td className="px-4 py-2 text-gray-700">혈압 조절 목적, 아침 복용 권장</td>
+                    <td className="px-4 py-2 text-gray-700">졸림 시 취침 전으로 조정</td>
+                  </tr>
+                  <tr>
+                    <td className="px-4 py-2 font-medium text-gray-900">검사 결과</td>
+                    <td className="px-4 py-2 text-gray-700">최근 2주 평균 혈압 하락 추세</td>
+                    <td className="px-4 py-2 text-gray-700">염분 섭취·수면 시간과 상관</td>
+                  </tr>
+                  <tr>
+                    <td className="px-4 py-2 font-medium text-gray-900">권고</td>
+                    <td className="px-4 py-2 text-gray-700">저염 식단·수분 섭취·저녁 산책 20분</td>
+                    <td className="px-4 py-2 text-gray-700">가이드라인 링크 제공</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p className="mt-3 text-center text-xs text-gray-500">PDF로 저장·공유 가능. 어려운 용어는 쉬운 설명과 함께 제공합니다.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* 6. Business Impact */}
+      {/* 병원·약국 연계 (입점 파트너 대시보드) */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -455,7 +390,7 @@ export default function HealthcareService() {
         </div>
       </section>
 
-      {/* ========== 9. 병원별 맞춤 AI 챗봇 — "나만의 AI" 노하우로 병원 브랜드 챗봇 제공 ========== */}
+      {/* 6. Business Impact — 병원별 맞춤 AI 챗봇 */}
       <section className="py-16 lg:py-24 bg-gradient-to-br from-indigo-50 to-purple-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -585,7 +520,7 @@ export default function HealthcareService() {
         </div>
       </section>
 
-      {/* ========== 10. 산업 독점 기술과 트렌드 변화 ========== */}
+      {/* 6. Business Impact — 산업 독점 기술 */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -629,7 +564,7 @@ export default function HealthcareService() {
         </div>
       </section>
 
-      {/* ========== 11. 정신건강 챗봇 ========== */}
+      {/* 6. Business Impact — 정신건강 챗봇 */}
       <section className="py-16 lg:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -663,7 +598,7 @@ export default function HealthcareService() {
         </div>
       </section>
 
-      {/* ========== 12. 성형·미용 상담 ========== */}
+      {/* 6. Business Impact — 성형·미용 상담 */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -702,7 +637,7 @@ export default function HealthcareService() {
         </div>
       </section>
 
-      {/* ========== 13. 약물 안전 & 건강관리 ========== */}
+      {/* 6. Business Impact — 약물 안전 & 건강관리 */}
       <section className="py-16 lg:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -802,7 +737,7 @@ export default function HealthcareService() {
         </div>
       </section>
 
-      {/* ========== 14. 환자별 알레르기·약물 효과 집단학습 ========== */}
+      {/* 6. Business Impact — 환자별 알레르기·약물 효과 */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -833,7 +768,7 @@ export default function HealthcareService() {
         </div>
       </section>
 
-      {/* ========== 15. 데이터·연구 협력 (RWE) ========== */}
+      {/* 6. Business Impact — 데이터·연구 협력 (RWE) */}
       <section id="rwe" className="py-16 lg:py-24 bg-gradient-to-r from-blue-700 to-cyan-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-6">데이터·연구 협력 — 실사용 증거(RWE)로 신약 개발·임상 지원</h2>
@@ -906,7 +841,36 @@ export default function HealthcareService() {
         </div>
       </section>
 
-      {/* ========== 16. CTA Section ========== */}
+      {/* 7. Service Status */}
+      <section className="py-12 lg:py-16 bg-white">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <span className="inline-block px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-semibold mb-4">Live Service</span>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">토탈케어로그 (medicai.kr)</h2>
+          <p className="text-gray-600">AI 디지털케어로그 기반 헬스케어AI 서비스가 운영 중입니다. 일상 기록·AI 분석·병원/약국 연계를 체험해 보세요.</p>
+        </div>
+      </section>
+
+      {/* 8. Ecosystem Connection */}
+      <section className="py-12 lg:py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">DAL 생태계와의 연결</h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">자람이·시니어앤라이프에서 검증된 매칭 채널, 디지털케어로그 표준과 연동하여 전방향(생활·교육·건강) 케어를 제공합니다.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-white rounded-xl p-6 shadow-sm">
+              <h3 className="font-bold text-gray-900 mb-2">🔗 매칭 채널 공유</h3>
+              <p className="text-sm text-gray-700">자람이·시니어앤라이프의 병원/요양 매칭 노하우를 토탈케어로그에 적용. 도입 기관은 우선 선택을 받습니다.</p>
+            </div>
+            <div className="bg-white rounded-xl p-6 shadow-sm">
+              <h3 className="font-bold text-gray-900 mb-2">📊 표준화 플랫폼</h3>
+              <p className="text-sm text-gray-700">AI 디지털케어로그 표준 스키마로 데이터 호환·공유. 베지케어 등 DAL 서비스와 건강 데이터 연동.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 9. CTA */}
       <section className="py-16 lg:py-24 bg-gradient-to-r from-primary-700 to-secondary-700 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-6">토탈케어로그를 지금 시작하세요</h2>

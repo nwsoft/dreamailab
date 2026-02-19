@@ -221,7 +221,7 @@ export default function FinanceService() {
         </Head>
       <Header />
       
-      {/* Hero Section */}
+      {/* 1. Hero Section */}
       <section className="bg-gradient-to-br from-indigo-600 to-blue-600 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
@@ -236,6 +236,21 @@ export default function FinanceService() {
             <p className="text-lg max-w-2xl mx-auto text-indigo-100">
               XAI(설명 가능한 AI) 철학으로 모든 거래 결정 과정을 투명하게 공개 · 검증 가능한 실거래 로그 · AlphaArena 모드로 AI 엔진 간 실전 대결 비교
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 7. Service Status — NoahAI 특별 안내 */}
+      <section className="py-8 bg-amber-50 border-y border-amber-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-wrap items-center justify-center gap-4 text-center">
+            <span className="inline-block px-4 py-2 bg-amber-200 text-amber-900 rounded-full text-sm font-semibold">Migrated</span>
+            <p className="text-gray-800 font-medium">
+              노아AI(NoahAI)는 <strong>Noah AI Labs</strong>로 이전되었습니다. 과거 DAL 생태계 일원이었으나 현재 별도 법인으로 운영되며, 개발·업데이트는 외부에서 진행됩니다.
+            </p>
+            <a href="https://noahai.net" target="_blank" rel="noopener noreferrer" className="text-indigo-600 font-semibold hover:underline">
+              Noah AI Labs 바로가기 →
+            </a>
           </div>
         </div>
       </section>
@@ -1425,7 +1440,20 @@ export default function FinanceService() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* 8. Ecosystem Connection — DAL과의 기술 연계 (과거) */}
+      <section className="py-12 lg:py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">DAL과의 기술 연계</h2>
+            <p className="text-gray-700">
+              노아AI는 DAL의 <strong>AI 디지털케어로그</strong> 기술(환자 생체신호·건강 데이터 분석)을 금융 트레이딩에 적용한 프로젝트에서 출발했습니다. 
+              현재는 Noah AI Labs로 이전되어 별도 법인으로 운영되며, DAL 플랫폼과의 실시간 연동은 없습니다.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 9. CTA */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">

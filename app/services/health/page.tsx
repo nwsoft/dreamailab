@@ -139,6 +139,7 @@ export default function HealthService() {
       <Header />
       
       {/* Hero Section */}
+      {/* 1. Hero Section */}
       <section className="bg-gradient-to-br from-red-600 to-pink-600 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
@@ -329,7 +330,25 @@ export default function HealthService() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* 7. Service Status */}
+      <section className="py-12 bg-white">
+        <div className="max-w-3xl mx-auto px-4 text-center">
+          <span className="inline-block px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-semibold mb-4">Live Service</span>
+          <p className="text-gray-600">AI 주치의(히포크라테스AI)는 medicai.kr·토탈케어로그와 연동하여 건강 관리 서비스를 제공합니다.</p>
+        </div>
+      </section>
+
+      {/* 8. Ecosystem Connection */}
+      <section className="py-12 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">DAL 생태계와의 연결</h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">AI 주치의는 토탈케어로그·자람이·시니어앤라이프와 동일한 AI 디지털케어로그 표준을 사용하여 전 생애 건강 데이터를 연결합니다.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* 9. CTA */}
       <section className="py-16 lg:py-24 bg-gradient-to-r from-red-600 to-pink-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-6">

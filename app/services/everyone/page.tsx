@@ -206,6 +206,7 @@ export default function EveryoneService() {
       <Header />
       
       {/* Hero Section */}
+      {/* 1. Hero Section */}
       <section className="bg-gradient-to-br from-violet-600 to-purple-600 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
@@ -436,7 +437,25 @@ export default function EveryoneService() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* 7. Service Status */}
+      <section className="py-12 bg-white">
+        <div className="max-w-3xl mx-auto px-4 text-center">
+          <span className="inline-block px-4 py-2 bg-gray-100 text-gray-800 rounded-full text-sm font-semibold mb-4">In Development</span>
+          <p className="text-gray-600">모두의AI는 DAL의 AI 창작 플랫폼으로, 준비 중입니다.</p>
+        </div>
+      </section>
+
+      {/* 8. Ecosystem Connection */}
+      <section className="py-12 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">DAL 생태계와의 연결</h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">모두의AI는 DAL AI 플랫폼 위에 구축되며, 법률이AI·마음이AI 등 챗봇 서비스와 연동됩니다.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* 9. CTA */}
       <section className="py-16 lg:py-24 bg-gradient-to-br from-violet-600 to-purple-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-6">

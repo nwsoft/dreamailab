@@ -216,7 +216,7 @@ export default function ServicePortfolio() {
         </div>
       </section>
 
-      {/* 플랫폼 구조 - DAL Platform → AI디지털케어로그 → 도메인 */}
+      {/* 8. Ecosystem Connection — 플랫폼 구조 */}
       <section className="py-12 bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col items-center">
@@ -268,7 +268,7 @@ export default function ServicePortfolio() {
         </div>
       </main>
 
-      {/* CTA Section - 투자/파트너/서비스 통일 */}
+      {/* 9. CTA */}
       <section className="py-20 bg-gradient-to-r from-primary-600 to-secondary-600 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">

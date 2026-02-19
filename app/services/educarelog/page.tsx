@@ -280,7 +280,7 @@ export default function EduCareLogService() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }}
       />
-      {/* Hero Section */}
+      {/* 1. Hero Section */}
       <section className="bg-gradient-to-br from-blue-600 to-indigo-600 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
@@ -316,6 +316,9 @@ export default function EduCareLogService() {
               <span className="bg-white/10 border border-white/20 text-white px-3 py-1 rounded-full">개별화 학습</span>
               <span className="bg-white/10 border border-white/20 text-white px-3 py-1 rounded-full">데이터 표준화</span>
               <span className="bg-white/10 border border-white/20 text-white px-3 py-1 rounded-full">AI 엔진</span>
+            </div>
+            <div className="mt-6">
+              <span className="inline-block px-4 py-2 bg-orange-100 text-orange-800 rounded-full text-sm font-semibold">Pilot</span>
             </div>
           </div>
         </div>
@@ -1547,7 +1550,36 @@ export default function EduCareLogService() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* 7. Service Status */}
+      <section className="py-12 lg:py-16 bg-white">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <span className="inline-block px-4 py-2 bg-orange-100 text-orange-800 rounded-full text-sm font-semibold mb-4">Pilot</span>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">에듀케어로그 서비스 현황</h2>
+          <p className="text-gray-600">2024 특수학급 파일럿 완료. 2025~2026 파트너십 확장 중. EBS·교육과정 연계 개별화 학습 플랫폼.</p>
+        </div>
+      </section>
+
+      {/* 8. Ecosystem Connection */}
+      <section className="py-12 lg:py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">DAL 생태계와의 연결</h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">에듀케어로그는 자람이(발달장애)·토탈케어로그와 동일한 AI 디지털케어로그 표준을 적용합니다. 특수교육→일반교육→전 생애 학습으로 확장합니다.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-white rounded-xl p-6 shadow-sm">
+              <h3 className="font-bold text-gray-900 mb-2">🔗 자람이·토탈케어로그 연동</h3>
+              <p className="text-sm text-gray-700">발달장애 케어로그와 학습 데이터가 통합. 치료·교육·건강이 하나의 흐름으로 연결됩니다.</p>
+            </div>
+            <div className="bg-white rounded-xl p-6 shadow-sm">
+              <h3 className="font-bold text-gray-900 mb-2">📊 DAL AI 플랫폼</h3>
+              <p className="text-sm text-gray-700">2026 개별화교육 전환 대응. 학교·학원·가정을 잇는 통합 학습 생태계 구축.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 9. CTA */}
       <section className="py-16 lg:py-24 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-6">

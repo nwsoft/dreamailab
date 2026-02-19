@@ -193,6 +193,7 @@ export default function IndependenceService() {
       <Header />
       
       {/* Hero Section */}
+      {/* 1. Hero Section */}
       <section className="bg-gradient-to-br from-blue-600 to-indigo-600 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
@@ -405,7 +406,25 @@ export default function IndependenceService() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* 7. Service Status */}
+      <section className="py-12 bg-white">
+        <div className="max-w-3xl mx-auto px-4 text-center">
+          <span className="inline-block px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-semibold mb-4">Live Service</span>
+          <p className="text-gray-600">독립운동AI는 koreanheroes.or.kr에서 무료로 제공됩니다. 독립운동가들의 이야기와 우리 역사를 학습할 수 있습니다.</p>
+        </div>
+      </section>
+
+      {/* 8. Ecosystem Connection */}
+      <section className="py-12 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">DAL 생태계와의 연결</h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">독립운동AI는 DAL의 AI 챗봇 서비스로, 용감이AI·법률이AI 등과 함께 교육·역사 도메인을 연결합니다.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* 9. CTA */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">

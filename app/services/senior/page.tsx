@@ -360,7 +360,7 @@ export default function SeniorService() {
     <div className="min-h-screen bg-gray-50">
       <Header />
 
-      {/* Hero 섹션 */}
+      {/* 1. Hero Section */}
       <section className="bg-gradient-to-br from-green-600 to-emerald-600 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
@@ -397,10 +397,14 @@ export default function SeniorService() {
               <span className="bg-white/10 border border-white/20 text-white px-3 py-1 rounded-full">맞춤형 치료</span>
               <span className="bg-white/10 border border-white/20 text-white px-3 py-1 rounded-full">AI 디지털케어로그</span>
             </div>
+            <div className="mt-6">
+              <span className="inline-block px-4 py-2 bg-orange-100 text-orange-800 rounded-full text-sm font-semibold">Pilot / In Development</span>
+            </div>
           </div>
         </div>
       </section>
 
+      {/* 2. Problem Definition & 3. Solution */}
       {/* 섹션 1: 서비스 개요 */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -453,7 +457,7 @@ export default function SeniorService() {
         </div>
       </section>
 
-      {/* 섹션 2: AI+디지털케어로그 핵심 가치 */}
+      {/* 3. Solution — 핵심 가치 */}
       <section className="py-16 lg:py-24 bg-gradient-to-br from-emerald-50 to-green-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-center">핵심 가치</h2>
@@ -465,7 +469,7 @@ export default function SeniorService() {
         </div>
       </section>
 
-      {/* 섹션 3: DAL AI 독자 기술 */}
+      {/* 5. Technology Advantage (Short) */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-center">DAL AI 독자 기술</h2>
@@ -504,7 +508,7 @@ export default function SeniorService() {
         </div>
       </section>
 
-      {/* 섹션 5: 시설별 서비스 효과 */}
+      {/* 6. Business Impact */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">시설별 서비스 효과</h2>
@@ -1421,7 +1425,36 @@ export default function SeniorService() {
         </div>
       </section>
 
-      {/* 섹션 12: 마지막 CTA */}
+      {/* 7. Service Status */}
+      <section className="py-12 lg:py-16 bg-white">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <span className="inline-block px-4 py-2 bg-orange-100 text-orange-800 rounded-full text-sm font-semibold mb-4">Pilot / In Development</span>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">시니어앤라이프 서비스 현황</h2>
+          <p className="text-gray-600">AI 디지털케어로그 기반 시니어 돌봄 통합 플랫폼. 재가·시설·의료·공공 연계를 위한 인프라 구축 중입니다.</p>
+        </div>
+      </section>
+
+      {/* 8. Ecosystem Connection */}
+      <section className="py-12 lg:py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">DAL 생태계와의 연결</h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">시니어앤라이프는 자람이·토탈케어로그와 동일한 AI 디지털케어로그 표준을 사용합니다. 발달장애→시니어→전 생애 케어로 DAL 플랫폼을 확장합니다.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-white rounded-xl p-6 shadow-sm">
+              <h3 className="font-bold text-gray-900 mb-2">🔗 자람이·토탈케어로그 연동</h3>
+              <p className="text-sm text-gray-700">표준 스키마로 발달장애·헬스케어·시니어 케어 데이터가 하나의 생애 흐름으로 연결됩니다.</p>
+            </div>
+            <div className="bg-white rounded-xl p-6 shadow-sm">
+              <h3 className="font-bold text-gray-900 mb-2">📊 DAL AI 플랫폼</h3>
+              <p className="text-sm text-gray-700">멀티모달 AI·시계열 학습·이상 패턴 탐지 등 DAL 독자 기술을 시니어 돌봄에 적용.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 9. CTA */}
       <section className="py-16 lg:py-24 bg-gradient-to-br from-emerald-50 to-green-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">

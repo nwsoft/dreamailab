@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 
@@ -595,6 +596,7 @@ export default function MarriageService() {
       <Header />
 
       {/* Hero */}
+      {/* 1. Hero Section */}
       <section className="bg-gradient-to-br from-primary-600 to-secondary-600 text-white py-20" aria-label="메인 소개">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
@@ -611,6 +613,9 @@ export default function MarriageService() {
             <p className="text-base max-w-3xl mx-auto text-white/80 mt-3">
               결혼 준비부터 상담·법무·비자, 정착 이후 가족 생활까지 <strong>끊김 없이 연결</strong>됩니다.
             </p>
+            <div className="mt-6">
+              <span className="inline-block px-4 py-2 bg-gray-100 text-gray-800 rounded-full text-sm font-semibold">In Development</span>
+            </div>
           </div>
         </div>
       </section>
@@ -1613,11 +1618,42 @@ export default function MarriageService() {
         </div>
       </section>
 
-      {/* 하단 안내: 정식 공개 전 */}
+      {/* 7. Service Status */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <span className="inline-block px-4 py-2 bg-gray-100 text-gray-800 rounded-full text-sm font-semibold mb-4">In Development</span>
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">{brand.name} (개발 중 공개 사전 안내)</h2>
           <p className="text-gray-600">국내 최초 국제결혼 <strong>정보·비즈니스 인프라 플랫폼</strong>으로, 표준화·투명화·정착 연계를 중심으로 개발 중입니다. 국제결혼을 넘어 다문화 가족과 국제 커플의 전 생애를 지원하는 것을 목표로 하며, 파트너 공개는 순차 진행됩니다.</p>
+        </div>
+      </section>
+
+      {/* 8. Ecosystem Connection */}
+      <section className="py-12 lg:py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">DAL 생태계와의 연결</h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">글로벌커플케어(GCC)는 DAL의 AI 디지털케어로그 표준을 국제결혼·다문화 가족 도메인에 적용합니다. 자람이·시니어앤라이프와 연계하여 전 생애 케어 플랫폼을 확장합니다.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-white rounded-xl p-6 shadow-sm">
+              <h3 className="font-bold text-gray-900 mb-2">🔗 표준 정보 플랫폼</h3>
+              <p className="text-sm text-gray-700">국가·업체·비용·절차를 표준 포맷으로. 법률이AI·토탈케어로그와 사후 정착·의료·교육 연계.</p>
+            </div>
+            <div className="bg-white rounded-xl p-6 shadow-sm">
+              <h3 className="font-bold text-gray-900 mb-2">📊 DAL 서비스 연동</h3>
+              <p className="text-sm text-gray-700">법률 상담, 의료·교육 정보까지. 다문화 가족 맞춤형 케어로 확장.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 9. CTA */}
+      <section className="py-12 lg:py-16 bg-white">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-gray-600 mb-6">파트너 공개 및 제휴 문의를 받고 있습니다.</p>
+          <Link href="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-lg transition-colors">
+            문의하기
+          </Link>
         </div>
       </section>
 
