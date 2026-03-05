@@ -889,7 +889,7 @@ export default function EduCareLogService() {
               AI 디지털케어로그는 의료 현장에서 검증된 드림에이아이랩의 <strong>독자 기술</strong>입니다
             </p>
             <div className="mt-4 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-4 max-w-5xl mx-auto">
-              <p className="text-sm font-semibold text-gray-900 mb-2">🏆 세계 최고 수준의 독자 기술</p>
+              <p className="text-sm font-semibold text-gray-900 mb-2">검증된 독자 기술 (표준·폐루프·다주체 협업)</p>
               <div className="flex flex-wrap justify-center gap-3 text-xs">
                 <span className="bg-white px-3 py-1 rounded-full text-gray-700 font-medium">
                   ✓ 행동·학습 통합 데이터 분석 엔진
@@ -917,10 +917,10 @@ export default function EduCareLogService() {
               
               <div className="space-y-6">
                 <div className="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-lg p-4 mb-4 border-l-4 border-yellow-500">
-                  <p className="text-xs font-bold text-yellow-800 mb-1">🌍 세계 최초 기술</p>
+                  <p className="text-xs font-bold text-yellow-800 mb-1">검증 포인트</p>
                   <p className="text-sm text-gray-700">
                     <strong>AI 디지털케어로그</strong> — 의료·교육 통합 행동-학습 데이터 표준 스키마 및 
-                    실시간 환류 파이프라인 상용화
+                    실시간 환류(폐루프) 파이프라인. 자람이 파일럿 검증 후 교육 도메인 확장.
                   </p>
                 </div>
 
@@ -1000,8 +1000,8 @@ export default function EduCareLogService() {
                     <li>• <strong>전이학습:</strong> A학생에게 효과적이던 방법을 B학생에게 시도</li>
                   </ul>
                   <div className="bg-blue-50 rounded-lg p-3 text-xs text-gray-600 mt-2">
-                    <strong className="text-blue-700">독자 기술:</strong> 교육 분야 최초로 
-                    <strong>의료급 강화학습 파이프라인</strong> 구현 (치료 효과 추적 → 보상 모델 → 정책 최적화)
+                    <strong className="text-blue-700">차별점:</strong> 
+                    <strong>의료급 강화학습 파이프라인</strong> (치료 효과 추적 → 보상 모델 → 정책 최적화)을 교육 도메인에 적용. 챗봇·콘텐츠 추천이 아닌 폐루프 실행 자동화.
                   </div>
                 </div>
               </div>
@@ -1579,18 +1579,14 @@ export default function EduCareLogService() {
         </div>
       </section>
 
-      {/* 9. CTA */}
+      {/* 9. CTA — 기관 도입 / 파트너십 (페이지 목적에 맞게 2개) */}
       <section className="py-16 lg:py-24 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-6">
-            지금 바로 맞춤형 학습을 시작하세요
-          </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto text-blue-100">
-            공공·민간 교육 파트너와 함께 2026 개별화교육 전환을 추진합니다.
-          </p>
+          <h2 className="text-2xl font-bold mb-2">Contact</h2>
+          <p className="text-blue-100 mb-8">학교·기관 도입, 파트너십 문의</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
-              href="/contact"
+              href="/contact?type=institution"
               className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               학교/기관 도입 문의
