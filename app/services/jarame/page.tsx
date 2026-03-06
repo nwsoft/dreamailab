@@ -922,7 +922,7 @@ export default function JarameService() {
       <section className="py-14 bg-white border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">기술 아키텍처 요약</h2>
-          <p className="text-center text-gray-600 text-sm mb-6 max-w-2xl mx-auto">표준 스키마·다기관 협업·AI Middleware·실시간 환류. 케어 서비스가 아닌 Care Data Infrastructure입니다.</p>
+          <p className="text-center text-gray-600 text-sm mb-6 max-w-2xl mx-auto">표준 스키마·다기관 협업·AI Middleware·실시간 환류. 케어 서비스가 아닌 Care Data Infrastructure(케이스별 기록·표준·다기관 연계를 하나의 데이터 인프라로 구축하는 구조)입니다.</p>
           <ul className="text-center text-gray-600 mb-4 space-y-1 text-sm md:text-base max-w-2xl mx-auto">
             <li>· 표준 스키마 기반 데이터 파이프라인</li>
             <li>· 다기관 협업 구조</li>
@@ -1098,7 +1098,7 @@ export default function JarameService() {
               <div className="bg-white rounded-xl p-6 shadow">
                 <h4 className="font-bold text-blue-700 mb-3">💾 데이터 레이어</h4>
                 <ul className="text-sm text-gray-700 space-y-1">
-                  <li>• 표준 스키마 (JSON/FHIR 호환)</li>
+                  <li>• 표준 스키마 (JSON/FHIR 호환 — FHIR은 의료·헬스케어 데이터 교환 국제 표준)</li>
                   <li>• 시계열 데이터베이스</li>
                   <li>• 다기관 데이터 통합 파이프라인</li>
                 </ul>
@@ -1154,7 +1154,7 @@ export default function JarameService() {
               <div className="bg-gradient-to-r from-amber-50 to-orange-50 rounded-xl p-6 border-l-4 border-amber-500 my-6">
                 <p className="text-lg text-gray-800 font-semibold mb-2">💡 검증 포인트</p>
                 <p className="text-base text-gray-700">
-                  표준 스키마·다기관 RBAC·감사 로그·기관 베타 파일럿으로 로그·표준·다기관·실행 환류를 검증하고 있습니다.
+                  표준 스키마·다기관 RBAC(역할별 접근 권한)·감사 로그(접근·변경 이력 추적)·기관 베타 파일럿으로 로그·표준·다기관·실행 환류를 검증하고 있습니다.
                 </p>
               </div>
 
@@ -1162,7 +1162,7 @@ export default function JarameService() {
                 <p className="text-lg font-bold mb-2">표준과 폐루프</p>
                 <p className="text-base mb-3">
                   데이터가 쌓일수록 AI 정확도가 높아지는 강화학습 구조. 
-                  기관·정책 요구에 대응하는 <strong className="text-cyan-300">표준 데이터 스키마·역할 기반 접근(RBAC)·감사 로깅</strong>으로 
+기관·정책 요구에 대응하는 <strong className="text-cyan-300">표준 데이터 스키마·역할 기반 접근(RBAC, 담당자 역할에 따라 열람 권한 제한)·감사 로깅(누가 언제 어떤 데이터에 접근했는지 기록)</strong>으로
                   공공 도입과 확장을 준비합니다.
                 </p>
               </div>
@@ -1358,11 +1358,11 @@ export default function JarameService() {
               </div>
               <div className="bg-white rounded-xl p-6 border border-gray-100 hover:border-blue-200 transition-colors">
                 <h4 className="font-bold text-gray-900 mb-2">RBAC 접근 제어</h4>
-                <p className="text-sm text-gray-600">역할 기반 권한 관리</p>
+                <p className="text-sm text-gray-600">역할 기반 권한 관리 — 담당자 역할에 따라 필요한 정보만 열람</p>
               </div>
               <div className="bg-white rounded-xl p-6 border border-gray-100 hover:border-blue-200 transition-colors">
                 <h4 className="font-bold text-gray-900 mb-2">감사 로깅</h4>
-                <p className="text-sm text-gray-600">접근 및 변경 이력 추적</p>
+                <p className="text-sm text-gray-600">누가 언제 어떤 데이터에 접근·변경했는지 이력 추적</p>
               </div>
               <div className="bg-white rounded-xl p-6 border border-gray-100 hover:border-blue-200 transition-colors">
                 <h4 className="font-bold text-gray-900 mb-2">기관 간 데이터 연계</h4>
@@ -1439,6 +1439,181 @@ export default function JarameService() {
         </div>
       </section>
 
+      {/* 부모가 아이를 이해하게 되는 과정 */}
+      <section className="py-14 bg-gray-50/50 border-b border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">부모가 아이를 이해하게 되는 과정</h2>
+          <p className="text-center text-gray-600 text-sm mb-2 max-w-2xl mx-auto">How Parents Understand Their Child Through Jarame</p>
+
+          {/* 부모 감정 공감 */}
+          <div className="bg-white rounded-2xl p-6 md:p-8 border border-gray-100 mb-6">
+            <p className="text-gray-700 text-center max-w-2xl mx-auto mb-4">
+              많은 부모는 다음과 같은 질문을 합니다.
+            </p>
+            <p className="text-gray-800 text-center font-medium max-w-xl mx-auto mb-2">
+              &ldquo;우리 아이 행동이 왜 이런지 모르겠다.&rdquo;
+            </p>
+            <p className="text-gray-800 text-center font-medium max-w-xl mx-auto mb-4">
+              &ldquo;치료가 실제로 효과가 있는지 알 수 없다.&rdquo;
+            </p>
+            <p className="text-gray-700 text-center max-w-2xl mx-auto">
+              자람이는 이러한 불확실성을 <strong>데이터 기반 이해로 바꾸는 시스템</strong>입니다.
+            </p>
+          </div>
+
+          <p className="text-center text-gray-600 text-sm mb-8 max-w-3xl mx-auto">
+            발달장애를 키우는 대부분의 부모는 다음 세 가지 어려움을 겪습니다.
+          </p>
+
+          <div className="bg-white rounded-2xl p-8 md:p-10 border border-gray-100 mb-10">
+            <ul className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-gray-700">
+              <li className="flex items-start gap-2">
+                <span className="text-amber-500 font-bold">•</span>
+                <span>아이의 행동이 <strong>왜</strong> 나타나는지 이해하기 어렵다</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-amber-500 font-bold">•</span>
+                <span>치료 과정이 실제로 효과가 있는지 확인하기 어렵다</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-amber-500 font-bold">•</span>
+                <span>약물, 교육, 치료가 서로 어떻게 연결되는지 알기 어렵다</span>
+              </li>
+            </ul>
+            <p className="mt-6 text-center text-gray-700">
+              자람이는 일상 기록과 기관 데이터를 <strong>이해 가능한 인사이트</strong>로 변환해 이 어려움을 줄입니다.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Subsection 1: 아이의 행동을 이해하기 */}
+            <div className="bg-white rounded-xl p-6 border-2 border-blue-200 shadow-sm">
+              <div className="text-4xl mb-3 text-center">🔍</div>
+              <h3 className="text-lg font-bold text-gray-900 mb-3 text-center">아이의 행동을 이해하기</h3>
+              <p className="text-sm text-gray-600 mb-3">
+                부모는 종종 묻습니다. “이 행동이 발달 특성 때문인가?” “환경 때문인가?” “약물 때문인가?”
+              </p>
+              <p className="text-sm text-gray-700 mb-3">
+                자람이는 가정·학교·치료·의료 환경을 넘어 <strong>행동 패턴</strong>을 분석하고, AI가 다음 같은 패턴을 설명합니다.
+              </p>
+              <ul className="text-xs text-gray-600 space-y-1 mb-3">
+                <li>• 감각 과민 반응</li>
+                <li>• 주의 집중 패턴</li>
+                <li>• 환경 자극 반응</li>
+                <li>• 약물 반응</li>
+              </ul>
+              <p className="text-sm text-gray-700">
+                많은 행동이 <strong>무작위의 문제가 아니라 패턴</strong>임을 이해하게 되고, 이해가 불안을 대체합니다.
+              </p>
+            </div>
+
+            {/* Subsection 2: 치료와 교육 과정 이해 */}
+            <div className="bg-white rounded-xl p-6 border-2 border-green-200 shadow-sm">
+              <div className="text-4xl mb-3 text-center">📋</div>
+              <h3 className="text-lg font-bold text-gray-900 mb-3 text-center">치료와 교육 과정 이해</h3>
+              <p className="text-sm text-gray-600 mb-3">
+                많은 부모는 치료 세션과 학교 프로그램이 “블랙박스”처럼 느껴집니다.
+              </p>
+              <p className="text-sm text-gray-700 mb-3">
+                자람이는 치료·교육 데이터를 <strong>이해하기 쉬운 요약</strong>으로 바꿉니다. 부모는 다음을 볼 수 있습니다.
+              </p>
+              <ul className="text-xs text-gray-600 space-y-1 mb-3">
+                <li>• 어떤 치료가 진행되고 있는지</li>
+                <li>• 어떤 목표가 설정되어 있는지</li>
+                <li>• 아이가 무엇을 배우고 있는지</li>
+                <li>• 최근 변화와 성과</li>
+              </ul>
+              <p className="text-sm text-gray-700">
+                짧은 상담 때만 듣는 설명이 아니라, <strong>과정에 대한 지속적인 인사이트</strong>를 받게 됩니다.
+              </p>
+            </div>
+
+            {/* Subsection 3: 아이의 변화 확인 */}
+            <div className="bg-white rounded-xl p-6 border-2 border-indigo-200 shadow-sm">
+              <div className="text-4xl mb-3 text-center">📈</div>
+              <h3 className="text-lg font-bold text-gray-900 mb-3 text-center">아이의 변화 확인</h3>
+              <p className="text-sm text-gray-600 mb-3">
+                자람이는 부모가 이해하기 쉬운 <strong>진행 리포트</strong>를 자동 생성합니다.
+              </p>
+              <p className="text-sm text-gray-700 mb-3">부모는 다음을 볼 수 있습니다.</p>
+              <ul className="text-xs text-gray-600 space-y-1 mb-3">
+                <li>• 행동 변화 추이</li>
+                <li>• 학습 참여도 변화</li>
+                <li>• 치료 반응</li>
+                <li>• 발달 변화 패턴</li>
+              </ul>
+              <p className="text-sm text-gray-700">
+                흩어진 관찰이 <strong>명확한 발달 궤적</strong>으로 바뀌고, 기억이나 가끔의 설명에만 의존하지 않고 직접 변화를 확인할 수 있습니다.
+              </p>
+            </div>
+
+            {/* Subsection 4: 부모 행동 가이드 */}
+            <div className="bg-white rounded-xl p-6 border-2 border-amber-200 shadow-sm">
+              <div className="text-4xl mb-3 text-center">🏠</div>
+              <h3 className="text-lg font-bold text-gray-900 mb-3 text-center">부모 행동 가이드</h3>
+              <p className="text-sm text-gray-600 mb-3">
+                기록된 데이터를 바탕으로 자람이는 부모에게 <strong>실천 가능한 가이드</strong>를 제공합니다.
+              </p>
+              <p className="text-sm text-gray-700 mb-2">예시:</p>
+              <ul className="text-xs text-gray-600 space-y-1 mb-3">
+                <li>• 집에서 어떤 활동이 도움이 되는지</li>
+                <li>• 어떤 환경이 아이에게 안정적인지</li>
+                <li>• 치료 목표와 연결된 가정 활동</li>
+                <li>• 행동 대응 방법</li>
+              </ul>
+              <div className="bg-amber-50 rounded-lg p-3 border border-amber-100 text-sm text-gray-700 mb-3">
+                <p className="font-medium text-gray-800 mb-1">부모 행동 가이드 예시</p>
+                <p>최근 2주간 체중 3kg 증가 → 약물 부작용 가능성 → 간식 시간 조정 + 활동 증가 권장</p>
+              </div>
+              <p className="text-sm text-gray-700">
+                목표는 전문가를 대체하는 것이 아니라, 부모가 <strong>발달 과정에 의미 있게 참여</strong>할 수 있게 하는 것입니다.
+              </p>
+            </div>
+          </div>
+
+          {/* 부모가 얻는 가치 정리 */}
+          <div className="mt-10 bg-white rounded-2xl p-8 border-2 border-blue-100">
+            <h3 className="text-lg font-bold text-gray-900 mb-6 text-center">부모가 얻는 것</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              <div className="flex items-start gap-3">
+                <span className="text-2xl shrink-0">🔍</span>
+                <div>
+                  <p className="font-medium text-gray-800">아이 행동 이해</p>
+                  <p className="text-sm text-gray-600">행동이 왜 나타나는지 패턴으로 이해</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="text-2xl shrink-0">📋</span>
+                <div>
+                  <p className="font-medium text-gray-800">치료 진행 상황 확인</p>
+                  <p className="text-sm text-gray-600">어떤 치료·목표가 진행 중인지 파악</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="text-2xl shrink-0">🤝</span>
+                <div>
+                  <p className="font-medium text-gray-800">전문가 협업 연결</p>
+                  <p className="text-sm text-gray-600">가정·센터·학교·병원 정보가 하나로</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="text-2xl shrink-0">🏠</span>
+                <div>
+                  <p className="font-medium text-gray-800">가정에서 할 수 있는 행동 가이드</p>
+                  <p className="text-sm text-gray-600">실천 가능한 활동·환경·대응 방법</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-10 bg-gray-50/50 rounded-2xl p-8 border border-gray-100">
+            <p className="text-gray-700 text-center max-w-3xl mx-auto">
+              발달적 어려움이 있는 아이를 키우는 많은 가정에서 가장 힘든 부분은 <strong>무슨 일이 일어나고 있는지, 나아지고 있는지 알기 어렵다는 것</strong>입니다. 자람이는 단편적인 관찰을 구조화된 이해로 바꿉니다. 부모가 아이를 더 잘 이해할수록, 더 효과적으로 지원할 수 있습니다. 이 이해는 자람이 시스템이 만들어 내는 가장 중요한 결과 중 하나입니다.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Diagnosis Section */}
       <section id="diagnosis" className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1458,55 +1633,200 @@ export default function JarameService() {
         </div>
       </section>
 
-      {/* 발달장애인을 위한 AI 건강관리 기능 — Step 기반 (다른 섹션과 동일 패턴) */}
+      {/* 발달장애인을 위한 AI 건강관리 기능 — 문제 → 실제 사례 → AI 분석 → 권장 가이드 → 부모 가치 */}
       <section id="healthmanagement" className="py-14 bg-gradient-to-br from-blue-50 via-cyan-50 to-indigo-50 border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">발달장애인을 위한 AI 건강관리 기능</h2>
-          <p className="text-center text-gray-600 text-sm mb-8">문제 → 데이터 기록 → AI 분석 → 위험 감지 → 가이드</p>
-          <div className="bg-white rounded-2xl p-8 md:p-10 border border-gray-100 shadow-sm">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-3">
-              <div className="relative">
-                <div className="bg-red-50 rounded-xl p-5 border-2 border-red-200 h-full">
-                  <div className="text-2xl mb-2">1️⃣</div>
-                  <h4 className="font-bold text-red-900 mb-2 text-sm">STEP 1 — 현실 문제</h4>
-                  <p className="text-xs text-gray-700">발달장애 아동은 약물 부작용, 식습관 문제, 체중 변화 등을 보호자가 체계적으로 관리하기 어렵습니다.</p>
-                </div>
-                <div className="hidden lg:block absolute top-1/2 -right-2 transform -translate-y-1/2 text-xl text-gray-300">→</div>
-              </div>
-              <div className="relative">
-                <div className="bg-blue-50 rounded-xl p-5 border-2 border-blue-200 h-full">
-                  <div className="text-2xl mb-2">2️⃣</div>
-                  <h4 className="font-bold text-blue-900 mb-2 text-sm">STEP 2 — 데이터 기록</h4>
-                  <p className="text-xs text-gray-700">AI 디지털케어로그는 약물 복용 기록, 행동 변화, 식사 패턴을 함께 기록합니다.</p>
-                </div>
-                <div className="hidden lg:block absolute top-1/2 -right-2 transform -translate-y-1/2 text-xl text-gray-300">→</div>
-              </div>
-              <div className="relative">
-                <div className="bg-indigo-50 rounded-xl p-5 border-2 border-indigo-200 h-full">
-                  <div className="text-2xl mb-2">3️⃣</div>
-                  <h4 className="font-bold text-indigo-900 mb-2 text-sm">STEP 3 — AI 분석</h4>
-                  <p className="text-xs text-gray-700">AI가 약물 상호작용 위험, 영양 불균형, 체중 변화 패턴을 분석합니다.</p>
-                </div>
-                <div className="hidden lg:block absolute top-1/2 -right-2 transform -translate-y-1/2 text-xl text-gray-300">→</div>
-              </div>
-              <div className="relative">
-                <div className="bg-amber-50 rounded-xl p-5 border-2 border-amber-200 h-full">
-                  <div className="text-2xl mb-2">4️⃣</div>
-                  <h4 className="font-bold text-amber-900 mb-2 text-sm">STEP 4 — 위험 감지</h4>
-                  <p className="text-xs text-gray-700">위험한 약물 조합이나 건강 변화가 감지되면 보호자에게 알림을 제공합니다.</p>
-                </div>
-                <div className="hidden lg:block absolute top-1/2 -right-2 transform -translate-y-1/2 text-xl text-gray-300">→</div>
+          <p className="text-center text-gray-600 text-sm mb-8 max-w-2xl mx-auto">
+            문제 설명 → 실제 현실 사례 → AI 분석 → AI 권장 해결 방법 → 부모가 얻는 가치
+          </p>
+
+          {/* 1. 문제 설명 */}
+          <div className="bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-sm mb-8">
+            <h3 className="text-lg font-bold text-gray-900 mb-4">문제 설명</h3>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              발달장애 아동은 여러 약물을 함께 복용하는 경우가 많고, 감기나 다른 증상으로 추가 처방을 받을 때도 있습니다. 부모는 &ldquo;이 조합이 괜찮은지&rdquo;, &ldquo;언제 먹이면 좋은지&rdquo;를 스스로 판단하기 어렵습니다. 자람이는 일상 기록과 약물 데이터를 바탕으로 AI가 위험 가능성을 먼저 짚어 주고, 의료진 판단을 돕는 가이드를 제공합니다.
+            </p>
+          </div>
+
+          {/* 2. 실제 상황 예시 */}
+          <div className="bg-amber-50/80 rounded-2xl p-6 md:p-8 border-2 border-amber-200 mb-8">
+            <h3 className="text-lg font-bold text-gray-900 mb-4">실제 상황 예시</h3>
+            <p className="text-sm text-gray-700 mb-4">현재 복용 중인 약과 감기 처방이 함께 있을 때, 부모는 함께 복용해도 되는지 판단하기 어렵습니다.</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <h4 className="font-semibold text-gray-900 mb-2 text-sm">현재 복용 중인 약</h4>
+                <ul className="text-sm text-gray-700 space-y-1">
+                  <li>• 라투다 20mg (비정형 항정신병제)</li>
+                  <li>• 콘서타 OROS (ADHD 치료제)</li>
+                </ul>
               </div>
               <div>
-                <div className="bg-green-50 rounded-xl p-5 border-2 border-green-200 h-full">
-                  <div className="text-2xl mb-2">5️⃣</div>
-                  <h4 className="font-bold text-green-900 mb-2 text-sm">STEP 5 — 가이드 제공</h4>
-                  <p className="text-xs text-gray-700">AI는 안전한 복용 방법, 식단 조정, 생활 습관 개선 가이드를 제시합니다. 의사에게 전달되어 약물 조정 판단을 돕습니다.</p>
-                </div>
+                <h4 className="font-semibold text-gray-900 mb-2 text-sm">감기 처방</h4>
+                <ul className="text-sm text-gray-700 space-y-1">
+                  <li>• 에스부펜정, 페니라민정, 슈다페드정</li>
+                  <li>• 엔디스캡슐, 후로목스정</li>
+                </ul>
+              </div>
+            </div>
+            <p className="mt-4 text-sm text-gray-600 italic">부모는 이 약들을 함께 복용해도 되는지, 어떤 순서로 먹이는 것이 좋은지 판단하기 어렵습니다.</p>
+          </div>
+
+          {/* 3. AI 분석 + 4. AI 권장 가이드 — 2열 */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+            <div className="bg-red-50/80 rounded-2xl p-6 border-2 border-red-200">
+              <h3 className="text-lg font-bold text-gray-900 mb-4">AI 분석</h3>
+              <p className="text-sm font-semibold text-gray-800 mb-2">콘서타 + 슈다페드</p>
+              <p className="text-xs text-gray-600 mb-3">가능한 위험</p>
+              <ul className="text-sm text-gray-700 space-y-1">
+                <li>• 심박수 증가</li>
+                <li>• 혈압 상승</li>
+                <li>• 과흥분</li>
+                <li>• 행동 폭발 가능성 증가</li>
+              </ul>
+            </div>
+            <div className="bg-green-50/80 rounded-2xl p-6 border-2 border-green-200">
+              <h3 className="text-lg font-bold text-gray-900 mb-4">AI 권장 가이드</h3>
+              <div className="space-y-3 text-sm text-gray-700">
+                <p><strong className="text-gray-800">아침</strong> — 콘서타</p>
+                <p><strong className="text-gray-800">점심/저녁</strong> — 슈다페드 제외</p>
+                <p><strong className="text-gray-800">취침 전</strong> — 라투다 + 페니라민</p>
+                <p className="pt-2 border-t border-green-200"><strong className="text-gray-800">대체 방법</strong> — 슈다페드 → 시노나즈 스프레이</p>
               </div>
             </div>
           </div>
-          <p className="mt-6 text-center text-sm text-gray-600">자람이의 집중치료·약물추적 모드에 통합 예정</p>
+
+          {/* 핵심 메시지 */}
+          <div className="bg-white rounded-2xl p-6 md:p-8 border-2 border-blue-200 mb-8">
+            <p className="text-center text-gray-800 font-medium">
+              AI는 의사를 대체하지 않습니다. 하지만 <strong>부모가 놓칠 수 있는 위험을 먼저 발견하고</strong>, 의료진의 판단을 돕습니다.
+            </p>
+          </div>
+
+          {/* 추가 기능 설명: 약물·체중·행동 패턴 분석 */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            {/* Subsection 1: 약물 복용 패턴 분석 */}
+            <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+              <div className="text-3xl mb-3">💊</div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">약물 복용 패턴 분석</h3>
+              <p className="text-sm text-gray-700 mb-3">
+                자람이는 단순히 약 이름을 기록하지 않고, <strong>약물 기록을 행동·발달 데이터와 함께</strong> 연결해 봅니다.
+              </p>
+              <p className="text-xs text-gray-600 mb-2">AI가 분석하는 패턴 예시:</p>
+              <ul className="text-xs text-gray-700 space-y-1 mb-3">
+                <li>• 집중력 변화</li>
+                <li>• 감정 변화</li>
+                <li>• 수면 패턴 변화</li>
+                <li>• 행동 반응</li>
+              </ul>
+              <p className="text-xs text-gray-600 mb-1">예시:</p>
+              <ul className="text-xs text-gray-700 space-y-1">
+                <li>• ADHD 약 복용 후 집중 시간 증가, 충동 행동 감소</li>
+                <li>• 일부 아동에서는 과흥분·수면 패턴 변화 증가</li>
+              </ul>
+              <p className="text-xs text-gray-600 mt-2">
+                이러한 정보는 <strong>의사가 실제 생활 데이터를 보며 약 효과를 더 정확히 평가</strong>하는 데 도움을 줍니다.
+              </p>
+            </div>
+
+            {/* Subsection 2: 체중 및 영양 변화 감지 */}
+            <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+              <div className="text-3xl mb-3">⚖️</div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">체중 및 영양 변화 감지</h3>
+              <p className="text-sm text-gray-700 mb-3">
+                발달장애 아동은 약물 부작용이나 행동 특성 때문에 <strong>체중·식습관 변화</strong>가 자주 나타납니다.
+              </p>
+              <p className="text-xs text-gray-600 mb-2">자람이가 함께 보는 항목:</p>
+              <ul className="text-xs text-gray-700 space-y-1 mb-3">
+                <li>• 체중 변화</li>
+                <li>• 식사 패턴</li>
+                <li>• 활동량</li>
+                <li>• 약물 기록</li>
+              </ul>
+              <div className="bg-amber-50 rounded-lg p-3 border border-amber-100 mb-2">
+                <p className="text-xs text-gray-800 font-medium mb-1">예시</p>
+                <p className="text-xs text-gray-700">최근 2주간 체중 3kg 증가</p>
+                <p className="mt-2 text-[11px] text-gray-600">AI 분석: 약물 부작용 가능성 + 간식 섭취 증가</p>
+                <p className="mt-1 text-[11px] text-gray-600">
+                  AI 권장: 간식 시간 조정, 활동량 증가, 식사 패턴 조정 — 필요 시 의료진 상담 권장
+                </p>
+              </div>
+              <p className="text-xs text-gray-600">
+                이렇게 하면 몇 달이 지난 뒤가 아니라, <strong>초기 단계에서 건강 변화를 눈치챌 수 있습니다.</strong>
+              </p>
+            </div>
+          </div>
+
+          {/* 추가 기능 설명: 행동 변화와 약물 반응, 확장되는 건강관리 */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            {/* Subsection 3: 행동 변화와 약물 반응 연결 */}
+            <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+              <div className="text-3xl mb-3">📈</div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">행동 변화와 약물 반응 연결</h3>
+              <p className="text-sm text-gray-700 mb-3">
+                자람이는 <strong>행동 로그와 약물 변경 이력</strong>을 연결해 봅니다.
+              </p>
+              <p className="text-xs text-gray-600 mb-2">AI가 발견하는 패턴 예시:</p>
+              <ul className="text-xs text-gray-700 space-y-1 mb-3">
+                <li>• 특정 약 복용 후 집중 시간 증가</li>
+                <li>• 약 복용 후 감정 변화 빈도 증가</li>
+                <li>• 약 복용 시점과 수면 패턴 변화의 상관관계</li>
+              </ul>
+              <p className="text-xs text-gray-600 mb-1">이 정보는 다음에 도움이 됩니다.</p>
+              <ul className="text-xs text-gray-700 space-y-1">
+                <li>• <strong>부모</strong>: 아이 행동에 어떤 요인이 영향을 주는지 이해</li>
+                <li>• <strong>의사·치료사</strong>: 짧은 진료 시간이 아닌, 실제 생활 데이터를 기반으로 치료 반응 평가</li>
+              </ul>
+            </div>
+
+            {/* Subsection 4: 확장되는 AI 건강관리 */}
+            <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+              <div className="text-3xl mb-3">🌐</div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">확장되는 AI 건강관리</h3>
+              <p className="text-sm text-gray-700 mb-3">
+                자람이의 건강관리 기능은 약물 모니터링을 넘어 <strong>점점 확장되는 구조</strong>입니다.
+              </p>
+              <p className="text-xs text-gray-600 mb-2">통합 모니터링 영역 (현행·확장 방향):</p>
+              <ul className="text-xs text-gray-700 space-y-1 mb-3">
+                <li>• 영양 상태 분석</li>
+                <li>• 수면 패턴 분석</li>
+                <li>• 행동 변화 추적</li>
+                <li>• 장기 발달 변화 분석</li>
+              </ul>
+              <p className="text-xs text-gray-600">
+                흩어진 일상 관찰을 <strong>구조화된 건강 인사이트</strong>로 바꿔, 정책 담당자와 의료·교육 현장이 함께 참고할 수 있는
+                데이터를 만들어 갑니다.
+              </p>
+            </div>
+          </div>
+
+          {/* 부모가 얻는 가치 */}
+          <div className="bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-sm">
+            <h3 className="text-lg font-bold text-gray-900 mb-4 text-center">이 기능으로 부모가 얻는 것</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              <div className="bg-gray-50 rounded-xl p-4 text-center">
+                <span className="text-2xl block mb-2">⚠️</span>
+                <p className="text-sm font-medium text-gray-800">위험 조합 조기 인지</p>
+                <p className="text-xs text-gray-600 mt-1">약물·감기약 조합 위험을 AI가 짚어 줌</p>
+              </div>
+              <div className="bg-gray-50 rounded-xl p-4 text-center">
+                <span className="text-2xl block mb-2">📋</span>
+                <p className="text-sm font-medium text-gray-800">복용·시간 가이드</p>
+                <p className="text-xs text-gray-600 mt-1">아침/점심/저녁 안전한 복용 순서 제안</p>
+              </div>
+              <div className="bg-gray-50 rounded-xl p-4 text-center">
+                <span className="text-2xl block mb-2">🩺</span>
+                <p className="text-sm font-medium text-gray-800">의료진 판단 지원</p>
+                <p className="text-xs text-gray-600 mt-1">상담 시 AI 요약을 전달해 판단 보조</p>
+              </div>
+              <div className="bg-gray-50 rounded-xl p-4 text-center">
+                <span className="text-2xl block mb-2">🛡️</span>
+                <p className="text-sm font-medium text-gray-800">불안 감소</p>
+                <p className="text-xs text-gray-600 mt-1">&ldquo;이렇게 먹여도 될까?&rdquo;에 대한 실질적 참고</p>
+              </div>
+            </div>
+          </div>
+          <p className="mt-6 text-center text-sm text-gray-500">자람이의 집중치료·약물추적 모드에 통합 예정</p>
         </div>
       </section>
 
@@ -1533,7 +1853,7 @@ export default function JarameService() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">기관 연동 & 학교 관리자</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              센터·병원·학교와 연동해 역할 기반 접근 제어(RBAC)로 안전하게 협업합니다.
+              센터·병원·학교와 연동해 역할 기반 접근 제어(RBAC, 담당자별 열람 권한 관리)로 안전하게 협업합니다.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
