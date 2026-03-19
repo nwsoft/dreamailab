@@ -8,30 +8,16 @@ export const metadata: Metadata = {
   description:
     '드림에이아이랩의 AI 디지털케어로그 기술 기반 시니어 돌봄 통합 플랫폼. 재가노인복지서비스, 요양원, 요양병원, 주야간보호, 의료보조기기, 요양보호사 구인구직을 하나로 연결하고, AI가 수면·활동·복약 패턴을 실시간 분석하여 이상 징후를 조기 감지합니다. 가족과 요양보호사가 함께 보는 개인 맞춤형 케어로 시니어 건강 관리의 새로운 표준을 제시합니다.',
   keywords: [
-    '시니어앤라이프',
-    'AI 시니어 돌봄',
-    'AI 디지털케어로그',
-    '시니어 케어 플랫폼',
-    '재가노인복지서비스',
-    '요양원 관리 시스템',
-    '요양병원 디지털화',
-    '주야간보호센터',
+    // 최근 검색 트렌드에 맞춘 핵심 키워드 위주 구성
+    '시니어 돌봄 플랫폼',
+    '시니어 디지털케어로그',
+    '요양원 검색 매칭',
+    '재가요양 서비스',
     '요양보호사 구인구직',
-    '시니어 건강 모니터링',
-    'AI 헬스케어',
-    '고령자 돌봄 기술',
-    '멀티모달 AI',
-    '시계열 학습',
-    '이상 패턴 탐지',
-    '개인 맞춤 케어',
+    '요양 행정 SaaS',
+    'AI 시니어 헬스케어',
     'DAL AI',
     '드림에이아이랩',
-    '시니어 AI 솔루션',
-    '요양 산업 디지털 전환',
-    '시니어 헬스테크',
-    'AI 돌봄 로봇',
-    '스마트 케어',
-    '원격 건강 관리',
   ],
   openGraph: {
     title: '시니어앤라이프 | AI 시니어 돌봄 디지털케어로그',
@@ -360,1103 +346,854 @@ export default function SeniorService() {
     <div className="min-h-screen bg-gray-50">
       <Header />
 
-      {/* 1. Hero Section */}
-      <section className="bg-gradient-to-br from-green-600 to-emerald-600 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* SECTION 1: 서비스 소개 (Hero) */}
+      <section className="bg-gradient-to-br from-green-600 to-emerald-600 text-white py-16 lg:py-24">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              시니어앤라이프 — AI 디지털케어로그, 시니어 삶의 케어 동반자
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+              AI 디지털케어로그 기반 시니어 돌봄 통합 플랫폼
             </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto font-semibold text-green-100">
-              재가노인복지·요양원·요양병원·주야간보호부터 <strong className="text-white">맞춤형 치료·맞춤형 약물·맞춤형 질병 관리</strong>까지
+            <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto text-green-100">
+              재가서비스, 요양원, 요양병원, 주야간보호, 의료보조기기, 요양보호사 매칭까지<br />
+              시니어 돌봄 전 과정을 하나의 플랫폼에서 연결합니다.
             </p>
-            
-            {/* 핵심 가치 강조 */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-8 max-w-4xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-                <div>
-                  <p className="text-3xl font-bold text-white mb-1">실시간 모니터링</p>
-                  <p className="text-sm text-green-100">24시간 건강 상태 추적</p>
-                </div>
-                <div>
-                  <p className="text-3xl font-bold text-white mb-1">AI 분석</p>
-                  <p className="text-sm text-green-100">위험 신호 조기 발견</p>
-                </div>
-                <div>
-                  <p className="text-3xl font-bold text-white mb-1">완전 통합</p>
-                  <p className="text-sm text-green-100">가족·센터·병원 연결</p>
-                </div>
-              </div>
+            <div className="flex flex-wrap justify-center gap-4 text-sm">
+              <span className="bg-white/10 px-4 py-2 rounded-full font-medium">AI 디지털케어로그</span>
+              <span className="bg-white/10 px-4 py-2 rounded-full font-medium">시니어 돌봄 통합 플랫폼</span>
+              <span className="bg-white/10 px-4 py-2 rounded-full font-medium">가족 / 기관 / 의료 / 공공 연결</span>
             </div>
-
-            <p className="text-lg max-w-2xl mx-auto text-white/80">
-              DAL AI 디지털케어로그가 일상 기록→AI 분석→병원/센터/가족 연계를 통합 제공합니다.
-            </p>
-            <div className="mt-6 flex flex-wrap justify-center gap-2 text-xs">
-              <span className="bg-white/10 border border-white/20 text-white px-3 py-1 rounded-full">전 생애 케어</span>
-              <span className="bg-white/10 border border-white/20 text-white px-3 py-1 rounded-full">맞춤형 치료</span>
-              <span className="bg-white/10 border border-white/20 text-white px-3 py-1 rounded-full">AI 디지털케어로그</span>
-            </div>
-            <div className="mt-6">
+            <div className="mt-8">
               <span className="inline-block px-4 py-2 bg-orange-100 text-orange-800 rounded-full text-sm font-semibold">Pilot / In Development</span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 2. Problem Definition & 3. Solution */}
-      {/* 섹션 1: 서비스 개요 */}
-      <section className="py-16 lg:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-center">시니어앤라이프란?</h2>
-          <p className="text-xl text-gray-700 mb-8 text-center max-w-4xl mx-auto">
-            시니어앤라이프는 고령자와 가족을 위한 <strong>시니어 돌봄 통합 플랫폼</strong>입니다.
+      {/* SECTION 2: 왜 시니어 돌봄 플랫폼이 필요한가 */}
+      <section className="py-14 bg-white border-b border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">왜 시니어 돌봄 플랫폼이 필요한가</h2>
+          <p className="text-center text-gray-600 text-sm mb-3 max-w-3xl mx-auto">
+            한국 시니어 돌봄 산업은 재가서비스, 요양원, 요양병원, 주야간보호, 간병, 복지기기 등으로 나뉘어 있지만
+            정보를 찾는 과정과 돌봄 기록, 행정·운영 시스템은 여전히 제각각입니다.
+          </p>
+          <p className="text-center text-gray-600 text-xs mb-6 max-w-3xl mx-auto">
+            보호자는 부모님을 위한 시설을 찾으려 해도 어떤 기관이 어떤 강점을 가지고 있는지 비교하기 어렵습니다.
+            입소 후에도 오늘 식사는 하셨는지, 약은 드셨는지, 컨디션은 어떤지
+            실시간으로 확인하기 어려운 경우가 많습니다. 많은 기관은 지금도 엑셀·수기·전화·메신저에 의존해
+            운영과 행정을 처리하고 있습니다.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="bg-red-50 rounded-xl p-5 border border-red-100">
+              <h3 className="font-bold text-gray-900 mb-2 text-sm">기관별 정보 분산</h3>
+              <p className="text-xs text-gray-700">
+                기관·서비스 정보가 포털·전단·입소 상담 등으로 흩어져 있어, 보호자가 한눈에 비교·선택하기 어렵습니다.
+              </p>
+            </div>
+            <div className="bg-red-50 rounded-xl p-5 border border-red-100">
+              <h3 className="font-bold text-gray-900 mb-2 text-sm">보호자의 정보 부족</h3>
+              <p className="text-xs text-gray-700">
+                등급, 본인부담, 서비스 내용, 재가·시설·병원 중 무엇이 적절한지 스스로 판단하기 어려운 경우가 많습니다.
+              </p>
+            </div>
+            <div className="bg-red-50 rounded-xl p-5 border border-red-100">
+              <h3 className="font-bold text-gray-900 mb-2 text-sm">돌봄 기록 비표준화</h3>
+              <p className="text-xs text-gray-700">
+                기관마다 수기·엑셀·내부 시스템 등 기록 방식이 달라, 다른 기관·의료기관과 데이터를 연결하기 어렵습니다.
+              </p>
+            </div>
+            <div className="bg-red-50 rounded-xl p-5 border border-red-100">
+              <h3 className="font-bold text-gray-900 mb-2 text-sm">행정 업무 비효율</h3>
+              <p className="text-xs text-gray-700">
+                돌봄 기록과 청구·보고·정산이 분리되어 있어 같은 내용을 여러 번 입력해야 하고, 작은 기관일수록 운영 부담이 큽니다.
+              </p>
+            </div>
+            <div className="bg-red-50 rounded-xl p-5 border border-red-100">
+              <h3 className="font-bold text-gray-900 mb-2 text-sm">가족과 기관 소통 단절</h3>
+              <p className="text-xs text-gray-700">
+                보호자는 전화나 가끔의 카톡·사진에 의존해 부모님의 상태를 짐작할 뿐, 실제 하루 기록을 구조적으로 보기 어렵습니다.
+              </p>
+            </div>
+            <div className="bg-red-50 rounded-xl p-5 border border-red-100">
+              <h3 className="font-bold text-gray-900 mb-2 text-sm">데이터 기반 케어 부족</h3>
+              <p className="text-xs text-gray-700">
+                돌봄 기록은 쌓이지만, AI 분석·위험 예측·맞춤 케어 계획으로 이어지지 못해, 경험과 감에 의존한 운영이 반복됩니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 추가: 보호자 실제 경험 스토리 */}
+      <section className="py-14 bg-gray-50 border-b border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">보호자, 실제로 어떻게 바뀌나요</h2>
+          <p className="text-center text-gray-600 text-sm mb-8 max-w-3xl mx-auto">
+            멀리 떨어져 사는 보호자가 부모님 상태를 매일 확인하기 어려운 현실, 그리고 시니어앤라이프를 쓰면 어떤 변화가 오는지 구체적인 장면으로 설명합니다.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          <div className="bg-white rounded-2xl p-8 border border-gray-100 space-y-6">
+            <div>
+              <h3 className="font-bold text-gray-900 mb-2 text-sm">현실: 전화와 &quot;괜찮다&quot;만으로는 부족합니다</h3>
+              <p className="text-gray-700 text-sm leading-relaxed mb-3">
+                보호자는 대부분 부모님과 떨어져 삽니다. 전화하면 항상 같은 말이 돌아옵니다. &quot;괜찮다.&quot; 하지만 보호자는 늘 궁금합니다.
+              </p>
+              <ul className="text-gray-700 text-sm space-y-1 mb-3">
+                <li>오늘 식사는 잘 하셨을까</li>
+                <li>약은 제 시간에 드셨을까</li>
+                <li>오늘 산책이나 활동은 하셨을까</li>
+                <li>요즘 잠은 잘 주무실까</li>
+                <li>넘어지거나 아프신 적은 없을까</li>
+              </ul>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                서울에 사는 보호자는 부산에 계신 어머니의 상태를 매일 확인하기 어렵습니다. 지금까지 보호자는 전화, 카톡, 가끔 오는 사진으로만 부모님의 상태를 짐작해야 했습니다.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-bold text-gray-900 mb-2 text-sm">시니어앤라이프에서는</h3>
+              <p className="text-gray-700 text-sm leading-relaxed mb-3">
+                보호자가 앱을 열면 <strong>오늘 하루의 돌봄 기록이 시간 순으로</strong> 보입니다.
+              </p>
+              <ul className="text-gray-700 text-sm font-mono space-y-1 mb-3 bg-gray-50 rounded-lg p-4">
+                <li>09:00 아침 식사</li>
+                <li>09:30 복약</li>
+                <li>10:10 산책 프로그램 참여</li>
+                <li>12:30 점심 식사</li>
+                <li>13:20 혈압 측정</li>
+                <li>15:00 낮잠</li>
+                <li>17:30 저녁 식사</li>
+              </ul>
+              <p className="text-gray-700 text-sm leading-relaxed mb-2">AI는 다음과 같은 변화도 감지합니다.</p>
+              <ul className="text-gray-700 text-sm space-y-1">
+                <li>• 최근 활동량 감소</li>
+                <li>• 수면 패턴 변화</li>
+                <li>• 낙상 위험 증가</li>
+                <li>• 복약 시간 지연</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-bold text-gray-900 mb-2 text-sm">결과적으로</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                보호자는 더 이상 &quot;괜찮다&quot;는 말만 듣는 것이 아니라, <strong>부모님의 하루를 실제 기록으로 이해</strong>하게 됩니다. 추측이 아니라 식사·복약·활동·수면·혈압·기분·특이사항까지 확인할 수 있는 구조로 바뀝니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 3: 시니어앤라이프 플랫폼 소개 */}
+      <section className="py-14 bg-white border-b border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">시니어앤라이프 플랫폼</h2>
+          <p className="text-center text-gray-600 text-sm mb-8 max-w-2xl mx-auto">
+            시니어앤라이프는 단순한 요양원 검색 사이트가 아니라,{' '}
+            <strong>검색 · 비교 · 매칭 · 돌봄 기록 · AI 분석 · 행정 관리</strong>를 한 흐름으로 묶는 시니어 돌봄 인프라 플랫폼입니다.
+          </p>
+          <div className="bg-gray-50 rounded-2xl p-8 border border-gray-100">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-center">
+              <div className="p-4"><span className="text-2xl block mb-1">🔍</span><p className="text-sm font-medium text-gray-800">검색</p></div>
+              <div className="p-4"><span className="text-2xl block mb-1">⚖️</span><p className="text-sm font-medium text-gray-800">비교</p></div>
+              <div className="p-4"><span className="text-2xl block mb-1">🤝</span><p className="text-sm font-medium text-gray-800">매칭</p></div>
+              <div className="p-4"><span className="text-2xl block mb-1">📒</span><p className="text-sm font-medium text-gray-800">돌봄 기록</p></div>
+              <div className="p-4"><span className="text-2xl block mb-1">🤖</span><p className="text-sm font-medium text-gray-800">AI 분석</p></div>
+              <div className="p-4"><span className="text-2xl block mb-1">📋</span><p className="text-sm font-medium text-gray-800">행정 관리</p></div>
+            </div>
+            <p className="mt-6 text-center text-sm text-gray-600">
+              DAL <strong>AI 디지털케어로그</strong> 기반 서비스로, 표준 기록·다기관 연계·실시간 환류를 지원합니다.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 4: 서비스 구성 */}
+      <section className="py-14 bg-gray-50 border-b border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">서비스 구성</h2>
+          <p className="text-center text-gray-600 text-sm mb-8 max-w-2xl mx-auto">시니어 돌봄 전 영역을 하나의 플랫폼에서 연결합니다.</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <ServiceCard
               title="재가노인복지서비스"
-              description="가정에서 받는 방문요양·방문간호·방문목욕"
+              description="집에서 생활하는 어르신을 위한 방문요양·방문간호·방문목욕 서비스 연결"
               icon="🏠"
             />
             <ServiceCard
-              title="요양원·노인요양시설"
-              description="장기 입소를 위한 24시간 전문 돌봄"
+              title="요양원 / 노인요양시설"
+              description="장기적인 생활 돌봄이 필요한 어르신을 위한 24시간 생활 지원 시설"
               icon="🏘️"
             />
             <ServiceCard
-              title="요양병원·노인전문병원"
-              description="의료·재활 중심의 전문적인 치료"
+              title="요양병원 / 노인전문병원"
+              description="치료·재활·건강관리 중심의 의료 연계 시설"
               icon="🏥"
             />
             <ServiceCard
               title="주야간보호센터"
-              description="낮·밤 시간대를 책임지는 보호 서비스"
+              description="낮 시간 또는 일정 시간 동안 보호와 활동 지원이 필요한 어르신 대상 서비스"
               icon="🌅"
             />
             <ServiceCard
-              title="의료·보조기기"
-              description="독립적인 생활을 지원하는 장비"
+              title="의료 / 보조기기"
+              description="이동·생활·일상 기능 유지를 돕는 의료·보조기기 연결"
               icon="🦽"
             />
             <ServiceCard
-              title="구인/구직/매칭"
-              description="요양보호사·전문간병인 연결"
+              title="요양보호사 / 간병인 구인구직 매칭"
+              description="기관과 인력을 연결하는 구인·구직 매칭"
               icon="👥"
             />
           </div>
+        </div>
+      </section>
 
-          <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">
-              DAL AI 기술로 구현한 AI 시니어 디지털케어로그 · AI 상담
-            </h3>
-            <p className="text-lg text-gray-700 text-center max-w-3xl mx-auto">
-              이 모든 요소를 하나의 플랫폼에서 <strong>검색·비교·매칭·기록·분석</strong>할 수 있도록 설계했습니다.
+      {/* SECTION 추가: 서비스 영역별 현실 문제와 변화 */}
+      <section className="py-14 bg-white border-b border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">서비스 영역별 현실 문제와 변화</h2>
+          <p className="text-center text-gray-600 text-sm mb-8 max-w-3xl mx-auto">
+            재가·요양원·요양병원·주야간보호·의료기기·구인구직 각 영역에서 어떤 문제를 해결하고, 도입 후 무엇이 달라지는지 정리했습니다.
+          </p>
+
+          <div className="space-y-6">
+            <div className="bg-green-50 rounded-2xl p-6 border border-green-100">
+              <div className="flex items-center mb-3"><span className="text-2xl mr-2">🏠</span><h3 className="font-bold text-gray-900">재가노인복지서비스</h3></div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs md:text-sm text-gray-700">
+                <div><h4 className="font-semibold text-gray-900 mb-1">현재 문제</h4><p>방문 일정 관리가 어렵고, 보호자에게 상태 공유가 부족하며, 장기요양보험 청구·행정이 번거롭습니다. 서비스 기록과 행정이 분리되어 같은 내용을 여러 번 입력해야 합니다.</p></div>
+                <div><h4 className="font-semibold text-gray-900 mb-1">시니어앤라이프에서</h4><p>방문 일정·돌봄 기록·보호자 공유·정산·청구를 한 시스템에서 관리합니다.</p></div>
+                <div><h4 className="font-semibold text-gray-900 mb-1">도입 후 변화</h4><p>일정·기록·보호자 공유·정산·청구가 한 흐름으로 연결되어 반복 입력이 줄고, 보호자 신뢰가 높아집니다.</p></div>
+              </div>
+            </div>
+
+            <div className="bg-indigo-50 rounded-2xl p-6 border border-indigo-100">
+              <div className="flex items-center mb-3"><span className="text-2xl mr-2">🏘️</span><h3 className="font-bold text-gray-900">요양원 / 노인요양시설</h3></div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs md:text-sm text-gray-700">
+                <div><h4 className="font-semibold text-gray-900 mb-1">현재 문제</h4><p>보호자 문의가 반복되고, 생활기록은 쌓이지만 운영 데이터로 활용되지 않습니다. 평가·인증 대비 자료 준비도 수작업에 가깝습니다.</p></div>
+                <div><h4 className="font-semibold text-gray-900 mb-1">시니어앤라이프에서</h4><p>돌봄 기록·보호자 공유·직원 근태·행정 문서를 표준화된 SaaS로 운영합니다.</p></div>
+                <div><h4 className="font-semibold text-gray-900 mb-1">도입 후 변화</h4><p>돌봄 기록, 보호자 공유, 운영 지표, 평가·인증 대응이 표준화되고, 기록이 서비스 품질을 보여주는 데이터가 됩니다.</p></div>
+              </div>
+            </div>
+
+            <div className="bg-sky-50 rounded-2xl p-6 border border-sky-100">
+              <div className="flex items-center mb-3"><span className="text-2xl mr-2">🏥</span><h3 className="font-bold text-gray-900">요양병원 / 노인전문병원</h3></div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs md:text-sm text-gray-700">
+                <div><h4 className="font-semibold text-gray-900 mb-1">현재 문제</h4><p>병원은 재가·시설에서의 생활 데이터를 충분히 알기 어렵습니다. 입원·외래 정보와 생활시설 정보가 연결되지 않아 진료 판단이 단절되기 쉽습니다.</p></div>
+                <div><h4 className="font-semibold text-gray-900 mb-1">시니어앤라이프에서</h4><p>수면·활동·복약·식사·낙상 등 생활 데이터가 요약된 리포트를 진료·치료에 참고합니다.</p></div>
+                <div><h4 className="font-semibold text-gray-900 mb-1">도입 후 변화</h4><p>생활 패턴, 복약 순응도, 식사·낙상 등 실제 데이터를 참고한 진료·치료 판단이 가능해집니다.</p></div>
+              </div>
+            </div>
+
+            <div className="bg-amber-50 rounded-2xl p-6 border border-amber-100">
+              <div className="flex items-center mb-3"><span className="text-2xl mr-2">🌅</span><h3 className="font-bold text-gray-900">주야간보호센터</h3></div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs md:text-sm text-gray-700">
+                <div><h4 className="font-semibold text-gray-900 mb-1">현재 문제</h4><p>낮 시간 활동 기록이 보호자에게 충분히 공유되지 않고, 프로그램 참여도와 상태 변화를 구조적으로 보여주기 어렵습니다.</p></div>
+                <div><h4 className="font-semibold text-gray-900 mb-1">시니어앤라이프에서</h4><p>출석, 식사, 활동, 컨디션을 기록하고 보호자와 실시간 공유합니다.</p></div>
+                <div><h4 className="font-semibold text-gray-900 mb-1">도입 후 변화</h4><p>출석·식사·활동·컨디션이 기록·공유·분석되어 보호자 신뢰와 프로그램 운영 개선에 도움이 됩니다.</p></div>
+              </div>
+            </div>
+
+            <div className="bg-gray-50 rounded-2xl p-6 border border-gray-200">
+              <div className="flex items-center mb-3"><span className="text-2xl mr-2">🦽</span><h3 className="font-bold text-gray-900">의료 / 보조기기</h3></div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs md:text-sm text-gray-700">
+                <div><h4 className="font-semibold text-gray-900 mb-1">현재 문제</h4><p>어떤 기기가 필요한지 정보가 분산되어 있고, 단순 판매가 아니라 실제 생활 기능 유지와 연결되어야 합니다.</p></div>
+                <div><h4 className="font-semibold text-gray-900 mb-1">시니어앤라이프에서</h4><p>돌봄 기록과 생활 상태를 바탕으로 필요한 기기·보조 장비 정보를 연결합니다.</p></div>
+                <div><h4 className="font-semibold text-gray-900 mb-1">도입 후 변화</h4><p>생활 상태와 돌봄 기록을 바탕으로 필요한 의료·보조기기를 더 적절히 연결할 수 있습니다.</p></div>
+              </div>
+            </div>
+
+            <div className="bg-blue-50 rounded-2xl p-6 border border-blue-100">
+              <div className="flex items-center mb-3"><span className="text-2xl mr-2">👥</span><h3 className="font-bold text-gray-900">요양보호사 / 간병인 구인구직 매칭</h3></div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs md:text-sm text-gray-700">
+                <div><h4 className="font-semibold text-gray-900 mb-1">현재 문제</h4><p>단순 채용 공고 수준에 머물기 쉽고, 실제 기관 운영 흐름(기록·근태·행정)과 연결되지 않습니다.</p></div>
+                <div><h4 className="font-semibold text-gray-900 mb-1">시니어앤라이프에서</h4><p>기관과 인력을 연결할 뿐 아니라, 기록·근태·행정이 같은 플랫폼에서 운영되도록 설계됩니다.</p></div>
+                <div><h4 className="font-semibold text-gray-900 mb-1">도입 후 변화</h4><p>구인구직이 기관의 돌봄 기록·근태·운영 데이터와 연동되어 채용부터 현장 운영까지 한 흐름으로 이어집니다.</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 5: 플랫폼 핵심 기능 */}
+      <section className="py-14 bg-gray-50 border-b border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">플랫폼 핵심 기능</h2>
+          <p className="text-center text-gray-600 text-sm mb-8 max-w-2xl mx-auto">
+            단순 기능 나열이 아니라, 기록·분석·연결·케어 계획이 하나의 흐름으로 동작합니다.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
+              <div className="text-3xl mb-3">📒</div>
+              <h3 className="font-bold text-gray-900 mb-2">AI 디지털케어로그</h3>
+              <ul className="text-sm text-gray-700 space-y-1">
+                <li>• 단순 메모가 아닌 표준화된 돌봄 기록 시스템</li>
+                <li>• 시니어의 상태 변화를 시간 흐름에 따라 축적</li>
+              </ul>
+            </div>
+            <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
+              <div className="text-3xl mb-3">🔮</div>
+              <h3 className="font-bold text-gray-900 mb-2">AI 건강 분석</h3>
+              <ul className="text-sm text-gray-700 space-y-1">
+                <li>• 수면·활동·복약 등 시계열 패턴 분석</li>
+                <li>• 평소와 다른 변화·위험 신호 조기 탐지</li>
+              </ul>
+            </div>
+            <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
+              <div className="text-3xl mb-3">👨‍👩‍👧‍👦</div>
+              <h3 className="font-bold text-gray-900 mb-2">가족 연결</h3>
+              <ul className="text-sm text-gray-700 space-y-1">
+                <li>• 보호자가 실시간으로 돌봄 기록을 확인</li>
+                <li>• 전화·메신저 대신 기록 기반 소통</li>
+              </ul>
+            </div>
+            <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
+              <div className="text-3xl mb-3">🎯</div>
+              <h3 className="font-bold text-gray-900 mb-2">데이터 기반 케어 계획</h3>
+              <ul className="text-sm text-gray-700 space-y-1">
+                <li>• 누적 데이터를 바탕으로 개인 맞춤 케어 방향 제안</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 6: 누가 어떻게 사용하는가 (역할별 시나리오) */}
+      <section className="py-14 bg-white border-b border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">누가 어떻게 사용하는가</h2>
+          <p className="text-center text-gray-600 text-sm mb-8 max-w-3xl mx-auto">
+            각 역할별로 현재 문제 → 시니어앤라이프에서의 사용 방식 → 도입 후 변화를 구체적으로 설명합니다.
+          </p>
+
+          <div className="space-y-6">
+            {/* 보호자 / 가족 */}
+            <div className="bg-green-50 rounded-2xl p-6 border border-green-100">
+              <div className="flex items-center mb-3">
+                <div className="text-3xl mr-3">👨‍👩‍👧‍👦</div>
+                <h3 className="font-bold text-gray-900">보호자 / 가족</h3>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs md:text-sm text-gray-700">
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-1">현재</h4>
+                  <p>멀리 떨어져 사는 보호자는 부모님 상태를 매일 알기 어렵습니다. 시설에 계시거나 재가서비스를 받아도 전화로는 &quot;괜찮다&quot;는 말만 들을 뿐, 식사·복약·활동·컨디션이 어땠는지 추측에 의존합니다. 카톡·가끔 오는 사진만으로는 실제 하루를 구조적으로 보기 어렵습니다.</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-1">시니어앤라이프에서</h4>
+                  <p>앱에서 식사, 복약, 활동, 수면, 혈압, 기분, 특이사항을 시간 순으로 확인하고, AI가 활동량 감소·수면 변화·낙상 위험·복약 지연 등을 감지하면 알림을 받습니다.</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-1">도입 후 변화</h4>
+                  <p>전화와 추측에 의존하던 확인 방식이, 실제 기록과 AI 리포트로 부모님 상태를 이해하는 방식으로 바뀝니다. &quot;괜찮다&quot;만 듣던 구조에서 식사·복약·활동·수면·혈압·기분·특이사항까지 보는 구조가 됩니다.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* 요양보호사 / 현장 돌봄 종사자 */}
+            <div className="bg-blue-50 rounded-2xl p-6 border border-blue-100">
+              <div className="flex items-center mb-3">
+                <div className="text-3xl mr-3">🧑‍⚕️</div>
+                <h3 className="font-bold text-gray-900">요양보호사 / 현장 돌봄 종사자</h3>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs md:text-sm text-gray-700">
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-1">현재</h4>
+                  <p>종이 기록지, 엑셀, 단체 채팅방, 전화 보고 등으로 업무가 분산되고, 기록이 남아도 분석·공유가 어렵습니다.</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-1">시니어앤라이프에서</h4>
+                  <p>현장 앱에서 식사, 복약, 활동, 정서 상태, 특이 사항을 아이콘·숫자·짧은 메모 형태로 빠르게 입력합니다.</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-1">도입 후 변화</h4>
+                  <p>한 번의 기록이 보호자 공유, 기관 관리, AI 분석, 행정 문서까지 연결되어, 반복 보고와 이중 입력 부담이 줄어듭니다.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* 시설 운영자 / 센터 현실 장면 */}
+            <div className="bg-amber-50/80 rounded-2xl p-6 border border-amber-100">
+              <h3 className="font-bold text-gray-900 mb-2 text-sm">시설·센터 운영자의 현실</h3>
+              <p className="text-gray-700 text-sm leading-relaxed mb-2">
+                재가센터나 요양시설을 운영하는 사람들의 하루는 매우 복잡합니다. <strong>보호자 전화, 직원 근태 관리, 방문 일정 조정, 돌봄 기록 정리, 장기요양보험 청구, 행정 보고</strong>—이 모든 일이 서로 다른 도구에서 이루어지는 경우가 많습니다.
+              </p>
+              <p className="text-gray-700 text-sm leading-relaxed mb-2">
+                예를 들어 방문 기록은 종이에 남고, 근태는 엑셀에 기록되고, 보호자 소통은 단체 채팅방에서 이루어지고, 장기요양보험 청구는 또 다른 프로그램에서 처리됩니다. 같은 정보를 여러 번 입력해야 하고, 조금만 누락되어도 행정 오류가 발생할 수 있습니다.
+              </p>
+              <p className="text-gray-700 text-sm leading-relaxed mb-2">
+                시니어앤라이프에서는 <strong>방문 일정 · 돌봄 기록 · 보호자 공유 · 직원 근태 · 급여 정산 · 청구 및 행정 보고</strong>가 하나의 흐름으로 연결됩니다.
+              </p>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                현장에서 입력된 기록이 보호자 공유, 기관 운영, 행정 보고까지 연결되면서, 기록은 단순 보고가 아니라 기관 서비스 품질을 보여주는 데이터로 바뀝니다.
+              </p>
+            </div>
+
+            {/* 재가서비스 업체 / 개인 사업자 / 센터 운영자 */}
+            <div className="bg-emerald-50 rounded-2xl p-6 border border-emerald-100">
+              <div className="flex items-center mb-3">
+                <div className="text-3xl mr-3">🏠</div>
+                <h3 className="font-bold text-gray-900">재가서비스 업체 / 개인 사업자 / 센터 운영자</h3>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs md:text-sm text-gray-700">
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-1">현재</h4>
+                  <p>방문 일정, 서비스 기록, 보호자 소통, 급여 정산, 청구·보고가 각각 다른 도구에서 운영되어 센터장·1인 사업자의 부담이 큽니다.</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-1">시니어앤라이프에서</h4>
+                  <p>일정·기록·보호자 공유·직원 근태·정산·청구 데이터를 하나의 시스템에서 관리합니다.</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-1">도입 후 변화</h4>
+                  <p>운영이 체계화되고, 보호자에게 투명한 기록을 제공하며, 행정 오류와 누락이 줄어듭니다.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* 요양원 / 시설 운영자 */}
+            <div className="bg-indigo-50 rounded-2xl p-6 border border-indigo-100">
+              <div className="flex items-center mb-3">
+                <div className="text-3xl mr-3">🏘️</div>
+                <h3 className="font-bold text-gray-900">요양원 / 시설 운영자</h3>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs md:text-sm text-gray-700">
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-1">현재</h4>
+                  <p>직원 관리, 프로그램 기록, 보호자 응대, 평가·인증, 행정 보고가 서로 분리되어 있고, 기록은 쌓여도 운영 지표로 활용되기 어렵습니다.</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-1">시니어앤라이프에서</h4>
+                  <p>돌봄 기록·보호자 공유·직원 근태·행정 문서 생성을 표준화된 SaaS로 운영합니다.</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-1">도입 후 변화</h4>
+                  <p>현장 기록이 단순 보관이 아니라, 서비스 품질과 기관 신뢰도를 보여주는 운영 데이터가 됩니다.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* 병원 / 의료기관 */}
+            <div className="bg-sky-50 rounded-2xl p-6 border border-sky-100">
+              <div className="flex items-center mb-3">
+                <div className="text-3xl mr-3">🏥</div>
+                <h3 className="font-bold text-gray-900">병원 / 의료기관</h3>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs md:text-sm text-gray-700">
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-1">현재</h4>
+                  <p>외래·입원 시에는 상태를 볼 수 있지만, 재가·시설에서의 생활 패턴과 복약 순응도는 파편적인 진술에 의존하는 경우가 많습니다.</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-1">시니어앤라이프에서</h4>
+                  <p>수면·활동·복약·식사·낙상 등 생활 데이터가 요약된 리포트를 참고해 진료·치료 방향을 결정합니다.</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-1">도입 후 변화</h4>
+                  <p>진료실에서의 단편적인 정보가 아니라, 실제 생활 데이터까지 포함한 치료 의사결정이 가능해집니다.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* 지자체 / 정부 / 공공 관리자 */}
+            <div className="bg-gray-50 rounded-2xl p-6 border border-gray-200">
+              <div className="flex items-center mb-3">
+                <div className="text-3xl mr-3">🏛️</div>
+                <h3 className="font-bold text-gray-900">지자체 / 정부 / 공공 관리자</h3>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs md:text-sm text-gray-700">
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-1">현재</h4>
+                  <p>기관을 관리·감독해야 하지만, 현장의 서비스 질과 운영 상태를 세밀하게 파악할 수 있는 데이터가 부족합니다.</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-1">시니어앤라이프에서</h4>
+                  <p>표준화된 기록과 운영 데이터를 기반으로 기관 현황, 서비스 이용 추이, 위험 신호를 모니터링합니다.</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-1">도입 후 변화</h4>
+                  <p>사후 민원·조사 중심이 아니라, 데이터 기반 사전 관리와 정책 개선이 가능해집니다.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 추가: 실제 돌봄 기록 예시 */}
+      <section className="py-14 bg-gray-50 border-b border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">실제 돌봄 기록 예시</h2>
+          <p className="text-center text-gray-600 text-sm mb-6 max-w-3xl mx-auto">
+            보호자는 앱에서 하루 돌봄 기록을 <strong>시간 순</strong>으로 확인할 수 있습니다. 디지털케어로그가 어떤 정보를 담는지 직관적으로 이해할 수 있습니다.
+          </p>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="bg-white rounded-2xl p-6 border border-gray-100">
+              <h3 className="font-bold text-gray-900 mb-3 text-sm">하루 돌봄 기록 예시 (시간 순)</h3>
+              <p className="text-xs text-gray-600 mb-3">식사·복약·활동·혈압·휴식·특이사항이 시간 순으로 쌓입니다. 보호자는 &quot;오늘 뭐 하셨지?&quot;가 아니라 이 기록으로 확인할 수 있습니다.</p>
+              <ul className="space-y-2 text-sm text-gray-700 font-mono">
+                <li>09:00 아침 식사 완료</li>
+                <li>09:30 복약 기록</li>
+                <li>10:10 산책 프로그램 참여</li>
+                <li>12:30 점심 식사</li>
+                <li>13:20 혈압 측정</li>
+                <li>15:00 휴식 및 낮잠</li>
+                <li>17:30 저녁 식사</li>
+                <li>19:00 기분 안정 / 특이사항 없음</li>
+              </ul>
+            </div>
+            <div className="bg-white rounded-2xl p-6 border border-emerald-100">
+              <h3 className="font-bold text-gray-900 mb-3 text-sm">AI 분석 알림 예시</h3>
+              <p className="text-xs text-gray-600 mb-3">AI가 시간 흐름 속 패턴을 분석해 다음과 같은 알림을 제공할 수 있습니다.</p>
+              <ul className="space-y-2 text-sm text-gray-700">
+                <li>• 최근 활동량 감소</li>
+                <li>• 수면 패턴 변화</li>
+                <li>• 낙상 위험 증가</li>
+                <li>• 복약 시간 지연</li>
+              </ul>
+            </div>
+          </div>
+
+          <p className="mt-6 text-center text-gray-600 text-sm max-w-3xl mx-auto">
+            이러한 기록은 보호자가 부모님의 하루 상태를 <strong>전화나 추측이 아닌 실제 데이터</strong>로 이해할 수 있도록 돕습니다. &quot;아, 내가 이런 걸 보게 되는구나&quot;를 바로 떠올릴 수 있는 수준의 정보입니다.
+          </p>
+        </div>
+      </section>
+
+      {/* SECTION 7: 시니어 돌봄 행정 SaaS */}
+      <section className="py-14 bg-gray-50 border-b border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">시니어 돌봄 행정 SaaS</h2>
+          <p className="text-center text-gray-600 text-sm mb-8 max-w-2xl mx-auto">
+            돌봄 기록과 행정 시스템을 하나의 플랫폼에서 관리합니다.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+            <div className="bg-white rounded-xl p-5 border border-gray-100 shadow-sm text-center">
+              <div className="text-2xl mb-2">🏢</div>
+              <h3 className="font-bold text-gray-900 text-sm mb-1">기관 운영 관리</h3>
+              <p className="text-xs text-gray-600">재가·요양원·병원 통합</p>
+            </div>
+            <div className="bg-white rounded-xl p-5 border border-gray-100 shadow-sm text-center">
+              <div className="text-2xl mb-2">⏱️</div>
+              <h3 className="font-bold text-gray-900 text-sm mb-1">직원 근태 관리</h3>
+              <p className="text-xs text-gray-600">출퇴근·근무시간 자동 기록</p>
+            </div>
+            <div className="bg-white rounded-xl p-5 border border-gray-100 shadow-sm text-center">
+              <div className="text-2xl mb-2">💰</div>
+              <h3 className="font-bold text-gray-900 text-sm mb-1">급여 정산</h3>
+              <p className="text-xs text-gray-600">페이·정산 자동화</p>
+            </div>
+            <div className="bg-white rounded-xl p-5 border border-gray-100 shadow-sm text-center">
+              <div className="text-2xl mb-2">📑</div>
+              <h3 className="font-bold text-gray-900 text-sm mb-1">행정 서류 자동 생성</h3>
+              <p className="text-xs text-gray-600">돌봄 기록 → 청구·보고서</p>
+            </div>
+            <div className="bg-white rounded-xl p-5 border border-gray-100 shadow-sm text-center">
+              <div className="text-2xl mb-2">🏛️</div>
+              <h3 className="font-bold text-gray-900 text-sm mb-1">정부 보고 자동화</h3>
+              <p className="text-xs text-gray-600">표준 양식·원클릭 제출</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 추가 1: AI 디지털케어로그 기술 응용 */}
+      <section className="py-14 bg-white border-b border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">AI 디지털케어로그 기술 응용</h2>
+          <p className="text-center text-gray-600 text-sm mb-4 max-w-3xl mx-auto">
+            AI 디지털케어로그는 단순 기록 시스템이 아니라, <strong>기록 → 분석 → 판단 → 피드백</strong>이 반복되는 의사결정 인프라 기술입니다.
+          </p>
+          <p className="text-center text-gray-600 text-xs mb-3 max-w-3xl mx-auto">
+            기존 돌봄 기록은 단순한 기록 보관에 가깝습니다. <strong>AI 디지털케어로그는 의사결정 데이터 인프라</strong>입니다. 돌봄 현장에서 발생하는 기록이 수집되고, 분석되고, 패턴을 찾고, 위험을 감지하고, 케어 계획에 반영되는 <strong>Decision Log + Feedback Loop</strong> 구조로 작동합니다. 이 구조가 반복될수록 케어는 점점 더 개인 맞춤형으로 진화합니다.
+          </p>
+          <p className="text-center text-gray-600 text-xs mb-3 max-w-3xl mx-auto">
+            DAL AI 디지털케어로그는 단순한 기록 시스템이 아니라, 사람의 상태 변화와 생활 데이터를 <strong>시간 흐름 속에서 이해하고</strong> 더 나은 돌봄 의사결정을 돕는 <strong>AI 기반 의사결정 인프라 기술</strong>입니다.
+          </p>
+          <p className="text-center text-gray-600 text-xs mb-8 max-w-3xl mx-auto">
+            시니어앤라이프는 이 AI 디지털케어로그 기술을 시니어 돌봄 산업에 적용한 DAL 플랫폼 사례입니다.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <div className="bg-gray-50 rounded-xl p-5 border border-gray-100">
+              <div className="text-xs font-semibold text-gray-500 mb-1">1</div>
+              <h3 className="font-bold text-gray-900 mb-2 text-sm">기록</h3>
+              <p className="text-xs text-gray-700">
+                돌봄 현장에서 발생하는 식사, 복약, 활동, 정서 상태, 건강 상태 등의 데이터를
+                <strong> 표준화된 형태</strong>로 기록합니다.
+              </p>
+            </div>
+            <div className="bg-gray-50 rounded-xl p-5 border border-gray-100">
+              <div className="text-xs font-semibold text-gray-500 mb-1">2</div>
+              <h3 className="font-bold text-gray-900 mb-2 text-sm">분석</h3>
+              <p className="text-xs text-gray-700">
+                AI가 시간 흐름 속에서 수면·활동·복약·기분 등의 패턴을 분석하고,
+                평소와 다른 변화를 감지합니다.
+              </p>
+            </div>
+            <div className="bg-gray-50 rounded-xl p-5 border border-gray-100">
+              <div className="text-xs font-semibold text-gray-500 mb-1">3</div>
+              <h3 className="font-bold text-gray-900 mb-2 text-sm">판단 보조</h3>
+              <p className="text-xs text-gray-700">
+                AI 리포트와 위험 신호 분석을 통해 보호자, 기관, 의료진이
+                <strong> 상황을 더 빠르게 이해</strong>하도록 돕습니다.
+              </p>
+            </div>
+            <div className="bg-gray-50 rounded-xl p-5 border border-gray-100">
+              <div className="text-xs font-semibold text-gray-500 mb-1">4</div>
+              <h3 className="font-bold text-gray-900 mb-2 text-sm">피드백</h3>
+              <p className="text-xs text-gray-700">
+                케어 계획과 대응 방식이 데이터 피드백을 통해 지속적으로 개선되며,
+                시간이 지날수록 맞춤도가 높아집니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 추가 2: 시니어 돌봄 산업 구조 변화 */}
+      <section className="py-14 bg-gray-50 border-b border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">시니어 돌봄 산업 구조 변화</h2>
+          <p className="text-center text-gray-600 text-sm mb-6 max-w-3xl mx-auto">
+            기존 시니어 돌봄 산업은 재가서비스, 요양원, 요양병원, 주야간보호, 간병, 복지기기 등이{' '}
+            <strong>서비스 단위로 분리</strong>되어 있고, 정보·기록·데이터·행정 시스템이 서로 연결되지 않는 구조입니다.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs md:text-sm text-gray-700">
+            <div className="bg-white rounded-2xl p-6 border border-gray-100">
+              <h3 className="font-bold text-gray-900 mb-3 text-center">기존 구조</h3>
+              <ul className="space-y-2">
+                <li>• 재가서비스 / 요양원 / 요양병원 / 주야간보호 / 간병 / 복지기기가 각각 별개로 운영</li>
+                <li>• 정보·기록·데이터·행정 시스템이 서로 연결되지 않음</li>
+                <li>• 보호자는 서비스 선택이 어렵고, 기관은 운영 효율이 낮고, 의료기관은 생활 데이터를 알기 어렵습니다.</li>
+                <li>• 정부와 지자체는 현장을 데이터로 모니터링하기 어려워, 사후 대응 중심의 구조가 반복됩니다.</li>
+              </ul>
+            </div>
+
+            <div className="bg-white rounded-2xl p-6 border border-emerald-100">
+              <h3 className="font-bold text-gray-900 mb-3 text-center">시니어앤라이프 플랫폼 구조</h3>
+              <ul className="space-y-2">
+                <li>• <strong>검색</strong>: 시니어 돌봄 기관·서비스 정보를 한 곳에서 탐색</li>
+                <li>• <strong>서비스 연결</strong>: 재가·시설·병원·인력 매칭까지 연결</li>
+                <li>• <strong>돌봄 기록</strong>: 표준화된 디지털케어로그로 일상과 건강 상태를 기록</li>
+                <li>• <strong>행정 관리</strong>: 근태·정산·청구·보고를 같은 데이터로 처리</li>
+                <li>• <strong>AI 분석</strong>: 이상 패턴 감지, 위험 신호 탐지, 케어 계획 인사이트 제공</li>
+              </ul>
+              <p className="mt-3 text-xs text-gray-600">
+                분절된 시니어 산업을 <strong>데이터 기반 돌봄 인프라 구조</strong>로 전환하는 것이 시니어앤라이프의 목표입니다.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-8 bg-white rounded-2xl p-6 border border-emerald-100">
+            <p className="text-sm text-gray-700 leading-relaxed">
+              이는 단순 디지털화가 아니라 <strong>돌봄의 표준화 + 데이터화 + AI 기반 판단 보조</strong>를 함께 이루는 전환입니다. 시니어앤라이프는 DAL AI 디지털케어로그 기술의 시니어 산업 응용 사례이며, 앞으로 복지 정책·공공 관리·의료 연계·서비스 품질 관리의 기반이 될 수 있는 구조를 지향합니다. 즉, &quot;좋은 서비스&quot;를 넘어 <strong>산업 구조 전환의 시작점</strong>으로서 자리하는 플랫폼입니다.
             </p>
           </div>
         </div>
       </section>
 
-      {/* 3. Solution — 핵심 가치 */}
-      <section className="py-16 lg:py-24 bg-gradient-to-br from-emerald-50 to-green-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-center">핵심 가치</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {coreValues.map((value, idx) => (
-              <FeatureCard key={idx} title={value.title} description={value.description} icon={value.icon} />
-            ))}
+      {/* SECTION 추가: 기존 서비스와 시니어앤라이프의 차이 */}
+      <section className="py-14 bg-white border-b border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">기존 서비스와 시니어앤라이프의 차이</h2>
+          <p className="text-center text-gray-600 text-sm mb-6 max-w-3xl mx-auto">
+            현재 시장에는 다음과 같은 서비스들이 존재합니다. 각각 <strong>특정 역할만</strong> 수행합니다. 검색만 하거나, 매칭만 하거나, 행정만 관리합니다.
+          </p>
+
+          <div className="mb-6">
+            <h3 className="font-bold text-gray-900 mb-2 text-sm">기존 시장의 서비스 유형</h3>
+            <ul className="text-sm text-gray-700 space-y-1">
+              <li>• 요양원 검색 플랫폼</li>
+              <li>• 간병인 매칭 플랫폼</li>
+              <li>• 기관 운영 ERP</li>
+              <li>• 장기요양 행정 프로그램</li>
+            </ul>
+          </div>
+
+          <p className="text-gray-700 text-sm mb-6 max-w-3xl mx-auto">
+            이 서비스들은 &quot;어디를 찾을 것인가&quot;, &quot;어떻게 운영할 것인가&quot;까지는 해결합니다. 하지만 서비스가 연결된 이후, 돌봄이 실제로 어떻게 이루어지고 어떤 변화와 위험이 나타나는지까지는 관리하지 않습니다.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm mb-6">
+            <div className="bg-gray-50 rounded-2xl p-6 border border-gray-100">
+              <h3 className="font-bold text-gray-900 mb-3">기존 서비스의 한계</h3>
+              <ul className="space-y-1 text-xs text-gray-700">
+                <li>• 각각 특정 역할만 수행 (검색만 / 매칭만 / 행정만)</li>
+                <li>• 정보 제공 또는 행정 도구 수준에 머무름</li>
+                <li>• 연결 이후의 돌봄 변화와 위험까지는 관리하지 못함</li>
+              </ul>
+            </div>
+            <div className="bg-emerald-50 rounded-2xl p-6 border border-emerald-100">
+              <h3 className="font-bold text-gray-900 mb-3">시니어앤라이프가 연결하는 것</h3>
+              <p className="text-xs text-gray-700 mb-2">검색 · 서비스 연결 · 돌봄 기록 · 보호자 공유 · 행정 관리 · AI 분석까지 <strong>하나의 흐름</strong>으로 연결합니다.</p>
+              <p className="text-xs text-gray-700">하나의 흐름으로 연결된 돌봄 데이터 인프라 플랫폼입니다.</p>
+            </div>
+          </div>
+
+          <div className="bg-emerald-50/80 rounded-xl p-5 border border-emerald-200 space-y-3">
+            <p className="text-sm text-gray-800">
+              기존 서비스가 <strong>&quot;어디를 찾을 것인가&quot;</strong>를 해결한다면,
+            </p>
+            <p className="text-sm text-gray-800 font-medium">
+              시니어앤라이프는 <strong>&quot;연결 이후 돌봄이 실제로 어떻게 이루어지고, 어떤 변화와 위험이 나타나는가&quot;</strong>까지 관리합니다.
+            </p>
+            <p className="text-sm text-gray-800 pt-2 border-t border-emerald-200">
+              기존 서비스가 <strong>&quot;사람과 시설을 연결하는 플랫폼&quot;</strong>이라면, 시니어앤라이프는 <strong>&quot;돌봄 데이터를 관리하는 플랫폼&quot;</strong>입니다.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* 5. Technology Advantage (Short) */}
-      <section className="py-16 lg:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-center">DAL AI 독자 기술</h2>
-          <p className="text-xl text-gray-600 mb-12 text-center max-w-4xl mx-auto">
-            시니어앤라이프의 AI 시니어 디지털케어로그는 DAL이 자체 개발한{' '}
-            <strong>AI 디지털케어로그 엔진</strong> 위에서 동작합니다.
+      {/* SECTION 추가 3: 정책 및 공공 관점에서의 의미 */}
+      <section className="py-14 bg-white border-b border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">정책 및 공공 관점에서의 의미</h2>
+          <p className="text-center text-gray-600 text-sm mb-4 max-w-3xl mx-auto">
+            시니어 돌봄은 장기요양보험, 복지 정책, 지역 돌봄 체계와 깊이 연결된 영역이지만,
+            현재 정책 운영에는 다음과 같은 한계가 있습니다.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs md:text-sm text-gray-700 mb-6">
+            <div className="bg-gray-50 rounded-2xl p-6 border border-gray-100">
+              <h3 className="font-bold text-gray-900 mb-2">현재 정책·공공 운영의 한계</h3>
+              <ul className="space-y-1">
+                <li>• 현장 데이터 부족으로, 실제 서비스 질과 이용자 상태를 세밀하게 파악하기 어려움</li>
+                <li>• 기관 운영 데이터가 파편화되어 있어, 서비스 품질 평가와 비교가 어렵움</li>
+                <li>• 위험 상황(낙상, 급격한 체중 변화 등)을 조기에 감지·예방하기 어려움</li>
+                <li>• 민원·사후 조사 중심의 관리 구조가 반복됨</li>
+              </ul>
+            </div>
+            <div className="bg-emerald-50 rounded-2xl p-6 border border-emerald-100">
+              <h3 className="font-bold text-gray-900 mb-2">AI 디지털케어로그 기반 플랫폼의 가능성</h3>
+              <ul className="space-y-1">
+                <li>• 표준화된 돌봄 기록과 서비스 이용 패턴 데이터로, 지자체·공공기관이 현장을 데이터로 이해</li>
+                <li>• 기관 운영 데이터(근태·정산·프로그램 참여 등)를 기반으로 서비스 품질 관리·인증 체계 고도화</li>
+                <li>• 위험 신호(낙상 패턴, 급격한 체중 변화 등)를 조기에 감지해 예방 중심 정책 설계에 기여</li>
+                <li>• 데이터 기반 복지 정책·서비스 설계·예산 배분 등으로 이어질 수 있는 인프라 역할</li>
+              </ul>
+            </div>
+          </div>
+
+          <p className="text-center text-gray-600 text-xs max-w-3xl mx-auto">
+            시니어앤라이프는 단일 서비스가 아니라, 장기적으로 <strong>데이터 기반 복지 정책, 서비스 품질 관리, 위험 상황 예방</strong>을
+            뒷받침할 수 있는 AI 디지털케어로그 인프라를 지향합니다.
+          </p>
+        </div>
+      </section>
+
+      {/* SECTION 추가 4: DAL 플랫폼 생태계 확장 */}
+      <section className="py-14 bg-gray-50 border-b border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">DAL 플랫폼 생태계 확장</h2>
+          <p className="text-center text-gray-600 text-sm mb-3 max-w-3xl mx-auto">
+            시니어앤라이프는 단순한 서비스가 아니라, <strong>DAL AI 디지털케어로그 기술의 시니어 산업 응용 사례</strong>입니다.
+          </p>
+          <p className="text-center text-gray-600 text-xs mb-6 max-w-3xl mx-auto">
+            DAL 플랫폼은 발달장애, 시니어 돌봄, 헬스케어, 교육 등 다양한 영역에서 사람의 상태와 변화를 기록하고, AI 분석을 통해 더 나은 의사결정을 돕는 <strong>AI 의사결정 인프라 플랫폼</strong>을 구축하고 있습니다. 시니어앤라이프는 그 첫 번째 산업 응용 중 하나입니다.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
+            <div className="bg-white rounded-2xl p-6 border border-blue-100 text-center">
+              <div className="text-3xl mb-2">🌱</div>
+              <h3 className="font-bold text-gray-900 mb-1">자람이</h3>
+              <p className="text-xs text-gray-600">발달장애 디지털케어 플랫폼</p>
+            </div>
+            <div className="bg-white rounded-2xl p-6 border border-green-200 text-center">
+              <div className="text-3xl mb-2">👴</div>
+              <h3 className="font-bold text-gray-900 mb-1">시니어앤라이프</h3>
+              <p className="text-xs text-gray-600">시니어 돌봄 플랫폼</p>
+            </div>
+            <div className="bg-white rounded-2xl p-6 border border-indigo-100 text-center">
+              <div className="text-3xl mb-2">🏥</div>
+              <h3 className="font-bold text-gray-900 mb-1">TotalCareLog</h3>
+              <p className="text-xs text-gray-600">헬스케어 통합 플랫폼</p>
+            </div>
+          </div>
+
+          <p className="mt-6 text-center text-gray-600 text-xs max-w-3xl mx-auto">
+            이 밖에도 교육, 헬스케어, 금융 등 다양한 영역에서
+            <strong> 의사결정 데이터와 디지털케어로그</strong>를 연결하여,
+            사람의 삶 전반에서 발생하는 건강·돌봄·학습·의사결정 데이터를 하나의 인프라로 쌓아가는 것이 DAL의 방향입니다.
+          </p>
+        </div>
+      </section>
+
+      {/* SECTION 8: DAL AI 기술 */}
+      <section className="py-14 bg-white border-b border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">DAL AI 기술</h2>
+          <p className="text-center text-gray-600 text-sm mb-8 max-w-2xl mx-auto">DAL AI 디지털케어로그 기술을 시니어 돌봄에 적용합니다.</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {dalTech.map((tech, idx) => (
-              <div key={idx} className="bg-gray-50 rounded-xl p-8">
-                <div className="text-4xl mb-4">{tech.icon}</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{tech.title}</h3>
-                <p className="text-gray-700">{tech.description}</p>
+              <div key={idx} className="bg-gray-50 rounded-xl p-6 border border-gray-100">
+                <div className="text-3xl mb-3">{tech.icon}</div>
+                <h3 className="font-bold text-gray-900 mb-2 text-sm">{tech.title}</h3>
+                <p className="text-xs text-gray-700">{tech.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* 섹션 4: 왜 사용해야 할까요 */}
-      <section className="py-16 lg:py-24 bg-gradient-to-br from-green-50 to-emerald-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
-            왜 시니어앤라이프를 사용해야 할까요?
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {/* SECTION 9: 플랫폼 효과 */}
+      <section className="py-14 bg-gray-50 border-b border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">시니어앤라이프 도입 효과</h2>
+          <p className="text-center text-gray-600 text-sm mb-8 max-w-2xl mx-auto">보호자·기관·병원이 함께 얻는 가치</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {whyUse.map((reason, idx) => (
-              <div key={idx} className="bg-white rounded-xl p-8 shadow-lg">
-                <div className="text-4xl mb-4">{reason.icon}</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{reason.title}</h3>
-                <p className="text-gray-700">{reason.description}</p>
+              <div key={idx} className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
+                <div className="text-3xl mb-3">{reason.icon}</div>
+                <h3 className="font-bold text-gray-900 mb-2">{reason.title}</h3>
+                <p className="text-sm text-gray-700">{reason.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* 6. Business Impact */}
-      <section className="py-16 lg:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">시설별 서비스 효과</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {facilityEffects.map((facility, idx) => (
-              <div key={idx} className="bg-gray-50 rounded-xl p-6">
-                <div className="text-3xl mb-3 text-center">{facility.icon}</div>
-                <h3 className="text-lg font-bold text-gray-900 mb-4 text-center">{facility.name}</h3>
-                <ul className="space-y-2 text-sm text-gray-700">
-                  {facility.effects.map((effect, effectIdx) => (
-                    <li key={effectIdx} className="flex items-start">
-                      <span className="text-green-500 mr-2">•</span>
-                      <span>{effect}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 섹션 6: 서비스별 상세 안내 - 재가노인복지서비스 */}
-      <section className="py-16 lg:py-24 bg-gradient-to-br from-emerald-50 to-green-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
-            서비스별 상세 안내
-          </h2>
-
-          {/* 재가노인복지서비스 */}
-          <div className="bg-white rounded-2xl p-8 mb-8 shadow-lg">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">재가노인복지서비스란?</h3>
-            <p className="text-lg text-gray-700 mb-6">
-              재가노인복지서비스는 장기요양등급이 인정된 노인이{' '}
-              <strong>가정에서 전문 요양보호사의 방문 케어</strong>를 받는 서비스입니다.
-            </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              <div>
-                <h4 className="font-bold text-gray-900 mb-2">주요 특징</h4>
-                <ul className="space-y-1 text-gray-700 text-sm">
-                  <li>• 가정에서 편안하게 서비스 이용</li>
-                  <li>• 개인별 맞춤 케어 계획 수립</li>
-                  <li>• 전문 요양보호사 방문 서비스</li>
-                  <li>• 가족과 함께하는 일상생활 유지</li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-bold text-gray-900 mb-2">제공 서비스</h4>
-                <ul className="space-y-1 text-gray-700 text-sm">
-                  <li>• 방문요양: 신체·가사·인지·정서 지원</li>
-                  <li>• 방문간호: 혈압·혈당·투약·상처 관리</li>
-                  <li>• 방문목욕: 안전한 목욕·위생 케어</li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-bold text-gray-900 mb-2">이용 자격</h4>
-                <ul className="space-y-1 text-gray-700 text-sm">
-                  <li>• 장기요양등급 1~5등급</li>
-                  <li>• 인지지원등급 인정자</li>
-                  <li>• 가정 생활 가능, 가족 동의</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="bg-gray-50 rounded-xl p-6">
-              <h4 className="font-bold text-gray-900 mb-3">이용 비용 (예시)</h4>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
-                <div>
-                  <span className="font-semibold">일반:</span> 약 15% 수준
-                </div>
-                <div>
-                  <span className="font-semibold">경감 대상:</span> 6~9% 수준
-                </div>
-                <div>
-                  <span className="font-semibold">기초생활수급자:</span> 본인부담 면제
-                </div>
-              </div>
-              <p className="text-xs text-gray-600 mt-3">* 실제 요율은 장기요양보험 기준에 따라 변동될 수 있습니다</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 섹션 7: 구인/구직/매칭 */}
-      <section className="py-16 lg:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-center">구인/구직/매칭 서비스</h2>
-          <p className="text-xl text-gray-600 mb-12 text-center max-w-4xl mx-auto">
-            시니어앤라이프의 구인/구직/매칭 시스템은 요양보호사·전문간병인을 찾는 기관과 구직자를 연결하는
-            플랫폼입니다.
+      {/* SECTION 10: DAL 생태계 연결 */}
+      <section className="py-14 bg-white border-b border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">DAL 생태계 연결</h2>
+          <p className="text-center text-gray-600 text-sm mb-8 max-w-2xl mx-auto">
+            시니어앤라이프는 DAL AI 디지털케어로그 플랫폼 생태계의 일부입니다.
           </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-8">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">핵심 가치</h3>
-              <ul className="space-y-3 text-gray-700">
-                <li className="flex items-start">
-                  <span className="text-green-500 mr-2">✓</span>
-                  <span>전문 인력과 기관의 효율적인 매칭</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-500 mr-2">✓</span>
-                  <span>자격·경력을 기반으로 한 품질 보장</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-500 mr-2">✓</span>
-                  <span>빠르고 정확한 구인·구직 정보 제공</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-500 mr-2">✓</span>
-                  <span>지역별 맞춤 서비스 연계</span>
-                </li>
-              </ul>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-blue-50 rounded-xl p-6 border border-blue-100 text-center">
+              <div className="text-3xl mb-2">🌱</div>
+              <h3 className="font-bold text-gray-900 mb-1">자람이</h3>
+              <p className="text-sm text-gray-600">발달장애 디지털케어 플랫폼</p>
             </div>
-
-            <div className="bg-gradient-to-br from-emerald-50 to-green-50 rounded-xl p-8">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">주요 기능</h3>
-              <ul className="space-y-3 text-gray-700">
-                <li className="flex items-start">
-                  <span className="text-emerald-500 mr-2">•</span>
-                  <span>조건에 맞는 인력/기관을 찾는 스마트 검색</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-emerald-500 mr-2">•</span>
-                  <span>상세 프로필·경력·자격증 정보 확인</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-emerald-500 mr-2">•</span>
-                  <span>지역·근무시간·급여 조건 필터링</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-emerald-500 mr-2">•</span>
-                  <span>평가·리뷰 시스템으로 신뢰도 확보</span>
-                </li>
-              </ul>
+            <div className="bg-green-50 rounded-xl p-6 border-2 border-green-200 text-center">
+              <div className="text-3xl mb-2">👴</div>
+              <h3 className="font-bold text-gray-900 mb-1">시니어앤라이프</h3>
+              <p className="text-sm text-gray-600">시니어 돌봄 플랫폼</p>
+            </div>
+            <div className="bg-indigo-50 rounded-xl p-6 border border-indigo-100 text-center">
+              <div className="text-3xl mb-2">🏥</div>
+              <h3 className="font-bold text-gray-900 mb-1">TotalCareLog</h3>
+              <p className="text-sm text-gray-600">헬스케어 통합 플랫폼</p>
             </div>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-gray-50 rounded-xl p-6">
-              <h3 className="text-lg font-bold text-gray-900 mb-3">구인 기관</h3>
-              <ul className="space-y-2 text-gray-700 text-sm">
-                {recruitmentTargets.seekers.map((seeker, idx) => (
-                  <li key={idx} className="flex items-start">
-                    <span className="text-green-500 mr-2">•</span>
-                    <span>{seeker}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="bg-gray-50 rounded-xl p-6">
-              <h3 className="text-lg font-bold text-gray-900 mb-3">구직자</h3>
-              <ul className="space-y-2 text-gray-700 text-sm">
-                {recruitmentTargets.jobSeekers.map((jobSeeker, idx) => (
-                  <li key={idx} className="flex items-start">
-                    <span className="text-emerald-500 mr-2">•</span>
-                    <span>{jobSeeker}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 섹션 7-2: 시니어 돌봄 행정 표준 SaaS */}
-      <section className="py-16 lg:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              시니어 돌봄 행정, 이제 표준화된 SaaS로
-            </h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              재가재활부터 요양병원까지, 모든 기관을 하나의 체계로 연결합니다
-            </p>
-          </div>
-
-          {/* 현재 문제점 */}
-          <div className="mb-16">
-            <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">현재 시니어 돌봄 기관의 문제점</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="bg-gray-50 rounded-xl p-8">
-                <h4 className="text-lg font-bold text-gray-900 mb-4 flex items-center">
-                  <span className="text-2xl mr-2">⚠️</span>
-                  비효율적인 행정
-                </h4>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-start">
-                    <span className="text-red-500 mr-2">•</span>
-                    <span>엑셀·워드·수기 기록에 의존</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-red-500 mr-2">•</span>
-                    <span>서비스 기록과 행정 문서 분리 → 중복 작성</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-red-500 mr-2">•</span>
-                    <span>데이터 검색 및 보관의 어려움</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-red-500 mr-2">•</span>
-                    <span>업무 시간의 상당 부분이 행정 처리에 소모</span>
-                  </li>
-                </ul>
-              </div>
-              <div className="bg-gray-50 rounded-xl p-8">
-                <h4 className="text-lg font-bold text-gray-900 mb-4 flex items-center">
-                  <span className="text-2xl mr-2">📋</span>
-                  표준화 부재
-                </h4>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-start">
-                    <span className="text-red-500 mr-2">•</span>
-                    <span>기관별 양식이 달라 데이터 비교·분석 불가</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-red-500 mr-2">•</span>
-                    <span>정부 보고·심사·청구 과정이 복잡</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-red-500 mr-2">•</span>
-                    <span>서비스 품질 평가 기준이 없음</span>
-                  </li>
-                </ul>
-              </div>
-              <div className="bg-gray-50 rounded-xl p-8">
-                <h4 className="text-lg font-bold text-gray-900 mb-4 flex items-center">
-                  <span className="text-2xl mr-2">❓</span>
-                  신뢰성 부족
-                </h4>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-start">
-                    <span className="text-red-500 mr-2">•</span>
-                    <span>보호자 입장에서 기관 선택 기준 불명확</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-red-500 mr-2">•</span>
-                    <span>투명한 돌봄 기록 확인 어려움</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-red-500 mr-2">•</span>
-                    <span>데이터 기반의 객관적 평가 불가능</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          {/* 솔루션 */}
-          <div className="bg-gradient-to-br from-emerald-50 to-green-50 rounded-2xl p-8 md:p-12 mb-16">
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center">
-              솔루션: 시니어앤라이프 표준 행정 SaaS
-            </h3>
-            <p className="text-lg text-gray-700 text-center mb-8 max-w-4xl mx-auto">
-              클라우드 기반 SaaS로 설치 없이 웹/모바일에서 바로 사용할 수 있는 표준화된 행정 관리 시스템입니다.
-              행정과 돌봄 일지를 통합하여 재가서비스, 요양원, 병원 모두 하나의 플랫폼에서 관리합니다.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="bg-white rounded-xl p-6 text-center shadow">
-                <div className="text-4xl mb-3">☁️</div>
-                <h4 className="font-bold text-gray-900 text-lg mb-2">클라우드 기반</h4>
-                <p className="text-sm text-gray-600">설치 없이 웹/모바일에서 바로 사용</p>
-              </div>
-              <div className="bg-white rounded-xl p-6 text-center shadow">
-                <div className="text-4xl mb-3">🔗</div>
-                <h4 className="font-bold text-gray-900 text-lg mb-2">통합 관리</h4>
-                <p className="text-sm text-gray-600">행정 + 돌봄 일지를 하나의 플랫폼에서</p>
-              </div>
-              <div className="bg-white rounded-xl p-6 text-center shadow">
-                <div className="text-4xl mb-3">🤖</div>
-                <h4 className="font-bold text-gray-900 text-lg mb-2">자동 연동</h4>
-                <p className="text-sm text-gray-600">디지털케어로그와 현장 기록 즉시 반영</p>
-              </div>
-            </div>
-          </div>
-
-          {/* 기관별 전용 기능 */}
-          <div className="mb-16">
-            <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">기관 유형별 전용 기능</h3>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {/* 재가재활 */}
-              <div className="bg-gray-50 rounded-xl p-8">
-                <div className="flex items-center mb-4">
-                  <div className="text-3xl mr-3">🏠</div>
-                  <h4 className="text-xl font-bold text-gray-900">재가재활 서비스 전용</h4>
-                </div>
-                <ul className="space-y-3 text-gray-700 mb-4">
-                  <li className="flex items-start">
-                    <span className="text-green-500 mr-2">•</span>
-                    <span>요양보호사/방문간호사 출퇴근·근무시간 자동 기록</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-green-500 mr-2">•</span>
-                    <span>어르신 돌봄 일지(식사, 복약, 운동, 상태변화) 실시간 입력</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-green-500 mr-2">•</span>
-                    <span>사업주(센터장) 급여·페이 자동 정산</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-green-500 mr-2">•</span>
-                    <span>돌봄 기록이 곧 행정 서류로 변환되어 청구·보고 가능</span>
-                  </li>
-                </ul>
-                <div className="bg-white rounded-lg p-4 text-sm text-gray-700 border border-gray-200">
-                  <strong>💡 재가재활의 특수성:</strong> 요양보호사-사업주-페이 구조, 방문 서비스 기록의 중요성,
-                  돌봄 일지와 행정 통합
-                </div>
-              </div>
-
-              {/* 주간보호/요양원/병원 */}
-              <div className="bg-gray-50 rounded-xl p-8">
-                <div className="flex items-center mb-4">
-                  <div className="text-3xl mr-3">🏥</div>
-                  <h4 className="text-xl font-bold text-gray-900">주간보호 / 요양원 / 요양병원</h4>
-                </div>
-                <ul className="space-y-3 text-gray-700 mb-4">
-                  <li className="flex items-start">
-                    <span className="text-green-500 mr-2">•</span>
-                    <span>일일 생활·재활 프로그램 기록 → 보호자 공유</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-green-500 mr-2">•</span>
-                    <span>의료·간호 기록과 행정 서류 자동 연결</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-green-500 mr-2">•</span>
-                    <span>기관별 평가 및 인증 기준 반영</span>
-                  </li>
-                </ul>
-                <div className="bg-white rounded-lg p-4 text-sm text-gray-700 border border-gray-200">
-                  <strong>💡 기관 운영의 핵심:</strong> 프로그램 운영 및 평가, 의료진과 요양보호사 관리, 정부 보고
-                  및 인증 심사
-                </div>
-              </div>
-
-              {/* 행정 표준화 */}
-              <div className="bg-gray-50 rounded-xl p-8">
-                <div className="flex items-center mb-4">
-                  <div className="text-3xl mr-3">📑</div>
-                  <h4 className="text-xl font-bold text-gray-900">행정 표준화</h4>
-                </div>
-                <ul className="space-y-3 text-gray-700 mb-4">
-                  <li className="flex items-start">
-                    <span className="text-green-500 mr-2">•</span>
-                    <span>인사·근태·급여 자동화</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-green-500 mr-2">•</span>
-                    <span>청구·재무 관리 표준 양식 변환</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-green-500 mr-2">•</span>
-                    <span>각종 행정 문서 원클릭 보고서 생성</span>
-                  </li>
-                </ul>
-                <div className="bg-white rounded-lg p-4 text-sm text-gray-700 border border-gray-200">
-                  <strong>💡 표준화의 효과:</strong> 업무 시간 최대 70%까지 절감 가능, 정부 보고 자동화, 기관 간 데이터 비교 가능
-                </div>
-              </div>
-
-              {/* 디지털케어로그 연동 */}
-              <div className="bg-gray-50 rounded-xl p-8">
-                <div className="flex items-center mb-4">
-                  <div className="text-3xl mr-3">📱</div>
-                  <h4 className="text-xl font-bold text-gray-900">디지털케어로그 연동</h4>
-                </div>
-                <ul className="space-y-3 text-gray-700 mb-4">
-                  <li className="flex items-start">
-                    <span className="text-green-500 mr-2">•</span>
-                    <span>현장 돌봄 기록 → 실시간 클라우드 업로드</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-green-500 mr-2">•</span>
-                    <span>보호자 모바일에서 즉시 확인 (식사/혈압/활동/복약)</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-green-500 mr-2">•</span>
-                    <span>AI 분석으로 위험 신호 알림</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-green-500 mr-2">•</span>
-                    <span>행정·임상·돌봄 데이터가 하나의 케어로그로 통합</span>
-                  </li>
-                </ul>
-                <div className="bg-white rounded-lg p-4 text-sm text-gray-700 border border-gray-200">
-                  <strong>💡 통합의 핵심:</strong> 환자 돌봄 데이터와 행정 데이터의 다리 역할, 실시간 모니터링 및
-                  알림, AI 기반 예측 분석
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* 서비스 핵심 장점 */}
-          <div className="mb-16">
-            <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">서비스의 핵심 장점</h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-              <div className="bg-gray-50 rounded-xl p-6 text-center hover:shadow-lg transition-shadow">
-                <div className="text-3xl mb-2">⚡</div>
-                <h4 className="font-bold text-gray-900 mb-1 text-sm">행정 효율성</h4>
-                <p className="text-xs text-gray-600">업무 시간 최대 70% 절감</p>
-              </div>
-              <div className="bg-gray-50 rounded-xl p-6 text-center hover:shadow-lg transition-shadow">
-                <div className="text-3xl mb-2">🏆</div>
-                <h4 className="font-bold text-gray-900 mb-1 text-sm">경쟁력 확보</h4>
-                <p className="text-xs text-gray-600">인증센터 마크</p>
-              </div>
-              <div className="bg-gray-50 rounded-xl p-6 text-center hover:shadow-lg transition-shadow">
-                <div className="text-3xl mb-2">👁️</div>
-                <h4 className="font-bold text-gray-900 mb-1 text-sm">투명한 관리</h4>
-                <p className="text-xs text-gray-600">실시간 확인</p>
-              </div>
-              <div className="bg-gray-50 rounded-xl p-6 text-center hover:shadow-lg transition-shadow">
-                <div className="text-3xl mb-2">🤖</div>
-                <h4 className="font-bold text-gray-900 mb-1 text-sm">AI 기반 케어</h4>
-                <p className="text-xs text-gray-600">맞춤형 리포트</p>
-              </div>
-              <div className="bg-gray-50 rounded-xl p-6 text-center hover:shadow-lg transition-shadow">
-                <div className="text-3xl mb-2">🏛️</div>
-                <h4 className="font-bold text-gray-900 mb-1 text-sm">정부 연계</h4>
-                <p className="text-xs text-gray-600">청구·보고 자동화</p>
-              </div>
-              <div className="bg-gray-50 rounded-xl p-6 text-center hover:shadow-lg transition-shadow">
-                <div className="text-3xl mb-2">🚀</div>
-                <h4 className="font-bold text-gray-900 mb-1 text-sm">즉시 사용</h4>
-                <p className="text-xs text-gray-600">설치 불필요</p>
-              </div>
-            </div>
-          </div>
-
-          {/* 인증센터 효과 */}
-          <div className="bg-gradient-to-br from-emerald-50 to-green-50 rounded-2xl p-8 md:p-12 mb-16">
-            <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">인증센터 효과</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="text-center">
-                <div className="text-5xl mb-4">✅</div>
-                <h4 className="text-xl font-bold text-gray-900 mb-3">"시니어앤라이프 인증센터" 마크 부여</h4>
-                <p className="text-gray-700">보호자 선택 기준, 신뢰성 상징, 경쟁 우위 확보</p>
-              </div>
-              <div>
-                <h4 className="font-bold text-gray-900 mb-4">인증센터 혜택</h4>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-start">
-                    <span className="text-green-500 mr-2">•</span>
-                    <span>플랫폼 내에서 상위 노출 및 추천</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-green-500 mr-2">•</span>
-                    <span>보호자들의 신뢰도 및 선호도 증가</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-green-500 mr-2">•</span>
-                    <span>정부 지원 및 인증 심사에서 데이터 기반 운영 기관으로 경쟁력 확보</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-green-500 mr-2">•</span>
-                    <span>기관 간 서비스 품질 비교 우위</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-green-500 mr-2">•</span>
-                    <span>디지털케어로그 연동으로 경쟁력 확보</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          {/* 사용 설명서 */}
-          <div className="mb-16">
-            <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">사용 설명서</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                  1
-                </div>
-                <h4 className="font-bold text-gray-900 mb-3">시작하기</h4>
-                <ul className="text-sm text-gray-700 space-y-1">
-                  <li>기관 유형 선택</li>
-                  <li>직원 계정 등록</li>
-                  <li>서비스 항목 세팅</li>
-                </ul>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                  2
-                </div>
-                <h4 className="font-bold text-gray-900 mb-3">행정 관리</h4>
-                <ul className="text-sm text-gray-700 space-y-1">
-                  <li>직원 근태 자동 기록</li>
-                  <li>청구/재무 자동 변환</li>
-                  <li>문서 원클릭 다운로드</li>
-                </ul>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                  3
-                </div>
-                <h4 className="font-bold text-gray-900 mb-3">돌봄 기록 입력</h4>
-                <ul className="text-sm text-gray-700 space-y-1">
-                  <li>앱으로 돌봄 기록 작성</li>
-                  <li>자동 연동 및 공유</li>
-                  <li>AI 이상 징후 감지</li>
-                </ul>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                  4
-                </div>
-                <h4 className="font-bold text-gray-900 mb-3">인증센터 등록</h4>
-                <ul className="text-sm text-gray-700 space-y-1">
-                  <li>기준 충족 시 인증 마크</li>
-                  <li>상위 노출 & 추천</li>
-                  <li>정기 인증 갱신</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          {/* 마무리 메시지 */}
-          <div className="text-center">
-            <p className="text-xl md:text-2xl font-bold text-gray-900 mb-3">
-              "재가서비스에서 병원까지, 하나의 기록으로 모든 돌봄과 행정을 연결합니다."
-            </p>
-            <p className="text-lg text-gray-600">
-              시니어앤라이프 표준 행정 SaaS – <strong>표준화가 곧 경쟁력</strong>입니다.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* 섹션 7-3: 보호자·가족과 센터·병원의 사용 방법 */}
-      <section className="py-16 lg:py-24 bg-gradient-to-br from-emerald-50 to-green-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
-            누가, 어떻게 사용하나요?
-          </h2>
-
-          {/* 보호자·가족 사용 방법 */}
-          <div className="mb-16">
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
-              <div className="flex items-center mb-6">
-                <div className="text-4xl mr-4">👨‍👩‍👧‍👦</div>
-                <h3 className="text-2xl font-bold text-gray-900">보호자·가족은 이렇게 사용합니다</h3>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6">
-                  <h4 className="font-bold text-gray-900 mb-3 flex items-center">
-                    <span className="text-2xl mr-2">📱</span>
-                    홈 화면
-                  </h4>
-                  <ul className="space-y-2 text-sm text-gray-700">
-                    <li className="flex items-start">
-                      <span className="text-green-500 mr-2">•</span>
-                      <span>오늘의 건강 상태 요약 (컨디션 지수, 위험 알림)</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-green-500 mr-2">•</span>
-                      <span>오늘 복약·식사·수면 체크 상태</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-green-500 mr-2">•</span>
-                      <span>최근 7일 변화 그래프</span>
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6">
-                  <h4 className="font-bold text-gray-900 mb-3 flex items-center">
-                    <span className="text-2xl mr-2">📋</span>
-                    케어 타임라인
-                  </h4>
-                  <ul className="space-y-2 text-sm text-gray-700">
-                    <li className="flex items-start">
-                      <span className="text-green-500 mr-2">•</span>
-                      <span>센터·요양병원에서 기록한 식사, 수면, 재활, 기분 변화를 시간순으로 확인</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-green-500 mr-2">•</span>
-                      <span>사진·음성 메모까지 함께 열람</span>
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6">
-                  <h4 className="font-bold text-gray-900 mb-3 flex items-center">
-                    <span className="text-2xl mr-2">🤖</span>
-                    AI 리포트
-                  </h4>
-                  <ul className="space-y-2 text-sm text-gray-700">
-                    <li className="flex items-start">
-                      <span className="text-green-500 mr-2">•</span>
-                      <span>"최근 2주간 수면 시간이 줄어들고 있습니다"</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-green-500 mr-2">•</span>
-                      <span>"낙상 위험이 증가하는 패턴이 보입니다" 등</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-green-500 mr-2">•</span>
-                      <span>보호자에게 이해하기 쉬운 문장으로 정리된 요약 리포트 제공</span>
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6">
-                  <h4 className="font-bold text-gray-900 mb-3 flex items-center">
-                    <span className="text-2xl mr-2">🔔</span>
-                    알림·상담
-                  </h4>
-                  <ul className="space-y-2 text-sm text-gray-700">
-                    <li className="flex items-start">
-                      <span className="text-green-500 mr-2">•</span>
-                      <span>위험 신호 감지 시 푸시 알림</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-green-500 mr-2">•</span>
-                      <span>궁금한 점은 AI 상담에게 바로 질문</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-green-500 mr-2">•</span>
-                      <span>24시간 언제든 답변 가능</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* 센터·병원 사용 방법 */}
-          <div>
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
-              <div className="flex items-center mb-6">
-                <div className="text-4xl mr-4">🏥</div>
-                <h3 className="text-2xl font-bold text-gray-900">센터·병원은 이렇게 사용합니다</h3>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6">
-                  <h4 className="font-bold text-gray-900 mb-4 flex items-center">
-                    <span className="text-2xl mr-2">📱</span>
-                    현장 기록 앱
-                  </h4>
-                  <ul className="space-y-2 text-sm text-gray-700">
-                    <li className="flex items-start">
-                      <span className="text-blue-500 mr-2">•</span>
-                      <span>요양보호사·간호사가 휴대폰/태블릿으로 사용</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-blue-500 mr-2">•</span>
-                      <span>식사, 복약, 재활, 수면, 정서 상태를 간단 체크</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-blue-500 mr-2">•</span>
-                      <span>아이콘/숫자/짧은 메모 형식으로 빠른 입력</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-blue-500 mr-2">•</span>
-                      <span>사진·음성 메모 첨부 가능</span>
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6">
-                  <h4 className="font-bold text-gray-900 mb-4 flex items-center">
-                    <span className="text-2xl mr-2">💻</span>
-                    기관 대시보드(웹)
-                  </h4>
-                  <ul className="space-y-2 text-sm text-gray-700">
-                    <li className="flex items-start">
-                      <span className="text-blue-500 mr-2">•</span>
-                      <span>오늘 출근한 직원과 배정된 어르신 현황</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-blue-500 mr-2">•</span>
-                      <span>각 어르신의 오늘 케어 진행 상황 및 리스크 알림</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-blue-500 mr-2">•</span>
-                      <span>일/주/월 단위 케어 통계 및 평가 리포트</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-blue-500 mr-2">•</span>
-                      <span>한눈에 보는 전체 운영 현황</span>
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6">
-                  <h4 className="font-bold text-gray-900 mb-4 flex items-center">
-                    <span className="text-2xl mr-2">📊</span>
-                    행정·청구 화면
-                  </h4>
-                  <ul className="space-y-2 text-sm text-gray-700">
-                    <li className="flex items-start">
-                      <span className="text-blue-500 mr-2">•</span>
-                      <span>입력된 케어 로그를 기반으로 자동 생성된 청구서·보고서</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-blue-500 mr-2">•</span>
-                      <span>인사/근태/급여 데이터와 연동된 정산 화면</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-blue-500 mr-2">•</span>
-                      <span>원클릭 문서 다운로드 및 제출</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-blue-500 mr-2">•</span>
-                      <span>정부 보고 양식 자동 변환</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 섹션 8: 한눈에 보는 AI 디지털케어로그 */}
-      <section className="py-16 lg:py-24 bg-gradient-to-br from-green-600 to-emerald-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">한눈에 보는 AI 디지털케어로그</h2>
-            <p className="text-xl max-w-4xl mx-auto">
-              "단순한 기록을 넘어, AI가 분석하고 예측하는 시니어 맞춤형 케어 플랫폼"
-            </p>
-            <p className="text-lg mt-4 text-green-100">
-              DAL의 독자 기술인 <strong>AI 디지털케어로그</strong>를 시니어 서비스에 응용한 것이 바로
-              시니어앤라이프의 <strong>시니어케어로그 서비스</strong>입니다.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            {carelogFeatures.map((feature, idx) => (
-              <div key={idx} className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-                <div className="text-4xl mb-3">{feature.icon}</div>
-                <h3 className="text-lg font-bold mb-2">{feature.title}</h3>
-                <p className="text-sm text-green-100">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 mb-8">
-            <h3 className="text-2xl font-bold mb-6 text-center">디지털케어로그의 혜택</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {carelogBenefits.map((benefit, idx) => (
-                <div key={idx} className="text-center">
-                  <div className="text-3xl mb-2">{benefit.icon}</div>
-                  <h4 className="font-bold mb-1">{benefit.title}</h4>
-                  <p className="text-sm text-green-100">{benefit.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-            <h3 className="text-2xl font-bold mb-6 text-center">간단한 3단계로 시작하세요</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-white text-green-600 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                  1
-                </div>
-                <h4 className="font-bold text-lg mb-2">앱 설치</h4>
-                <p className="text-sm text-green-100">
-                  스마트폰에 디지털케어로그 앱 설치 및 간단한 회원가입·가족·기관 연동
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-white text-green-600 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                  2
-                </div>
-                <h4 className="font-bold text-lg mb-2">상태 기록</h4>
-                <p className="text-sm text-green-100">
-                  식사, 수면, 활동, 기분 등 기본 상태 기록. 필요 시 사진·음성 메모도 함께 저장
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-white text-green-600 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                  3
-                </div>
-                <h4 className="font-bold text-lg mb-2">AI 분석</h4>
-                <p className="text-sm text-green-100">
-                  AI가 기록을 분석해 건강 변화를 감지. 이상 징후 발생 시 보호자·의료진에 알림
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 섹션 9: 현장별 케어 시나리오 */}
-      <section className="py-16 lg:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
-            활용 예시: 시니어 현장별 케어 시나리오
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {careScenarios.map((scenario, idx) => (
-              <div key={idx} className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-8">
-                <div className="flex items-center mb-4">
-                  <div className="text-4xl mr-4">{scenario.icon}</div>
-                  <h3 className="text-xl font-bold text-gray-900">{scenario.facility}</h3>
-                </div>
-                <p className="text-gray-700">{scenario.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 섹션 10: DAL AI 디지털케어로그 구조 & 혁신성 */}
-      <section className="py-16 lg:py-24 bg-gradient-to-br from-emerald-50 to-green-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-center">
-            DAL의 독자 기술: AI 디지털케어로그 구조
-          </h2>
-          <p className="text-xl text-gray-600 mb-12 text-center max-w-4xl mx-auto">
-            AI 디지털케어로그는 <strong>표준 기록 → AI 분석 → 실행 연결 → 환류(학습)</strong> 4단계 선순환
-            구조를 가지고 있습니다.
+          <p className="mt-8 text-center text-gray-700 font-medium">
+            DAL은 전 생애 AI 케어 인프라를 구축합니다.
           </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            {dalStructure.map((structure, idx) => (
-              <div key={idx} className="bg-white rounded-xl p-8 shadow-lg">
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-full flex items-center justify-center font-bold text-lg mr-4">
-                    {structure.step}
-                  </div>
-                  <div className="text-3xl">{structure.icon}</div>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{structure.title}</h3>
-                <p className="text-gray-700">{structure.description}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="bg-white rounded-2xl p-8 shadow-lg">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">왜 혁신적인가?</h3>
-            <p className="text-lg text-gray-700 mb-6 text-center">
-              기존 시스템의 핵심 한계를 다음과 같이 해결합니다.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {innovations.map((innovation, idx) => (
-                <div key={idx} className="text-center">
-                  <div className="bg-red-100 text-red-700 rounded-lg p-3 mb-2 text-sm font-semibold">
-                    {innovation.problem}
-                  </div>
-                  <div className="text-2xl my-2">↓</div>
-                  <div className="bg-green-100 text-green-700 rounded-lg p-3 text-sm font-semibold">
-                    {innovation.solution}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
       </section>
 
-      {/* 섹션 11: 기대 효과 & 비전 */}
-      <section className="py-16 lg:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
-            시니어앤라이프 시니어케어로그의 기대 효과
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-            <ExpectCard
-              title="비용 효율성 향상"
-              description="불필요한 검사·진료·입원 감소. 예방 중심 관리로 장기 비용 부담 완화"
-              icon="💰"
-            />
-            <ExpectCard
-              title="EMR·공공 데이터 연동"
-              description="병원 EMR, 공공 데이터와의 호환성을 고려한 구조. 임상 데이터와 생활 데이터를 통합한 새로운 인사이트 제공"
-              icon="🔗"
-            />
-            <ExpectCard
-              title="데이터 규모 확장"
-              description="실제 생활 데이터를 기반으로 한 대규모 표본 확보. 다양한 질환·연령대·환경에서의 패턴 분석 가능"
-              icon="📈"
-            />
-            <ExpectCard
-              title="노인질환 혁신"
-              description="치매·파킨슨병·노인성 우울증 등 주요 노인질환의 조기 발견과 맞춤 관리에 기여"
-              icon="💡"
-            />
-          </div>
-
-          <div className="bg-gradient-to-br from-green-600 to-emerald-600 text-white rounded-2xl p-12">
-            <h3 className="text-3xl font-bold mb-4 text-center">시니어앤라이프의 미래 비전</h3>
-            <p className="text-center text-green-100 mb-8 max-w-3xl mx-auto">
-              * 이는 시니어앤라이프가 지향하는 중장기 비전이며, 지자체·병원·연구기관과의 협력을 통해 단계적으로 확장해 나갈 계획입니다.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <VisionCard
-                icon="🏛️"
-                title="시니어 케어 표준화"
-                description="요양병원·재가재활·요양원·주간보호센터가 함께 사용할 수 있는 공통 기록 포맷·지표 제시"
-              />
-              <VisionCard
-                icon="🤖"
-                title="개인 맞춤 AI 케어"
-                description="치매 진행 단계·재활 속도·생활 패턴에 따른 완전 개인 맞춤형 케어 플랜 자동 생성"
-              />
-              <VisionCard
-                icon="📊"
-                title="Real-World Evidence (RWE) 기반 정책 지원"
-                description="수많은 시니어의 실제 데이터를 바탕으로 예방의학·복지 정책·지역사회 서비스 설계에 기여"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 7. Service Status */}
-      <section className="py-12 lg:py-16 bg-white">
+      {/* Service Status */}
+      <section className="py-10 bg-gray-50">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="inline-block px-4 py-2 bg-orange-100 text-orange-800 rounded-full text-sm font-semibold mb-4">Pilot / In Development</span>
-          <h2 className="text-2xl font-bold text-gray-900 mb-2">시니어앤라이프 서비스 현황</h2>
-          <p className="text-gray-600">AI 디지털케어로그 기반 시니어 돌봄 통합 플랫폼. 재가·시설·의료·공공 연계를 위한 인프라 구축 중입니다.</p>
+          <span className="inline-block px-4 py-2 bg-orange-100 text-orange-800 rounded-full text-sm font-semibold mb-3">Pilot / In Development</span>
+          <p className="text-gray-600 text-sm">AI 디지털케어로그 기반 시니어 돌봄 통합 플랫폼. 재가·시설·의료·공공 연계를 위한 인프라 구축 중입니다.</p>
         </div>
       </section>
 
-      {/* 8. Ecosystem Connection */}
-      <section className="py-12 lg:py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">DAL 생태계와의 연결</h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">시니어앤라이프는 자람이·토탈케어로그와 동일한 AI 디지털케어로그 표준을 사용합니다. 발달장애→시니어→전 생애 케어로 DAL 플랫폼을 확장합니다.</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-white rounded-xl p-6 shadow-sm">
-              <h3 className="font-bold text-gray-900 mb-2">🔗 자람이·토탈케어로그 연동</h3>
-              <p className="text-sm text-gray-700">표준 스키마로 발달장애·헬스케어·시니어 케어 데이터가 하나의 생애 흐름으로 연결됩니다.</p>
-            </div>
-            <div className="bg-white rounded-xl p-6 shadow-sm">
-              <h3 className="font-bold text-gray-900 mb-2">📊 DAL AI 플랫폼</h3>
-              <p className="text-sm text-gray-700">멀티모달 AI·시계열 학습·이상 패턴 탐지 등 DAL 독자 기술을 시니어 돌봄에 적용.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 9. CTA */}
+      {/* CTA */}
       <section className="py-16 lg:py-24 bg-gradient-to-br from-emerald-50 to-green-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-sm text-gray-600 mb-4 max-w-2xl mx-auto">
+            이곳(DAL 홈페이지)은 <strong>기술·플랫폼·산업·투자·협력</strong>을 소개하는 사이트입니다. 실제 서비스 이용·시설 검색·기관 등록·상담은 <strong>시니어앤라이프 서비스(seniorandlife.com)</strong>에서 진행됩니다.
+          </p>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
             시니어앤라이프와 함께 시니어 케어의 표준을 만듭니다
           </h2>
@@ -1483,21 +1220,50 @@ export default function SeniorService() {
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="https://seniorandlife.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity"
-            >
-              시니어앤라이프 서비스 둘러보기
-            </a>
-            <Link
-              href="/contact"
-              className="border-2 border-green-600 text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors"
-            >
-              센터/병원/지자체·파트너 제휴 문의
-            </Link>
+          <div className="max-w-3xl mx-auto space-y-8">
+            {/* 시니어앤라이프 서비스 방문 */}
+            <div className="bg-white rounded-xl p-6 shadow">
+              <h3 className="text-xl font-bold text-gray-900 mb-2">시니어앤라이프 서비스 방문</h3>
+              <p className="text-gray-700 text-sm mb-4">
+                실제 서비스 플랫폼에서 시설 검색, 서비스 이용, 기관 등록 등을 진행할 수 있습니다.
+              </p>
+              <a
+                href="https://seniorandlife.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center bg-gradient-to-r from-green-600 to-emerald-600 text-white px-6 py-2.5 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity"
+              >
+                시니어앤라이프 서비스 방문
+              </a>
+            </div>
+
+            {/* 기술 협력 */}
+            <div className="bg-white rounded-xl p-6 shadow">
+              <h3 className="text-xl font-bold text-gray-900 mb-2">기술 협력</h3>
+              <p className="text-gray-700 text-sm mb-4">
+                AI 디지털케어로그 기술 협력 및 공동 연구 문의
+              </p>
+              <Link
+                href="/contact?type=tech"
+                className="inline-flex items-center justify-center border-2 border-green-600 text-green-600 px-6 py-2.5 rounded-lg text-sm font-semibold hover:bg-green-50 transition-colors"
+              >
+                기술 협력 문의
+              </Link>
+            </div>
+
+            {/* 투자 / 사업 협력 */}
+            <div className="bg-white rounded-xl p-6 shadow">
+              <h3 className="text-xl font-bold text-gray-900 mb-2">투자 / 사업 협력</h3>
+              <p className="text-gray-700 text-sm mb-4">
+                DAL 플랫폼 투자 및 전략적 사업 협력 문의
+              </p>
+              <Link
+                href="/contact?type=ir"
+                className="inline-flex items-center justify-center border-2 border-green-600 text-green-600 px-6 py-2.5 rounded-lg text-sm font-semibold hover:bg-green-50 transition-colors"
+              >
+                IR / 투자 문의
+              </Link>
+            </div>
           </div>
         </div>
       </section>
