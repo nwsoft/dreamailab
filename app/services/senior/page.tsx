@@ -369,6 +369,18 @@ export default function SeniorService() {
         </div>
       </section>
 
+      {/* 타이밍 메시지: Hero 직후 */}
+      <section className="py-8 bg-emerald-50/60 border-b border-emerald-100">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-gray-800 text-sm md:text-base leading-relaxed mb-2">
+            고령화는 이미 시작되었고, 돌봄 방식은 아직 바뀌지 않았습니다.
+          </p>
+          <p className="text-gray-800 text-sm md:text-base leading-relaxed font-medium">
+            지금 선택하는 방식이 앞으로 부모님의 삶의 질을 결정하게 됩니다.
+          </p>
+        </div>
+      </section>
+
       {/* 대상 명확화: 이런 분들을 위한 서비스입니다 */}
       <section className="py-10 bg-white border-b border-gray-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -398,7 +410,7 @@ export default function SeniorService() {
       <section className="py-14 bg-white border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">왜 시니어 돌봄 플랫폼이 필요한가</h2>
-          <p className="text-center text-xs font-semibold text-emerald-700 uppercase tracking-wide mb-1">한 줄 요약</p>
+          <p className="text-center text-xs font-semibold text-emerald-700 mb-1">[한 줄 요약]</p>
           <p className="text-center text-gray-800 font-medium text-sm mb-4 max-w-3xl mx-auto">
             시니어 돌봄은 &quot;어디를 찾을까&quot;보다 <strong>연결 이후의 기록·행정·가족 소통</strong>이 더 어렵습니다.
           </p>
@@ -406,11 +418,14 @@ export default function SeniorService() {
             한국 시니어 돌봄 산업은 재가서비스, 요양원, 요양병원, 주야간보호, 간병, 복지기기 등으로 나뉘어 있지만
             정보를 찾는 과정과 돌봄 기록, 행정·운영 시스템은 여전히 제각각입니다.
           </p>
-          <p className="text-center text-gray-600 text-xs mb-6 max-w-3xl mx-auto">
+          <p className="text-center text-gray-600 text-xs mb-3 max-w-3xl mx-auto">
             보호자는 부모님을 위한 시설을 찾으려 해도 어떤 기관이 어떤 강점을 가지고 있는지 비교하기 어렵습니다.
-            입소 후에도 오늘 식사는 하셨는지, 약은 드셨는지, 컨디션은 어떤지
-            실시간으로 확인하기 어려운 경우가 많습니다. 많은 기관은 지금도 엑셀·수기·전화·메신저에 의존해
-            운영과 행정을 처리하고 있습니다.
+          </p>
+          <p className="text-center text-gray-600 text-xs mb-3 max-w-3xl mx-auto">
+            입소 후에도 오늘 식사는 하셨는지, 약은 드셨는지, 컨디션은 어떤지 실시간으로 확인하기 어려운 경우가 많습니다.
+          </p>
+          <p className="text-center text-gray-600 text-xs mb-6 max-w-3xl mx-auto">
+            많은 기관은 지금도 엑셀·수기·전화·메신저에 의존해 운영과 행정을 처리하고 있습니다.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <div className="bg-red-50 rounded-xl p-5 border border-red-100">
@@ -451,7 +466,7 @@ export default function SeniorService() {
             </div>
           </div>
           <div className="mt-8 bg-emerald-50/80 rounded-xl p-4 border border-emerald-100 max-w-3xl mx-auto">
-            <p className="text-xs font-semibold text-emerald-800 mb-1 text-center">결론 요약</p>
+            <p className="text-xs font-semibold text-emerald-800 mb-1 text-center">[결론 요약]</p>
             <p className="text-sm text-gray-800 text-center">
               즉, 시니어 돌봄의 병목은 &quot;정보 부족&quot;이 아니라 <strong>연결 이후의 기록·행정·가족 소통이 끊기는 구조</strong>입니다.
             </p>
@@ -463,7 +478,7 @@ export default function SeniorService() {
       <section className="py-14 bg-gray-50 border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">보호자 현실: 시니어앤라이프 전과 후</h2>
-          <p className="text-center text-xs font-semibold text-emerald-700 uppercase tracking-wide mb-1">한 줄 요약</p>
+          <p className="text-center text-xs font-semibold text-emerald-700 mb-1">[한 줄 요약]</p>
           <p className="text-center text-gray-800 font-medium text-sm mb-4 max-w-3xl mx-auto">
             &quot;괜찮다&quot;는 말만으로는 안심할 수 없습니다. <strong>하루 기록</strong>이 있어야 부모님의 상태가 보입니다.
           </p>
@@ -472,11 +487,11 @@ export default function SeniorService() {
           </p>
 
           <div className="bg-emerald-50 rounded-xl p-5 border border-emerald-100 mb-6 max-w-3xl mx-auto">
-            <p className="text-xs font-semibold text-emerald-800 mb-3 text-center">핵심 변화 요약</p>
+            <p className="text-sm font-bold text-emerald-900 mb-3 text-center">이 서비스를 사용하면</p>
             <ul className="text-sm text-gray-800 space-y-2">
-              <li className="flex gap-2"><span className="text-emerald-600 shrink-0">✔</span><span><strong>전화가 아닌 실제 기록</strong>으로 부모님 상태를 확인</span></li>
-              <li className="flex gap-2"><span className="text-emerald-600 shrink-0">✔</span><span><strong>식사·복약·활동·수면</strong> 등 하루 전체 흐름을 한눈에 파악</span></li>
-              <li className="flex gap-2"><span className="text-emerald-600 shrink-0">✔</span><span>이상 징후는 <strong>AI가 먼저 알림</strong>으로 전달</span></li>
+              <li className="flex gap-2"><span className="text-emerald-600 shrink-0">✔</span><span><strong>전화가 아닌 실제 기록</strong>으로 상태 확인</span></li>
+              <li className="flex gap-2"><span className="text-emerald-600 shrink-0">✔</span><span><strong>하루 전체 흐름</strong>을 한눈에 파악</span></li>
+              <li className="flex gap-2"><span className="text-emerald-600 shrink-0">✔</span><span><strong>위험 신호</strong>를 AI가 먼저 감지</span></li>
             </ul>
           </div>
 
@@ -527,11 +542,14 @@ export default function SeniorService() {
             </div>
           </div>
           <div className="mt-6 bg-emerald-50/80 rounded-xl p-4 border border-emerald-100 max-w-3xl mx-auto">
-            <p className="text-xs font-semibold text-emerald-800 mb-1 text-center">결론 요약</p>
+            <p className="text-xs font-semibold text-emerald-800 mb-1 text-center">[결론 요약]</p>
             <p className="text-sm text-gray-800 text-center">
               즉, 보호자는 더 이상 추측하지 않고 <strong>데이터를 기반으로 부모님 상태를 이해</strong>하게 됩니다.
             </p>
           </div>
+          <p className="mt-8 text-center text-gray-700 text-sm md:text-base max-w-2xl mx-auto leading-relaxed font-medium">
+            지금까지는 알 수 없었던 부모님의 하루를 이제는 놓치지 않게 됩니다.
+          </p>
         </div>
       </section>
 
@@ -539,7 +557,7 @@ export default function SeniorService() {
       <section className="py-14 bg-white border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">시니어앤라이프 플랫폼 구조</h2>
-          <p className="text-center text-xs font-semibold text-emerald-700 uppercase tracking-wide mb-1">한 줄 요약</p>
+          <p className="text-center text-xs font-semibold text-emerald-700 mb-1">[한 줄 요약]</p>
           <p className="text-center text-gray-800 font-medium text-sm mb-4 max-w-3xl mx-auto">
             이 플랫폼은 검색이 아니라 <strong>돌봄 데이터를 관리</strong>하는 인프라입니다.
           </p>
@@ -564,7 +582,7 @@ export default function SeniorService() {
             </p>
           </div>
           <div className="mt-6 bg-emerald-50/80 rounded-xl p-4 border border-emerald-100 max-w-3xl mx-auto">
-            <p className="text-xs font-semibold text-emerald-800 mb-1 text-center">결론 요약</p>
+            <p className="text-xs font-semibold text-emerald-800 mb-1 text-center">[결론 요약]</p>
             <p className="text-sm text-gray-800 text-center">
               즉, 시니어앤라이프는 &quot;찾기&quot;에서 끝나지 않고 <strong>기록·분석·행정까지 이어지는 운영 체계</strong>를 지향합니다.
             </p>
@@ -576,7 +594,7 @@ export default function SeniorService() {
       <section className="py-14 bg-gray-50 border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">서비스 구성</h2>
-          <p className="text-center text-xs font-semibold text-emerald-700 uppercase tracking-wide mb-1">한 줄 요약</p>
+          <p className="text-center text-xs font-semibold text-emerald-700 mb-1">[한 줄 요약]</p>
           <p className="text-center text-gray-800 font-medium text-sm mb-4 max-w-3xl mx-auto">
             재가부터 인력 매칭까지, 시니어 돌봄의 <strong>전 과정을 한 플랫폼에서 연결</strong>합니다.
           </p>
@@ -614,7 +632,7 @@ export default function SeniorService() {
             />
           </div>
           <div className="mt-8 bg-emerald-50/80 rounded-xl p-4 border border-emerald-100 max-w-3xl mx-auto">
-            <p className="text-xs font-semibold text-emerald-800 mb-1 text-center">결론 요약</p>
+            <p className="text-xs font-semibold text-emerald-800 mb-1 text-center">[결론 요약]</p>
             <p className="text-sm text-gray-800 text-center">
               즉, 시니어앤라이프는 <strong>재가·시설·의료·인력</strong>을 같은 데이터 흐름으로 묶어, 역할마다 다른 도구를 쓰는 단절을 줄입니다.
             </p>
@@ -626,7 +644,7 @@ export default function SeniorService() {
       <section className="py-14 bg-white border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">서비스 영역별 현실 문제와 변화</h2>
-          <p className="text-center text-xs font-semibold text-emerald-700 uppercase tracking-wide mb-1">한 줄 요약</p>
+          <p className="text-center text-xs font-semibold text-emerald-700 mb-1">[한 줄 요약]</p>
           <p className="text-center text-gray-800 font-medium text-sm mb-4 max-w-3xl mx-auto">
             <strong>기록이 바뀌면</strong> 돌봄의 질·신뢰·진료·운영 판단이 함께 바뀝니다.
           </p>
@@ -690,7 +708,7 @@ export default function SeniorService() {
             </div>
           </div>
           <div className="mt-8 bg-emerald-50/80 rounded-xl p-4 border border-emerald-100 max-w-3xl mx-auto">
-            <p className="text-xs font-semibold text-emerald-800 mb-1 text-center">결론 요약</p>
+            <p className="text-xs font-semibold text-emerald-800 mb-1 text-center">[결론 요약]</p>
             <p className="text-sm text-gray-800 text-center">
               즉, 영역마다 다른 pain point가 있어도 <strong>같은 표준 기록·공유·분석</strong>으로 연결될 때 운영과 신뢰가 함께 올라갑니다.
             </p>
@@ -702,7 +720,7 @@ export default function SeniorService() {
       <section className="py-14 bg-gray-50 border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">핵심 기능</h2>
-          <p className="text-center text-xs font-semibold text-emerald-700 uppercase tracking-wide mb-1">한 줄 요약</p>
+          <p className="text-center text-xs font-semibold text-emerald-700 mb-1">[한 줄 요약]</p>
           <p className="text-center text-gray-800 font-medium text-sm mb-4 max-w-3xl mx-auto">
             기록·분석·가족 연결·케어 계획이 <strong>끊기지 않고 한 사이클</strong>로 돌아갑니다.
           </p>
@@ -743,7 +761,7 @@ export default function SeniorService() {
             </div>
           </div>
           <div className="mt-8 bg-emerald-50/80 rounded-xl p-4 border border-emerald-100 max-w-3xl mx-auto">
-            <p className="text-xs font-semibold text-emerald-800 mb-1 text-center">결론 요약</p>
+            <p className="text-xs font-semibold text-emerald-800 mb-1 text-center">[결론 요약]</p>
             <p className="text-sm text-gray-800 text-center">
               즉, 현장은 <strong>한 번 입력한 기록</strong>으로 보호자·AI·행정까지 동시에 살아나는 구조를 갖게 됩니다.
             </p>
@@ -755,7 +773,7 @@ export default function SeniorService() {
       <section className="py-14 bg-white border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">누가 어떻게 사용하는가</h2>
-          <p className="text-center text-xs font-semibold text-emerald-700 uppercase tracking-wide mb-1">한 줄 요약</p>
+          <p className="text-center text-xs font-semibold text-emerald-700 mb-1">[한 줄 요약]</p>
           <p className="text-center text-gray-800 font-medium text-sm mb-4 max-w-3xl mx-auto">
             역할은 다르지만, 모두 <strong>같은 돌봄 데이터</strong>를 기준으로 움직입니다.
           </p>
@@ -833,6 +851,15 @@ export default function SeniorService() {
                   <li className="flex gap-2"><span className="text-amber-600 shrink-0">✔</span><span>평가·인증 대응 효율화</span></li>
                 </ul>
                 <p className="text-xs text-gray-500 mt-3 text-center">* 기관 규모·운영 방식에 따라 달라질 수 있습니다.</p>
+              </div>
+              <div className="bg-amber-100/50 rounded-xl p-4 border border-amber-200/80 mt-4">
+                <p className="text-xs font-semibold text-amber-900 mb-2 text-center">도입 효과 (기관 운영 관점)</p>
+                <ul className="text-sm text-gray-800 space-y-2">
+                  <li className="flex gap-2"><span className="text-amber-600 shrink-0">✔</span><span><strong>행정 업무 시간 30~50% 감소</strong></span></li>
+                  <li className="flex gap-2"><span className="text-amber-600 shrink-0">✔</span><span><strong>보호자 문의 최대 70% 감소</strong></span></li>
+                  <li className="flex gap-2"><span className="text-amber-600 shrink-0">✔</span><span>운영 효율은 도입 직후부터 체감됩니다</span></li>
+                </ul>
+                <p className="text-xs text-gray-500 mt-2 text-center">* 수치는 기관·운영 조건에 따라 달라질 수 있습니다.</p>
               </div>
             </div>
 
@@ -936,9 +963,9 @@ export default function SeniorService() {
             </div>
           </div>
           <div className="mt-8 bg-emerald-50/80 rounded-xl p-4 border border-emerald-100 max-w-3xl mx-auto">
-            <p className="text-xs font-semibold text-emerald-800 mb-1 text-center">결론 요약</p>
+            <p className="text-xs font-semibold text-emerald-800 mb-1 text-center">[결론 요약]</p>
             <p className="text-sm text-gray-800 text-center">
-              즉, 기관은 <strong>기록이 아니라 운영 데이터</strong>를 갖게 되고, 공공은 <strong>현장을 추측이 아니라 지표로</strong> 돌볼 수 있습니다.
+              즉, 기관은 <strong>단순 기록이 아니라 운영 데이터</strong>를 갖게 되고, 공공은 <strong>현장을 추측이 아니라 지표로</strong> 돌볼 수 있습니다.
             </p>
           </div>
         </div>
@@ -948,7 +975,7 @@ export default function SeniorService() {
       <section className="py-14 bg-gray-50 border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">실제 돌봄 기록 예시</h2>
-          <p className="text-center text-xs font-semibold text-emerald-700 uppercase tracking-wide mb-1">한 줄 요약</p>
+          <p className="text-center text-xs font-semibold text-emerald-700 mb-1">[한 줄 요약]</p>
           <p className="text-center text-gray-800 font-medium text-sm mb-4 max-w-3xl mx-auto">
             보호자가 보는 화면은 <strong>하루의 타임라인</strong>입니다. 말이 아니라 기록이 쌓입니다.
           </p>
@@ -987,7 +1014,7 @@ export default function SeniorService() {
             이러한 기록은 보호자가 부모님의 하루 상태를 <strong>전화나 추측이 아닌 실제 데이터</strong>로 이해할 수 있도록 돕습니다. &quot;아, 내가 이런 걸 보게 되는구나&quot;를 바로 떠올릴 수 있는 수준의 정보입니다.
           </p>
           <div className="mt-6 bg-emerald-50/80 rounded-xl p-4 border border-emerald-100 max-w-3xl mx-auto">
-            <p className="text-xs font-semibold text-emerald-800 mb-1 text-center">결론 요약</p>
+            <p className="text-xs font-semibold text-emerald-800 mb-1 text-center">[결론 요약]</p>
             <p className="text-sm text-gray-800 text-center">
               즉, 디지털케어로그는 <strong>보여주기용 리포트가 아니라</strong> 매일 쌓이는 <strong>돌봄의 원천 데이터</strong>입니다.
             </p>
@@ -999,9 +1026,10 @@ export default function SeniorService() {
       <section className="py-14 bg-gray-50 border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">시니어 돌봄 행정 SaaS</h2>
-          <p className="text-center text-xs font-semibold text-emerald-700 uppercase tracking-wide mb-1">한 줄 요약</p>
+          <p className="text-center text-xs font-semibold text-emerald-700 mb-1">[한 줄 요약]</p>
           <p className="text-center text-gray-800 font-medium text-sm mb-4 max-w-3xl mx-auto">
-            현장 기록이 곧 <strong>청구·보고·근태·정산</strong>으로 이어지면, 행정은 &quot;따로 하는 일&quot;이 아닙니다.
+            <strong>행정이 줄어들어야 돌봄의 질이 올라갑니다.</strong>
+            현장 기록이 곧 <strong>청구·보고·근태·정산</strong>으로 이어지면 행정은 &quot;따로 하는 일&quot;이 아닙니다.
           </p>
           <p className="text-center text-gray-600 text-sm mb-8 max-w-2xl mx-auto">
             돌봄 기록과 행정 시스템을 하나의 플랫폼에서 관리합니다.
@@ -1034,7 +1062,7 @@ export default function SeniorService() {
             </div>
           </div>
           <div className="mt-8 bg-emerald-50/80 rounded-xl p-4 border border-emerald-100 max-w-3xl mx-auto">
-            <p className="text-xs font-semibold text-emerald-800 mb-1 text-center">결론 요약</p>
+            <p className="text-xs font-semibold text-emerald-800 mb-1 text-center">[결론 요약]</p>
             <p className="text-sm text-gray-800 text-center">
               즉, 기관은 <strong>같은 데이터로 운영과 행정을 동시에</strong> 맞출 수 있습니다.
             </p>
@@ -1046,7 +1074,7 @@ export default function SeniorService() {
       <section className="py-14 bg-white border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">AI 디지털케어로그 기술 응용</h2>
-          <p className="text-center text-xs font-semibold text-emerald-700 uppercase tracking-wide mb-1">한 줄 요약</p>
+          <p className="text-center text-xs font-semibold text-emerald-700 mb-1">[한 줄 요약]</p>
           <p className="text-center text-gray-800 font-medium text-sm mb-4 max-w-3xl mx-auto">
             기록은 끝이 아니라 <strong>분석·알림·케어 개선으로 이어지는 루프</strong>의 시작입니다.
           </p>
@@ -1054,10 +1082,7 @@ export default function SeniorService() {
             AI 디지털케어로그는 단순 기록 시스템이 아니라, <strong>기록 → 분석 → 판단 → 피드백</strong>이 반복되는 의사결정 인프라 기술입니다.
           </p>
           <p className="text-center text-gray-600 text-xs mb-3 max-w-3xl mx-auto">
-            기존 돌봄 기록은 단순한 기록 보관에 가깝습니다. <strong>AI 디지털케어로그는 의사결정 데이터 인프라</strong>입니다. 돌봄 현장에서 발생하는 기록이 수집되고, 분석되고, 패턴을 찾고, 위험을 감지하고, 케어 계획에 반영되는 <strong>Decision Log + Feedback Loop</strong> 구조로 작동합니다. 이 구조가 반복될수록 케어는 점점 더 개인 맞춤형으로 진화합니다.
-          </p>
-          <p className="text-center text-gray-600 text-xs mb-3 max-w-3xl mx-auto">
-            DAL AI 디지털케어로그는 단순한 기록 시스템이 아니라, 사람의 상태 변화와 생활 데이터를 <strong>시간 흐름 속에서 이해하고</strong> 더 나은 돌봄 의사결정을 돕는 <strong>AI 기반 의사결정 인프라 기술</strong>입니다.
+            기존 돌봄 기록은 보관에 가깝습니다. <strong>DAL AI 디지털케어로그</strong>는 사람의 상태·생활 데이터를 <strong>시간 흐름 속에서 이해</strong>하고, 현장 기록이 수집·분석·위험 감지·케어 계획에 반영되는 <strong>Decision Log + Feedback Loop</strong>로 작동합니다. 반복될수록 케어는 더 개인 맞춤형으로 진화합니다.
           </p>
           <p className="text-center text-gray-600 text-xs mb-8 max-w-3xl mx-auto">
             시니어앤라이프는 이 AI 디지털케어로그 기술을 시니어 돌봄 산업에 적용한 DAL 플랫폼 사례입니다.
@@ -1098,7 +1123,7 @@ export default function SeniorService() {
             </div>
           </div>
           <div className="mt-8 bg-emerald-50/80 rounded-xl p-4 border border-emerald-100 max-w-3xl mx-auto">
-            <p className="text-xs font-semibold text-emerald-800 mb-1 text-center">결론 요약</p>
+            <p className="text-xs font-semibold text-emerald-800 mb-1 text-center">[결론 요약]</p>
             <p className="text-sm text-gray-800 text-center">
               즉, DAL AI 디지털케어로그는 <strong>쌓일수록 케어가 정교해지는 의사결정 인프라</strong>이며, 시니어앤라이프는 그 시니어 산업 응용 사례입니다.
             </p>
@@ -1110,7 +1135,7 @@ export default function SeniorService() {
       <section className="py-14 bg-gray-50 border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">시니어 돌봄 산업 구조 변화</h2>
-          <p className="text-center text-xs font-semibold text-emerald-700 uppercase tracking-wide mb-1">한 줄 요약</p>
+          <p className="text-center text-xs font-semibold text-emerald-700 mb-1">[한 줄 요약]</p>
           <p className="text-center text-gray-800 font-medium text-sm mb-4 max-w-3xl mx-auto">
             분절된 서비스를 <strong>데이터로 잇는 것</strong>이 산업 구조 전환의 출발점입니다.
           </p>
@@ -1151,7 +1176,7 @@ export default function SeniorService() {
             </p>
           </div>
           <div className="mt-6 bg-emerald-50/80 rounded-xl p-4 border border-emerald-100 max-w-3xl mx-auto">
-            <p className="text-xs font-semibold text-emerald-800 mb-1 text-center">결론 요약</p>
+            <p className="text-xs font-semibold text-emerald-800 mb-1 text-center">[결론 요약]</p>
             <p className="text-sm text-gray-800 text-center">
               즉, 투자·정책 관점에서 시니어앤라이프는 <strong>단일 앱이 아니라 산업을 잇는 인프라 레이어</strong>로 읽힐 수 있습니다.
             </p>
@@ -1163,7 +1188,7 @@ export default function SeniorService() {
       <section className="py-14 bg-white border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">기존 서비스와 시니어앤라이프의 차이</h2>
-          <p className="text-center text-xs font-semibold text-emerald-700 uppercase tracking-wide mb-1">한 줄 요약</p>
+          <p className="text-center text-xs font-semibold text-emerald-700 mb-1">[한 줄 요약]</p>
           <p className="text-center text-gray-800 font-medium text-sm mb-4 max-w-3xl mx-auto">
             기존 도구는 <strong>연결 전(검색·행정)</strong>에 머무르고, 시니어앤라이프는 <strong>연결 이후의 돌봄 데이터</strong>까지 다룹니다.
           </p>
@@ -1213,7 +1238,7 @@ export default function SeniorService() {
             </p>
           </div>
           <div className="mt-6 bg-emerald-50/80 rounded-xl p-4 border border-emerald-100 max-w-3xl mx-auto">
-            <p className="text-xs font-semibold text-emerald-800 mb-1 text-center">결론 요약</p>
+            <p className="text-xs font-semibold text-emerald-800 mb-1 text-center">[결론 요약]</p>
             <p className="text-sm text-gray-800 text-center">
               즉, 시니어앤라이프의 경쟁 상대는 &quot;다른 검색 사이트&quot;가 아니라 <strong>연결 이후에 남는 정보 공백</strong>입니다.
             </p>
@@ -1225,7 +1250,7 @@ export default function SeniorService() {
       <section className="py-14 bg-white border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">정책 및 공공 관점에서의 의미</h2>
-          <p className="text-center text-xs font-semibold text-emerald-700 uppercase tracking-wide mb-1">한 줄 요약</p>
+          <p className="text-center text-xs font-semibold text-emerald-700 mb-1">[한 줄 요약]</p>
           <p className="text-center text-gray-800 font-medium text-sm mb-4 max-w-3xl mx-auto">
             표준 기록이 쌓이면, 공공은 <strong>민원 이후가 아니라 예방·품질·예산</strong>을 데이터로 설계할 수 있습니다.
           </p>
@@ -1260,7 +1285,7 @@ export default function SeniorService() {
             뒷받침할 수 있는 AI 디지털케어로그 인프라를 지향합니다.
           </p>
           <div className="mt-6 bg-emerald-50/80 rounded-xl p-4 border border-emerald-100 max-w-3xl mx-auto">
-            <p className="text-xs font-semibold text-emerald-800 mb-1 text-center">결론 요약</p>
+            <p className="text-xs font-semibold text-emerald-800 mb-1 text-center">[결론 요약]</p>
             <p className="text-sm text-gray-800 text-center">
               즉, 지자체·공공에게 이 플랫폼은 <strong>정책 인프라(가시성·비교·예방)</strong>로 읽힐 수 있습니다.
             </p>
@@ -1272,7 +1297,7 @@ export default function SeniorService() {
       <section className="py-14 bg-gray-50 border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">DAL 플랫폼 생태계 확장</h2>
-          <p className="text-center text-xs font-semibold text-emerald-700 uppercase tracking-wide mb-1">한 줄 요약</p>
+          <p className="text-center text-xs font-semibold text-emerald-700 mb-1">[한 줄 요약]</p>
           <p className="text-center text-gray-800 font-medium text-sm mb-4 max-w-3xl mx-auto">
             시니어앤라이프는 <strong>DAL 생태계 안의 시니어 축</strong>이며, 같은 기술 스택이 다른 산업에도 확장됩니다.
           </p>
@@ -1307,11 +1332,14 @@ export default function SeniorService() {
             사람의 삶 전반에서 발생하는 건강·돌봄·학습·의사결정 데이터를 하나의 인프라로 쌓아가는 것이 DAL의 방향입니다.
           </p>
           <div className="mt-6 bg-emerald-50/80 rounded-xl p-4 border border-emerald-100 max-w-3xl mx-auto">
-            <p className="text-xs font-semibold text-emerald-800 mb-1 text-center">결론 요약</p>
+            <p className="text-xs font-semibold text-emerald-800 mb-1 text-center">[결론 요약]</p>
             <p className="text-sm text-gray-800 text-center">
               즉, DAL은 단일 앱이 아니라 <strong>여러 산업을 잇는 AI 의사결정 인프라</strong>이고, 시니어앤라이프는 그 중 시니어 레이어입니다.
             </p>
           </div>
+          <p className="mt-8 text-center text-gray-800 text-sm md:text-base max-w-3xl mx-auto leading-relaxed font-medium">
+            이 플랫폼은 단일 서비스가 아니라, 시니어 산업의 데이터 인프라가 됩니다.
+          </p>
         </div>
       </section>
 
@@ -1319,7 +1347,7 @@ export default function SeniorService() {
       <section className="py-14 bg-white border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">DAL AI 기술</h2>
-          <p className="text-center text-xs font-semibold text-emerald-700 uppercase tracking-wide mb-1">한 줄 요약</p>
+          <p className="text-center text-xs font-semibold text-emerald-700 mb-1">[한 줄 요약]</p>
           <p className="text-center text-gray-800 font-medium text-sm mb-4 max-w-3xl mx-auto">
             시니어 돌봄에 적용된 <strong>시계열·패턴·알림·연계</strong>는 DAL 코어 기술의 응용입니다.
           </p>
@@ -1334,7 +1362,7 @@ export default function SeniorService() {
             ))}
           </div>
           <div className="mt-8 bg-emerald-50/80 rounded-xl p-4 border border-emerald-100 max-w-3xl mx-auto">
-            <p className="text-xs font-semibold text-emerald-800 mb-1 text-center">결론 요약</p>
+            <p className="text-xs font-semibold text-emerald-800 mb-1 text-center">[결론 요약]</p>
             <p className="text-sm text-gray-800 text-center">
               즉, 기술 협력·연구 파트너에게 DAL은 <strong>재사용 가능한 케어 데이터 스택</strong>으로 제시됩니다.
             </p>
@@ -1346,7 +1374,7 @@ export default function SeniorService() {
       <section className="py-14 bg-gray-50 border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">시니어앤라이프 도입 효과</h2>
-          <p className="text-center text-xs font-semibold text-emerald-700 uppercase tracking-wide mb-1">한 줄 요약</p>
+          <p className="text-center text-xs font-semibold text-emerald-700 mb-1">[한 줄 요약]</p>
           <p className="text-center text-gray-800 font-medium text-sm mb-4 max-w-3xl mx-auto">
             역할은 다르지만, 모두 <strong>같은 기록·같은 신뢰·같은 데이터 언어</strong>를 씁니다.
           </p>
@@ -1361,7 +1389,7 @@ export default function SeniorService() {
             ))}
           </div>
           <div className="mt-8 bg-emerald-50/80 rounded-xl p-4 border border-emerald-100 max-w-3xl mx-auto">
-            <p className="text-xs font-semibold text-emerald-800 mb-1 text-center">결론 요약</p>
+            <p className="text-xs font-semibold text-emerald-800 mb-1 text-center">[결론 요약]</p>
             <p className="text-sm text-gray-800 text-center">
               즉, 도입은 &quot;기능 추가&quot;가 아니라 <strong>가족·기관·진료·정책이 같은 데이터를 공유하는 전환</strong>입니다.
             </p>
@@ -1401,7 +1429,18 @@ export default function SeniorService() {
             </div>
           </div>
 
-          <p className="text-sm font-semibold text-gray-800 mb-4">지금 바로 다음 중 하나를 선택하세요</p>
+          <p className="text-center text-gray-800 text-base md:text-lg font-medium max-w-2xl mx-auto mb-8 leading-relaxed">
+            이제 선택의 문제가 아니라, <strong>언제 시작할 것인가</strong>의 문제입니다.
+          </p>
+
+          <div className="max-w-xl mx-auto mb-6 text-left sm:text-center">
+            <p className="text-xl font-bold text-gray-900 mb-3">지금 바로 시작하세요</p>
+            <ul className="text-sm text-gray-700 space-y-2 inline-block text-left">
+              <li className="flex gap-2 sm:justify-center"><span className="text-emerald-600 shrink-0">✔</span> 우리 부모님에게 맞는 시설 찾기</li>
+              <li className="flex gap-2 sm:justify-center"><span className="text-emerald-600 shrink-0">✔</span> 우리 기관에 AI 케어로그 도입 상담</li>
+              <li className="flex gap-2 sm:justify-center"><span className="text-emerald-600 shrink-0">✔</span> 3분 데모로 직접 확인하기</li>
+            </ul>
+          </div>
           <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center items-stretch max-w-5xl mx-auto mb-10">
             <a
               href="https://seniorandlife.com"
@@ -1409,21 +1448,21 @@ export default function SeniorService() {
               rel="noopener noreferrer"
               className="inline-flex flex-col items-center justify-center bg-gradient-to-r from-green-600 to-emerald-600 text-white px-6 py-4 rounded-xl text-sm font-semibold hover:opacity-90 transition-opacity shadow-md flex-1 min-w-[220px]"
             >
-              <span>지금 시니어 시설을 찾아보세요</span>
+              <span>우리 부모님에게 맞는 시설 찾기</span>
               <span className="text-xs font-normal text-emerald-100 mt-1 opacity-95">seniorandlife.com</span>
             </a>
             <a
-              href="mailto:senior@dreamailab.com?subject=%5B%EA%B8%B0%EA%B4%80%20%EB%8F%84%EC%9E%85%5D%20%EC%83%81%EB%8B%B4%20%EC%9A%94%EC%B2%AD"
+              href="mailto:senior@dreamailab.com?subject=%5B%EA%B8%B0%EA%B4%80%20%EB%8F%84%EC%9E%85%5D%20AI%20%EC%BC%80%EC%96%B4%EB%A1%9C%EA%B7%B8%20%EC%83%81%EB%8B%B4"
               className="inline-flex flex-col items-center justify-center bg-white border-2 border-emerald-600 text-emerald-800 px-6 py-4 rounded-xl text-sm font-semibold hover:bg-emerald-50 transition-colors shadow-sm flex-1 min-w-[220px]"
             >
-              <span>우리 기관에 도입 상담 받기</span>
+              <span>우리 기관에 AI 케어로그 도입 상담</span>
               <span className="text-xs font-normal text-gray-600 mt-1">senior@dreamailab.com</span>
             </a>
             <Link
               href="/contact?type=tech"
               className="inline-flex flex-col items-center justify-center bg-white border-2 border-gray-800 text-gray-900 px-6 py-4 rounded-xl text-sm font-semibold hover:bg-gray-50 transition-colors shadow-sm flex-1 min-w-[220px]"
             >
-              <span>AI 디지털케어로그 데모 요청</span>
+              <span>3분 데모로 직접 확인하기</span>
               <span className="text-xs font-normal text-gray-600 mt-1">DAL 기술·연구 협력</span>
             </Link>
           </div>
