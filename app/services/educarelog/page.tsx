@@ -177,22 +177,22 @@ export default function EduCareLogService() {
   const techBullets = [
     {
       tag: '표준 스키마 (FHIR급 사고)',
-      why: '병원·복지와 같이 교육도 기관이 바뀌어도 같은 학생 맥락을 이어야 합니다. 표준이 있어야 공독·사학원·가정이 한 명을 공유합니다.',
+      why: '병원·복지와 같이 교육도 기관이 바뀌어도 같은 학생 맥락을 이어야 하며, 표준이 있어야 공독·사학원·가정이 한 명을 공유합니다.',
     },
     {
       tag: '강화학습·환류',
-      why: '추천 한 번이 끝이면 개인화가 아닙니다. 시도→반응→보상 구조로 반응이 나온 개입만 유지합니다.',
+      why: '추천 한 번이 끝이면 개인화가 아니므로, 시도→반응→보상 구조로 반응이 나온 개입만 유지합니다.',
     },
     {
       tag: '멀티모달·시계열',
-      why: '정답 여부만으로는 부족합니다. 멈춘 시점·재시청·속도가 다음 난이도와 소요 시간을 정합니다.',
+      why: '정답 여부만으로는 부족하므로, 멈춘 시점·재시청·속도가 다음 난이도와 소요 시간을 정합니다.',
     },
   ]
 
   const whyNow = [
-    '기초학력 보장·개별화 교육은 이미 정책 방향입니다. 실행은 영상·교재 추가가 아니라 데이터를 한 학생 맥락으로 묶는 일입니다.',
-    '교육청·학교는 동의·표준·분석에 맞춰 "로그 기반"으로 전환해야 합니다. 연결 없이 쌓인 기록은 비교·개입 설계에 쓰이지 못합니다.',
-    '지금 도입하면 학급·학교·지역 단위로 학습 데이터가 쌓입니다. 늦으면 같은 예산으로도 남은 기간에 쌓을 수 있는 데이터가 줄어듭니다.',
+    '기초학력 보장·개별화 교육은 이미 정책 방향이지만, 실행은 영상·교재 추가가 아니라 데이터를 한 학생 맥락으로 묶는 일로 이어져야 합니다.',
+    '교육청·학교는 동의·표준·분석에 맞춰 "로그 기반"으로 전환해야 하며, 연결 없이 쌓인 기록은 비교·개입 설계에 쓰이지 못합니다.',
+    '지금 도입하면 학급·학교·지역 단위로 학습 데이터가 쌓이고, 늦으면 같은 예산으로도 남은 기간에 쌓을 수 있는 데이터가 줄어듭니다.',
   ]
 
   const ecosystem = [
@@ -265,9 +265,9 @@ export default function EduCareLogService() {
             </span>
           </div>
           <p className="text-blue-50 text-sm md:text-base max-w-3xl mx-auto mt-6 leading-relaxed">
-            학생이 어디서 멈췄는지 바로 알 수 있고,
+            학생이 어디서 막히는지 바로 알 수 있고,
             <br />
-            그 다음에 무엇을 해야 하는지까지 이어지는 구조입니다.
+            그 다음 학습이 자동으로 이어지는 구조입니다.
           </p>
         </div>
       </section>
@@ -287,15 +287,15 @@ export default function EduCareLogService() {
               <strong className="text-gray-900">기록 분절 + 실행 단절</strong>입니다.
             </p>
             <p>
-              교실 한 칸, 학원 한 반에는 시간 한계가 있습니다. 수작업으로 &quot;전원 개별&quot;을 요구한 구조 자체가 공공 현장에서 붕괴합니다. 그 공백이
-              사교육으로 이동한 것입니다.
+              교실 한 칸·학원 한 반의 시간 한계 때문에 수작업 &quot;전원 개별&quot; 구조는 공공 현장에서 붕괴하고, 그 공백은 사교육 쪽으로
+              이동합니다.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-4">
             <div className="bg-red-50 rounded-xl p-5 border border-red-100">
               <h3 className="font-bold text-gray-900 text-sm mb-2">실패 1: 기록이 한 학생으로 합쳐지지 않음</h3>
               <p className="text-sm text-gray-700">
-                진단·과제·학원·앱이 따로 놀면 한 명의 연속 서사가 없습니다. 개인화할 입력이 없습니다.
+                진단·과제·학원·앱이 따로 놀면 연속 서사가 없어 개인화할 입력이 없습니다.
               </p>
             </div>
             <div className="bg-red-50 rounded-xl p-5 border border-red-100">
@@ -373,12 +373,8 @@ export default function EduCareLogService() {
               바로 이어지기 때문&quot;입니다.
             </p>
             <p>
-              기존에는 &quot;문제를 많이 풀면 언젠가 이해한다&quot;는 방식이었다면, 이 구조에서는 &quot;어디서 막혔는지를 기준으로 바로 다음 학습이
-              이어집니다.&quot;
-            </p>
-            <p>
-              기존에는 문제를 많이 풀어도 학생 상태가 연결되지 않았지만, 이 구조에서는 &quot;어디서 멈췄는지&quot;가 그대로 다음 학습으로 이어지기 때문에
-              수준별 맞춤 학습이 실제로 작동합니다.
+              기존에는 문제만 많이 풀어도 학생 상태가 이어지지 않고 &quot;언젠가 이해한다&quot;는 방식에 가깝지만, 이 구조에서는 어디서
+              막혔는지를 기준으로 다음 학습이 자동으로 이어져 수준별 맞춤 학습이 실제로 작동합니다.
             </p>
           </div>
         </div>
@@ -556,22 +552,22 @@ export default function EduCareLogService() {
                 <li>
                   <p className="font-semibold text-gray-900">데이터가 지속되지 않는다</p>
                   <p className="mt-1 text-gray-700">
-                    진단·설문·계획이 1회성으로 끝나면 학생의 하루하루 반응이 쌓이지 않습니다. 누적이 없으면 개인화할 재료가 없습니다.{' '}
-                    <strong className="text-gray-900">그래서 현장에서 실패합니다.</strong>
+                    진단·설문·계획이 1회성이면 하루하루 반응이 쌓이지 않아 개인화할 재료가 없고{' '}
+                    <strong className="text-gray-900">현장에서 바로 실패합니다.</strong>
                   </p>
                 </li>
                 <li>
                   <p className="font-semibold text-gray-900">분석 이후 실행이 연결되지 않는다</p>
                   <p className="mt-1 text-gray-700">
-                    방향·추천까지만 나오고, 오늘 퀴즈·이번 주 루틴·학부모 안내는 사람 손으로 다시 잇습니다. 규모가 나지 않습니다.{' '}
-                    <strong className="text-gray-900">그래서 도입 후 멈춥니다.</strong>
+                    방향·추천에 그친 뒤 퀴즈·루틴·학부모 안내를 매번 손으로 잇기 때문에 규모가 나지 않고{' '}
+                    <strong className="text-gray-900">도입 후 멈춥니다.</strong>
                   </p>
                 </li>
                 <li>
                   <p className="font-semibold text-gray-900">유지 비용이 교사·부모에게 쏠린다</p>
                   <p className="mt-1 text-gray-700">
-                    매일 채워 넣을 보고·정리·연락이 사람 몫이면 부담이 커지고 일정이 밀리면 시스템은 공문만 남습니다.{' '}
-                    <strong className="text-gray-900">그래서 지속되지 않습니다.</strong>
+                    매일 보고·정리·연락이 사람 몫이면 부담이 커지고 일정이 밀릴 때 시스템은 공문만 남겨{' '}
+                    <strong className="text-gray-900">지속되지 않습니다.</strong>
                   </p>
                 </li>
               </ul>
@@ -582,19 +578,20 @@ export default function EduCareLogService() {
                 <li>
                   <p className="font-semibold text-indigo-950">로그 기반 누적 데이터</p>
                   <p className="mt-1 text-gray-800">
-                    과제·수업 반응·진단이 같은 줄기로 쌓입니다. 다음 주 판단은 “어제 메모”가 아니라 쌓인 기록을 봅니다. 데이터가 끊기지 않습니다.
+                    과제·수업 반응·진단이 같은 줄기로 쌓여 다음 주 판단이 “어제 메모”가 아니라 기록을 보는 방식으로 이어지고 데이터가 끊기지
+                    않습니다.
                   </p>
                 </li>
                 <li>
                   <p className="font-semibold text-indigo-950">분석 → 실행 자동 연결</p>
                   <p className="mt-1 text-gray-800">
-                    약점 구간이 정해지면 경로·퀴즈·루틴·리포트 초안이 같은 엔진에서 이어집니다. 추천에서 멈추지 않습니다.
+                    약점 구간이 정해지면 경로·퀴즈·루틴·리포트 초안이 같은 엔진에서 이어져 추천에서 멈추지 않습니다.
                   </p>
                 </li>
                 <li>
                   <p className="font-semibold text-indigo-950">환류 루프</p>
                   <p className="mt-1 text-gray-800">
-                    실행 결과가 다시 로그로 들어가 다음 경로가 고쳐집니다. 한 번 짜 둔 계획만 반복하지 않습니다.
+                    실행 결과가 다시 로그로 들어가 다음 경로가 고쳐지므로 한 번 짜 둔 계획만 반복하지 않습니다.
                   </p>
                 </li>
               </ul>
@@ -719,13 +716,13 @@ export default function EduCareLogService() {
               </ul>
               <p className="text-xs font-semibold text-indigo-700 mb-2">EduCareLog</p>
               <p className="text-sm text-gray-800">
-                로그를 기준으로 개인 경로를 조정하고, 겹치는 반복을 줄입니다. 사람 설명만 받는 구조가 아닙니다.
+                로그를 기준으로 개인 경로를 조정해 겹치는 반복을 줄이며, 사람 설명만 받는 구조가 아닙니다.
               </p>
             </div>
           </div>
 
           <p className="text-center text-sm md:text-base font-semibold text-gray-900 max-w-3xl mx-auto mt-10 leading-relaxed">
-            기존 시스템은 교육을 &apos;제공&apos;하는 구조라면, EduCareLog는 교육을 &apos;운영&apos;하는 구조입니다.
+            기존 시스템이 교육을 &apos;제공&apos;하는 데 머물렀다면 EduCareLog는 &apos;운영&apos;으로 바꾸는 구조입니다.
           </p>
         </div>
       </section>
@@ -773,7 +770,7 @@ export default function EduCareLogService() {
                 지금 시작하면 데이터가 쌓이고, 지금 시작하지 않으면 같은 출발선에서 늦게 시작하게 됩니다.
               </p>
               <p className="text-gray-800 mt-4 pt-4 border-t border-gray-100 leading-relaxed">
-                이 구조가 없으면 같은 시간을 써도 학생 상태는 남지 않습니다. 결국 다음 학습도 다시 감으로 시작하게 됩니다.
+                이 구조가 없으면 같은 시간을 써도 학생 상태는 남지 않고, 다음 학습은 다시 감으로 시작하게 됩니다.
               </p>
             </div>
           </div>
@@ -794,12 +791,10 @@ export default function EduCareLogService() {
           <div className="max-w-3xl mx-auto space-y-10 text-sm text-gray-800 leading-relaxed">
             <div>
               <p className="font-semibold text-gray-900 mb-3">1. 교육 문제의 본질</p>
-              <p className="mb-3">
-                교육 문제는 교재·영상이 부족해서만 생기지 않습니다. 공교육과 사교육을 가리지 않고,{' '}
-                <strong className="text-gray-900">학생 상태를 같은 기준으로 읽지 못하는 구조</strong>가 핵심입니다.
-              </p>
               <p>
-                알고 있는 것의 차이가 데이터의 차이로 굳고, 그 데이터의 차이가 다시 기회의 차이로 이어집니다.
+                교육 문제는 교재·영상이 부족해서만 생기지 않습니다. 공교육과 사교육을 가리지 않고{' '}
+                <strong className="text-gray-900">학생 상태를 같은 기준으로 읽지 못하는 구조</strong>가 핵심이며, 정보 격차는 데이터로
+                굳고 다시 기회 격차로 이어집니다.
               </p>
             </div>
 
@@ -878,9 +873,9 @@ export default function EduCareLogService() {
             <div className="rounded-xl border border-indigo-100 bg-indigo-50/40 p-5 md:p-6">
               <p className="font-semibold text-gray-900 mb-3">4. 산업이 바뀌는 축</p>
               <p className="mb-3 text-gray-800">
-                기존 교육 시장은 콘텐츠·강사·브랜드 중심 경쟁이 강했습니다. EduCareLog가 지향하는 축은 그 위에 얹히는 별도 앱이 아니라,{' '}
-                <strong className="text-gray-900">데이터 기반 운영 능력</strong>으로 경쟁이 옮겨가는 쪽입니다. 중소 학원이나 신생 교육기업도 먼저
-                운영 로그를 쌓을수록 그 차이를 데이터로 설명할 수 있습니다.
+                기존 교육 시장은 콘텐츠·강사·브랜드 중심 경쟁이 강했지만, EduCareLog가 지향하는 축은 별도 앱이 아니라{' '}
+                <strong className="text-gray-900">데이터 기반 운영 능력</strong>으로 옮겨가는 쪽이라 중소 학원·신생 교육기업도 먼저 쌓은 운영
+                로그로 차이를 설명할 수 있습니다.
               </p>
               <p className="font-semibold text-indigo-950 text-sm">
                 앞으로의 경쟁은 누가 더 많은 문제를 갖고 있는가보다가 아니라, 누가 학생 상태를 더 정확히 읽고 더 빠르게 개입할 수 있는가로
@@ -890,8 +885,8 @@ export default function EduCareLogService() {
 
             <div className="text-center border-t border-gray-200 pt-8">
               <p className="text-sm md:text-base text-gray-800 leading-relaxed max-w-3xl mx-auto">
-                EduCareLog는 교육 불평등을 한 번에 없애는 해답은 아닙니다. 하지만 같은 학생을 서로 다른 감으로만 보던 구조를, 같은 데이터로
-                이해하고 행동하게 만드는 출발점이 될 수 있습니다.
+                EduCareLog는 교육 불평등을 한 번에 없애는 해답은 아니지만, 같은 학생을 감이 아닌 데이터로 이해하고 행동하게 만드는 출발점이
+                될 수 있습니다.
               </p>
             </div>
           </div>
@@ -1011,6 +1006,11 @@ export default function EduCareLogService() {
       {/* 12. CTA */}
       <section className="py-16 bg-gradient-to-br from-blue-600 to-indigo-700 text-white">
         <div className="max-w-5xl mx-auto px-4">
+          <p className="text-center text-blue-50 text-sm md:text-base font-medium max-w-2xl mx-auto mb-8 leading-relaxed">
+            이 구조가 없으면 학생 상태는 남지 않습니다.
+            <br />
+            같은 시간을 써도 다음 학습은 다시 감으로 시작하게 됩니다.
+          </p>
           <h2 className="text-2xl md:text-3xl font-bold mb-3 text-center">다음 행동</h2>
           <p className="text-blue-100 text-sm mb-10 text-center max-w-2xl mx-auto leading-relaxed">
             드림에이아이랩은 콘텐츠 회사가 아니라 <strong className="text-white">엔진·표준·실행 자동화</strong>를 건넵니다. 역할에 맞는 문의만 고르시면
