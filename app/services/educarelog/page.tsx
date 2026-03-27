@@ -4,1604 +4,1061 @@ import Footer from '../../../components/Footer'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'EduCareLog – AI 디지털케어로그 기반 교육AI | 드림에이아이랩',
-  description: '표준화된 학습·행동 로그를 AI가 분석해 수준 진단, 개인 맞춤 경로, 콘텐츠 추천, 시험 전 집중 루틴까지 자동화합니다. 2026 대한민국 개별화교육 전환을 위한 파트너십 오픈.',
+  title: 'EduCareLog – 학습 데이터 기반 개별화 교육 인프라 | 드림에이아이랩',
+  description:
+    '학생 한 명의 학습 상태를 데이터로 이어 실행까지 연결하는 로그 기반 인프라. 학교·학원·교육청·에듀테크 파트너십.',
   keywords: [
-    'AI 디지털케어로그',
     'EduCareLog',
-    '개별화 학습',
-    '수준 진단',
-    'EBS 연동',
-    '교육 데이터 표준',
-    '교육AI 파트너십',
+    'AI 디지털케어로그',
+    '개별화 교육',
+    '학습 로그',
+    '교육 인프라',
+    'DAL',
     '드림에이아이랩',
-    '자람이',
-    '특수교육 AI'
+    'EBS 연동',
+    '에듀케어로그',
   ],
   openGraph: {
-    title: 'EduCareLog – AI 디지털케어로그 기반 교육AI',
-    description: '학습·행동 로그 표준화 → AI 분석 → 맞춤 실행까지. 학교·학원·지자체 파트너십 모집.',
+    title: 'EduCareLog – 학습 데이터 기반 개별화 교육 인프라',
+    description: '로그 기반 실행 자동화. 학교·학원·지자체가 임베드하는 교육 엔진.',
     url: 'https://dreamailab.com/services/educarelog',
     siteName: 'Dream AI Lab',
-    type: 'website'
+    type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'EduCareLog – AI 디지털케어로그 기반 교육AI',
-    description: '표준 데이터 기반 개별화 학습. 2026 파트너십 오픈.'
+    title: 'EduCareLog – 개별화 교육 인프라',
+    description: '학습 데이터 표준 → 경로·실행·환류까지 한 흐름.',
   },
   alternates: {
-    canonical: 'https://dreamailab.com/services/educarelog'
-  }
+    canonical: 'https://dreamailab.com/services/educarelog',
+  },
 }
 
 export default function EduCareLogService() {
-  const partnerCTAs = [
-    { title: '학교·지자체 컨소시엄', description: '지역 단위 개별화교육 전환(시범학교/교육청 사업) 공동 제안', icon: '🤝' },
-    { title: '교육 스타트업', description: '기존 LMS/문제은행/튜터링에 CareLog 엔진 임베드', icon: '🧩' },
-    { title: '출판·콘텐츠사', description: '교육과정 맵핑·적응형 퀴즈·난이도 루핑 자동화', icon: '📚' },
-    { title: '플랫폼/리셀러', description: '화이트라벨·API 기반 B2B 유통/총판', icon: '🛒' }
-  ]
-
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    'name': 'EduCareLog',
-    'provider': {
+    name: 'EduCareLog',
+    provider: {
       '@type': 'Organization',
-      'name': 'Dream AI Lab',
-      'url': 'https://dreamailab.com/'
+      name: 'Dream AI Lab',
+      url: 'https://dreamailab.com/',
     },
-    'category': 'Education',
-    'areaServed': 'KR',
-    'description': 'AI Digital CareLog 기반 개별화 학습 서비스. 학습·행동 로그 표준화, AI 수준 진단, 맞춤 경로·콘텐츠 추천, 리포트 자동화.',
-    'offers': {
+    category: 'Education',
+    areaServed: 'KR',
+    description:
+      '학습·행동 로그 표준화, 수준·오개념 진단, 개인화 경로 및 퀴즈·루틴·리포트 실행 자동화를 제공하는 교육 인프라 엔진.',
+    offers: {
       '@type': 'Offer',
-      'category': 'B2B/B2G 파트너십',
-      'availability': 'https://schema.org/PreOrder'
-    }
+      category: 'B2B/B2G 파트너십',
+      availability: 'https://schema.org/PreOrder',
+    },
   }
 
   const breadcrumbLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Services",
-        "item": "https://dreamailab.com/services"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "EduCareLog",
-        "item": "https://dreamailab.com/services/educarelog"
-      }
-    ]
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Services', item: 'https://dreamailab.com/services' },
+      { '@type': 'ListItem', position: 2, name: 'EduCareLog', item: 'https://dreamailab.com/services/educarelog' },
+    ],
   }
 
   const faqLd = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
       {
-        "@type": "Question",
-        "name": "우리는 교육기업인가요?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "아닙니다. 드림에이아이랩은 AI 디지털케어로그 엔진 제공사이며, 학교·학원·지자체·교육사·에듀테크와의 파트너십/임베드를 지향합니다."
-        }
+        '@type': 'Question',
+        name: '우리는 교육기업인가요?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: '아닙니다. 드림에이아이랩은 AI 디지털케어로그 엔진 제공사이며, 학교·학원·지자체·에듀테크와 파트너십·임베드를 지향합니다.',
+        },
       },
       {
-        "@type": "Question",
-        "name": "어떤 연동을 지원하나요?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "기존 LMS/문제은행과의 API·CSV·Webhook, LTI/OneRoster 스타일 연동을 지원하며, EBS/교육과정 맵핑을 제공합니다."
-        }
+        '@type': 'Question',
+        name: '어떤 연동을 지원하나요?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'LMS·문제은행과 API·CSV·Webhook, LTI/OneRoster 스타일 연동과 EBS·교육과정 맵핑을 지원합니다.',
+        },
       },
       {
-        "@type": "Question",
-        "name": "개인정보·보안은 어떻게 관리하나요?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "학생·학부모 명시적 동의, 최소 수집, 전송/저장 암호화, RBAC·감사로그, 비식별 통계를 원칙으로 합니다."
-        }
+        '@type': 'Question',
+        name: '개인정보·보안은?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: '동의·최소 수집·암호화·RBAC·감사로그·비식별 통계를 원칙으로 합니다.',
+        },
       },
       {
-        "@type": "Question",
-        "name": "도입 형태는?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "SaaS와 온프레미스 형태를 모두 지원하며, 학교/지자체형·학원형·가정형 패키지가 있습니다."
-        }
+        '@type': 'Question',
+        name: '도입 형태는?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'SaaS·온프레미스, 학교·지자체·학원·가정형 패키지를 지향합니다.',
+        },
       },
-      {
-        "@type": "Question",
-        "name": "특수교육 성과를 일반 교육에 적용 가능한가요?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "특수교육(행동·주의·학습 로그 활용)에서 검증된 개인화 루프를 일반 교육의 과목 학습으로 확장합니다."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "파트너십 절차는?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "상담 → 요구정의 → 파일럿(시범학교·기관) → 효과 검증 → 정식 전환 순으로 진행합니다."
-        }
-      }
-    ]
+    ],
   }
 
-  const articleLd = {
-    "@context": "https://schema.org",
-    "@type": "TechArticle",
-    "headline": "EduCareLog 기술 아키텍처(요약)",
-    "about": ["AI Digital CareLog", "Personalized Learning", "Education Data Standardization"],
-    "author": { "@type": "Organization", "name": "Dream AI Lab" },
-    "publisher": { "@type": "Organization", "name": "Dream AI Lab" },
-    "inLanguage": "ko",
-    "pageStart": "1",
-    "isAccessibleForFree": true,
-    "proficiencyLevel": "Expert",
-    "keywords": "AI 디지털케어로그, EduCareLog, 개별화 학습, 데이터 표준, 학습 로그, 적응형 학습"
-  }
-
-  const coreValues = [
+  const platformSteps = [
     {
-      title: '📒 학습기록 표준화',
-      description: '과제/평가/참여/메모/미디어',
-      icon: '📒'
+      n: 1,
+      title: '학습·행동 로그 수집',
+      body: '과제·진단·수업 참여·반응 시간·이탈 지점을 같은 스키마로 쌓습니다.',
     },
     {
-      title: '🤖 수준 진단',
-      description: '성취·오개념·주의 패턴 분석',
-      icon: '🤖'
+      n: 2,
+      title: '분석: 성취·오개념·주의 패턴',
+      body: '점수만이 아니라 "어디서 멈췄는지, 무엇을 오해하는지"를 구간 단위로 잡습니다.',
+    },
+    { n: 3, title: '개인화 경로 생성', body: '복습·신규·보정 비율과 단원 순서를 학생마다 다르게 잡습니다.' },
+    {
+      n: 4,
+      title: '실행: 퀴즈·루틴·리포트',
+      body: 'EBS·교과 맵에 맞는 퀴즈, 시험 주 루틴, 학부모·교사 리포트까지 같은 데이터로 뻗습니다.',
     },
     {
-      title: '🎯 맞춤 경로/콘텐츠',
-      description: 'EBS/교육과정 연계 추천',
-      icon: '🎯'
+      n: 5,
+      title: '환류(재학습)',
+      body: '실행 결과가 다시 로그로 들어가 경로가 고쳐집니다. 한 번 켜두면 루프가 돕니다.',
     },
-    {
-      title: '👨‍👩‍👧 부모 커넥트',
-      description: '가정 학습 플랜·주간 리포트',
-      icon: '👨‍👩‍👧'
-    }
   ]
 
-  const features = [
+  const coreFeatures = [
     {
-      title: '진단평가·학습 이력 자동 분석',
-      description: '학생의 학습 이력과 진단평가 결과를 자동으로 분석하여 현재 수준을 파악합니다.',
-      icon: '📊'
+      icon: '📒',
+      title: '통합 학습 기록',
+      result: '학교·학원·집 반응이 한 타임라인에 모이면, "우리 아이 상태"가 말이 아니라 데이터가 됩니다.',
     },
     {
-      title: '수준별 학습 경로 생성',
-      description: '복습:신규:보정 비율을 자동으로 조정하여 개인 맞춤 학습 경로를 생성합니다.',
-      icon: '🛤️'
+      icon: '🎯',
+      title: '구간 단위 약점',
+      result: '"수학 못함"이 아니라 "이 단계 개념에서 반복 정지"로 바뀌어 다음 행동이 정해집니다.',
     },
     {
-      title: 'EBS/교육과정 콘텐츠 추천·퀴즈 자동 생성',
-      description: 'EBS와 교육과정을 연계하여 맞춤 콘텐츠를 추천하고 퀴즈를 자동 생성합니다.',
-      icon: '📚'
+      icon: '🛤️',
+      title: '맞춤 루프',
+      result: '영상·문제·퀴즈가 고정이 아니라, 지난주 반응에 맞춰 이번 주 루틴이 갈립니다.',
     },
     {
-      title: '시험 전 집중 모드',
-      description: '1~2주 루틴으로 시험 전 집중 모드를 제공하며 취약 단원을 보완합니다.',
-      icon: '🎯'
+      icon: '📝',
+      title: '교사 업무 초안',
+      result: '수업 전 준비도·수업 후 피드백 초안·학부모 설명 자료가 같은 로그에서 뽑힙니다.',
     },
-    {
-      title: '수업 전 학습 상태 분석 리포트 / 수업 후 개별 피드백 초안',
-      description: '수업 전 학습 상태를 분석하고, 수업 후 개별 피드백 초안을 자동 생성합니다.',
-      icon: '📝'
-    },
-    {
-      title: '학부모용 대시보드',
-      description: '진도·약점·다음 주 계획을 포함한 학부모용 대시보드를 제공합니다.',
-      icon: '👨‍👩‍👧'
-    }
   ]
 
-  const workflow = [
+  const personaUsage = [
     {
-      step: '01',
-      title: '데이터 입력',
-      description: '수업·과제·진단·참여 데이터를 입력합니다.'
+      who: '부모',
+      pain: '학원비는 나가는데, 아이가 어디까지 이해했는지 모름.',
+      gain: '주간 리포트와 다음 주 집중 포인트를 문장으로 받습니다.',
     },
     {
-      step: '02',
-      title: 'AI 분석',
-      description: 'AI가 수준/패턴/약점을 분석합니다.'
+      who: '교사',
+      pain: '명단은 30명인데, 사람마다 준비·피드백을 다 맞출 시간이 없음.',
+      gain: '수업 전 학생별 준비도와 과제·피드백 초안을 줄여 수업 설계에 시간을 둡니다.',
     },
     {
-      step: '03',
-      title: '경로·콘텐츠 추천',
-      description: '일/주 학습 플랜을 추천합니다.'
+      who: '학원',
+      pain: '강사·반·원생마다 데이터가 흩어져 품질·이탈 원인을 못 잡음.',
+      gain: '원생 단위 진도·약점·몰입 신호를 한 대시보드에서 관리합니다.',
     },
     {
-      step: '04',
-      title: '실행/피드백',
-      description: '루틴·리마인드·리포트를 제공합니다.'
-    }
+      who: '학교·교육청·지자체',
+      pain: '정책은 개별화인데, 현장 데이터는 과제·플랫폼별로 조각남.',
+      gain: '표준 로그 위에서 기초학력·프로그램 효과를 비교·감시할 수 있는 층을 둡니다.',
+    },
   ]
 
-  const targetUsers = [
+  const techBullets = [
     {
-      title: '학교',
-      description: '기초학력 보완, 대규모 반에서의 수준별 수업',
-      icon: '🏫'
+      tag: '표준 스키마 (FHIR급 사고)',
+      why: '병원·복지와 같이 교육도 기관이 바뀌어도 같은 학생 맥락을 이어야 합니다. 표준이 있어야 공독·사학원·가정이 한 명을 공유합니다.',
     },
     {
-      title: '학원',
-      description: '개별화 커리큘럼·피드백 자동화',
-      icon: '📖'
+      tag: '강화학습·환류',
+      why: '추천 한 번이 끝이면 개인화가 아닙니다. 시도→반응→보상 구조로 반응이 나온 개입만 유지합니다.',
     },
     {
-      title: '가정',
-      description: '부모가 확인 가능한 주간 플랜과 리포트',
-      icon: '🏠'
+      tag: '멀티모달·시계열',
+      why: '정답 여부만으로는 부족합니다. 멈춘 시점·재시청·속도가 다음 난이도와 소요 시간을 정합니다.',
     },
-    {
-      title: '취약계층',
-      description: '저비용/무상 모델로 교육격차 완화',
-      icon: '🤝'
-    }
   ]
 
-  const faqs = [
-    { question: '우리는 교육기업인가요?', answer: '아닙니다. 드림에이아이랩은 AI 디지털케어로그 엔진 제공사이며, 학교·학원·지자체·교육사·에듀테크와의 파트너십/임베드를 지향합니다.' },
-    { question: '어떤 연동을 지원하나요?', answer: '기존 LMS/문제은행과의 API·CSV·Webhook, LTI/OneRoster 스타일 연동을 지원하며, EBS/교육과정 맵핑을 제공합니다.' },
-    { question: '개인정보·보안은 어떻게 관리하나요?', answer: '학생·학부모 명시적 동의, 최소 수집, 전송/저장 암호화, RBAC·감사로그, 비식별 통계를 원칙으로 합니다.' },
-    { question: '도입 형태는?', answer: 'SaaS와 온프레미스 형태를 모두 지원하며, 학교/지자체형·학원형·가정형 패키지가 있습니다.' },
-    { question: '특수교육 성과를 일반 교육에 적용 가능한가요?', answer: '특수교육(행동·주의·학습 로그 활용)에서 검증된 개인화 루프를 일반 교육의 과목 학습으로 확장합니다.' },
-    { question: '파트너십 절차는?', answer: '상담 → 요구정의 → 파일럿(시범학교·기관) → 효과 검증 → 정식 전환 순으로 진행합니다.' }
+  const whyNow = [
+    '기초학력 보장·개별화 교육은 이미 정책 방향입니다. 실행은 영상·교재 추가가 아니라 데이터를 한 학생 맥락으로 묶는 일입니다.',
+    '교육청·학교는 동의·표준·분석에 맞춰 "로그 기반"으로 전환해야 합니다. 연결 없이 쌓인 기록은 비교·개입 설계에 쓰이지 못합니다.',
+    '지금 도입하면 학급·학교·지역 단위로 학습 데이터가 쌓입니다. 늦으면 같은 예산으로도 남은 기간에 쌓을 수 있는 데이터가 줄어듭니다.',
+  ]
+
+  const ecosystem = [
+    { name: '자람이', focus: '발달·행동·치료 맥락 데이터', role: '케어로그 검증 1축' },
+    { name: 'EduCareLog', focus: '학습·수업 반응 데이터', role: '교육 도메인 엔진' },
+    { name: '시니어앤라이프', focus: '돌봄·생활 데이터', role: '시니어 인프라' },
+    { name: 'TotalCareLog', focus: '의료·건강 통합', role: '헬스케어 축' },
+  ]
+
+  const outcomes = [
+    {
+      metric: '교사 피드백·리포트 시간',
+      before: '학생마다 문장을 처음부터 작성.',
+      after:
+        '로그에서 초안이 나옵니다. 파일럿 기준 주당 약 3~5시간이던 작성·정리 시간이 같은 업무량에서 줄어드는 사례가 있습니다.',
+      icon: '⏱️',
+    },
+    {
+      metric: '학생 개입 속도',
+      before: '약점을 알아도 다음 활동 배정까지 하루·수일 걸림.',
+      after: '같은 로그에서 퀴즈·루틴·복습 순서가 바로 붙습니다. 헛돌 시간이 줄어듭니다.',
+      icon: '📈',
+    },
+    {
+      metric: '가정의 사교육 선택',
+      before: '감으로 중복 과목·과도한 과제를 쌓기 쉬움.',
+      after: '우선순위가 로그에 보이면 중복에 쓰는 비용을 줄이는 선택이 가능해집니다.',
+      icon: '💰',
+    },
+    {
+      metric: '학교·교육청 의사결정',
+      before: '점수·설문 조각으로 프로그램 효과를 논의.',
+      after: '같은 스키마의 로그·경로·환류로 기초학력 개입을 설명할 근거가 생깁니다.',
+      icon: '🏛️',
+    },
   ]
 
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }}
-      />
-      {/* 1. Hero Section */}
-      <section className="bg-gradient-to-br from-blue-600 to-indigo-600 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              EduCareLog — AI 디지털케어로그 기반 개별화교육 엔진
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto font-semibold text-blue-100">
-              학습·행동 로그 표준화 → AI 수준 진단 → <strong className="text-white">맞춤 경로·콘텐츠·리포트 자동화</strong>
-            </p>
-            
-            {/* 핵심 가치 강조 */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-8 max-w-4xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-                <div>
-                  <p className="text-3xl font-bold text-white mb-1">학습 로그 표준</p>
-                  <p className="text-sm text-blue-100">과제·평가·행동 통합 기록</p>
-                </div>
-                <div>
-                  <p className="text-3xl font-bold text-white mb-1">AI 분석</p>
-                  <p className="text-sm text-blue-100">수준·패턴·약점 진단</p>
-                </div>
-                <div>
-                  <p className="text-3xl font-bold text-white mb-1">실행 자동화</p>
-                  <p className="text-sm text-blue-100">경로·퀴즈·루틴·리포트</p>
-                </div>
-              </div>
-            </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
 
-            <p className="text-lg max-w-2xl mx-auto text-white/80">
-              EBS/교육과정 연계로 누구나, 어디서나, 나에게 맞는 학습을 가능하게 합니다.
+      {/* 1. Hero */}
+      <section className="bg-gradient-to-br from-blue-600 to-indigo-700 text-white py-16 md:py-24">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-blue-100 text-sm font-medium mb-3">DAL AI 디지털케어로그 · 교육 축</p>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">EduCareLog</h1>
+          <p className="text-lg md:text-xl text-blue-50 font-semibold max-w-3xl mx-auto mb-4">
+            학습·행동 로그를 묶는 <span className="text-white">개별화 교육 인프라 엔진</span>
+          </p>
+          <p className="text-white text-sm md:text-base max-w-3xl mx-auto mb-3 font-medium leading-relaxed">
+            학생 한 명의 상태를 데이터로 이해하고, 퀴즈·루틴·리포트까지 같은 줄기로 실행합니다.
+          </p>
+          <p className="text-blue-100 text-sm md:text-base max-w-3xl mx-auto mb-8 leading-relaxed">
+            교사·부모·기관이 <strong className="text-white">같은 학습 로그</strong>를 기준으로 말할 수 있는 층입니다.
+            <span className="block mt-2 text-blue-50/95">
+              정의: 로그 표준화 → 수준·오개념·패턴 정리 → 개인 경로 → 실행(퀴즈·루틴·리포트) → 환류.
+            </span>
+          </p>
+          <div className="flex flex-wrap justify-center gap-2 text-xs">
+            <span className="bg-white/15 px-3 py-1.5 rounded-full">부모 · 교사 · 학원 · 교육청</span>
+            <span className="bg-white/15 px-3 py-1.5 rounded-full">EBS·교과 맵 연계</span>
+            <span className="bg-white/15 px-3 py-1.5 rounded-full">임베드형 엔진</span>
+          </div>
+          <div className="mt-8">
+            <span className="inline-block px-4 py-2 bg-orange-100 text-orange-900 rounded-full text-sm font-semibold">
+              Pilot
+            </span>
+          </div>
+          <p className="text-blue-50 text-sm md:text-base max-w-3xl mx-auto mt-6 leading-relaxed">
+            학생이 어디서 멈췄는지 바로 알 수 있고,
+            <br />
+            그 다음에 무엇을 해야 하는지까지 이어지는 구조입니다.
+          </p>
+        </div>
+      </section>
+
+      {/* 2. 문제 정의 */}
+      <section className="py-14 bg-white border-b border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-4">
+            교육이 개인화되지 못한 이유
+          </h2>
+          <div className="max-w-3xl mx-auto text-sm text-gray-800 space-y-3 mb-10 text-center md:text-left">
+            <p className="font-medium text-gray-900">
+              개인화는 실패한 적이 없습니다. 시스템이 개인화를 막아 온 것입니다.
             </p>
-            <div className="mt-6 flex flex-wrap justify-center gap-2 text-xs">
-              <span className="bg-white/10 border border-white/20 text-white px-3 py-1 rounded-full">개별화 학습</span>
-              <span className="bg-white/10 border border-white/20 text-white px-3 py-1 rounded-full">데이터 표준화</span>
-              <span className="bg-white/10 border border-white/20 text-white px-3 py-1 rounded-full">AI 엔진</span>
+            <p>
+              영상과 교재를 아무리 늘려도 학생 맥락이 한 줄로 이어지지 않으면 개인화는 열리지 않습니다. 원인은 콘텐츠가 아니라{' '}
+              <strong className="text-gray-900">기록 분절 + 실행 단절</strong>입니다.
+            </p>
+            <p>
+              교실 한 칸, 학원 한 반에는 시간 한계가 있습니다. 수작업으로 &quot;전원 개별&quot;을 요구한 구조 자체가 공공 현장에서 붕괴합니다. 그 공백이
+              사교육으로 이동한 것입니다.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-4">
+            <div className="bg-red-50 rounded-xl p-5 border border-red-100">
+              <h3 className="font-bold text-gray-900 text-sm mb-2">실패 1: 기록이 한 학생으로 합쳐지지 않음</h3>
+              <p className="text-sm text-gray-700">
+                진단·과제·학원·앱이 따로 놀면 한 명의 연속 서사가 없습니다. 개인화할 입력이 없습니다.
+              </p>
             </div>
-            <div className="mt-6">
-              <span className="inline-block px-4 py-2 bg-orange-100 text-orange-800 rounded-full text-sm font-semibold">Pilot</span>
+            <div className="bg-red-50 rounded-xl p-5 border border-red-100">
+              <h3 className="font-bold text-gray-900 text-sm mb-2">실패 2: 분석 뒤 실행이 사람 몫으로 남음</h3>
+              <p className="text-sm text-gray-700">
+                오늘의 퀴즈·이번 주 루틴·학부모 설명을 매일 손으로 잇지 못하면, 수업 밖에서 개인화는 멈춥니다.
+              </p>
+            </div>
+            <div className="bg-red-50 rounded-xl p-5 border border-red-100">
+              <h3 className="font-bold text-gray-900 text-sm mb-2">실패 3: 공교육 밖으로 개인화가 빠짐</h3>
+              <p className="text-sm text-gray-700">
+                학교 안에서는 같은 밀도를 만들 구조가 없고, 맞춤 비용만 가정이 떠안습니다.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Introduction Section */}
-      <section className="py-16 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              EduCareLog 소개
-            </h2>
-            <div className="max-w-4xl mx-auto space-y-4 text-lg text-gray-600">
-              <p>
-                EduCareLog는 교사·학생의 학습기록(과제 반응, 진단평가, 주의/집중 패턴 등)을 표준화해 통합 관리합니다.
-              </p>
-              <p>
-                AI가 수준을 진단하고 맞춤 경로·콘텐츠를 추천하며, 시험 전 집중 루틴과 학부모 리포트를 제공합니다.
-              </p>
-              <p>
-                공교육+EBS 연동으로 누구나, 어디서나, 나에게 맞는 학습을 가능하게 합니다.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 2026 Positioning Section */}
-      <section className="py-16 lg:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">2026 시장 포지셔닝 &amp; 제안</h2>
-            <p className="text-lg text-gray-600 max-w-4xl mx-auto">
-              드림에이아이랩은 의료·돌봄 분야에서 검증된 AI 디지털케어로그 엔진을 교육 도메인으로 확장합니다. 우리는 교육 ‘서비스 제공자’가 아니라, 학교·학원·지자체·에듀테크가 즉시 임베드할 수 있는<span className="font-semibold"> 데이터 표준화 + AI 분석 + 실행 자동화</span> 엔진을 제공합니다.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {partnerCTAs.map((p, i) => (
-              <div key={i} className="bg-gray-50 rounded-xl p-6 text-center hover:shadow">
-                <div className="text-4xl mb-3">{p.icon}</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{p.title}</h3>
-                <p className="text-gray-600">{p.description}</p>
-              </div>
-            ))}
-          </div>
-          <div className="text-center mt-10">
-            <Link href="/contact?type=partner" className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-              파트너십 상담 요청
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Core Values Section */}
-      <section className="py-16 lg:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              핵심 가치
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              EduCareLog가 제공하는 4가지 핵심 가치입니다.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {coreValues.map((value, index) => (
-              <div key={index} className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow text-center">
-                <div className="text-4xl mb-4">{value.icon}</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{value.title}</h3>
-                <p className="text-gray-600">{value.description}</p>
+      {/* 3. 사용자 공감 */}
+      <section className="py-14 bg-gray-50 border-b border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-4">누가 왜 막히는지</h2>
+          <p className="text-center text-gray-600 text-sm max-w-2xl mx-auto mb-10">
+            네 역할의 현장 문장을 먼저 맞춥니다.
+          </p>
+          <div className="space-y-4">
+            {personaUsage.map((p) => (
+              <div key={p.who} className="bg-white rounded-xl p-5 border border-gray-100 flex flex-col md:flex-row md:gap-6">
+                <div className="md:w-40 shrink-0">
+                  <p className="font-bold text-indigo-700">{p.who}</p>
+                </div>
+                <div className="flex-1 text-sm">
+                  <p className="text-gray-500 mb-1">막힘</p>
+                  <p className="text-gray-800 mb-3">{p.pain}</p>
+                  <p className="text-gray-500 mb-1">바뀌는 것</p>
+                  <p className="text-gray-900 font-medium">{p.gain}</p>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Paradigm Difference Section */}
-      <section className="py-16 lg:py-24 bg-gradient-to-br from-indigo-50 to-blue-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">왜 다른가 — 로그 기반 개인화 패러다임</h2>
-            <p className="text-lg text-gray-600 max-w-4xl mx-auto">콘텐츠 추천이나 챗봇 지식 제공에 머무르지 않습니다. <span className="font-semibold">표준화된 학습·행동 로그 → AI 분석 → 맞춤 실행(경로/퀴즈/루틴/리포트) → 환류 학습</span>의 폐루프를 엔진 레벨에서 제공합니다.</p>
+      {/* 4. 플랫폼 구조 */}
+      <section className="py-14 bg-white border-b border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-4">EduCareLog 플랫폼 구조</h2>
+          <p className="text-center text-gray-600 text-sm max-w-2xl mx-auto mb-10">
+            다섯 단계는 별도 기능이 아니라 한 루프입니다.
+          </p>
+          <div className="space-y-3">
+            {platformSteps.map((s) => (
+              <div key={s.n} className="flex gap-4 items-start bg-indigo-50/50 rounded-xl p-4 border border-indigo-100">
+                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-indigo-600 text-white text-sm font-bold">
+                  {s.n}
+                </span>
+                <div>
+                  <h3 className="font-bold text-gray-900 text-sm mb-1">{s.title}</h3>
+                  <p className="text-sm text-gray-700">{s.body}</p>
+                </div>
+              </div>
+            ))}
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-2xl p-8 shadow">
-              <h3 className="text-xl font-bold mb-3">기존 AI교육</h3>
-              <ul className="text-gray-600 space-y-2 list-disc pl-5">
-                <li>정답 예측/해설 생성 중심</li>
-                <li>콘텐츠 메타데이터 의존</li>
-                <li>사용자 맥락 로그의 단절</li>
-                <li>실행(수업·루틴·리포트)으로의 연결 약함</li>
+          <div className="mt-10 max-w-3xl mx-auto bg-indigo-900/5 border border-indigo-200 rounded-xl p-5 text-sm text-gray-800">
+            <p className="font-semibold text-indigo-900 mb-2">DAL과의 관계</p>
+            <p className="leading-relaxed">
+              위 다섯 단계는 EduCareLog만의 독자 문법이 아니라 <strong>DAL AI 디지털케어로그</strong>의 교육 축입니다. 같은 구조 위에{' '}
+              <strong>자람이</strong>(발달·행동)·<strong>시니어앤라이프</strong>(돌봄)·<strong>TotalCareLog</strong>(의료)가 이어지며, 도메인만
+              달리합니다.
+            </p>
+          </div>
+          <div className="mt-10 max-w-3xl mx-auto text-sm text-gray-800 leading-relaxed space-y-4">
+            <p>
+              이 구조가 중요한 이유는, 개인화가 &quot;AI가 똑똑해서&quot; 되는 것이 아니라 &quot;같은 기준으로 기록이 누적되고, 그 기록이 다음 행동으로
+              바로 이어지기 때문&quot;입니다.
+            </p>
+            <p>
+              기존에는 &quot;문제를 많이 풀면 언젠가 이해한다&quot;는 방식이었다면, 이 구조에서는 &quot;어디서 막혔는지를 기준으로 바로 다음 학습이
+              이어집니다.&quot;
+            </p>
+            <p>
+              기존에는 문제를 많이 풀어도 학생 상태가 연결되지 않았지만, 이 구조에서는 &quot;어디서 멈췄는지&quot;가 그대로 다음 학습으로 이어지기 때문에
+              수준별 맞춤 학습이 실제로 작동합니다.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 5. 핵심 기능 */}
+      <section className="py-14 bg-gray-50 border-b border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-10">핵심 기능 — 그래서 뭐가 달라지나</h2>
+          <div className="grid sm:grid-cols-2 gap-5">
+            {coreFeatures.map((f) => (
+              <div key={f.title} className="bg-white rounded-xl p-6 border border-gray-100">
+                <div className="text-2xl mb-2">{f.icon}</div>
+                <h3 className="font-bold text-gray-900 mb-2 text-sm">{f.title}</h3>
+                <p className="text-sm text-gray-700 leading-relaxed">{f.result}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 6. 사용자별 사용 방식 */}
+      <section className="py-14 bg-white border-b border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-4">사용자별 사용 방식</h2>
+          <p className="text-center text-gray-600 text-sm max-w-2xl mx-auto mb-10">
+            같은 엔진, 다른 화면. 역할마다 "다음 행동"만 다릅니다.
+          </p>
+          <div className="grid md:grid-cols-2 gap-4 text-sm">
+            <div className="rounded-xl p-5 bg-green-50 border border-green-100">
+              <h3 className="font-bold text-gray-900 mb-2">부모</h3>
+              <p className="text-gray-700">앱에서 주간 요약·이번 주 집중 하나·학교·학원과 겹치는 과목을 줄이는 순서를 봅니다.</p>
+            </div>
+            <div className="rounded-xl p-5 bg-blue-50 border border-blue-100">
+              <h3 className="font-bold text-gray-900 mb-2">교사</h3>
+              <p className="text-gray-700">수업 전 반 준비도, 수업 후 피드백 초안, 학부모 상담용 한 장 요약을 같은 로그에서 꺼냅니다.</p>
+            </div>
+            <div className="rounded-xl p-5 bg-amber-50 border border-amber-100">
+              <h3 className="font-bold text-gray-900 mb-2">학원</h3>
+              <p className="text-gray-700">원생·강사·반 단위로 진도·이탈 신호·난이도 루프를 운영 데이터로 봅니다.</p>
+            </div>
+            <div className="rounded-xl p-5 bg-slate-50 border border-slate-200">
+              <h3 className="font-bold text-gray-900 mb-2">학교·교육청·지자체</h3>
+              <p className="text-gray-700">프로그램·학년·지역 단위로 기초학력 지표와 개입 효과를 같은 스키마로 비교합니다.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 실제 현장 사용 흐름 */}
+      <section className="py-14 bg-stone-50 border-b border-stone-200">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-4">실제 현장에서 어떻게 사용되는가</h2>
+          <p className="text-center text-gray-600 text-sm max-w-2xl mx-auto mb-10">
+            역할마다 화면은 다르지만, 같은 로그 위에서 하루가 이어집니다.
+          </p>
+          <div className="space-y-5 text-sm">
+            <div className="rounded-xl bg-white border border-stone-200 p-5">
+              <h3 className="font-bold text-gray-900 mb-2">1. 부모</h3>
+              <ol className="list-decimal pl-5 text-gray-800 space-y-1">
+                <li>앱에서 주간 학습 요약을 확인합니다.</li>
+                <li>아이 약점 구간(단원·유형)을 글로 확인합니다.</li>
+                <li>이번 주 학습 루틴·집중 과목을 봅니다.</li>
+                <li>겹치는 과목·학원을 줄이거나 순서를 바꿉니다.</li>
+              </ol>
+            </div>
+            <div className="rounded-xl bg-white border border-stone-200 p-5">
+              <h3 className="font-bold text-gray-900 mb-2">2. 학생</h3>
+              <ol className="list-decimal pl-5 text-gray-800 space-y-1">
+                <li>개인 맞춤 퀴즈를 풉니다.</li>
+                <li>정해진 루틴(시간·순서)대로 학습을 진행합니다.</li>
+                <li>반복되는 약점은 경로가 다시 잡히며 보정됩니다.</li>
+              </ol>
+            </div>
+            <div className="rounded-xl bg-white border border-stone-200 p-5">
+              <h3 className="font-bold text-gray-900 mb-2">3. 교사</h3>
+              <ol className="list-decimal pl-5 text-gray-800 space-y-1">
+                <li>수업 전 반 전체 준비도를 봅니다.</li>
+                <li>학생별 상태를 반영해 수업 초점을 잡습니다.</li>
+                <li>수업 후 피드백 초안을 받아 검토·발송합니다.</li>
+              </ol>
+            </div>
+            <div className="rounded-xl bg-white border border-stone-200 p-5">
+              <h3 className="font-bold text-gray-900 mb-2">4. 학원·강사</h3>
+              <ol className="list-decimal pl-5 text-gray-800 space-y-1">
+                <li>반·원생별 학습 상태를 한곳에서 봅니다.</li>
+                <li>이탈 신호·난이도 불일치를 보고 조정합니다.</li>
+                <li>학부모 설명용 요약 자료를 활용합니다.</li>
+              </ol>
+            </div>
+            <div className="rounded-xl bg-white border border-stone-200 p-5">
+              <h3 className="font-bold text-gray-900 mb-2">5. 학교</h3>
+              <ol className="list-decimal pl-5 text-gray-800 space-y-1">
+                <li>특정 학급·과목 단위로 파일럿을 둡니다.</li>
+                <li>기초학력 개입 대상을 추적합니다.</li>
+                <li>수업 전후 변화를 같은 로그로 대조합니다.</li>
+              </ol>
+            </div>
+            <div className="rounded-xl bg-white border border-stone-200 p-5">
+              <h3 className="font-bold text-gray-900 mb-2">6. 교육청·지자체</h3>
+              <ol className="list-decimal pl-5 text-gray-800 space-y-1">
+                <li>학교 간 학습 데이터를 같은 눈금으로 봅니다.</li>
+                <li>정책·사업 효과를 기록 기반으로 분석합니다.</li>
+                <li>프로그램 성과를 관리합니다.</li>
+              </ol>
+            </div>
+          </div>
+          <p className="text-center text-sm font-semibold text-gray-900 max-w-3xl mx-auto mt-10 leading-relaxed">
+            EduCareLog는 분석에서 끝나는 시스템이 아니라, 모든 참여자가 같은 데이터로 행동을 이어가는 구조입니다.
+          </p>
+        </div>
+      </section>
+
+      {/* 7. AI 디지털케어로그 기술 */}
+      <section className="py-14 bg-gray-50 border-b border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-4">AI 디지털케어로그 기술</h2>
+          <p className="text-center text-gray-600 text-sm max-w-2xl mx-auto mb-10">
+            기술 이름이 아니라, 왜 교육에서 통과해야 하는지만 짚습니다.
+          </p>
+          <div className="space-y-4 max-w-3xl mx-auto">
+            {techBullets.map((t) => (
+              <div key={t.tag} className="bg-white rounded-xl p-5 border border-gray-100">
+                <p className="text-xs font-semibold text-indigo-600 mb-2">{t.tag}</p>
+                <p className="text-sm text-gray-800 leading-relaxed">{t.why}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 8. 기존 교육 AI와의 차이 */}
+      <section className="py-14 bg-white border-b border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-4">기존 교육 AI와의 차이</h2>
+          <p className="text-center text-gray-600 text-sm max-w-2xl mx-auto mb-10">
+            문제풀이·챗봇과 같은 레이어가 아닙니다.
+          </p>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="rounded-2xl p-6 bg-gray-50 border border-gray-200">
+              <h3 className="font-bold text-gray-800 mb-4 text-sm">많은 교육 AI</h3>
+              <ul className="text-sm text-gray-700 space-y-2 list-disc pl-5">
+                <li>정답·해설 생성과 대화에 머무름</li>
+                <li>풀이 이벤트만 쌓이고 수업·가정과 이어지지 않음</li>
+                <li>분석 후 오늘의 과제·루틴까지 자동 연결은 약함</li>
               </ul>
             </div>
-            <div className="bg-white rounded-2xl p-8 shadow">
-              <h3 className="text-xl font-bold mb-3">EduCareLog</h3>
-              <ul className="text-gray-600 space-y-2 list-disc pl-5">
-                <li>학습·행동·평가 로그의 표준화/통합</li>
-                <li>AI가 <span className="font-semibold">수준·오개념·주의 패턴</span>을 진단</li>
-                <li>복습:신규:보정 비율 자동 조정(개인화 루프)</li>
-                <li>EBS/교육과정 맵·퀴즈·리포트까지 실행 자동화</li>
+            <div className="rounded-2xl p-6 bg-indigo-50 border border-indigo-200">
+              <h3 className="font-bold text-indigo-900 mb-4 text-sm">EduCareLog</h3>
+              <ul className="text-sm text-gray-800 space-y-2 list-disc pl-5">
+                <li>학습·행동 로그를 표준으로 모음</li>
+                <li>성취·오개념·주의 패턴을 구간으로 잡음</li>
+                <li>경로·퀴즈·루틴·리포트까지 실행 레이어를 붙임</li>
+                <li>결과가 다시 로그로 들어가 경로가 갱신됨</li>
               </ul>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Why Hard Until Now Section */}
-      <section className="py-16 lg:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">왜 지금까지 어려웠나 — 공교육에서 개인화가 막힌 이유</h2>
-            <p className="text-lg text-gray-600 max-w-4xl mx-auto">
-              학교 현장은 반당 인원, 시간표, 기록방식의 단절로 인해 개별화가 구조적으로 어렵습니다. 그 결과 맞춤형 학습은 사교육에서만 부분적으로 구현돼 왔습니다.
+      {/* IFP·개인화 실패 vs EduCareLog (설득 보강) */}
+      <section className="py-14 bg-indigo-50/50 border-b border-indigo-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-4">
+            왜 기존 개인화 교육(IFP)은 실패했고, EduCareLog는 작동하는가
+          </h2>
+          <p className="text-center text-gray-600 text-sm max-w-2xl mx-auto mb-10">
+            과제가 많았던 것이 아니라, <strong className="text-gray-900">데이터·실행·유지</strong> 세 축이 끊겨 있었습니다.
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-8 mb-10">
+            <div className="rounded-2xl p-6 bg-white border border-gray-200 shadow-sm">
+              <h3 className="font-bold text-gray-900 text-sm mb-4">1. 기존 시스템(IFP 포함)의 구조적 한계</h3>
+              <ul className="text-sm text-gray-800 space-y-4">
+                <li>
+                  <p className="font-semibold text-gray-900">데이터가 지속되지 않는다</p>
+                  <p className="mt-1 text-gray-700">
+                    진단·설문·계획이 1회성으로 끝나면 학생의 하루하루 반응이 쌓이지 않습니다. 누적이 없으면 개인화할 재료가 없습니다.{' '}
+                    <strong className="text-gray-900">그래서 현장에서 실패합니다.</strong>
+                  </p>
+                </li>
+                <li>
+                  <p className="font-semibold text-gray-900">분석 이후 실행이 연결되지 않는다</p>
+                  <p className="mt-1 text-gray-700">
+                    방향·추천까지만 나오고, 오늘 퀴즈·이번 주 루틴·학부모 안내는 사람 손으로 다시 잇습니다. 규모가 나지 않습니다.{' '}
+                    <strong className="text-gray-900">그래서 도입 후 멈춥니다.</strong>
+                  </p>
+                </li>
+                <li>
+                  <p className="font-semibold text-gray-900">유지 비용이 교사·부모에게 쏠린다</p>
+                  <p className="mt-1 text-gray-700">
+                    매일 채워 넣을 보고·정리·연락이 사람 몫이면 부담이 커지고 일정이 밀리면 시스템은 공문만 남습니다.{' '}
+                    <strong className="text-gray-900">그래서 지속되지 않습니다.</strong>
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <div className="rounded-2xl p-6 bg-indigo-900/[0.06] border border-indigo-200 shadow-sm">
+              <h3 className="font-bold text-indigo-950 text-sm mb-4">2. EduCareLog 구조 차이 — 왜 끊기지 않는가</h3>
+              <ul className="text-sm text-gray-800 space-y-4">
+                <li>
+                  <p className="font-semibold text-indigo-950">로그 기반 누적 데이터</p>
+                  <p className="mt-1 text-gray-800">
+                    과제·수업 반응·진단이 같은 줄기로 쌓입니다. 다음 주 판단은 “어제 메모”가 아니라 쌓인 기록을 봅니다. 데이터가 끊기지 않습니다.
+                  </p>
+                </li>
+                <li>
+                  <p className="font-semibold text-indigo-950">분석 → 실행 자동 연결</p>
+                  <p className="mt-1 text-gray-800">
+                    약점 구간이 정해지면 경로·퀴즈·루틴·리포트 초안이 같은 엔진에서 이어집니다. 추천에서 멈추지 않습니다.
+                  </p>
+                </li>
+                <li>
+                  <p className="font-semibold text-indigo-950">환류 루프</p>
+                  <p className="mt-1 text-gray-800">
+                    실행 결과가 다시 로그로 들어가 다음 경로가 고쳐집니다. 한 번 짜 둔 계획만 반복하지 않습니다.
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="max-w-3xl mx-auto mb-10 rounded-xl border-2 border-indigo-200 bg-white p-6 text-center">
+            <p className="text-xs font-semibold text-indigo-700 uppercase tracking-wide mb-3">3. 한 줄 비교</p>
+            <div className="grid sm:grid-cols-2 gap-4 text-sm text-left">
+              <div>
+                <p className="text-gray-500 mb-1">기존(IFP·개인화 계획 중심)</p>
+                <p className="font-bold text-gray-900">설계·추천 시스템 — 방향은 잡히고 실행은 사람 몫</p>
+              </div>
+              <div>
+                <p className="text-indigo-600 mb-1">EduCareLog</p>
+                <p className="font-bold text-indigo-950">실행 엔진 — 다음 행동까지 같은 데이터 줄기로 이음</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="max-w-3xl mx-auto">
+            <h3 className="font-bold text-gray-900 text-sm mb-4 text-center">4. 누구에게도 같은 말로</h3>
+            <p className="text-sm text-gray-800 mb-5 text-center leading-relaxed">
+              기존은 방향만 알려 주고 사람이 이어 붙였다면, EduCareLog는 <strong>다음 행동까지 같은 줄에서 이어 줍니다.</strong>
             </p>
+            <div className="grid sm:grid-cols-2 gap-3 text-sm">
+              <div className="rounded-lg bg-white border border-gray-100 p-4">
+                <p className="font-semibold text-gray-900 mb-1">부모</p>
+                <p className="text-gray-700">이번 주에 뭘 하면 되는지, 왜 그 순서인지 리포트가 말로 이어 줍니다.</p>
+              </div>
+              <div className="rounded-lg bg-white border border-gray-100 p-4">
+                <p className="font-semibold text-gray-900 mb-1">교사</p>
+                <p className="text-gray-700">분석 결과가 즉시 과제·피드백 초안으로 붙어 밤샘 정리가 줄어듭니다.</p>
+              </div>
+              <div className="rounded-lg bg-white border border-gray-100 p-4">
+                <p className="font-semibold text-gray-900 mb-1">교육청</p>
+                <p className="text-gray-700">학교마다 다른 조각이 아니라 같은 형식의 기록으로 사업 효과를 말할 수 있습니다.</p>
+              </div>
+              <div className="rounded-lg bg-white border border-gray-100 p-4">
+                <p className="font-semibold text-gray-900 mb-1">학원</p>
+                <p className="text-gray-700">원생 상태가 대시보드에 남아 강사·학부모 설명이 같은 그림을 봅니다.</p>
+              </div>
+            </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-gray-50 rounded-xl p-6">
-              <h3 className="font-bold mb-2">분절된 기록</h3>
-              <p className="text-gray-600">진단·수업·과제·평가·행동 기록이 교사·학부모·플랫폼별로 흩어져 환류가 불가능.</p>
+        </div>
+      </section>
+
+      {/* 9. 교육 산업 변화 */}
+      <section className="py-14 bg-gray-50 border-b border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-4">교육 산업 변화 — 왜 지금인가</h2>
+          <p className="text-center text-sm font-semibold text-indigo-800 max-w-2xl mx-auto mb-8">
+            지금 도입하면 데이터가 쌓입니다. 미루면 같은 출발선에서 늦습니다.
+          </p>
+          <div className="max-w-3xl mx-auto space-y-4">
+            {whyNow.map((line, i) => (
+              <p key={i} className="text-sm text-gray-800 leading-relaxed border-l-4 border-indigo-400 pl-4 bg-white py-3 rounded-r-lg">
+                {line}
+              </p>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 기존 교육 시스템 대비 위치 정리 */}
+      <section className="py-14 bg-white border-b border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-4">
+            기존 교육 시스템과 무엇이 다른가
+          </h2>
+          <p className="text-center text-gray-600 text-sm max-w-2xl mx-auto mb-10">
+            EduCareLog는 콘텐츠 한 종류를 더하는 일이 아니라, <strong className="text-gray-900">교육 인프라 엔진</strong> 자리입니다.
+          </p>
+
+          <div className="space-y-6">
+            <div className="rounded-2xl border border-gray-200 p-5 md:p-6">
+              <h3 className="font-bold text-gray-900 text-sm mb-3">1. 교육 AI 업체 (문제풀이·챗봇형)</h3>
+              <p className="text-xs font-semibold text-gray-500 mb-2">특징</p>
+              <ul className="text-sm text-gray-700 list-disc pl-5 space-y-1 mb-4">
+                <li>문제 풀이·해설·질문 응답이 중심입니다.</li>
+                <li>한 번의 세션에 맞춰져 있고, 주 단위 학습 줄기와는 따로 놉니다.</li>
+                <li>수업 전후·가정까지 학습 흐름이 이어지지 않습니다.</li>
+              </ul>
+              <p className="text-xs font-semibold text-indigo-700 mb-2">EduCareLog</p>
+              <p className="text-sm text-gray-800">
+                학습 전체 로그가 이어지고, 분석 → 실행(퀴즈·루틴·리포트) → 환류까지 같은 줄에서 돕니다.
+              </p>
             </div>
-            <div className="bg-gray-50 rounded-xl p-6">
-              <h3 className="font-bold mb-2">시간·인력 제약</h3>
-              <p className="text-gray-600">대규모 학급에서 학생별 계획·피드백·리포트 작성을 수작업으로 처리하기 어려움.</p>
+
+            <div className="rounded-2xl border border-gray-200 p-5 md:p-6">
+              <h3 className="font-bold text-gray-900 text-sm mb-3">2. AI 디지털교과서</h3>
+              <p className="text-xs font-semibold text-gray-500 mb-2">특징</p>
+              <ul className="text-sm text-gray-700 list-disc pl-5 space-y-1 mb-4">
+                <li>교과 콘텐츠를 디지털로 담습니다.</li>
+                <li>수업 시간 안의 보조 도구에 가깝습니다.</li>
+              </ul>
+              <p className="text-xs font-semibold text-indigo-700 mb-2">EduCareLog</p>
+              <p className="text-sm text-gray-800">
+                교과서 대신 “학생 상태”를 다룹니다. 수업 안·밖·가정·학원 반응을 한 로그로 잇습니다.
+              </p>
             </div>
-            <div className="bg-gray-50 rounded-xl p-6">
-              <h3 className="font-bold mb-2">도구의 한계</h3>
-              <p className="text-gray-600">정답 예측/해설 중심의 AI로는 실행(루틴·경로·리포트)까지 이어지는 폐루프 구현이 어려움.</p>
+
+            <div className="rounded-2xl border border-gray-200 p-5 md:p-6">
+              <h3 className="font-bold text-gray-900 text-sm mb-3">3. 나이스(학교 시스템)</h3>
+              <p className="text-xs font-semibold text-gray-500 mb-2">특징</p>
+              <ul className="text-sm text-gray-700 list-disc pl-5 space-y-1 mb-4">
+                <li>행정·학사·공문·출결·성적 기록 관리가 중심입니다.</li>
+                <li>점수와 이수 여부는 남지만, 학습 반응·오개념은 남기기 어렵습니다.</li>
+              </ul>
+              <p className="text-xs font-semibold text-indigo-700 mb-2">EduCareLog</p>
+              <p className="text-sm text-gray-800">
+                학습 반응·오개념·행동 데이터를 쌓고, 실제 개입(과제·루틴)까지 연결합니다.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-gray-200 p-5 md:p-6">
+              <h3 className="font-bold text-gray-900 text-sm mb-3">4. 사교육·학습지</h3>
+              <p className="text-xs font-semibold text-gray-500 mb-2">특징</p>
+              <ul className="text-sm text-gray-700 list-disc pl-5 space-y-1 mb-4">
+                <li>같은 유형 문제 반복과 강사·교재에 기대는 구조입니다.</li>
+                <li>집·학교 진도와 겹치면 중복이 쌓이기 쉽습니다.</li>
+              </ul>
+              <p className="text-xs font-semibold text-indigo-700 mb-2">EduCareLog</p>
+              <p className="text-sm text-gray-800">
+                로그를 기준으로 개인 경로를 조정하고, 겹치는 반복을 줄입니다. 사람 설명만 받는 구조가 아닙니다.
+              </p>
             </div>
           </div>
-          <div className="mt-10 bg-blue-50 rounded-xl p-6">
-            <h3 className="font-bold text-gray-900 mb-2">EduCareLog가 바꾸는 점</h3>
-            <ul className="text-gray-700 list-disc pl-5 space-y-2">
-              <li>표준화된 학습·행동 로그를 통합 저장 → 학생 단위의 일관된 데이터 맥락 확보</li>
-              <li>AI가 수준·오개념·주의 패턴을 진단 → 개인화 경로·퀴즈·리포트 자동화</li>
-              <li>교사·가정·학교 시스템과 연결 → 사교육 영역의 ‘맞춤’을 교실과 가정으로 확장</li>
+
+          <p className="text-center text-sm md:text-base font-semibold text-gray-900 max-w-3xl mx-auto mt-10 leading-relaxed">
+            기존 시스템은 교육을 &apos;제공&apos;하는 구조라면, EduCareLog는 교육을 &apos;운영&apos;하는 구조입니다.
+          </p>
+        </div>
+      </section>
+
+      {/* UX + 필수성 보강 */}
+      <section className="py-14 bg-gray-50 border-b border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-10">
+            누구나 사용할 수 있는 구조인가, 왜 지금 필요한가
+          </h2>
+
+          <div className="space-y-8 max-w-3xl mx-auto text-sm text-gray-800">
+            <div className="rounded-2xl border border-gray-200 bg-white p-5 md:p-6">
+              <h3 className="font-bold text-gray-900 text-sm mb-3">1. 사용 난이도에 대한 오해</h3>
+              <ul className="list-disc pl-5 space-y-1 mb-4 text-gray-700">
+                <li>교사가 완전히 새로운 시스템을 처음부터 익혀야 하는 구조가 아닙니다.</li>
+                <li>부모가 숫자나 표를 해석할 필요는 없습니다.</li>
+                <li>지금 하시는 학습·수업 흐름 위에 얹히는 형태입니다.</li>
+              </ul>
+              <p className="font-semibold text-indigo-900">
+                복잡한 분석이 아니라, 다음 행동만 보면 되는 구조입니다.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-gray-200 bg-white p-5 md:p-6">
+              <h3 className="font-bold text-gray-900 text-sm mb-3">2. 왜 누구나 사용할 수 있는가</h3>
+              <ul className="list-disc pl-5 space-y-1 mb-4 text-gray-700">
+                <li>역할별로 화면이 나뉩니다. 부모·교사·학원·기관이 각자 다른 화면을 씁니다.</li>
+                <li>로그는 하나의 줄기로 같고, 인터페이스만 역할에 맞게 다릅니다.</li>
+                <li>리포트와 피드백 초안은 자동으로 만들어지고, 확인·다듬기만 하면 됩니다.</li>
+              </ul>
+              <p className="font-semibold text-indigo-900">
+                같은 데이터를 보지만, 각자의 역할에 맞는 행동만 보입니다.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-gray-200 bg-white p-5 md:p-6">
+              <h3 className="font-bold text-gray-900 text-sm mb-3">3. 왜 지금 반드시 필요한가</h3>
+              <ul className="list-disc pl-5 space-y-1 mb-4 text-gray-700">
+                <li>지금 많은 교육 현장은 데이터 없이 운영되고 있습니다.</li>
+                <li>늦게 도입할수록, 데이터가 있는 곳과 없는 곳 사이 격차가 커집니다.</li>
+                <li>정책은 이미 개별화·맞춤 지원 쪽으로 움직이고 있습니다.</li>
+              </ul>
+              <p className="font-semibold text-indigo-900">
+                지금 시작하면 데이터가 쌓이고, 지금 시작하지 않으면 같은 출발선에서 늦게 시작하게 됩니다.
+              </p>
+              <p className="text-gray-800 mt-4 pt-4 border-t border-gray-100 leading-relaxed">
+                이 구조가 없으면 같은 시간을 써도 학생 상태는 남지 않습니다. 결국 다음 학습도 다시 감으로 시작하게 됩니다.
+              </p>
+            </div>
+          </div>
+
+          <p className="text-center text-sm md:text-base font-semibold text-gray-900 max-w-3xl mx-auto mt-10 leading-relaxed">
+            EduCareLog는 새로운 도구가 아니라, 교육이 실제로 작동하게 만드는 최소 조건입니다.
+          </p>
+        </div>
+      </section>
+
+      {/* DAL 교육 비전 · 사회적 의미 */}
+      <section className="py-14 bg-white border-b border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-10">
+            왜 이 인프라가 필요한가 — DAL의 교육 비전
+          </h2>
+
+          <div className="max-w-3xl mx-auto space-y-10 text-sm text-gray-800 leading-relaxed">
+            <div>
+              <p className="font-semibold text-gray-900 mb-3">1. 교육 문제의 본질</p>
+              <p className="mb-3">
+                교육 문제는 교재·영상이 부족해서만 생기지 않습니다. 공교육과 사교육을 가리지 않고,{' '}
+                <strong className="text-gray-900">학생 상태를 같은 기준으로 읽지 못하는 구조</strong>가 핵심입니다.
+              </p>
+              <p>
+                알고 있는 것의 차이가 데이터의 차이로 굳고, 그 데이터의 차이가 다시 기회의 차이로 이어집니다.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-gray-200 bg-gray-50/80 p-5 md:p-6 space-y-4">
+              <p className="font-semibold text-gray-900">2. 줄일 수 있는 것 · 줄이기 어려운 것</p>
+              <div>
+                <p className="text-xs font-semibold text-indigo-800 uppercase tracking-wide mb-2">줄일 수 있는 것</p>
+                <ul className="list-disc pl-5 space-y-1 text-gray-700">
+                  <li>학생 상태에 대한 정보 비대칭</li>
+                  <li>중복 학습·과잉 과제·감에 의존한 사교육 선택</li>
+                  <li>교사·강사의 수작업 부담</li>
+                  <li>기관마다 끊긴 기록 때문에 개입이 늦어지는 일</li>
+                </ul>
+              </div>
+              <div>
+                <p className="text-xs font-semibold text-gray-600 uppercase tracking-wide mb-2">줄이기 어려운 것</p>
+                <ul className="list-disc pl-5 space-y-1 text-gray-700">
+                  <li>소득 격차 자체</li>
+                  <li>지역 인프라 격차 자체</li>
+                  <li>시험 제도나 입시 구조 자체</li>
+                  <li>스타강사 시장이나 커넥션 구조 자체</li>
+                </ul>
+              </div>
+              <p className="font-semibold text-gray-900 pt-2 border-t border-gray-200">
+                EduCareLog는 모든 교육 문제를 한 번에 해결하는 기술이 아니라, 교육이 돌아가려면 필요한{' '}
+                <strong className="text-indigo-900">최소한의 데이터·실행 인프라</strong>를 만드는 쪽에 둡니다.
+              </p>
+            </div>
+
+            <div>
+              <p className="font-semibold text-gray-900 mb-4">3. 누구에게 어떤 이익이 있는가</p>
+              <div className="grid sm:grid-cols-2 gap-4">
+                <div className="rounded-xl border border-gray-100 bg-gray-50/50 p-4">
+                  <p className="font-bold text-gray-900 text-xs mb-2">부모</p>
+                  <ul className="list-disc pl-4 space-y-1 text-gray-700 text-xs sm:text-sm">
+                    <li>아이 상태를 감이 아니라 기록으로 이해</li>
+                    <li>불필요한 사교육 중복을 줄이는 근거</li>
+                    <li>우선순위를 정해 선택할 수 있음</li>
+                  </ul>
+                </div>
+                <div className="rounded-xl border border-gray-100 bg-gray-50/50 p-4">
+                  <p className="font-bold text-gray-900 text-xs mb-2">교사 · 학교</p>
+                  <ul className="list-disc pl-4 space-y-1 text-gray-700 text-xs sm:text-sm">
+                    <li>개별 개입을 현실적으로 쌓을 수 있는 바닥</li>
+                    <li>피드백·과제 설계 수작업 부담 완화</li>
+                    <li>기초학력 개입의 근거를 같은 형식으로 남김</li>
+                  </ul>
+                </div>
+                <div className="rounded-xl border border-gray-100 bg-gray-50/50 p-4">
+                  <p className="font-bold text-gray-900 text-xs mb-2">학원 · 강사</p>
+                  <ul className="list-disc pl-4 space-y-1 text-gray-700 text-xs sm:text-sm">
+                    <li>감각만으로 굴리던 운영을 기록 기반으로 바꿈</li>
+                    <li>학부모에게 같은 그림으로 설명</li>
+                    <li>이탈·난이도를 수치와 흐름으로 맞춤</li>
+                  </ul>
+                </div>
+                <div className="rounded-xl border border-gray-100 bg-gray-50/50 p-4">
+                  <p className="font-bold text-gray-900 text-xs mb-2">중소 학원 · 교육사업자</p>
+                  <ul className="list-disc pl-4 space-y-1 text-gray-700 text-xs sm:text-sm">
+                    <li>대형 브랜드 없이도 운영 데이터로 경쟁할 수 있는 축</li>
+                    <li>콘텐츠 물량이 아니라 운영 정확도로 차별화</li>
+                    <li>먼저 쌓은 로그가 그대로 운영 자산</li>
+                  </ul>
+                </div>
+                <div className="rounded-xl border border-gray-100 bg-gray-50/50 p-4 sm:col-span-2">
+                  <p className="font-bold text-gray-900 text-xs mb-2">교육청 · 공공</p>
+                  <ul className="list-disc pl-4 space-y-1 text-gray-700 text-xs sm:text-sm">
+                    <li>정책을 공문 한 줄이 아니라 실행 기록과 연결</li>
+                    <li>같은 스키마로 학교·사업 단위를 비교</li>
+                    <li>사업 효과를 말로만이 아니라 기록으로 설명</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div className="rounded-xl border border-indigo-100 bg-indigo-50/40 p-5 md:p-6">
+              <p className="font-semibold text-gray-900 mb-3">4. 산업이 바뀌는 축</p>
+              <p className="mb-3 text-gray-800">
+                기존 교육 시장은 콘텐츠·강사·브랜드 중심 경쟁이 강했습니다. EduCareLog가 지향하는 축은 그 위에 얹히는 별도 앱이 아니라,{' '}
+                <strong className="text-gray-900">데이터 기반 운영 능력</strong>으로 경쟁이 옮겨가는 쪽입니다. 중소 학원이나 신생 교육기업도 먼저
+                운영 로그를 쌓을수록 그 차이를 데이터로 설명할 수 있습니다.
+              </p>
+              <p className="font-semibold text-indigo-950 text-sm">
+                앞으로의 경쟁은 누가 더 많은 문제를 갖고 있는가보다가 아니라, 누가 학생 상태를 더 정확히 읽고 더 빠르게 개입할 수 있는가로
+                옮겨갑니다.
+              </p>
+            </div>
+
+            <div className="text-center border-t border-gray-200 pt-8">
+              <p className="text-sm md:text-base text-gray-800 leading-relaxed max-w-3xl mx-auto">
+                EduCareLog는 교육 불평등을 한 번에 없애는 해답은 아닙니다. 하지만 같은 학생을 서로 다른 감으로만 보던 구조를, 같은 데이터로
+                이해하고 행동하게 만드는 출발점이 될 수 있습니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 10. DAL 플랫폼 연결 */}
+      <section className="py-14 bg-white border-b border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-4">DAL 플랫폼 연결</h2>
+          <p className="text-center text-gray-600 text-sm max-w-2xl mx-auto mb-8">
+            네 가지 표면은 다르고, 바닥은 같은 <strong>AI 디지털케어로그</strong>입니다.
+          </p>
+          <div className="grid sm:grid-cols-2 gap-4">
+            {ecosystem.map((e) => (
+              <div key={e.name} className="rounded-xl p-5 border border-gray-200 bg-gray-50/80">
+                <p className="font-bold text-gray-900">{e.name}</p>
+                <p className="text-xs text-indigo-600 mt-1">{e.role}</p>
+                <p className="text-sm text-gray-700 mt-2">{e.focus}</p>
+              </div>
+            ))}
+          </div>
+          <p className="text-center text-sm text-gray-700 mt-8 max-w-2xl mx-auto">
+            발달·학습·돌봄·의료가 같은 결정 로그 철학을 공유할 때, 기관 경계를 넘는 연계와 정책 설계가 가능해집니다.
+          </p>
+        </div>
+      </section>
+
+      {/* 11. 도입 효과 */}
+      <section className="py-14 bg-gray-50 border-b border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-4">도입 효과</h2>
+          <p className="text-center text-gray-600 text-sm max-w-2xl mx-auto mb-10">
+            결과 중심. 세부 수치는 파일럿 조건에 따라 달라집니다.
+          </p>
+          <div className="grid sm:grid-cols-2 gap-4">
+            {outcomes.map((o) => (
+              <div key={o.metric} className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
+                <div className="text-2xl mb-2">{o.icon}</div>
+                <h3 className="font-bold text-gray-900 text-sm mb-3">{o.metric}</h3>
+                <p className="text-xs text-gray-500 mb-1">이전</p>
+                <p className="text-sm text-gray-600 mb-3">{o.before}</p>
+                <p className="text-xs text-indigo-600 mb-1 font-medium">도입 후</p>
+                <p className="text-sm text-gray-800 leading-relaxed">{o.after}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 도입 시나리오 — CTA 직전 */}
+      <section className="py-14 bg-white border-b border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-4">
+            어떻게 시작하는가 — 도입 시나리오
+          </h2>
+          <p className="text-center text-gray-600 text-sm max-w-2xl mx-auto mb-10">
+            공교육·사교육·기업이 같은 엔진을 다른 순서로 얹을 수 있습니다. 아래는 자주 쓰는 확장 순서입니다.
+          </p>
+
+          <div className="space-y-6 mb-10">
+            <div className="rounded-2xl border border-gray-200 p-6 md:p-7 bg-gray-50/80">
+              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
+                <h3 className="font-bold text-gray-900">1단계 — 가정·학원 중심 시작 (데이터 확보)</h3>
+                <span className="text-xs font-semibold text-indigo-700 shrink-0">B2C · 학원 우선</span>
+              </div>
+              <p className="text-sm text-gray-800 mb-3">
+                부모·학생 화면과 학원 운영에서 먼저 씁니다. 과제·수업 반응이 같은 형식으로 쌓이기 시작하면 개인화 루프(진단→실행→환류)가 실제로 돌아갑니다.
+              </p>
+              <p className="text-sm font-semibold text-indigo-900 border-l-4 border-indigo-500 pl-3">
+                처음부터 학교 전체 도입이 필요하지 않습니다.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-indigo-200 p-6 md:p-7 bg-indigo-50/40">
+              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
+                <h3 className="font-bold text-gray-900">2단계 — 학교 파일럿 (부분 도입)</h3>
+                <span className="text-xs font-semibold text-indigo-700 shrink-0">학급 · 과목 단위</span>
+              </div>
+              <p className="text-sm text-gray-800 mb-3">
+                특정 학급이나 과목만 연결합니다. 교사는 리포트·피드백 초안·과제 배정 중 일부를 엔진에 맡기고, 기초학력·맞춤 개입은 작은 단위에서 수치와 사례로 남깁니다.
+              </p>
+              <p className="text-sm font-semibold text-indigo-900 border-l-4 border-indigo-500 pl-3">
+                작게 시작해 효과를 먼저 증명합니다.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-slate-200 p-6 md:p-7 bg-slate-50/70">
+              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
+                <h3 className="font-bold text-gray-900">3단계 — 교육청·공공 확산</h3>
+                <span className="text-xs font-semibold text-slate-700 shrink-0">지역 · 정책 단위</span>
+              </div>
+              <p className="text-sm text-gray-800 mb-3">
+                같은 스키마 위에서 학교 간 기초학력·프로그램 결과를 나란히 둡니다. 문서로만 내려가던 과제를 표준 로그와 실행 기록으로 맞추면, 정책과 현장이 같은 표를 보게 됩니다.
+              </p>
+              <p className="text-sm font-semibold text-slate-900 border-l-4 border-slate-600 pl-3">
+                정책을 말로만 두지 않고 실행 기록으로 돌리는 쪽으로 전환합니다.
+              </p>
+            </div>
+          </div>
+
+          <div className="max-w-3xl mx-auto mb-10 rounded-xl bg-white border border-gray-200 p-5">
+            <h3 className="font-bold text-gray-900 text-sm mb-3">기술 적용 방식 (요약)</h3>
+            <ul className="text-sm text-gray-800 space-y-2 list-disc pl-5">
+              <li>기존 교육청·학교 시스템을 통째로 갈아끼울 필요 없이, 연동·임베드로 단계적으로 얹습니다.</li>
+              <li>API·연동 형태로 맞추면 범위를 넓히거나 줄일 수 있습니다.</li>
+              <li>1단계에서 쌓인 로그가 2·3단계로 그대로 이어지도록 설계합니다.</li>
             </ul>
           </div>
-        </div>
-      </section>
 
-      {/* Real Users Benefits Section */}
-      <section className="py-16 lg:py-24 bg-gradient-to-br from-indigo-50 to-blue-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">누가, 어떻게 혜택을 받나요?</h2>
-            <p className="text-lg text-gray-600 max-w-4xl mx-auto">
-              가정·학교·학원 모두가 실제로 체감하는 변화를 만듭니다.
-            </p>
-          </div>
-
-          {/* 부모 관점 */}
-          <div className="bg-white rounded-2xl p-8 shadow-xl mb-8">
-            <div className="flex items-start gap-4 mb-6">
-              <div className="text-5xl">👨‍👩‍👧</div>
-              <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">부모님의 고민, 이렇게 해결합니다</h3>
-                <p className="text-gray-600">사교육비 부담, 아이의 실제 학습 상황을 모르는 불안감을 해소합니다</p>
-              </div>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-blue-50 rounded-lg p-6">
-                <h4 className="font-bold text-gray-900 mb-3">😰 기존 사교육의 문제점</h4>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li>• 월 50-100만원 학원비 지출에도 아이가 정말 이해했는지 모름</li>
-                  <li>• 학원-학교-가정의 학습이 따로 놀아 비효율적</li>
-                  <li>• 숙제 검사만으로는 아이의 약점을 파악하기 어려움</li>
-                  <li>• 여러 학원 다니느라 아이도 부모도 지침</li>
-                </ul>
-              </div>
-
-              <div className="bg-green-50 rounded-lg p-6">
-                <h4 className="font-bold text-gray-900 mb-3">✅ EduCareLog로 달라지는 점</h4>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li>• <strong>투명한 학습 현황</strong>: 학교·학원·집에서의 학습이 하나로 연결</li>
-                  <li>• <strong>주간 리포트</strong>: 이번 주 배운 내용, 약점, 다음 주 계획을 자동 전송</li>
-                  <li>• <strong>진짜 맞춤형</strong>: AI가 우리 아이만의 오개념·주의 패턴을 분석</li>
-                  <li>• <strong>비용 절감</strong>: 불필요한 중복 학원 대신 집중 관리</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="mt-6 bg-gradient-to-r from-blue-100 to-indigo-100 rounded-lg p-6">
-              <h4 className="font-bold text-gray-900 mb-3">📱 부모님이 확인할 수 있는 정보</h4>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
-                <div>
-                  <p className="font-semibold text-gray-900 mb-2">오늘의 학습</p>
-                  <p className="text-gray-600">학교 수업·학원 과제·집 복습 통합 타임라인</p>
-                </div>
-                <div>
-                  <p className="font-semibold text-gray-900 mb-2">약점 분석</p>
-                  <p className="text-gray-600">"분수 나눗셈 2단계에서 막힘" 등 구체적 진단</p>
-                </div>
-                <div>
-                  <p className="font-semibold text-gray-900 mb-2">추천 학습</p>
-                  <p className="text-gray-600">EBS 영상·문제집 추천 + 예상 소요시간</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* 학교 선생님 관점 */}
-          <div className="bg-white rounded-2xl p-8 shadow-xl mb-8">
-            <div className="flex items-start gap-4 mb-6">
-              <div className="text-5xl">👨‍🏫</div>
-              <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">선생님, 이제 수업에만 집중하세요</h3>
-                <p className="text-gray-600">행정업무 70% 감소, 30명 학생도 개별 관리 가능</p>
-              </div>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-red-50 rounded-lg p-6">
-                <h4 className="font-bold text-gray-900 mb-3">😓 현재 학교 현장의 현실</h4>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li>• 30명 학생의 수준별 수업 준비가 물리적으로 불가능</li>
-                  <li>• 개별 피드백 작성에 주당 5-10시간 소요</li>
-                  <li>• 기초학력 미달 학생 파악은 되지만 대응할 시간 없음</li>
-                  <li>• 학부모 상담 시 구체적 데이터 부족</li>
-                  <li>• 기존 교육청 시스템은 단순 성적 기록만 가능</li>
-                </ul>
-              </div>
-
-              <div className="bg-green-50 rounded-lg p-6">
-                <h4 className="font-bold text-gray-900 mb-3">✅ 선생님이 달라지는 일상</h4>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li>• <strong>자동 수준 진단</strong>: 수업 전 AI가 학생별 준비도 분석</li>
-                  <li>• <strong>맞춤 과제 생성</strong>: 클릭 한 번으로 수준별 문제 자동 배정</li>
-                  <li>• <strong>피드백 초안</strong>: AI가 작성한 초안을 검토만 하면 완성</li>
-                  <li>• <strong>학부모 리포트</strong>: 주간 학습 현황 자동 발송</li>
-                  <li>• <strong>기존 시스템 연동</strong>: NEIS·교육청 플랫폼과 데이터 동기화</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="mt-6 bg-gradient-to-r from-green-100 to-teal-100 rounded-lg p-6">
-              <h4 className="font-bold text-gray-900 mb-3">⏰ 시간 절약 효과 (파일럿 실측 데이터)</h4>
-              <p className="text-xs text-gray-600 mb-4">※ 2024년 특수학급 교사 10명 대상, 8주 측정 평균값</p>
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-center">
-                <div>
-                  <p className="text-3xl font-bold text-green-600">-5시간</p>
-                  <p className="text-sm text-gray-600">주간 피드백 작성</p>
-                </div>
-                <div>
-                  <p className="text-3xl font-bold text-green-600">-3시간</p>
-                  <p className="text-sm text-gray-600">수준별 과제 준비</p>
-                </div>
-                <div>
-                  <p className="text-3xl font-bold text-green-600">-2시간</p>
-                  <p className="text-sm text-gray-600">학부모 상담 준비</p>
-                </div>
-                <div>
-                  <p className="text-3xl font-bold text-green-600">+10시간</p>
-                  <p className="text-sm text-gray-600">수업 연구 시간 확보</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* 학원 관점 */}
-          <div className="bg-white rounded-2xl p-8 shadow-xl">
-            <div className="flex items-start gap-4 mb-6">
-              <div className="text-5xl">🏫</div>
-              <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">학원, 진짜 경쟁력은 데이터입니다</h3>
-                <p className="text-gray-600">대형 프랜차이즈도 따라올 수 없는 개인 맞춤 관리</p>
-              </div>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-              <div className="bg-yellow-50 rounded-lg p-6">
-                <h4 className="font-bold text-gray-900 mb-3">💰 학원의 고민</h4>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li>• 원생마다 다른 학교 진도·수준을 어떻게 맞출까?</li>
-                  <li>• 학부모 신뢰를 얻으려면 가시적 성과가 필요한데...</li>
-                  <li>• 선생님마다 티칭 스타일이 달라 품질 관리 어려움</li>
-                  <li>• 중도 이탈 학생이 많은 이유를 모르겠음</li>
-                </ul>
-              </div>
-
-              <div className="bg-green-50 rounded-lg p-6">
-                <h4 className="font-bold text-gray-900 mb-3">✅ 차별화 포인트</h4>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li>• <strong>학교 연계</strong>: 학생의 학교 진도·약점을 실시간 파악</li>
-                  <li>• <strong>성과 가시화</strong>: 입학 전후 비교 데이터로 학부모 신뢰 확보</li>
-                  <li>• <strong>표준화 관리</strong>: 모든 선생님이 동일한 분석 도구 사용</li>
-                  <li>• <strong>이탈 방지</strong>: 학습 몰입도 저하를 조기 감지</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="bg-gradient-to-r from-purple-100 to-pink-100 rounded-lg p-6">
-              <h4 className="font-bold text-gray-900 mb-3">📊 학원장이 확인하는 대시보드</h4>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
-                <div>
-                  <p className="font-semibold text-gray-900 mb-2">원생 현황</p>
-                  <p className="text-gray-600">수준별 분포·진도율·주의 학생 알림</p>
-                </div>
-                <div>
-                  <p className="font-semibold text-gray-900 mb-2">성과 분석</p>
-                  <p className="text-gray-600">입학 후 N개월 성적 변화 통계</p>
-                </div>
-                <div>
-                  <p className="font-semibold text-gray-900 mb-2">강사 관리</p>
-                  <p className="text-gray-600">강사별 학생 만족도·학습 효과</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* How It Works for Struggling Students */}
-      <section className="py-16 lg:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">공부 어려운 아이들, 어떻게 도울까요?</h2>
-            <p className="text-lg text-gray-600 max-w-4xl mx-auto">
-              "우리 아이는 수학을 못해요"가 아니라 "분수 2단계 약분에서 막혔네요"로 바뀝니다
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-            <div className="bg-red-50 rounded-xl p-6 border-l-4 border-red-500">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">❌ 기존 방식의 한계</h3>
-              <ul className="space-y-3 text-gray-600">
-                <li>
-                  <strong className="text-gray-900">문제:</strong> "수학 40점" → 어디서 틀렸는지 모름<br/>
-                  <span className="text-sm text-gray-500">해결책: 무작정 문제집 더 풀기 (비효율)</span>
-                </li>
-                <li>
-                  <strong className="text-gray-900">문제:</strong> 선생님이 모든 학생 약점을 파악할 시간 없음<br/>
-                  <span className="text-sm text-gray-500">결과: 상위권만 관리, 하위권 방치</span>
-                </li>
-                <li>
-                  <strong className="text-gray-900">문제:</strong> 부모가 가르치려 해도 교육과정 모름<br/>
-                  <span className="text-sm text-gray-500">갈등: "엄마가 가르치면 더 싸운다"</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-green-50 rounded-xl p-6 border-l-4 border-green-500">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">✅ EduCareLog의 접근</h3>
-              <ul className="space-y-3 text-gray-600">
-                <li>
-                  <strong className="text-gray-900">1. 정밀 진단:</strong><br/>
-                  "분수 나눗셈 2단계(약분)에서 70% 오답" → 정확한 약점 파악
-                </li>
-                <li>
-                  <strong className="text-gray-900">2. 맞춤 학습 경로:</strong><br/>
-                  약분 개념 영상(EBS 5분) → 연습문제 3개 → 확인 퀴즈
-                </li>
-                <li>
-                  <strong className="text-gray-900">3. 자동 조절:</strong><br/>
-                  이해도에 따라 복습:신규 비율을 60:40 → 40:60으로 변경
-                </li>
-                <li>
-                  <strong className="text-gray-900">4. 부모 가이드:</strong><br/>
-                  "이번 주는 약분 집중. 매일 10분씩 이 문제만" (부담 없는 가이드)
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-2xl p-8">
-            <h3 className="text-2xl font-bold mb-4">📈 파일럿 사례: 수학 40점 → 78점 (4개월)</h3>
-            <p className="text-blue-100 text-sm mb-4">※ 2024년 특수학급 파일럿 프로그램 실제 데이터</p>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-              <div>
-                <p className="text-blue-100 text-sm mb-2">1개월차</p>
-                <p className="text-2xl font-bold">기초 다지기</p>
-                <p className="text-sm text-blue-200">누락된 선수 개념 보완</p>
-              </div>
-              <div>
-                <p className="text-blue-100 text-sm mb-2">2개월차</p>
-                <p className="text-2xl font-bold">정확도 향상</p>
-                <p className="text-sm text-blue-200">오개념 패턴 집중 교정</p>
-              </div>
-              <div>
-                <p className="text-blue-100 text-sm mb-2">3개월차</p>
-                <p className="text-2xl font-bold">속도 증가</p>
-                <p className="text-sm text-blue-200">유형별 반복으로 자동화</p>
-              </div>
-              <div>
-                <p className="text-blue-100 text-sm mb-2">4개월차</p>
-                <p className="text-2xl font-bold">자신감 회복</p>
-                <p className="text-sm text-blue-200">"나도 할 수 있다" 경험</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Exam Mode Section */}
-      <section className="py-16 lg:py-24 bg-gradient-to-br from-purple-50 to-pink-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">시험 강화 모드: 수능까지 대비</h2>
-            <p className="text-lg text-gray-600 max-w-4xl mx-auto">
-              EBS만이 아닙니다. 내신·모의고사·수능 전 과정을 커버하는 시험 특화 모드
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <div className="bg-white rounded-xl p-6 shadow-lg">
-              <div className="text-3xl mb-3">📝</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">내신 집중 모드</h3>
-              <p className="text-gray-600 mb-4">시험 2주 전부터 자동 활성화</p>
-              <ul className="text-sm text-gray-600 space-y-2">
-                <li>• 학교 진도와 연계된 예상 문제</li>
-                <li>• 취약 단원 우선 복습</li>
-                <li>• 선생님 출제 스타일 분석 (옵션)</li>
-                <li>• 시험 전날 마무리 체크리스트</li>
-              </ul>
-            </div>
-
-            <div className="bg-white rounded-xl p-6 shadow-lg">
-              <div className="text-3xl mb-3">🎯</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">모의고사 대비</h3>
-              <p className="text-gray-600 mb-4">3월·6월·9월 모평 맞춤 훈련</p>
-              <ul className="text-sm text-gray-600 space-y-2">
-                <li>• 최근 3개년 기출 문항 분석</li>
-                <li>• 취약 유형 집중 훈련</li>
-                <li>• 시간 배분 전략 코칭</li>
-                <li>• 오답노트 자동 생성</li>
-              </ul>
-            </div>
-
-            <div className="bg-white rounded-xl p-6 shadow-lg">
-              <div className="text-3xl mb-3">🏆</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">수능 완성 모드</h3>
-              <p className="text-gray-600 mb-4">고3 전용 장기 플랜</p>
-              <ul className="text-sm text-gray-600 space-y-2">
-                <li>• 전 과정 개념 재점검 (6개월)</li>
-                <li>• EBS 연계 교재 통합 학습</li>
-                <li>• 실전 모의고사 매주 풀이</li>
-                <li>• 컨디션 관리 알림</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="bg-white rounded-xl p-8 shadow-lg">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">📚 학습 자료 범위 (EBS 이상)</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <div className="text-center p-4 bg-blue-50 rounded-lg">
-                <p className="font-bold text-gray-900">EBS 콘텐츠</p>
-                <p className="text-sm text-gray-600">수능특강·완성<br/>만점마무리</p>
-              </div>
-              <div className="text-center p-4 bg-green-50 rounded-lg">
-                <p className="font-bold text-gray-900">교과서 연계</p>
-                <p className="text-sm text-gray-600">검인정 교과서<br/>단원별 문제</p>
-              </div>
-              <div className="text-center p-4 bg-purple-50 rounded-lg">
-                <p className="font-bold text-gray-900">기출문제</p>
-                <p className="text-sm text-gray-600">10개년 수능<br/>모의평가</p>
-              </div>
-              <div className="text-center p-4 bg-orange-50 rounded-lg">
-                <p className="font-bold text-gray-900">AI 생성 문제</p>
-                <p className="text-sm text-gray-600">개인 맞춤<br/>난이도 조절</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Different from Other AI Section */}
-      <section className="py-16 lg:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">기존 교육 AI와 완전히 다른 이유</h2>
-            <p className="text-lg text-gray-600 max-w-4xl mx-auto">
-              단순 문제 풀이 도우미가 아닙니다. 학습 전 과정을 관리하는 통합 시스템입니다
-            </p>
-          </div>
-
-          <div className="overflow-x-auto mb-8">
-            <table className="w-full bg-white rounded-xl shadow-lg overflow-hidden">
-              <thead className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
-                <tr>
-                  <th className="px-6 py-4 text-left">구분</th>
-                  <th className="px-6 py-4 text-left">기존 교육 AI</th>
-                  <th className="px-6 py-4 text-left">EduCareLog</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="border-b">
-                  <td className="px-6 py-4 font-semibold">핵심 기능</td>
-                  <td className="px-6 py-4 text-gray-600">문제 정답 예측·해설 생성</td>
-                  <td className="px-6 py-4 text-blue-600 font-semibold">학습 전 과정 로그 분석 + 실행 자동화</td>
-                </tr>
-                <tr className="border-b bg-gray-50">
-                  <td className="px-6 py-4 font-semibold">데이터 수집</td>
-                  <td className="px-6 py-4 text-gray-600">문제 풀이 결과만</td>
-                  <td className="px-6 py-4 text-blue-600">학습·행동·주의·시간·환경 통합</td>
-                </tr>
-                <tr className="border-b">
-                  <td className="px-6 py-4 font-semibold">개인화 방식</td>
-                  <td className="px-6 py-4 text-gray-600">콘텐츠 메타데이터 기반 추천</td>
-                  <td className="px-6 py-4 text-blue-600">실제 학습 반응 패턴 기반 적응</td>
-                </tr>
-                <tr className="border-b bg-gray-50">
-                  <td className="px-6 py-4 font-semibold">교사 역할</td>
-                  <td className="px-6 py-4 text-gray-600">AI가 교사 대체 시도</td>
-                  <td className="px-6 py-4 text-blue-600">AI가 교사 업무 지원 (협업)</td>
-                </tr>
-                <tr className="border-b">
-                  <td className="px-6 py-4 font-semibold">학교 연계</td>
-                  <td className="px-6 py-4 text-gray-600">없음 (학원·가정용)</td>
-                  <td className="px-6 py-4 text-blue-600">학교-학원-가정 통합</td>
-                </tr>
-                <tr className="border-b bg-gray-50">
-                  <td className="px-6 py-4 font-semibold">부모 가시성</td>
-                  <td className="px-6 py-4 text-gray-600">단순 학습 시간 통계</td>
-                  <td className="px-6 py-4 text-blue-600">주간 리포트 + 약점 분석 + 다음 주 계획</td>
-                </tr>
-                <tr className="border-b">
-                  <td className="px-6 py-4 font-semibold">실행 연결</td>
-                  <td className="px-6 py-4 text-gray-600">분석까지만 (실행은 수동)</td>
-                  <td className="px-6 py-4 text-blue-600">진단→경로→퀴즈→루틴→리포트 자동화</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="px-6 py-4 font-semibold">기술 기반</td>
-                  <td className="px-6 py-4 text-gray-600">LLM 문제 풀이</td>
-                  <td className="px-6 py-4 text-blue-600">의료 검증 케어로그 기술 + 교육 적용</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <div className="bg-gradient-to-r from-indigo-100 to-purple-100 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">🧠 의료 케어로그 기술이 교육에서 가능한 이유</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <h4 className="font-bold text-gray-900 mb-3">의료 분야 검증 (2022~)</h4>
-                <ul className="text-sm text-gray-600 space-y-2">
-                  <li>• 발달장애 골든타임·맞춤형치료 자동화 시스템</li>
-                  <li>• 개인별 반응 패턴 추적 및 실시간 개입 권고</li>
-                  <li>• 다학제 협력 (의사·치료사·가족) 워크플로우</li>
-                  <li>• 자람이 플랫폼에서 실전 검증 완료</li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-bold text-gray-900 mb-3">교육 적용 (2024~)</h4>
-                <ul className="text-sm text-gray-600 space-y-2">
-                  <li>• 학습자별 오개념·주의 패턴 분석</li>
-                  <li>• 개인별 학습 속도·스타일 적응</li>
-                  <li>• 교사·학부모·학원 협력 시스템</li>
-                  <li>• 자동 경로 생성·피드백·리포트</li>
-                </ul>
-              </div>
-            </div>
-            <div className="mt-6 bg-white rounded-lg p-4">
-              <p className="text-gray-700 text-center">
-                <strong className="text-indigo-600">핵심 차별점:</strong> 단순 콘텐츠 추천이 아닌, 
-                <strong> 개인의 실제 반응 데이터를 장기 추적</strong>하여 진단→실행→환류의 폐루프를 구현
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Proprietary Technology Section */}
-      <section className="py-16 lg:py-24 bg-gradient-to-br from-blue-50 to-indigo-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">드림에이아이랩의 차별화된 기술력</h2>
-            <p className="text-lg text-gray-600 max-w-4xl mx-auto">
-              AI 디지털케어로그는 의료 현장에서 검증된 드림에이아이랩의 <strong>독자 기술</strong>입니다
-            </p>
-            <div className="mt-4 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-4 max-w-5xl mx-auto">
-              <p className="text-sm font-semibold text-gray-900 mb-2">검증된 독자 기술 (표준·폐루프·다주체 협업)</p>
-              <div className="flex flex-wrap justify-center gap-3 text-xs">
-                <span className="bg-white px-3 py-1 rounded-full text-gray-700 font-medium">
-                  ✓ 행동·학습 통합 데이터 분석 엔진
-                </span>
-                <span className="bg-white px-3 py-1 rounded-full text-gray-700 font-medium">
-                  ✓ 의료급 표준 스키마 설계
-                </span>
-                <span className="bg-white px-3 py-1 rounded-full text-gray-700 font-medium">
-                  ✓ 실시간 환류 파이프라인
-                </span>
-                <span className="bg-white px-3 py-1 rounded-full text-gray-700 font-medium">
-                  ✓ 다주체 협력 워크플로우
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-            {/* 기술 핵심 */}
-            <div className="bg-white rounded-2xl p-8 shadow-xl">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="text-4xl">⚡</div>
-                <h3 className="text-2xl font-bold text-gray-900">독자 기술 핵심</h3>
-              </div>
-              
-              <div className="space-y-6">
-                <div className="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-lg p-4 mb-4 border-l-4 border-yellow-500">
-                  <p className="text-xs font-bold text-yellow-800 mb-1">검증 포인트</p>
-                  <p className="text-sm text-gray-700">
-                    <strong>AI 디지털케어로그</strong> — 의료·교육 통합 행동-학습 데이터 표준 스키마 및 
-                    실시간 환류(폐루프) 파이프라인. 자람이 파일럿 검증 후 교육 도메인 확장.
-                  </p>
-                </div>
-
-                <div>
-                  <h4 className="font-bold text-indigo-600 mb-2">기술 개발 과정</h4>
-                  <ul className="text-sm text-gray-600 space-y-2">
-                    <li>
-                      <strong>2022:</strong> 자람이 플랫폼 개발 — 발달장애 아동 행동·치료 로그 표준화, 
-                      <strong className="text-indigo-600">초개인화 AI 엔진</strong> 구축
-                    </li>
-                    <li>
-                      <strong>2022~2024:</strong> 의료 현장 검증 — 
-                      <strong>골든타임 실시간 알림</strong>, 
-                      <strong>개별 맞춤 치료 계획</strong> 자동 생성 및 효과 추적
-                    </li>
-                    <li>
-                      <strong>2024:</strong> 특수학급 교사들의 피드백 
-                      <em>"이 시스템이면 일반 학생도 충분히 관리 가능하겠다"</em> → EduCareLog 확장 개발 결정
-                    </li>
-                    <li>
-                      <strong>2025~2026:</strong> 일반 교육 적용 — 학교·학원·가정 통합 파일럿 진행
-                    </li>
-                  </ul>
-                </div>
-
-                <div>
-                  <h4 className="font-bold text-blue-600 mb-2">1. 다차원 데이터 통합 분석 엔진</h4>
-                  <p className="text-gray-600 text-sm mb-2">
-                    학습 결과(정답/오답)뿐 아니라 <strong>행동 로그(클릭·이탈·재시청), 주의 패턴(집중시간·중단지점), 
-                    환경 변수(시간대·요일·장소)</strong>를 단일 스키마로 통합 분석
-                  </p>
-                  <div className="bg-blue-50 rounded-lg p-3 text-xs text-gray-600">
-                    <strong className="text-blue-700">독자 기술:</strong> 기존 교육 AI는 문제 풀이 결과만 분석. 
-                    우리는 의료급 정밀도로 학습자의 <strong>행동·주의·정서</strong>까지 추적하는 멀티모달 분석 구현
-                  </div>
-                </div>
-
-                <div>
-                  <h4 className="font-bold text-blue-600 mb-2">2. 의료급 표준 스키마 설계</h4>
-                  <p className="text-gray-600 text-sm mb-2">
-                    발달장애 치료 현장에서 검증된 <strong>FHIR 수준의 표준 데이터 구조</strong>를 교육에 적용
-                  </p>
-                  <div className="bg-blue-50 rounded-lg p-3 text-xs text-gray-600">
-                    <strong className="text-blue-700">독자 기술:</strong> 의료 분야의 
-                    <strong>HL7 FHIR 표준</strong>에 준하는 엄격한 스키마 설계로 
-                    학교-학원-가정 간 데이터 호환성 보장
-                  </div>
-                </div>
-
-                <div>
-                  <h4 className="font-bold text-blue-600 mb-2">3. 실시간 환류 파이프라인</h4>
-                  <p className="text-gray-600 text-sm mb-2">
-                    <strong>AI 제안 → 학생 반응 → 효과 측정 → 모델 재조정</strong>이 
-                    실시간(수분 내)으로 작동하는 폐루프 시스템
-                  </p>
-                  <div className="bg-blue-50 rounded-lg p-3 text-sm text-gray-700">
-                    <p className="mb-1"><strong>실제 작동 예시:</strong></p>
-                    <p className="mb-1 text-xs">• 10:00 — AI가 "분수 약분 영상 10분" 추천</p>
-                    <p className="mb-1 text-xs">• 10:05 — 학생이 5분만 보고 종료 + 퀴즈 3문제 중 1개 정답</p>
-                    <p className="mb-1 text-xs">• 10:06 — AI가 "영상 너무 길다" 판단, 다음엔 3분 짧은 영상 + 연습문제 먼저 제시</p>
-                    <p className="text-xs">• 2주 후 — 약분 정답률 80% 달성, 이 패턴을 다른 단원에도 적용</p>
-                  </div>
-                  <div className="bg-blue-50 rounded-lg p-3 text-xs text-gray-600 mt-2">
-                    <strong className="text-blue-700">독자 기술:</strong> 기존 AI는 주/월 단위 배치 학습. 
-                    우리는 <strong>강화학습 기반 실시간 재학습</strong>으로 즉각 적응
-                  </div>
-                </div>
-
-                <div>
-                  <h4 className="font-bold text-blue-600 mb-2">4. 강화학습 기반 집단 지능</h4>
-                  <p className="text-gray-600 text-sm mb-2">
-                    <strong>사용자가 많아질수록 더욱 똑똑해지는</strong> 네트워크 효과
-                  </p>
-                  <ul className="text-sm text-gray-600 space-y-1">
-                    <li>• <strong>집단학습:</strong> 수천 명의 학습 패턴에서 최적 경로 자동 발견</li>
-                    <li>• <strong>강화학습:</strong> 효과적인 개입에 높은 보상, 비효율적 개입은 자동 배제</li>
-                    <li>• <strong>전이학습:</strong> A학생에게 효과적이던 방법을 B학생에게 시도</li>
-                  </ul>
-                  <div className="bg-blue-50 rounded-lg p-3 text-xs text-gray-600 mt-2">
-                    <strong className="text-blue-700">차별점:</strong> 
-                    <strong>의료급 강화학습 파이프라인</strong> (치료 효과 추적 → 보상 모델 → 정책 최적화)을 교육 도메인에 적용. 챗봇·콘텐츠 추천이 아닌 폐루프 실행 자동화.
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* 개발자와 기술 배경 */}
-            <div className="bg-white rounded-2xl p-8 shadow-xl">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="text-4xl">�‍💻</div>
-                <h3 className="text-2xl font-bold text-gray-900">기술 개발 배경</h3>
-              </div>
-
-              <div className="space-y-6">
-                <div className="bg-gradient-to-r from-indigo-50 to-blue-50 rounded-lg p-4">
-                  <h4 className="font-bold text-indigo-600 mb-2">정해성 CTO (AI 연구자)</h4>
-                  <p className="text-sm text-gray-700 mb-3">
-                    <strong>AI 디지털케어로그 창시자</strong> — 발달장애 아동 치료 현장에서 
-                    <strong className="text-indigo-600"> 골든타임과 맞춤형치료의 한계</strong>를 직접 
-                    목격하고 <strong>특수교사 이지수·이지훈</strong>과 함께 기술 개발 결심
-                  </p>
-                  <div className="bg-white rounded p-3 text-sm text-gray-600">
-                    <p className="mb-2"><strong className="text-gray-900">문제 인식:</strong></p>
-                    <p className="mb-1">• 발달장애 치료는 골든타임(조기개입)이 핵심</p>
-                    <p className="mb-1">• 하지만 치료사 부족, 비용 문제로 실무에서 실현 불가</p>
-                    <p className="mb-1">• 맞춤형 치료 계획을 세워도 실행·추적이 어려움</p>
-                  </div>
-                </div>
-
-                <div className="bg-red-50 border-l-4 border-red-500 rounded-lg p-4">
-                  <h4 className="font-bold text-red-700 mb-2">🎯 왜 발달장애에서 시작했는가</h4>
-                  <p className="text-sm text-gray-700 mb-3">
-                    <strong>특수교육은 일반교육보다 난이도가 비교할 수 없이 높습니다</strong>
-                  </p>
-                  <div className="space-y-2 text-xs text-gray-600">
-                    <div className="bg-white rounded p-2">
-                      <p className="font-semibold text-gray-900 mb-1">특수교육의 난이도</p>
-                      <ul className="space-y-1">
-                        <li>• 학생마다 <strong>완전히 다른</strong> 장애 유형·정도 (자폐·ADHD·지적장애 등)</li>
-                        <li>• 같은 내용도 <strong>개별 맞춤 방식</strong> 필요 (시각·청각·촉각 선호도 다름)</li>
-                        <li>• <strong>돌발 행동·감각 과민</strong> 실시간 대응 (일반 학생보다 10배 변수)</li>
-                        <li>• 진도보다 <strong>개별 발달 단계</strong> 추적이 우선</li>
-                      </ul>
-                    </div>
-                    <div className="bg-white rounded p-2">
-                      <p className="font-semibold text-gray-900 mb-1">특수교육 맞춤형의 실제</p>
-                      <ul className="space-y-1">
-                        <li>• A학생: 소리에 민감 → 조용한 환경 + 그림카드 중심</li>
-                        <li>• B학생: 주의 3분 유지 → 3분 단위 활동 분절 + 보상 빈도 증가</li>
-                        <li>• C학생: 특정 주제 집착 → 관심사로 다른 개념 연결</li>
-                        <li>• 매일 상태 변화 → 오늘 효과적이던 방법이 내일은 안 통함</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-green-50 border-l-4 border-green-500 rounded-lg p-4">
-                  <h4 className="font-bold text-green-700 mb-2">✅ 일반 교육은 왜 더 쉬운가</h4>
-                  <p className="text-sm text-gray-700 mb-2">
-                    <strong>특수교육에서 성공했다면, 일반교육은 충분히 가능합니다</strong>
-                  </p>
-                  <div className="space-y-2 text-xs text-gray-600">
-                    <div className="bg-white rounded p-2">
-                      <p className="font-semibold text-gray-900 mb-1">일반교육의 상대적 단순함</p>
-                      <ul className="space-y-1">
-                        <li>• 학생 간 차이가 <strong>수준·속도 차이</strong>로 대부분 설명됨</li>
-                        <li>• 표준 교육과정이 있어 <strong>목표가 명확</strong>함</li>
-                        <li>• 돌발 변수가 특수교육 대비 <strong>1/10 수준</strong></li>
-                        <li>• 대부분 학생이 <strong>시각·청각 일반 입력</strong>에 반응</li>
-                      </ul>
-                    </div>
-                    <div className="bg-gradient-to-r from-green-100 to-teal-100 rounded p-3 mt-2">
-                      <p className="text-sm text-gray-800">
-                        <strong className="text-green-700">결론:</strong> 
-                        발달장애 아동의 <strong>초개인화·실시간 적응</strong>이 가능했다면, 
-                        일반 학생의 "수학 약한 아이"나 "주의력 짧은 아이" 대응은 
-                        <strong className="text-green-700"> 기술적으로 훨씬 단순</strong>합니다
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-yellow-50 border-l-4 border-yellow-500 rounded p-4">
-                  <p className="text-sm text-gray-700">
-                    <strong className="text-yellow-700">개발 철학:</strong><br/>
-                    "교육 격차의 본질은 '학습량'이 아니라 '개인 맞춤 관찰'입니다. 
-                    고가 과외가 효과적인 이유는 1:1로 아이의 반응을 실시간 관찰하기 때문입니다. 
-                    발달장애 아동에게 필요한 <strong>초정밀 관찰·실시간 적응 기술</strong>을 
-                    일반 교육에 적용하면, 모든 아이가 맞춤형 교육을 받을 수 있습니다."
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* 독자 기술 요약 */}
-          <div className="bg-white rounded-2xl p-8 shadow-xl">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">📌 독자 기술 3대 강점</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="text-center">
-                <div className="text-3xl mb-3">🏥</div>
-                <h4 className="font-bold text-gray-900 mb-2">의료 현장 검증</h4>
-                <p className="text-sm text-gray-600">
-                  2022년부터 발달장애 치료 현장에서 단련된 
-                  <strong>골든타임·맞춤형치료</strong> 자동화 시스템
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl mb-3">🔄</div>
-                <h4 className="font-bold text-gray-900 mb-2">환류 폐루프</h4>
-                <p className="text-sm text-gray-600">
-                  <strong>강화학습·집단학습</strong>으로 
-                  사용자가 많을수록 더욱 똑똑해지는 구조
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl mb-3">👨‍👩‍👧‍👦</div>
-                <h4 className="font-bold text-gray-900 mb-2">협력 중심 설계</h4>
-                <p className="text-sm text-gray-600">
-                  AI가 교사를 대체하는 게 아니라 
-                  <strong>교사·부모·학원이 협력</strong>하도록 
-                  워크플로우 설계
-                </p>
-              </div>
-            </div>
-            <div className="mt-6 bg-gradient-to-r from-blue-100 to-indigo-100 rounded-lg p-4">
-              <p className="text-center text-gray-700">
-                <strong className="text-blue-600">단순 LLM 기반 교육 AI와의 차이:</strong> 
-                문제 풀이 도우미가 아닌, <strong>장기 학습 여정을 관리하는 AI 코파일럿</strong>
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-16 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              기능 상세
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              EduCareLog가 제공하는 6가지 핵심 기능입니다.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-                <div className="text-4xl mb-4">{feature.icon}</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Standards Section */}
-      <section className="py-16 lg:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-center">표준 · 연동 · 상호운용성</h2>
-          <p className="text-lg text-gray-600 max-w-4xl mx-auto text-center mb-8">
-            교육과정 맵, 문제 메타, 활동 로그 스키마를 통합하고, LTI/OneRoster 스타일 연동, CSV/API 양방향 동기화, EBS·공교육 리소스 매핑을 지원합니다.
+          <p className="text-center text-base font-semibold text-gray-900 max-w-2xl mx-auto leading-relaxed">
+            EduCareLog는 한 번에 바꾸는 시스템이 아니라, <span className="text-indigo-800">쌓이면서 확장되는 인프라</span>입니다.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-gray-50 rounded-xl p-6"><h3 className="font-bold mb-2">데이터 표준</h3><p className="text-gray-600">활동/평가/행동/주의/메모/미디어 이벤트 스키마</p></div>
-            <div className="bg-gray-50 rounded-xl p-6"><h3 className="font-bold mb-2">연동</h3><p className="text-gray-600">LMS/문제은행/LRS와 API·Webhook</p></div>
-            <div className="bg-gray-50 rounded-xl p-6"><h3 className="font-bold mb-2">거버넌스</h3><p className="text-gray-600">RBAC·감사로그·동의관리</p></div>
-          </div>
         </div>
       </section>
 
-      {/* Technical Architecture Section */}
-      <section className="py-16 lg:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">기술 아키텍처(요약)</h2>
-            <p className="text-lg text-gray-600 max-w-4xl mx-auto">
-              표준화된 로그 수집 → 특징 추출 → 수준 진단 → 개인화 루프 → 실행·리포트의 폐루프 구조로 동작합니다.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
-            <div className="bg-gray-50 rounded-xl p-6">
-              <h3 className="font-bold mb-2">1. 표준화 수집</h3>
-              <p className="text-gray-600">수업·과제·평가·행동·주의·메모·미디어 이벤트를 공통 스키마로 수집</p>
+      {/* 12. CTA */}
+      <section className="py-16 bg-gradient-to-br from-blue-600 to-indigo-700 text-white">
+        <div className="max-w-5xl mx-auto px-4">
+          <h2 className="text-2xl md:text-3xl font-bold mb-3 text-center">다음 행동</h2>
+          <p className="text-blue-100 text-sm mb-10 text-center max-w-2xl mx-auto leading-relaxed">
+            드림에이아이랩은 콘텐츠 회사가 아니라 <strong className="text-white">엔진·표준·실행 자동화</strong>를 건넵니다. 역할에 맞는 문의만 고르시면
+            됩니다.
+          </p>
+          <div className="grid md:grid-cols-3 gap-5 mb-10">
+            <div className="bg-white/10 rounded-xl p-5 border border-white/20 text-left">
+              <p className="text-xs font-semibold text-blue-200 mb-1">학교 · 교육청 · 지자체</p>
+              <p className="text-sm text-blue-50 mb-4">기초학력·개별화 과제에 맞는 도입 범위와 파일럿을 같이 정합니다.</p>
+              <Link
+                href="/contact?type=partner"
+                className="inline-flex w-full justify-center items-center bg-white text-indigo-800 font-semibold px-4 py-2.5 rounded-lg text-sm hover:bg-blue-50 transition-colors"
+              >
+                우리 기관에 적용 가능한지 확인하기
+              </Link>
             </div>
-            <div className="bg-gray-50 rounded-xl p-6">
-              <h3 className="font-bold mb-2">2. 특징 추출</h3>
-              <p className="text-gray-600">정답/오답 패턴, 반응시간, 이탈, 난이도 민감도, 최근성 가중치 계산</p>
+            <div className="bg-white/10 rounded-xl p-5 border border-white/20 text-left">
+              <p className="text-xs font-semibold text-blue-200 mb-1">학원</p>
+              <p className="text-sm text-blue-50 mb-4">원생·강사 데이터로 운영·이탈 대응을 쌓는 방식을 상담합니다.</p>
+              <Link
+                href="/contact?type=partner"
+                className="inline-flex w-full justify-center items-center bg-white text-indigo-800 font-semibold px-4 py-2.5 rounded-lg text-sm hover:bg-blue-50 transition-colors"
+              >
+                운영·데이터 활용 도입 문의하기
+              </Link>
             </div>
-            <div className="bg-gray-50 rounded-xl p-6">
-              <h3 className="font-bold mb-2">3. 수준 진단</h3>
-              <p className="text-gray-600">과목·단원·기초기능별 성취/오개념/주의 패턴을 추정</p>
-            </div>
-            <div className="bg-gray-50 rounded-xl p-6">
-              <h3 className="font-bold mb-2">4. 개인화 루프</h3>
-              <p className="text-gray-600">복습:신규:보정 비율 α:β:γ 최적화, 적응형 난이도 루핑</p>
-            </div>
-            <div className="bg-gray-50 rounded-xl p-6">
-              <h3 className="font-bold mb-2">5. 실행·환류</h3>
-              <p className="text-gray-600">경로·퀴즈·루틴·리포트 자동 생성 → 실행 로그가 다시 학습</p>
-            </div>
-          </div>
-          <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div className="bg-white rounded-xl p-6 shadow">
-              <h3 className="font-bold text-gray-900 mb-2">스키마 예시(JSON)</h3>
-              <pre className="text-xs bg-gray-900 text-gray-100 rounded p-4 overflow-auto">{`{
-  "event_time": "2025-11-12T10:20:31+09:00",
-  "student_id": "anon_8f3a",
-  "subject": "math",
-  "unit": "addition.carry",
-  "event_type": "quiz_attempt",
-  "response": {"choice":"B","correct":false,"latency_ms":4200},
-  "context": {"attention":"low","session":"classroom"},
-  "note": "confused when carrying"
-}`}</pre>
-            </div>
-            <div className="bg-white rounded-xl p-6 shadow">
-              <h3 className="font-bold text-gray-900 mb-2">개인화 루프(요지)</h3>
-              <ul className="text-gray-700 list-disc pl-5 space-y-2">
-                <li>성취추정 <span className="font-mono">p(unit|student)</span> 업데이트(최근성/난이도 가중)</li>
-                <li>오개념 집약도 <span className="font-mono">misconception_score</span> 계산</li>
-                <li>루틴 최적화: <span className="font-mono">α:β:γ = f(p, misconception, attention)</span></li>
-                <li>다음 세션 후보군 → 콘텐트 선택 → 실행 → 로그 환류</li>
-              </ul>
+            <div className="bg-white/10 rounded-xl p-5 border border-white/20 text-left">
+              <p className="text-xs font-semibold text-blue-200 mb-1">기업 · 에듀테크</p>
+              <p className="text-sm text-blue-50 mb-4">기존 제품에 CareLog 엔진·API를 얹는 경로를 같이 봅니다.</p>
+              <Link
+                href="/contact?type=tech"
+                className="inline-flex w-full justify-center items-center bg-white text-indigo-800 font-semibold px-4 py-2.5 rounded-lg text-sm hover:bg-blue-50 transition-colors"
+              >
+                임베드·API 도입 가능 여부 확인하기
+              </Link>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Practical Logs Section */}
-      <section className="py-16 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">실전 로그 스니펫(모의)</h2>
-            <p className="text-lg text-gray-600 max-w-4xl mx-auto">개인정보를 제거한 형태의 흐름 예시입니다.</p>
-          </div>
-          <div className="bg-white rounded-xl p-6 shadow">
-            <pre className="text-xs bg-gray-900 text-gray-100 rounded p-4 overflow-auto">{`[10:02:11] ingest  | anon_8f3a | quiz_attempt | math.addition.carry | correct=false | latency=4200ms
-[10:02:12] analyze | anon_8f3a | misconception_score=0.72 | attention=low
-[10:02:12] plan    | anon_8f3a | ratio alpha:beta:gamma = 0.6:0.2:0.2
-[10:02:13] select  | anon_8f3a | next=math.addition.carry.practice_set#3 | difficulty=easy
-[10:02:14] report  | anon_8f3a | parent_digest queued (Fri 18:00)
-`}</pre>
-          </div>
-        </div>
-      </section>
-
-      {/* Edutech Comparison Section */}
-      <section className="py-16 lg:py-24 bg-gradient-to-br from-indigo-50 to-blue-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">에듀테크 비교(엔진 레벨)</h2>
-            <p className="text-lg text-gray-600 max-w-4xl mx-auto">겉 UI/챗봇이 아니라, 백엔드 엔진의 차이를 기준으로 비교합니다.</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-2xl p-8 shadow">
-              <h3 className="text-xl font-bold mb-3">문항생성형</h3>
-              <ul className="text-gray-600 list-disc pl-5 space-y-2">
-                <li>강점: 빠른 콘텐츠 확장</li>
-                <li>한계: 학생 로그 맥락 부족, 난이도 루핑/환류 약함</li>
-              </ul>
-            </div>
-            <div className="bg-white rounded-2xl p-8 shadow">
-              <h3 className="text-xl font-bold mb-3">튜터봇형</h3>
-              <ul className="text-gray-600 list-disc pl-5 space-y-2">
-                <li>강점: 대화형 설명·힌트</li>
-                <li>한계: 대화 로그 중심, 학습·행동 이벤트의 표준화 부족</li>
-              </ul>
-            </div>
-            <div className="bg-white rounded-2xl p-8 shadow">
-              <h3 className="text-xl font-bold mb-3">로그 기반 개인화 엔진(EduCareLog)</h3>
-              <ul className="text-gray-600 list-disc pl-5 space-y-2">
-                <li>강점: 표준화된 학습·행동 로그 → 수준 진단 → 실행 자동화의 폐루프</li>
-                <li>강점: 복습:신규:보정 비율 최적화, 시험 전 집중 루틴</li>
-                <li>한계: 초기 로그 축적 기간 필요(첫 1~2주)</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Verification Checklist Section */}
-      <section className="py-16 lg:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">검증 체크리스트(투자/도입)</h2>
-            <p className="text-lg text-gray-600 max-w-4xl mx-auto">“말”이 아니라 “기술”인지 확인할 수 있는 항목들입니다.</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-gray-50 rounded-xl p-6">
-              <ul className="text-gray-700 list-disc pl-5 space-y-2">
-                <li>표준 스키마 공개 여부(아카이브 링크)</li>
-                <li>로그 예시·의사코드 공개(PII 제거)</li>
-                <li>오개념/주의 패턴 산출 로직 요약 문서</li>
-                <li>내부 평가 루틴(offline eval) 설명</li>
-              </ul>
-            </div>
-            <div className="bg-gray-50 rounded-xl p-6">
-              <ul className="text-gray-700 list-disc pl-5 space-y-2">
-                <li>감사로그/설명가능 리포트 샘플</li>
-                <li>성능·안정성 지표(처리 지연, 실패율) 범위</li>
-                <li>보안·동의·거버넌스 정책 문서</li>
-                <li>교실/가정 파일럿 결과(정성 사례 중심)</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Workflow Section */}
-      <section className="py-16 lg:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              사용 흐름
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              EduCareLog와 함께하는 4단계 맞춤 학습 프로세스입니다.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {workflow.map((step, index) => (
-              <div key={index} className="text-center">
-                <div className="w-20 h-20 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-white text-xl font-bold">{step.step}</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{step.title}</h3>
-                <p className="text-gray-600">{step.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Real Personalization Examples Section */}
-      <section className="py-16 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">실제 맞춤형 동작(예시)</h2>
-            <p className="text-lg text-gray-600 max-w-4xl mx-auto">아래 예시는 동일 학급 내 서로 다른 학습 로그를 가진 학생에게 어떻게 다르게 작동하는지 보여줍니다.</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-xl p-6 shadow">
-              <h3 className="font-bold text-gray-900 mb-2">사례 A · 연산 오개념</h3>
-              <p className="text-gray-600">최근 2주 ‘받아올림’ 오류 비율↑ → 복습:신규:보정 = 6:2:2로 조정, 오류 유형 집중 퀴즈 자동 생성, 주 2회 부모 리마인드.</p>
-            </div>
-            <div className="bg-white rounded-xl p-6 shadow">
-              <h3 className="font-bold text-gray-900 mb-2">사례 B · 주의 산만</h3>
-              <p className="text-gray-600">수업 중 이탈 로그↑ → 짧은 세션·빈도↑로 루틴 재구성, 난이도 루핑 완화, 시험 전 7일 집중모드로 전환.</p>
-            </div>
-            <div className="bg-white rounded-xl p-6 shadow">
-              <h3 className="font-bold text-gray-900 mb-2">사례 C · 상위권 심화</h3>
-              <p className="text-gray-600">정답률 높고 속도 빠름 → 심화 과제 비중↑, 탐구형 문항 추천, 발표/서술 리포트 초안 자동생성.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Target Users Section */}
-      <section className="py-16 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              적용 대상
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              다양한 교육 환경에서 EduCareLog가 어떻게 활용되는지 확인해보세요.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {targetUsers.map((user, index) => (
-              <div key={index} className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow text-center">
-                <div className="text-5xl mb-4">{user.icon}</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{user.title}</h3>
-                <p className="text-gray-600">{user.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Differentiation Section */}
-      <section className="py-16 lg:py-24 bg-gradient-to-br from-blue-50 to-indigo-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              차별점
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              EduCareLog만의 독특한 특징들입니다.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <div className="bg-white rounded-2xl p-8 shadow">
-              <div className="text-4xl mb-4">📚</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">교육 표준 스키마 + 공교육/EBS 연동</h3>
-              <p className="text-gray-600">
-                교육 표준을 따르는 데이터 구조와 EBS 콘텐츠를 연동하여 체계적인 학습을 지원합니다.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-2xl p-8 shadow">
-              <div className="text-4xl mb-4">👨‍🏫</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">교사 업무 경감(리포트/피드백 자동화)</h3>
-              <p className="text-gray-600">
-                리포트 작성과 개별 피드백을 자동화하여 교사의 업무 부담을 줄이고 교육에 집중할 수 있게 합니다.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-2xl p-8 shadow">
-              <div className="text-4xl mb-4">🔄</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">개인화 루프(실적 기반 복습:신규:보정 비율 자동 조정)</h3>
-              <p className="text-gray-600">
-                학습 실적을 기반으로 복습, 신규 학습, 보정의 비율을 자동으로 조정하여 최적의 학습 경로를 제공합니다.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-      {/* Policy Alignment Section */}
-      <section className="py-16 lg:py-24 bg-gradient-to-br from-gray-50 to-blue-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">정책·공교육 정합성 — 사교육 의존 완화의 경로</h2>
-            <p className="text-lg text-gray-600 max-w-4xl mx-auto">개별화교육을 국가 정책 차원에서 추진하고 있으나, 현장은 실행 도구와 데이터 표준의 부재로 어려움을 겪고 있습니다.</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-xl p-6 shadow">
-              <h3 className="font-bold mb-2">현장의 난점</h3>
-              <ul className="text-gray-600 list-disc pl-5 space-y-2">
-                <li>기록 분산(수기/플랫폼 혼재)과 수업-과제-평가 간 연결 단절</li>
-                <li>학생별 계획·리포트 작성의 과부하</li>
-                <li>학교-가정 간 데이터 공유·동의·보안에 대한 우려</li>
-              </ul>
-            </div>
-            <div className="bg-white rounded-xl p-6 shadow">
-              <h3 className="font-bold mb-2">EduCareLog 해법</h3>
-              <ul className="text-gray-600 list-disc pl-5 space-y-2">
-                <li>표준화된 로그·스키마 기반으로 수업-과제-평가-행동 데이터를 연속성 있게 연결</li>
-                <li>AI가 경로·퀴즈·리포트를 자동화하여 교사 업무 경감</li>
-                <li>동의·거버넌스·암호화 원칙으로 안전한 학교-가정 연계</li>
-              </ul>
-            </div>
-          </div>
-          <div className="mt-10 bg-white rounded-xl p-6 shadow">
-            <h3 className="font-bold mb-2">학교·가정에서 구현되는 개인화</h3>
-            <p className="text-gray-600">사교육에서만 가능하던 ‘맞춤’이 교실·가정 루틴으로 전환됩니다. 학습 로그가 축적될수록 개인화 품질이 개선되어, 장기적으로 사교육 의존도를 완화하는 경로를 제시합니다.</p>
-          </div>
-        </div>
-      </section>
-
-      {/* Compliance Section */}
-      <section className="py-16 lg:py-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">윤리 · 보안 · 동의</h2>
-            <p className="text-lg text-gray-600 max-w-4xl mx-auto">학생·학부모 명시적 동의, 최소 수집, 지역/기관 경계 존중, 목적 외 사용 금지, 전송·저장 암호화, 비식별 통계 처리 원칙을 따릅니다.</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-xl p-6 shadow"><h3 className="font-bold mb-2">동의·거버넌스</h3><p className="text-gray-600">학부모 동의·철회, RBAC, 감사로그</p></div>
-            <div className="bg-white rounded-xl p-6 shadow"><h3 className="font-bold mb-2">보안</h3><p className="text-gray-600">전송/저장 암호화, 분리 보관</p></div>
-            <div className="bg-white rounded-xl p-6 shadow"><h3 className="font-bold mb-2">윤리</h3><p className="text-gray-600">편향 점검, 설명가능 리포트</p></div>
-          </div>
-        </div>
-      </section>
-
-      {/* Roadmap 2026 Section */}
-      <section className="py-16 lg:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">로드맵 2026</h2>
-            <p className="text-lg text-gray-600 max-w-4xl mx-auto">특수교육에서 검증된 엔진을 일반 교육으로 확장합니다.</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            <div className="bg-gray-50 rounded-xl p-6">
-              <h3 className="font-bold mb-2">Q1</h3>
-              <p className="text-gray-600">교육과정 맵 확장 · 적응형 퀴즈 v2 · 시험 전 집중 루틴 v2</p>
-            </div>
-            <div className="bg-gray-50 rounded-xl p-6">
-              <h3 className="font-bold mb-2">Q2</h3>
-              <p className="text-gray-600">OneRoster/LTI 호환 모듈 · 학부모 리포트 v2</p>
-            </div>
-            <div className="bg-gray-50 rounded-xl p-6">
-              <h3 className="font-bold mb-2">Q3</h3>
-              <p className="text-gray-600">적응형 커리큘럼 자동 편성 · 교육청 시범사업</p>
-            </div>
-            <div className="bg-gray-50 rounded-xl p-6">
-              <h3 className="font-bold mb-2">Q4</h3>
-              <p className="text-gray-600">전국 확산 레퍼런스 구축 · 화이트라벨 패키지</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-16 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              자주 묻는 질문
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              EduCareLog에 대해 궁금한 점들을 확인해보세요.
-            </p>
-          </div>
-          <div className="max-w-4xl mx-auto space-y-6">
-            {faqs.map((faq, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 shadow-lg">
-                <h3 className="text-lg font-bold text-gray-900 mb-3">{faq.question}</h3>
-                <p className="text-gray-600">{faq.answer}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Related Content Section */}
-      <section className="py-16 lg:py-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">관련 콘텐츠</h2>
-            <p className="text-lg text-gray-600 max-w-4xl mx-auto">
-              더 깊이 있는 자료를 보려면 아래 콘텐츠를 확인하세요.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Link href="/news/63" className="bg-white rounded-xl p-6 shadow hover:shadow-lg transition-shadow">
-              <h3 className="text-xl font-bold text-gray-900 mb-2">사례: 특수교육에서 일반교육으로</h3>
-              <p className="text-gray-600">실제 적용 사례와 결과 데이터를 요약한 뉴스 포스트</p>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center items-center text-sm">
+            <Link href="/contact?type=partner" className="text-white font-medium underline underline-offset-2 hover:text-blue-100">
+              파일럿 도입 상담 요청하기
             </Link>
-            <Link href="/technology/educarelog" className="bg-white rounded-xl p-6 shadow hover:shadow-lg transition-shadow">
-              <h3 className="text-xl font-bold text-gray-900 mb-2">에듀케어로그 기술 백서</h3>
-              <p className="text-gray-600">AI 디지털케어로그의 교육 특화 응용 기술 구조 및 구현 방법론</p>
-            </Link>
-            <Link href="/news/64" className="bg-white rounded-xl p-6 shadow hover:shadow-lg transition-shadow">
-              <h3 className="text-xl font-bold text-gray-900 mb-2">2026 파트너십 오픈 발표</h3>
-              <p className="text-gray-600">학교·지자체 컨소시엄 및 스타트업 협력 계획 발표</p>
+            <span className="hidden sm:inline text-white/40">|</span>
+            <Link href="/contact?type=ir" className="text-blue-100 hover:text-white underline underline-offset-2">
+              IR 문의
             </Link>
           </div>
         </div>
       </section>
-
-      {/* 7. Service Status */}
-      <section className="py-12 lg:py-16 bg-white">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="inline-block px-4 py-2 bg-orange-100 text-orange-800 rounded-full text-sm font-semibold mb-4">Pilot</span>
-          <h2 className="text-2xl font-bold text-gray-900 mb-2">에듀케어로그 서비스 현황</h2>
-          <p className="text-gray-600">2024 특수학급 파일럿 완료. 2025~2026 파트너십 확장 중. EBS·교육과정 연계 개별화 학습 플랫폼.</p>
-        </div>
-      </section>
-
-      {/* 8. Ecosystem Connection */}
-      <section className="py-12 lg:py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">DAL 생태계와의 연결</h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">에듀케어로그는 자람이(발달장애)·토탈케어로그와 동일한 AI 디지털케어로그 표준을 적용합니다. 특수교육→일반교육→전 생애 학습으로 확장합니다.</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-white rounded-xl p-6 shadow-sm">
-              <h3 className="font-bold text-gray-900 mb-2">🔗 자람이·토탈케어로그 연동</h3>
-              <p className="text-sm text-gray-700">발달장애 케어로그와 학습 데이터가 통합. 치료·교육·건강이 하나의 흐름으로 연결됩니다.</p>
-            </div>
-            <div className="bg-white rounded-xl p-6 shadow-sm">
-              <h3 className="font-bold text-gray-900 mb-2">📊 DAL AI 플랫폼</h3>
-              <p className="text-sm text-gray-700">2026 개별화교육 전환 대응. 학교·학원·가정을 잇는 통합 학습 생태계 구축.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 9. CTA — 기관 도입 / 파트너십 (페이지 목적에 맞게 2개) */}
-      <section className="py-16 lg:py-24 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl font-bold mb-2">Contact</h2>
-          <p className="text-blue-100 mb-8">학교·기관 도입, 파트너십 문의</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact?type=institution"
-              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-            >
-              학교/기관 도입 문의
-            </Link>
-            <Link 
-              href="/contact?type=partner"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-            >
-              파트너십 상담
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      
 
       <Footer />
     </div>
