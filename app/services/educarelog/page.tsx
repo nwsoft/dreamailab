@@ -119,7 +119,7 @@ export default function EduCareLogService() {
     {
       n: 4,
       title: '실행: 퀴즈·루틴·리포트',
-      body: 'EBS·교과 맵에 맞는 퀴즈, 시험 주 루틴, 학부모·교사 리포트까지 같은 데이터로 뻗습니다.',
+      body: '교과 구조·EBS 등 콘텐츠에 맞는 퀴즈, 시험 주 루틴, 학부모·교사 리포트까지 같은 데이터로 뻗습니다.',
     },
     {
       n: 5,
@@ -165,7 +165,7 @@ export default function EduCareLogService() {
     {
       who: '학원',
       pain: '강사·반·원생마다 데이터가 흩어져 품질·이탈 원인을 못 잡음.',
-      gain: '원생 단위 진도·약점·몰입 신호를 한 대시보드에서 관리합니다.',
+      gain: '원생 단위 진도·약점·몰입 신호를 EduCareLog 기준으로 관리합니다.',
     },
     {
       who: '학교·교육청·지자체',
@@ -176,12 +176,12 @@ export default function EduCareLogService() {
 
   const techBullets = [
     {
-      tag: '표준 스키마 (FHIR급 사고)',
-      why: '병원·복지와 같이 교육도 기관이 바뀌어도 같은 학생 맥락을 이어야 하며, 표준이 있어야 공독·사학원·가정이 한 명을 공유합니다.',
+      tag: '표준 스키마',
+      why: '의료 분야의 FHIR처럼, 교육에서도 표준 스키마가 필요합니다. 병원·복지와 같이 교육도 기관이 바뀌어도 같은 학생 맥락을 이어야 하며, 표준이 있어야 공독·사학원·가정이 한 명을 공유합니다.',
     },
     {
-      tag: '강화학습·환류',
-      why: '추천 한 번이 끝이면 개인화가 아니므로, 시도→반응→보상 구조로 반응이 나온 개입만 유지합니다.',
+      tag: '피드백 기반 경로 조정(환류)',
+      why: '추천 한 번이 끝이면 개인화가 아니므로, 학습 반응에 맞춰 경로를 고치는 피드백(환류)만 남깁니다.',
     },
     {
       tag: '멀티모달·시계열',
@@ -240,6 +240,11 @@ export default function EduCareLogService() {
       {/* 1. Hero */}
       <section className="bg-gradient-to-br from-blue-600 to-indigo-700 text-white py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-white text-sm md:text-base max-w-3xl mx-auto mb-6 font-semibold leading-relaxed">
+            학생이 어디서 막히는지 바로 알 수 있고,
+            <br />
+            그 다음 학습이 자동으로 이어지는 구조입니다.
+          </p>
           <p className="text-blue-100 text-sm font-medium mb-3">DAL AI 디지털케어로그 · 교육 축</p>
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">EduCareLog</h1>
           <p className="text-lg md:text-xl text-blue-50 font-semibold max-w-3xl mx-auto mb-4">
@@ -256,7 +261,7 @@ export default function EduCareLogService() {
           </p>
           <div className="flex flex-wrap justify-center gap-2 text-xs">
             <span className="bg-white/15 px-3 py-1.5 rounded-full">부모 · 교사 · 학원 · 교육청</span>
-            <span className="bg-white/15 px-3 py-1.5 rounded-full">EBS·교과 맵 연계</span>
+            <span className="bg-white/15 px-3 py-1.5 rounded-full">교과 구조·EBS 등 콘텐츠와 연계 가능한 구조</span>
             <span className="bg-white/15 px-3 py-1.5 rounded-full">임베드형 엔진</span>
           </div>
           <div className="mt-8">
@@ -264,10 +269,10 @@ export default function EduCareLogService() {
               Pilot
             </span>
           </div>
-          <p className="text-blue-50 text-sm md:text-base max-w-3xl mx-auto mt-6 leading-relaxed">
-            학생이 어디서 막히는지 바로 알 수 있고,
+          <p className="text-blue-50/95 text-xs md:text-sm max-w-2xl mx-auto mt-4 leading-relaxed">
+            현재 일부 환경에서 파일럿 형태로 적용되고 있으며,
             <br />
-            그 다음 학습이 자동으로 이어지는 구조입니다.
+            API·임베드 방식으로 단계적 확장이 가능합니다.
           </p>
         </div>
       </section>
@@ -295,7 +300,7 @@ export default function EduCareLogService() {
             <div className="bg-red-50 rounded-xl p-5 border border-red-100">
               <h3 className="font-bold text-gray-900 text-sm mb-2">실패 1: 기록이 한 학생으로 합쳐지지 않음</h3>
               <p className="text-sm text-gray-700">
-                진단·과제·학원·앱이 따로 놀면 연속 서사가 없어 개인화할 입력이 없습니다.
+                진단·과제·학원·가정의 기록이 EduCareLog 한 줄기로 잇히지 않고 따로 놀면 연속 서사가 없어 개인화할 입력이 없습니다.
               </p>
             </div>
             <div className="bg-red-50 rounded-xl p-5 border border-red-100">
@@ -406,7 +411,9 @@ export default function EduCareLogService() {
           <div className="grid md:grid-cols-2 gap-4 text-sm">
             <div className="rounded-xl p-5 bg-green-50 border border-green-100">
               <h3 className="font-bold text-gray-900 mb-2">부모</h3>
-              <p className="text-gray-700">앱에서 주간 요약·이번 주 집중 하나·학교·학원과 겹치는 과목을 줄이는 순서를 봅니다.</p>
+              <p className="text-gray-700">
+                EduCareLog에서 주간 요약·이번 주 집중 하나·학교·학원과 겹치는 과목을 줄이는 순서를 봅니다.
+              </p>
             </div>
             <div className="rounded-xl p-5 bg-blue-50 border border-blue-100">
               <h3 className="font-bold text-gray-900 mb-2">교사</h3>
@@ -435,7 +442,7 @@ export default function EduCareLogService() {
             <div className="rounded-xl bg-white border border-stone-200 p-5">
               <h3 className="font-bold text-gray-900 mb-2">1. 부모</h3>
               <ol className="list-decimal pl-5 text-gray-800 space-y-1">
-                <li>앱에서 주간 학습 요약을 확인합니다.</li>
+                <li>EduCareLog에서 주간 학습 요약을 확인합니다.</li>
                 <li>아이 약점 구간(단원·유형)을 글로 확인합니다.</li>
                 <li>이번 주 학습 루틴·집중 과목을 봅니다.</li>
                 <li>겹치는 과목·학원을 줄이거나 순서를 바꿉니다.</li>
@@ -583,9 +590,10 @@ export default function EduCareLogService() {
                   </p>
                 </li>
                 <li>
-                  <p className="font-semibold text-indigo-950">분석 → 실행 자동 연결</p>
+                  <p className="font-semibold text-indigo-950">분석 → 초안·확인 후 실행</p>
                   <p className="mt-1 text-gray-800">
-                    약점 구간이 정해지면 경로·퀴즈·루틴·리포트 초안이 같은 엔진에서 이어져 추천에서 멈추지 않습니다.
+                    초안이 생성되고, 교사·사용자가 확인 후 실행되는 흐름입니다. 약점 구간이 정해지면 경로·퀴즈·루틴·리포트까지 같은 엔진에서
+                    이어져 추천에서 멈추지 않습니다.
                   </p>
                 </li>
                 <li>
@@ -632,7 +640,7 @@ export default function EduCareLogService() {
               </div>
               <div className="rounded-lg bg-white border border-gray-100 p-4">
                 <p className="font-semibold text-gray-900 mb-1">학원</p>
-                <p className="text-gray-700">원생 상태가 대시보드에 남아 강사·학부모 설명이 같은 그림을 봅니다.</p>
+                <p className="text-gray-700">원생 상태가 EduCareLog 화면에 남아 강사·학부모 설명이 같은 그림을 봅니다.</p>
               </div>
             </div>
           </div>
@@ -873,7 +881,7 @@ export default function EduCareLogService() {
             <div className="rounded-xl border border-indigo-100 bg-indigo-50/40 p-5 md:p-6">
               <p className="font-semibold text-gray-900 mb-3">4. 산업이 바뀌는 축</p>
               <p className="mb-3 text-gray-800">
-                기존 교육 시장은 콘텐츠·강사·브랜드 중심 경쟁이 강했지만, EduCareLog가 지향하는 축은 별도 앱이 아니라{' '}
+                기존 교육 시장은 콘텐츠·강사·브랜드 중심 경쟁이 강했지만, EduCareLog가 지향하는 축은 EduCareLog 단독 제품이 아니라{' '}
                 <strong className="text-gray-900">데이터 기반 운영 능력</strong>으로 옮겨가는 쪽이라 중소 학원·신생 교육기업도 먼저 쌓은 운영
                 로그로 차이를 설명할 수 있습니다.
               </p>
@@ -1006,10 +1014,10 @@ export default function EduCareLogService() {
       {/* 12. CTA */}
       <section className="py-16 bg-gradient-to-br from-blue-600 to-indigo-700 text-white">
         <div className="max-w-5xl mx-auto px-4">
-          <p className="text-center text-blue-50 text-sm md:text-base font-medium max-w-2xl mx-auto mb-8 leading-relaxed">
-            이 구조가 없으면 학생 상태는 남지 않습니다.
+          <p className="text-center text-blue-50 text-sm md:text-base font-semibold max-w-2xl mx-auto mb-8 leading-relaxed">
+            지금 시작하면 데이터가 쌓이고,
             <br />
-            같은 시간을 써도 다음 학습은 다시 감으로 시작하게 됩니다.
+            늦게 시작할수록 같은 시간으로도 따라잡기 어려워집니다.
           </p>
           <h2 className="text-2xl md:text-3xl font-bold mb-3 text-center">다음 행동</h2>
           <p className="text-blue-100 text-sm mb-10 text-center max-w-2xl mx-auto leading-relaxed">
