@@ -119,7 +119,8 @@ export default function EduCareLogService() {
     {
       n: 4,
       title: '실행: 퀴즈·루틴·리포트',
-      body: '교과 구조·EBS 등 콘텐츠에 맞는 퀴즈, 시험 주 루틴, 학부모·교사 리포트까지 같은 데이터로 뻗습니다.',
+      body:
+        '교과 구조·EBS 등 콘텐츠에 맞는 퀴즈, 시험 주 루틴, 학부모·교사 리포트까지 같은 데이터로 뻗습니다. 생성된 결과는 교사·강사·부모의 확인과 조정을 통해 실제 적용됩니다.',
     },
     {
       n: 5,
@@ -240,29 +241,33 @@ export default function EduCareLogService() {
       {/* 1. Hero */}
       <section className="bg-gradient-to-br from-blue-600 to-indigo-700 text-white py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-white text-sm md:text-base max-w-3xl mx-auto mb-6 font-semibold leading-relaxed">
+          <p className="text-white text-sm md:text-base max-w-3xl mx-auto mb-4 font-semibold leading-relaxed">
+            EduCareLog는 학습 로그를 기반으로 학생 상태를 이해하고 실행까지 이어지는 교육 인프라 엔진입니다.
+          </p>
+          <p className="text-blue-50 text-sm md:text-base max-w-3xl mx-auto mb-6 font-semibold leading-relaxed">
             학생이 어디서 막히는지 바로 알 수 있고,
             <br />
             그 다음 학습이 자동으로 이어지는 구조입니다.
           </p>
           <p className="text-blue-100 text-sm font-medium mb-3">DAL AI 디지털케어로그 · 교육 축</p>
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">EduCareLog</h1>
-          <p className="text-lg md:text-xl text-blue-50 font-semibold max-w-3xl mx-auto mb-4">
-            학습·행동 로그를 묶는 <span className="text-white">개별화 교육 인프라 엔진</span>
-          </p>
-          <p className="text-white text-sm md:text-base max-w-3xl mx-auto mb-3 font-medium leading-relaxed">
-            학생 한 명의 상태를 데이터로 이해하고, 퀴즈·루틴·리포트까지 같은 줄기로 실행합니다.
-          </p>
           <p className="text-blue-100 text-sm md:text-base max-w-3xl mx-auto mb-8 leading-relaxed">
             교사·부모·기관이 <strong className="text-white">같은 학습 로그</strong>를 기준으로 말할 수 있는 층입니다.
             <span className="block mt-2 text-blue-50/95">
               정의: 로그 표준화 → 수준·오개념·패턴 정리 → 개인 경로 → 실행(퀴즈·루틴·리포트) → 환류.
             </span>
           </p>
-          <div className="flex flex-wrap justify-center gap-2 text-xs">
+          <div className="flex flex-wrap justify-center gap-2 text-xs items-start">
             <span className="bg-white/15 px-3 py-1.5 rounded-full">부모 · 교사 · 학원 · 교육청</span>
             <span className="bg-white/15 px-3 py-1.5 rounded-full">교과 구조·EBS 등 콘텐츠와 연계 가능한 구조</span>
-            <span className="bg-white/15 px-3 py-1.5 rounded-full">임베드형 엔진</span>
+            <div className="flex flex-col items-center gap-2 max-w-[280px] sm:max-w-xs">
+              <span className="bg-white/15 px-3 py-1.5 rounded-full">임베드형 엔진</span>
+              <p className="text-blue-50/95 text-[11px] sm:text-xs font-normal leading-relaxed text-center normal-case">
+                기존 교육 시스템을 교체하지 않고,
+                <br />
+                연동·API 형태로 연결되는 구조입니다.
+              </p>
+            </div>
           </div>
           <div className="mt-8">
             <span className="inline-block px-4 py-2 bg-orange-100 text-orange-900 rounded-full text-sm font-semibold">
@@ -270,7 +275,7 @@ export default function EduCareLogService() {
             </span>
           </div>
           <p className="text-blue-50/95 text-xs md:text-sm max-w-2xl mx-auto mt-4 leading-relaxed">
-            현재 일부 환경에서 파일럿 형태로 적용되고 있으며,
+            현재 일부 학습 환경에서 파일럿 형태로 적용되고 있으며, 실제 학습 로그 기반으로 운영 검증을 진행 중입니다.
             <br />
             API·임베드 방식으로 단계적 확장이 가능합니다.
           </p>
@@ -377,11 +382,17 @@ export default function EduCareLogService() {
               이 구조가 중요한 이유는, 개인화가 &quot;AI가 똑똑해서&quot; 되는 것이 아니라 &quot;같은 기준으로 기록이 누적되고, 그 기록이 다음 행동으로
               바로 이어지기 때문&quot;입니다.
             </p>
+            <p className="font-medium text-gray-900">
+              학생이 무엇을 틀렸는지가 아니라, 어디서 멈췄는지를 기준으로 학습이 이어집니다.
+            </p>
             <p>
               기존에는 문제만 많이 풀어도 학생 상태가 이어지지 않고 &quot;언젠가 이해한다&quot;는 방식에 가깝지만, 이 구조에서는 어디서
               막혔는지를 기준으로 다음 학습이 자동으로 이어져 수준별 맞춤 학습이 실제로 작동합니다.
             </p>
           </div>
+          <p className="mt-8 max-w-3xl mx-auto text-sm text-gray-600 leading-relaxed text-center border border-gray-200 rounded-xl py-4 px-5 bg-gray-50/80">
+            개인화 정확도는 데이터 축적과 함께 점진적으로 높아지며, 초기에는 기본 패턴 중심으로 작동합니다.
+          </p>
         </div>
       </section>
 
@@ -901,6 +912,72 @@ export default function EduCareLogService() {
         </div>
       </section>
 
+      {/* 존재 이유 · DAL 정당성 */}
+      <section className="py-14 bg-gray-50 border-b border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-10">
+            왜 우리가 이 구조를 만들었는가
+          </h2>
+
+          <div className="max-w-3xl mx-auto space-y-10 text-sm text-gray-800 leading-relaxed">
+            <div>
+              <p className="font-semibold text-gray-900 mb-3">1. 문제를 직접 본 지점</p>
+              <ul className="list-disc pl-5 space-y-2 text-gray-700">
+                <li>
+                  교육 문제의 중심은 콘텐츠 양이 아니라, <strong className="text-gray-900">데이터와 실행이 끊기는 구조</strong>에서
+                  발생합니다.
+                </li>
+                <li>같은 학생이 학교·학원·가정에서 서로 다른 말과 감으로 해석됩니다.</li>
+                <li>그 상태에서는 개인화가 아니라 반복·과잉 학습으로 이어지기 쉽습니다.</li>
+              </ul>
+            </div>
+
+            <div className="rounded-2xl border border-gray-200 bg-white p-5 md:p-6">
+              <p className="font-semibold text-gray-900 mb-3">2. 기존 방식으로는 해결되지 않는 이유</p>
+              <ul className="list-disc pl-5 space-y-2 text-gray-700 mb-4">
+                <li>콘텐츠만 늘리면 학생 상태가 한 줄로 이어지지 않아 근본적으로 덮어지지 않습니다.</li>
+                <li>교사·강사 개인의 노력만으로는 같은 밀도를 전원에게 유지할 규모가 나지 않습니다.</li>
+                <li>추천·설계만 두고 실행이 사람 몫에 남으면 다음 행동까지 이어지지 않습니다.</li>
+              </ul>
+              <p className="font-semibold text-indigo-950">
+                문제를 더 잘 설명하는 것이 아니라, 구조를 바꾸지 않으면 반복됩니다.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-indigo-100 bg-indigo-50/40 p-5 md:p-6">
+              <p className="font-semibold text-gray-900 mb-3">3. 그래서 구조를 바꿨다</p>
+              <ul className="list-disc pl-5 space-y-2 text-gray-800 mb-4">
+                <li>기록을 한 학생·한 줄기의 로그로 묶습니다.</li>
+                <li>분석과 실행을 떼어 두지 않고 같은 흐름 안에 둡니다.</li>
+                <li>실행 결과가 다시 다음 학습·다음 판단에 붙도록 환류를 둡니다.</li>
+              </ul>
+              <p className="font-semibold text-indigo-950">
+                개인화를 &apos;설계&apos;하는 방식이 아니라, 실행이 끊기지 않도록 구조를 바꿨습니다.
+              </p>
+            </div>
+
+            <div>
+              <p className="font-semibold text-gray-900 mb-3">4. 왜 DAL만 가능한가</p>
+              <p className="mb-3 text-gray-800">
+                <strong className="text-gray-900">AI 디지털케어로그</strong>는 교육 전용으로 처음 짠 기술이 아닙니다.{' '}
+                <strong className="text-gray-900">자람이</strong>(발달)·<strong className="text-gray-900">시니어앤라이프</strong>
+                (돌봄)·<strong className="text-gray-900">TotalCareLog</strong>(의료)에서 같은 밑그림—기록 → 판단 → 실행 →
+                환류—를 이미 쌓아 온 축입니다.
+              </p>
+              <p className="font-semibold text-gray-900 mb-3">
+                이 구조는 하나의 서비스가 아니라, 여러 영역에서 이미 검증된 인프라 위에서 확장된 것입니다.
+              </p>
+              <p className="text-gray-800">
+                그래서 EduCareLog는 새로운 기능이 아니라, 이미 존재하는 구조를 교육에 적용한 형태입니다.
+              </p>
+              <p className="text-gray-800 mt-4 pt-4 border-t border-gray-200">
+                이 구조는 특수교육 영역에서 먼저 적용된 개별화 기반을 일반 교육으로 확장한 접근입니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 10. DAL 플랫폼 연결 */}
       <section className="py-14 bg-white border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -967,6 +1044,9 @@ export default function EduCareLogService() {
               <p className="text-sm font-semibold text-indigo-900 border-l-4 border-indigo-500 pl-3">
                 처음부터 학교 전체 도입이 필요하지 않습니다.
               </p>
+              <p className="text-sm text-gray-700 mt-4 leading-relaxed">
+                초기에는 데이터가 충분하지 않기 때문에, 일정 기간 학습 로그가 축적되면서 운영 효과가 점진적으로 나타납니다.
+              </p>
             </div>
 
             <div className="rounded-2xl border border-indigo-200 p-6 md:p-7 bg-indigo-50/40">
@@ -979,6 +1059,10 @@ export default function EduCareLogService() {
               </p>
               <p className="text-sm font-semibold text-indigo-900 border-l-4 border-indigo-500 pl-3">
                 작게 시작해 효과를 먼저 증명합니다.
+              </p>
+              <p className="text-sm text-gray-700 mt-4 leading-relaxed">
+                공교육 환경에서는 시스템 통합, 교사 업무 변화, 정책 적용 등의 이유로 단계적 적용이 필요합니다. 따라서 파일럿 단위로
+                시작해 점진적으로 확장하는 방식이 현실적입니다.
               </p>
             </div>
 
