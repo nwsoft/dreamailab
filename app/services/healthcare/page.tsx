@@ -103,7 +103,13 @@ export default function HealthcareService() {
       <section className="bg-gradient-to-br from-primary-700 to-secondary-600 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">토탈케어로그 — AI 디지털케어로그, 당신 삶의 케어 동반자</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              의료는 병원에서 시작되지 않습니다.
+              <br />
+              토탈케어로그는 일상을 기록으로 바꾸고,
+              <br />
+              다음 의료까지 끊기지 않게 연결합니다.
+            </h1>
             <p className="text-xl md:text-2xl mb-4 max-w-3xl mx-auto">
               <strong>탄생부터 마지막까지</strong> 이어지는 전 생애 케어. AI 디지털케어로그가 생활 <strong>전방향</strong>을 잇습니다.
             </p>
@@ -212,6 +218,18 @@ export default function HealthcareService() {
         </div>
       </section>
 
+      <section className="py-8 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+            의료 데이터는 이미 존재하지만 연결되지 않습니다.
+            <br />
+            문제는 데이터 부족이 아니라 흐름이 없다는 점입니다.
+            <br />
+            토탈케어로그는 이 단절을 하나의 구조로 연결하기 위해 설계되었습니다.
+          </p>
+        </div>
+      </section>
+
       {/* 역할별: 막힘 → 변화 (에듀케어로그 personaUsage 패턴) */}
       <section className="py-14 bg-gray-50 border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -242,6 +260,13 @@ export default function HealthcareService() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">토탈케어로그란 무엇인가</h2>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-3">
+              토탈케어로그는
+              <br />
+              일상 데이터를 기반으로 의료의 전 과정을 연결하는
+              <br />
+              AI 디지털케어로그 기반 운영 인프라입니다.
+            </p>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               인공지능 시대의 <strong>새로운 의료 운영체계</strong> — <strong>AI 디지털케어로그</strong>를 중심으로 진료실 중심에서
               <strong>일상 중심</strong>으로 전환하고, 개인에 맞춘 병원 여정을 재구성합니다.
