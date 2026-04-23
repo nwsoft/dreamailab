@@ -156,7 +156,7 @@ export default function EduCareLogService() {
 
   const personaUsage = [
     {
-      who: '부모',
+      who: '학생·보호자(가족)',
       pain: '학원비는 나가는데, 아이가 어디까지 이해했는지 모름.',
       gain: '주간 리포트와 다음 주 집중 포인트를 문장으로 받습니다.',
     },
@@ -171,7 +171,7 @@ export default function EduCareLogService() {
       gain: '원생 단위 진도·약점·몰입 신호를 에듀케어로그 기준으로 관리합니다.',
     },
     {
-      who: '학교·교육청·지자체',
+      who: '학교·교육청·지자체·연구',
       pain: '정책은 개별화인데, 현장 데이터는 과제·플랫폼별로 조각남.',
       gain: '표준 로그 위에서 기초학력·프로그램 효과를 비교·감시할 수 있는 층을 둡니다.',
     },
@@ -252,7 +252,11 @@ export default function EduCareLogService() {
             Service Status: Pilot (학습 환경 기반 검증 진행 중)
           </p>
           <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-6 leading-snug max-w-4xl mx-auto">
-            에듀케어로그(EduCareLog) — 학습 데이터 기반 개별화 교육 인프라 엔진
+            학습은 교실에서만 완성되지 않습니다.
+            <br />
+            에듀케어로그는 흩어진 학습 반응을 기록으로 바꾸고,
+            <br />
+            가정·학원·학교·공공까지 같은 인프라로 연결합니다.
           </h1>
           <p className="text-blue-50 text-sm md:text-base max-w-3xl mx-auto mb-8 leading-relaxed font-medium">
             학생의 학습 로그를 하나의 흐름으로 연결하고,
@@ -309,6 +313,15 @@ export default function EduCareLogService() {
               </p>
             </div>
           </div>
+          <div className="mt-8 bg-indigo-50/70 border border-indigo-100 rounded-xl p-5 max-w-3xl mx-auto">
+            <p className="text-sm text-gray-800 text-center leading-relaxed">
+              교육 데이터는 이미 존재하지만 연결되지 않습니다.
+              <br />
+              문제는 데이터 부족이 아니라 흐름이 없다는 점입니다.
+              <br />
+              에듀케어로그는 이 단절을 하나의 구조로 연결하기 위해 설계되었습니다.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -341,6 +354,15 @@ export default function EduCareLogService() {
       <section id="educ-platform" className="scroll-mt-28 py-14 bg-white border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-4">에듀케어로그 플랫폼 구조</h2>
+          <p className="text-center text-sm text-gray-800 max-w-3xl mx-auto mb-3 leading-relaxed">
+            에듀케어로그는
+            <br />
+            학습 반응·수업·과제 데이터를 기반으로
+            <br />
+            학생·교사·가정·기관의 실행을 연결하는
+            <br />
+            AI 디지털케어로그 기반 운영 인프라입니다.
+          </p>
           <p className="text-center text-gray-600 text-sm max-w-2xl mx-auto mb-6">
             다섯 단계는 별도 기능이 아니라 한 루프입니다.
           </p>
@@ -1014,6 +1036,9 @@ export default function EduCareLogService() {
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-4">DAL 플랫폼 연결</h2>
           <p className="text-center text-gray-600 text-sm max-w-2xl mx-auto mb-8">
             네 가지 표면은 다르고, 바닥은 같은 <strong>AI 디지털케어로그</strong>입니다.
+          </p>
+          <p className="text-center text-sm text-indigo-800 font-medium max-w-2xl mx-auto mb-6">
+            에듀케어로그는 DAL의 일부 기능이 아니라, 교육 도메인을 담당하는 하나의 축입니다.
           </p>
           <div className="grid sm:grid-cols-2 gap-4">
             {ecosystem.map((e) => (

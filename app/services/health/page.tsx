@@ -334,7 +334,7 @@ export default function HealthService() {
       <section className="py-12 bg-white">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <span className="inline-block px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-semibold mb-4">Live Service</span>
-          <p className="text-gray-600">AI 주치의(히포크라테스AI)는 medicai.kr·토탈케어로그와 연동하여 건강 관리 서비스를 제공합니다.</p>
+          <p className="text-gray-600">AI 주치의(히포크라테스AI)는 토탈케어로그 등 DAL 헬스케어 축과 연동하는 구조를 지향합니다. 기존 medicai.kr 공개 진입은 리뉴얼·도메인 변경으로 중단되었습니다.</p>
         </div>
       </section>
 

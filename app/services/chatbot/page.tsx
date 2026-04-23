@@ -35,7 +35,6 @@ export default function ChatbotService() {
       summary: '의료 상담 챗봇',
       description: '일반적인 건강상담과 증상 문진을 제공하는 AI 의료상담 챗봇입니다.',
       url: '/services/healthcare',
-      externalUrl: 'https://medicai.kr',
       category: 'Healthcare',
       users: '20K+',
       features: [

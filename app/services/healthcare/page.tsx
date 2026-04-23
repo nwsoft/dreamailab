@@ -3,8 +3,7 @@ import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 import Link from 'next/link'
 
-/** 공개 서비스 URL — 변경 시 이 상수만 수정 */
-const HEALTHCARE_ENTRYPOINT_URL = 'https://medicai.kr'
+/** 공개 체험 URL은 리뉴얼·도메인 변경으로 미정(기존 medicai.kr 연결 종료). */
 const pageCanonical = 'https://dreamailab.com/services/healthcare'
 
 export const metadata: Metadata = {
@@ -87,8 +86,8 @@ export default function HealthcareService() {
         areaServed: 'KR',
         offers: {
           '@type': 'Offer',
-          url: HEALTHCARE_ENTRYPOINT_URL,
-          description: 'DAL 헬스케어 축 공개 서비스 체험',
+          url: pageCanonical,
+          description: '공개 체험은 리뉴얼 및 도메인 변경으로 준비 중입니다.',
         },
       },
     ],
@@ -111,10 +110,7 @@ export default function HealthcareService() {
               다음 의료까지 끊기지 않게 연결합니다.
             </h1>
             <p className="text-xl md:text-2xl mb-4 max-w-3xl mx-auto">
-              <strong>탄생부터 마지막까지</strong> 이어지는 전 생애 케어. AI 디지털케어로그가 생활 <strong>전방향</strong>을 잇습니다.
-            </p>
-            <p className="text-lg max-w-2xl mx-auto text-white/80">
-              이 페이지는 <strong>헬스케어 적용</strong>을 소개합니다: 케어로그 → AI 분석 → 권고 → 의료 연계.
+              일상의 기록이 다음 의료로 이어지는 구조를 만듭니다.
             </p>
             <div className="mt-6 flex flex-wrap justify-center gap-2 text-xs">
               <span className="bg-white/10 border border-white/20 text-white px-3 py-1 rounded-full">전 생애</span>
@@ -122,7 +118,7 @@ export default function HealthcareService() {
               <span className="bg-white/10 border border-white/20 text-white px-3 py-1 rounded-full">AI 디지털케어로그</span>
             </div>
             <div className="mt-6">
-              <span className="inline-block px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-semibold">Live Service</span>
+              <span className="inline-block px-4 py-2 bg-amber-100 text-amber-900 rounded-full text-sm font-semibold">공개 서비스 준비 중</span>
             </div>
           </div>
         </div>
@@ -261,11 +257,7 @@ export default function HealthcareService() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">토탈케어로그란 무엇인가</h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-3">
-              토탈케어로그는
-              <br />
-              일상 데이터를 기반으로 의료의 전 과정을 연결하는
-              <br />
-              AI 디지털케어로그 기반 운영 인프라입니다.
+              토탈케어로그는 일상 데이터를 기반으로 의료의 전 과정을 연결하는 AI 디지털케어로그 기반 운영 인프라입니다.
             </p>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               인공지능 시대의 <strong>새로운 의료 운영체계</strong> — <strong>AI 디지털케어로그</strong>를 중심으로 진료실 중심에서
@@ -1059,11 +1051,11 @@ export default function HealthcareService() {
       {/* 7. Service Status */}
       <section className="py-12 lg:py-16 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="inline-block px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-semibold mb-4">Live Service</span>
-          <h2 className="text-2xl font-bold text-gray-900 mb-2">
-            토탈케어로그 ({new URL(HEALTHCARE_ENTRYPOINT_URL).hostname})
-          </h2>
-          <p className="text-gray-600">AI 디지털케어로그 기반 헬스케어AI 서비스가 운영 중입니다. 일상 기록·AI 분석·병원/약국 연계를 체험해 보세요.</p>
+          <span className="inline-block px-4 py-2 bg-amber-100 text-amber-900 rounded-full text-sm font-semibold mb-4">공개 서비스 준비 중</span>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">토탈케어로그</h2>
+          <p className="text-gray-600">
+            기존 공개 진입(medicai.kr)은 리뉴얼 및 도메인 변경으로 연결이 중단되었습니다. 새 주소·체험 일정은 확정되는 대로 이 페이지와 공지를 통해 안내할 예정입니다.
+          </p>
         </div>
       </section>
 
@@ -1115,14 +1107,12 @@ export default function HealthcareService() {
             AI 디지털케어로그 기반 헬스케어AI — 일상 기록부터 기관 연계까지 같은 축에서 논의해 보세요.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center flex-wrap">
-            <a
-              href={HEALTHCARE_ENTRYPOINT_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white text-primary-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+            <span
+              className="inline-flex items-center justify-center bg-white/50 text-white/90 px-8 py-3 rounded-lg font-semibold cursor-not-allowed border border-white/40"
+              title="리뉴얼·도메인 변경으로 공개 체험 링크 준비 중"
             >
-              토탈케어로그 체험하기
-            </a>
+              공개 체험 준비 중
+            </span>
             <Link
               href="/contact?type=partner"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors"

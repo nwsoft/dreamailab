@@ -381,7 +381,13 @@ export default function JarameService() {
                 Service Status: Pilot (기관 베타 테스트 진행 중)
               </span>
             </div>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">{brand.name} — 발달장애 AI 디지털케어로그</h1>
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+              발달 지원은 치료실에서만 시작되지 않습니다.
+              <br />
+              자람이는 흩어진 관찰과 훈련 반응을 기록으로 바꾸고,
+              <br />
+              가정·학교·센터·병원을 같은 인프라로 연결합니다.
+            </h1>
             <p className="text-lg md:text-xl max-w-2xl mx-auto text-blue-100 mb-2">
               가정·학교·센터·병원의 기록을 하나의 표준으로 통합하고, AI가 개인 맞춤형 치료·학습 계획을 제안합니다.
             </p>
@@ -482,6 +488,37 @@ export default function JarameService() {
         </div>
       </section>
 
+      <section className="py-14 bg-white border-b border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">누가 왜 막히나 — 자람이에서 바뀌는 점</h2>
+          <p className="text-center text-gray-600 text-sm mb-8 max-w-2xl mx-auto">
+            사용자·가족·기관·공공의 병목을 하나의 케어로그 구조로 연결합니다.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
+              <p className="text-xs font-bold text-blue-800 uppercase tracking-wide mb-2">발달 당사자·학습 사용자</p>
+              <p className="text-sm text-gray-700 mb-2"><span className="text-gray-500 font-medium">막힘:</span> 환경마다 관찰 기록이 달라 변화 추이를 연속으로 보기 어렵습니다.</p>
+              <p className="text-sm text-gray-800"><span className="text-blue-700 font-semibold">자람이:</span> 행동·학습·치료 반응을 같은 로그로 묶어 단계별 변화를 누적해 봅니다.</p>
+            </div>
+            <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
+              <p className="text-xs font-bold text-blue-800 uppercase tracking-wide mb-2">보호자·가족</p>
+              <p className="text-sm text-gray-700 mb-2"><span className="text-gray-500 font-medium">막힘:</span> 기관별 설명이 분절돼 집에서 무엇을 이어야 하는지 판단이 어렵습니다.</p>
+              <p className="text-sm text-gray-800"><span className="text-blue-700 font-semibold">자람이:</span> 주간 요약·가정 실천 과제를 같은 기준으로 받아 다음 행동을 이어가기 쉽게 합니다.</p>
+            </div>
+            <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
+              <p className="text-xs font-bold text-blue-800 uppercase tracking-wide mb-2">센터·학교·병원</p>
+              <p className="text-sm text-gray-700 mb-2"><span className="text-gray-500 font-medium">막힘:</span> 기관마다 다른 양식 때문에 협업 시 재입력·해석 차이가 반복됩니다.</p>
+              <p className="text-sm text-gray-800"><span className="text-blue-700 font-semibold">자람이:</span> 표준 로그·리포트로 같은 맥락에서 치료·교육·진료 협업을 시작하도록 돕습니다.</p>
+            </div>
+            <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
+              <p className="text-xs font-bold text-blue-800 uppercase tracking-wide mb-2">공공·연구</p>
+              <p className="text-sm text-gray-700 mb-2"><span className="text-gray-500 font-medium">막힘:</span> 지역·기관별 데이터 구조가 달라 정책 효과와 중재 비교가 어렵습니다.</p>
+              <p className="text-sm text-gray-800"><span className="text-blue-700 font-semibold">자람이:</span> 동의·비식별 전제의 표준 로그 축적을 통해 정책·연구의 공통 기준을 지향합니다.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ③ 왜 지금 자람이인가 — 데이터 단절, 골든타임, 비용 */}
       <section className="py-14 bg-gradient-to-br from-blue-50 to-indigo-50 border-b border-gray-100">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -517,6 +554,15 @@ export default function JarameService() {
               </ul>
             </div>
           </div>
+          <div className="mt-8 bg-blue-50/80 rounded-xl p-5 border border-blue-100 max-w-3xl mx-auto">
+            <p className="text-sm text-gray-800 text-center leading-relaxed">
+              발달 데이터는 이미 존재하지만 연결되지 않습니다.
+              <br />
+              문제는 데이터 부족이 아니라 흐름이 없다는 점입니다.
+              <br />
+              자람이는 이 단절을 하나의 구조로 연결하기 위해 설계되었습니다.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -542,6 +588,44 @@ export default function JarameService() {
               <h3 className="font-bold text-gray-900 mb-2">AI Capability</h3>
               <p className="text-sm text-gray-600 leading-relaxed">AI 분석 기술 성숙</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-14 bg-white border-b border-gray-100">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">기존 구조 vs 자람이 구조</h2>
+          <p className="text-center text-gray-600 text-sm mb-8 max-w-2xl mx-auto">
+            기능이 아니라 데이터 흐름 기준으로 차이를 설명합니다.
+          </p>
+          <div className="overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
+            <table className="w-full min-w-[300px] text-sm text-left border-collapse">
+              <caption className="sr-only">기존 발달지원 구조와 자람이 구조 비교</caption>
+              <thead>
+                <tr className="bg-gray-100 border-b border-gray-200">
+                  <th className="p-3 font-bold text-gray-900 w-[28%]">비교</th>
+                  <th className="p-3 font-bold text-gray-800 border-l border-gray-200">기존 구조</th>
+                  <th className="p-3 font-bold text-blue-900 border-l border-gray-200 bg-blue-50/70">자람이 구조</th>
+                </tr>
+              </thead>
+              <tbody className="text-gray-800">
+                <tr className="border-b border-gray-100">
+                  <th className="p-3 font-semibold text-gray-900 bg-gray-50/80 text-left">기록</th>
+                  <td className="p-3 border-l border-gray-100">기관별 문서·메모로 분절</td>
+                  <td className="p-3 border-l border-gray-100 bg-blue-50/40">가정·학교·센터·병원 로그를 같은 축으로 표준화</td>
+                </tr>
+                <tr className="border-b border-gray-100">
+                  <th className="p-3 font-semibold text-gray-900 bg-gray-50/80 text-left">판단</th>
+                  <td className="p-3 border-l border-gray-100">담당자 경험 중심, 맥락 전파 어려움</td>
+                  <td className="p-3 border-l border-gray-100 bg-blue-50/40">패턴 분석·요약으로 다음 중재를 공통 기준으로 제시</td>
+                </tr>
+                <tr>
+                  <th className="p-3 font-semibold text-gray-900 bg-gray-50/80 text-left">협업</th>
+                  <td className="p-3 border-l border-gray-100">기관 간 재입력·재설명 반복</td>
+                  <td className="p-3 border-l border-gray-100 bg-blue-50/40">표준 리포트로 치료·교육·의료 연계를 같은 화면에서 시작</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
@@ -754,6 +838,15 @@ export default function JarameService() {
       <section className="py-14 bg-white border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">AI 디지털케어로그 작동 구조</h2>
+          <p className="text-center text-sm text-gray-800 max-w-3xl mx-auto mb-3 leading-relaxed">
+            자람이는
+            <br />
+            발달·행동·치료·학습 데이터를 기반으로
+            <br />
+            가정·학교·센터·병원의 의사결정을 연결하는
+            <br />
+            AI 디지털케어로그 기반 운영 인프라입니다.
+          </p>
           <p className="text-center text-gray-600 text-sm mb-8 max-w-2xl mx-auto">입력 → 표준화 → AI 분석 → 실시간 환류. 데이터가 쌓일수록 정확도가 높아지는 강화학습 구조입니다.</p>
 
           {/* 기술 작동 원리 */}
@@ -2267,6 +2360,9 @@ export default function JarameService() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">DAL Care Data Ecosystem</h2>
           <p className="text-center text-gray-600 text-sm mb-8 max-w-2xl mx-auto">하나의 케어 데이터 표준으로 확장되는 플랫폼 전략</p>
+          <p className="text-center text-sm text-blue-800 font-medium mb-6 max-w-2xl mx-auto">
+            자람이는 DAL의 부가 기능이 아니라, 발달 도메인을 담당하는 핵심 축입니다.
+          </p>
           <div className="flex flex-col md:flex-row items-stretch justify-center gap-4 md:gap-2">
             <div className="bg-white rounded-xl p-6 border border-gray-100 hover:border-blue-200 transition-colors flex-1 min-w-0 text-center shadow-sm">
               <h3 className="font-bold text-gray-900 mb-2">Jarame</h3>

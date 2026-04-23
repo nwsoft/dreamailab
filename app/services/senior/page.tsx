@@ -351,7 +351,11 @@ export default function SeniorService() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-              AI 디지털케어로그 기반 시니어 돌봄 통합 플랫폼
+              돌봄은 시설 입소에서 시작되지 않습니다.
+              <br />
+              시니어앤라이프는 흩어진 일상 돌봄을 기록으로 바꾸고,
+              <br />
+              재가·시설·병원·가족까지 같은 인프라로 연결합니다.
             </h1>
             <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto text-green-100">
               재가서비스, 요양원, 요양병원, 주야간보호, 의료보조기기, 요양보호사 매칭까지<br />
@@ -471,6 +475,46 @@ export default function SeniorService() {
               즉, 시니어 돌봄의 병목은 &quot;정보 부족&quot;이 아니라 <strong>연결 이후의 기록·행정·가족 소통이 끊기는 구조</strong>입니다.
             </p>
           </div>
+          <div className="mt-4 bg-emerald-50/80 rounded-xl p-4 border border-emerald-100 max-w-3xl mx-auto">
+            <p className="text-sm text-gray-800 text-center leading-relaxed">
+              돌봄 데이터는 이미 존재하지만 연결되지 않습니다.
+              <br />
+              문제는 데이터 부족이 아니라 흐름이 없다는 점입니다.
+              <br />
+              시니어앤라이프는 이 단절을 하나의 구조로 연결하기 위해 설계되었습니다.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-14 bg-gray-50 border-b border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">누가 왜 막히나 — 시니어앤라이프에서 바뀌는 점</h2>
+          <p className="text-center text-gray-600 text-sm mb-8 max-w-2xl mx-auto">
+            사용자·가족·기관·공공의 병목을 하나의 기록 구조로 연결합니다.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
+              <p className="text-xs font-bold text-emerald-800 uppercase tracking-wide mb-2">시니어 사용자</p>
+              <p className="text-sm text-gray-700 mb-2"><span className="text-gray-500 font-medium">막힘:</span> 상태 변화가 생활 현장에 흩어져 다음 케어 판단이 늦어집니다.</p>
+              <p className="text-sm text-gray-800"><span className="text-emerald-700 font-semibold">시니어앤라이프:</span> 식사·복약·활동·수면을 시간 흐름으로 묶어 다음 돌봄 계획까지 잇습니다.</p>
+            </div>
+            <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
+              <p className="text-xs font-bold text-emerald-800 uppercase tracking-wide mb-2">보호자·가족</p>
+              <p className="text-sm text-gray-700 mb-2"><span className="text-gray-500 font-medium">막힘:</span> 전화·메신저 중심 소통으로는 하루 상태를 같은 그림으로 보기 어렵습니다.</p>
+              <p className="text-sm text-gray-800"><span className="text-emerald-700 font-semibold">시니어앤라이프:</span> 동의된 기록 요약과 경보를 공유해 추측이 아닌 근거로 대화하게 돕습니다.</p>
+            </div>
+            <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
+              <p className="text-xs font-bold text-emerald-800 uppercase tracking-wide mb-2">기관·의료 연계</p>
+              <p className="text-sm text-gray-700 mb-2"><span className="text-gray-500 font-medium">막힘:</span> 운영·행정·돌봄 기록이 분리되어 같은 내용을 반복 입력해야 합니다.</p>
+              <p className="text-sm text-gray-800"><span className="text-emerald-700 font-semibold">시니어앤라이프:</span> 일정·기록·보고·정산을 같은 흐름으로 맞춰 현장과 행정의 단절을 줄입니다.</p>
+            </div>
+            <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
+              <p className="text-xs font-bold text-emerald-800 uppercase tracking-wide mb-2">공공·연구</p>
+              <p className="text-sm text-gray-700 mb-2"><span className="text-gray-500 font-medium">막힘:</span> 지역·기관별 지표 체계가 달라 정책 효과를 비교하기 어렵습니다.</p>
+              <p className="text-sm text-gray-800"><span className="text-emerald-700 font-semibold">시니어앤라이프:</span> 표준 로그 기반 집계 층으로 품질 관리·정책 평가·연구 협력의 공통 기준을 지향합니다.</p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -557,6 +601,15 @@ export default function SeniorService() {
       <section className="py-14 bg-white border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">시니어앤라이프 플랫폼 구조</h2>
+          <p className="text-center text-sm text-gray-800 max-w-3xl mx-auto mb-3 leading-relaxed">
+            시니어앤라이프는
+            <br />
+            돌봄·생활·운영 데이터를 기반으로
+            <br />
+            사용자·가족·기관·의료·공공의 실행을 연결하는
+            <br />
+            AI 디지털케어로그 기반 운영 인프라입니다.
+          </p>
           <p className="text-center text-xs font-semibold text-emerald-700 mb-1">[한 줄 요약]</p>
           <p className="text-center text-gray-800 font-medium text-sm mb-4 max-w-3xl mx-auto">
             이 플랫폼은 검색이 아니라 <strong>돌봄 데이터를 관리</strong>하는 인프라입니다.
@@ -1300,6 +1353,9 @@ export default function SeniorService() {
           <p className="text-center text-xs font-semibold text-emerald-700 mb-1">[한 줄 요약]</p>
           <p className="text-center text-gray-800 font-medium text-sm mb-4 max-w-3xl mx-auto">
             시니어앤라이프는 <strong>DAL 생태계 안의 시니어 축</strong>이며, 같은 기술 스택이 다른 산업에도 확장됩니다.
+          </p>
+          <p className="text-center text-sm text-emerald-800 font-medium mb-4 max-w-3xl mx-auto">
+            시니어앤라이프는 DAL의 부가 기능이 아니라, 시니어 도메인을 담당하는 핵심 축입니다.
           </p>
           <p className="text-center text-gray-600 text-sm mb-3 max-w-3xl mx-auto">
             시니어앤라이프는 단순한 서비스가 아니라, <strong>DAL AI 디지털케어로그 기술의 시니어 산업 응용 사례</strong>입니다.

@@ -6,12 +6,12 @@ import Footer from '../../../components/Footer'
 export const metadata: Metadata = {
   title: '국제결혼 플랫폼 글로벌커플케어 GCC | 베트남·태국·필리핀·일본·중국 결혼 전문가 비교',
   description:
-    '국내 최초 국제결혼 통합 플랫폼 GCC. 베트남·태국·필리핀·일본·중국 등 전 세계 결혼 전문가를 한 곳에서 비교. 투명한 가격, 비자·법무 지원, 결혼 후 언어·자녀양육·정착까지 AI 케어로그로 평생 지원. 여행사·항공사·웨딩업체 협력 가능.',
+    '국제결혼·다문화 가족을 위한 통합 플랫폼 GCC. 베트남·태국·필리핀·일본·중국 등 다양한 국가의 결혼 전문가를 한 곳에서 비교하고, 가격·절차·법무·정착 정보를 투명하게 제공합니다.',
   keywords:
     '국제결혼, 국제결혼플랫폼, 글로벌커플케어, GCC, 베트남결혼, 태국결혼, 필리핀결혼, 일본결혼, 중국결혼, 다문화가정, 결혼비자, 혼인신고, 결혼정착지원, 언어치료, 자녀양육, 국제커플, 결혼전문가비교, 투명한가격, AI케어로그, 디지털케어로그, 결혼이민, 다문화가족지원, 국제결혼상담, 법무지원, 웨딩플랫폼, 여행사협력, 항공사제휴',
   openGraph: {
     title: '글로벌커플케어 GCC - 국제결혼 전문가 통합 플랫폼',
-    description: '전 세계 국제결혼 전문가를 한 곳에서. 투명한 비교, 결혼 후 평생 케어',
+    description: '국제결혼 정보·절차·정착 지원을 하나로 연결하는 플랫폼 인프라',
     type: 'website',
     locale: 'ko_KR',
   },
@@ -65,8 +65,8 @@ const faqs = [
 // ===== 데이터 정의 =====
 const coreFeatures = [
   {
-    title: '한눈에 모든 정보 비교',
-    desc: '국내·해외(베트남·태국·필리핀·일본·중국 등) 모든 업체 정보를 한 곳에서 비교. 일일이 여러 사이트 방문 불필요',
+    title: '한눈에 정보 비교',
+    desc: '국내·해외(베트남·태국·필리핀·일본·중국 등) 주요 업체 정보를 한 곳에서 비교해 탐색 부담을 줄입니다.',
     icon: '🔎',
   },
   {
@@ -81,12 +81,12 @@ const coreFeatures = [
   },
   {
     title: '언어·문화·자녀양육 지원',
-    desc: '자람의 언어치료 노하우 활용, 문화 차이 해결, 자녀 교육·양육 커뮤니티. 결혼이민자 가정의 모든 고민 해결',
+    desc: '자람의 언어치료 노하우를 참고해 문화 차이 적응, 자녀 교육·양육 커뮤니티 등 정착 단계 이슈를 지원',
     icon: '👨‍👩‍👧',
   },
   {
-    title: 'AI 디지털케어로그 연동',
-    desc: '병원·학교·언어치료·발달장애 등 드림에이아이랩 네트워크로 생활 전반의 문제 해결',
+    title: 'DAL 생태계 연계',
+    desc: '정착 이후 의료·교육·상담 등 필요한 영역에서 드림에이아이랩 서비스와 연계 가능한 구조를 제공합니다.',
     icon: '📱',
   },
   {
@@ -192,25 +192,23 @@ const cultureChangePoints = [
   '단기 방문 후 성급한 결혼을 조장하는 문화 대신, 충분한 정보·상담·교육 과정을 거치는 책임 있는 매칭 문화를 만듭니다.',
 ]
 
-const stakeholderGuides = {
-  users: [
-    '한 곳에서 모든 국가·업체의 정보를 한눈에 비교하고 선택할 수 있습니다.',
-    '일일이 여러 국제결혼정보회사 홈페이지를 찾아다니지 않아도 됩니다.',
-    '결혼 후에도 커뮤니티에서 문화 차이, 언어 문제, 자녀 양육 등 경험을 공유하고 해결책을 찾습니다.',
-    'AI 디지털케어로그로 병원·학교·언어치료 등 생활 전반의 문제를 해결합니다.',
-  ],
-  domesticAgencies: [
-    '표준 플랫폼을 통해 고객 관리·서류·상담을 체계적이고 투명하게 운영할 수 있습니다.',
-    '검증된 플랫폼에 참여하여 신뢰할 수 있는 전문가로서 고객을 만날 수 있습니다.',
-    '플랫폼의 리뷰와 평가 시스템으로 서비스 품질을 입증하고 신뢰를 쌓아갑니다.',
-  ],
-  foreignAgencies: [
-    '베트남·태국·필리핀·일본·중국 등 해외 현지 전문가들도 참여하실 수 있습니다.',
-    '별도의 홈페이지 없이도 공식 플랫폼을 통해 전문 서비스를 제공할 수 있습니다.',
-    '개인적으로 상담 활동을 하시던 분들도 신뢰할 수 있는 플랫폼에서 공식적으로 활동하실 수 있습니다.',
-    '한국어/현지어 지원으로 언어 장벽 없이 한국 가정들과 소통하고 도울 수 있습니다.',
-  ],
-}
+const targetAudiences = [
+  {
+    title: '사용자·가족',
+    desc: '국가·전문가·비용·절차를 같은 기준으로 비교하고, 결혼 이후 정착 정보까지 이어서 확인합니다.',
+    icon: '👨‍👩‍👧',
+  },
+  {
+    title: '전문가·기관',
+    desc: '표준 양식·검증·리뷰 체계 안에서 서비스 품질로 경쟁하고 고객 응대·서류 흐름을 체계화합니다.',
+    icon: '🏢',
+  },
+  {
+    title: '공공·지역사회',
+    desc: '불투명 관행을 줄이고 윤리·안전 기준을 확산해 다문화 가족 정착 지원의 기반을 강화합니다.',
+    icon: '🏛️',
+  },
+]
 
 const expansionAreas = [
   '국제결혼 이후 다문화 가족의 자녀 교육·언어 교육·진로 설계',
@@ -219,108 +217,27 @@ const expansionAreas = [
   '다국적 가족을 위한 온라인 커뮤니케이션, 번역, 원격 상담 서비스',
 ]
 
-// 사용자에게 무엇이 바뀌는가
-const whatChangesForUsers = [
-  {
-    before: '일일이 여러 국제결혼정보회사 홈페이지 방문',
-    after: '한 곳에서 모든 국가·전문가 정보를 한눈에 비교',
-    benefit: '시간 절약, 정보 비교 용이, 투명한 가격 확인',
-    icon: '🔍',
-  },
-  {
-    before: '비용이 제각각, 과다 청구 위험, 불투명한 견적',
-    after: '표준 견적과 리뷰 시스템으로 투명한 가격 비교',
-    benefit: '바가지 방지, 합리적 의사결정, 신뢰할 수 있는 선택',
-    icon: '💰',
-  },
-  {
-    before: '결혼 후 방치, 언어·문화·자녀양육 혼자 해결',
-    after: '커뮤니티와 AI케어로그로 평생 지원',
-    benefit: '언어치료(자람), 병원·학교 연계, 경험 공유',
-    icon: '👨‍👩‍👧',
-  },
-  {
-    before: '복잡한 법무·비자 절차, 서류 누락·지연',
-    after: '자동화된 워크플로우와 체크리스트 제공',
-    benefit: '실수 방지, 빠른 처리, 전문가 연결',
-    icon: '📋',
-  },
-]
-
-// 제공자(전문가/회사)에게 무엇이 바뀌는가
-const whatChangesForProviders = [
-  {
-    type: '국내 결혼정보회사',
-    before: '개별 마케팅 비용 부담, 신뢰도 입증 어려움',
-    after: '검증된 플랫폼에서 고객 자동 유입',
-    benefit: '마케팅 비용 절감, 플랫폼 신뢰도 활용, 리뷰로 신뢰 구축',
-    icon: '🏢',
-  },
-  {
-    type: '해외 현지 전문가',
-    before: '홈페이지 없음, 유튜브·밴드로만 활동, 신뢰도 낮음',
-    after: '공식 플랫폼에서 전문 서비스 제공',
-    benefit: '비용 없이 한국 시장 진입, 체계적 고객 관리, 공식 인증',
-    icon: '🌏',
-  },
-  {
-    type: '개인 상담사',
-    before: '비체계적 관리, 법적 리스크, 분쟁 시 무방비',
-    after: '표준 SaaS 도구와 법무 지원',
-    benefit: '고객·서류·일정 자동 관리, 법적 보호, 전문성 향상',
-    icon: '👤',
-  },
-]
-
-// 사회적으로 무엇이 바뀌는가
-const whatChangesForSociety = [
-  {
-    problem: '매매혼 논란, 인권 침해, 비윤리적 업체 성행',
-    solution: '윤리 가이드라인, KYC 검증, 신고·제재 시스템',
-    impact: '건강한 국제결혼 문화 정착, 인권 보호 강화',
-    icon: '⚖️',
-  },
-  {
-    problem: '정보 비대칭으로 사기 피해 빈번',
-    solution: '표준 견적, 리뷰, 완료율 등 투명한 정보 공개',
-    impact: '사기 예방, 소비자 권익 보호, 시장 신뢰 회복',
-    icon: '🛡️',
-  },
-  {
-    problem: '결혼이민자 가정의 고립, 지원 시스템 부재',
-    solution: '커뮤니티, AI케어로그, 전문가 네트워크 연결',
-    impact: '사회 통합 촉진, 다문화 가정 안정, 자녀 교육 개선',
-    icon: '🤝',
-  },
-  {
-    problem: '지역별·국가별 서비스 편차 심각',
-    solution: '전국·전 세계 표준 플랫폼 구축',
-    impact: '서비스 접근성 향상, 지역 격차 해소',
-    icon: '🌐',
-  },
-]
-
-// 왜 이 플랫폼을 쓸 수밖에 없는가
+// 왜 이 플랫폼을 선택하는가
 const whyMustUse = [
   {
     title: '정보 독점 종식',
-    desc: '모든 국가·전문가의 정보가 한 곳에. 더 이상 정보를 찾아 헤맬 필요 없음',
-    reason: '시간과 비용을 절약하고 싶다면 필수',
+    desc: '여러 국가·전문가 정보를 한 곳에서 비교해 탐색 부담을 줄입니다.',
+    reason: '탐색 시간과 비교 비용을 줄이는 데 유리',
   },
   {
     title: '가격 투명성',
     desc: '표준 견적으로 바가지 방지. 리뷰로 검증된 전문가 선택',
-    reason: '합리적인 의사결정을 원한다면 필수',
+    reason: '비용·절차를 비교해 의사결정하기에 유리',
   },
   {
     title: '평생 지원 시스템',
-    desc: '결혼 후에도 언어·자녀·학교·병원 등 모든 문제 해결',
-    reason: '안정적인 가정 생활을 원한다면 필수',
+    desc: '결혼 후에도 언어·자녀·학교·병원 등 정착 단계 핵심 이슈를 지속 지원',
+    reason: '결혼 이후 정착 정보를 이어서 관리하기에 유리',
   },
   {
     title: '네트워크 효과',
     desc: '사용자가 많을수록 정보·리뷰·커뮤니티가 강력해짐',
-    reason: '최신 정보와 검증된 경험을 원한다면 필수',
+    reason: '참여자가 늘수록 정보와 리뷰의 밀도가 높아짐',
   },
 ]
 
@@ -352,238 +269,102 @@ const howChangesTrend = [
   },
 ]
 
-// 어떻게 이용할 수 있는가
-const howToUse = {
-  users: {
-    title: '결혼 희망자는 이렇게 이용합니다',
-    steps: [
-      {
-        step: '1단계',
-        title: '간편 가입',
-        desc: '이메일이나 소셜 로그인으로 30초 만에 가입',
-        icon: '📝',
-      },
-      {
-        step: '2단계',
-        title: '정보 비교',
-        desc: '국가·전문가·가격을 한눈에 비교하고 리뷰 확인',
-        icon: '🔍',
-      },
-      {
-        step: '3단계',
-        title: '상담 신청',
-        desc: '마음에 드는 전문가에게 플랫폼 내에서 바로 상담 신청',
-        icon: '💬',
-      },
-      {
-        step: '4단계',
-        title: '진행 관리',
-        desc: '서류·일정·비용을 플랫폼에서 투명하게 관리',
-        icon: '📋',
-      },
-      {
-        step: '5단계',
-        title: '평생 지원',
-        desc: '결혼 후에도 커뮤니티·AI케어로그로 계속 지원받기',
-        icon: '🤝',
-      },
-    ],
-  },
-  providers: {
-    title: '전문가·회사는 이렇게 참여합니다',
-    steps: [
-      {
-        step: '1단계',
-        title: '간편 입점',
-        desc: '온라인 신청서 작성 및 서류 제출 (홈페이지 불필요)',
-        icon: '📄',
-      },
-      {
-        step: '2단계',
-        title: '검증 절차',
-        desc: '플랫폼의 KYC·신원 확인 및 자격 검증',
-        icon: '✅',
-      },
-      {
-        step: '3단계',
-        title: '프로필 구축',
-        desc: '서비스·가격·경력을 표준 양식으로 등록',
-        icon: '👤',
-      },
-      {
-        step: '4단계',
-        title: '고객 응대',
-        desc: '플랫폼 내 메시지·화상 상담으로 고객과 소통',
-        icon: '💼',
-      },
-      {
-        step: '5단계',
-        title: '관리 도구 활용',
-        desc: 'SaaS 도구로 고객·서류·일정·정산 자동 관리',
-        icon: '⚙️',
-      },
-    ],
-  },
-}
-
-// 함께할 수 있는 비즈니스 파트너
-const businessPartners = [
-  {
-    category: '결혼 핵심 서비스',
-    partners: [
-      { name: '국제결혼 상담사', benefit: '고객 직접 연결, 체계적 관리 도구', icon: '👔' },
-      { name: '결혼정보회사', benefit: '플랫폼 신뢰도, 마케팅 비용 절감', icon: '🏢' },
-      { name: '법무사·행정사', benefit: '비자·서류 자동 연결, 안정적 수익', icon: '⚖️' },
-      { name: '통번역사', benefit: '상담·서류 번역 수요 확보', icon: '🗣️' },
-    ],
-  },
-  {
-    category: '여행·이동 서비스',
-    partners: [
-      { name: '여행사', benefit: '국제커플 맞춤 여행 패키지, 신혼여행', icon: '✈️' },
-      { name: '항공사', benefit: '정기적 왕복 항공권 수요, 가족 방문', icon: '🛫' },
-      { name: '숙박업', benefit: '호텔·리조트 장기 파트너십', icon: '🏨' },
-      { name: '공항 서비스', benefit: '픽업·배웅·통역 서비스', icon: '🚗' },
-    ],
-  },
-  {
-    category: '웨딩·의례 서비스',
-    partners: [
-      { name: '웨딩홀', benefit: '국제 웨딩 특화, 다국어 지원', icon: '💒' },
-      { name: '웨딩플래너', benefit: '문화별 맞춤 의례 기획', icon: '💐' },
-      { name: '스튜디오', benefit: '국제커플 전문 촬영', icon: '📸' },
-      { name: '드레스·예복', benefit: '문화별 의상 대여·판매', icon: '👗' },
-    ],
-  },
-  {
-    category: '정착 지원 서비스',
-    partners: [
-      { name: '부동산·이사', benefit: '가족 주거 솔루션', icon: '🏠' },
-      { name: '언어학원', benefit: '한국어·외국어 교육', icon: '📚' },
-      { name: '보험사', benefit: '다문화가정 맞춤 보험', icon: '🛡️' },
-      { name: '금융기관', benefit: '해외송금·환전·대출', icon: '🏦' },
-    ],
-  },
-  {
-    category: '생활·케어 서비스',
-    partners: [
-      { name: '병원·클리닉', benefit: '출산·육아·건강관리', icon: '🏥' },
-      { name: '언어치료센터', benefit: '자녀 언어발달 지원', icon: '🗨️' },
-      { name: '학원·교육', benefit: '자녀 교육·진로 상담', icon: '🎓' },
-      { name: '심리상담', benefit: '문화 적응·가족 상담', icon: '💭' },
-    ],
-  },
-  {
-    category: '해외 현지 결혼정보업체',
-    partners: [
-      { name: '베트남 현지 업체', benefit: '비용 없이 한국 전체 시장 접근, 공식 인증 플랫폼', icon: '🇻🇳' },
-      { name: '태국 현지 업체', benefit: 'KYC·리뷰·표준 절차로 신뢰 확보, 마케팅 비용 절감', icon: '🇹🇭' },
-      { name: '필리핀 현지 업체', benefit: '한국 시장 진입 장벽 제거, 네트워크 효과 활용', icon: '🇵🇭' },
-      { name: '중앙아시아 업체', benefit: '한국 시장 공식 진입 통로, 안정적 수익 확보', icon: '🌏' },
-      { name: '동유럽 업체', benefit: '우크라이나 등 시장 선점 기회, 지사 설립 지원', icon: '🇺🇦' },
-    ],
-  },
-]
-
 export default function MarriageService() {
   // 구조화된 데이터 (JSON-LD) for SEO & AI
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'Service',
-    name: '글로벌커플케어 (GCC)',
-    description: '국내 최초 국제결혼 통합 플랫폼. 전 세계 결혼 전문가 비교, 비자 지원, 결혼 후 정착 케어',
-    provider: {
-      '@type': 'Organization',
-      name: '드림에이아이랩',
-      url: 'https://dreamailab.com',
-    },
-    serviceType: '국제결혼 통합 플랫폼',
-    areaServed: ['KR', 'VN', 'TH', 'PH', 'JP', 'CN'],
-    availableChannel: {
-      '@type': 'ServiceChannel',
-      serviceUrl: 'https://dreamailab.com/services/marriage',
-    },
-    offers: {
-      '@type': 'AggregateOffer',
-      description: '국제결혼 전문가 매칭, 비자·법무 지원, 언어·자녀양육 케어',
-      priceCurrency: 'KRW',
-    },
-    audience: {
-      '@type': 'PeopleAudience',
-      audienceType: '국제결혼 희망자, 다문화 가정, 국제결혼 전문가',
-    },
-    hasOfferCatalog: {
-      '@type': 'OfferCatalog',
-      name: '국제결혼 통합 서비스',
-      itemListElement: [
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: '전문가 매칭 및 비교',
-            description: '베트남·태국·필리핀·일본·중국 등 전 세계 전문가 정보 비교',
-          },
+    '@graph': [
+      {
+        '@type': 'Service',
+        '@id': 'https://dreamailab.com/services/marriage#service',
+        name: '글로벌커플케어 (GCC)',
+        description:
+          '국제결혼·다문화 가족을 위한 정보·절차·신뢰 인프라 플랫폼. 전문가 비교, 법무·행정 안내, 정착 지원 연계를 제공합니다.',
+        provider: {
+          '@type': 'Organization',
+          name: '드림에이아이랩',
+          url: 'https://dreamailab.com',
         },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: '비자·법무 지원',
-            description: '결혼비자, 혼인신고, 국적 취득 등 법무 자동화 워크플로우',
-          },
+        serviceType: '국제결혼 통합 플랫폼',
+        areaServed: ['KR', 'VN', 'TH', 'PH', 'JP', 'CN'],
+        availableChannel: {
+          '@type': 'ServiceChannel',
+          serviceUrl: 'https://dreamailab.com/services/marriage',
         },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: '결혼 후 정착 지원',
-            description: '언어치료, 자녀양육, 학교·병원 연계, AI 디지털케어로그',
-          },
+        audience: {
+          '@type': 'PeopleAudience',
+          audienceType: '국제결혼 희망자, 다문화 가정, 국제결혼 전문가',
         },
-      ],
-    },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      reviewCount: '1000',
-    },
-    mainEntity: {
-      '@type': 'FAQPage',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: '글로벌커플케어는 무엇인가요?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '국내 최초 국제결혼 통합 플랫폼입니다. 전 세계 국제결혼 전문가들이 참여하여 투명하게 서비스를 제공하며, 결혼 전부터 정착 후까지 평생 케어를 지원합니다.',
-          },
+        hasOfferCatalog: {
+          '@type': 'OfferCatalog',
+          name: '국제결혼 통합 서비스',
+          itemListElement: [
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: '전문가 매칭 및 비교',
+                description: '베트남·태국·필리핀·일본·중국 등 다양한 국가의 전문가 정보 비교',
+              },
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: '비자·법무 지원',
+                description: '결혼비자, 혼인신고, 국적 취득 관련 절차 안내 및 체크리스트',
+              },
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: '결혼 후 정착 지원',
+                description: '언어·자녀양육·교육·의료 정보와 커뮤니티 연결',
+              },
+            },
+          ],
         },
-        {
-          '@type': 'Question',
-          name: '어떤 국가의 국제결혼 정보를 볼 수 있나요?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '베트남, 태국, 필리핀, 일본, 중국을 포함한 전 세계 모든 국가의 국제결혼 전문가 정보를 한 곳에서 비교할 수 있습니다.',
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': 'https://dreamailab.com/services/marriage#faq',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: '플랫폼이 직접 중개를 하나요?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '아니요. 본 서비스는 국제결혼 정보 전문 플랫폼으로, 검증된 파트너(법률·행정·통번역 등)와의 상담 연결을 제공합니다. 계약과 거래는 사용자와 파트너 간에 이루어집니다.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '결혼 후에도 지원을 받을 수 있나요?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '네, 언어치료(자람 노하우 활용), 자녀 양육, 학교·병원 연계, 문화 적응, 커뮤니티 등 결혼 이후 정착과 가족 생활까지 AI 디지털케어로그를 통해 평생 지원합니다.',
+          {
+            '@type': 'Question',
+            name: '가격과 절차는 어떻게 비교하나요?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '국가별 표준 견적 항목과 절차, 예상 기간을 공개하고 업체별 리뷰·완료율·응답 속도 같은 지표를 함께 제공합니다.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '전문가나 회사도 참여할 수 있나요?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '네, 국내외 국제결혼 전문가, 상담사, 여행사, 항공사, 웨딩업체, 언어학원, 병원 등 관련 모든 업체가 참여 가능합니다. 홈페이지 없이도 플랫폼에서 전문 서비스를 제공할 수 있습니다.',
+          {
+            '@type': 'Question',
+            name: '결혼 후에도 지원이 되나요?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '네. 정착(언어·취업·주거·금융·자녀 교육) 가이드를 제공하고, 지역 커뮤니티와 가족 라이프로그 연동으로 지속 지원합니다.',
+            },
           },
-        },
-      ],
-    },
+          {
+            '@type': 'Question',
+            name: '안전과 윤리는 어떻게 보장하나요?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'KYC·신원·문서 검증, 동의 기반 커뮤니케이션, 신고·제재·블랙리스트 운영 등 안전 장치를 적용하고 윤리 가이드라인 준수를 운영 기준으로 둡니다.',
+            },
+          },
+        ],
+      },
+    ],
   }
 
   return (
@@ -639,7 +420,7 @@ export default function MarriageService() {
                   국내·해외 국제결혼 전문가들이 <strong className="text-primary-700">함께 참여하는 멀티사이드 플랫폼</strong>입니다.
                 </p>
                 <p className="text-sm text-gray-700">
-                  한 번의 가입으로 <strong>전 세계 모든 국가·전문가의 정보를 한눈에 비교</strong>하고, 결혼 전부터 정착 이후까지 필요한 모든 서비스를 연결합니다.
+                  한 번의 가입으로 <strong>여러 국가·전문가의 정보를 한눈에 비교</strong>하고, 결혼 전부터 정착 이후까지 필요한 서비스를 연결합니다.
                 </p>
               </div>
 
@@ -647,7 +428,7 @@ export default function MarriageService() {
                 <div className="bg-white rounded-lg p-5 border-2 border-primary-200">
                   <div className="text-2xl mb-2">💑</div>
                   <h4 className="font-semibold text-gray-900 mb-2">결혼 희망자</h4>
-                  <p className="text-sm text-gray-700">한 곳에서 모든 국가·업체의 정보를 한눈에 비교. 일일이 여러 사이트를 돌아다닐 필요 없음</p>
+                  <p className="text-sm text-gray-700">한 곳에서 여러 국가·업체 정보를 같은 기준으로 비교해 탐색 부담을 줄입니다.</p>
                 </div>
                 <div className="bg-white rounded-lg p-5 border-2 border-primary-200">
                   <div className="text-2xl mb-2">🏢</div>
@@ -657,17 +438,17 @@ export default function MarriageService() {
                 <div className="bg-white rounded-lg p-5 border-2 border-primary-200">
                   <div className="text-2xl mb-2">👨‍👩‍👧</div>
                   <h4 className="font-semibold text-gray-900 mb-2">결혼이민자 가정</h4>
-                  <p className="text-sm text-gray-700">언어·자녀양육·문화차이·학교·병원 등 모든 생활 문제를 커뮤니티와 네트워크로 해결</p>
+                  <p className="text-sm text-gray-700">언어·자녀양육·문화차이·학교·병원 등 정착 단계 핵심 이슈를 커뮤니티와 네트워크로 지원</p>
                 </div>
               </div>
 
               <div className="bg-white/50 rounded-lg p-5 border-l-4 border-primary-500">
-                <h4 className="font-semibold text-gray-900 mb-2">🌟 한 곳에서 모든 것을 해결하는 국내 유일 플랫폼</h4>
+                <h4 className="font-semibold text-gray-900 mb-2">🌟 한 곳에서 핵심 정보를 연결하는 통합 플랫폼</h4>
                 <ul className="text-sm text-gray-700 space-y-2">
-                  <li>✓ <strong>정보 통합:</strong> 국내·해외 모든 국제결혼 전문가의 서비스를 한 곳에서 비교하고 선택</li>
+                  <li>✓ <strong>정보 통합:</strong> 국내·해외 주요 국제결혼 전문가의 서비스를 한 곳에서 비교하고 선택</li>
                   <li>✓ <strong>전문가 참여:</strong> 개인적으로 상담 활동을 하시던 분들도 공식 플랫폼에서 투명하게 서비스 제공</li>
-                  <li>✓ <strong>전 생애 지원:</strong> 결혼 전 상담부터 법무·비자, 정착 후 언어·양육·교육까지 All-in-One</li>
-                  <li>✓ <strong>AI 케어로그 연동:</strong> 드림에이아이랩의 네트워크로 병원·학교·언어치료(자람 노하우 활용) 등 해결</li>
+                  <li>✓ <strong>전 생애 지원:</strong> 결혼 전 상담부터 법무·비자, 정착 후 언어·양육·교육까지 연결</li>
+                  <li>✓ <strong>DAL 생태계 연계:</strong> 정착 이후 필요 시 드림에이아이랩 네트워크와의 연결 구조 제공</li>
                 </ul>
               </div>
             </div>
@@ -679,7 +460,7 @@ export default function MarriageService() {
               <div className="text-center mb-8">
                 <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 flex items-center justify-center gap-2">
                   <span className="text-3xl">🌍</span>
-                  글로벌 확장 전략 – 해외 대형 결혼정보업체도 참여할 수밖에 없는 구조
+                  글로벌 확장 전략 – 해외 대형 결혼정보업체가 참여하기 쉬운 구조
                 </h3>
                 <p className="text-gray-700 max-w-3xl mx-auto">
                   {brand.short}는 단순히 한국인을 위한 국제결혼 플랫폼이 아니라, 
@@ -697,12 +478,12 @@ export default function MarriageService() {
                   <div className="space-y-3">
                     <div className="bg-red-50 rounded-lg p-4">
                       <p className="text-sm font-semibold text-gray-900 mb-1">한국 국제결혼 평균 비용</p>
-                      <p className="text-2xl font-bold text-red-600">정부 기준 약 2,200만원</p>
+                      <p className="text-2xl font-bold text-red-600">업체별 편차가 큰 견적 구조</p>
                     </div>
                     <div className="bg-green-50 rounded-lg p-4">
                       <p className="text-sm font-semibold text-gray-900 mb-1">베트남·태국·필리핀 현지 기준</p>
-                      <p className="text-2xl font-bold text-green-600">약 1/2 수준</p>
-                      <p className="text-sm text-gray-600 mt-2">(50% 이상 저렴)</p>
+                      <p className="text-2xl font-bold text-green-600">비용 항목 표준 공개</p>
+                      <p className="text-sm text-gray-600 mt-2">(비교 가능성 강화)</p>
                     </div>
                     <p className="text-sm text-gray-600 mt-3">
                       현지 업체 기준에서도 한국 시장은 매우 큰 규모입니다. 
@@ -713,7 +494,7 @@ export default function MarriageService() {
                 <div className="bg-white rounded-xl p-6 shadow-sm">
                   <h4 className="font-bold text-gray-900 mb-3 flex items-center gap-2">
                     <span className="text-xl">🚪</span>
-                    해외 업체가 입점할 수밖에 없는 이유
+                    해외 업체가 입점하기 쉬운 이유
                   </h4>
                   <ul className="space-y-3 text-sm text-gray-700">
                     <li className="flex items-start gap-2">
@@ -735,7 +516,7 @@ export default function MarriageService() {
               <div className="bg-gradient-to-r from-indigo-600 to-blue-600 text-white rounded-xl p-6">
                 <h4 className="font-bold text-lg mb-3">💡 핵심 메시지</h4>
                 <p className="text-indigo-100">
-                  {brand.short}는 국내용 플랫폼이 아니라 전 세계 국제결혼 산업 전체를 하나의 표준으로 묶는 글로벌 인프라입니다.
+                  {brand.short}는 국내용 서비스에 머무르지 않고, 국제결혼 산업의 표준 기준을 확장해가는 글로벌 인프라를 지향합니다.
                 </p>
               </div>
             </div>
@@ -743,12 +524,12 @@ export default function MarriageService() {
         </div>
       </article>
 
-      {/* Why Now - Why Must Succeed */}
+      {/* Why Now */}
       <article className="py-16 lg:py-24 bg-gradient-to-br from-amber-50 to-orange-50" aria-labelledby="why-succeed">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 id="why-succeed" className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              국제결혼 플랫펼 - 왜 지금이고, 왜 성공할 수밖에 없는가
+              국제결혼 플랫폼 - 왜 지금 구조 전환이 필요한가
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               <strong className="text-primary-600">문제의 크기</strong>와 <strong className="text-primary-600">해결의 공백</strong>이 명확한 시장입니다
@@ -804,7 +585,7 @@ export default function MarriageService() {
 
             <div className="bg-white rounded-2xl p-8 shadow-sm border-2 border-gray-300">
               <div className="text-4xl mb-4 text-center">❌</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">구조적 해결책 = 0</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">표준화된 해결 인프라 부족</h3>
               <ul className="space-y-3 text-sm text-gray-700">
                 <li className="flex items-start gap-2">
                   <span className="text-gray-500 mt-1">•</span>
@@ -828,14 +609,14 @@ export default function MarriageService() {
 
           <div className="bg-gradient-to-r from-primary-600 to-secondary-600 rounded-2xl p-8 text-white text-center mb-8">
             <div className="text-5xl mb-4">🎯</div>
-            <h3 className="text-2xl font-bold mb-4">결론: 카테고리 킬러 포지션</h3>
+            <h3 className="text-2xl font-bold mb-4">결론: 구조 전환의 기회</h3>
             <p className="text-lg mb-6 max-w-3xl mx-auto">
-              <strong>문제 인식은 높고</strong>, <strong>수요는 존재하며</strong>, <strong>해결 인프라는 없습니다</strong>
+              <strong>문제 인식은 높고</strong>, <strong>수요는 존재하며</strong>, <strong>표준화된 해결 인프라는 아직 부족합니다</strong>
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
               <div className="bg-white/20 rounded-lg p-4 backdrop-blur-sm">
                 <p className="font-bold mb-1">시장 진입</p>
-                <p className="text-sm">First Mover Advantage</p>
+                <p className="text-sm">초기 표준 설계 기회</p>
               </div>
               <div className="bg-white/20 rounded-lg p-4 backdrop-blur-sm">
                 <p className="font-bold mb-1">네트워크 효과</p>
@@ -858,12 +639,12 @@ export default function MarriageService() {
               <div className="bg-red-50 rounded-xl p-6 border-2 border-red-200">
                 <h4 className="font-bold text-gray-900 mb-3">현재 시장의 문제</h4>
                 <p className="text-sm text-gray-700 mb-4">
-                  국내 국제결혼 업체들이 불균형한 정보로 사용자들에게 이득만 취하려고 합니다.
+                  업체별 정보 공개 기준이 달라 사용자가 합리적으로 비교하기 어려운 구조가 반복됩니다.
                 </p>
                 <ul className="space-y-2 text-sm text-gray-700">
                   <li className="flex items-start gap-2">
                     <span className="text-red-500 mt-1">✗</span>
-                    <span>한국 평균 비용: <strong>정부 기준 약 2,200만원</strong> (과다 비용 위험)</span>
+                    <span>업체별 견적 기준이 달라 비용 비교가 어렵고 과다 청구 위험이 존재</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-red-500 mt-1">✗</span>
@@ -878,12 +659,12 @@ export default function MarriageService() {
               <div className="bg-green-50 rounded-xl p-6 border-2 border-green-200">
                 <h4 className="font-bold text-gray-900 mb-3">{brand.short}의 해결책</h4>
                 <p className="text-sm text-gray-700 mb-4">
-                  해외 현지 업체 직접 입점으로 비용 구조를 투명하게 공개하고 시장을 올바르게 평정합니다.
+                  해외 현지 업체 직접 입점으로 비용 구조를 투명하게 공개하고 가격 비교 가능성을 높입니다.
                 </p>
                 <ul className="space-y-2 text-sm text-gray-700">
                   <li className="flex items-start gap-2">
                     <span className="text-green-500 mt-1">✓</span>
-                    <span>베트남·태국·필리핀 현지 기준: <strong>약 1/2 수준</strong> (50% 이상 저렴, 투명 공개)</span>
+                    <span>국가·업체별 비용 항목을 같은 형식으로 공개해 비교 가능성 강화</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-green-500 mt-1">✓</span>
@@ -911,10 +692,10 @@ export default function MarriageService() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 id="core-features" className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              국제결혼 플랫펼 핵심 기능 - 모든 국가 전문가 비교
+              국제결혼 플랫폼 핵심 구조 요소
             </h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
-              국제결혼 전 과정을 표준화하고, 결혼 이후 정착까지 통합 지원합니다.
+              기능 나열보다, 정보·절차·정착이 어떻게 하나의 구조로 연결되는지에 초점을 둡니다.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -1007,200 +788,36 @@ export default function MarriageService() {
         </div>
       </section>
 
-      {/* 글로벌 확장 전략 상세 섹션 */}
-      <section className="py-16 lg:py-24 bg-gradient-to-br from-indigo-50 to-blue-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              🌍 글로벌 확장 전략 – 해외 현지 업체 대규모 입점
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              동남아시아·중앙아시아·동유럽 등 한국인의 국제결혼 수요 상위권 국가 집중 전략
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-            {/* 초기 DB 확보 전략 */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-                <span className="text-3xl">📌</span>
-                초기 결혼희망자 데이터베이스 확보 전략
-              </h3>
-              <p className="text-gray-700 mb-4">
-                동남아시아·중앙아시아·동유럽 국가에는 한국과 결혼을 희망하는 사람들의 데이터베이스가 이미 크고 잘 정리되어 있습니다.
-              </p>
-              <div className="bg-gray-50 rounded-lg p-5 mb-4">
-                <p className="text-sm text-gray-600 mb-3"><strong>기존 문제:</strong></p>
-                <ul className="space-y-2 text-sm text-gray-700">
-                  <li className="flex items-start gap-2">
-                    <span className="text-red-500 mt-1">•</span>
-                    <span>현지 브로커에게 정보가 쪼개져 있음</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-red-500 mt-1">•</span>
-                    <span>개인 유튜버에게 의존</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-red-500 mt-1">•</span>
-                    <span>검증 안 된 중개사에 분산</span>
-                  </li>
-                </ul>
-              </div>
-              <div className="bg-green-50 rounded-lg p-5 border-l-4 border-green-500">
-                <p className="text-sm font-semibold text-gray-900 mb-2">{brand.short}의 해결책:</p>
-                <p className="text-sm text-gray-700">
-                  처음부터 국가별 대형 현지 회사들과 직접 제휴하여 결혼희망자 DB를 정식 확보합니다. 
-                  이는 국내 플랫폼 중 전례 없는 정보량과 신뢰도를 갖게 만드는 핵심 동력입니다.
-                </p>
-              </div>
-            </div>
-
-            {/* 우크라이나 시장 선점 전략 */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-                <span className="text-3xl">🇺🇦</span>
-                우크라이나 시장 선점 전략
-              </h3>
-              <p className="text-gray-700 mb-4">
-                전쟁 종료 시점에서 우크라이나 국제결혼 시장은 폭발적으로 재편될 가능성이 매우 높습니다.
-              </p>
-              <div className="space-y-4">
-                <div className="bg-blue-50 rounded-lg p-4">
-                  <h4 className="font-semibold text-gray-900 mb-2 text-sm">시장 재편 기회</h4>
-                  <ul className="text-sm text-gray-700 space-y-1">
-                    <li>• 기존 플랫폼·업체 인프라 붕괴</li>
-                    <li>• 사회경제적 요인으로 국제결혼 증가 예상</li>
-                    <li>• 한국-우크라이나 민간 교류 확대 가능성</li>
-                  </ul>
-                </div>
-                <div className="bg-yellow-50 rounded-lg p-4 border-l-4 border-yellow-500">
-                  <p className="text-sm font-semibold text-gray-900 mb-2">{brand.short}의 전략:</p>
-                  <p className="text-sm text-gray-700">
-                    이미 우크라이나 입점 후보 업체와 협력 논의 중이며, 전쟁 종료 후 즉시 지사 설립 및 DB 확보가 가능합니다. 
-                    이는 한국형 국제결혼 플랫폼이 우크라이나 내 1위 사업자로 자리잡는 유일한 길입니다.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* What Changes - For Users */}
+      {/* Stakeholder View */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              <span className="text-primary-600">사용자</span>에게 무엇이 바뀌는가
-            </h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">누구를 위한 인프라인가</h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
-              국제결혼을 준비하는 분들과 결혼이민자 가정의 삶이 완전히 달라집니다
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {whatChangesForUsers.map((item, i) => (
-              <div key={i} className="bg-gradient-to-br from-red-50 to-pink-50 rounded-xl p-6 shadow-sm">
-                <div className="text-3xl mb-3">{item.icon}</div>
-                <div className="mb-4">
-                  <div className="flex items-start gap-2 mb-2">
-                    <span className="text-red-500 font-bold">Before:</span>
-                    <span className="text-sm text-gray-700">{item.before}</span>
-                  </div>
-                  <div className="flex items-start gap-2 mb-2">
-                    <span className="text-green-600 font-bold">After:</span>
-                    <span className="text-sm text-gray-700">{item.after}</span>
-                  </div>
-                </div>
-                <div className="bg-white rounded-lg p-3">
-                  <p className="text-xs font-semibold text-primary-600 mb-1">✓ 얻는 혜택</p>
-                  <p className="text-sm text-gray-700">{item.benefit}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* What Changes - For Providers */}
-      <section className="py-16 lg:py-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              <span className="text-primary-600">전문가·회사</span>에게 무엇이 바뀌는가
-            </h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">
-              국제결혼 서비스 제공자들의 비즈니스 방식이 완전히 달라집니다
+              GCC는 사용자·전문가·공공이 같은 기준으로 정보를 이해하고 협업할 수 있도록 설계된 구조입니다.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {whatChangesForProviders.map((item, i) => (
-              <div key={i} className="bg-white rounded-xl p-6 shadow-sm">
-                <div className="text-3xl mb-3">{item.icon}</div>
-                <h3 className="font-bold text-gray-900 mb-3">{item.type}</h3>
-                <div className="mb-4 space-y-2">
-                  <div>
-                    <p className="text-xs text-red-600 font-semibold mb-1">❌ 기존</p>
-                    <p className="text-sm text-gray-700">{item.before}</p>
-                  </div>
-                  <div>
-                    <p className="text-xs text-green-600 font-semibold mb-1">✅ {brand.short} 이후</p>
-                    <p className="text-sm text-gray-700">{item.after}</p>
-                  </div>
-                </div>
-                <div className="bg-primary-50 rounded-lg p-3">
-                  <p className="text-xs font-semibold text-primary-700 mb-1">💡 핵심 이득</p>
-                  <p className="text-sm text-gray-700">{item.benefit}</p>
-                </div>
+            {targetAudiences.map((audience, i) => (
+              <div key={i} className="bg-gray-50 rounded-xl p-6 shadow-sm text-center">
+                <div className="text-3xl mb-3">{audience.icon}</div>
+                <h3 className="font-semibold text-gray-900 mb-2">{audience.title}</h3>
+                <p className="text-sm text-gray-700 leading-relaxed">{audience.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* What Changes - For Society */}
-      <section className="py-16 lg:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              <span className="text-primary-600">사회</span>에 무엇이 바뀌는가
-            </h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">
-              국제결혼 산업의 구조적 문제를 해결하고 건강한 다문화 사회를 만듭니다
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {whatChangesForSociety.map((item, i) => (
-              <div key={i} className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 shadow-sm">
-                <div className="text-3xl mb-3">{item.icon}</div>
-                <div className="space-y-3">
-                  <div>
-                    <p className="text-xs text-red-600 font-semibold mb-1">⚠️ 사회적 문제</p>
-                    <p className="text-sm text-gray-700">{item.problem}</p>
-                  </div>
-                  <div>
-                    <p className="text-xs text-blue-600 font-semibold mb-1">🎯 {brand.short}의 해결책</p>
-                    <p className="text-sm text-gray-700">{item.solution}</p>
-                  </div>
-                  <div className="bg-white rounded-lg p-3">
-                    <p className="text-xs font-semibold text-primary-600 mb-1">✨ 사회적 임팩트</p>
-                    <p className="text-sm text-gray-700">{item.impact}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why Must Use */}
+      {/* Why Choose Platform */}
       <section className="py-16 lg:py-24 bg-gradient-to-br from-primary-600 to-secondary-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              왜 이 플랫폼을 쓸 수밖에 없는가
+              왜 이 플랫폼을 선택하는가
             </h2>
             <p className="text-lg max-w-3xl mx-auto text-white/90">
-              {brand.short}는 선택이 아닌 <strong>필수</strong>가 될 것입니다
+              {brand.short}는 비교·투명성·정착 연계를 중시하는 사용자에게 실질적인 기준을 제공합니다
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -1209,7 +826,7 @@ export default function MarriageService() {
                 <h3 className="font-bold text-xl mb-3">{item.title}</h3>
                 <p className="text-sm mb-4 text-white/90">{item.desc}</p>
                 <div className="bg-white/20 rounded-lg p-3">
-                  <p className="text-xs font-semibold mb-1">💡 필수인 이유</p>
+                  <p className="text-xs font-semibold mb-1">💡 선택 근거</p>
                   <p className="text-sm">{item.reason}</p>
                 </div>
               </div>
@@ -1218,11 +835,11 @@ export default function MarriageService() {
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border-2 border-yellow-300">
               <h3 className="font-bold text-xl mb-3 flex items-center gap-2">
                 <span>🌐</span>
-                해외 DB 확보 → 국내 사용자 필수 구조
+                해외 DB 확보 → 국내 사용자 선택 폭 확대
               </h3>
               <p className="text-sm mb-4 text-white/90">
                 해외 현지 업체 입점으로 대규모 결혼희망자 데이터베이스를 확보하면, 
-                국내 사용자들은 더 많은 후보자와 정보를 한눈에 비교할 수 있어 필수 플랫폼이 됩니다.
+                국내 사용자들은 더 많은 후보자와 정보를 한눈에 비교할 수 있어 비교 효율이 높아집니다.
               </p>
               <div className="bg-white/20 rounded-lg p-3">
                 <p className="text-xs font-semibold mb-1">💡 네트워크 효과</p>
@@ -1241,7 +858,7 @@ export default function MarriageService() {
               비즈니스 트렌드를 어떻게 바꾸는가
             </h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
-              국제결혼 산업의 패러다임을 완전히 전환합니다
+              국제결혼 산업의 운영 방식을 점진적으로 전환합니다
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -1268,148 +885,19 @@ export default function MarriageService() {
         </div>
       </section>
 
-      {/* How To Use - Users & Providers */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              어떻게 이용할 수 있는가
-            </h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">연결되는 파트너 축</h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
-              누구나 쉽게 이용하고, 누구나 쉽게 참여할 수 있습니다
+              GCC는 특정 업종 목록을 나열하기보다, 결혼 전후 과정에서 반복적으로 필요한 연결 축을 표준화합니다.
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* 사용자 */}
-            <div>
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-8 mb-6">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2 flex items-center gap-2">
-                  <span className="text-3xl">👨‍👩‍👧</span>
-                  {howToUse.users.title}
-                </h3>
-                <p className="text-sm text-gray-600">간단한 5단계로 시작부터 정착까지</p>
-              </div>
-              <div className="space-y-4">
-                {howToUse.users.steps.map((step, i) => (
-                  <div key={i} className="bg-white border border-gray-200 rounded-xl p-5 hover:shadow-md transition-shadow">
-                    <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0">
-                        <div className="w-12 h-12 rounded-full bg-primary-100 flex items-center justify-center text-2xl">
-                          {step.icon}
-                        </div>
-                      </div>
-                      <div className="flex-1">
-                        <div className="flex items-center gap-2 mb-1">
-                          <span className="text-xs font-bold text-primary-600 bg-primary-50 px-2 py-1 rounded">
-                            {step.step}
-                          </span>
-                          <h4 className="font-bold text-gray-900">{step.title}</h4>
-                        </div>
-                        <p className="text-sm text-gray-700">{step.desc}</p>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* 제공자 */}
-            <div>
-              <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-8 mb-6">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2 flex items-center gap-2">
-                  <span className="text-3xl">🏢</span>
-                  {howToUse.providers.title}
-                </h3>
-                <p className="text-sm text-gray-600">홈페이지 없이도 전문 서비스 제공</p>
-              </div>
-              <div className="space-y-4">
-                {howToUse.providers.steps.map((step, i) => (
-                  <div key={i} className="bg-white border border-gray-200 rounded-xl p-5 hover:shadow-md transition-shadow">
-                    <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0">
-                        <div className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center text-2xl">
-                          {step.icon}
-                        </div>
-                      </div>
-                      <div className="flex-1">
-                        <div className="flex items-center gap-2 mb-1">
-                          <span className="text-xs font-bold text-green-600 bg-green-50 px-2 py-1 rounded">
-                            {step.step}
-                          </span>
-                          <h4 className="font-bold text-gray-900">{step.title}</h4>
-                        </div>
-                        <p className="text-sm text-gray-700">{step.desc}</p>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Business Partners */}
-      <section className="py-16 lg:py-24 bg-gradient-to-br from-purple-50 to-pink-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              함께할 수 있는 비즈니스 파트너
-            </h2>
-            <p className="text-gray-600 max-w-3xl mx-auto mb-4">
-              국제결혼은 단순히 결혼만이 아닙니다. 여행·숙박·웨딩·정착·생활 전반의 서비스가 필요합니다.
-            </p>
-            <p className="text-lg font-semibold text-primary-600">
-              관련 산업의 모든 기업이 {brand.short}와 함께 성장할 수 있습니다
-            </p>
-          </div>
-
-          <div className="space-y-8">
-            {businessPartners.map((category, idx) => (
-              <div key={idx} className="bg-white rounded-2xl p-8 shadow-sm">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6 pb-4 border-b-2 border-primary-200">
-                  {category.category}
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                  {category.partners.map((partner, i) => (
-                    <div key={i} className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-5 hover:shadow-md transition-all hover:scale-105">
-                      <div className="text-3xl mb-3 text-center">{partner.icon}</div>
-                      <h4 className="font-bold text-gray-900 mb-2 text-center">{partner.name}</h4>
-                      <div className="bg-white rounded-lg p-3">
-                        <p className="text-xs text-gray-700 leading-relaxed">{partner.benefit}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-12 bg-white rounded-2xl p-8 shadow-sm border-2 border-primary-200">
-            <div className="text-center">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                💼 파트너십 문의
-              </h3>
-              <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
-                여행사, 항공사, 숙박업, 웨딩업체, 부동산, 언어학원, 병원, 보험사 등<br />
-                국제결혼 관련 모든 비즈니스와 협력합니다
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <div className="bg-primary-50 rounded-lg px-6 py-3">
-                  <p className="text-sm font-semibold text-primary-700">✓ 고객 자동 연결</p>
-                </div>
-                <div className="bg-primary-50 rounded-lg px-6 py-3">
-                  <p className="text-sm font-semibold text-primary-700">✓ 마케팅 비용 절감</p>
-                </div>
-                <div className="bg-primary-50 rounded-lg px-6 py-3">
-                  <p className="text-sm font-semibold text-primary-700">✓ 안정적 수익 확보</p>
-                </div>
-                <div className="bg-primary-50 rounded-lg px-6 py-3">
-                  <p className="text-sm font-semibold text-primary-700">✓ 플랫폼 신뢰도 공유</p>
-                </div>
-              </div>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <InfoCard title="법률·행정" desc="혼인·비자·체류 절차를 표준 흐름으로 연결" icon="⚖️" />
+            <InfoCard title="이동·의례" desc="여행·숙박·웨딩 관련 파트너 연계 기준 정리" icon="✈️" />
+            <InfoCard title="정착·생활" desc="주거·언어·금융·보호 체계를 정착 단계에 연결" icon="🏠" />
+            <InfoCard title="교육·의료" desc="가족 단위의 장기 생활 지원으로 확장" icon="🏥" />
           </div>
         </div>
       </section>
@@ -1538,7 +1026,7 @@ export default function MarriageService() {
           <div className="mt-12 bg-white rounded-2xl p-8 shadow-sm border border-gray-200">
             <h3 className="text-2xl font-bold mb-6 text-center text-gray-900">🌐 국가별 지사 확장 로드맵</h3>
             <p className="text-gray-600 mb-8 text-center max-w-3xl mx-auto">
-              {brand.short}의 최종 구조는 단순 비교 플랫폼이 아니라 각 국가의 공식 결혼 생태계를 흡수하는 형태입니다.
+              {brand.short}의 장기 구조는 단순 비교 플랫폼을 넘어 각 국가의 결혼 생태계와 표준 기준으로 연결되는 형태를 지향합니다.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
@@ -1557,9 +1045,9 @@ export default function MarriageService() {
               </div>
               <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
                 <div className="text-3xl mb-3 text-center">3️⃣</div>
-                <h4 className="font-bold mb-3 text-center text-gray-900">현지 업체 전체 흡수</h4>
+                <h4 className="font-bold mb-3 text-center text-gray-900">현지 파트너 네트워크 확장</h4>
                 <p className="text-sm text-gray-700 text-center">
-                  국가 내 모든 결혼 관련 사업자가 {brand.short} 안으로 입점, 현지 결혼 전문가·통번역·행정사까지 플랫폼 기반 운영
+                  국가별 핵심 결혼 관련 사업자가 {brand.short} 안으로 입점해 현지 전문가·통번역·행정사와 함께 플랫폼 기반 운영
                 </p>
               </div>
               <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
@@ -1573,7 +1061,7 @@ export default function MarriageService() {
             <div className="mt-8 bg-gradient-to-r from-primary-50 to-secondary-50 rounded-xl p-6 border-l-4 border-primary-500">
               <p className="text-center text-gray-700">
                 <strong>최종 목표:</strong> 한국의 표준 플랫폼 → 국가별 지사 → 글로벌 표준으로 확장하여 
-                전 세계 국제결혼 산업 전체를 하나의 표준으로 묶는 글로벌 인프라 구축
+                국제결혼 산업 전반에서 통용될 수 있는 표준 기준과 운영 인프라 구축
               </p>
             </div>
           </div>
@@ -1623,7 +1111,7 @@ export default function MarriageService() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="inline-block px-4 py-2 bg-gray-100 text-gray-800 rounded-full text-sm font-semibold mb-4">In Development</span>
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">{brand.name} (개발 중 공개 사전 안내)</h2>
-          <p className="text-gray-600">국내 최초 국제결혼 <strong>정보·비즈니스 인프라 플랫폼</strong>으로, 표준화·투명화·정착 연계를 중심으로 개발 중입니다. 국제결혼을 넘어 다문화 가족과 국제 커플의 전 생애를 지원하는 것을 목표로 하며, 파트너 공개는 순차 진행됩니다.</p>
+          <p className="text-gray-600">국제결혼 <strong>정보·비즈니스 인프라 플랫폼</strong>으로, 표준화·투명화·정착 연계를 중심으로 개발 중입니다. 국제결혼을 넘어 다문화 가족과 국제 커플의 전 생애를 지원하는 것을 목표로 하며, 파트너 공개는 순차 진행됩니다.</p>
         </div>
       </section>
 
@@ -1632,7 +1120,7 @@ export default function MarriageService() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">DAL 생태계와의 연결</h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">글로벌커플케어(GCC)는 DAL의 AI 디지털케어로그 표준을 국제결혼·다문화 가족 도메인에 적용합니다. 자람이·시니어앤라이프와 연계하여 전 생애 케어 플랫폼을 확장합니다.</p>
+            <p className="text-gray-600 max-w-3xl mx-auto">글로벌커플케어(GCC)는 국제결혼·다문화 가족 영역의 정보·절차·신뢰 인프라를 담당하고, 정착 이후 의료·교육·상담 데이터 흐름은 DAL 생태계 서비스와 연계 가능한 구조로 확장합니다.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-white rounded-xl p-6 shadow-sm">
