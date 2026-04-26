@@ -3,268 +3,422 @@ import Link from 'next/link'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 
+const pageCanonical = 'https://dreamailab.com/services/veggie'
+
 export const metadata: Metadata = {
-  title: '채식 | 비건 | 베지테리안 | 채식식단 | 비건레시피 | 채식식당 | 베지케어',
+  title: '베지케어 | AI 채식·비건 영양 케어로그 플랫폼 | 드림에이아이랩',
   description:
-    '채식과 비건 라이프스타일을 위한 통합 플랫폼. 채식식단, 비건레시피, 채식식당 찾기, 영양관리, 채식 커뮤니티까지 한 번에. AI가 개인 맞춤형 채식 식단과 영양 가이드를 제공합니다.',
-  keywords:
-    '채식, 비건, 베지테리안, 채식식단, 비건레시피, 채식식당, 비건맛집, 채식영양, 비건영양제, 채식단백질, 비건식품, 채식커뮤니티, 베지케어',
+    '베지케어는 채식·비건·플렉시테리언의 식습관, 영양, 건강 변화를 AI 디지털케어로그로 연결하는 라이프스타일 케어 플랫폼입니다. 식단 기록, 영양 분석, AI 레시피, 비건 맛집, 커뮤니티, 커머스 연계를 하나의 흐름으로 제공합니다.',
+  keywords: [
+    '베지케어',
+    'VeggieCare',
+    '채식 플랫폼',
+    '비건 플랫폼',
+    '채식 식단',
+    '비건 레시피',
+    '채식 영양관리',
+    '식습관 케어로그',
+    'AI 디지털케어로그',
+    '플렉시테리언',
+    '비건 맛집',
+    '드림에이아이랩',
+  ],
+  alternates: { canonical: pageCanonical },
+  openGraph: {
+    title: '베지케어 | AI 채식·비건 영양 케어로그 플랫폼',
+    description:
+      '채식 이후의 건강까지 관리하는 DAL 웰니스 축. 식단 기록 → 영양 분석 → 레시피·맛집·커머스 실행 → 건강 변화 환류.',
+    url: pageCanonical,
+    siteName: '드림에이아이랩',
+    type: 'website',
+    locale: 'ko_KR',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: '베지케어 | AI 채식·비건 영양 케어로그',
+    description: '채식 생활을 기록하고, 영양과 건강 변화를 AI로 이어주는 라이프스타일 케어 플랫폼.',
+  },
+  robots: { index: true, follow: true },
 }
 
-// ===== 브랜드/베지케어 상수 =====
 const brand = {
   name: '베지케어',
   english: 'VeggieCare',
-  slogans: [
-    '채식, 그 이후까지 함께 케어합니다.',
-    '건강한 식탁, 지속가능한 지구',
-    '베지케어 – 식물성 라이프스타일의 완성',
-  ],
+  status: 'In Development',
 }
 
-const veggieTypes = [
+const targetAudiences = [
   {
-    name: '비건 (Vegan)',
-    desc: '동물성 제품 전부 배제 (고기, 생선, 달걀, 우유, 꿀)',
+    title: '채식을 시작한 개인',
+    desc: '무엇을 먹어야 할지, 단백질·철분·비타민 B12는 충분한지 알고 싶은 사용자',
     icon: '🌱',
-    strictness: '가장 엄격'
   },
   {
-    name: '락토 베지터리안',
-    desc: '유제품은 허용, 고기·생선·달걀은 배제',
-    icon: '🥛',
-    strictness: '중간'
+    title: '비건·채식 커뮤니티',
+    desc: '레시피, 식당, 제품, 건강 경험을 신뢰 가능한 기준으로 공유하려는 사용자',
+    icon: '💬',
   },
   {
-    name: '오보 베지터리안',
-    desc: '달걀은 허용, 고기·생선·유제품은 배제',
-    icon: '🥚',
-    strictness: '중간'
+    title: '헬스케어·영양 전문가',
+    desc: '식습관 데이터를 바탕으로 상담, 영양 코칭, 만성질환 예방을 고도화하려는 전문가',
+    icon: '🧑‍⚕️',
   },
   {
-    name: '페스코 베지터리안',
-    desc: '생선은 허용, 고기·달걀·유제품은 배제',
-    icon: '🐟',
-    strictness: '유연'
+    title: '브랜드·식당·파트너',
+    desc: '비건 식품, 밀키트, 레스토랑, 친환경 브랜드를 적절한 사용자와 연결하려는 사업자',
+    icon: '🏪',
+  },
+]
+
+const problemCards = [
+  {
+    title: '채식 정보는 많지만 개인에게 맞지 않음',
+    desc: '검색 결과와 SNS 레시피는 많지만, 나의 건강 상태·알레르기·운동량·목표에 맞는지는 알기 어렵습니다.',
   },
   {
-    name: '플렉시테리언',
-    desc: '유연한 채식 - 가끔 고기 섭취',
-    icon: '🔄',
-    strictness: '가장 유연'
-  }
+    title: '영양 결핍 걱정이 반복됨',
+    desc: '단백질, 철분, 비타민 B12, 칼슘, 오메가3 등 핵심 영양소를 꾸준히 확인하기 어렵습니다.',
+  },
+  {
+    title: '맛집·제품·레시피 정보가 흩어짐',
+    desc: '지도, 커뮤니티, 쇼핑몰, 블로그가 분리되어 있어 식단 실행까지 이어지는 흐름이 끊깁니다.',
+  },
+  {
+    title: '건강 변화가 기록으로 남지 않음',
+    desc: '채식 후 체중, 혈압, 혈당, 피로감, 소화 상태가 어떻게 달라졌는지 장기적으로 보기 어렵습니다.',
+  },
+  {
+    title: '초기 전환 후 지속이 어려움',
+    desc: '처음에는 의지가 있어도 외식, 회식, 가족 식사, 장보기 단계에서 쉽게 중단됩니다.',
+  },
+  {
+    title: '파트너 시장은 성장하지만 기준이 부족함',
+    desc: '비건 식품·레스토랑·밀키트 시장은 커지지만, 사용자에게 필요한 제품을 데이터 기반으로 연결하는 기준은 부족합니다.',
+  },
+]
+
+const personaRows = [
+  {
+    who: '초기 채식 입문자',
+    pain: '무엇부터 먹어야 할지 몰라 샐러드·두부 정도로 식단이 반복됩니다.',
+    gain: '현재 식습관과 목표를 입력하면 부족한 영양소와 이번 주 실행 식단을 먼저 봅니다.',
+  },
+  {
+    who: '비건·락토·오보 사용자',
+    pain: '엄격도와 허용 식품이 달라 일반 식단 앱으로는 정확히 관리하기 어렵습니다.',
+    gain: '채식 유형별 허용 재료와 제외 재료를 기준으로 레시피·외식·제품 추천이 달라집니다.',
+  },
+  {
+    who: '만성질환·체중 관리 사용자',
+    pain: '채식이 건강에 좋다는 말은 많지만, 내 혈압·혈당·체중 변화와 연결해 보기 어렵습니다.',
+    gain: '식습관 로그와 건강 지표를 함께 보고, 의료·헬스케어 축과 연계 가능한 요약을 만듭니다.',
+  },
+  {
+    who: '식당·브랜드·커머스 파트너',
+    pain: '광고는 해도 어떤 사용자에게 어떤 메뉴·제품이 필요한지 알기 어렵습니다.',
+    gain: '사용자 선호·제한·영양 목표 기반으로 적합한 메뉴, 제품, 정기배송을 연결합니다.',
+  },
+]
+
+const platformSteps = [
+  {
+    n: 1,
+    title: '식습관·건강 목표 입력',
+    body: '채식 유형, 알레르기, 건강 목표, 운동량, 기존 질환·관심 지표를 간단히 기록합니다.',
+  },
+  {
+    n: 2,
+    title: 'AI 영양 분석',
+    body: '식단 기록에서 단백질·철분·B12·칼슘·오메가3 등 핵심 영양소의 부족 가능성을 확인합니다.',
+  },
+  {
+    n: 3,
+    title: '실행 추천',
+    body: '이번 주 식단, 대체 재료, 레시피, 주변 식당, 밀키트·제품을 상황에 맞게 연결합니다.',
+  },
+  {
+    n: 4,
+    title: '건강 변화 추적',
+    body: '체중, 혈압, 혈당, 컨디션, 소화 상태, 수면 같은 변화를 식습관과 함께 봅니다.',
+  },
+  {
+    n: 5,
+    title: '환류와 지속',
+    body: '실행 결과가 다시 로그로 쌓이며 추천 정확도와 지속 가능성이 점진적으로 높아집니다.',
+  },
 ]
 
 const coreFeatures = [
   {
-    title: 'AI 맞춤형 영양 관리',
-    desc: '디지털케어로그 연동으로 개인 건강 데이터 기반 영양소 분석 및 맞춤 식단 추천',
+    icon: '📒',
+    title: '베지케어로그',
+    desc: '매일의 식단, 컨디션, 건강 지표를 같은 타임라인에 쌓아 채식 이후의 변화를 기록합니다.',
+  },
+  {
     icon: '🧠',
+    title: 'AI 영양 분석',
+    desc: '채식 유형과 건강 목표에 맞춰 부족 가능 영양소, 과잉 섭취, 대체 식품을 제안합니다.',
   },
   {
-    title: '비건/채식 맛집 검색',
-    desc: 'GPS 기반 지역별 비건·채식 식당 안내, 리뷰·평점·메뉴 정보 제공',
-    icon: '🍽️',
+    icon: '🥗',
+    title: 'AI 레시피·식단',
+    desc: '집에 있는 재료, 예산, 조리 시간, 알레르기, 채식 엄격도에 맞춘 식단과 레시피를 제공합니다.',
   },
   {
-    title: 'AI 레시피 추천',
-    desc: '집에 있는 재료로 만들 수 있는 채식 레시피 AI 생성 및 맞춤 추천',
-    icon: '👨‍🍳',
-  },
-  {
-    title: '커뮤니티·경험 공유',
-    desc: '채식 레시피 공유, 맛집 리뷰, 건강관리 경험담, Q&A 게시판',
-    icon: '👥',
-  },
-  {
-    title: '정기배송·밀키트 연계',
-    desc: '비건 밀키트·식품 브랜드와 제휴한 정기배송 서비스',
-    icon: '📦',
-  },
-  {
-    title: '채식 챌린지·리워드',
-    desc: '한 달 채식하기 챌린지, 성공 시 포인트·쿠폰 지급',
-    icon: '🏆',
-  },
-]
-
-const marketTrends = [
-  {
-    category: '건강 트렌드',
-    title: '만성질환 예방을 위한 채식 선택 급증',
-    details: [
-      '고혈압, 당뇨, 비만 예방 목적으로 채식을 선택하는 사람들이 연평균 15% 증가',
-      'WHO 권장사항: 식물성 식단이 심혈관 질환 위험을 32% 감소',
-      '한국인 10명 중 3명이 "건강을 위해 고기를 줄이겠다" 응답 (2023년 조사)',
-      '의료진 70%가 "환자에게 식물성 식단 권장 경험" 있다고 답변'
-    ],
-    icon: '🏥'
-  },
-  {
-    category: '환경 의식',
-    title: '기후위기 대응으로 식습관 변화 가속화',
-    details: [
-      '축산업이 전 세계 온실가스의 14.5% 차지 (UN FAO 보고서)',
-      '소 1마리당 연간 70kg 메탄가스 배출 → 자동차 1대와 동일',
-      'ESG 투자 트렌드: 기업들이 친환경 식품 공급망 구축 필수',
-      '한국 정부: 2050 탄소중립 목표로 식물성 식품 산업 육성 정책 발표'
-    ],
-    icon: '🌍'
-  },
-  {
-    category: '윤리적 소비',
-    title: '동물권리·복지 의식 확산과 윤리적 소비 증가',
-    details: [
-      '동물복지 인증 제품 구매 의향 65% (2023년 소비자 조사)',
-      '공장식 축산에 대한 반대 의견 78% (MZ세대 기준)',
-      '비건 화장품 시장 연평균 25% 성장 (2020-2023)',
-      '동물실험 반대 운동 확산으로 비건 라이프스타일 확대'
-    ],
-    icon: '🐾'
-  },
-  {
-    category: 'MZ세대 라이프스타일',
-    title: '플렉시테리언과 유연한 채식 문화 확산',
-    details: [
-      'MZ세대 40%가 "완전 채식은 아니지만 고기를 덜 먹는" 패턴',
-      '소셜미디어 영향: 인플루언서들의 채식 콘텐츠 조회수 급증',
-      '비건 카페, 레스토랑 방문률 3년간 200% 증가',
-      '밀키트 시장에서 비건 메뉴 비중 15% → 35%로 확대'
-    ],
-    icon: '📱'
-  },
-  {
-    category: '시장 규모',
-    title: '국내 비건/채식 시장 급성장',
-    details: [
-      '한국 비건 식품 시장: 2020년 1,200억원 → 2023년 3,500억원',
-      '글로벌 비건 시장: 2023년 1,800억 달러, 2030년 3,100억 달러 예상',
-      '주요 기업 진출: 풀무원, CJ, 이마트, 스타벅스 등 비건 상품 라인업 확대',
-      '비건 레스토랑: 2020년 200개 → 2023년 800개로 4배 증가'
-    ],
-    icon: '📈'
-  },
-  {
-    category: '기술 혁신',
-    title: '식물성 대체육 기술 발전과 AI 활용',
-    details: [
-      '대체육 기술: 식물성 단백질로 실제 고기와 구별하기 어려운 제품 개발',
-      'AI 레시피 추천: 개인 취향과 영양소를 고려한 맞춤형 채식 메뉴 제공',
-      '블록체인 추적: 비건 제품의 원료부터 유통까지 투명한 공급망 관리',
-      '3D 프린팅: 식물성 재료로 고기 질감을 재현하는 기술 상용화'
-    ],
-    icon: '🔬'
-  }
-]
-
-const businessModel = [
-  {
-    title: '프리미엄 구독',
-    desc: '무료: 기본 커뮤니티, 일부 레시피/맛집 검색\n유료: AI 맞춤형 건강관리, 전문 영양사 상담',
-    icon: '💎',
-  },
-  {
-    title: '광고 & 제휴',
-    desc: '비건 레스토랑, 카페 광고\n비건 식품, 건강보조제, 친환경 브랜드 제휴',
-    icon: '📢',
-  },
-  {
-    title: '커머스',
-    desc: '비건 밀키트/정기 식단 배송\nAI 추천 기반 영양제/간식 판매',
-    icon: '🛒',
-  },
-  {
-    title: '데이터 비즈니스',
-    desc: '채식인 식습관·건강 데이터 기반 제약사, 식품업계 제휴',
-    icon: '📊',
-  },
-]
-
-const platformModules = [
-  {
-    title: '디지털케어로그 연동',
-    desc: '건강 기록, 체중·혈액 데이터, 식습관 기록 통합 관리',
-    icon: '📋',
-  },
-  {
-    title: 'AI 요리사',
-    desc: '재료 기반 레시피 생성, 영양소 분석, 알러지 고려',
-    icon: '🤖',
-  },
-  {
-    title: '맛집 매칭',
-    desc: '위치·선호도 기반 비건 식당 추천, 리뷰·예약 연동',
     icon: '📍',
+    title: '비건 맛집·외식 매칭',
+    desc: '위치, 메뉴, 리뷰, 채식 옵션, 알레르기 정보를 기준으로 외식 선택을 돕습니다.',
   },
   {
-    title: '커뮤니티',
-    desc: '레시피 공유, 경험담, Q&A, 챌린지 참여',
-    icon: '💬',
+    icon: '🛒',
+    title: '커머스·정기배송 연계',
+    desc: '부족한 영양소와 식습관에 맞는 밀키트, 간편식, 영양제, 식재료를 파트너와 연결합니다.',
   },
   {
-    title: '제휴 API',
-    desc: '배달앱, 밀키트 업체, 식품 브랜드 연동',
-    icon: '🔌',
-  },
-  {
-    title: '리워드 시스템',
-    desc: '챌린지 달성 시 포인트, 쿠폰, 뱃지 지급',
-    icon: '🎁',
+    icon: '🏆',
+    title: '챌린지·커뮤니티',
+    desc: '한 달 채식, 탄소 절감, 건강 루틴 같은 챌린지를 기록하고 경험을 공유합니다.',
   },
 ]
+
+const veggieTypes = [
+  { type: '비건', rule: '동물성 식품 전부 제외', focus: 'B12·단백질·철분 보강 루틴', icon: '🌿' },
+  { type: '락토·오보', rule: '유제품 또는 달걀 일부 허용', focus: '균형 식단과 포화지방 관리', icon: '🥚' },
+  { type: '페스코', rule: '생선 허용, 육류 제외', focus: '오메가3·단백질 균형', icon: '🐟' },
+  { type: '플렉시테리언', rule: '상황에 따라 유연한 채식', focus: '지속 가능한 전환과 외식 전략', icon: '🔄' },
+]
+
+const dailyLog = [
+  '08:00 두유 오트밀 + 견과류',
+  '10:30 컨디션: 보통 / 소화 상태 양호',
+  '12:20 병아리콩 샐러드 + 현미밥',
+  '15:00 간식: 바나나 + 아몬드',
+  '18:40 비건 식당 외식 기록',
+  '21:00 AI 요약: 오늘 단백질 목표 82%, 철분 보강 필요',
+]
+
+const aiAlerts = [
+  '이번 주 비타민 B12 섭취 기록이 부족합니다.',
+  '최근 운동량 대비 단백질 섭취가 낮습니다.',
+  '외식이 많아 나트륨 섭취가 증가했습니다.',
+  '철분 흡수를 위해 비타민 C 식품을 함께 추천합니다.',
+]
+
+const comparisonRows = [
+  {
+    old: '레시피 검색',
+    veggie: '내 채식 유형·알레르기·건강 목표에 맞춘 레시피 추천',
+  },
+  {
+    old: '맛집 지도',
+    veggie: '외식 기록, 채식 옵션, 영양 목표까지 이어지는 식당 매칭',
+  },
+  {
+    old: '단순 칼로리 앱',
+    veggie: '채식 전환 후 건강 변화와 핵심 영양소를 같이 보는 케어로그',
+  },
+  {
+    old: '커뮤니티 후기',
+    veggie: '사용자 경험을 기록·제품·전문가 상담과 연결하는 실행형 커뮤니티',
+  },
+]
+
+const techPillars = [
+  {
+    title: '표준 식습관 스키마',
+    desc: '식품·재료·채식 유형·알레르기·건강 지표를 같은 기준으로 정리해 장기 추적이 가능하게 합니다.',
+  },
+  {
+    title: '개인화 추천 루프',
+    desc: '단발 추천이 아니라 기록 → 분석 → 실행 → 결과 환류를 반복해 사용자에게 맞는 루틴을 좁혀 갑니다.',
+  },
+  {
+    title: '헬스케어 연계 가능성',
+    desc: '혈압·혈당·체중·복약 등 토탈케어로그 축과 연결 가능한 식습관 데이터를 지향합니다.',
+  },
+  {
+    title: '파트너 API 구조',
+    desc: '식당, 밀키트, 식품 브랜드, 영양 상담, 커머스 파트너가 같은 추천 맥락에 참여할 수 있습니다.',
+  },
+]
+
+const businessImpacts = [
+  {
+    icon: '👤',
+    title: '사용자',
+    desc: '채식을 감으로 지속하는 것이 아니라, 건강 변화와 영양 균형을 확인하며 실행합니다.',
+  },
+  {
+    icon: '🧑‍⚕️',
+    title: '전문가',
+    desc: '식습관 기록을 기반으로 영양 상담, 만성질환 예방, 생활요법 코칭의 질을 높입니다.',
+  },
+  {
+    icon: '🏪',
+    title: '식당·브랜드',
+    desc: '불특정 광고가 아니라 필요한 사용자에게 메뉴·제품·정기배송을 연결합니다.',
+  },
+  {
+    icon: '🌍',
+    title: '시장·환경',
+    desc: '개인 건강과 지속가능 소비를 함께 다루는 데이터 기반 웰니스 생태계를 만듭니다.',
+  },
+]
+
+const partnerPillars = [
+  '비건·채식 식당 및 카페',
+  '식물성 식품·대체육·밀키트 브랜드',
+  '영양사·의료·헬스케어 상담 파트너',
+  '친환경·ESG·리워드 제휴 파트너',
+]
+
+const ecosystem = [
+  { href: '/services/jarame', name: '자람이', role: '발달·행동 케어로그', focus: '식습관·행동·치료 맥락 연계 가능성' },
+  { href: '/services/senior', name: '시니어앤라이프', role: '시니어 돌봄', focus: '고령자 식사·영양·생활 기록 연계' },
+  { href: '/services/healthcare', name: '토탈케어로그', role: '헬스케어 축', focus: '혈압·혈당·체중·복약과 식습관 연결' },
+  { href: '/services/educarelog', name: '에듀케어로그', role: '교육 축', focus: '가족·아동 식습관 교육 및 루틴 설계' },
+]
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebPage',
+      '@id': `${pageCanonical}#webpage`,
+      url: pageCanonical,
+      name: '베지케어 | AI 채식·비건 영양 케어로그',
+      description:
+        '채식·비건·플렉시테리언의 식습관, 영양, 건강 변화를 AI 디지털케어로그로 연결하는 DAL 웰니스 서비스.',
+      inLanguage: 'ko-KR',
+      about: { '@id': `${pageCanonical}#service` },
+    },
+    {
+      '@type': 'Service',
+      '@id': `${pageCanonical}#service`,
+      name: '베지케어',
+      alternateName: 'VeggieCare',
+      url: pageCanonical,
+      provider: { '@type': 'Organization', name: 'Dream AI Lab', url: 'https://dreamailab.com/' },
+      category: 'Wellness',
+      serviceType: 'AI 채식·비건 영양 케어로그 플랫폼',
+      areaServed: 'KR',
+      offers: {
+        '@type': 'Offer',
+        availability: 'https://schema.org/PreOrder',
+        description: '서비스는 개발 중이며 파트너십과 사전 문의를 받고 있습니다.',
+      },
+    },
+  ],
+}
 
 export default function VeggieService() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <Header />
 
-      {/* 1. Hero Section */}
-      <section className="bg-gradient-to-br from-green-600 to-emerald-600 text-white py-20">
+      {/* 1. Hero */}
+      <section className="bg-gradient-to-br from-green-700 to-emerald-600 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">{brand.name} ({brand.english})</h1>
-            <p className="text-xl md:text-2xl mb-6 max-w-4xl mx-auto">
-              <strong>국내 최초 베지터리안 플랫폼</strong> — AI 기반 건강관리·맛집·레시피·커뮤니티를 통합 제공합니다.
+            <p className="text-green-100 text-xs sm:text-sm font-medium mb-6 tracking-wide">
+              Service Status: {brand.status} (웰니스·식습관 케어로그 개발 중)
             </p>
-            <p className="text-lg max-w-3xl mx-auto text-white/90">
-              디지털케어로그와 연동하여 개인 맞춤형 영양 관리와 식단 추천을 지원합니다.
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+              채식은 식단에서 끝나지 않습니다.
+              <br />
+              베지케어는 식습관을 기록으로 바꾸고,
+              <br />
+              건강한 실행까지 이어줍니다.
+            </h1>
+            <p className="text-lg md:text-xl text-green-50 max-w-3xl mx-auto mb-8 leading-relaxed">
+              {brand.name}({brand.english})는 채식·비건·플렉시테리언의 식단, 영양, 외식, 커뮤니티, 건강 변화를 하나의
+              AI 디지털케어로그로 연결하는 DAL 웰니스 플랫폼입니다.
             </p>
-            <p className="text-base max-w-3xl mx-auto text-white/80 mt-3">
-              채식에서 끝나지 않습니다. 채식 <strong>이후</strong>의 건강한 삶까지 연결합니다.
-            </p>
-            <div className="mt-6">
-              <span className="inline-block px-4 py-2 bg-gray-100 text-gray-800 rounded-full text-sm font-semibold">In Development</span>
+            <div className="flex flex-wrap justify-center gap-2 text-xs text-white">
+              <span className="bg-white/15 border border-white/20 px-3 py-1.5 rounded-full">식습관 케어로그</span>
+              <span className="bg-white/15 border border-white/20 px-3 py-1.5 rounded-full">AI 영양 분석</span>
+              <span className="bg-white/15 border border-white/20 px-3 py-1.5 rounded-full">레시피·맛집·커머스 연결</span>
+              <span className="bg-white/15 border border-white/20 px-3 py-1.5 rounded-full">DAL 웰니스 축</span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 2. Problem Definition */}
-      <section className="py-16 lg:py-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">왜 지금, 베지터리안 플랫폼인가</h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">건강, 환경, 윤리, MZ세대 라이프스타일 변화로 베지터리안 시장이 급성장하고 있습니다</p>
+      {/* Hero summary */}
+      <section className="py-8 bg-emerald-50/80 border-b border-emerald-100">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-xs font-semibold text-emerald-800 mb-2">[한 줄 요약]</p>
+          <p className="text-gray-900 font-medium text-sm md:text-base leading-relaxed">
+            베지케어는 채식 정보를 보여주는 앱이 아니라, <strong>식습관 기록 → AI 영양 분석 → 실행 추천 → 건강 변화 환류</strong>를
+            한 줄기로 연결하는 <strong>라이프스타일 케어 인프라</strong>입니다.
+          </p>
+        </div>
+      </section>
+
+      <section className="py-10 bg-white border-b border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-lg font-bold text-gray-900 mb-6 text-center">이런 분들을 위한 서비스입니다</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {targetAudiences.map((audience) => (
+              <div key={audience.title} className="bg-gray-50 rounded-xl p-5 border border-gray-100">
+                <div className="text-2xl mb-2">{audience.icon}</div>
+                <h3 className="font-bold text-gray-900 text-sm mb-2">{audience.title}</h3>
+                <p className="text-xs text-gray-700 leading-relaxed">{audience.desc}</p>
+              </div>
+            ))}
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {marketTrends.map((trend, i) => (
-              <div key={i} className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="text-2xl">{trend.icon}</div>
-                  <div>
-                    <span className="text-sm font-semibold text-green-600">{trend.category}</span>
-                    <h3 className="font-bold text-gray-900 text-lg">{trend.title}</h3>
-                  </div>
+        </div>
+      </section>
+
+      {/* 2. Problem Definition */}
+      <section id="veggie-problem" className="scroll-mt-28 py-14 bg-white border-b border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-3">
+            왜 채식 플랫폼이 아니라 베지케어가 필요한가
+          </h2>
+          <p className="text-center text-xs font-semibold text-emerald-700 mb-2">[한 줄 요약]</p>
+          <p className="text-center text-gray-800 font-medium text-sm mb-8 max-w-3xl mx-auto">
+            채식의 병목은 정보 부족이 아니라 <strong>개인화·영양 관리·지속 실행이 끊기는 구조</strong>입니다.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {problemCards.map((problem) => (
+              <div key={problem.title} className="bg-red-50 rounded-xl p-5 border border-red-100">
+                <h3 className="font-bold text-gray-900 text-sm mb-2">{problem.title}</h3>
+                <p className="text-xs text-gray-700 leading-relaxed">{problem.desc}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-8 bg-emerald-50/80 rounded-xl p-5 border border-emerald-100 max-w-3xl mx-auto text-center">
+            <p className="text-sm text-gray-800 leading-relaxed">
+              식단 데이터는 매일 발생하지만 연결되지 않습니다.
+              <br />
+              베지케어는 이 데이터를 건강, 외식, 레시피, 커머스, 커뮤니티 실행으로 연결하기 위해 설계되었습니다.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="veggie-personas" className="scroll-mt-28 py-14 bg-gray-50 border-b border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-3">
+            누가 왜 막히나 — 베지케어에서 바뀌는 점
+          </h2>
+          <p className="text-center text-gray-600 text-sm max-w-2xl mx-auto mb-8">
+            사용자·전문가·파트너가 같은 식습관 데이터를 기준으로 움직입니다.
+          </p>
+          <div className="space-y-4">
+            {personaRows.map((row) => (
+              <div key={row.who} className="bg-white rounded-xl p-5 border border-gray-100 flex flex-col md:flex-row md:gap-6">
+                <div className="md:w-44 shrink-0">
+                  <p className="font-bold text-emerald-700">{row.who}</p>
                 </div>
-                <ul className="text-sm text-gray-600 space-y-2">
-                  {trend.details.map((detail, j) => (
-                    <li key={j} className="flex items-start gap-2">
-                      <span className="text-green-500 mt-1 text-xs">•</span>
-                      <span className="leading-relaxed">{detail}</span>
-                    </li>
-                  ))}
-                </ul>
+                <div className="flex-1 text-sm">
+                  <p className="text-gray-500 mb-1">막힘</p>
+                  <p className="text-gray-800 mb-3">{row.pain}</p>
+                  <p className="text-gray-500 mb-1">베지케어에서</p>
+                  <p className="text-gray-900 font-medium">{row.gain}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -272,150 +426,308 @@ export default function VeggieService() {
       </section>
 
       {/* 3. Solution */}
-      {/* Core Features */}
-      <section className="py-16 lg:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">핵심 기능</h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">디지털케어로그 기반 건강관리와 AI 요리사, 지역 식당 연계, 커머스까지 이어지는 완성형 베지터리안 생태계</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {coreFeatures.map((feature, i) => (
-              <div key={i} className="bg-gray-50 rounded-xl p-6 shadow-sm text-center">
-                <div className="text-4xl mb-4">{feature.icon}</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{feature.desc}</p>
+      <section id="veggie-solution" className="scroll-mt-28 py-14 bg-white border-b border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-3">베지케어 플랫폼 구조</h2>
+          <p className="text-center text-sm text-gray-800 max-w-3xl mx-auto mb-3 leading-relaxed">
+            베지케어는
+            <br />
+            식습관·영양·건강 데이터를 기반으로
+            <br />
+            사용자·전문가·식당·브랜드의 실행을 연결하는
+            <br />
+            AI 디지털케어로그 기반 웰니스 인프라입니다.
+          </p>
+          <p className="text-center text-gray-600 text-sm max-w-2xl mx-auto mb-10">
+            레시피, 맛집, 커머스가 각각 따로 있는 것이 아니라 하나의 실행 루프로 연결됩니다.
+          </p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {coreFeatures.map((feature) => (
+              <div key={feature.title} className="bg-gray-50 rounded-xl p-6 border border-gray-100">
+                <div className="text-3xl mb-3">{feature.icon}</div>
+                <h3 className="font-bold text-gray-900 mb-2">{feature.title}</h3>
+                <p className="text-sm text-gray-700 leading-relaxed">{feature.desc}</p>
               </div>
             ))}
+          </div>
+          <div className="mt-8 bg-emerald-50/80 rounded-xl p-5 border border-emerald-100 max-w-3xl mx-auto">
+            <p className="text-sm text-gray-800 text-center">
+              즉, 베지케어는 <strong>무엇을 먹을지</strong>를 넘어 <strong>왜 먹고, 먹은 뒤 무엇이 달라졌는지</strong>까지 남기는 구조입니다.
+            </p>
           </div>
         </div>
       </section>
 
       {/* 4. User Workflow */}
-      <section className="py-16 lg:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">이용 흐름</h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">건강관리 → AI 요리사 → 지역 식당 → 커머스까지 이어지는 원스톱 베지터리안 여정</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            {veggieTypes.map((type, i) => (
-              <div key={i} className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="text-3xl">{type.icon}</div>
-                  <div className="flex-1">
-                    <div className="font-semibold text-gray-900 text-lg">{type.name}</div>
-                    <span className="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full">{type.strictness}</span>
-                  </div>
+      <section id="veggie-workflow" className="scroll-mt-28 py-14 bg-gray-50 border-b border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-3">사용 흐름</h2>
+          <p className="text-center text-xs font-semibold text-emerald-700 mb-2">[한 줄 요약]</p>
+          <p className="text-center text-gray-800 font-medium text-sm mb-8 max-w-3xl mx-auto">
+            식단 기록이 끝이 아니라 <strong>오늘의 실행과 다음 주 루틴</strong>으로 이어집니다.
+          </p>
+          <div className="space-y-3 mb-10">
+            {platformSteps.map((step) => (
+              <div key={step.n} className="flex gap-4 items-start bg-white rounded-xl p-4 border border-emerald-100">
+                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-emerald-600 text-white text-sm font-bold">
+                  {step.n}
+                </span>
+                <div>
+                  <h3 className="font-bold text-gray-900 text-sm mb-1">{step.title}</h3>
+                  <p className="text-sm text-gray-700">{step.body}</p>
                 </div>
-                <div className="text-sm text-gray-600 leading-relaxed">{type.desc}</div>
               </div>
             ))}
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="text-4xl mb-4">🌱</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">국내 최초</h3>
-              <p className="text-gray-600">베지터리안 전용 통합 플랫폼으로 시장 선점</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl mb-4">🤖</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">AI 기반</h3>
-              <p className="text-gray-600">개인 맞춤형 영양 관리와 레시피 추천</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl mb-4">🔗</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">완성형 생태계</h3>
-              <p className="text-gray-600">건강관리부터 커머스까지 원스톱 서비스</p>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+            {veggieTypes.map((type) => (
+              <div key={type.type} className="bg-white rounded-xl p-5 border border-gray-100">
+                <div className="text-3xl mb-2">{type.icon}</div>
+                <h3 className="font-bold text-gray-900 mb-1">{type.type}</h3>
+                <p className="text-xs text-gray-600 mb-3">{type.rule}</p>
+                <p className="text-xs font-medium text-emerald-800 bg-emerald-50 rounded-lg p-3">{type.focus}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* 5. Technology Advantage (Short) */}
-      {/* Platform Architecture */}
-      <section className="py-16 lg:py-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">플랫폼 구조</h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">디지털케어로그 연동 · AI 요리사 · 맛집 매칭 · 커뮤니티 · 제휴 API · 리워드 시스템</p>
+      <section id="veggie-log-example" className="scroll-mt-28 py-14 bg-white border-b border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-3">실제 식습관 기록 예시</h2>
+          <p className="text-center text-gray-600 text-sm max-w-3xl mx-auto mb-8">
+            사용자가 보는 화면은 복잡한 표가 아니라, 하루 식단과 건강 신호가 이어지는 타임라인입니다.
+          </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="bg-gray-50 rounded-2xl p-6 border border-gray-100">
+              <h3 className="font-bold text-gray-900 mb-3 text-sm">하루 베지케어로그</h3>
+              <ul className="space-y-2 text-sm text-gray-700 font-mono">
+                {dailyLog.map((log) => (
+                  <li key={log}>{log}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="bg-emerald-50 rounded-2xl p-6 border border-emerald-100">
+              <h3 className="font-bold text-gray-900 mb-3 text-sm">AI 분석 알림 예시</h3>
+              <ul className="space-y-2 text-sm text-gray-700">
+                {aiAlerts.map((alert) => (
+                  <li key={alert} className="flex gap-2">
+                    <span className="text-emerald-600 shrink-0">•</span>
+                    <span>{alert}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {platformModules.map((module, i) => (
-              <div key={i} className="bg-white rounded-xl p-6 shadow text-center">
-                <div className="text-3xl mb-3">{module.icon}</div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">{module.title}</h3>
-                <p className="text-sm text-gray-600">{module.desc}</p>
+          <p className="mt-6 text-center text-sm text-gray-700 max-w-3xl mx-auto">
+            이 기록이 쌓이면 사용자는 채식을 “잘하고 있는지”를 감이 아니라 <strong>영양·컨디션·건강 변화</strong>로 확인할 수 있습니다.
+          </p>
+        </div>
+      </section>
+
+      {/* 5. Technology Advantage */}
+      <section id="veggie-tech" className="scroll-mt-28 py-14 bg-gray-50 border-b border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-3">AI 디지털케어로그 기술 적용</h2>
+          <p className="text-center text-xs font-semibold text-emerald-700 mb-2">Technology Advantage</p>
+          <p className="text-center text-gray-600 text-sm max-w-2xl mx-auto mb-10">
+            기술 설명은 짧게, 베지케어에서 왜 필요한지만 정리합니다.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+            {techPillars.map((pillar) => (
+              <div key={pillar.title} className="bg-white rounded-xl p-5 border border-gray-100">
+                <h3 className="font-bold text-gray-900 text-sm mb-2">{pillar.title}</h3>
+                <p className="text-xs text-gray-700 leading-relaxed">{pillar.desc}</p>
               </div>
             ))}
           </div>
+          <div className="mt-8 bg-white rounded-xl p-5 border border-emerald-100 max-w-3xl mx-auto">
+            <p className="text-sm text-gray-800 text-center leading-relaxed">
+              DAL의 AI 디지털케어로그는 발달·교육·시니어·의료에서 쌓은 “기록 → 판단 → 실행 → 환류” 구조를 공유합니다.
+              베지케어는 그 구조를 식습관과 웰니스 영역에 적용합니다.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="veggie-compare" className="scroll-mt-28 py-14 bg-white border-b border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-3">기존 서비스와 무엇이 다른가</h2>
+          <p className="text-center text-gray-600 text-sm max-w-2xl mx-auto mb-8">
+            베지케어는 콘텐츠 사이트가 아니라 식습관 데이터가 실행으로 이어지는 구조입니다.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {comparisonRows.map((row) => (
+              <div key={row.old} className="bg-gray-50 rounded-xl p-5 border border-gray-100">
+                <p className="text-xs text-gray-500 mb-1">기존 방식</p>
+                <p className="text-sm text-gray-700 line-through mb-4">{row.old}</p>
+                <p className="text-xs text-emerald-700 font-semibold mb-1">베지케어</p>
+                <p className="text-sm font-medium text-gray-900">{row.veggie}</p>
+              </div>
+            ))}
+          </div>
+          <p className="mt-8 text-center text-sm font-semibold text-gray-900 max-w-3xl mx-auto">
+            기존 서비스가 “찾기”에 머물렀다면, 베지케어는 “기록하고 실행하고 변화까지 확인하는” 웰니스 인프라입니다.
+          </p>
         </div>
       </section>
 
       {/* 6. Business Impact */}
-      <section className="py-16 lg:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">비즈니스 모델</h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">프리미엄 구독 · 광고 & 제휴 · 커머스 · 데이터 비즈니스</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {businessModel.map((model, i) => (
-              <div key={i} className="bg-gray-50 rounded-xl p-6 shadow-sm">
-                <div className="text-3xl mb-3">{model.icon}</div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">{model.title}</h3>
-                <p className="text-sm text-gray-600 whitespace-pre-line">{model.desc}</p>
+      <section id="veggie-impact" className="scroll-mt-28 py-14 bg-gray-50 border-b border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-3">비즈니스·시장 영향</h2>
+          <p className="text-center text-xs font-semibold text-emerald-700 mb-2">[한 줄 요약]</p>
+          <p className="text-center text-gray-800 font-medium text-sm mb-8 max-w-3xl mx-auto">
+            개인 건강, 전문가 상담, 식품·외식 시장, 지속가능 소비가 <strong>같은 식습관 데이터</strong>로 연결됩니다.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
+            {businessImpacts.map((impact) => (
+              <div key={impact.title} className="bg-white rounded-xl p-6 border border-gray-100">
+                <div className="text-3xl mb-3">{impact.icon}</div>
+                <h3 className="font-bold text-gray-900 mb-2">{impact.title}</h3>
+                <p className="text-sm text-gray-700 leading-relaxed">{impact.desc}</p>
               </div>
             ))}
+          </div>
+          <div className="bg-white rounded-2xl p-6 border border-gray-100">
+            <h3 className="font-bold text-gray-900 mb-4 text-center">파트너십 확장 축</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+              {partnerPillars.map((partner) => (
+                <div key={partner} className="flex gap-2 text-sm text-gray-800 bg-emerald-50 rounded-lg p-3">
+                  <span className="text-emerald-600 shrink-0">✔</span>
+                  <span>{partner}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="veggie-why-now" className="scroll-mt-28 py-14 bg-white border-b border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-3">왜 지금 베지케어인가</h2>
+          <p className="text-center text-gray-600 text-sm max-w-3xl mx-auto mb-8">
+            채식은 더 이상 소수 취향이 아니라 건강, 환경, 윤리, 소비가 만나는 라이프스타일 시장입니다. 다만 시장이 커질수록
+            사용자에게 필요한 것은 더 많은 정보가 아니라 <strong>나에게 맞는 실행 기준</strong>입니다.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <div className="bg-green-50 rounded-xl p-6 border border-green-100">
+              <h3 className="font-bold text-gray-900 mb-2">건강</h3>
+              <p className="text-sm text-gray-700">
+                체중, 혈압, 혈당, 소화, 컨디션 같은 생활 지표와 식습관을 함께 관리하려는 수요가 커지고 있습니다.
+              </p>
+            </div>
+            <div className="bg-emerald-50 rounded-xl p-6 border border-emerald-100">
+              <h3 className="font-bold text-gray-900 mb-2">지속가능성</h3>
+              <p className="text-sm text-gray-700">
+                ESG와 친환경 소비가 확산되면서 식품·외식·커머스 시장은 채식 사용자를 더 정교하게 이해해야 합니다.
+              </p>
+            </div>
+            <div className="bg-lime-50 rounded-xl p-6 border border-lime-100">
+              <h3 className="font-bold text-gray-900 mb-2">개인화</h3>
+              <p className="text-sm text-gray-700">
+                비건, 락토, 오보, 페스코, 플렉시테리언은 서로 다른 식단입니다. 같은 채식으로 묶을수록 개인화는 실패합니다.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* 7. Service Status */}
-      <section className="py-16 lg:py-24 bg-white">
+      <section id="veggie-status" className="scroll-mt-28 py-14 bg-gray-50 border-b border-gray-100">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="inline-block px-4 py-2 bg-gray-100 text-gray-800 rounded-full text-sm font-semibold mb-4">In Development</span>
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">{brand.name} (개발 중 공개 사전 안내)</h2>
-          <p className="text-gray-600">국내 최초 베지터리안 <strong>통합 플랫폼</strong>으로, AI 기반 건강관리·맛집·레시피·커뮤니티를 중심으로 개발 중입니다. 서비스 공개는 순차 진행됩니다.</p>
+          <span className="inline-block px-4 py-2 bg-gray-100 text-gray-800 rounded-full text-sm font-semibold mb-4">
+            {brand.status}
+          </span>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">{brand.name} 개발 중 공개 사전 안내</h2>
+          <p className="text-gray-600 leading-relaxed">
+            베지케어는 채식·비건 라이프스타일을 위한 AI 디지털케어로그 플랫폼으로 개발 중입니다. 초기 공개 범위는 식단 기록,
+            AI 영양 분석, 레시피·맛집·커뮤니티, 파트너 연계 순서로 단계적으로 확장할 예정입니다.
+          </p>
         </div>
       </section>
 
       {/* 8. Ecosystem Connection */}
-      <section className="py-16 lg:py-24 bg-gradient-to-br from-green-50 to-emerald-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">DAL 생태계와의 연결</h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">디지털케어로그와 연동하여 통합 건강 관리를 제공합니다</p>
+      <section id="veggie-ecosystem" className="scroll-mt-28 py-14 bg-white border-b border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-3">DAL 플랫폼 연결</h2>
+          <p className="text-center text-gray-600 text-sm max-w-3xl mx-auto mb-8">
+            베지케어는 DAL 생태계 안에서 식습관·영양·웰니스 데이터를 담당하는 축입니다. 의료, 시니어, 발달, 교육의 케어로그와
+            연결될 때 생활 데이터의 의미가 더 커집니다.
+          </p>
+          <div className="grid sm:grid-cols-2 gap-4">
+            {ecosystem.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className="rounded-xl p-5 border border-gray-200 bg-gray-50/80 hover:bg-emerald-50 hover:border-emerald-200 transition-colors"
+              >
+                <p className="font-bold text-gray-900">{item.name}</p>
+                <p className="text-xs text-emerald-700 mt-1">{item.role}</p>
+                <p className="text-sm text-gray-700 mt-2">{item.focus}</p>
+              </Link>
+            ))}
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-xl p-6 shadow-sm border-l-4 border-green-500">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">🔗 디지털케어로그와의 시너지</h3>
-              <ul className="text-gray-700 space-y-2">
-                <li><strong>통합 건강 관리:</strong> 건강 데이터(혈압, 혈당, 체중 등)와 식습관 데이터 연계</li>
-                <li><strong>AI 맞춤 분석:</strong> 건강 상태·영양소 결핍 분석 후 최적 채식 식단 추천</li>
-                <li><strong>장기 추적 관리:</strong> 채식 전환 후 건강 변화 추적, 전문가 상담 연결</li>
-              </ul>
-            </div>
-            <div className="bg-white rounded-xl p-6 shadow-sm">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">🎯 DAL 플랫폼 생태계</h3>
-              <ul className="text-gray-700 space-y-2">
-                <li><strong>개인 맞춤형:</strong> 라이프스타일·건강 상태에 맞는 베지터리안 여정</li>
-                <li><strong>커뮤니티 중심:</strong> 채식 라이프스타일을 함께하는 커뮤니티</li>
-                <li><strong>비즈니스 연계:</strong> 비건 레스토랑, 식품 브랜드, 영양사·요리사 제휴</li>
-              </ul>
-            </div>
-          </div>
+          <p className="text-center text-sm text-gray-700 mt-8 max-w-3xl mx-auto">
+            같은 사람이 먹고, 배우고, 돌봄을 받고, 치료를 받습니다. 베지케어는 그중 <strong>먹는 기록</strong>을 DAL 케어로그의
+            한 축으로 연결합니다.
+          </p>
         </div>
       </section>
 
       {/* 9. CTA */}
-      <section className="py-16 lg:py-24 bg-white">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">베지케어 출시 소식 받기</h2>
-          <p className="text-gray-600 mb-6">서비스 공개 시 연락을 받으시려면 문의해 주세요.</p>
-          <Link href="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-colors">
-            문의하기
-          </Link>
+      <section id="veggie-cta" className="scroll-mt-28 py-16 bg-gradient-to-br from-green-700 to-emerald-600 text-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">베지케어와 함께 웰니스 케어로그를 만듭니다</h2>
+          <p className="text-green-50 text-sm md:text-base max-w-3xl mx-auto mb-10 leading-relaxed">
+            채식 사용자, 식당·브랜드, 영양·헬스케어 파트너가 함께 참여할 수 있는 구조를 준비하고 있습니다.
+            서비스 공개, 파트너십, 투자·협력 문의를 받고 있습니다.
+          </p>
+          <div className="grid md:grid-cols-3 gap-5 mb-10">
+            <div className="bg-white/10 rounded-xl p-5 border border-white/20 text-left">
+              <p className="text-xs font-semibold text-green-100 mb-1">사용자 · 커뮤니티</p>
+              <p className="text-sm text-green-50 mb-4">사전 공개 소식과 커뮤니티 참여 가능성을 안내받습니다.</p>
+              <Link
+                href="/contact?type=veggie"
+                className="inline-flex w-full justify-center items-center bg-white text-emerald-800 font-semibold px-4 py-2.5 rounded-lg text-sm hover:bg-green-50 transition-colors"
+              >
+                베지케어 소식 받기
+              </Link>
+            </div>
+            <div className="bg-white/10 rounded-xl p-5 border border-white/20 text-left">
+              <p className="text-xs font-semibold text-green-100 mb-1">식당 · 브랜드 · 커머스</p>
+              <p className="text-sm text-green-50 mb-4">메뉴·제품·정기배송·리워드 파트너십을 논의합니다.</p>
+              <Link
+                href="/contact?type=partner"
+                className="inline-flex w-full justify-center items-center bg-white text-emerald-800 font-semibold px-4 py-2.5 rounded-lg text-sm hover:bg-green-50 transition-colors"
+              >
+                파트너십 문의
+              </Link>
+            </div>
+            <div className="bg-white/10 rounded-xl p-5 border border-white/20 text-left">
+              <p className="text-xs font-semibold text-green-100 mb-1">헬스케어 · 연구 · IR</p>
+              <p className="text-sm text-green-50 mb-4">식습관 데이터, 웰니스, 헬스케어 연계 협력을 상담합니다.</p>
+              <Link
+                href="/contact?type=ir"
+                className="inline-flex w-full justify-center items-center bg-white text-emerald-800 font-semibold px-4 py-2.5 rounded-lg text-sm hover:bg-green-50 transition-colors"
+              >
+                전략 협력 문의
+              </Link>
+            </div>
+          </div>
+          <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3 justify-center items-center text-sm text-center">
+            <Link href="/contact" className="text-white font-medium underline underline-offset-2 hover:text-green-100">
+              일반 문의
+            </Link>
+            <span className="hidden sm:inline text-white/40">|</span>
+            <Link href="/services/healthcare" className="text-green-100 hover:text-white underline underline-offset-2">
+              토탈케어로그 보기
+            </Link>
+            <span className="hidden sm:inline text-white/40">|</span>
+            <Link href="/technology" className="text-green-100 hover:text-white underline underline-offset-2">
+              DAL 기술 구조 보기
+            </Link>
+          </div>
         </div>
       </section>
 
