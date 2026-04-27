@@ -49,7 +49,7 @@ export default function PublicPage() {
           <h2 className="text-3xl font-bold text-gray-900 mb-8">DAL 플랫폼 개요</h2>
           <p className="text-lg text-gray-700 mb-6 max-w-4xl">
             드림에이아이랩(DAL)은 돌봄·의료·교육 데이터를 표준화하는 플랫폼 기업입니다. 
-            AI디지털케어로그 기술로 하나의 데이터 인프라 위에 발달장애, 시니어 돌봄, 의료 헬스케어, 교육, 국제결혼, 라이프스타일, 금융 등 7개 도메인을 연결합니다. 
+            AI디지털케어로그 기술로 하나의 데이터 인프라 위에 발달장애, 시니어 돌봄, 의료 헬스케어, 교육, 국제결혼, 라이프스타일 도메인을 연결합니다. 
             시범사업 적용 가능 구조, 지자체 및 공공기관 협력 모델, 데이터 기반 정책 지원 플랫폼입니다.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
@@ -62,12 +62,12 @@ export default function PublicPage() {
               <div className="text-sm text-gray-600">돌봄사업자</div>
             </div>
             <div className="bg-gray-50 rounded-xl p-4 text-center">
-              <div className="text-2xl font-bold text-primary-700">7</div>
-              <div className="text-sm text-gray-600">도메인</div>
+              <div className="text-2xl font-bold text-primary-700">6</div>
+              <div className="text-sm text-gray-600">핵심 도메인</div>
             </div>
             <div className="bg-gray-50 rounded-xl p-4 text-center">
-              <div className="text-2xl font-bold text-primary-700">국내 최초</div>
-              <div className="text-sm text-gray-600">시장 선도 구조</div>
+              <div className="text-2xl font-bold text-primary-700">실증·선도</div>
+              <div className="text-sm text-gray-600">현장 검증 기반</div>
             </div>
           </div>
         </div>
@@ -161,7 +161,7 @@ export default function PublicPage() {
               파트너십 문의
             </Link>
             <Link href="/services" className="border-2 border-white/70 text-white/95 px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-              서비스 체험
+              서비스 생태계 보기
             </Link>
           </div>
         </div>

@@ -1,0 +1,64 @@
+<svg width="1200" height="400" viewBox="0 0 1200 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1200" y2="400" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FBFF"/>
+      <stop offset="1" stop-color="#EEF2FF"/>
+    </linearGradient>
+    <linearGradient id="iconBg" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2563EB"/>
+      <stop offset="1" stop-color="#4F46E5"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="400" rx="24" fill="url(#bg3)"/>
+
+  <text x="600" y="48" text-anchor="middle" font-size="28" font-weight="800" fill="#1E3A8A">플랫폼 확장 4대 축</text>
+
+  <!-- 카드 높이 축소(260→208), 제목·부제 세로 간격 축소 -->
+  <g>
+    <rect x="90" y="80" width="240" height="208" rx="20" fill="white" stroke="#BFDBFE" stroke-width="2"/>
+    <rect x="360" y="80" width="240" height="208" rx="20" fill="white" stroke="#BFDBFE" stroke-width="2"/>
+    <rect x="630" y="80" width="240" height="208" rx="20" fill="white" stroke="#BFDBFE" stroke-width="2"/>
+    <rect x="900" y="80" width="240" height="208" rx="20" fill="white" stroke="#BFDBFE" stroke-width="2"/>
+  </g>
+
+  <g>
+    <rect x="178" y="108" width="64" height="64" rx="16" fill="url(#iconBg)"/>
+    <rect x="448" y="108" width="64" height="64" rx="16" fill="url(#iconBg)"/>
+    <rect x="718" y="108" width="64" height="64" rx="16" fill="url(#iconBg)"/>
+    <rect x="988" y="108" width="64" height="64" rx="16" fill="url(#iconBg)"/>
+  </g>
+
+  <g stroke="#E0E7FF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M194 154L206 140L218 146L230 128"/>
+    <path d="M190 160H232"/>
+  </g>
+  <g stroke="#E0E7FF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M458 130H502"/>
+    <path d="M462 130V150"/>
+    <path d="M480 130V150"/>
+    <path d="M498 130V150"/>
+    <path d="M456 154H504"/>
+  </g>
+  <g stroke="#E0E7FF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M742 120V134L730 152H770L758 134V120"/>
+    <path d="M736 142H764"/>
+  </g>
+  <g stroke="#E0E7FF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M1008 148C1020 124 1040 124 1048 136C1036 152 1020 156 1008 148Z"/>
+    <path d="M1020 148L1034 134"/>
+  </g>
+
+  <g font-size="18" font-weight="700" fill="#1F2937">
+    <text x="210" y="198" text-anchor="middle">VC 확장성</text>
+    <text x="480" y="198" text-anchor="middle">공공 정합성</text>
+    <text x="750" y="198" text-anchor="middle">R&amp;D 환류</text>
+    <text x="1020" y="198" text-anchor="middle">ESG 가치</text>
+  </g>
+
+  <g font-size="15" font-weight="700" fill="#334155">
+    <text x="210" y="252" text-anchor="middle">기술 반복 확장 구조</text>
+    <text x="480" y="252" text-anchor="middle">시범사업·정책 연계</text>
+    <text x="750" y="252" text-anchor="middle">RWE 기반 고도화</text>
+    <text x="1020" y="252" text-anchor="middle">사회적 임팩트+사업성</text>
+  </g>
+</svg>

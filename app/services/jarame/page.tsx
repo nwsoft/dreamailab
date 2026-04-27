@@ -378,7 +378,7 @@ export default function JarameService() {
           <div className="text-center">
             <div className="mb-6">
               <span className="inline-block px-4 py-2 bg-orange-100 text-orange-800 rounded-full text-sm font-semibold">
-                Service Status: Pilot (기관 베타 테스트 진행 중)
+                Service Status: Beta Testing (기관 베타 테스트·지속 업데이트 중)
               </span>
             </div>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
@@ -2338,7 +2338,7 @@ export default function JarameService() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white rounded-xl p-6 shadow-md border-2 border-orange-200">
               <p className="text-xs font-semibold text-orange-600 uppercase tracking-wide mb-2">Current Stage</p>
-              <p className="text-lg font-bold text-gray-900">Pilot (기관 베타 테스트)</p>
+              <p className="text-lg font-bold text-gray-900">Beta Testing (기관 베타 테스트)</p>
               <p className="text-sm text-gray-600 mt-1">기관 베타 테스트 진행 중</p>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-md border border-gray-200">

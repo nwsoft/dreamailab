@@ -249,7 +249,7 @@ export default function EduCareLogService() {
       <section className="bg-gradient-to-br from-blue-600 to-indigo-700 text-white py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-blue-100 text-xs sm:text-sm font-medium mb-6 tracking-wide">
-            Service Status: Pilot (학습 환경 기반 검증 진행 중)
+            Service Status: In Development (AI 디지털케어로그 교육 응용 개발·업데이트 중)
           </p>
           <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-6 leading-snug max-w-4xl mx-auto">
             학습은 교실에서만 완성되지 않습니다.
@@ -532,7 +532,7 @@ export default function EduCareLogService() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-4">AI 디지털케어로그 기술</h2>
           <p className="text-center text-indigo-800 text-xs font-semibold tracking-wide max-w-2xl mx-auto mb-3">
-            Pilot · 일부 학습 환경에서 로그 기반 검증 진행 중
+            In Development · AI 디지털케어로그 교육 응용 고도화 진행 중
           </p>
           <p className="text-center text-gray-600 text-sm max-w-2xl mx-auto mb-10">
             기술 이름이 아니라, 왜 교육에서 통과해야 하는지만 짚습니다.

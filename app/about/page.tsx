@@ -185,12 +185,12 @@ export default function About() {
                 <div className="text-center">
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">성장과 실행</h3>
                   <p className="text-gray-600 mb-6">
-                    플랫폼 위 7개 도메인으로 확장 중이며, 표준화와 시장 선점을 동시에 추진합니다.
+                    플랫폼 위 6개 핵심 도메인으로 확장 중이며, 표준화와 시장 선점을 동시에 추진합니다.
                   </p>
                   <div className="grid grid-cols-2 gap-4 text-sm">
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-primary-600 mb-2">7+</div>
-                      <div className="text-gray-600">도메인 확장</div>
+                      <div className="text-2xl font-bold text-primary-600 mb-2">6</div>
+                      <div className="text-gray-600">핵심 도메인</div>
                     </div>
                     <div className="text-center">
                       <div className="text-2xl font-bold text-secondary-600 mb-2">1</div>
@@ -417,7 +417,7 @@ export default function About() {
               파트너십 문의
             </Link>
             <Link href="/services" className="border-2 border-white/70 text-white/95 px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-              서비스 체험
+              서비스 생태계 보기
             </Link>
           </div>
         </div>

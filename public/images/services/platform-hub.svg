@@ -1,0 +1,117 @@
+<svg width="1200" height="700" viewBox="0 0 1200 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="700" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EEF4FF"/>
+      <stop offset="1" stop-color="#F8FBFF"/>
+    </linearGradient>
+    <linearGradient id="core" x1="480" y1="250" x2="720" y2="450" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2563EB"/>
+      <stop offset="1" stop-color="#4F46E5"/>
+    </linearGradient>
+    <linearGradient id="node" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0EA5E9"/>
+      <stop offset="1" stop-color="#22C55E"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="#1E3A8A" flood-opacity="0.14"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="700" rx="28" fill="url(#bg)"/>
+
+  <g opacity="0.35" stroke="#93C5FD" stroke-width="2">
+    <path d="M200 130C360 230 420 300 600 350"/>
+    <path d="M300 560C430 500 500 430 600 350"/>
+    <path d="M920 120C800 220 740 260 600 350"/>
+    <path d="M960 540C840 470 760 420 600 350"/>
+    <path d="M160 360H480"/>
+    <path d="M720 350H1040"/>
+  </g>
+
+  <!-- 중앙 코어: 막대 제거, 네트워크 점으로 AI/데이터 연결 표현 -->
+  <g filter="url(#shadow)">
+    <rect x="480" y="250" width="240" height="200" rx="28" fill="url(#core)"/>
+    <circle cx="600" cy="320" r="36" fill="#1E40AF" opacity="0.35"/>
+    <circle cx="600" cy="320" r="22" fill="#BFDBFE" opacity="0.95"/>
+    <g fill="#E0E7FF">
+      <circle cx="560" cy="300" r="5"/>
+      <circle cx="640" cy="300" r="5"/>
+      <circle cx="600" cy="280" r="5"/>
+      <circle cx="575" cy="340" r="4"/>
+      <circle cx="625" cy="340" r="4"/>
+    </g>
+    <g stroke="#E0E7FF" stroke-width="2" stroke-linecap="round" opacity="0.85">
+      <path d="M565 303L593 318"/>
+      <path d="M635 303L607 318"/>
+      <path d="M600 285V312"/>
+      <path d="M578 338L592 325"/>
+      <path d="M622 338L608 325"/>
+    </g>
+    <text x="600" y="395" text-anchor="middle" font-size="22" font-weight="800" fill="#F8FAFC">AI디지털케어로그</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="120" y="90" width="160" height="100" rx="20" fill="white"/>
+    <rect x="920" y="90" width="160" height="100" rx="20" fill="white"/>
+    <rect x="120" y="510" width="160" height="100" rx="20" fill="white"/>
+    <rect x="920" y="510" width="160" height="100" rx="20" fill="white"/>
+    <rect x="40" y="300" width="180" height="100" rx="20" fill="white"/>
+    <rect x="980" y="300" width="180" height="100" rx="20" fill="white"/>
+  </g>
+
+  <g fill="url(#node)">
+    <rect x="182" y="118" width="36" height="36" rx="10"/>
+    <rect x="982" y="118" width="36" height="36" rx="10"/>
+    <rect x="182" y="538" width="36" height="36" rx="10"/>
+    <rect x="982" y="538" width="36" height="36" rx="10"/>
+    <rect x="102" y="328" width="36" height="36" rx="10"/>
+    <rect x="1042" y="328" width="36" height="36" rx="10"/>
+  </g>
+
+  <!-- 발달장애: 퍼즐 -->
+  <g stroke="#E0F2FE" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M192 130H206V144H192V130Z"/>
+    <path d="M199 130V124"/>
+    <path d="M206 137H212"/>
+  </g>
+  <!-- 시니어·노인돌봄 (카드 중심 x=920+80=1000) -->
+  <g stroke="#E0F2FE" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="1000" cy="127" r="4"/>
+    <path d="M1000 132V146"/>
+    <path d="M992 140H1000"/>
+    <path d="M1006 136V148"/>
+  </g>
+  <!-- 의료: 원 안 십자 (응급/의료 명확) -->
+  <g stroke="#E0F2FE" stroke-width="3.5" stroke-linecap="round">
+    <circle cx="200" cy="556" r="16" fill="none"/>
+    <path d="M200 548V564"/>
+    <path d="M192 556H208"/>
+  </g>
+  <!-- 교육: 책 -->
+  <g stroke="#E0F2FE" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M989 552H1000V564H989V552Z"/>
+    <path d="M1000 552H1011V564H1000V552Z"/>
+  </g>
+  <!-- 글로벌패밀리: 결혼 반지 2개 + 작은 하트 -->
+  <g stroke="#E0F2FE" stroke-width="3" fill="none" stroke-linecap="round">
+    <ellipse cx="112" cy="348" rx="10" ry="7" transform="rotate(-25 112 348)"/>
+    <ellipse cx="128" cy="348" rx="10" ry="7" transform="rotate(25 128 348)"/>
+  </g>
+  <path d="M120 356l3 4 3-4" stroke="#E0F2FE" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- 라이프스타일: 잎 -->
+  <g stroke="#E0F2FE" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M1052 355C1060 342 1069 344 1072 350C1064 360 1058 361 1052 355Z"/>
+    <path d="M1058 354L1066 348"/>
+  </g>
+
+  <!-- 카드 중심: 상단 좌 200·우 1000(160폭), 하단 동일, 좌우열 130/1070 -->
+  <g font-size="20" font-weight="700" fill="#1F2937">
+    <text x="200" y="176" text-anchor="middle">발달장애</text>
+    <text x="1000" y="176" text-anchor="middle">시니어·노인돌봄</text>
+    <text x="200" y="596" text-anchor="middle">의료</text>
+    <text x="1000" y="596" text-anchor="middle">교육</text>
+    <text x="130" y="386" text-anchor="middle">글로벌패밀리</text>
+    <text x="1070" y="386" text-anchor="middle">라이프스타일</text>
+  </g>
+
+  <text x="600" y="70" text-anchor="middle" font-size="30" font-weight="800" fill="#1E3A8A">DAL Platform Hub</text>
+</svg>

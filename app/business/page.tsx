@@ -459,8 +459,8 @@ export default function Business() {
                 <div className="text-sm text-white/90">발달장애 타겟 인구</div>
               </div>
               <div className="bg-white/15 rounded-xl p-4 border border-white/20">
-                <div className="text-2xl md:text-3xl font-bold">7</div>
-                <div className="text-sm text-white/90">도메인 확장</div>
+                <div className="text-2xl md:text-3xl font-bold">6</div>
+                <div className="text-sm text-white/90">핵심 도메인</div>
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
@@ -487,8 +487,8 @@ export default function Business() {
               <Link href="/contact" className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors" aria-label="파트너십 문의">
                 파트너십 문의
               </Link>
-              <Link href="/services" className="border-2 border-white/70 text-white/95 px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors" aria-label="서비스 체험">
-                서비스 체험
+              <Link href="/services" className="border-2 border-white/70 text-white/95 px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors" aria-label="서비스 생태계 보기">
+                서비스 생태계 보기
               </Link>
             </div>
           </div>
@@ -1028,7 +1028,7 @@ export default function Business() {
               파트너십 문의
             </Link>
             <Link href="/services" className="border-2 border-white/70 text-white/95 px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-              서비스 체험
+              서비스 생태계 보기
             </Link>
           </div>
         </div>

@@ -107,7 +107,7 @@ export default function RootLayout({
                 "https://seniorandlife.com",
                 "https://hanbangai.kr",
                 "https://cancerrehabai.kr",
-                "https://noahai.net",
+                "https://noahailabs.com",
                 "https://globalcouplecare.com",
                 "https://veggie.care"
               ],

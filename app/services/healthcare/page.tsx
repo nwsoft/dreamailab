@@ -118,7 +118,7 @@ export default function HealthcareService() {
               <span className="bg-white/10 border border-white/20 text-white px-3 py-1 rounded-full">AI 디지털케어로그</span>
             </div>
             <div className="mt-6">
-              <span className="inline-block px-4 py-2 bg-amber-100 text-amber-900 rounded-full text-sm font-semibold">공개 서비스 준비 중</span>
+              <span className="inline-block px-4 py-2 bg-gray-100 text-gray-800 rounded-full text-sm font-semibold">In Development</span>
             </div>
           </div>
         </div>
@@ -1051,10 +1051,10 @@ export default function HealthcareService() {
       {/* 7. Service Status */}
       <section className="py-12 lg:py-16 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="inline-block px-4 py-2 bg-amber-100 text-amber-900 rounded-full text-sm font-semibold mb-4">공개 서비스 준비 중</span>
+          <span className="inline-block px-4 py-2 bg-gray-100 text-gray-800 rounded-full text-sm font-semibold mb-4">In Development</span>
           <h2 className="text-2xl font-bold text-gray-900 mb-2">토탈케어로그</h2>
           <p className="text-gray-600">
-            기존 공개 진입(medicai.kr)은 리뉴얼 및 도메인 변경으로 연결이 중단되었습니다. 새 주소·체험 일정은 확정되는 대로 이 페이지와 공지를 통해 안내할 예정입니다.
+            토탈케어로그는 AI 디지털케어로그 응용 서비스로 실제 개발 단계에서 지속 업데이트 중입니다. 기존 공개 진입(medicai.kr)은 리뉴얼 및 도메인 변경으로 연결이 중단되었으며, 공개 일정은 확정 시 안내합니다.
           </p>
         </div>
       </section>

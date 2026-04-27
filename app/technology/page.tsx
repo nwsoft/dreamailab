@@ -6,7 +6,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: '핵심 기술 - AI디지털케어로그 플랫폼 구조 | 드림에이아이랩',
   description:
-    'DAL의 AI디지털케어로그: 돌봄·의료·교육 데이터를 표준화하는 플랫폼 인프라. 수집→AI 분석→실행→환류 파이프라인으로 하나의 플랫폼 위에 발달장애·시니어·의료·교육·글로벌패밀리·라이프스타일·금융 도메인이 연결됩니다.',
+    'DAL의 AI디지털케어로그: 돌봄·의료·교육 데이터를 표준화하는 플랫폼 인프라. 수집→AI 분석→실행→환류 파이프라인으로 하나의 플랫폼 위에 발달장애·시니어·의료·교육·글로벌패밀리·라이프스타일 도메인이 연결됩니다.',
   keywords:
     '드림에이아이랩, DAL, AI디지털케어로그, 디지털케어로그, 정해성, 창업자, 개발자, 독자기술, 최초고안, 발달장애, 치매연구, 노인질병, 의료헬스케어, 정신심리치료, 임상혁신, RWE, 신약개발, 토탈케어로그, 글로벌커플케어, 베지케어, 치매, 항암, 데이터표준화, AI분석',
 }
@@ -282,7 +282,7 @@ export default function Technology() {
               { name: '교육', icon: '🎓', href: '/services/educarelog' },
               { name: '글로벌패밀리', icon: '💕', href: '/services/marriage' },
               { name: '라이프스타일', icon: '🌿', href: '/services/veggie' },
-              { name: '금융', icon: '📈', href: '/services/finance' },
+              { name: '노아AI 이전안내', icon: '📈', href: '/services/finance' },
             ].map((d, i) => (
               <Link key={i} href={d.href} className="inline-flex items-center gap-2 bg-white rounded-lg px-4 py-2 shadow-sm hover:shadow-md border border-gray-100 transition-shadow">
                 <span>{d.icon}</span>

@@ -44,7 +44,7 @@ export const metadata: Metadata = {
 const brand = {
   name: '베지케어',
   english: 'VeggieCare',
-  status: 'In Development',
+  status: 'Beta Testing',
 }
 
 const targetAudiences = [
@@ -279,6 +279,56 @@ const ecosystem = [
   { href: '/services/educarelog', name: '에듀케어로그', role: '교육 축', focus: '가족·아동 식습관 교육 및 루틴 설계' },
 ]
 
+/** VC·TIPS·R&D·ESG·공공 설득용 확장 축 */
+const expansionBusiness = {
+  title: '비즈니스',
+  intro:
+    'B2C 구독과 파트너 기반 B2B2C가 같은 식습관 데이터 위에서 이어지는 구조를 지향합니다. 단순 광고 노출보다 성과형 매칭·전환에 가깝게 설계합니다.',
+  items: [
+    '프리미엄 영양 분석·식단 고도화 구독',
+    '비건·채식 식당·브랜드 입점·프로모션(성과형 연계)',
+    '밀키트·식재료·간편식·영양제 커머스·정기배송',
+    '영양사·헬스케어 파트너 상담·코칭 매칭',
+    '기업 임직원 웰니스·복지 프로그램 패키지',
+  ],
+}
+
+const expansionRnD = {
+  title: 'R&D',
+  intro:
+    '식품·재료·영양소·건강 지표를 표준화해 장기 추적과 집단 분석이 가능한 웰니스 데이터 레이어를 목표로 합니다. 의료 진단이 아닌 생활·영양 맥락의 연구·과제 설계에 활용될 수 있는 방향입니다.',
+  items: [
+    '채식 유형별 영양 결핍·과잉 패턴 분석',
+    '식습관 변화와 체중·혈압·혈당·수면 등 지표의 상관·추세 분석(동의·비식별 전제)',
+    '개인화 식단·추천 루프의 환류 설계',
+    '식품·외식·건강 데이터를 잇는 웰니스 RWE 논의 기반',
+  ],
+}
+
+const expansionEsg = {
+  title: 'ESG',
+  intro:
+    '식물성 식단 실천과 제품 선택을 기록으로 남기면, 브랜드·기업·공공이 ESG·웰니스 캠페인을 같은 데이터 언어로 설계하기 쉬워집니다.',
+  items: [
+    '탄소·지속가능 소비 행동과 식습관 로그 연계(캠페인·리워드)',
+    '친환경·식물성 브랜드와 사용자 매칭',
+    '기업 ESG·임직원 웰니스·리워드 제휴',
+    '지역 비건·채식 외식 활성화와 소상공인 연계',
+  ],
+}
+
+const expansionPublic = {
+  title: '공공·정책',
+  intro:
+    '개인 앱에 머무르지 않고, 국민 건강·식생활 교육·만성질환 예방·지역 경제와 연결될 수 있는 웰니스 인프라 확장을 지향합니다.',
+  items: [
+    '국민 식습관 개선·만성질환 예방 메시지와 연계 가능한 기록 구조',
+    '학교·가족 단위 식생활·영양 교육 프로그램과의 협력',
+    '지역 식당·소상공인·친환경 식품과의 파트너 생태계',
+    '공공 건강·환경 캠페인의 실행·측정 보조(동의·최소 수집 원칙)',
+  ],
+}
+
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -322,18 +372,18 @@ export default function VeggieService() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <p className="text-green-100 text-xs sm:text-sm font-medium mb-6 tracking-wide">
-              Service Status: {brand.status} (웰니스·식습관 케어로그 개발 중)
+              Service Status: {brand.status} (SaaS 완성 후 베타 테스트·지속 업데이트 중)
             </p>
             <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-              채식은 식단에서 끝나지 않습니다.
+              채식은 식단 선택에서 끝나지 않습니다.
               <br />
               베지케어는 식습관을 기록으로 바꾸고,
               <br />
-              건강한 실행까지 이어줍니다.
+              영양·건강·실행까지 이어지는 웰니스 인프라를 설계합니다.
             </h1>
             <p className="text-lg md:text-xl text-green-50 max-w-3xl mx-auto mb-8 leading-relaxed">
               {brand.name}({brand.english})는 채식·비건·플렉시테리언의 식단, 영양, 외식, 커뮤니티, 건강 변화를 하나의
-              AI 디지털케어로그로 연결하는 DAL 웰니스 플랫폼입니다.
+              AI 디지털케어로그로 연결하는 웰니스 서비스입니다.
             </p>
             <div className="flex flex-wrap justify-center gap-2 text-xs text-white">
               <span className="bg-white/15 border border-white/20 px-3 py-1.5 rounded-full">식습관 케어로그</span>
@@ -428,15 +478,12 @@ export default function VeggieService() {
       {/* 3. Solution */}
       <section id="veggie-solution" className="scroll-mt-28 py-14 bg-white border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-3">베지케어 플랫폼 구조</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-3">
+            식습관 데이터가 실행으로 이어지는 구조
+          </h2>
           <p className="text-center text-sm text-gray-800 max-w-3xl mx-auto mb-3 leading-relaxed">
-            베지케어는
-            <br />
-            식습관·영양·건강 데이터를 기반으로
-            <br />
-            사용자·전문가·식당·브랜드의 실행을 연결하는
-            <br />
-            AI 디지털케어로그 기반 웰니스 인프라입니다.
+            베지케어는 식습관·영양·건강 데이터를 기반으로 사용자·전문가·식당·브랜드의 실행을 연결하는 AI 디지털케어로그 기반
+            웰니스 인프라입니다.
           </p>
           <p className="text-center text-gray-600 text-sm max-w-2xl mx-auto mb-10">
             레시피, 맛집, 커머스가 각각 따로 있는 것이 아니라 하나의 실행 루프로 연결됩니다.
@@ -603,9 +650,83 @@ export default function VeggieService() {
         </div>
       </section>
 
+      {/* VC · TIPS · R&D · ESG · 공공 확장 */}
+      <section id="veggie-expansion" className="scroll-mt-28 py-14 bg-white border-b border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-3">
+            비즈니스·R&D·ESG·공공 확장 가능성
+          </h2>
+          <p className="text-center text-xs font-semibold text-emerald-700 mb-2">VC · TIPS · R&D · ESG · 정책 제안용</p>
+          <p className="text-center text-gray-600 text-sm max-w-3xl mx-auto mb-10">
+            베지케어의 차별점은 콘텐츠 물량이 아니라, <strong>식습관 데이터가 구독·커머스·파트너·연구·캠페인까지 같은 줄기로 확장</strong>
+            될 수 있다는 점입니다.
+          </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div className="rounded-2xl border border-gray-200 bg-gray-50/80 p-6">
+              <h3 className="font-bold text-gray-900 mb-2 flex items-center gap-2">
+                <span className="text-xl">💼</span>
+                {expansionBusiness.title}
+              </h3>
+              <p className="text-xs text-gray-700 leading-relaxed mb-4">{expansionBusiness.intro}</p>
+              <ul className="text-sm text-gray-800 space-y-2 list-disc pl-5">
+                {expansionBusiness.items.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="rounded-2xl border border-emerald-200 bg-emerald-50/50 p-6">
+              <h3 className="font-bold text-gray-900 mb-2 flex items-center gap-2">
+                <span className="text-xl">🔬</span>
+                {expansionRnD.title}
+              </h3>
+              <p className="text-xs text-gray-700 leading-relaxed mb-4">{expansionRnD.intro}</p>
+              <ul className="text-sm text-gray-800 space-y-2 list-disc pl-5">
+                {expansionRnD.items.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="rounded-2xl border border-green-200 bg-green-50/50 p-6">
+              <h3 className="font-bold text-gray-900 mb-2 flex items-center gap-2">
+                <span className="text-xl">🌍</span>
+                {expansionEsg.title}
+              </h3>
+              <p className="text-xs text-gray-700 leading-relaxed mb-4">{expansionEsg.intro}</p>
+              <ul className="text-sm text-gray-800 space-y-2 list-disc pl-5">
+                {expansionEsg.items.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="rounded-2xl border border-slate-200 bg-slate-50/80 p-6">
+              <h3 className="font-bold text-gray-900 mb-2 flex items-center gap-2">
+                <span className="text-xl">🏛️</span>
+                {expansionPublic.title}
+              </h3>
+              <p className="text-xs text-gray-700 leading-relaxed mb-4">{expansionPublic.intro}</p>
+              <ul className="text-sm text-gray-800 space-y-2 list-disc pl-5">
+                {expansionPublic.items.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+          <p className="mt-8 text-center text-xs text-gray-500 max-w-3xl mx-auto">
+            구체적 진단·치료는 의료전문가 판단을 따릅니다. RWE·공공 연계는 동의·최소 수집·비식별·거버넌스 전제 하에 단계적으로
+            논의됩니다.
+          </p>
+        </div>
+      </section>
+
       <section id="veggie-why-now" className="scroll-mt-28 py-14 bg-white border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-3">왜 지금 베지케어인가</h2>
+          <div className="max-w-3xl mx-auto mb-8 rounded-xl border border-emerald-100 bg-emerald-50/60 p-4 text-center">
+            <p className="text-sm font-medium text-gray-900 leading-relaxed">
+              이제 중요한 것은 더 많은 채식 정보가 아니라,{' '}
+              <strong>개인의 식습관 데이터가 건강·소비·환경 행동으로 이어지는 구조</strong>입니다.
+            </p>
+          </div>
           <p className="text-center text-gray-600 text-sm max-w-3xl mx-auto mb-8">
             채식은 더 이상 소수 취향이 아니라 건강, 환경, 윤리, 소비가 만나는 라이프스타일 시장입니다. 다만 시장이 커질수록
             사용자에게 필요한 것은 더 많은 정보가 아니라 <strong>나에게 맞는 실행 기준</strong>입니다.
@@ -641,8 +762,8 @@ export default function VeggieService() {
           </span>
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">{brand.name} 개발 중 공개 사전 안내</h2>
           <p className="text-gray-600 leading-relaxed">
-            베지케어는 채식·비건 라이프스타일을 위한 AI 디지털케어로그 플랫폼으로 개발 중입니다. 초기 공개 범위는 식단 기록,
-            AI 영양 분석, 레시피·맛집·커뮤니티, 파트너 연계 순서로 단계적으로 확장할 예정입니다.
+            베지케어는 SaaS 기본 구조 완성 후 베타 테스트를 진행하고 있으며, AI 디지털케어로그 기반 기능을 지속 업데이트 중입니다.
+            식단 기록, AI 영양 분석, 레시피·맛집·커뮤니티, 파트너 연계 범위를 단계적으로 확장합니다.
           </p>
         </div>
       </section>

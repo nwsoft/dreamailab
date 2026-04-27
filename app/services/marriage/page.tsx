@@ -390,7 +390,7 @@ export default function MarriageService() {
               결혼 이후 정착까지 이어지는 플랫폼을 설계합니다
             </p>
             <div className="mt-6">
-              <span className="inline-block px-4 py-2 bg-gray-100 text-gray-800 rounded-full text-sm font-semibold">In Development</span>
+              <span className="inline-block px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold">Beta Testing</span>
             </div>
           </div>
         </div>
@@ -1068,9 +1068,9 @@ export default function MarriageService() {
       {/* 7. Service Status */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="inline-block px-4 py-2 bg-gray-100 text-gray-800 rounded-full text-sm font-semibold mb-4">In Development</span>
+          <span className="inline-block px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold mb-4">Beta Testing</span>
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">{brand.name} (개발 중 공개 사전 안내)</h2>
-          <p className="text-gray-600">국제결혼 <strong>정보·비즈니스 인프라 플랫폼</strong>으로, 표준화·투명화·정착 연계를 중심으로 개발 중입니다. 국제결혼을 넘어 다문화 가족과 국제 커플의 전 생애를 지원하는 것을 목표로 하며, 파트너 공개는 순차 진행됩니다.</p>
+          <p className="text-gray-600">글로벌커플케어는 SaaS 기본 구조 완성 후 베타 테스트를 진행하며, 국제결혼 <strong>정보·비즈니스 인프라</strong> 기능을 지속 업데이트 중입니다. 정착 연계·다문화 가족 지원·파트너 공개를 순차적으로 확장합니다.</p>
         </div>
       </section>
 

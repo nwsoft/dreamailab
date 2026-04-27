@@ -19,8 +19,8 @@ export const metadata: Metadata = {
 
 export default function IRPage() {
   const marketOpportunities = [
-    { icon: '🌱', title: '발달장애', desc: '383만+ 타겟, 5,700 기관 등록, 시장 선도', metric: '국내 최초' },
-    { icon: '👴', title: '시니어', desc: '22,000+ 돌봄사업자, 초고령사회 진입', metric: '국내 유일' },
+    { icon: '🌱', title: '발달장애', desc: '383만+ 타겟, 5,700 기관 등록, 시장 선도', metric: '선도 구간' },
+    { icon: '👴', title: '시니어', desc: '22,000+ 돌봄사업자, 초고령사회 진입', metric: '확장 중' },
     { icon: '🏥', title: '의료·헬스케어', desc: '개인 맞춤 AI 주치의, RWE·항암 추적', metric: '확장 중' },
     { icon: '🎓', title: '교육', desc: '개별화교육 전환, 2026 정책 대응', metric: '파일럿 검증' },
   ]
@@ -55,8 +55,8 @@ export default function IRPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">DAL 플랫폼 핵심 요약</h2>
           <p className="text-lg text-gray-700 mb-8 max-w-4xl">
-            돌봄·의료·교육 데이터를 표준화하는 데이터 인프라 기업. 하나의 AI디지털케어로그 위에 7개 도메인을 연결하며, 
-            초기 플랫폼 선점 단계의 4대 도메인(발달·시니어·국제결혼·베지터리안)을 확보하고 있습니다.
+            돌봄·의료·교육 데이터를 표준화하는 데이터 인프라 기업. 하나의 AI디지털케어로그 위에 핵심 6개 도메인을 연결하며, 
+            초기 플랫폼 선점 단계의 4대 도메인(발달·시니어·국제결혼·베지터리안)을 확보하고 있습니다. 노아AI는 별도 법인 Noah AI Labs로 기술이전되어 분리 운영 중입니다.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="bg-primary-50 rounded-xl p-5 text-center">
@@ -68,8 +68,8 @@ export default function IRPage() {
               <div className="text-sm text-gray-600">돌봄사업자</div>
             </div>
             <div className="bg-primary-50 rounded-xl p-5 text-center">
-              <div className="text-2xl font-bold text-primary-700">7</div>
-              <div className="text-sm text-gray-600">도메인 확장</div>
+              <div className="text-2xl font-bold text-primary-700">6</div>
+              <div className="text-sm text-gray-600">핵심 도메인</div>
             </div>
             <div className="bg-primary-50 rounded-xl p-5 text-center">
               <div className="text-2xl font-bold text-primary-700">1</div>
@@ -164,7 +164,7 @@ export default function IRPage() {
               비즈니스 상세
             </Link>
             <Link href="/services" className="border-2 border-white/70 text-white/95 px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-              서비스 체험
+              서비스 생태계 보기
             </Link>
           </div>
         </div>

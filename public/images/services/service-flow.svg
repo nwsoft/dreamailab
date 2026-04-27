@@ -1,0 +1,109 @@
+<svg width="1200" height="620" viewBox="0 0 1200 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1200" y2="620" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FAFF"/>
+      <stop offset="1" stop-color="#F1F5FF"/>
+    </linearGradient>
+    <linearGradient id="cardStroke" x1="0" y1="0" x2="260" y2="120" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#93C5FD"/>
+      <stop offset="1" stop-color="#A5B4FC"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#1E3A8A" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="620" rx="24" fill="url(#bg2)"/>
+
+  <g filter="url(#soft)">
+    <rect x="80" y="110" width="260" height="130" rx="18" fill="white" stroke="url(#cardStroke)" stroke-width="2"/>
+    <rect x="470" y="110" width="260" height="130" rx="18" fill="white" stroke="url(#cardStroke)" stroke-width="2"/>
+    <rect x="860" y="110" width="260" height="130" rx="18" fill="white" stroke="url(#cardStroke)" stroke-width="2"/>
+    <rect x="80" y="350" width="260" height="130" rx="18" fill="white" stroke="url(#cardStroke)" stroke-width="2"/>
+    <rect x="470" y="350" width="260" height="130" rx="18" fill="white" stroke="url(#cardStroke)" stroke-width="2"/>
+    <rect x="860" y="350" width="260" height="130" rx="18" fill="white" stroke="url(#cardStroke)" stroke-width="2"/>
+  </g>
+
+  <g font-size="20" font-weight="700" fill="#1F2937">
+    <text x="210" y="172" text-anchor="middle">글로벌커플케어</text>
+    <text x="600" y="172" text-anchor="middle">토탈케어로그</text>
+    <text x="990" y="172" text-anchor="middle">에듀케어로그</text>
+    <text x="210" y="412" text-anchor="middle">자람이</text>
+    <text x="600" y="412" text-anchor="middle">시니어앤라이프</text>
+    <text x="990" y="412" text-anchor="middle">베지케어</text>
+  </g>
+
+  <g font-size="15" font-weight="600" fill="#4B5563">
+    <text x="210" y="201" text-anchor="middle">정착 데이터</text>
+    <text x="600" y="201" text-anchor="middle">의료 실행 인프라</text>
+    <text x="990" y="201" text-anchor="middle">학습 연계</text>
+    <text x="210" y="441" text-anchor="middle">성장 기록</text>
+    <text x="600" y="441" text-anchor="middle">노인돌봄 연속 관리</text>
+    <text x="990" y="441" text-anchor="middle">식습관 기반 예방</text>
+  </g>
+
+  <!-- service icons -->
+  <g fill="#2563EB">
+    <circle cx="130" cy="148" r="12"/>
+    <circle cx="520" cy="148" r="12"/>
+    <circle cx="910" cy="148" r="12"/>
+    <circle cx="130" cy="388" r="12"/>
+    <circle cx="520" cy="388" r="12"/>
+    <circle cx="910" cy="388" r="12"/>
+  </g>
+  <g stroke="#DBEAFE" stroke-width="3" stroke-linecap="round">
+    <path d="M124 148H136"/>
+    <path d="M130 142V154"/>
+    <path d="M514 148H526"/>
+    <path d="M520 142V154"/>
+    <path d="M904 148H916"/>
+    <path d="M910 142V154"/>
+    <path d="M124 388H136"/>
+    <path d="M130 382V394"/>
+    <path d="M514 388H526"/>
+    <path d="M520 382V394"/>
+    <path d="M904 388H916"/>
+    <path d="M910 382V394"/>
+  </g>
+
+  <text x="600" y="54" text-anchor="middle" font-size="28" font-weight="800" fill="#1E3A8A">서비스 간 연결 흐름</text>
+  <text x="600" y="82" text-anchor="middle" font-size="15" font-weight="600" fill="#475569">사용자 여정이 끊기지 않도록 도메인 간 데이터를 연결합니다</text>
+
+  <g stroke="#6366F1" stroke-width="4" stroke-linecap="round">
+    <path d="M340 175H470"/>
+    <path d="M730 175H860"/>
+    <path d="M990 240V350"/>
+    <path d="M470 415H340"/>
+    <path d="M860 415H730"/>
+    <path d="M210 350V240"/>
+  </g>
+
+  <g fill="#6366F1">
+    <path d="M460 163L480 175L460 187V163Z"/>
+    <path d="M850 163L870 175L850 187V163Z"/>
+    <path d="M978 340L990 360L1002 340H978Z"/>
+    <path d="M350 403L330 415L350 427V403Z"/>
+    <path d="M740 403L720 415L740 427V403Z"/>
+    <path d="M198 260L210 240L222 260H198Z"/>
+  </g>
+
+  <!-- arrow labels -->
+  <g font-size="13" font-weight="700" fill="#4338CA">
+    <rect x="358" y="147" width="96" height="22" rx="11" fill="#E0E7FF"/>
+    <text x="406" y="162" text-anchor="middle">정착→의료</text>
+    <rect x="748" y="147" width="96" height="22" rx="11" fill="#E0E7FF"/>
+    <text x="796" y="162" text-anchor="middle">의료→교육</text>
+    <rect x="944" y="282" width="92" height="22" rx="11" fill="#E0E7FF"/>
+    <text x="990" y="297" text-anchor="middle">교육→베지케어</text>
+    <rect x="352" y="387" width="108" height="22" rx="11" fill="#E0E7FF"/>
+    <text x="406" y="402" text-anchor="middle">시니어→자람이</text>
+    <rect x="748" y="387" width="96" height="22" rx="11" fill="#E0E7FF"/>
+    <text x="796" y="402" text-anchor="middle">베지→시니어</text>
+    <rect x="160" y="282" width="100" height="22" rx="11" fill="#E0E7FF"/>
+    <text x="210" y="297" text-anchor="middle">자람이→글로벌</text>
+  </g>
+
+  <rect x="80" y="532" width="1040" height="56" rx="14" fill="#EEF2FF" stroke="#C7D2FE"/>
+  <text x="600" y="565" text-anchor="middle" font-size="16" font-weight="700" fill="#3730A3">
+    핵심 메시지: 서비스는 분리 운영이 아니라, 하나의 AI디지털케어로그 위에서 연결되는 확장 구조입니다
+  </text>
+</svg>
