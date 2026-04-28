@@ -75,7 +75,7 @@ const services = [
     name: '글로벌커플케어',
     status: '베타 테스트',
     mark: 'GC',
-    domain: '글로벌패밀리',
+    domain: '글로벌커플케어',
     summary: '국제결혼·다문화 가족 영역의 정보·절차·신뢰를 하나의 기준으로 연결하는 글로벌 가족 인프라',
     url: '/services/marriage',
     externalUrl: 'https://globalcouplecare.com',

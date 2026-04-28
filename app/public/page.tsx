@@ -4,17 +4,28 @@ import Footer from '../../components/Footer'
 import Link from 'next/link'
 import { MarketingIcon, type MarketingIconName } from '../../components/MarketingIcon'
 
+const publicCanonical = 'https://dreamailab.com/public'
+const publicDescription =
+  'DAL AI디지털케어로그 플랫폼의 정책 정합성, 데이터 표준, 개인정보 보호 구조. 시범사업·공공 협력 문의.'
+
 export const metadata: Metadata = {
   title: '공공 협력 - 정부·지자체·공공기관 | 드림에이아이랩',
-  description: 'DAL AI디지털케어로그 플랫폼의 정책 정합성, 데이터 표준, 개인정보 보호 구조. 시범사업·공공 협력 문의.',
+  description: publicDescription,
+  alternates: { canonical: publicCanonical },
   openGraph: {
     title: '공공 협력 - 정부·지자체·공공기관 | 드림에이아이랩',
     description: 'DAL 플랫폼의 정책 정합성 및 사회적 가치. 시범사업 적용 가능 영역.',
-    url: 'https://dreamailab.com/public',
+    url: publicCanonical,
     siteName: '드림에이아이랩',
     images: [{ url: '/og-image.png', width: 1200, height: 630, alt: '드림에이아이랩 공공 협력' }],
     locale: 'ko_KR',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: '공공 협력 - 정부·지자체·공공기관 | 드림에이아이랩',
+    description: publicDescription,
+    images: ['/og-image.png'],
   },
 }
 
@@ -50,7 +61,7 @@ export default function PublicPage() {
           <h2 className="text-3xl font-bold text-gray-900 mb-8">DAL 플랫폼 개요</h2>
           <p className="text-lg text-gray-700 mb-6 max-w-4xl">
             드림에이아이랩(DAL)은 돌봄·의료·교육 데이터를 표준화하는 플랫폼 기업입니다. 
-            AI디지털케어로그 기술로 하나의 데이터 인프라 위에 발달장애, 시니어 돌봄, 의료 헬스케어, 교육, 국제결혼, 라이프스타일 도메인을 연결합니다. 
+            AI디지털케어로그 기술로 하나의 데이터 인프라 위에 발달장애, 시니어 돌봄, 토탈케어로그, 교육, 국제결혼, 라이프스타일 도메인을 연결합니다. 
             시범·실증 사업 논의에 적합한 구조를 지향하며, 지자체·공공기관 협력과 데이터 기반 정책 지원을 함께 염두에 둔 플랫폼입니다.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">

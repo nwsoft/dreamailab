@@ -4,17 +4,27 @@ import Footer from '../../components/Footer'
 import Link from 'next/link'
 import { MarketingIcon, type MarketingIconName } from '../../components/MarketingIcon'
 
+const irCanonical = 'https://dreamailab.com/ir'
+const irDescription = 'DAL AI디지털케어로그 플랫폼의 시장 기회, 수익 모델, 데이터 자산. 투자 및 사업 협력 문의.'
+
 export const metadata: Metadata = {
   title: '투자·IR - 투자자 및 사업 협력 | 드림에이아이랩',
-  description: 'DAL AI디지털케어로그 플랫폼의 시장 기회, 수익 모델, 데이터 자산. 투자 및 사업 협력 문의.',
+  description: irDescription,
+  alternates: { canonical: irCanonical },
   openGraph: {
     title: '투자·IR - 투자자 및 사업 협력 | 드림에이아이랩',
     description: 'DAL 플랫폼 시장 기회, 수익 모델, 확장성. 투자 검토 및 협력 문의.',
-    url: 'https://dreamailab.com/ir',
+    url: irCanonical,
     siteName: '드림에이아이랩',
     images: [{ url: '/og-image.png', width: 1200, height: 630, alt: '드림에이아이랩 IR' }],
     locale: 'ko_KR',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: '투자·IR - 투자자 및 사업 협력 | 드림에이아이랩',
+    description: irDescription,
+    images: ['/og-image.png'],
   },
 }
 

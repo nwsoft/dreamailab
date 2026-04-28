@@ -4,10 +4,30 @@ import Footer from '../../components/Footer'
 import Link from 'next/link'
 import { MarketingIcon, type MarketingIconName } from '../../components/MarketingIcon'
 
+const visionCanonical = 'https://dreamailab.com/vision'
+const visionDescription =
+  '데이터 표준화로 누구나 동등한 의료·돌봄·교육에 접근하도록 하고, 기술이 사람을 향하는 미래를 만듭니다.'
+
 export const metadata: Metadata = {
   title: '비전 - 드림에이아이랩',
-  description: '데이터 표준화로 누구나 동등한 의료·돌봄·교육에 접근하도록 하고, 기술이 사람을 향하는 미래를 만듭니다.',
+  description: visionDescription,
   keywords: '드림에이아이랩, 비전, 데이터 표준화, 사회적 가치, 임팩트, 투자',
+  alternates: { canonical: visionCanonical },
+  openGraph: {
+    title: '비전 - 드림에이아이랩',
+    description: visionDescription,
+    url: visionCanonical,
+    siteName: '드림에이아이랩',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: '드림에이아이랩 비전' }],
+    locale: 'ko_KR',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: '비전 - 드림에이아이랩',
+    description: visionDescription,
+    images: ['/og-image.png'],
+  },
 }
 
 export default function Vision() {
@@ -137,7 +157,7 @@ export default function Vision() {
                   <MarketingIcon name="sparkle" className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                  가능성을 믿는 모든이들에게
+                  가능성을 믿는 모든 이들에게
                 </h3>
                 <p className="text-gray-600">
                   기술로 세상을 바꾸는 우리의 약속
@@ -258,7 +278,7 @@ export default function Vision() {
               <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4 text-primary-600">
                 <MarketingIcon name="handshake" className="h-8 w-8" />
               </div>
-              <h3 className="text-gray-900 mb-3">포용성</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">포용성</h3>
               <p className="text-gray-600">
                 모든 사람이 기술적 장벽 없이 혜택을 누릴 수 있는 포용적인 솔루션을 제공합니다.
               </p>

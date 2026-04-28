@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 import Link from 'next/link'
+import { MarketingIcon, type MarketingIconName } from '../../../components/MarketingIcon'
 
 export const metadata: Metadata = {
   title: 'AI 디지털케어로그 | 발달장애 표준 기술 | 자람이 | 드림에이아이랩',
@@ -423,6 +424,24 @@ export default function JarameService() {
         </div>
       </section>
 
+      {/* Visual Overview */}
+      <section className="py-12 bg-white border-b border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">자람이 구조 한눈에 보기</h2>
+          <p className="text-center text-gray-600 text-sm mb-8 max-w-2xl mx-auto">
+            기록 표준화와 케어 실행 루프를 시각적으로 요약했습니다.
+          </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div className="rounded-2xl overflow-hidden border border-primary-100 bg-white shadow-sm">
+              <img src="/images/services/jarame-data-flow.svg" alt="자람이 데이터 흐름 구조도" className="w-full h-auto" />
+            </div>
+            <div className="rounded-2xl overflow-hidden border border-secondary-100 bg-white shadow-sm">
+              <img src="/images/services/jarame-care-loop.svg" alt="자람이 케어 루프 구조도" className="w-full h-auto" />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Market Validation — Executive Summary 바로 아래 (소개 → 검증 → 설명 흐름) */}
       <section className="py-14 bg-white border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -447,7 +466,7 @@ export default function JarameService() {
         </div>
       </section>
 
-      {/* 🎯 Who Jarame Is For (ICP) — 3-column card layout */}
+      {/* Who Jarame Is For (ICP) — 3-column card layout */}
       <section className="py-14 bg-gray-50 border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">Who Jarame Is For</h2>
@@ -455,7 +474,7 @@ export default function JarameService() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white rounded-xl p-6 shadow-md border border-gray-100 h-full flex flex-col hover:shadow-lg transition-shadow">
-              <div className="text-3xl mb-3 text-blue-600">🏥</div>
+              <div className="mb-3 text-primary-600"><MarketingIcon name="hospital" className="h-8 w-8" /></div>
               <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-1">Primary Buyers</h3>
               <p className="text-lg font-bold text-gray-900 mb-2">기관</p>
               <p className="text-sm text-gray-600 mb-4">치료·교육·의료 협업을 위해 자람이를 도입하는 조직입니다.</p>
@@ -466,7 +485,7 @@ export default function JarameService() {
               </ul>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-md border border-gray-100 h-full flex flex-col hover:shadow-lg transition-shadow">
-              <div className="text-3xl mb-3 text-green-600">🏛️</div>
+              <div className="mb-3 text-primary-600"><MarketingIcon name="scale" className="h-8 w-8" /></div>
               <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-1">Secondary Buyers</h3>
               <p className="text-lg font-bold text-gray-900 mb-2">확장</p>
               <p className="text-sm text-gray-600 mb-4">지역·정책 단위에서 표준 케어 데이터 인프라를 확대하는 주체입니다.</p>
@@ -476,7 +495,7 @@ export default function JarameService() {
               </ul>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-md border border-gray-100 h-full flex flex-col hover:shadow-lg transition-shadow">
-              <div className="text-3xl mb-3 text-indigo-600">👥</div>
+              <div className="mb-3 text-primary-600"><MarketingIcon name="user" className="h-8 w-8" /></div>
               <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-1">End Users</h3>
               <p className="text-lg font-bold text-gray-900 mb-2">실제 사용자</p>
               <p className="text-sm text-gray-600 mb-4">기관 도입 후 일상에서 케어로그를 기록·활용하는 사용자입니다.</p>
@@ -916,7 +935,7 @@ export default function JarameService() {
               </div>
             </div>
 
-            <p className="mt-4 text-center text-sm text-gray-700">자람이는 단순 기록 시스템이 아니라 👉 <strong>데이터가 쌓일수록 정확도가 높아지는 강화학습 구조</strong>입니다.</p>
+            <p className="mt-4 text-center text-sm text-gray-700">자람이는 단순 기록 시스템이 아니라 <strong>데이터가 쌓일수록 정확도가 높아지는 강화학습 구조</strong>입니다.</p>
           </div>
 
           {/* ⑤ 실제 사례 1~2개 */}
@@ -1174,7 +1193,7 @@ export default function JarameService() {
             {/* 강화학습 루프 */}
             <div className="mt-8 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl p-6 border-2 border-blue-300">
               <div className="flex items-center justify-center gap-4">
-                <span className="text-2xl">🔄</span>
+                <MarketingIcon name="refresh" className="h-7 w-7 text-primary-600" />
                 <p className="text-lg text-gray-800 font-semibold">
                   <strong className="text-blue-700">강화학습 루프</strong>: 
                   출력 결과 → 실제 효과 측정 → AI 모델 업데이트 → 정확도 향상 → 다시 입력
@@ -1192,7 +1211,7 @@ export default function JarameService() {
             <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">핵심 기술 스택</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="bg-white rounded-xl p-6 shadow">
-                <h4 className="font-bold text-blue-700 mb-3">💾 데이터 레이어</h4>
+                <h4 className="font-bold text-primary-700 mb-3">데이터 레이어</h4>
                 <ul className="text-sm text-gray-700 space-y-1">
                   <li>• 표준 스키마 (JSON/FHIR 호환 — FHIR은 의료·헬스케어 데이터 교환 국제 표준)</li>
                   <li>• 시계열 데이터베이스</li>
@@ -1201,7 +1220,7 @@ export default function JarameService() {
               </div>
 
               <div className="bg-white rounded-xl p-6 shadow">
-                <h4 className="font-bold text-indigo-700 mb-3">🤖 AI 레이어</h4>
+                <h4 className="font-bold text-primary-700 mb-3">AI 레이어</h4>
                 <ul className="text-sm text-gray-700 space-y-1">
                   <li>• LLM (자연어 분석·생성)</li>
                   <li>• 행동 패턴 인식 모델</li>
@@ -1210,7 +1229,7 @@ export default function JarameService() {
               </div>
 
               <div className="bg-white rounded-xl p-6 shadow">
-                <h4 className="font-bold text-green-700 mb-3">🎯 애플리케이션 레이어</h4>
+                <h4 className="font-bold text-primary-700 mb-3">애플리케이션 레이어</h4>
                 <ul className="text-sm text-gray-700 space-y-1">
                   <li>• 실시간 대시보드</li>
                   <li>• 다기관 협업 인터페이스</li>
@@ -1228,7 +1247,7 @@ export default function JarameService() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="inline-block bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full px-6 py-2 mb-6">
-              <p className="font-bold text-sm">🌟 자람이의 핵심 기술</p>
+              <p className="font-bold text-sm">자람이의 핵심 기술</p>
             </div>
             
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -1248,7 +1267,7 @@ export default function JarameService() {
               </p>
               
               <div className="bg-gradient-to-r from-amber-50 to-orange-50 rounded-xl p-6 border-l-4 border-amber-500 my-6">
-                <p className="text-lg text-gray-800 font-semibold mb-2">💡 검증 포인트</p>
+                <p className="text-lg text-gray-800 font-semibold mb-2">검증 포인트</p>
                 <p className="text-base text-gray-700">
                   표준 스키마·다기관 RBAC(역할별 접근 권한)·감사 로그(접근·변경 이력 추적)·기관 베타 파일럿으로 로그·표준·다기관·실행 환류를 검증하고 있습니다.
                 </p>
@@ -1268,7 +1287,7 @@ export default function JarameService() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* 기록 항목 */}
             <div className="bg-white rounded-2xl p-8 shadow">
-              <div className="text-4xl mb-4">📝</div>
+              <div className="mb-4 text-primary-600"><MarketingIcon name="document" className="h-9 w-9" /></div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">핵심 기록 항목</h3>
               <ul className="space-y-2 text-gray-600 list-disc list-inside">
                 <li>치료·교육 활동, 숙제/평가, 출석</li>
@@ -1279,7 +1298,7 @@ export default function JarameService() {
 
             {/* AI 기능 */}
             <div className="bg-white rounded-2xl p-8 shadow">
-              <div className="text-4xl mb-4">🤖</div>
+              <div className="mb-4 text-primary-600"><MarketingIcon name="robot" className="h-9 w-9" /></div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">AI 분석 & 리포트</h3>
               <ul className="space-y-2 text-gray-600 list-disc list-inside">
                 <li>발달 추이 분석 및 시각화</li>
@@ -1290,7 +1309,7 @@ export default function JarameService() {
 
             {/* 협업/공유 */}
             <div className="bg-white rounded-2xl p-8 shadow">
-              <div className="text-4xl mb-4">👥</div>
+              <div className="mb-4 text-primary-600"><MarketingIcon name="handshake" className="h-9 w-9" /></div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">협업 & 데이터 공유</h3>
               <ul className="space-y-2 text-gray-600 list-disc list-inside">
                 <li>보호자·교사·치료사·의사 간 기록 공유</li>
@@ -1319,7 +1338,7 @@ export default function JarameService() {
 
           {/* 치료 모듈 */}
           <div className="bg-white rounded-2xl p-8 shadow-lg mb-12">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">🎯 10가지 전문 치료 모듈</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">10가지 전문 치료 모듈</h3>
             <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
               {['물리치료', '작업치료', '언어치료', '놀이치료', '음악치료', '미술치료', '사회기술훈련', '인지행동치료', '감각통합치료', 'ABA치료'].map((module, idx) => (
                 <div key={idx} className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-4 text-center">
@@ -1335,7 +1354,7 @@ export default function JarameService() {
           {/* 검증된 성과 */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-white rounded-2xl p-6 shadow-lg text-center">
-              <div className="text-4xl mb-3">🎯</div>
+              <div className="mb-3 flex justify-center text-primary-600"><MarketingIcon name="target" className="h-8 w-8" /></div>
               <p className="text-3xl font-bold text-green-600 mb-2">35%</p>
               <p className="text-sm text-gray-600 mb-3">치료 효과 향상</p>
               <div className="text-xs text-gray-500 space-y-1 text-left">
@@ -1355,7 +1374,7 @@ export default function JarameService() {
             </div>
             
             <div className="bg-white rounded-2xl p-6 shadow-lg text-center">
-              <div className="text-4xl mb-3">📊</div>
+              <div className="mb-3 flex justify-center text-primary-600"><MarketingIcon name="chart" className="h-8 w-8" /></div>
               <p className="text-3xl font-bold text-purple-600 mb-2">95%</p>
               <p className="text-sm text-gray-600 mb-3">데이터 정확성</p>
               <div className="text-xs text-gray-500 space-y-1 text-left">
@@ -1365,7 +1384,7 @@ export default function JarameService() {
             </div>
             
             <div className="bg-white rounded-2xl p-6 shadow-lg text-center">
-              <div className="text-4xl mb-3">🤝</div>
+              <div className="mb-3 flex justify-center text-primary-600"><MarketingIcon name="handshake" className="h-8 w-8" /></div>
               <p className="text-3xl font-bold text-orange-600 mb-2">100%</p>
               <p className="text-sm text-gray-600 mb-3">기관 연계</p>
               <div className="text-xs text-gray-500 space-y-1 text-left">
@@ -1384,19 +1403,19 @@ export default function JarameService() {
           <p className="text-center text-gray-600 text-sm mb-8 max-w-2xl mx-auto">보호자·치료사·의사·교사가 하나의 표준 케어로그로 협업합니다.</p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-white rounded-xl p-5 shadow-sm">
-              <h3 className="font-bold text-gray-900 mb-2">👪 보호자·가정</h3>
+              <h3 className="font-bold text-gray-900 mb-2">보호자·가정</h3>
               <p className="text-sm text-gray-600">가정 일지 · AI 상담 · 홈티 매칭 · 기관 연계</p>
             </div>
             <div className="bg-white rounded-xl p-5 shadow-sm">
-              <h3 className="font-bold text-gray-900 mb-2">🏢 치료사·센터</h3>
+              <h3 className="font-bold text-gray-900 mb-2">치료사·센터</h3>
               <p className="text-sm text-gray-600">치료 모듈 기록 · 성과 분석 · 행정 자동화</p>
             </div>
             <div className="bg-white rounded-xl p-5 shadow-sm">
-              <h3 className="font-bold text-gray-900 mb-2">🏥 의사·병원</h3>
+              <h3 className="font-bold text-gray-900 mb-2">의사·병원</h3>
               <p className="text-sm text-gray-600">통합 케어 데이터 · AI 치료 보조 · 약물 추적</p>
             </div>
             <div className="bg-white rounded-xl p-5 shadow-sm">
-              <h3 className="font-bold text-gray-900 mb-2">🏫 교사·학교</h3>
+              <h3 className="font-bold text-gray-900 mb-2">교사·학교</h3>
               <p className="text-sm text-gray-600">IEP 자동화 · AI 교재 · 학습 데이터 분석</p>
             </div>
           </div>
@@ -1413,7 +1432,7 @@ export default function JarameService() {
             <div className="bg-cyan-50 rounded-xl p-4 border border-cyan-100"><h3 className="font-bold text-gray-900 mb-1">2. EduCareLog</h3><p className="text-gray-600">교육</p></div>
             <div className="bg-indigo-50 rounded-xl p-4 border border-indigo-100"><h3 className="font-bold text-gray-900 mb-1">3. 시니어·토탈케어</h3><p className="text-gray-600">의료·만성질환</p></div>
           </div>
-          <p className="text-center text-gray-700 font-medium">👉 하나의 케어 데이터 OS 전략</p>
+          <p className="text-center text-gray-700 font-medium">하나의 케어 데이터 OS 전략</p>
         </div>
       </section>
 
@@ -1583,8 +1602,8 @@ export default function JarameService() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Subsection 1: 아이의 행동을 이해하기 */}
-            <div className="bg-white rounded-xl p-6 border-2 border-blue-200 shadow-sm">
-              <div className="text-4xl mb-3 text-center">🔍</div>
+            <div className="bg-white rounded-xl p-6 border-2 border-primary-200 shadow-sm">
+              <div className="mb-3 flex justify-center text-primary-600"><MarketingIcon name="search" className="h-8 w-8" /></div>
               <h3 className="text-lg font-bold text-gray-900 mb-3 text-center">아이의 행동을 이해하기</h3>
               <p className="text-sm text-gray-600 mb-3">
                 부모는 종종 묻습니다. “이 행동이 발달 특성 때문인가?” “환경 때문인가?” “약물 때문인가?”
@@ -1604,8 +1623,8 @@ export default function JarameService() {
             </div>
 
             {/* Subsection 2: 치료와 교육 과정 이해 */}
-            <div className="bg-white rounded-xl p-6 border-2 border-green-200 shadow-sm">
-              <div className="text-4xl mb-3 text-center">📋</div>
+            <div className="bg-white rounded-xl p-6 border-2 border-primary-200 shadow-sm">
+              <div className="mb-3 flex justify-center text-primary-600"><MarketingIcon name="document" className="h-8 w-8" /></div>
               <h3 className="text-lg font-bold text-gray-900 mb-3 text-center">치료와 교육 과정 이해</h3>
               <p className="text-sm text-gray-600 mb-3">
                 많은 부모는 치료 세션과 학교 프로그램이 “블랙박스”처럼 느껴집니다.
@@ -1625,8 +1644,8 @@ export default function JarameService() {
             </div>
 
             {/* Subsection 3: 아이의 변화 확인 */}
-            <div className="bg-white rounded-xl p-6 border-2 border-indigo-200 shadow-sm">
-              <div className="text-4xl mb-3 text-center">📈</div>
+            <div className="bg-white rounded-xl p-6 border-2 border-primary-200 shadow-sm">
+              <div className="mb-3 flex justify-center text-primary-600"><MarketingIcon name="trend" className="h-8 w-8" /></div>
               <h3 className="text-lg font-bold text-gray-900 mb-3 text-center">아이의 변화 확인</h3>
               <p className="text-sm text-gray-600 mb-3">
                 자람이는 부모가 이해하기 쉬운 <strong>진행 리포트</strong>를 자동 생성합니다.
@@ -1644,8 +1663,8 @@ export default function JarameService() {
             </div>
 
             {/* Subsection 4: 부모 행동 가이드 */}
-            <div className="bg-white rounded-xl p-6 border-2 border-amber-200 shadow-sm">
-              <div className="text-4xl mb-3 text-center">🏠</div>
+            <div className="bg-white rounded-xl p-6 border-2 border-primary-200 shadow-sm">
+              <div className="mb-3 flex justify-center text-primary-600"><MarketingIcon name="link" className="h-8 w-8" /></div>
               <h3 className="text-lg font-bold text-gray-900 mb-3 text-center">부모 행동 가이드</h3>
               <p className="text-sm text-gray-600 mb-3">
                 기록된 데이터를 바탕으로 자람이는 부모에게 <strong>실천 가능한 가이드</strong>를 제공합니다.
@@ -1672,28 +1691,28 @@ export default function JarameService() {
             <h3 className="text-lg font-bold text-gray-900 mb-6 text-center">부모가 얻는 것</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
               <div className="flex items-start gap-3">
-                <span className="text-2xl shrink-0">🔍</span>
+                <MarketingIcon name="search" className="h-6 w-6 shrink-0 text-primary-600" />
                 <div>
                   <p className="font-medium text-gray-800">아이 행동 이해</p>
                   <p className="text-sm text-gray-600">행동이 왜 나타나는지 패턴으로 이해</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <span className="text-2xl shrink-0">📋</span>
+                <MarketingIcon name="document" className="h-6 w-6 shrink-0 text-primary-600" />
                 <div>
                   <p className="font-medium text-gray-800">치료 진행 상황 확인</p>
                   <p className="text-sm text-gray-600">어떤 치료·목표가 진행 중인지 파악</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <span className="text-2xl shrink-0">🤝</span>
+                <MarketingIcon name="handshake" className="h-6 w-6 shrink-0 text-primary-600" />
                 <div>
                   <p className="font-medium text-gray-800">전문가 협업 연결</p>
                   <p className="text-sm text-gray-600">가정·센터·학교·병원 정보가 하나로</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <span className="text-2xl shrink-0">🏠</span>
+                <MarketingIcon name="link" className="h-6 w-6 shrink-0 text-primary-600" />
                 <div>
                   <p className="font-medium text-gray-800">가정에서 할 수 있는 행동 가이드</p>
                   <p className="text-sm text-gray-600">실천 가능한 활동·환경·대응 방법</p>
@@ -1975,7 +1994,9 @@ export default function JarameService() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {coreFeatures.slice(0, 4).map((feature, index) => (
               <div key={index} className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-shadow">
-                <div className="text-4xl mb-4">{feature.icon}</div>
+                <div className="mb-4 text-primary-600">
+                  <MarketingIcon name={iconFromEmoji(feature.icon)} className="h-9 w-9" />
+                </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
                 <p className="text-gray-700 mb-4">{feature.description}</p>
                 <ul className="space-y-2">
@@ -2118,13 +2139,13 @@ export default function JarameService() {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
             {/* 사회적 가치 */}
-            <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 shadow-lg">
-              <div className="text-5xl mb-4 text-center">🌍</div>
+            <div className="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-2xl p-8 shadow-lg">
+              <div className="mb-4 flex justify-center text-primary-600"><MarketingIcon name="globe" className="h-10 w-10" /></div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">사회적 가치</h3>
               
               <div className="space-y-3 text-gray-700">
                 <div className="bg-white rounded-lg p-4">
-                  <h4 className="font-bold text-green-700 mb-2">📊 시장 규모</h4>
+                  <h4 className="font-bold text-primary-700 mb-2">시장 규모</h4>
                   <p className="text-sm">
                     <strong>국내 발달장애인 30만명</strong> (2024년 통계청)
                     <br/>전 세계 <strong>1억명+</strong> 추정
@@ -2133,7 +2154,7 @@ export default function JarameService() {
                 </div>
 
                 <div className="bg-white rounded-lg p-4">
-                  <h4 className="font-bold text-green-700 mb-2">💰 가정 부담</h4>
+                  <h4 className="font-bold text-primary-700 mb-2">가정 부담</h4>
                   <p className="text-sm">
                     월 평균 <strong>200~300만원</strong> 치료비
                     <br/>평생 누적 비용 <strong>수억원</strong>
@@ -2142,7 +2163,7 @@ export default function JarameService() {
                 </div>
 
                 <div className="bg-white rounded-lg p-4">
-                  <h4 className="font-bold text-green-700 mb-2">🎯 ESG·사회적 임팩트</h4>
+                  <h4 className="font-bold text-primary-700 mb-2">ESG·사회적 임팩트</h4>
                   <p className="text-sm">
                     불치병·사회 약자를 위한 기술
                     <br/>치료 비용 <strong>30~50% 절감</strong> 가능
@@ -2153,8 +2174,8 @@ export default function JarameService() {
             </div>
 
             {/* 기술 */}
-            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 shadow-lg">
-              <div className="text-5xl mb-4 text-center">🚀</div>
+            <div className="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-2xl p-8 shadow-lg">
+              <div className="mb-4 flex justify-center text-primary-600"><MarketingIcon name="rocket" className="h-10 w-10" /></div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">기술</h3>
               
               <div className="space-y-3 text-gray-700">
@@ -2167,7 +2188,7 @@ export default function JarameService() {
                 </div>
 
                 <div className="bg-white rounded-lg p-4">
-                  <h4 className="font-bold text-blue-700 mb-2">🔬 기술 차별성</h4>
+                  <h4 className="font-bold text-primary-700 mb-2">기술 차별성</h4>
                   <ul className="text-sm space-y-1">
                     <li>• 다기관 데이터 통합 표준 스키마</li>
                     <li>• 실시간 환류 + AI 강화학습</li>
@@ -2177,7 +2198,7 @@ export default function JarameService() {
                 </div>
 
                 <div className="bg-white rounded-lg p-4">
-                  <h4 className="font-bold text-blue-700 mb-2">📈 확장 가능성</h4>
+                  <h4 className="font-bold text-primary-700 mb-2">확장 가능성</h4>
                   <p className="text-sm">
                     <strong>발달장애</strong>에서 시작해
                     <br/>→ <strong>일반 교육·학습부진</strong>
@@ -2189,13 +2210,13 @@ export default function JarameService() {
             </div>
 
             {/* 검증된 시장 */}
-            <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 shadow-lg">
-              <div className="text-5xl mb-4 text-center">✅</div>
+            <div className="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-2xl p-8 shadow-lg">
+              <div className="mb-4 flex justify-center text-primary-600"><MarketingIcon name="shield" className="h-10 w-10" /></div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">검증된 시장</h3>
               
               <div className="space-y-3 text-gray-700">
                 <div className="bg-white rounded-lg p-4">
-                  <h4 className="font-bold text-blue-700 mb-2">📍 현재 성과</h4>
+                  <h4 className="font-bold text-primary-700 mb-2">현재 성과</h4>
                   <ul className="text-sm space-y-1">
                     <li>• <strong>5,700+</strong> 연계·등록 기관 풀</li>
                     <li>• <strong>2022~2025</strong> 기술 개발 완료</li>
@@ -2204,7 +2225,7 @@ export default function JarameService() {
                 </div>
 
                 <div className="bg-white rounded-lg p-4">
-                  <h4 className="font-bold text-cyan-700 mb-2">🤝 파트너십</h4>
+                  <h4 className="font-bold text-primary-700 mb-2">파트너십</h4>
                   <p className="text-sm">
                     센터·학교·병원과 <strong>실증 완료</strong>
                     <br/>교육청·보건복지부 <strong>협력 논의</strong>
@@ -2213,7 +2234,7 @@ export default function JarameService() {
                 </div>
 
                 <div className="bg-white rounded-lg p-4">
-                  <h4 className="font-bold text-indigo-700 mb-2">🎯 2026 정부 AI 정책 정합성</h4>
+                  <h4 className="font-bold text-primary-700 mb-2">2026 정부 AI 정책 정합성</h4>
                   <p className="text-sm">
                     <strong>"AI 사회문제 해결형 과제 1순위"</strong> (2025년 발표)
                     <br/>• 헬스케어·교육 분야 AI 사회문제 해결
@@ -2239,7 +2260,7 @@ export default function JarameService() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
               <div className="bg-white/10 rounded-xl p-6 backdrop-blur-sm">
-                <h4 className="text-xl font-bold mb-3 text-cyan-300">🏛️ 공공 협력 모델</h4>
+                <h4 className="text-xl font-bold mb-3 text-cyan-300">공공 협력 모델</h4>
                 <ul className="space-y-2 text-sm">
                   <li><strong>정부 바우처</strong>: 발달장애 지원 사업 연계</li>
                   <li><strong>교육청 협력</strong>: 특수교육 표준화 시범사업</li>
@@ -2249,7 +2270,7 @@ export default function JarameService() {
               </div>
 
               <div className="bg-white/10 rounded-xl p-6 backdrop-blur-sm">
-                <h4 className="text-xl font-bold mb-3 text-cyan-300">📊 단계별 확장</h4>
+                <h4 className="text-xl font-bold mb-3 text-cyan-300">단계별 확장</h4>
                 <ul className="space-y-2 text-sm">
                   <li><strong>1단계</strong>: 발달장애 표준 확립 (자람이 완성)</li>
                   <li><strong>2단계</strong>: 일반 교육·학습부진 지원</li>
@@ -2274,7 +2295,7 @@ export default function JarameService() {
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 text-center">함께 만들어갈 미래</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
               <div>
-                <h4 className="text-xl font-bold text-indigo-700 mb-3">👥 우리가 찾는 파트너</h4>
+                <h4 className="text-xl font-bold text-indigo-700 mb-3">우리가 찾는 파트너</h4>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-start gap-2">
                     <span className="text-green-500">✓</span>
@@ -2296,7 +2317,7 @@ export default function JarameService() {
               </div>
 
               <div>
-                <h4 className="text-xl font-bold text-indigo-700 mb-3">🎯 우리가 제공하는 가치</h4>
+                <h4 className="text-xl font-bold text-indigo-700 mb-3">우리가 제공하는 가치</h4>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-start gap-2">
                     <span className="text-blue-500">✓</span>
@@ -2437,10 +2458,40 @@ export default function JarameService() {
   )
 }
 
+function iconFromEmoji(icon: string): MarketingIconName {
+  const map: Record<string, MarketingIconName> = {
+    '🧸': 'heart',
+    '🧠': 'brain',
+    '🎯': 'target',
+    '📋': 'document',
+    '📝': 'document',
+    '✅': 'shield',
+    '📈': 'trend',
+    '🔐': 'lock',
+    '🏫': 'graduation',
+    '📤': 'upload',
+    '💊': 'pill',
+    '⚖️': 'scale',
+    '🌐': 'globe',
+    '⚠️': 'shield',
+    '🩺': 'stethoscope',
+    '📒': 'document',
+    '🤖': 'robot',
+    '📊': 'chart',
+    '🧩': 'puzzle',
+    '🏥': 'hospital',
+    '🏠': 'link',
+  }
+  return map[icon] ?? 'sparkle'
+}
+
 function ValueCard({ title, desc, icon }: { title: string; desc: string; icon: string }) {
+  const iconName = iconFromEmoji(icon)
   return (
     <div className="bg-white rounded-xl p-6 shadow hover:shadow-lg transition-shadow">
-      <div className="text-3xl mb-3">{icon}</div>
+      <div className="mb-3 text-primary-600">
+        <MarketingIcon name={iconName} className="h-8 w-8" />
+      </div>
       <h3 className="text-lg font-bold text-gray-900 mb-1">{title}</h3>
       <p className="text-gray-600 text-sm">{desc}</p>
     </div>

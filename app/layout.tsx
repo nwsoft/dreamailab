@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: '드림에이아이랩 (DAL) – AI 디지털케어로그로 의료·돌봄·교육 혁신',
-  description: 'AI 디지털케어로그로 발달장애·시니어케어·헬스케어를 연결해 개인맞춤 케어 표준을 만드는 드림에이아이랩(DAL).',
+  description: 'AI 디지털케어로그로 발달장애·시니어케어·토탈케어로그를 연결해 개인맞춤 케어 표준을 만드는 드림에이아이랩(DAL).',
   authors: [{ name: '드림에이아이랩' }],
   creator: '드림에이아이랩',
   publisher: '드림에이아이랩',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: '드림에이아이랩 (DAL) – AI 디지털케어로그로 의료·돌봄·교육 혁신',
-    description: 'AI 디지털케어로그로 발달장애·시니어케어·헬스케어를 연결해 개인맞춤 케어 표준을 만드는 드림에이아이랩(DAL).',
+    description: 'AI 디지털케어로그로 발달장애·시니어케어·토탈케어로그를 연결해 개인맞춤 케어 표준을 만드는 드림에이아이랩(DAL).',
     url: 'https://dreamailab.com',
     siteName: '드림에이아이랩',
     images: [
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: '드림에이아이랩 (DAL) – AI 디지털케어로그로 의료·돌봄·교육 혁신',
-    description: 'AI 디지털케어로그로 발달장애·시니어케어·헬스케어를 연결해 개인맞춤 케어 표준을 만드는 드림에이아이랩(DAL).',
+    description: 'AI 디지털케어로그로 발달장애·시니어케어·토탈케어로그를 연결해 개인맞춤 케어 표준을 만드는 드림에이아이랩(DAL).',
     images: ['https://dreamailab.com/og-image.png'],
   },
   robots: {
@@ -90,7 +90,7 @@ export default function RootLayout({
               "alternateName": "DAL",
               "url": "https://dreamailab.com",
               "logo": "https://dreamailab.com/logo.png",
-              "description": "AI 디지털케어로그로 발달장애·시니어케어·헬스케어를 연결해 개인맞춤 케어 표준을 만드는 드림에이아이랩(DAL).",
+              "description": "AI 디지털케어로그로 발달장애·시니어케어·토탈케어로그를 연결해 개인맞춤 케어 표준을 만드는 드림에이아이랩(DAL).",
               "foundingDate": "2022",
               "address": {
                 "@type": "PostalAddress",
@@ -136,7 +136,7 @@ export default function RootLayout({
                     "itemOffered": {
                       "@type": "Service",
                       "name": "토탈케어로그",
-                      "description": "개인 맞춤형 AI 주치의 헬스케어 플랫폼"
+                      "description": "개인 맞춤형 AI 주치의 토탈케어로그 플랫폼"
                     }
                   },
                   {

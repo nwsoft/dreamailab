@@ -28,6 +28,18 @@ export type MarketingIconName =
   | 'graduation'
   | 'leaf'
   | 'stethoscope'
+  | 'lock'
+  | 'mobile'
+  | 'search'
+  | 'cog'
+  | 'robot'
+  | 'upload'
+  | 'refresh'
+  | 'chat'
+  | 'eye'
+  | 'shield'
+  | 'pill'
+  | 'dna'
 
 type Props = {
   name: MarketingIconName
@@ -203,6 +215,85 @@ export function MarketingIcon({ name, className = 'h-8 w-8 text-current', 'aria-
       return (
         <svg {...common}>
           <path d="M6 4v11a4 4 0 0 0 8 0V4M6 4a2 2 0 1 0 4 0M10 4h4a2 2 0 0 1 2 2v2M19 14a3 3 0 1 1-6 0" />
+        </svg>
+      )
+    case 'lock':
+      return (
+        <svg {...common}>
+          <rect x="5" y="11" width="14" height="10" rx="2" />
+          <path d="M8 11V7a4 4 0 0 1 8 0v4" />
+        </svg>
+      )
+    case 'mobile':
+      return (
+        <svg {...common}>
+          <rect x="7" y="3" width="10" height="18" rx="2" />
+          <path d="M10 18h4" />
+        </svg>
+      )
+    case 'search':
+      return (
+        <svg {...common}>
+          <circle cx="11" cy="11" r="7" />
+          <path d="M20 20l-4-4" />
+        </svg>
+      )
+    case 'cog':
+      return (
+        <svg {...common}>
+          <path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-1.23 3.43 2 2 0 0 1-1.86-.98 1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33 2 2 0 1 1-3.09-2.25l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 3.09-2.25 2 2 0 0 1 1.86.98 1.65 1.65 0 0 0 1.82.33H12a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33 2 2 0 1 1 3.09 2.25l-.06.06a1.65 1.65 0 0 0-.33 1.82 1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1Z" />
+        </svg>
+      )
+    case 'robot':
+      return (
+        <svg {...common}>
+          <rect x="6" y="8" width="12" height="10" rx="2" />
+          <path d="M9 8V6M15 8V6M10 12h4M12 18v2M9 21h6" />
+          <circle cx="10" cy="12" r="0.5" fill="currentColor" stroke="none" />
+          <circle cx="14" cy="12" r="0.5" fill="currentColor" stroke="none" />
+        </svg>
+      )
+    case 'upload':
+      return (
+        <svg {...common}>
+          <path d="M12 15V3M8 7l4-4 4 4M5 21h14" />
+        </svg>
+      )
+    case 'refresh':
+      return (
+        <svg {...common}>
+          <path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8M3 3v5h5M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16M21 21v-5h-5" />
+        </svg>
+      )
+    case 'chat':
+      return (
+        <svg {...common}>
+          <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+        </svg>
+      )
+    case 'eye':
+      return (
+        <svg {...common}>
+          <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7Z M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+        </svg>
+      )
+    case 'shield':
+      return (
+        <svg {...common}>
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" />
+        </svg>
+      )
+    case 'pill':
+      return (
+        <svg {...common}>
+          <path d="m10.5 20.5-7-7a5 5 0 0 1 7-7l7 7a5 5 0 0 1-7 7Z" />
+        </svg>
+      )
+    case 'dna':
+      return (
+        <svg {...common}>
+          <path d="M6 4c2 2 2 4 0 6M18 4c-2 2-2 4 0 6M6 14c2 2 2 4 0 6M18 14c-2 2-2 4 0 6M8 7h8M8 17h8" />
         </svg>
       )
     default:

@@ -7,13 +7,13 @@ import { IconApi, IconInvest, IconPartners, IconPublic, IconUser } from '../comp
 export const metadata: Metadata = {
   title: '드림에이아이랩 | AI디지털케어로그 기반 플랫폼 - DAL',
   description:
-    '드림에이아이랩(DAL)은 돌봄·의료·교육 데이터를 표준화하는 플랫폼 기업입니다. AI디지털케어로그로 하나의 데이터 인프라 위에 발달장애, 시니어, 의료, 교육, 글로벌패밀리, 라이프스타일 6개 핵심 도메인을 연결합니다.',
+    '드림에이아이랩(DAL)은 돌봄·의료·교육 데이터를 표준화하는 플랫폼 기업입니다. AI디지털케어로그로 하나의 데이터 인프라 위에 발달장애, 시니어, 의료, 교육, 글로벌커플케어, 라이프스타일 6개 핵심 도메인을 연결합니다.',
   keywords:
     '발달장애 치료, ADHD 치료, 자폐증 치료, 특수교육, 언어치료, 작업치료, 노인돌봄, 요양원, 주간보호센터, 재가요양, 노인장기요양보험, 요양시설, 돌봄센터, 채식, 비건, 베지테리안, 채식식단, 비건레시피, 채식식당, 온라인진료, AI진단, 건강관리, 만성질환관리, 복약관리, 의료AI, 진단지원, 국제결혼, 다문화가정, 결혼중개, 드림에이아이랩',
   openGraph: {
     title: '드림에이아이랩 | AI디지털케어로그로 의료·돌봄·교육 혁신하는 DAL',
     description:
-      '드림에이아이랩(DAL)은 AI디지털케어로그 표준으로 케어 혁신을 지향하는 기술 기업입니다. 표준화된 데이터와 멀티모달 AI 분석으로 개인 맞춤 케어의 새로운 표준을 만들고, 의료 헬스케어부터 시니어 돌봄, 발달장애, 국제결혼, 라이프스타일 영역까지 같은 플랫폼 철학으로 확장합니다.',
+      '드림에이아이랩(DAL)은 AI디지털케어로그 표준으로 케어 혁신을 지향하는 기술 기업입니다. 표준화된 데이터와 멀티모달 AI 분석으로 개인 맞춤 케어의 새로운 표준을 만들고, 토탈케어로그부터 시니어 돌봄, 발달장애, 국제결혼, 라이프스타일 영역까지 같은 플랫폼 철학으로 확장합니다.',
     url: 'https://dreamailab.com',
     siteName: '드림에이아이랩',
     images: [{ url: '/og-image.png', width: 1200, height: 630, alt: '드림에이아이랩' }],
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: '드림에이아이랩 | AI디지털케어로그로 의료·돌봄·교육 혁신하는 DAL',
     description:
-      '드림에이아이랩(DAL)은 AI디지털케어로그 표준으로 케어 혁신을 지향하는 기술 기업입니다. 표준화된 데이터와 멀티모달 AI 분석으로 개인 맞춤 케어의 새로운 표준을 만들고, 의료 헬스케어부터 시니어 돌봄, 발달장애, 국제결혼, 라이프스타일 영역까지 같은 플랫폼 철학으로 확장합니다.',
+      '드림에이아이랩(DAL)은 AI디지털케어로그 표준으로 케어 혁신을 지향하는 기술 기업입니다. 표준화된 데이터와 멀티모달 AI 분석으로 개인 맞춤 케어의 새로운 표준을 만들고, 토탈케어로그부터 시니어 돌봄, 발달장애, 국제결혼, 라이프스타일 영역까지 같은 플랫폼 철학으로 확장합니다.',
     images: ['/og-image.png'],
   },
 }
@@ -37,7 +37,7 @@ export default function Home() {
     name: '드림에이아이랩',
     alternateName: 'Dream AI Lab',
     description:
-      '드림에이아이랩(DAL)은 AI디지털케어로그 표준으로 케어 혁신을 지향하는 기술 기업입니다. 표준화된 데이터와 멀티모달 AI 분석으로 개인 맞춤 케어의 새로운 표준을 만들고, 의료 헬스케어부터 시니어 돌봄, 발달장애, 국제결혼, 라이프스타일 영역까지 같은 플랫폼 철학으로 확장합니다.',
+      '드림에이아이랩(DAL)은 AI디지털케어로그 표준으로 케어 혁신을 지향하는 기술 기업입니다. 표준화된 데이터와 멀티모달 AI 분석으로 개인 맞춤 케어의 새로운 표준을 만들고, 토탈케어로그부터 시니어 돌봄, 발달장애, 국제결혼, 라이프스타일 영역까지 같은 플랫폼 철학으로 확장합니다.',
     url: 'https://dreamailab.com',
     logo: 'https://dreamailab.com/logo.png',
     founder: {
@@ -51,7 +51,7 @@ export default function Home() {
         '발달장애 연구',
         '치매 연구',
         '노인질병 연구',
-        '의료헬스케어',
+        '토탈케어로그',
         '정신심리치료'
       ]
     },
@@ -142,7 +142,7 @@ export default function Home() {
     { mark: 'SL', name: '시니어·노인돌봄', url: '/services/senior', status: '베타 테스트' },
     { mark: 'TC', name: '의료', url: '/services/healthcare', status: '개발 중' },
     { mark: 'ED', name: '교육', url: '/services/educarelog', status: '개발 중' },
-    { mark: 'GC', name: '글로벌패밀리', url: '/services/marriage', status: '베타 테스트' },
+    { mark: 'GC', name: '글로벌커플케어', url: '/services/marriage', status: '베타 테스트' },
     { mark: 'VG', name: '라이프스타일', url: '/services/veggie', status: '베타 테스트' },
   ]
 
@@ -210,7 +210,7 @@ export default function Home() {
       color: 'from-indigo-500 to-purple-500',
       mark: 'GC',
       features: ['업체별 가격·서비스 비교', 'AI 상담·번역·통역', '법무·비자 표준 워크플로우', '커뮤니티·후기', '결혼 후 정착·가족 라이프로그', 'KYC·신고·윤리 가이드'],
-      innovation: '정보 비대칭을 줄이고, 동의 기반으로 정착·육아·행정을 이어가는 글로벌패밀리 인프라를 지향합니다.',
+      innovation: '정보 비대칭을 줄이고, 동의 기반으로 정착·육아·행정을 이어가는 글로벌커플케어 인프라를 지향합니다.',
     },
   ]
 
@@ -225,7 +225,7 @@ export default function Home() {
         창업자: 정해성
         디지털케어로그 최초 고안자 및 개발자
         발달장애, 치매연구, 노인질병 연구에 최초 적용
-        의료헬스케어, 정신심리치료 맞춤형 치료 개발
+        토탈케어로그, 정신심리치료 맞춤형 치료 개발
         AI디지털케어로그 독자기술 개발자
       */}
       <Header />

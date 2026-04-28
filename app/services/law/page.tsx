@@ -401,7 +401,9 @@ export default function LawService() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">DAL 생태계와의 연결</h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">법률이AI는 DAL의 AI 챗봇 서비스로, 마음이AI·히포크라테스AI·글로벌커플케어 등과 연동하여 법률·의료·정착 지원을 연결합니다.</p>
+            <p className="text-gray-600 max-w-3xl mx-auto">
+              법률이AI는 DAL의 AI 챗봇 서비스로, 토탈케어로그(헬스케어)·히포크라테스AI·글로벌커플케어 등과 연동하여 법률·의료·정착 지원을 연결하는 구조를 지향합니다.
+            </p>
           </div>
         </div>
       </section>

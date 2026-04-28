@@ -4,7 +4,7 @@ import Footer from '../../../components/Footer'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: '의료헬스케어 – 나만의 AI 주치의 | 드림에이아이랩',
+  title: '토탈케어로그 – 나만의 AI 주치의 | 드림에이아이랩',
   description: '진료·검사·복약 데이터를 통합하고 AI가 분석해 개인 맞춤 리포트와 생활요법을 제안합니다. 히포크라테스·한방이·항암이 AI 통합 에디션.',
   keywords: 'AI 주치의, 디지털헬스, 건강관리, 복약관리, 부작용 경고, 히포크라테스, 한방이, 항암이, 드림에이아이랩',
 }
@@ -175,11 +175,11 @@ export default function HealthService() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              의료헬스케어 에디션
+              토탈케어로그 에디션
             </h2>
             <div className="max-w-4xl mx-auto space-y-4 text-lg text-gray-600">
               <p>
-                의료헬스케어 에디션은 진료 요약, 검사 결과, 복약 기록을 통합하고 AI가 분석해 개인 맞춤 리포트와 생활요법을 제안합니다.
+                토탈케어로그 에디션은 진료 요약, 검사 결과, 복약 기록을 통합하고 AI가 분석해 개인 맞춤 리포트와 생활요법을 제안합니다.
               </p>
               <p>
                 히포크라테스·한방이·항암이 AI를 통합해 서양의학·한의학·암 재활 관점을 아우르며, 복약 부작용과 상호작용 위험을 조기에 알려줍니다.

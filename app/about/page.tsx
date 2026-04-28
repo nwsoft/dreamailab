@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   description:
     'DAL은 돌봄·의료·교육 데이터를 표준화하는 플랫폼 기업입니다. 자람이·시니어앤라이프에 공공·연계 기준으로 등록된 기관·사업자 규모(MAU와 별개)와 표준화·파일럿 진행을 확인하세요.',
   keywords: '드림에이아이랩, 회사소개, AI디지털케어로그, 데이터 표준화, 사회적가치, 투자, 혁신',
+  alternates: { canonical: 'https://dreamailab.com/about' },
   openGraph: {
     title: '회사소개 - AI디지털케어로그로 표준을 만드는 드림에이아이랩',
     description:
@@ -47,8 +48,8 @@ export default function About() {
     },
     {
       year: '2023',
-      title: '마음이AI 개발',
-      description: '심리상담 AI 서비스 출시'
+      title: '심리·정신건강 AI(→ 토탈케어로그)',
+      description: '심리상담 보조 AI를 전개한 뒤, 토탈케어로그 플랫폼 축으로 통합하는 방향으로 정리'
     },
     {
       year: '2024',
@@ -74,7 +75,7 @@ export default function About() {
       features: ['센터 행정 SaaS 표준화', '발달장애 학습 및 치료 연구', '행동·정서·교육·약물 데이터', '보호자·센터·병원 연결']
     },
     {
-      name: '국제결혼 (글로벌 패밀리)',
+      name: '국제결혼 (글로벌커플케어)',
       description: '국제결혼 정보회사·기관에 표준화된 행정·매칭 시스템을 제공하고, 결혼 전후 커플과 가족을 지원하는 통합 플랫폼입니다. 사기·불법을 AI로 예방하고, 정착·육아까지 연결합니다.',
       features: ['표준 행정/매칭 SaaS(B2B)', '사기·불법 예방 검증/가이드', '국가별 커뮤니티/정착·육아', '기관·정부 연계']
     },
@@ -84,7 +85,7 @@ export default function About() {
       features: ['복약/활력징후 분석', '치매/낙상 위험 예측', '가족 리포트 알림', '기관 대시보드']
     },
     {
-      name: '의료헬스케어 (AI 주치의)',
+      name: '토탈케어로그 (AI 주치의)',
       description: '맞춤형 의료 서비스·병원매칭·질병·약물 추적을 제공하며, 케어로그 빅데이터로 임상·신약 개발을 지원합니다.',
       features: ['진료/검사/복약 연동', '부작용/상호작용 경고', '영양·운동 추천', '만성질환/항암 리포트']
     }
@@ -155,7 +156,7 @@ export default function About() {
                 DAL(Dream AI Lab)은 모든 사람이 언제 어디서나 동등하게 의료·돌봄·교육 서비스를 누릴 수 있도록, 자체 개발한 AI디지털케어로그 기술을 기반으로 솔루션을 제공합니다. 가정·학교·병원·기관 데이터를 하나로 통합하고 AI가 분석하여 개인별 맞춤 치료·학습·돌봄 계획을 제안합니다.
               </p>
               <p className="text-lg text-gray-600 mb-6">
-                이 기술은 ① 발달장애 케어 ‘자람이’, ② 노인 돌봄 ‘시니어앤라이프’, ③ 건강·질병 관리 ‘의료헬스케어(AI 주치의·항암·한방)’, ④ 사회문제 해결형 ‘국제결혼 플랫폼(글로벌 패밀리)’로 확장되고 있습니다. (국제결혼은 커뮤니티·매칭 중심으로 케어로그 직접 적용 없이 운영됩니다.)
+                이 기술은 ① 발달장애 케어 ‘자람이’, ② 노인 돌봄 ‘시니어앤라이프’, ③ 건강·질병 관리 ‘토탈케어로그(AI 주치의·항암·한방)’, ④ 사회문제 해결형 ‘국제결혼 플랫폼(글로벌커플케어)’로 확장되고 있습니다. (국제결혼은 커뮤니티·매칭 중심으로 케어로그 직접 적용 없이 운영됩니다.)
               </p>
               <p className="text-lg text-gray-600">
                 우리는 공익에 가까운 돌봄·교육·의료 데이터 표준화에 집중해 신뢰를 쌓고 있습니다. 동의·규제를 전제로 한 기록은 연구·정책·현장 개선으로 환류될 수 있도록 설계하며, 공공·NGO·연구기관과의 협력으로 사회적 임팩트를 넓혀 갑니다.
@@ -261,7 +262,7 @@ export default function About() {
               <div className="mb-3 flex justify-center text-rose-600">
                 <MarketingIcon name="stethoscope" className="h-11 w-11" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900">헬스케어 플랫폼</h3>
+              <h3 className="text-xl font-bold text-gray-900">토탈케어로그</h3>
               <p className="text-gray-600 mt-1 mb-4">AI 주치의·항암·한방 통합</p>
               <div><Link href="/services/healthcare" className="text-blue-700 font-semibold hover:underline">자세히 보기 →</Link></div>
             </div>
@@ -269,7 +270,7 @@ export default function About() {
               <div className="mb-3 flex justify-center text-indigo-600">
                 <MarketingIcon name="globe" className="h-11 w-11" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900">글로벌 패밀리</h3>
+              <h3 className="text-xl font-bold text-gray-900">글로벌커플케어</h3>
               <p className="text-gray-600 mt-1 mb-4">국내 최초 국제결혼 플랫폼</p>
               <div><Link href="/services/marriage" className="text-blue-700 font-semibold hover:underline">자세히 보기 →</Link></div>
             </div>
@@ -312,7 +313,7 @@ export default function About() {
                 <MarketingIcon name="rocket" className="h-10 w-10" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">글로벌 확장</h3>
-              <p className="text-gray-600">고령화·다문화·헬스케어 글로벌 시장 적용</p>
+              <p className="text-gray-600">고령화·다문화·토탈케어로그 기반 글로벌 시장 적용</p>
             </div>
           </div>
         </div>
@@ -390,17 +391,6 @@ export default function About() {
                 </div>
               ))}
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Final CTA */}
-      <section className="py-16 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gradient-to-r from-primary-600 to-secondary-600 rounded-2xl p-8 lg:p-12 text-white text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">함께 더 큰 표준을 만듭니다</h2>
-            <p className="text-xl mb-8 max-w-4xl mx-auto">DAL은 데이터와 AI로 인류가 풀지 못한 문제를 해결합니다. 투자자, 파트너, 연구기관과 함께 더 큰 표준을 만들어갑니다.</p>
-            <p className="text-lg max-w-3xl mx-auto">비전과 기술이 맞닿는 곳에서, 사회적 약자를 돕는 서비스가 지속 가능한 비즈니스가 됩니다.</p>
           </div>
         </div>
       </section>

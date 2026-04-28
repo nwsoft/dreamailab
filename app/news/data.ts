@@ -5699,10 +5699,10 @@ export const newsArticles: NewsArticle[] = [
   {
     id: 56,
     title: '국내 최초 AI 기반 국제결혼 플랫폼, 드림에이아이랩이 출시',
-    excerpt: '사회문제 해결과 글로벌 패밀리 지원을 위한 혁신적 시도로, AI 실시간 번역과 문화 교육을 통합한 국제결혼 플랫폼을 선보였습니다.',
+    excerpt: '사회문제 해결과 글로벌커플케어 지원을 위한 혁신적 시도로, AI 실시간 번역과 문화 교육을 통합한 국제결혼 플랫폼을 선보였습니다.',
     content: `
       <h2 class="text-3xl font-bold text-gray-900 mb-6">국내 최초 AI 기반 국제결혼 플랫폼, 드림에이아이랩이 출시</h2>
-      <p class="text-lg text-gray-600 mb-8">사회문제 해결과 글로벌 패밀리 지원을 위한 혁신적 시도</p>
+      <p class="text-lg text-gray-600 mb-8">사회문제 해결과 글로벌커플케어 지원을 위한 혁신적 시도</p>
       
       <div class="bg-blue-50 p-6 rounded-lg mb-8">
         <p class="text-lg text-gray-700 font-semibold">서울 – 2025년 9월</p>
@@ -5837,7 +5837,7 @@ export const newsArticles: NewsArticle[] = [
     image: '📰',
     featured: false,
     author: '드림에이아이랩',
-    tags: ['국제결혼', 'AI플랫폼', '보도자료', '사회문제해결', '글로벌패밀리', '디지털전환']
+    tags: ['국제결혼', 'AI플랫폼', '보도자료', '사회문제해결', '글로벌커플케어', '디지털전환']
   },
   {
     id: 43,

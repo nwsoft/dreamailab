@@ -1,0 +1,72 @@
+<svg width="800" height="1280" viewBox="0 0 800 1280" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgm" x1="0" y1="0" x2="800" y2="1280" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FAFF"/>
+      <stop offset="1" stop-color="#F1F5FF"/>
+    </linearGradient>
+    <linearGradient id="hubm" x1="290" y1="200" x2="510" y2="420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2563EB"/>
+      <stop offset="1" stop-color="#4F46E5"/>
+    </linearGradient>
+    <marker id="arrowm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10Z" fill="#94A3B8"/>
+    </marker>
+  </defs>
+
+  <rect x="8" y="8" width="784" height="1264" rx="24" fill="url(#bgm)"/>
+
+  <text x="400" y="54" text-anchor="middle" font-size="28" font-weight="800" fill="#1E3A8A">연계 사업 기회 구조</text>
+  <text x="400" y="82" text-anchor="middle" font-size="15" font-weight="600" fill="#475569">코어 4축 + 확장 2축 생애주기 연결</text>
+
+  <circle cx="400" cy="310" r="108" fill="url(#hubm)"/>
+  <text x="400" y="298" text-anchor="middle" font-size="27" font-weight="800" fill="white">파트너 허브</text>
+  <text x="400" y="327" text-anchor="middle" font-size="16" font-weight="700" fill="#E0E7FF">마켓플레이스</text>
+  <text x="400" y="350" text-anchor="middle" font-size="13" font-weight="600" fill="#DBEAFE">입점 · 제휴 · 매칭 · 실행</text>
+
+  <line x1="400" y1="198" x2="400" y2="132" stroke="#94A3B8" stroke-width="3" marker-end="url(#arrowm)"/>
+  <rect x="170" y="90" width="460" height="86" rx="16" fill="white" stroke="#BFDBFE" stroke-width="2"/>
+  <text x="400" y="124" text-anchor="middle" font-size="25" font-weight="800" fill="#1F2937">에듀케어로그</text>
+  <text x="400" y="147" text-anchor="middle" font-size="13" font-weight="600" fill="#475569">자람이 특수교육 → 공교육·사교육 맞춤형 확장</text>
+
+  <line x1="314" y1="360" x2="166" y2="416" stroke="#94A3B8" stroke-width="3" marker-end="url(#arrowm)"/>
+  <line x1="486" y1="360" x2="634" y2="416" stroke="#94A3B8" stroke-width="3" marker-end="url(#arrowm)"/>
+
+  <rect x="28" y="416" width="340" height="104" rx="16" fill="white" stroke="#BFDBFE" stroke-width="2"/>
+  <text x="198" y="454" text-anchor="middle" font-size="24" font-weight="800" fill="#1F2937">국제결혼</text>
+  <text x="198" y="477" text-anchor="middle" font-size="13" font-weight="600" fill="#475569">정착·법률·건강 맥락 데이터 연결</text>
+  <text x="198" y="497" text-anchor="middle" font-size="12" font-weight="600" fill="#64748B">코어 4축</text>
+
+  <rect x="432" y="416" width="340" height="104" rx="16" fill="white" stroke="#BFDBFE" stroke-width="2"/>
+  <text x="602" y="454" text-anchor="middle" font-size="24" font-weight="800" fill="#1F2937">토탈케어로그</text>
+  <text x="602" y="477" text-anchor="middle" font-size="13" font-weight="600" fill="#475569">의료·정신건강·항암 통합</text>
+  <text x="602" y="497" text-anchor="middle" font-size="12" font-weight="600" fill="#64748B">코어 4축</text>
+
+  <line x1="314" y1="390" x2="166" y2="590" stroke="#94A3B8" stroke-width="3" marker-end="url(#arrowm)"/>
+  <line x1="486" y1="390" x2="634" y2="590" stroke="#94A3B8" stroke-width="3" marker-end="url(#arrowm)"/>
+
+  <rect x="28" y="586" width="340" height="104" rx="16" fill="white" stroke="#BFDBFE" stroke-width="2"/>
+  <text x="198" y="624" text-anchor="middle" font-size="24" font-weight="800" fill="#1F2937">자람이</text>
+  <text x="198" y="647" text-anchor="middle" font-size="13" font-weight="600" fill="#475569">발달·행동 케어로그 표준화</text>
+  <text x="198" y="667" text-anchor="middle" font-size="12" font-weight="600" fill="#64748B">코어 4축</text>
+
+  <rect x="432" y="586" width="340" height="104" rx="16" fill="white" stroke="#BFDBFE" stroke-width="2"/>
+  <text x="602" y="624" text-anchor="middle" font-size="24" font-weight="800" fill="#1F2937">시니어앤라이프</text>
+  <text x="602" y="647" text-anchor="middle" font-size="13" font-weight="600" fill="#475569">요양·재가·가족·의료 운영 연결</text>
+  <text x="602" y="667" text-anchor="middle" font-size="12" font-weight="600" fill="#64748B">코어 4축</text>
+
+  <line x1="400" y1="420" x2="400" y2="780" stroke="#94A3B8" stroke-width="3" marker-end="url(#arrowm)"/>
+  <rect x="170" y="792" width="460" height="86" rx="16" fill="white" stroke="#BFDBFE" stroke-width="2"/>
+  <text x="400" y="826" text-anchor="middle" font-size="25" font-weight="800" fill="#1F2937">베지케어</text>
+  <text x="400" y="849" text-anchor="middle" font-size="13" font-weight="600" fill="#475569">항암·만성 회복기 식단/영양 관리 연계</text>
+
+  <rect x="80" y="920" width="640" height="286" rx="18" fill="white" stroke="#BFDBFE" stroke-width="2"/>
+  <text x="400" y="958" text-anchor="middle" font-size="20" font-weight="800" fill="#1F2937">핵심 연결 포인트</text>
+  <text x="112" y="995" font-size="15" font-weight="700" fill="#334155">1) 코어 중심: 자람이·토탈케어로그가 데이터 축의 중심</text>
+  <text x="112" y="1028" font-size="15" font-weight="700" fill="#334155">2) 교육 확장: 자람이 맥락이 에듀케어로그로 확장</text>
+  <text x="112" y="1061" font-size="15" font-weight="700" fill="#334155">3) 의료/회복 확장: 토탈케어로그와 베지케어 연계</text>
+  <text x="112" y="1094" font-size="15" font-weight="700" fill="#334155">4) 생애주기: 요람에서 무덤까지 AI디지털케어로그 지향</text>
+  <text x="112" y="1127" font-size="15" font-weight="700" fill="#334155">5) 실행 구조: 파트너 허브에서 매칭·실행·환류 루프 운영</text>
+
+  <rect x="90" y="1224" width="620" height="34" rx="17" fill="#E0E7FF"/>
+  <text x="400" y="1246" text-anchor="middle" font-size="14" font-weight="700" fill="#3730A3">AI디지털케어로그: 기록 표준화 → 분석 → 추천·매칭 → 실행·환류</text>
+</svg>

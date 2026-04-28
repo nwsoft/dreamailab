@@ -96,21 +96,21 @@ export default function ChatbotService() {
       ]
     },
     {
-      name: '마음이AI',
-      status: '서비스 중',
+      name: '토탈케어로그(정신건강)',
+      status: '통합·개발',
       icon: '💬',
-      summary: '심리상담 특화 챗봇',
-      description: '심리상담과 정신건강에 특화된 AI 상담 서비스로, 일상적인 스트레스 관리부터 전문적인 상담까지 지원합니다.',
-      url: '/services/maeume',
-      externalUrl: 'https://maeume.org',
+      summary: '심리·정신건강 상담 보조',
+      description:
+        '기존 마음이AI의 심리상담 보조 역량은 별도 서비스가 아니라 토탈케어로그(헬스케어AI) 축으로 통합됩니다. 일상 스트레스부터 전문 연계까지 동일 표준 위에서 지향합니다.',
+      url: '/services/healthcare',
       category: 'Mental Health',
-      users: '12K+',
+      users: '—',
       features: [
-        '일상 스트레스 관리',
-        '기분 변화 모니터링',
-        '심리 건강 체크',
-        '전문 상담 연계'
-      ]
+        '일상 스트레스·기분 맥락 기록',
+        '정신건강 상담 보조(플랫폼 내)',
+        '전문 상담·의료 연계 지향',
+        '자람이·시니어 등 타 축과 동의 범위 내 연결',
+      ],
     }
   ]
 
@@ -308,7 +308,9 @@ export default function ChatbotService() {
       <section className="py-12 bg-white">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <span className="inline-block px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-semibold mb-4">Live Service</span>
-          <p className="text-gray-600">법률이AI·히포크라테스AI·마음이AI·자람이AI 등 전문 분야별 AI 챗봇이 서비스 중입니다.</p>
+          <p className="text-gray-600">
+            법률이AI·히포크라테스AI·자람이AI 등 전문 분야별 AI 챗봇이 서비스 중이며, 심리·정신건강 보조는 토탈케어로그(헬스케어) 축으로 통합·전개됩니다.
+          </p>
         </div>
       </section>
 

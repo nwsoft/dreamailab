@@ -1,2 +1,6 @@
+# 마음이AI 상세 URL → 토탈케어로그(헬스케어) 통합 안내
+/services/maeume    /services/healthcare/    301
+/services/maeume/   /services/healthcare/    301
+
 # SPA 라우팅을 위한 설정
 /*    /index.html   200 

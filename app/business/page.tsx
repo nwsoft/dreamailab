@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: '비즈니스·투자 - B2B 솔루션 & 파트너십 | 드림에이아이랩',
   description:
     'DAL의 핵심기술 AI디지털케어로그 기반 B2B 솔루션, 파트너십, 투자 포인트를 확인하세요. 창업자 정해성이 고안한 디지털케어로그를 바탕으로 표준화·기관 풀·파일럿을 전개하는 포트폴리오와 사회적 임팩트를 제시합니다.',
-  keywords: 'B2B, 파트너십, 투자, AI 솔루션, 표준화, 사회적 가치, 비즈니스 모델, 드림에이아이랩, 디지털케어로그, AI디지털케어로그, 정해성, 창업자, 개발자, 베지케어, 발달장애, 치매연구, 노인질병, 의료헬스케어',
+  keywords: 'B2B, 파트너십, 투자, AI 솔루션, 표준화, 사회적 가치, 비즈니스 모델, 드림에이아이랩, 디지털케어로그, AI디지털케어로그, 정해성, 창업자, 개발자, 베지케어, 에듀케어로그, 토탈케어로그, 발달장애, 치매연구, 노인질병',
   openGraph: {
     title: '비즈니스·투자 - B2B 솔루션 & 파트너십 | 드림에이아이랩',
     description: 'DAL의 AI디지털케어로그 포트폴리오, 기관·연계 풀과 표준화 진행, B2B 솔루션을 확인하세요.',
@@ -67,23 +67,14 @@ export default function Business() {
       powered: 'Powered by AI디지털케어로그',
     },
     {
-      title: '의료헬스케어',
-      description: '개인 AI 주치의 케어로그',
+      title: '토탈케어로그',
+      description: '토탈케어로그 기반 일반·한방·항암 및 정신건강·상담 보조를 포함한 통합 의료 축',
       icon: 'hospital',
       achievement: '신규',
       market: '개인 맞춤 의료 시장',
-      impact: '개인 맞춤 건강관리 지원',
-      status: '출시 예정',
-      powered: 'Powered by AI디지털케어로그',
-    },
-    {
-      title: '마음이AI',
-      description: 'AI 심리상담·케어 보조 서비스',
-      icon: 'heart',
-      achievement: '전개 중',
-      market: '심리치료 AI 시장',
-      impact: '리팩토링 중 · 디지털케어로그 적용 진행',
-      status: '리팩토링 중',
+      impact:
+        '개인 맞춤 건강관리·병원 연계를 지향. 기존 마음이AI의 심리·정신건강 상담 보조 역량은 별도 브랜드 없이 본 축으로 통합·전개합니다.',
+      status: '개발·통합',
       powered: 'Powered by AI디지털케어로그',
     },
     {
@@ -97,13 +88,13 @@ export default function Business() {
       powered: 'Powered by AI디지털케어로그',
     },
     {
-      title: '글로벌패밀리',
+      title: '글로벌커플케어',
       description: '국제결혼 정보 커뮤니티 플랫폼',
       icon: 'globe',
       achievement: '신규',
       market: '국제결혼 시장',
       impact: '국제결혼 시장의 신뢰성과 투명성 혁신, 결혼 전후 맞춤 케어로 행복한 가정 만들기',
-      status: '출시 예정',
+      status: '베타 테스트',
       powered: 'Powered by AI디지털케어로그',
     },
     {
@@ -113,7 +104,7 @@ export default function Business() {
       achievement: '전개 중',
       market: '베지터리안 시장',
       impact: '채식주의자를 위한 AI 기반 건강관리·맛집·레시피·커뮤니티 통합 플랫폼',
-      status: '개발 중',
+      status: '베타 테스트',
       powered: 'Powered by AI디지털케어로그',
     },
   ]
@@ -187,9 +178,9 @@ export default function Business() {
         '상담→매칭 전환 파이프라인 구축'
       ],
       monetization: [
-        '매칭 수수료/구독',
+        '상담 연결 기반 리드/구독',
         '법률/번역/교육 제휴',
-        '사후 케어 상품'
+        '정착 지원 제휴 서비스'
       ],
       next: [
         '국가별 커뮤니티 론칭',
@@ -198,7 +189,7 @@ export default function Business() {
       ]
     },
     {
-      title: '베지터리안',
+      title: '베지케어',
       badge: '집중',
       summary: '채식·라이프스타일 AI 플랫폼 — 건강관리·맛집·레시피·커뮤니티 통합',
       positioning: '디지털케어로그 기반 개인 맞춤형 영양 관리와 AI 요리사, 지역 식당 연계, 커머스까지 이어지는 완성형 생태계.',
@@ -225,7 +216,7 @@ export default function Business() {
       ]
     },
     {
-      title: '헬스케어 (의료 3종 + 심리)',
+      title: '토탈케어로그 (의료 3종 + 심리)',
       badge: '확장',
       summary: '일반·한방·항암 + 심리치료까지 케어로그 기반 개인 맞춤 관리',
       positioning: '멀티모달 AI와 FHIR 연동으로 의료/한방/항암/심리 도메인을 통합. 병원 매칭까지 확장 가능한 플랫폼.',
@@ -238,11 +229,11 @@ export default function Business() {
         '일반의학: 개인 AI 주치의, 병원 매칭 준비',
         '한방의학: 한의학 특화 AI 상담(챗봇) 지향',
         '항암: 재활·맞춤 관리, 부작용 모니터링',
-        '심리치료: 마음이AI(맞춤 상담·케어)'
+        '심리·정신건강: 토탈케어로그 축의 상담 보조(기존 마음이AI 역량 통합 지향)'
       ],
       monetization: [
         'B2B2C 구독',
-        '병원 리드/매칭 수수료',
+        '병원 상담 연결/리드 기반 수익',
         '제약 PoC·RWE 데이터 협력'
       ],
       next: [
@@ -255,67 +246,51 @@ export default function Business() {
 
   const synergyRows = [
     {
-      title: '국제결혼 ↔ 헬스케어',
+      title: '코어 연계: 국제결혼·자람이·토탈케어로그',
       flow: [
-        '결혼 전/후 건강 체크 → 위험요인 스크리닝 → 질병·전문과별 병원 매칭',
-        '다국어 안내·번역 지원 → 예약/내원 동선 안내 → 진료 요약 케어로그 자동 기록'
+        '국제결혼 전후 정착/가족 맥락에서 자람이 발달·행동 데이터와 토탈케어로그 의료·상담 데이터를 연결',
+        '법률·번역·의료·상담 파트너 매칭이 하나의 케어로그 흐름에서 이어지도록 설계'
       ],
       partners: [
-        '종합병원/전문병원(산부인과·내과·정신건강의학과)',
-        '보험사/검진기관',
-        '번역/법률/이민 서비스'
+        '병원/발달센터/상담기관',
+        '법률/번역/정착 지원 파트너',
+        '보험/검진 연계 파트너'
       ],
       value: [
-        '리드 생성 및 병원 매칭 수수료',
-        '신규 가족 고객의 장기 LTV 확보'
+        '상담 연결 리드 기반 수익 + 기관/가족 구독 결합',
+        '가족 단위 장기 LTV 및 재방문률 확대'
       ]
     },
     {
-      title: '국제결혼 ↔ 자람이(영유아/언어·발달)',
+      title: '생애주기 확장: 자람이 → 에듀케어로그 → 토탈케어로그',
       flow: [
-        '임신·출산 정보 → 영유아 발달 체크 → 언어/발달 지연 조기 선별',
-        '센터/치료사 매칭 → 가정/센터 일지 기록 → 맞춤 개입·리포트'
+        '자람이 특수교육·치료 맥락이 에듀케어로그(공교육·사교육 맞춤형)로 확장되고, 성인기 건강 관리는 토탈케어로그로 연계',
+        '베지케어는 토탈케어로그의 항암·만성 회복기와 연결되어 식단/영양 실행 루프를 보강'
       ],
       partners: [
-        '소아과/소아정신과/재활의학과',
-        '발달센터/언어치료/심리상담',
-        '영유아 교육/콘텐츠'
+        '학교/교육청/학원/에듀테크',
+        '병원/영양사/재활코치',
+        '식당·밀키트·식품 브랜드'
       ],
       value: [
-        '센터 매칭 수수료/구독',
-        '가족 단위 락인 및 커뮤니티 활성'
+        '생애주기 데이터 연속성 기반 개인화 고도화',
+        '교육·의료·영양 복합 패키지로 매출 다각화'
       ]
     },
     {
-      title: '시니어 ↔ 헬스케어',
+      title: '운영 허브: 시니어·토탈케어로그 중심 파트너 마켓플레이스',
       flow: [
-        '복약/활력/활동 로그 → 위험 신호 경보 → 전문과 병원·재활 매칭',
-        '가족 앱 알림 → 내원 후 진료·검사·복약 기록 자동 연동'
+        '시니어 돌봄 운영 데이터와 토탈케어로그 의료 데이터를 결합해 위험 신호/개입 우선순위를 정하고 파트너 매칭',
+        '상담·예약·결제·이행·성과 환류를 동일한 AI디지털케어로그 표준으로 관리'
       ],
       partners: [
-        '요양원/주간보호/재가기관',
-        '노인병원/재활병원/치과/안과',
-        '웨어러블/홈기기(혈압계·혈당계·안마기)'
+        '요양/재가 기관, 병원/약국',
+        '디바이스·홈케어 파트너',
+        '보험·공공·복지 연계 파트너'
       ],
       value: [
-        '기관 구독 + 디바이스 제휴 수익',
-        '낙상/재입원 감소 등 KPI 기반 성과 모델'
-      ]
-    },
-    {
-      title: '파트너 마켓플레이스(공통)',
-      flow: [
-        '케어로그 기반 추천 → 상품/서비스 노출 → 상담/예약 → 결제/이행 → 성과 환류',
-        '유저 행동·케어 상태에 맞춘 맞춤 제안(의료, 법률, 보험, 여행 등)'
-      ],
-      partners: [
-        '병원/센터/상담소/약국',
-        '보험/법률/번역',
-        '항공권/여행사/이사/정착 지원'
-      ],
-      value: [
-        '리드/매칭 수수료, SaaS 구독, 광고/입점 수익',
-        '데이터 기반 추천 전환율 향상'
+        '기관 구독 + 제휴 수익 + 성과 기반 계약',
+        '운영 효율·재입원/이탈 감소형 KPI 모델'
       ]
     }
   ]
@@ -436,7 +411,7 @@ export default function Business() {
       description: '도메인·국가를 넘는 스케일업',
       icon: 'rocket',
       details: [
-        '헬스케어(의료3종+심리)로 확장 진행',
+        '토탈케어로그(의료3종+심리)로 확장 진행',
         '국제결혼 커뮤니티 기반 글로벌 시장 진출 논리',
         '마켓플레이스/파트너 API로 네트워크 효과 가속',
       ],
@@ -696,101 +671,33 @@ export default function Business() {
               연계 사업 기회
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              핵심 서비스 간 <strong className="text-gray-800">데이터·워크플로우 연결</strong>을 통해 
-              파트너와 함께 <strong className="text-gray-800">확장 가능한 수익 모델</strong>을 만듭니다.
+              국제결혼·자람이·시니어·<strong className="text-gray-800">토탈케어로그</strong>를 기본 축으로,
+              <strong className="text-gray-800"> 에듀케어로그와 베지케어</strong>까지 연결해 생애주기형 AI디지털케어로그 확장을 지향합니다.
             </p>
           </div>
           
           {/* Connected Business Model Visualization */}
           <div className="mb-16">
-            {/* Radial Network: Partners at center, services around (bidirectional links) */}
-            <div className="relative max-w-5xl mx-auto h-[520px] md:h-[560px]">
-              {/* Center: Partner Marketplace */}
-              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-44 h-44 md:w-52 md:h-52 rounded-full bg-white shadow-xl border-4 border-gray-200 flex items-center justify-center z-20">
-                <div className="text-center">
-                  <div className="text-2xl font-extrabold text-gray-900">파트너</div>
-                  <div className="text-sm text-gray-600">마켓플레이스</div>
-                </div>
-              </div>
-
-              {/* Circular guide ring (for visual grouping) */}
-              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[420px] h-[420px] md:w-[480px] md:h-[480px] rounded-full border-2 border-dashed border-gray-200"></div>
-
-              {/* Link lines (center ↔ nodes) */}
-              <div className="absolute inset-0 pointer-events-none">
-                {/* top-left */}
-                <div className="absolute left-[18%] top-[14%] w-[32%] h-0.5 bg-gradient-to-r from-gray-300 to-gray-400 rotate-[-25deg] origin-left md:left-[16%] md:top-[10%] md:w-[34%]"></div>
-                {/* top-right */}
-                <div className="absolute right-[18%] top-[14%] w-[32%] h-0.5 bg-gradient-to-l from-gray-300 to-gray-400 rotate-[25deg] origin-right md:right-[16%] md:top-[10%] md:w-[34%]"></div>
-                {/* bottom-left */}
-                <div className="absolute left-[18%] bottom-[14%] w-[32%] h-0.5 bg-gradient-to-r from-gray-300 to-gray-400 rotate-[25deg] origin-left md:left-[16%] md:bottom-[10%] md:w-[34%]"></div>
-                {/* bottom-right */}
-                <div className="absolute right-[18%] bottom-[14%] w-[32%] h-0.5 bg-gradient-to-l from-gray-300 to-gray-400 rotate-[-25deg] origin-right md:right-[16%] md:bottom-[10%] md:w-[34%]"></div>
-              </div>
-
-              {/* Node: 국제결혼 */}
-              <div className="absolute left-[6%] top-[6%] w-48 md:w-56 bg-white rounded-2xl shadow-lg border border-gray-200 p-4 text-center z-10">
-                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-2 text-blue-700">
-                  <MarketingIcon name="globe" className="h-6 w-6" />
-                </div>
-                <h3 className="text-base md:text-lg font-bold text-gray-900 mb-1">국제결혼</h3>
-                <p className="text-xs md:text-sm text-gray-600">정보·행정·매칭 표준화</p>
-              </div>
-
-              {/* Node: 헬스케어 */}
-              <div className="absolute right-[6%] top-[6%] w-48 md:w-56 bg-white rounded-2xl shadow-lg border border-gray-200 p-4 text-center z-10">
-                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-2 text-green-700">
-                  <MarketingIcon name="hospital" className="h-6 w-6" />
-                </div>
-                <h3 className="text-base md:text-lg font-bold text-gray-900 mb-1">헬스케어</h3>
-                <p className="text-xs md:text-sm text-gray-600">의료·한방·항암·심리 통합</p>
-              </div>
-
-              {/* Node: 자람이 */}
-              <div className="absolute left-[6%] bottom-[6%] w-48 md:w-56 bg-white rounded-2xl shadow-lg border border-gray-200 p-4 text-center z-10">
-                <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-2 text-purple-700">
-                  <MarketingIcon name="sprout" className="h-6 w-6" />
-                </div>
-                <h3 className="text-base md:text-lg font-bold text-gray-900 mb-1">자람이</h3>
-                <p className="text-xs md:text-sm text-gray-600">발달장애 케어 표준화</p>
-              </div>
-
-              {/* Node: 시니어 */}
-              <div className="absolute right-[6%] bottom-[6%] w-48 md:w-56 bg-white rounded-2xl shadow-lg border border-gray-200 p-4 text-center z-10">
-                <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-2 text-orange-700">
-                  <MarketingIcon name="user" className="h-6 w-6" />
-                </div>
-                <h3 className="text-base md:text-lg font-bold text-gray-900 mb-1">시니어</h3>
-                <p className="text-xs md:text-sm text-gray-600">요양·돌봄 표준화</p>
-              </div>
-
-              {/* Bidirectional badges */}
-              <div className="absolute left-1/2 top-[9%] -translate-x-1/2 bg-gray-800 text-white text-[10px] md:text-xs px-2 py-1 rounded-full shadow">양방향 데이터/리드</div>
-              <div className="absolute left-1/2 bottom-[9%] -translate-x-1/2 bg-gray-800 text-white text-[10px] md:text-xs px-2 py-1 rounded-full shadow">케어로그 기반 추천</div>
+            <div className="rounded-2xl border border-gray-200 bg-white p-3 shadow-sm md:p-4">
+              <picture>
+                <source media="(max-width: 768px)" srcSet="/images/business/synergy-network-mobile.svg" />
+                <img
+                  src="/images/business/synergy-network.svg"
+                  alt="파트너 허브를 중심으로 국제결혼, 자람이, 토탈케어로그, 시니어와 에듀케어로그, 베지케어가 AI디지털케어로그로 연결되는 구조도"
+                  className="w-full h-auto rounded-xl"
+                />
+              </picture>
             </div>
-
-            {/* Legend */}
-            <div className="max-w-3xl mx-auto mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
-              <div className="bg-gray-50 border border-gray-200 rounded-lg p-3">
-                <div className="text-xs font-semibold text-gray-700">FLOW</div>
-                <div className="text-sm text-gray-600">서비스 ↔ 파트너 마켓플레이스</div>
-              </div>
-              <div className="bg-gray-50 border border-gray-200 rounded-lg p-3">
-                <div className="text-xs font-semibold text-gray-700">DATA</div>
-                <div className="text-sm text-gray-600">케어로그·상담·예약·결제 이벤트</div>
-              </div>
-              <div className="bg-gray-50 border border-gray-200 rounded-lg p-3">
-                <div className="text-xs font-semibold text-gray-700">VALUE</div>
-                <div className="text-sm text-gray-600">리드/매칭 수수료 · 구독 · 입점</div>
-              </div>
-            </div>
+            <p className="mt-4 text-center text-sm text-gray-600">
+              위 도식은 파트너 중심 연계 구조와 확장축(교육·영양/식단)을 한 번에 보여주고, 아래 카드에서는 트랙별 플로우·제휴 파트너·수익화를 상세히 설명합니다.
+            </p>
           </div>
           
           {/* Detailed Synergy Cards */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {synergyRows.map((s, i) => (
               <div key={i} className="group relative">
-                <div className="bg-white rounded-2xl shadow-lg border border-gray-200 p-8 hover:shadow-xl transition-all duration-300">
+                <div className="h-full bg-white rounded-2xl shadow-lg border border-gray-200 p-8 hover:shadow-xl transition-all duration-300 flex flex-col">
                   {/* Header */}
                   <div className="flex items-center justify-between mb-6">
                     <h3 className="text-2xl font-bold text-gray-900">{s.title}</h3>
@@ -800,7 +707,7 @@ export default function Business() {
                   </div>
                   
                   {/* Content Grid */}
-                  <div className="grid grid-cols-1 gap-6">
+                  <div className="grid grid-cols-1 gap-6 flex-1">
                     {/* Flow */}
                     <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
                       <div className="flex items-center gap-2 mb-3">
@@ -862,7 +769,7 @@ export default function Business() {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">비즈니스 모델</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              DAL의 비즈니스 모델은 4가지 수익 스트림으로 명확합니다: 기관 구독(B2B SaaS) · 가족/개인 프리미엄(B2C) · 매칭/리드 수수료(B2B2C) · 데이터/라이선스(RWE & API). 이 구조는 발달·시니어·국제결혼·헬스케어 전 영역에 동일하게 적용할 수 있도록 설계했으며, 시장별 KPI·파일럿으로 성과를 쌓아 가는 단계입니다.
+              DAL의 비즈니스 모델은 4가지 수익 스트림으로 명확합니다: 기관 구독(B2B SaaS) · 가족/개인 프리미엄(B2C) · 매칭/리드 수수료(B2B2C) · 데이터/라이선스(RWE & API). 이 구조는 발달·시니어·국제결혼·토탈케어로그를 기본 축으로, 에듀케어로그·베지케어 확장축까지 동일한 AI디지털케어로그 언어로 연결되도록 설계했습니다.
             </p>
           </div>
 
@@ -919,14 +826,14 @@ export default function Business() {
 
           {/* Market-specific application snapshot */}
           <div className="mt-14">
-            <h3 className="text-xl font-bold text-gray-900 mb-4">시장별 적용 스냅샷</h3>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">시장별 적용 스냅샷 (코어 4축 중심)</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {/* 발달장애(자람이) */}
               <div className="border border-gray-200 rounded-xl p-5">
                 <div className="text-sm font-semibold text-gray-700 mb-2">발달장애(자람이)</div>
                 <ul className="text-sm text-gray-700 space-y-1">
                   <li className="flex"><span className="mr-2">•</span>기관 구독 + 보호자 프리미엄</li>
-                  <li className="flex"><span className="mr-2">•</span>센터/치료사 매칭 수수료</li>
+                  <li className="flex"><span className="mr-2">•</span>센터/치료사 상담 연결 리드 수익</li>
                   <li className="flex"><span className="mr-2">•</span>API·리포트 라이선스</li>
                   <li className="flex"><span className="mr-2"></span><span className="text-xs text-gray-500">(연계·등록 기관 풀 5,700+)</span></li>
                 </ul>
@@ -937,13 +844,13 @@ export default function Business() {
                 <ul className="text-sm text-gray-700 space-y-1">
                   <li className="flex"><span className="mr-2">•</span>기관 구독 + 가족 프리미엄</li>
                   <li className="flex"><span className="mr-2">•</span>디바이스 제휴/보험 연계</li>
-                  <li className="flex"><span className="mr-2">•</span>병원/재활 매칭 수수료</li>
+                  <li className="flex"><span className="mr-2">•</span>병원/재활 상담 연결 리드 수익</li>
                   <li className="flex"><span className="mr-2"></span><span className="text-xs text-gray-500">(연계·등록 사업자 풀 22,000+)</span></li>
                 </ul>
               </div>
-              {/* 국제결혼(글로벌패밀리) */}
+              {/* 국제결혼(글로벌커플케어) */}
               <div className="border border-gray-200 rounded-xl p-5">
-                <div className="text-sm font-semibold text-gray-700 mb-2">국제결혼(글로벌패밀리)</div>
+                <div className="text-sm font-semibold text-gray-700 mb-2">국제결혼(글로벌커플케어)</div>
                 <ul className="text-sm text-gray-700 space-y-1">
                   <li className="flex"><span className="mr-2">•</span>커뮤니티 구독/광고·입점</li>
                   <li className="flex"><span className="mr-2">•</span>법률/번역/여행·항공 제휴</li>
@@ -951,27 +858,20 @@ export default function Business() {
                   <li className="flex"><span className="mr-2"></span><span className="text-xs text-gray-500">(국내 17만 부부 시장)</span></li>
                 </ul>
               </div>
-              {/* 베지터리안(베지케어) */}
+              {/* 토탈케어로그(의료3종+심리) */}
               <div className="border border-gray-200 rounded-xl p-5">
-                <div className="text-sm font-semibold text-gray-700 mb-2">베지터리안(베지케어)</div>
-                <ul className="text-sm text-gray-700 space-y-1">
-                  <li className="flex"><span className="mr-2">•</span>프리미엄 구독(무료/유료)</li>
-                  <li className="flex"><span className="mr-2">•</span>광고 & 제휴(비건 브랜드)</li>
-                  <li className="flex"><span className="mr-2">•</span>커머스(밀키트/정기배송)</li>
-                  <li className="flex"><span className="mr-2"></span><span className="text-xs text-gray-500">(채식·라이프스타일 전용 지향)</span></li>
-                </ul>
-              </div>
-              {/* 헬스케어(의료3종+심리) */}
-              <div className="border border-gray-200 rounded-xl p-5">
-                <div className="text-sm font-semibold text-gray-700 mb-2">헬스케어(의료3종+심리)</div>
+                <div className="text-sm font-semibold text-gray-700 mb-2">토탈케어로그(의료3종+심리)</div>
                 <ul className="text-sm text-gray-700 space-y-1">
                   <li className="flex"><span className="mr-2">•</span>B2B2C 구독(개인/기관)</li>
-                  <li className="flex"><span className="mr-2">•</span>병원 리드/매칭 수수료</li>
+                  <li className="flex"><span className="mr-2">•</span>병원 상담 연결/리드 기반 수익</li>
                   <li className="flex"><span className="mr-2">•</span>보험/제약 RWE·PoC</li>
                   <li className="flex"><span className="mr-2"></span><span className="text-xs text-gray-500">(의료 3종+심리, 확장 시장)</span></li>
                 </ul>
               </div>
             </div>
+            <p className="mt-4 text-xs text-gray-500">
+              확장축: 에듀케어로그(자람이 특수교육 확장)·베지케어(토탈케어로그 항암/만성 회복기 식단 연계)는 연계 사업 기회 섹션에서 별도로 다룹니다.
+            </p>
           </div>
         </div>
       </section>

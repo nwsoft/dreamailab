@@ -342,7 +342,9 @@ export default function VeteransService() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">DAL 생태계와의 연결</h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">용감이AI는 드림에이아이랩의 AI 챗봇 서비스로, 법률이AI·마음이AI·히포크라테스AI 등과 함께 DAL AI 플랫폼을 구성합니다.</p>
+            <p className="text-gray-600 max-w-3xl mx-auto">
+              용감이AI는 드림에이아이랩의 AI 챗봇 서비스로, 법률이AI·히포크라테스AI·토탈케어로그(헬스케어) 등과 함께 DAL AI 플랫폼을 구성하는 구조를 지향합니다.
+            </p>
           </div>
         </div>
       </section>

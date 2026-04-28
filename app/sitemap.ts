@@ -102,12 +102,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     // 기타 서비스 페이지들 - 낮은 우선순위
     {
-      url: `${baseUrl}/services/maeume`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.6,
-    },
-    {
       url: `${baseUrl}/services/law`,
       lastModified: new Date(),
       changeFrequency: 'weekly',

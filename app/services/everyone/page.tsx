@@ -450,7 +450,9 @@ export default function EveryoneService() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">DAL 생태계와의 연결</h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">모두의AI는 DAL AI 플랫폼 위에 구축되며, 법률이AI·마음이AI 등 챗봇 서비스와 연동됩니다.</p>
+            <p className="text-gray-600 max-w-3xl mx-auto">
+              모두의AI는 DAL AI 플랫폼 위에 구축되며, 법률이AI·토탈케어로그(헬스케어·정신건강 보조) 등과 연동되는 구조를 지향합니다.
+            </p>
           </div>
         </div>
       </section>
