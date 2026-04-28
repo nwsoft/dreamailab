@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import Link from 'next/link'
+import { MarketingIcon, type MarketingIconName } from '../../components/MarketingIcon'
 
 export const metadata: Metadata = {
   title: '비전 - 드림에이아이랩',
@@ -10,27 +11,27 @@ export const metadata: Metadata = {
 }
 
 export default function Vision() {
-  const visionPoints = [
+  const visionPoints: { title: string; description: string; icon: MarketingIconName }[] = [
     {
       title: '동등한 기회',
       description: '부·지역·환경의 차이를 넘어 누구나 필수 서비스에 접근할 수 있도록 합니다.',
-      icon: '⚖️'
+      icon: 'scale',
     },
     {
       title: '데이터 표준화',
       description: '가정·학교·병원·기관의 기록을 하나의 표준으로 통합해 신뢰를 만듭니다.',
-      icon: '📊'
+      icon: 'chart',
     },
     {
       title: '사람을 향한 기술',
       description: 'AI는 사람을 대체하지 않습니다. 돌봄을 보조하고 삶의 질을 높이는 방향으로 사용합니다.',
-      icon: '🤝'
+      icon: 'handshake',
     },
     {
       title: '지속 가능한 임팩트',
       description: '현장의 기록이 연구와 정책 개선으로 이어지고, 다시 현장에 환류되는 선순환을 만듭니다.',
-      icon: '🔁'
-    }
+      icon: 'trend',
+    },
   ]
 
 
@@ -97,6 +98,26 @@ export default function Vision() {
         </div>
       </section>
 
+      {/* 비전 기둥 — 데이터·철학 요약 (홈/서비스 허브와 톤 맞춤) */}
+      <section className="py-14 lg:py-16 bg-white border-b border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {visionPoints.map((v) => (
+              <div
+                key={v.title}
+                className="rounded-xl border border-gray-100 bg-gray-50/80 p-6 text-center shadow-sm hover:shadow-md transition-shadow"
+              >
+                <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary-100 text-primary-700">
+                  <MarketingIcon name={v.icon} className="h-7 w-7" />
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">{v.title}</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">{v.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Vision (Founder Statement) */}
       <section className="pt-6 lg:pt-8 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -113,7 +134,7 @@ export default function Vision() {
             <div className="bg-white rounded-3xl p-10 md:p-12 shadow-xl border border-gray-100">
               <div className="text-center mb-8">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-white text-2xl">💫</span>
+                  <MarketingIcon name="sparkle" className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">
                   가능성을 믿는 모든이들에게
@@ -214,8 +235,8 @@ export default function Vision() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="text-center border border-gray-100 shadow-md hover:shadow-lg rounded-xl p-8">
-              <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-primary-600 text-2xl">🎯</span>
+              <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4 text-primary-600">
+                <MarketingIcon name="target" className="h-8 w-8" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">사회적 가치</h3>
               <p className="text-gray-600">
@@ -224,8 +245,8 @@ export default function Vision() {
             </div>
 
             <div className="text-center border border-gray-100 shadow-md hover:shadow-lg rounded-xl p-8">
-              <div className="w-16 h-16 bg-secondary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-secondary-600 text-2xl">🔬</span>
+              <div className="w-16 h-16 bg-secondary-100 rounded-full flex items-center justify-center mx-auto mb-4 text-secondary-600">
+                <MarketingIcon name="microscope" className="h-8 w-8" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">혁신</h3>
               <p className="text-gray-600">
@@ -234,8 +255,8 @@ export default function Vision() {
             </div>
 
             <div className="text-center border border-gray-100 shadow-md hover:shadow-lg rounded-xl p-8">
-              <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-primary-600 text-2xl">🤝</span>
+              <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4 text-primary-600">
+                <MarketingIcon name="handshake" className="h-8 w-8" />
               </div>
               <h3 className="text-gray-900 mb-3">포용성</h3>
               <p className="text-gray-600">
@@ -244,8 +265,8 @@ export default function Vision() {
             </div>
 
             <div className="text-center border border-gray-100 shadow-md hover:shadow-lg rounded-xl p-8">
-              <div className="w-16 h-16 bg-secondary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-secondary-600 text-2xl">🌍</span>
+              <div className="w-16 h-16 bg-secondary-100 rounded-full flex items-center justify-center mx-auto mb-4 text-secondary-600">
+                <MarketingIcon name="globe" className="h-8 w-8" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">지속가능성</h3>
               <p className="text-gray-600">
@@ -254,8 +275,8 @@ export default function Vision() {
             </div>
 
             <div className="text-center border border-gray-100 shadow-md hover:shadow-lg rounded-xl p-8">
-              <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-primary-600 text-2xl">📈</span>
+              <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4 text-primary-600">
+                <MarketingIcon name="trend" className="h-8 w-8" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">지속적 성장</h3>
               <p className="text-gray-600">
@@ -264,8 +285,8 @@ export default function Vision() {
             </div>
 
             <div className="text-center border border-gray-100 shadow-md hover:shadow-lg rounded-xl p-8">
-              <div className="w-16 h-16 bg-secondary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-secondary-600 text-2xl">💡</span>
+              <div className="w-16 h-16 bg-secondary-100 rounded-full flex items-center justify-center mx-auto mb-4 text-secondary-600">
+                <MarketingIcon name="lightbulb" className="h-8 w-8" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">창의성</h3>
               <p className="text-gray-600">

@@ -2,14 +2,17 @@ import type { Metadata } from 'next'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import Link from 'next/link'
+import { MarketingIcon } from '../../components/MarketingIcon'
 
 export const metadata: Metadata = {
   title: '회사소개 - AI디지털케어로그 기반 데이터 인프라 기업 | 드림에이아이랩',
-  description: 'DAL은 돌봄·의료·교육 데이터를 표준화하는 플랫폼 기업입니다. 5,700+ 발달장애 기관, 22,000+ 시니어 돌봄사업자 등 실제 시장 선점 현황과 성장 과정을 확인하세요.',
-  keywords: '드림에이아이랩, 회사소개, AI디지털케어로그, 시장 선점, 표준화, 사회적가치, 투자, 혁신',
+  description:
+    'DAL은 돌봄·의료·교육 데이터를 표준화하는 플랫폼 기업입니다. 자람이·시니어앤라이프에 공공·연계 기준으로 등록된 기관·사업자 규모(MAU와 별개)와 표준화·파일럿 진행을 확인하세요.',
+  keywords: '드림에이아이랩, 회사소개, AI디지털케어로그, 데이터 표준화, 사회적가치, 투자, 혁신',
   openGraph: {
     title: '회사소개 - AI디지털케어로그로 표준을 만드는 드림에이아이랩',
-    description: 'DAL은 자체 개발한 AI디지털케어로그로 의료·돌봄·교육 데이터를 통합해 개인 맞춤 케어를 제안하는 표준 플랫폼을 만듭니다. 사회적 문제 해결과 확장 가능한 비즈니스를 동시에 실현합니다.',
+    description:
+      'DAL은 자체 개발한 AI디지털케어로그로 의료·돌봄·교육 데이터를 통합해 개인 맞춤 케어를 제안하는 표준 플랫폼을 지향합니다. 사회적 가치와 확장 가능한 비즈니스를 함께 염두에 둡니다.',
     url: 'https://dreamailab.com/about',
     siteName: '드림에이아이랩',
     images: [{ url: '/og-image.png', width: 1200, height: 630, alt: '드림에이아이랩 회사소개' }],
@@ -19,7 +22,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: '회사소개 - AI디지털케어로그로 표준을 만드는 드림에이아이랩',
-    description: 'DAL은 자체 개발한 AI디지털케어로그로 의료·돌봄·교육 데이터를 통합해 개인 맞춤 케어를 제안하는 표준 플랫폼을 만듭니다. 사회적 문제 해결과 확장 가능한 비즈니스를 동시에 실현합니다.',
+    description:
+      'DAL은 자체 개발한 AI디지털케어로그로 의료·돌봄·교육 데이터를 통합해 개인 맞춤 케어를 제안하는 표준 플랫폼을 지향합니다. 사회적 가치와 확장 가능한 비즈니스를 함께 염두에 둡니다.',
     images: ['/og-image.png'],
   },
 }
@@ -63,29 +67,6 @@ export default function About() {
     }
   ]
 
-  const coreValues = [
-    {
-      title: '모두를 위한 기술',
-      description: '취약계층과 소외계층의 삶을 개선하고자 하는 깊은 관심에서 시작된 우리의 여정은, 모든 사람이 기술적 장벽 없이 혜택을 누릴 수 있는 세상을 꿈꿉니다.',
-      icon: '🤝'
-    },
-    {
-      title: '사회적 포용성',
-      description: '수화 번역 AI부터 발달장애 연구까지, 기술이 어떻게 사회적 포용성을 증진시킬 수 있는지 보여주며 실제로 사람들의 삶에 긍정적인 영향을 미칩니다.',
-      icon: '❤️'
-    },
-    {
-      title: '지속 가능한 혁신',
-      description: '기술을 통해 사회적 가치를 창출하고, 더 나은 미래를 구축하는 데 전념하며, 기술과 인간이 조화롭게 공존할 수 있는 세상을 꿈꿉니다.',
-      icon: '🌱'
-    },
-    {
-      title: '평등한 기회',
-      description: '모든 사람이 동등하게 혜택을 누릴 수 있는 기회를 만들어내며, 정보에 평등하게 접근하고 높은 삶의 질을 누릴 수 있도록 지원합니다.',
-      icon: '⚖️'
-    }
-  ]
-
   const projects = [
     {
       name: '자람이 프로젝트',
@@ -124,8 +105,8 @@ export default function About() {
               회사소개 · Dream AI Lab
             </h1>
             <p className="text-xl max-w-3xl mx-auto">
-              실제 시장에서 검증된 성과와 실행력으로<br />
-              돌봄·의료·교육 데이터 표준화를 선도합니다.
+              등록·연계로 확보한 현장 풀과 제품·파일럿을 바탕으로<br />
+              돌봄·의료·교육 데이터 표준화를 단계적으로 쌓아가고 있습니다.
             </p>
           </div>
         </div>
@@ -135,25 +116,25 @@ export default function About() {
       <section className="py-12 lg:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">실제 성과와 시장 영향력</h2>
-            <p className="text-gray-600">현장에서 검증된 시장 선점 지표</p>
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">등록·연계 규모와 시장 맥락</h2>
+            <p className="text-gray-600">공공·연계 기준 등록 수(일일 이용자 수와 별개)</p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             <div className="rounded-2xl p-6 border border-gray-100 text-center shadow-sm">
               <div className="text-3xl font-extrabold text-gray-900 mb-1">5,700+</div>
-              <div className="text-sm text-gray-600">발달장애 센터 (자람이)</div>
+              <div className="text-sm text-gray-600">자람이 연계 등록 기관</div>
             </div>
             <div className="rounded-2xl p-6 border border-gray-100 text-center shadow-sm">
               <div className="text-3xl font-extrabold text-gray-900 mb-1">22,000+</div>
-              <div className="text-sm text-gray-600">시니어 돌봄 기관 (시니어앤라이프)</div>
+              <div className="text-sm text-gray-600">시니어앤라이프 연계 등록 사업자</div>
             </div>
             <div className="rounded-2xl p-6 border border-gray-100 text-center shadow-sm">
               <div className="text-3xl font-extrabold text-gray-900 mb-1">383만+</div>
               <div className="text-sm text-gray-600">발달장애 잠재 인구 (시장 규모)</div>
             </div>
             <div className="rounded-2xl p-6 border border-gray-100 text-center shadow-sm">
-              <div className="text-3xl font-extrabold text-gray-900 mb-1">국내 최초</div>
-              <div className="text-sm text-gray-600">4대 AI 플랫폼 (발달·시니어·의료·국제결혼)</div>
+              <div className="text-3xl font-extrabold text-gray-900 mb-1">6+1</div>
+              <div className="text-sm text-gray-600">핵심 도메인 + 분리 운영(노아AI)</div>
             </div>
           </div>
         </div>
@@ -177,7 +158,7 @@ export default function About() {
                 이 기술은 ① 발달장애 케어 ‘자람이’, ② 노인 돌봄 ‘시니어앤라이프’, ③ 건강·질병 관리 ‘의료헬스케어(AI 주치의·항암·한방)’, ④ 사회문제 해결형 ‘국제결혼 플랫폼(글로벌 패밀리)’로 확장되고 있습니다. (국제결혼은 커뮤니티·매칭 중심으로 케어로그 직접 적용 없이 운영됩니다.)
               </p>
               <p className="text-lg text-gray-600">
-                우리는 아무도 시도하지 못했던 영역을 표준화하여 신뢰를 얻고 있습니다. 축적된 데이터는 의료 연구·치매·항암·교육 혁신에 기여하며, 공공·NGO·연구기관과의 협력을 통해 사회적 임팩트를 극대화합니다.
+                우리는 공익에 가까운 돌봄·교육·의료 데이터 표준화에 집중해 신뢰를 쌓고 있습니다. 동의·규제를 전제로 한 기록은 연구·정책·현장 개선으로 환류될 수 있도록 설계하며, 공공·NGO·연구기관과의 협력으로 사회적 임팩트를 넓혀 갑니다.
               </p>
             </div>
             <div className="relative">
@@ -185,7 +166,7 @@ export default function About() {
                 <div className="text-center">
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">성장과 실행</h3>
                   <p className="text-gray-600 mb-6">
-                    플랫폼 위 6개 핵심 도메인으로 확장 중이며, 표준화와 시장 선점을 동시에 추진합니다.
+                    플랫폼 위 6개 핵심 도메인으로 확장 중이며, 표준화와 기관·연계 풀 확보를 병행해 도입 기반을 넓히고 있습니다.
                   </p>
                   <div className="grid grid-cols-2 gap-4 text-sm">
                     <div className="text-center">
@@ -201,8 +182,8 @@ export default function About() {
                       <div className="text-gray-600">국가 시범사업 목표</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-secondary-600 mb-2">국내 최초</div>
-                      <div className="text-gray-600">시장 선도 구조</div>
+                      <div className="text-2xl font-bold text-secondary-600 mb-2">다도메인</div>
+                      <div className="text-gray-600">하나의 케어로그 철학</div>
                     </div>
                   </div>
                 </div>
@@ -221,22 +202,30 @@ export default function About() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="rounded-2xl p-6 shadow bg-gray-50 text-center">
-              <div className="text-3xl mb-3">📑</div>
+              <div className="mb-3 flex justify-center text-primary-600">
+                <MarketingIcon name="document" className="h-9 w-9" />
+              </div>
               <h3 className="text-lg font-bold text-gray-900 mb-1">데이터 표준화</h3>
               <p className="text-gray-600 text-sm">FHIR Schema 기반 데이터 표준화</p>
             </div>
             <div className="rounded-2xl p-6 shadow bg-gray-50 text-center">
-              <div className="text-3xl mb-3">🧠</div>
+              <div className="mb-3 flex justify-center text-primary-600">
+                <MarketingIcon name="brain" className="h-9 w-9" />
+              </div>
               <h3 className="text-lg font-bold text-gray-900 mb-1">멀티모달 AI 분석</h3>
               <p className="text-gray-600 text-sm">행동·영상·텍스트·시계열 분석</p>
             </div>
             <div className="rounded-2xl p-6 shadow bg-gray-50 text-center">
-              <div className="text-3xl mb-3">⚡</div>
+              <div className="mb-3 flex justify-center text-primary-600">
+                <MarketingIcon name="bolt" className="h-9 w-9" />
+              </div>
               <h3 className="text-lg font-bold text-gray-900 mb-1">맞춤 실행</h3>
               <p className="text-gray-600 text-sm">Care plan, Alert, Matching</p>
             </div>
             <div className="rounded-2xl p-6 shadow bg-gray-50 text-center">
-              <div className="text-3xl mb-3">🔬</div>
+              <div className="mb-3 flex justify-center text-primary-600">
+                <MarketingIcon name="flask" className="h-9 w-9" />
+              </div>
               <h3 className="text-lg font-bold text-gray-900 mb-1">집단 지능 학습</h3>
               <p className="text-gray-600 text-sm">RWE & 연구 혁신</p>
             </div>
@@ -253,25 +242,33 @@ export default function About() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
             <div className="rounded-2xl p-6 shadow bg-white text-center">
-              <div className="text-5xl mb-3">🌱</div>
+              <div className="mb-3 flex justify-center text-emerald-600">
+                <MarketingIcon name="sprout" className="h-11 w-11" />
+              </div>
               <h3 className="text-xl font-bold text-gray-900">자람이</h3>
               <p className="text-gray-600 mt-1 mb-4">발달장애 케어 표준화 플랫폼</p>
               <div><Link href="/services/jarame" className="text-blue-700 font-semibold hover:underline">자세히 보기 →</Link></div>
             </div>
             <div className="rounded-2xl p-6 shadow bg-white text-center">
-              <div className="text-5xl mb-3">👴</div>
+              <div className="mb-3 flex justify-center text-cyan-700">
+                <MarketingIcon name="user" className="h-11 w-11" />
+              </div>
               <h3 className="text-xl font-bold text-gray-900">시니어앤라이프</h3>
               <p className="text-gray-600 mt-1 mb-4">국내 시니어돌봄 서비스의 표준</p>
               <div><Link href="/services/senior" className="text-blue-700 font-semibold hover:underline">자세히 보기 →</Link></div>
             </div>
             <div className="rounded-2xl p-6 shadow bg-white text-center">
-              <div className="text-5xl mb-3">🩺</div>
+              <div className="mb-3 flex justify-center text-rose-600">
+                <MarketingIcon name="stethoscope" className="h-11 w-11" />
+              </div>
               <h3 className="text-xl font-bold text-gray-900">헬스케어 플랫폼</h3>
               <p className="text-gray-600 mt-1 mb-4">AI 주치의·항암·한방 통합</p>
               <div><Link href="/services/healthcare" className="text-blue-700 font-semibold hover:underline">자세히 보기 →</Link></div>
             </div>
             <div className="rounded-2xl p-6 shadow bg-white text-center">
-              <div className="text-5xl mb-3">🌍</div>
+              <div className="mb-3 flex justify-center text-indigo-600">
+                <MarketingIcon name="globe" className="h-11 w-11" />
+              </div>
               <h3 className="text-xl font-bold text-gray-900">글로벌 패밀리</h3>
               <p className="text-gray-600 mt-1 mb-4">국내 최초 국제결혼 플랫폼</p>
               <div><Link href="/services/marriage" className="text-blue-700 font-semibold hover:underline">자세히 보기 →</Link></div>
@@ -290,22 +287,30 @@ export default function About() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-gray-50 rounded-xl p-8 hover:shadow-md border border-gray-100 transition-shadow text-center">
-              <div className="text-4xl mb-3">🤝</div>
+              <div className="mb-3 flex justify-center text-primary-600">
+                <MarketingIcon name="handshake" className="h-10 w-10" />
+              </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">모두를 위한 기술</h3>
               <p className="text-gray-600">사회적 포용성 확대를 위한 접근성 중심 설계</p>
             </div>
             <div className="bg-gray-50 rounded-xl p-8 hover:shadow-md border border-gray-100 transition-shadow text-center">
-              <div className="text-4xl mb-3">⚖️</div>
+              <div className="mb-3 flex justify-center text-slate-600">
+                <MarketingIcon name="scale" className="h-10 w-10" />
+              </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">신뢰와 표준</h3>
               <p className="text-gray-600">규제·행정 적합성, 데이터 신뢰성 확보</p>
             </div>
             <div className="bg-gray-50 rounded-xl p-8 hover:shadow-md border border-gray-100 transition-shadow text-center">
-              <div className="text-4xl mb-3">🌱</div>
+              <div className="mb-3 flex justify-center text-emerald-600">
+                <MarketingIcon name="leaf" className="h-10 w-10" />
+              </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">지속 가능한 비즈니스</h3>
               <p className="text-gray-600">구독·데이터·파트너 기반의 확장성</p>
             </div>
             <div className="bg-gray-50 rounded-xl p-8 hover:shadow-md border border-gray-100 transition-shadow text-center">
-              <div className="text-4xl mb-3">🚀</div>
+              <div className="mb-3 flex justify-center text-primary-600">
+                <MarketingIcon name="rocket" className="h-10 w-10" />
+              </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">글로벌 확장</h3>
               <p className="text-gray-600">고령화·다문화·헬스케어 글로벌 시장 적용</p>
             </div>

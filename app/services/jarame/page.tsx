@@ -6,7 +6,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'AI 디지털케어로그 | 발달장애 표준 기술 | 자람이 | 드림에이아이랩',
   description:
-    '발달장애 치료·학습을 위한 AI 디지털케어로그. 데이터 표준·기관 연계·AI 강화학습 기반 맞춤형 치료·학습. 전국 5,700개 기관 등록, 베타 테스트 중. 가정·학교·센터·병원 통합, 실시간 AI 분석. DAL 플랫폼 1번 도메인. AI 엔진형 Middleware.',
+    '발달장애 치료·학습을 위한 AI 디지털케어로그. 데이터 표준·기관 연계·AI 강화학습 기반 맞춤형 치료·학습. 공공·연계 등으로 약 5,700개 기관이 플랫폼에 등록(MAU와 별개), 일부 기관 베타. 가정·학교·센터·병원 연계를 지향. DAL 플랫폼 1번 도메인.',
   keywords: 'AI 디지털케어로그, 발달장애 표준, 맞춤형 치료, 맞춤형 학습, 골든타임, 발달장애 치료 방법, ADHD 치료, 자폐증 치료, 특수교육, 언어치료, 작업치료, 행동치료 ABA, IEP 개별화교육계획, 치료사 협업, 다기관 연계, 자람이, 드림에이아이랩, 케어로그 표준화, 강화학습, Middleware, AI 엔진',
   alternates: {
     canonical: 'https://dreamailab.com/services/jarame',
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     siteName: '드림에이아이랩',
     title: '자람이 — 발달장애 AI 디지털케어로그 | DAL 플랫폼 1번 도메인',
     description:
-      'DAL 플랫폼의 첫 도메인. 발달장애 AI 디지털케어로그 표준 기술. 전국 5,700개 기관 등록, 베타 테스트 중. 가정·학교·센터·병원 통합, AI 강화학습 기반 맞춤형 치료·학습. AI 엔진형 Middleware.',
+      'DAL 플랫폼의 첫 도메인. 발달장애 AI 디지털케어로그 표준 기술. 연계·등록 기관 약 5,700+, 일부 기관 베타. 가정·학교·센터·병원 연계를 지향. AI 강화학습 기반 맞춤형 치료·학습.',
     images: [
       {
         url: '/og/jarame.jpg',
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: '자람이 — 발달장애 AI 디지털케어로그 | DAL 1번 도메인',
     description:
-      '전국 5,700개 기관 등록, 베타 테스트 중. AI 강화학습 기반 맞춤형 치료·학습. 데이터 표준·기관 연계·정책 연계.',
+      '연계·등록 기관 약 5,700+, 일부 기관 베타. AI 강화학습 기반 맞춤형 치료·학습. 데이터 표준·기관 연계·정책 연계.',
     images: ['/og/jarame.jpg'],
   },
   robots: { index: true, follow: true },
@@ -210,7 +210,7 @@ export default function JarameService() {
         "name": "자람이를 사용하는 기관은 몇 개인가요?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "전국 약 5,700개의 특수교육 기관, 발달장애 치료센터, 소아정신과 병원이 자람이 커뮤니티에 등록되어 있습니다. 현재 일부 센터·병원·특수교사와 베타 테스트 중이며, 정부 정책과 연계한 전국 확대를 준비하고 있습니다. 2022년부터 기술 개발을 시작해 2025년 초 완성되었습니다."
+          "text": "공공·개방 데이터 연계 등으로 약 5,700개의 특수교육·발달장애 치료·소아정신 관련 기관 정보가 자람이에 등록되어 있습니다. 이는 전원이 동일 제품을 일상 사용한다는 뜻이 아니라, B2B·행정 연동과 케어로그 도입을 논의할 수 있는 현장 풀 규모에 가깝습니다. 일부 센터·병원·특수교사와 베타 테스트를 진행 중이며, 정부 정책과 연계한 확대를 준비하고 있습니다. 2022년부터 기술 개발을 시작해 2025년 초 플랫폼 기술을 완성했습니다."
         }
       },
       {
@@ -301,7 +301,7 @@ export default function JarameService() {
     "@context": "https://schema.org",
     "@type": "TechArticle",
     "headline": "발달장애 AI 디지털케어로그: 표준 케어로그·실시간 환류 기반 Care Data Infrastructure",
-    "description": "전국 5,700개 기관 등록 커뮤니티, 베타 테스트 중. AI 강화학습 기반 맞춤형 치료·학습. 가정·학교·센터·병원 통합 기록, 실시간 AI 분석. AI 엔진형 Middleware 기술.",
+    "description": "연계·등록 기관 약 5,700+ 규모의 풀과 일부 기관 베타. AI 강화학습 기반 맞춤형 치료·학습. 가정·학교·센터·병원 통합 기록을 지향. AI 엔진형 Middleware 기술.",
     "author": {
       "@type": "Organization",
       "name": "드림에이아이랩",
@@ -405,7 +405,7 @@ export default function JarameService() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
             <div className="bg-white rounded-xl p-6 border border-gray-100 hover:border-blue-200 transition-colors shadow-sm">
               <h3 className="font-bold text-gray-900 mb-2">기관 커뮤니티</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">5,700+ 기관 커뮤니티 기반</p>
+              <p className="text-sm text-gray-600 leading-relaxed">5,700+ 연계·등록 기관 풀</p>
             </div>
             <div className="bg-white rounded-xl p-6 border border-gray-100 hover:border-blue-200 transition-colors shadow-sm">
               <h3 className="font-bold text-gray-900 mb-2">개발 기간</h3>
@@ -427,11 +427,13 @@ export default function JarameService() {
       <section className="py-14 bg-white border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">Market Validation</h2>
-          <p className="text-center text-gray-600 text-sm mb-8 max-w-2xl mx-auto">자람이는 기관 커뮤니티·베타 테스트·다기관 협업 구조를 통해 검증되고 있습니다.</p>
+          <p className="text-center text-gray-600 text-sm mb-8 max-w-2xl mx-auto">
+            자람이는 연계·등록으로 확보한 기관 풀과 일부 기관 베타·다기관 협업 설계를 통해 단계적으로 검증하고 있습니다.
+          </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white rounded-xl p-6 border border-gray-100 hover:border-blue-200 transition-colors shadow-sm">
               <h3 className="font-bold text-gray-900 mb-2">기관 커뮤니티 기반</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">5,700+ 기관 커뮤니티 네트워크</p>
+              <p className="text-sm text-gray-600 leading-relaxed">5,700+ 연계·등록 기관 네트워크(도입 잠재 풀)</p>
             </div>
             <div className="bg-white rounded-xl p-6 border border-gray-100 hover:border-blue-200 transition-colors shadow-sm">
               <h3 className="font-bold text-gray-900 mb-2">기관 베타 테스트</h3>
@@ -1179,7 +1181,8 @@ export default function JarameService() {
                 </p>
               </div>
               <p className="text-center text-sm text-gray-600 mt-3">
-                데이터가 쌓일수록 AI는 더 정확한 치료 계획을 제시합니다. 5,700개 기관의 데이터가 하나의 AI를 함께 발전시킵니다.
+                동의·연동된 기록이 쌓일수록 AI는 더 정확한 치료 계획을 제시합니다. 등록 풀 전체가 즉시 동일 데이터 파이프라인에
+                올라간다는 뜻은 아닙니다.
               </p>
             </div>
           </div>
@@ -2048,7 +2051,7 @@ export default function JarameService() {
                   <p className="text-sm text-blue-600">발달장애 전용</p>
                 </div>
                 <ul className="text-sm text-gray-700 space-y-2">
-                  <li>✓ 5,700+ 기관 등록 (커뮤니티)</li>
+                  <li>✓ 5,700+ 연계·등록 기관 풀</li>
                   <li>✓ 2022~2025 기술 개발</li>
                   <li>✓ 2026년 시범사업 준비</li>
                 </ul>
@@ -2108,7 +2111,7 @@ export default function JarameService() {
                 <strong className="text-cyan-300">2026 정부 AI 정책 핵심 수혜</strong>: 
                 "AI를 사회문제 해결 1대 과제로 선정" (2025년 발표) → 
                 자람이는 <strong>AI 사회문제 해결형 기술의 선도 사례</strong>로 평가받고 있으며, 
-                정책적 정합성과 실증 데이터를 갖춘 <strong>발달장애 AI 디지털케어로그 표준 플랫폼</strong>입니다.
+                정책적 정합성과 표준 케어로그 구조·파일럿 축적을 바탕으로 한 <strong>발달장애 AI 디지털케어로그 표준 플랫폼</strong>을 지향합니다.
               </p>
             </div>
           </div>
@@ -2194,7 +2197,7 @@ export default function JarameService() {
                 <div className="bg-white rounded-lg p-4">
                   <h4 className="font-bold text-blue-700 mb-2">📍 현재 성과</h4>
                   <ul className="text-sm space-y-1">
-                    <li>• <strong>5,700+ 기관</strong> 등록 (커뮤니티)</li>
+                    <li>• <strong>5,700+</strong> 연계·등록 기관 풀</li>
                     <li>• <strong>2022~2025</strong> 기술 개발 완료</li>
                     <li>• 일부 센터·병원·특수교사 <strong>베타 테스트 중</strong></li>
                   </ul>

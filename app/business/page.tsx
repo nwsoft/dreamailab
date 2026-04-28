@@ -2,14 +2,16 @@ import type { Metadata } from 'next'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import Link from 'next/link'
+import { MarketingIcon, type MarketingIconName } from '../../components/MarketingIcon'
 
 export const metadata: Metadata = {
   title: '비즈니스·투자 - B2B 솔루션 & 파트너십 | 드림에이아이랩',
-  description: 'DAL의 핵심기술 AI디지털케어로그 기반의 B2B 솔루션, 파트너십, 투자 포인트를 확인하세요. 창업자 정해성이 최초 고안한 디지털케어로그 기술로 표준을 선도하는 검증된 포트폴리오와 사회적 임팩트를 제시합니다.',
+  description:
+    'DAL의 핵심기술 AI디지털케어로그 기반 B2B 솔루션, 파트너십, 투자 포인트를 확인하세요. 창업자 정해성이 고안한 디지털케어로그를 바탕으로 표준화·기관 풀·파일럿을 전개하는 포트폴리오와 사회적 임팩트를 제시합니다.',
   keywords: 'B2B, 파트너십, 투자, AI 솔루션, 표준화, 사회적 가치, 비즈니스 모델, 드림에이아이랩, 디지털케어로그, AI디지털케어로그, 정해성, 창업자, 개발자, 베지케어, 발달장애, 치매연구, 노인질병, 의료헬스케어',
   openGraph: {
     title: '비즈니스·투자 - B2B 솔루션 & 파트너십 | 드림에이아이랩',
-    description: 'DAL의 검증된 AI 포트폴리오, 시장 선점 & 표준화 현황, B2B 솔루션을 확인하세요.',
+    description: 'DAL의 AI디지털케어로그 포트폴리오, 기관·연계 풀과 표준화 진행, B2B 솔루션을 확인하세요.',
     url: 'https://dreamailab.com/business',
     siteName: '드림에이아이랩',
     images: [
@@ -26,37 +28,48 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: '비즈니스·투자 - B2B 솔루션 & 파트너십 | 드림에이아이랩',
-    description: 'DAL의 검증된 AI 포트폴리오, 시장 선점 & 표준화 현황, B2B 솔루션을 확인하세요.',
+    description: 'DAL의 AI디지털케어로그 포트폴리오, 기관·연계 풀과 표준화 진행, B2B 솔루션을 확인하세요.',
     images: ['/og-image.png'],
   },
 }
 
 export default function Business() {
-  const verifiedPortfolio = [
+  const verifiedPortfolio: {
+    title: string
+    description: string
+    icon: MarketingIconName
+    achievement: string
+    market: string
+    impact: string
+    status: string
+    powered: string
+  }[] = [
     {
       title: '자람이',
-      description: '국내최초 AI 발달장애 케어 플랫폼',
-      icon: '🌱',
-      achievement: '선도',
+      description: '발달장애 케어 표준화·AI디지털케어로그를 지향하는 플랫폼',
+      icon: 'sprout',
+      achievement: '초기 집중',
       market: '발달장애 시장',
-      impact: '전국 5,700개 시설 대상 표준화 행정·케어 시스템을 제공, 보호자·센터·병원을 하나로 연결',
-      status: '표준 선도',
+      impact:
+        '공공·연계 등으로 약 5,700개 기관 정보를 확보한 B2B·행정 표준화 대상. 행정·케어 시스템과 케어로그로 가정·센터·병원 연계 도입을 지향(등록 수 ≠ 전원 일상 사용자)',
+      status: '표준 지향',
       powered: 'Powered by AI디지털케어로그',
     },
     {
       title: '시니어앤라이프',
       description: 'AI 시니어케어 플랫폼',
-      icon: '👴',
-      achievement: '선도',
+      icon: 'user',
+      achievement: '초기 집중',
       market: '고령화 시장',
-      impact: '재가재활·주간보호·요양원·노인병원·노인재활병원 등 2만2천여 돌봄사업자 대상 표준화 행정 시스템과 검색·매칭 지원',
-      status: '표준 선도',
+      impact:
+        '공공·연계 등으로 약 2만 2천여 돌봄 사업자 정보를 확보한 대상 풀. 표준화 행정·검색·매칭 등 B2B 도입을 지향(등록 수 ≠ 전원 일상 사용자)',
+      status: '표준 지향',
       powered: 'Powered by AI디지털케어로그',
     },
     {
       title: '의료헬스케어',
       description: '개인 AI 주치의 케어로그',
-      icon: '💊',
+      icon: 'hospital',
       achievement: '신규',
       market: '개인 맞춤 의료 시장',
       impact: '개인 맞춤 건강관리 지원',
@@ -66,8 +79,8 @@ export default function Business() {
     {
       title: '마음이AI',
       description: 'AI 심리상담·케어 보조 서비스',
-      icon: '💙',
-      achievement: '선도',
+      icon: 'heart',
+      achievement: '전개 중',
       market: '심리치료 AI 시장',
       impact: '리팩토링 중 · 디지털케어로그 적용 진행',
       status: '리팩토링 중',
@@ -76,7 +89,7 @@ export default function Business() {
     {
       title: 'EduCareLog',
       description: 'AI 맞춤 학습 플랫폼',
-      icon: '🎓',
+      icon: 'graduation',
       achievement: '신규',
       market: 'AI 교육 시장',
       impact: '개인 맞춤 학습 지원',
@@ -86,7 +99,7 @@ export default function Business() {
     {
       title: '글로벌패밀리',
       description: '국제결혼 정보 커뮤니티 플랫폼',
-      icon: '🌍',
+      icon: 'globe',
       achievement: '신규',
       market: '국제결혼 시장',
       impact: '국제결혼 시장의 신뢰성과 투명성 혁신, 결혼 전후 맞춤 케어로 행복한 가정 만들기',
@@ -95,20 +108,20 @@ export default function Business() {
     },
     {
       title: '베지케어',
-      description: '국내 최초 베지터리안 플랫폼',
-      icon: '🌱',
-      achievement: '선도',
+      description: '채식·라이프스타일 AI 플랫폼',
+      icon: 'leaf',
+      achievement: '전개 중',
       market: '베지터리안 시장',
       impact: '채식주의자를 위한 AI 기반 건강관리·맛집·레시피·커뮤니티 통합 플랫폼',
       status: '개발 중',
       powered: 'Powered by AI디지털케어로그',
-    }
+    },
   ]
 
   const marketRows = [
     {
       title: '발달장애',
-      badge: '선도',
+      badge: '집중',
       summary: '발달장애 케어 표준 SaaS + 케어로그로 기관·가정·병원을 연결',
       positioning: '표준 행정/케어 SaaS와 케어로그를 결합. 기관 워크플로우와 보호자 앱을 묶어 전환비용과 네트워크 효과를 형성.',
       moat: [
@@ -117,7 +130,7 @@ export default function Business() {
         '규제/지침 적합 워크플로우'
       ],
       metrics: [
-        '자람이 등록 시설 5,700+',
+        '자람이 연계·등록 기관 5,700+ (MAU와 별개)',
         '중증 13.5만 / 경계성 70만 / ADHD 300만+',
         '수요 급증: 대기 장기화·센터 포화 → 홈티·디지털케어 채택 증가'
       ],
@@ -134,7 +147,7 @@ export default function Business() {
     },
     {
       title: '시니어',
-      badge: '선도',
+      badge: '집중',
       summary: '요양/주간보호/재가 표준 행정 SaaS + 케어로그, 가족 앱 연동',
       positioning: '기관 중심 표준화와 가족 앱을 연계해 케어 현장과 가정 데이터를 하나로. 전환비용↑·재방문률↑.',
       moat: [
@@ -143,7 +156,7 @@ export default function Business() {
         '가족 연동으로 사용자 락인'
       ],
       metrics: [
-        '시니어앤라이프 등록 돌봄사업자 22,000+',
+        '시니어앤라이프 연계·등록 사업자 22,000+ (MAU와 별개)',
         '국민 6명 중 1명이 시니어(초고령 사회 진입)',
         '시장 규모 급성장, 데이터 기반 추가 서비스 기회'
       ],
@@ -160,7 +173,7 @@ export default function Business() {
     },
     {
       title: '국제결혼',
-      badge: '선도',
+      badge: '집중',
       summary: '정보·행정·매칭을 표준화한 커뮤니티/플랫폼(사기·불법 예방, 신뢰성 강화)',
       positioning: '국가별 파트너 인증·표준화된 워크플로우·후기/신뢰지표로 불균형 해소. 결혼 전후 전체 여정 관리.',
       moat: [
@@ -186,11 +199,11 @@ export default function Business() {
     },
     {
       title: '베지터리안',
-      badge: '선도',
-      summary: '국내 최초 베지터리안 플랫폼 - AI 기반 건강관리·맛집·레시피·커뮤니티 통합',
+      badge: '집중',
+      summary: '채식·라이프스타일 AI 플랫폼 — 건강관리·맛집·레시피·커뮤니티 통합',
       positioning: '디지털케어로그 기반 개인 맞춤형 영양 관리와 AI 요리사, 지역 식당 연계, 커머스까지 이어지는 완성형 생태계.',
       moat: [
-        '국내 최초 베지터리안 전용 플랫폼',
+        '채식·라이프스타일 전용 지향 플랫폼',
         '디지털케어로그 연동 건강 관리',
         'AI 기반 맞춤형 레시피 추천'
       ],
@@ -223,7 +236,7 @@ export default function Business() {
       ],
       metrics: [
         '일반의학: 개인 AI 주치의, 병원 매칭 준비',
-        '한방의학: 국내 최초 한의학 AI 챗봇',
+        '한방의학: 한의학 특화 AI 상담(챗봇) 지향',
         '항암: 재활·맞춤 관리, 부작용 모니터링',
         '심리치료: 마음이AI(맞춤 상담·케어)'
       ],
@@ -310,17 +323,17 @@ export default function Business() {
   const businessModels = [
     {
       title: 'B2B AI 솔루션',
-      description: '검증된 AI 기술을 기업과 조직에 맞춤형으로 제공',
+      description: '현장 적용 가능한 AI 기술을 기업과 조직에 맞춤형으로 제공',
       icon: '🏢',
       features: [
-        '검증된 AI 모델 적용',
+        '도메인 맞춤 AI 모델 적용',
         '기업 전용 맞춤형 개발',
         'API 연동 및 통합',
         '전담 기술 지원팀'
       ],
       benefits: [
-        '검증된 기술로 리스크 최소화',
-        '시장 선점 기업과의 협력',
+        '표준·보안 설계로 리스크 완화',
+        '도입 기관·파트너와의 협력',
         '사회적 가치와 수익성 동시 추구',
         '지속적인 기술 업데이트'
       ],
@@ -328,7 +341,7 @@ export default function Business() {
     },
     {
       title: '라이센싱 & 파트너십',
-      description: '국내 최초 AI 기술을 다른 기업과 공유하며 시장 확장',
+      description: '자체 AI디지털케어로그 기술을 파트너와 공유하며 시장 확장',
       icon: '🤝',
       features: [
         'AI 모델 라이센싱',
@@ -337,7 +350,7 @@ export default function Business() {
         '시장 진입 지원'
       ],
       benefits: [
-        '시장 선도 기술 공유',
+        '플랫폼 기술 공유',
         '파트너와의 시너지 효과',
         '빠른 시장 확장',
         '수익 분배를 통한 성장'
@@ -364,7 +377,7 @@ export default function Business() {
     },
     {
       title: 'AI 컨설팅 & 교육',
-      description: '검증된 AI 도입 경험을 바탕으로 한 전문 컨설팅',
+      description: '도입·파일럿 경험을 바탕으로 한 전문 컨설팅',
       icon: '💡',
       features: [
         'AI 전략 수립',
@@ -373,8 +386,8 @@ export default function Business() {
         '직원 교육 및 훈련'
       ],
       benefits: [
-        '실제 성공 사례 기반',
-        '시장 선도 기술 활용',
+        '파일럿·도입 사례 기반',
+        '플랫폼 기술 활용',
         '체계적 AI 도입',
         '투자 효율성 극대화'
       ],
@@ -382,47 +395,52 @@ export default function Business() {
     }
   ]
 
-  const investmentHighlights = [
+  const investmentHighlights: {
+    title: string
+    description: string
+    icon: MarketingIconName
+    details: string[]
+  }[] = [
     {
-      title: '시장 선도 구조',
-      description: '4대 선도 도메인을 기반으로 확장 가능한 구조',
-      icon: '🎯',
+      title: '다도메인·기관 풀 구조',
+      description: '4대 집중 도메인과 연계·등록 풀을 기반으로 한 확장',
+      icon: 'target',
       details: [
-        '발달장애·시니어·국제결혼·베지터리안 초기 플랫폼 선점',
-        '기관 워크플로우 락인 → 확산 속도·재방문률 가속',
-        '커뮤니티·마켓플레이스 결합으로 네트워크 효과 극대화'
-      ]
+        '발달장애·시니어·국제결혼·라이프스타일 등 초기 집중 축 전개',
+        '기관 워크플로우·케어로그 결합으로 전환비용·재방문 설계',
+        '커뮤니티·마켓플레이스와 결합한 네트워크 효과 지향',
+      ],
     },
     {
       title: '플랫폼 기술 & 진입장벽',
       description: 'AI디지털케어로그 기반 표준화·규제 적합성',
-      icon: '🥇',
+      icon: 'blocks',
       details: [
         '표준 스키마(FHIR)·동의/RBAC·감사로그 내장',
-        '현장 RWE 축적 → IRB/제약 PoC로 신뢰성 강화',
-        '데이터·워크플로우 락인으로 경쟁자 진입 차단'
-      ]
+        '현장 RWE·IRB·제약 PoC 등 신뢰 축적을 지향',
+        '데이터·워크플로우 결합으로 전환비용 상승 설계',
+      ],
     },
     {
       title: '사회적 가치 + 수익성 (ESG + ROI)',
-      description: '사회 문제 해결과 재무성과를 동시에',
-      icon: '💎',
+      description: '사회 문제 해결과 재무성과를 동시에 지향',
+      icon: 'puzzle',
       details: [
-        '발달·시니어·국제결혼·베지터리안 등 공익 영역의 실제 문제 해결',
+        '발달·시니어·국제결혼·라이프스타일 등 공익에 가까운 영역',
         '구독·매칭·데이터 라이선스의 균형 잡힌 수익 구조',
-        'ESG 테마 및 정책 연계 기회'
-      ]
+        'ESG·정책 연계 기회',
+      ],
     },
     {
       title: '확장 가능한 플랫폼',
       description: '도메인·국가를 넘는 스케일업',
-      icon: '🚀',
+      icon: 'rocket',
       details: [
         '헬스케어(의료3종+심리)로 확장 진행',
         '국제결혼 커뮤니티 기반 글로벌 시장 진출 논리',
-        '마켓플레이스/파트너 API로 네트워크 효과 가속'
-      ]
-    }
+        '마켓플레이스/파트너 API로 네트워크 효과 가속',
+      ],
+    },
   ]
 
 
@@ -430,21 +448,21 @@ export default function Business() {
     <div className="min-h-screen bg-gray-50">
       <Header />
       
-      {/* Hero Section - 시장 선점 메시지 우선 노출 */}
+      {/* Hero — 기관 풀·수익 구조 요약 */}
       <section className="bg-gradient-to-br from-primary-600 to-secondary-600 text-white py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="inline-block px-4 py-1.5 rounded-full text-sm font-medium bg-white/15 text-white/95 mb-6">
-              시장 선점 · B2B/B2G/B2C 확장
+              기관·연계 풀 · B2B/B2G/B2C 확장
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              시장 선점 구조와 확장 전략
+              확장 구조와 수익·파트너 전략
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto">
-              AI디지털케어로그 기반 플랫폼으로 이미 시장 표준을 만들고 있습니다.
-              등록 기관·사용자 규모·표준화 진행 상황을 바탕으로 투자 관점을 제시합니다.
+              AI디지털케어로그 기반 플랫폼으로 표준화와 기관 네트워크를 병행 추진합니다.
+              연계·등록 기관·사업자 규모와 표준화·파일럿 진행을 바탕으로 투자 관점을 제시합니다(등록 수는 일일 이용자와 별개).
             </p>
-            {/* 시장 선점 지표 - 상단 강조 */}
+            {/* 핵심 지표 — 홈·IR과 동일 정의(등록 ≠ DAU) */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10 max-w-4xl mx-auto">
               <div className="bg-white/15 rounded-xl p-4 border border-white/20">
                 <div className="text-2xl md:text-3xl font-bold">5,700+</div>
@@ -452,7 +470,7 @@ export default function Business() {
               </div>
               <div className="bg-white/15 rounded-xl p-4 border border-white/20">
                 <div className="text-2xl md:text-3xl font-bold">22,000+</div>
-                <div className="text-sm text-white/90">시니어 돌봄사업자</div>
+                <div className="text-sm text-white/90">시니어앤라이프 등록 사업자</div>
               </div>
               <div className="bg-white/15 rounded-xl p-4 border border-white/20">
                 <div className="text-2xl md:text-3xl font-bold">383만+</div>
@@ -466,7 +484,7 @@ export default function Business() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
   <div className="bg-white/10 rounded-xl p-6 border border-white/20">
     <div className="text-sm text-white/90">핵심 포지션</div>
-    <div className="text-2xl font-bold text-white mt-1">4대 선도 도메인</div>
+    <div className="text-2xl font-bold text-white mt-1">4대 집중 도메인</div>
     <div className="text-sm text-white/80 mt-1">발달·시니어·국제결혼·베지터리안</div>
   </div>
   <div className="bg-white/10 rounded-xl p-6 border border-white/20">
@@ -500,11 +518,11 @@ export default function Business() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              검증된 AI 포트폴리오
+              핵심 AI 포트폴리오
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              국내 최초의 AI 서비스들로 실제 사용자와 시설이 검증한 
-              혁신적인 솔루션들을 소개합니다.
+              AI디지털케어로그 위에서 발달·시니어·의료·교육·국제결혼·라이프스타일 등 도메인별 제품·파일럿을 전개하고 있습니다.
+              등록·연계 규모는 도입 후보 풀을 뜻하며 전원의 일상 사용을 의미하지 않습니다.
             </p>
           </div>
 
@@ -512,7 +530,9 @@ export default function Business() {
             {verifiedPortfolio.map((service, index) => (
               <div key={index} className="bg-white rounded-2xl shadow-md hover:shadow-lg transition-shadow border border-gray-200">
                 <div className="p-6 bg-gray-50 text-gray-900 rounded-t-2xl border-b border-gray-100">
-                  <div className="text-4xl mb-3">{service.icon}</div>
+                  <div className="mb-3 flex text-primary-600">
+                    <MarketingIcon name={service.icon} className="h-10 w-10" />
+                  </div>
                   <h3 className="text-xl font-bold mb-2">{service.title}</h3>
                   <p className="text-sm opacity-90">{service.description}</p>
                   <span className="mt-3 inline-block text-[11px] tracking-wide uppercase bg-gray-200 text-gray-700 px-2 py-1 rounded">
@@ -549,14 +569,14 @@ export default function Business() {
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 bg-gray-100 text-gray-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
               <span className="w-2 h-2 bg-gray-500 rounded-full"></span>
-              시장 선점 & 표준화
+              기관 풀 · 표준화
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              시장 선점 & 표준화 현황
+              표준화와 시장 전개 현황
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              4대 <strong className="text-gray-800">선도 도메인</strong>(발달장애·시니어·국제결혼·베지터리안)에서 
-              확장 가능한 구조로 표준화를 추진하고 있습니다.
+              4대 <strong className="text-gray-800">집중 도메인</strong>(발달장애·시니어·국제결혼·라이프스타일)에서
+              표준 케어로그와 기관·연계 풀을 바탕으로 확장 가능한 구조를 쌓고 있습니다.
             </p>
           </div>
 
@@ -571,7 +591,7 @@ export default function Business() {
                       <div className="flex items-center gap-4 mb-3">
                         <h3 className="text-3xl font-bold text-gray-900">{row.title}</h3>
                         <span className={`px-4 py-2 rounded-full text-sm font-bold shadow-sm ${
-                          row.badge === '선도' 
+                          row.badge === '집중'
                             ? 'bg-gray-800 text-white' 
                             : 'bg-gray-600 text-white'
                         }`}>
@@ -710,28 +730,36 @@ export default function Business() {
 
               {/* Node: 국제결혼 */}
               <div className="absolute left-[6%] top-[6%] w-48 md:w-56 bg-white rounded-2xl shadow-lg border border-gray-200 p-4 text-center z-10">
-                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-2"><span className="text-xl">🌍</span></div>
+                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-2 text-blue-700">
+                  <MarketingIcon name="globe" className="h-6 w-6" />
+                </div>
                 <h3 className="text-base md:text-lg font-bold text-gray-900 mb-1">국제결혼</h3>
                 <p className="text-xs md:text-sm text-gray-600">정보·행정·매칭 표준화</p>
               </div>
 
               {/* Node: 헬스케어 */}
               <div className="absolute right-[6%] top-[6%] w-48 md:w-56 bg-white rounded-2xl shadow-lg border border-gray-200 p-4 text-center z-10">
-                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-2"><span className="text-xl">💊</span></div>
+                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-2 text-green-700">
+                  <MarketingIcon name="hospital" className="h-6 w-6" />
+                </div>
                 <h3 className="text-base md:text-lg font-bold text-gray-900 mb-1">헬스케어</h3>
                 <p className="text-xs md:text-sm text-gray-600">의료·한방·항암·심리 통합</p>
               </div>
 
               {/* Node: 자람이 */}
               <div className="absolute left-[6%] bottom-[6%] w-48 md:w-56 bg-white rounded-2xl shadow-lg border border-gray-200 p-4 text-center z-10">
-                <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-2"><span className="text-xl">🌱</span></div>
+                <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-2 text-purple-700">
+                  <MarketingIcon name="sprout" className="h-6 w-6" />
+                </div>
                 <h3 className="text-base md:text-lg font-bold text-gray-900 mb-1">자람이</h3>
                 <p className="text-xs md:text-sm text-gray-600">발달장애 케어 표준화</p>
               </div>
 
               {/* Node: 시니어 */}
               <div className="absolute right-[6%] bottom-[6%] w-48 md:w-56 bg-white rounded-2xl shadow-lg border border-gray-200 p-4 text-center z-10">
-                <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-2"><span className="text-xl">👴</span></div>
+                <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-2 text-orange-700">
+                  <MarketingIcon name="user" className="h-6 w-6" />
+                </div>
                 <h3 className="text-base md:text-lg font-bold text-gray-900 mb-1">시니어</h3>
                 <p className="text-xs md:text-sm text-gray-600">요양·돌봄 표준화</p>
               </div>
@@ -834,7 +862,7 @@ export default function Business() {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">비즈니스 모델</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              DAL의 비즈니스 모델은 4가지 수익 스트림으로 명확합니다: 기관 구독(B2B SaaS) · 가족/개인 프리미엄(B2C) · 매칭/리드 수수료(B2B2C) · 데이터/라이선스(RWE & API). 이 구조는 발달·시니어·국제결혼·헬스케어 전 영역에 동일하게 적용되며, 시장별 KPI로 이미 검증 중입니다.
+              DAL의 비즈니스 모델은 4가지 수익 스트림으로 명확합니다: 기관 구독(B2B SaaS) · 가족/개인 프리미엄(B2C) · 매칭/리드 수수료(B2B2C) · 데이터/라이선스(RWE & API). 이 구조는 발달·시니어·국제결혼·헬스케어 전 영역에 동일하게 적용할 수 있도록 설계했으며, 시장별 KPI·파일럿으로 성과를 쌓아 가는 단계입니다.
             </p>
           </div>
 
@@ -900,7 +928,7 @@ export default function Business() {
                   <li className="flex"><span className="mr-2">•</span>기관 구독 + 보호자 프리미엄</li>
                   <li className="flex"><span className="mr-2">•</span>센터/치료사 매칭 수수료</li>
                   <li className="flex"><span className="mr-2">•</span>API·리포트 라이선스</li>
-                  <li className="flex"><span className="mr-2"></span><span className="text-xs text-gray-500">(5,700 시설 확보)</span></li>
+                  <li className="flex"><span className="mr-2"></span><span className="text-xs text-gray-500">(연계·등록 기관 풀 5,700+)</span></li>
                 </ul>
               </div>
               {/* 시니어(시니어앤라이프) */}
@@ -910,7 +938,7 @@ export default function Business() {
                   <li className="flex"><span className="mr-2">•</span>기관 구독 + 가족 프리미엄</li>
                   <li className="flex"><span className="mr-2">•</span>디바이스 제휴/보험 연계</li>
                   <li className="flex"><span className="mr-2">•</span>병원/재활 매칭 수수료</li>
-                  <li className="flex"><span className="mr-2"></span><span className="text-xs text-gray-500">(22,000 사업자 확보)</span></li>
+                  <li className="flex"><span className="mr-2"></span><span className="text-xs text-gray-500">(연계·등록 사업자 풀 22,000+)</span></li>
                 </ul>
               </div>
               {/* 국제결혼(글로벌패밀리) */}
@@ -930,7 +958,7 @@ export default function Business() {
                   <li className="flex"><span className="mr-2">•</span>프리미엄 구독(무료/유료)</li>
                   <li className="flex"><span className="mr-2">•</span>광고 & 제휴(비건 브랜드)</li>
                   <li className="flex"><span className="mr-2">•</span>커머스(밀키트/정기배송)</li>
-                  <li className="flex"><span className="mr-2"></span><span className="text-xs text-gray-500">(국내 최초 베지터리안 플랫폼)</span></li>
+                  <li className="flex"><span className="mr-2"></span><span className="text-xs text-gray-500">(채식·라이프스타일 전용 지향)</span></li>
                 </ul>
               </div>
               {/* 헬스케어(의료3종+심리) */}
@@ -968,8 +996,8 @@ export default function Business() {
               >
                 {/* Header */}
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-r from-primary-500 to-secondary-600 flex items-center justify-center text-white text-2xl">
-                    {highlight.icon}
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-r from-primary-500 to-secondary-600 flex items-center justify-center text-white">
+                    <MarketingIcon name={highlight.icon} className="h-6 w-6" />
                   </div>
                   <h3 className="text-lg font-bold text-gray-900">{highlight.title}</h3>
                 </div>
@@ -999,7 +1027,7 @@ export default function Business() {
             AI디지털케어로그 파트너와 함께 성장하세요
           </h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto text-white/90">
-검증된 서비스 운영 경험을 바탕으로,
+파일럿·기관 도입 경험을 바탕으로,
 파트너와 함께 표준화를 추진하고 확장 가능한 성장을 만들어갑니다.
 데이터 표준화·AI 분석·네트워크 효과로 지속 가능한 수익을 지향합니다.
           </p>

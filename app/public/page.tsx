@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import Link from 'next/link'
+import { MarketingIcon, type MarketingIconName } from '../../components/MarketingIcon'
 
 export const metadata: Metadata = {
   title: '공공 협력 - 정부·지자체·공공기관 | 드림에이아이랩',
@@ -18,11 +19,11 @@ export const metadata: Metadata = {
 }
 
 export default function PublicPage() {
-  const policyAreas = [
-    { icon: '👶', title: '발달장애', desc: '2026년 국가 시범사업 추진. 발달장애 케어 표준화, IRB/RWE 연구' },
-    { icon: '👴', title: '고령화·돌봄', desc: '장기요양보험·재가돌봄 정책과 연계. 시니어 케어 표준화' },
-    { icon: '🏥', title: '디지털 헬스케어', desc: '초고령사회 대응, AI 의료 정책과 정합성' },
-    { icon: '🎓', title: '개별화교육', desc: '2026 개별화교육 전환 대응, 교육 데이터 표준화' },
+  const policyAreas: { icon: MarketingIconName; title: string; desc: string }[] = [
+    { icon: 'sprout', title: '발달장애', desc: '2026년 국가 시범사업 추진. 발달장애 케어 표준화, IRB/RWE 연구' },
+    { icon: 'user', title: '고령화·돌봄', desc: '장기요양보험·재가돌봄 정책과 연계. 시니어 케어 표준화' },
+    { icon: 'hospital', title: '디지털 헬스케어', desc: '초고령사회 대응, AI 의료 정책과 정합성' },
+    { icon: 'graduation', title: '개별화교육', desc: '2026 개별화교육 전환 대응, 교육 데이터 표준화' },
   ]
 
   return (
@@ -37,8 +38,8 @@ export default function PublicPage() {
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-6">공공 협력</h1>
           <p className="text-xl max-w-3xl mx-auto">
-            DAL AI디지털케어로그 플랫폼은 정부 정책과 정합성을 갖추고 있으며, 
-            시범사업·실증사업 적용이 가능한 구조입니다.
+            DAL AI디지털케어로그 플랫폼은 정부 정책 방향과 정합성을 지향하며,
+            시범·실증 사업 논의에 필요한 표준·보안·동의 구조를 갖추고 있습니다.
           </p>
         </div>
       </section>
@@ -50,26 +51,31 @@ export default function PublicPage() {
           <p className="text-lg text-gray-700 mb-6 max-w-4xl">
             드림에이아이랩(DAL)은 돌봄·의료·교육 데이터를 표준화하는 플랫폼 기업입니다. 
             AI디지털케어로그 기술로 하나의 데이터 인프라 위에 발달장애, 시니어 돌봄, 의료 헬스케어, 교육, 국제결혼, 라이프스타일 도메인을 연결합니다. 
-            시범사업 적용 가능 구조, 지자체 및 공공기관 협력 모델, 데이터 기반 정책 지원 플랫폼입니다.
+            시범·실증 사업 논의에 적합한 구조를 지향하며, 지자체·공공기관 협력과 데이터 기반 정책 지원을 함께 염두에 둔 플랫폼입니다.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
             <div className="bg-gray-50 rounded-xl p-4 text-center">
               <div className="text-2xl font-bold text-primary-700">5,700+</div>
               <div className="text-sm text-gray-600">등록 기관</div>
+              <div className="text-[11px] text-gray-400 mt-0.5">자람이(연계·등록)</div>
             </div>
             <div className="bg-gray-50 rounded-xl p-4 text-center">
               <div className="text-2xl font-bold text-primary-700">22,000+</div>
-              <div className="text-sm text-gray-600">돌봄사업자</div>
+              <div className="text-sm text-gray-600">등록 사업자</div>
+              <div className="text-[11px] text-gray-400 mt-0.5">시니어앤라이프(연계·등록)</div>
             </div>
             <div className="bg-gray-50 rounded-xl p-4 text-center">
               <div className="text-2xl font-bold text-primary-700">6</div>
               <div className="text-sm text-gray-600">핵심 도메인</div>
             </div>
             <div className="bg-gray-50 rounded-xl p-4 text-center">
-              <div className="text-2xl font-bold text-primary-700">실증·선도</div>
-              <div className="text-sm text-gray-600">현장 검증 기반</div>
+              <div className="text-2xl font-bold text-primary-700">표준·시범</div>
+              <div className="text-sm text-gray-600">정책 정합·파일럿</div>
             </div>
           </div>
+          <p className="text-sm text-gray-500 mt-6 max-w-3xl">
+            5,700+·22,000+는 공공·연계 등으로 플랫폼에 등록된 기관·사업자 규모이며, 전원의 일상적 제품 사용을 뜻하지 않습니다.
+          </p>
         </div>
       </section>
 
@@ -84,7 +90,9 @@ export default function PublicPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {policyAreas.map((area, i) => (
               <div key={i} className="bg-white rounded-xl p-6 shadow-sm">
-                <div className="text-3xl mb-3">{area.icon}</div>
+                <div className="mb-3 flex text-primary-600">
+                  <MarketingIcon name={area.icon} className="h-9 w-9" />
+                </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{area.title}</h3>
                 <p className="text-gray-600">{area.desc}</p>
               </div>
@@ -125,7 +133,7 @@ export default function PublicPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-white rounded-xl p-6">
               <h3 className="text-lg font-bold text-gray-900 mb-3">발달장애 시범사업</h3>
-              <p className="text-gray-600">2026년 정부 국가 시범사업 추진. 전국 5,700개 기관 기반.</p>
+              <p className="text-gray-600">2026년 정부 국가 시범사업 추진. 연계·등록으로 확보한 약 5,700개 기관 풀을 바탕으로 시범·확산을 논의합니다.</p>
             </div>
             <div className="bg-white rounded-xl p-6">
               <h3 className="text-lg font-bold text-gray-900 mb-3">고령화·돌봄 디지털화</h3>
@@ -133,7 +141,7 @@ export default function PublicPage() {
             </div>
             <div className="bg-white rounded-xl p-6">
               <h3 className="text-lg font-bold text-gray-900 mb-3">개별화교육</h3>
-              <p className="text-gray-600">2026 개별화교육 전환 대응, 특수학급 파일럿 검증 완료.</p>
+              <p className="text-gray-600">2026 개별화교육 전환 대응, 특수학급 등 파일럿·교육청 협력을 확대하는 단계입니다.</p>
             </div>
             <div className="bg-white rounded-xl p-6">
               <h3 className="text-lg font-bold text-gray-900 mb-3">RWE·임상 연구</h3>

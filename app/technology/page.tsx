@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import Link from 'next/link'
+import { MarketingIcon, type MarketingIconName } from '../../components/MarketingIcon'
 
 export const metadata: Metadata = {
   title: '핵심 기술 - AI디지털케어로그 플랫폼 구조 | 드림에이아이랩',
@@ -12,52 +13,62 @@ export const metadata: Metadata = {
 }
 
 export default function Technology() {
-  const problems = [
+  const problems: {
+    icon: MarketingIconName
+    title: string
+    desc: string
+    impact: string
+  }[] = [
     {
-      icon: '📊',
+      icon: 'chart',
       title: '데이터 분산·비표준화',
       desc: '가정·현장·기관·앱·디바이스 등 출처마다 형식이 달라 연결과 통합 분석이 어렵습니다.',
-      impact: '조직/도메인 전체 관점의 분석과 재현성이 떨어집니다'
+      impact: '조직/도메인 전체 관점의 분석과 재현성이 떨어집니다',
     },
     {
-      icon: '🔗',
+      icon: 'link',
       title: '연속성 없는 기록',
       desc: '사람·사건·기간을 잇는 타임라인/에피소드 모델이 없어 역할·조직 간 인수인계에서 맥락이 끊깁니다.',
-      impact: '적시 개입과 책임/성과 추적이 어려워집니다'
+      impact: '적시 개입과 책임/성과 추적이 어려워집니다',
     },
     {
-      icon: '🧠',
+      icon: 'brain',
       title: '개인화의 한계',
       desc: '일괄 지침·커리큘럼·워크플로우로는 개인/상황별 반응을 충분히 반영하기 어렵습니다.',
-      impact: '성과 편차가 커지고, 불필요 개입·부작용·비효율이 늘어납니다'
+      impact: '성과 편차가 커지고, 불필요 개입·부작용·비효율이 늘어납니다',
     },
     {
-      icon: '📈',
+      icon: 'trend',
       title: '현장 검증 데이터 부족',
       desc: '소표본·단기 파일럿·실험실 중심 데이터에 의존하여 장기·대규모의 실제 효과를 반영하기 어렵습니다.',
-      impact: '의사결정의 편향과 불확실성이 커지고, 혁신 속도가 느려집니다'
-    }
+      impact: '의사결정의 편향과 불확실성이 커지고, 혁신 속도가 느려집니다',
+    },
   ]
 
-  const solutions = [
+  const solutions: {
+    icon: MarketingIconName
+    title: string
+    desc: string
+    benefit: string
+  }[] = [
     {
-      icon: '🧱',
+      icon: 'blocks',
       title: '표준 스키마 & 데이터 통합',
       desc: '발생 위치와 형태가 제각각인 의료·교육·돌봄 데이터를 공통 스키마로 구조화하여 연결합니다.',
-      benefit: '데이터 호환성 강화 및 장기적 추적 가능'
+      benefit: '데이터 호환성 강화 및 장기적 추적 가능',
     },
     {
-      icon: '🧩',
+      icon: 'puzzle',
       title: '멀티모달 AI 분석',
       desc: '텍스트·시계열·영상·센서 데이터를 결합해 개인 상태와 집단 패턴을 동시에 분석합니다.',
-      benefit: '정확한 개인 맞춤 해석과 새로운 집단적 발견'
+      benefit: '정확한 개인 맞춤 해석과 새로운 집단적 발견',
     },
     {
-      icon: '⚡',
+      icon: 'bolt',
       title: '권고·매칭·실행 엔진',
       desc: 'AI 분석 결과를 바탕으로 치료·교육·생활 관리 실행안을 제시하고 전문가와 기관을 매칭합니다.',
-      benefit: '실제 실행으로 이어지는 AI 기반 맞춤 지원'
-    }
+      benefit: '실제 실행으로 이어지는 AI 기반 맞춤 지원',
+    },
   ]
 
   const architecture = [
@@ -275,17 +286,23 @@ export default function Technology() {
             <div className="text-sm text-gray-600 font-medium">도메인 확장</div>
           </div>
           <div className="flex flex-wrap justify-center gap-3">
-            {[
-              { name: '발달장애', icon: '🌱', href: '/services/jarame' },
-              { name: '시니어', icon: '👴', href: '/services/senior' },
-              { name: '의료', icon: '🏥', href: '/services/healthcare' },
-              { name: '교육', icon: '🎓', href: '/services/educarelog' },
-              { name: '글로벌패밀리', icon: '💕', href: '/services/marriage' },
-              { name: '라이프스타일', icon: '🌿', href: '/services/veggie' },
-              { name: '노아AI 이전안내', icon: '📈', href: '/services/finance' },
-            ].map((d, i) => (
-              <Link key={i} href={d.href} className="inline-flex items-center gap-2 bg-white rounded-lg px-4 py-2 shadow-sm hover:shadow-md border border-gray-100 transition-shadow">
-                <span>{d.icon}</span>
+            {(
+              [
+                { name: '발달장애', icon: 'sprout', href: '/services/jarame' },
+                { name: '시니어', icon: 'user', href: '/services/senior' },
+                { name: '의료', icon: 'hospital', href: '/services/healthcare' },
+                { name: '교육', icon: 'graduation', href: '/services/educarelog' },
+                { name: '글로벌패밀리', icon: 'heart', href: '/services/marriage' },
+                { name: '라이프스타일', icon: 'leaf', href: '/services/veggie' },
+                { name: '노아AI 이전안내', icon: 'trend', href: '/services/finance' },
+              ] satisfies { name: string; icon: MarketingIconName; href: string }[]
+            ).map((d, i) => (
+              <Link
+                key={i}
+                href={d.href}
+                className="inline-flex items-center gap-2 bg-white rounded-lg px-4 py-2 shadow-sm hover:shadow-md border border-gray-100 transition-shadow"
+              >
+                <MarketingIcon name={d.icon} className="h-5 w-5 shrink-0 text-primary-600" />
                 <span className="font-medium text-gray-700">{d.name}</span>
               </Link>
             ))}
@@ -310,7 +327,9 @@ export default function Technology() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {solutions.map((solution, index) => (
               <div key={index} className="bg-gray-50 rounded-lg border border-gray-200 p-6">
-                <div className="text-4xl mb-4">{solution.icon}</div>
+                <div className="mb-4 flex justify-center text-primary-600">
+                  <MarketingIcon name={solution.icon} className="h-10 w-10" />
+                </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{solution.title}</h3>
                 <p className="text-gray-600 mb-4 text-sm">{solution.desc}</p>
                 <div className="bg-primary-50 border-l-4 border-primary-400 p-3 rounded-r">
@@ -335,7 +354,9 @@ export default function Technology() {
             {problems.map((problem, index) => (
               <div key={index} className="bg-white rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-200">
                 <div className="p-6">
-                  <div className="text-4xl mb-4">{problem.icon}</div>
+                  <div className="mb-4 flex justify-center text-primary-600">
+                    <MarketingIcon name={problem.icon} className="h-10 w-10" />
+                  </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{problem.title}</h3>
                   <p className="text-gray-600 mb-4 text-sm">{problem.desc}</p>
                   <div className="bg-red-50 border-l-4 border-red-400 p-3 rounded-r">

@@ -776,6 +776,17 @@ export default function VeggieService() {
             베지케어는 DAL 생태계 안에서 식습관·영양·웰니스 데이터를 담당하는 축입니다. 의료, 시니어, 발달, 교육의 케어로그와
             연결될 때 생활 데이터의 의미가 더 커집니다.
           </p>
+          <div className="max-w-3xl mx-auto mb-8 rounded-xl border border-emerald-200 bg-emerald-50/60 px-5 py-4 text-sm text-gray-800">
+            <p className="font-semibold text-gray-900 mb-2">토탈케어로그·항암·장기 회복과의 연결</p>
+            <p className="leading-relaxed">
+              <Link href="/services/healthcare" className="font-semibold text-emerald-900 underline-offset-2 hover:underline">
+                토탈케어로그
+              </Link>
+              에서 쌓인 복약·부작용·체중·에너지 맥락은(동의된 범위에서) 베지케어의 AI 레시피·주간 식단·챌린지·커뮤니티, 그리고
+              식재료·밀키트·정기배송 등 파트너 커머스로 이어져, 완치 판정·장기 생존을 위해 필요한 식사 실행을 덜 피곤하게 만드는
+              것을 지향합니다. 기능 범위는 베타·파트너십 단계에 맞추어 단계적으로 넓혀 갑니다.
+            </p>
+          </div>
           <div className="grid sm:grid-cols-2 gap-4">
             {ecosystem.map((item) => (
               <Link

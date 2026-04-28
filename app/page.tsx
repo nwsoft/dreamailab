@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: '드림에이아이랩 | AI디지털케어로그로 의료·돌봄·교육 혁신하는 DAL',
     description:
-    '드림에이아이랩(DAL)은 AI디지털케어로그 표준으로 케어 혁신을 선도하는 기술 기업입니다. 표준화된 데이터와 멀티모달 AI 분석으로 개인 맞춤 케어의 새로운 표준을 만들고, 의료 헬스케어부터 시니어 돌봄, 발달장애 치료, 국제결혼, 채식 라이프스타일 영역까지 혁신을 추진합니다.',
+      '드림에이아이랩(DAL)은 AI디지털케어로그 표준으로 케어 혁신을 지향하는 기술 기업입니다. 표준화된 데이터와 멀티모달 AI 분석으로 개인 맞춤 케어의 새로운 표준을 만들고, 의료 헬스케어부터 시니어 돌봄, 발달장애, 국제결혼, 라이프스타일 영역까지 같은 플랫폼 철학으로 확장합니다.',
     url: 'https://dreamailab.com',
     siteName: '드림에이아이랩',
     images: [{ url: '/og-image.png', width: 1200, height: 630, alt: '드림에이아이랩' }],
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: '드림에이아이랩 | AI디지털케어로그로 의료·돌봄·교육 혁신하는 DAL',
     description:
-      '드림에이아이랩(DAL)은 AI디지털케어로그 표준으로 케어 혁신을 선도하는 기술 기업입니다. 표준화된 데이터와 멀티모달 AI 분석으로 개인 맞춤 케어의 새로운 표준을 만들고, 의료 헬스케어부터 시니어 돌봄, 발달장애 치료, 국제결혼, 채식 라이프스타일 영역까지 혁신을 추진합니다.',
+      '드림에이아이랩(DAL)은 AI디지털케어로그 표준으로 케어 혁신을 지향하는 기술 기업입니다. 표준화된 데이터와 멀티모달 AI 분석으로 개인 맞춤 케어의 새로운 표준을 만들고, 의료 헬스케어부터 시니어 돌봄, 발달장애, 국제결혼, 라이프스타일 영역까지 같은 플랫폼 철학으로 확장합니다.',
     images: ['/og-image.png'],
   },
 }
@@ -36,7 +36,8 @@ export default function Home() {
     '@type': 'Organization',
     name: '드림에이아이랩',
     alternateName: 'Dream AI Lab',
-    description: '드림에이아이랩(DAL)은 AI디지털케어로그 표준으로 케어 혁신을 선도하는 기술 기업입니다. 표준화된 데이터와 멀티모달 AI 분석으로 개인 맞춤 케어의 새로운 표준을 만들고, 의료 헬스케어부터 시니어 돌봄, 발달장애 치료, 국제결혼, 채식 라이프스타일 영역까지 혁신을 추진합니다.',
+    description:
+      '드림에이아이랩(DAL)은 AI디지털케어로그 표준으로 케어 혁신을 지향하는 기술 기업입니다. 표준화된 데이터와 멀티모달 AI 분석으로 개인 맞춤 케어의 새로운 표준을 만들고, 의료 헬스케어부터 시니어 돌봄, 발달장애, 국제결혼, 라이프스타일 영역까지 같은 플랫폼 철학으로 확장합니다.',
     url: 'https://dreamailab.com',
     logo: 'https://dreamailab.com/logo.png',
     founder: {
@@ -127,10 +128,10 @@ export default function Home() {
     }
   }
 
-  // 시장 선점 지표 (비즈니스 페이지와 동기화)
+  // 등록·연계 규모 지표 (MAU·전면 상용과 별개 — 비즈니스 페이지와 동기화)
   const marketMetrics = [
     { value: '5,700+', label: '자람이 등록 기관' },
-    { value: '22,000+', label: '시니어앤라이프 돌봄사업자' },
+    { value: '22,000+', label: '시니어앤라이프 등록 사업자' },
     { value: '6', label: '핵심 도메인' },
     { value: '1', label: '통합 플랫폼' },
   ]
@@ -149,18 +150,25 @@ export default function Home() {
   const services = [
     {
       name: '자람이',
-      desc: '발달장애 가족·교사·치료사를 위한 AI디지털케어로그 기반 치료·학습 플랫폼입니다. 가정·센터·학교가 하나의 기록으로 연결되고, 맞춤 케어 플랜과 리포트를 제공합니다.',
+      desc: '발달장애 영역에서 기록이 끊기면 개입도 끊깁니다. 자람이는 가정·학교·센터·병원이 같은 AI디지털케어로그 위에서 서로 배우고, 아이와 가족이 현장과 함께 성장하도록 만든 DAL의 첫 번째 축입니다. 단순 치료 앱이 아니라, 사회적 포용과 골든타임을 지키는 케어 인프라를 지향합니다.',
       url: '/services/jarame',
       externalUrl: 'https://jarame.or.kr',
       color: 'from-blue-500 to-cyan-500',
       mark: 'JR',
-      features: ['AI 상담·코칭', '디지털 케어로그', '자가진단/평가(ADHD·ASD 등)', '맞춤형 교육·치료 플랜', '보호자·기관 연동', '센터·병원 매칭'],
+      features: [
+        '가정·학교·센터·병원 한 줄기 케어로그',
+        'AI 상담·권장안·일·주·월 리포트',
+        '자가진단·평가(M-CHAT·ASRS 등)와 다음 단계 안내',
+        '맞춤 교육·치료 플랜·기관 RBAC·학교 관리자 도구',
+        '홈티 매칭·센터·병원 연계',
+        '익명 집계로 정책·연구·현장 개선에 환류',
+      ],
       innovation:
-        '표준화된 케어 데이터와 멀티모달 AI로 개별 개입을 돕고, 가정·학교·센터·병원 협업과 감사 가능한 기록을 지향합니다.',
+        '취약계층이 정보와 지원에서 소외되지 않도록, 기록 표준과 AI로 가족·교사·치료사가 같은 언어로 개입하는 구조를 만드는 것이 우리가 이 일을 시작한 이유에 가깝습니다.',
     },
     {
       name: '시니어앤라이프',
-      desc: '시니어와 가족·요양보호사를 위한 AI디지털케어로그 기반 돌봄 플랫폼입니다. 수면·활동·복약 패턴을 분석해 이상 징후를 조기에 포착하고, 맞춤 케어 계획과 가족·기관 리포트를 제공합니다.',
+      desc: '시니어와 가족·요양보호사를 위한 AI디지털케어로그 기반 돌봄 플랫폼입니다. 수면·활동·복약 패턴을 분석해 이상 징후를 조기에 포착하고, 맞춤 케어 계획과 가족·기관 리포트를 제공합니다. 돌봄을 수행하는 이들의 정서·번아웃 예방과 심리 지원까지 같은 철학 아래 확장합니다.',
       url: '/services/senior',
       externalUrl: 'https://seniorandlife.com',
       color: 'from-green-500 to-emerald-500',
@@ -168,31 +176,31 @@ export default function Home() {
       features: [
         '수면·활동·복약 패턴 분석·위험 징후 조기 감지',
         '가족·요양보호사 동일 정보 기반 소통',
+        '케어기버·가족 정서·번아웃 완화(기록·리포트·가이드·연계 중심)',
         '개인 맞춤 케어 계획·AI 권고·리스크 인사이트',
         '재가·요양원·주간보호·요양병원·구인구직 연계',
-        '표준 행정 서식 연계·기록→보고 흐름',
-        '보호자 알림·리포트·기관 대시보드',
+        '표준 행정·알림·기관 대시보드',
       ],
       innovation:
-        'DAL AI디지털케어로그로 현장 기록을 표준화하고, 가족·기관·의료가 같은 맥락에서 실행을 이어가도록 설계합니다.',
+        'DAL은 시니어만이 아니라 돌봄을 실행하는 사람의 지속가능성도 케어의 일부로 봅니다. 기록 표준화와 가족·현장 연결이 그 출발점입니다.',
     },
     {
       name: '토탈케어로그(의료서비스)',
-      desc: '일상을 기록으로 바꾸고 AI가 분석·권고하며, 병원·약국·요양과 연계되는 흐름을 지향합니다. 항암 집중 관리 모드와 정신건강 맞춤 대화 챗봇 등 특수 상황 케어를 함께 다룹니다.',
+      desc: '개인 맞춤 AI 주치의형 코파일럿과 케어로그를 함께 두어, 건강기록·생활패턴·웨어러블 데이터를 통합 분석하고 식단·운동·수면·약·영양제 권고와 정신건강 대화, 항암 추적까지 한 흐름으로 지향합니다.',
       url: '/services/healthcare',
       externalUrl: 'https://totalcarelog.com',
       color: 'from-rose-500 to-pink-500',
       mark: 'TC',
       features: [
-        '일상 기록 → AI 분석 → 실행 제안',
+        'AI 주치의형 코파일럿(기록·권고·진료 준비 보조)',
+        '일상 기록 → AI 분석 → 실행·연계 제안',
+        'FHIR 등 표준 스키마·웨어러블·자가기록 통합 지향',
         '병원·약국·요양 연계(진료 보조 레이어)',
         '항암 집중 관리 모드·리포트',
-        '정신건강 맞춤 대화형 챗봇',
-        '웨어러블·자가기록·복약 루틴',
-        'RWE·실증 과제 연계 지향',
+        '정신건강 맞춤 대화형 챗봇·RWE·실증 연계 지향',
       ],
       innovation:
-        'EMR 대체가 아니라, 내원 전후를 잇는 케어로그와 요약으로 진료 준비·순응·생활 데이터를 한 줄기로 연결합니다.',
+        '디지털케어로그와 멀티모달 AI로 예방·치료·회복 전 주기를 돕고, 표준 데이터 위에서 의료진·환자·가족이 같은 그림을 보게 하는 것을 지향합니다.',
     },
     {
       name: '글로벌커플케어',
@@ -309,6 +317,9 @@ export default function Home() {
               </div>
             ))}
           </div>
+          <p className="text-center text-[11px] sm:text-xs text-gray-400 max-w-2xl mx-auto mt-5 leading-relaxed">
+            ※ 5,700+·22,000+는 DAU가 아니라 공공·연계 등으로 등록된 기관·사업자 규모(도입·협업 후보 풀)입니다.
+          </p>
         </div>
       </section>
 
@@ -371,18 +382,20 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Evidence Layer - 신뢰성·실사용 근거 */}
+      {/* 산업 단절 vs 플랫폼 지향 구조 (면책은 섹션 하단 각주로만) */}
       <section className="py-12 lg:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">실제 운영 근거</h2>
-            <p className="text-gray-600">현장 검증 기반 구조·실증 데이터 기반 운영을 보여줍니다.</p>
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">문제 인식과 플랫폼이 지향하는 구조</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto text-base">
+              돌봄·교육 현장에서 자주 보이는 단절과, AI디지털케어로그로 풀고자 하는 표준 구조를 나란히 정리했습니다.
+            </p>
           </div>
           {/* Before → After */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             <div className="bg-red-50 rounded-xl p-6 border border-red-100">
               <h3 className="font-bold text-gray-900 mb-4 flex items-center gap-2">
-                <span className="text-red-600">기존</span>
+                <span className="text-red-600">기존 산업·현장에서 흔한 단절</span>
               </h3>
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-start gap-2">
@@ -401,35 +414,38 @@ export default function Home() {
             </div>
             <div className="bg-green-50 rounded-xl p-6 border border-green-100">
               <h3 className="font-bold text-gray-900 mb-4 flex items-center gap-2">
-                <span className="text-green-600">DAL 플랫폼 적용 후</span>
+                <span className="text-green-600">DAL 플랫폼이 지향하는 구조</span>
               </h3>
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-start gap-2">
                   <span className="text-green-500">✓</span>
-                  데이터 기반 통합 관리, 가정·센터·병원 연결
+                  데이터 기반 통합 관리로 가정·센터·병원을 연결하는 표준 케어로그
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-green-500">✓</span>
-                  AI 기반 조기 대응, 위험 징후 선제 탐지
+                  AI 기반 조기 대응·위험 징후 선제 탐지를 목표로 한 분석·알림 설계
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-green-500">✓</span>
-                  표준화된 케어로그, 객관 지표·재현 가능한 기록 비중 확대
+                  표준화된 케어로그로 객관 지표·재현 가능한 기록 비중을 높이는 방향
                 </li>
               </ul>
             </div>
           </div>
+          <p className="text-center text-[11px] sm:text-xs text-gray-400 max-w-xl mx-auto mb-10 leading-relaxed">
+            ※ 등록·연계 규모는 도입 후보 풀을 뜻하며, 모든 기관이 동일 제품 스택을 전면 운영 중이거나 파일럿에 포함된다는 의미는 아닙니다.
+          </p>
           {/* 플랫폼 운영 지표 상세 */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="bg-gray-50 rounded-xl p-5 text-center">
               <div className="text-2xl font-bold text-primary-700">5,700+</div>
               <div className="text-sm text-gray-600 mt-1">등록 기관 수</div>
-              <div className="text-xs text-gray-500">자람이</div>
+              <div className="text-[11px] text-gray-400">자람이(연계·등록 기준)</div>
             </div>
             <div className="bg-gray-50 rounded-xl p-5 text-center">
               <div className="text-2xl font-bold text-primary-700">22,000+</div>
               <div className="text-sm text-gray-600 mt-1">등록 사업자 수</div>
-              <div className="text-xs text-gray-500">시니어앤라이프</div>
+              <div className="text-[11px] text-gray-400">시니어앤라이프(연계·등록 기준)</div>
             </div>
             <div className="bg-gray-50 rounded-xl p-5 text-center">
               <div className="text-2xl font-bold text-primary-700">6</div>
@@ -544,7 +560,9 @@ export default function Home() {
               </div>
               <div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">베지케어</h3>
-                <p className="text-gray-700">채식·플렉시테리안을 위한 AI 영양·레시피·식당 매칭. 케어로그로 건강 변화를 추적합니다.</p>
+                <p className="text-gray-700">
+                  식습관·영양을 AI디지털케어로그로 쌓고, AI 레시피·맛집·커뮤니티·파트너 커머스까지 실행으로 이어집니다. 토탈케어로그와 맞닿아 항암·만성질환 회복기의 식사·체력 관리 축을 함께 다루는 것을 지향합니다.
+                </p>
               </div>
             </div>
             <div className="flex gap-3 flex-shrink-0">
@@ -559,12 +577,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 뉴스: 고정 카드 대신 뉴스룸으로만 연결(날짜·제목 불일치 방지) */}
+      {/* 뉴스: 방문자용 안내(내부 운영 메모 성격의 문구는 사용하지 않음) */}
       <section className="py-16 lg:py-24 bg-white border-t border-gray-100">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">플랫폼 성장 소식</h2>
           <p className="text-gray-600 mb-8 leading-relaxed">
-            보도자료·기술 업데이트·정책 연계 소식은 날짜와 출처가 명확한 <strong>뉴스룸</strong>에서만 제공합니다. 메인 화면에는 요약 카드를 두지 않아, 과거 샘플 문구와 실제 게시물이 어긋나는 일을 막습니다.
+            DAL의 보도자료, 기술·서비스 업데이트, 현장 협력 이야기는 <strong>뉴스룸</strong>에서 확인하실 수 있습니다.
           </p>
           <Link
             href="/news"

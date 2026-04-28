@@ -161,6 +161,20 @@ export default function HealthcareService() {
               </span>
             </li>
           </ul>
+          <div className="mt-8 max-w-3xl mx-auto rounded-xl border border-teal-200 bg-white/90 px-5 py-4 text-left text-sm text-gray-700 shadow-sm">
+            <p className="text-xs font-semibold text-teal-800 mb-2">DAL 철학과 맞닿는 기술 축</p>
+            <ul className="space-y-2 list-disc pl-5 leading-relaxed">
+              <li>
+                <strong>AI 주치의형 코파일럿:</strong> 일상 케어로그를 읽고 진료 준비·복약·생활 습관 권고를{' '}
+                <strong>보조</strong>합니다. 진단·처방을 대체하지 않고, 사용자와 의료진이 같은 맥락에서 대화할 수 있게 하는 층을
+                지향합니다.
+              </li>
+              <li>
+                <strong>표준·연동:</strong> FHIR·HL7 등 표준 스키마와 웨어러블·자가기록을 같은 파이프라인에서 다루어, 병원·약국·요양과
+                끊기지 않는 흐름을 만드는 것을 목표로 합니다.
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
 
@@ -404,6 +418,28 @@ export default function HealthcareService() {
           </div>
 
           <p className="mt-8 text-center text-xs text-gray-500">본 시나리오는 사용자 교육 목적의 예시이며, 진단·치료는 의료전문가의 판단을 따릅니다.</p>
+        </div>
+      </section>
+
+      {/* 항암·회복기 식사 실행 — 베지케어와의 DAL 흐름 */}
+      <section className="py-14 lg:py-16 bg-emerald-50/80 border-y border-emerald-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center">항암·만성질환 케어와 식사 실행 — 베지케어와 한 줄기</h2>
+          <p className="text-gray-700 leading-relaxed mb-4 text-center sm:text-left">
+            진료와 복약만으로는 일상 식사·체력·선호가 비어 있기 쉽습니다. 토탈케어로그에서 쌓인 부작용·체중·영양·선호 맥락은 동의된 범위에서{' '}
+            <Link href="/services/veggie" className="font-semibold text-emerald-800 underline-offset-2 hover:underline">
+              베지케어
+            </Link>
+            의 AI 레시피·주간 식단·영양 코칭·커뮤니티·파트너 커머스로 이어져, 피로한 환자가 실제로 먹을 수 있는 실행으로 연결되는 것을 지향합니다. 장기 추적·생활 회복에는 식습관 데이터가 필수 축입니다.
+          </p>
+          <ul className="list-disc pl-5 text-sm text-gray-800 space-y-2 max-w-2xl mx-auto">
+            <li>항암·회복기 제한·선호를 반영한 레시피 생성과 주간 식단 루프</li>
+            <li>생성·실천한 레시피를 공유하는 커뮤니티로 사회적 지지</li>
+            <li>레시피·식재료를 마켓·정기배송 등과 연결해 구매까지 이어지는 파트너 구조(단계적 확장)</li>
+          </ul>
+          <p className="text-xs text-gray-500 mt-4 text-center">
+            구체 의료행위·상품 구매는 사용자 선택과 파트너 약관·동의 범위를 따릅니다.
+          </p>
         </div>
       </section>
 
