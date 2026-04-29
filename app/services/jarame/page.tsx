@@ -375,25 +375,30 @@ export default function JarameService() {
       
       {/* ① Hero — Badge, Headline, 서브 2문장만 (CTA는 Contact 섹션에만) */}
       <section className="bg-gradient-to-br from-blue-600 to-indigo-600 text-white py-16 md:py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="mb-6">
               <span className="inline-block px-4 py-2 bg-orange-100 text-orange-800 rounded-full text-sm font-semibold">
                 Service Status: Beta Testing (기관 베타 테스트·지속 업데이트 중)
               </span>
             </div>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-              발달 지원은 치료실에서만 시작되지 않습니다.
-              <br />
-              자람이는 흩어진 관찰과 훈련 반응을 기록으로 바꾸고,
-              <br />
-              가정·학교·센터·병원을 같은 인프라로 연결합니다.
+            {/* Hero: 문제 인식 -> 해결 구조 -> AI 근거 */}
+            <h1 className="font-bold leading-tight tracking-tight text-balance break-keep mb-5 max-w-3xl mx-auto">
+              <span className="block text-3xl sm:text-4xl lg:text-5xl mb-3">
+                발달장애 치료의 성패는 연결된 기록에서 갈립니다.
+              </span>
+              <span className="block text-xl sm:text-2xl lg:text-3xl font-semibold text-white/95 leading-snug mb-1.5">
+                자람이는 가정·학교·센터·병원에 흩어진 관찰과 훈련 반응을
+              </span>
+              <span className="block text-xl sm:text-2xl lg:text-3xl font-semibold text-white/95 leading-snug">
+                하나의 AI 디지털케어로그로 연결해 조기개입과 협업 정확도를 높입니다.
+              </span>
             </h1>
-            <p className="text-lg md:text-xl max-w-2xl mx-auto text-blue-100 mb-2">
-              가정·학교·센터·병원의 기록을 하나의 표준으로 통합하고, AI가 개인 맞춤형 치료·학습 계획을 제안합니다.
+            <p className="text-lg md:text-xl max-w-2xl mx-auto text-blue-100 mb-2 leading-relaxed break-keep">
+              기존에는 기관별 문서와 경험에 의존해 치료 맥락이 끊겼습니다. 자람이는 표준 기록과 AI 패턴 분석으로 다음 중재를 공통 기준으로 제안합니다.
             </p>
-            <p className="text-base max-w-2xl mx-auto text-white/90">
-              데이터 단절과 기관 간 협업 부재를 표준 데이터와 AI로 해결합니다.
+            <p className="text-base max-w-2xl mx-auto text-white/90 leading-relaxed break-keep">
+              지금까지 해결되지 않았던 데이터 단절·재입력·해석 차이를, 표준 케어로그와 실시간 분석 환류 구조로 줄이는 것이 자람이의 핵심입니다.
             </p>
           </div>
         </div>
@@ -432,10 +437,10 @@ export default function JarameService() {
             기록 표준화와 케어 실행 루프를 시각적으로 요약했습니다.
           </p>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            <div className="rounded-2xl overflow-hidden border border-primary-100 bg-white shadow-sm">
+            <div className="rounded-2xl overflow-hidden border border-blue-100 bg-white shadow-sm">
               <img src="/images/services/jarame-data-flow.svg" alt="자람이 데이터 흐름 구조도" className="w-full h-auto" />
             </div>
-            <div className="rounded-2xl overflow-hidden border border-secondary-100 bg-white shadow-sm">
+            <div className="rounded-2xl overflow-hidden border border-blue-100 bg-white shadow-sm">
               <img src="/images/services/jarame-care-loop.svg" alt="자람이 케어 루프 구조도" className="w-full h-auto" />
             </div>
           </div>
@@ -761,41 +766,41 @@ export default function JarameService() {
           <div className="bg-white rounded-2xl p-8 md:p-10 border border-gray-100 shadow-sm">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-3">
               <div className="relative">
-                <div className="bg-red-50 rounded-xl p-5 border-2 border-red-200 h-full">
+                <div className="bg-primary-50 rounded-xl p-5 border-2 border-primary-200 h-full">
                   <div className="text-2xl mb-2">1️⃣</div>
-                  <h4 className="font-bold text-red-900 mb-2 text-sm">STEP 1 — 의료 현실</h4>
+                  <h4 className="font-bold text-primary-900 mb-2 text-sm">STEP 1 — 의료 현실</h4>
                   <p className="text-xs text-gray-700">진료 시간 제한: 초진 20~30분, 재진 5~10분 안에 평가.</p>
                 </div>
                 <div className="hidden lg:block absolute top-1/2 -right-2 transform -translate-y-1/2 text-xl text-gray-300">→</div>
               </div>
               <div className="relative">
-                <div className="bg-amber-50 rounded-xl p-5 border-2 border-amber-200 h-full">
+                <div className="bg-primary-50 rounded-xl p-5 border-2 border-primary-200 h-full">
                   <div className="text-2xl mb-2">2️⃣</div>
-                  <h4 className="font-bold text-amber-900 mb-2 text-sm">STEP 2 — 데이터 문제</h4>
+                  <h4 className="font-bold text-primary-900 mb-2 text-sm">STEP 2 — 데이터 문제</h4>
                   <p className="text-xs text-gray-700">의사는 실제 생활 행동·학교·치료 반응을 진료실에서 직접 확인하기 어렵습니다.</p>
                 </div>
                 <div className="hidden lg:block absolute top-1/2 -right-2 transform -translate-y-1/2 text-xl text-gray-300">→</div>
               </div>
               <div className="relative">
-                <div className="bg-orange-50 rounded-xl p-5 border-2 border-orange-200 h-full">
+                <div className="bg-primary-50 rounded-xl p-5 border-2 border-primary-200 h-full">
                   <div className="text-2xl mb-2">3️⃣</div>
-                  <h4 className="font-bold text-orange-900 mb-2 text-sm">STEP 3 — 기존 방식</h4>
+                  <h4 className="font-bold text-primary-900 mb-2 text-sm">STEP 3 — 기존 방식</h4>
                   <p className="text-xs text-gray-700">부모 기억 의존. 발달 검사는 낯선 환경·짧은 시간이라 결과 변동 가능.</p>
                 </div>
                 <div className="hidden lg:block absolute top-1/2 -right-2 transform -translate-y-1/2 text-xl text-gray-300">→</div>
               </div>
               <div className="relative">
-                <div className="bg-blue-50 rounded-xl p-5 border-2 border-blue-200 h-full">
+                <div className="bg-primary-50 rounded-xl p-5 border-2 border-primary-200 h-full">
                   <div className="text-2xl mb-2">4️⃣</div>
-                  <h4 className="font-bold text-blue-900 mb-2 text-sm">STEP 4 — AI 케어로그 해결</h4>
+                  <h4 className="font-bold text-primary-900 mb-2 text-sm">STEP 4 — AI 케어로그 해결</h4>
                   <p className="text-xs text-gray-700">가정·학교·센터 데이터를 통합 기록(표준 스키마).</p>
                 </div>
                 <div className="hidden lg:block absolute top-1/2 -right-2 transform -translate-y-1/2 text-xl text-gray-300">→</div>
               </div>
               <div>
-                <div className="bg-green-50 rounded-xl p-5 border-2 border-green-200 h-full">
+                <div className="bg-primary-50 rounded-xl p-5 border-2 border-primary-200 h-full">
                   <div className="text-2xl mb-2">5️⃣</div>
-                  <h4 className="font-bold text-green-900 mb-2 text-sm">STEP 5 — 의료 판단 변화</h4>
+                  <h4 className="font-bold text-primary-900 mb-2 text-sm">STEP 5 — 의료 판단 변화</h4>
                   <p className="text-xs text-gray-700">장기 데이터(행동·약물 반응·치료 진행) 기반 진료 가능.</p>
                 </div>
               </div>
@@ -812,41 +817,41 @@ export default function JarameService() {
           <div className="bg-gray-50/50 rounded-2xl p-8 md:p-10 border border-gray-100">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-3">
               <div className="relative">
-                <div className="bg-blue-50 rounded-xl p-5 border-2 border-blue-200 h-full">
+                <div className="bg-primary-50 rounded-xl p-5 border-2 border-primary-200 h-full">
                   <div className="text-2xl mb-2">1️⃣</div>
-                  <h4 className="font-bold text-blue-900 mb-2 text-sm">STEP 1 — 가정 데이터</h4>
+                  <h4 className="font-bold text-primary-900 mb-2 text-sm">STEP 1 — 가정 데이터</h4>
                   <p className="text-xs text-gray-700">부모가 기록한 행동 변화, 감정 상태, 일상 패턴이 케어로그에 기록됩니다.</p>
                 </div>
                 <div className="hidden lg:block absolute top-1/2 -right-2 transform -translate-y-1/2 text-xl text-gray-300">→</div>
               </div>
               <div className="relative">
-                <div className="bg-cyan-50 rounded-xl p-5 border-2 border-cyan-200 h-full">
+                <div className="bg-primary-50 rounded-xl p-5 border-2 border-primary-200 h-full">
                   <div className="text-2xl mb-2">2️⃣</div>
-                  <h4 className="font-bold text-cyan-900 mb-2 text-sm">STEP 2 — 센터 치료 데이터</h4>
+                  <h4 className="font-bold text-primary-900 mb-2 text-sm">STEP 2 — 센터 치료 데이터</h4>
                   <p className="text-xs text-gray-700">치료 세션 기록과 중재 방법, 치료 반응이 구조화된 데이터로 저장됩니다.</p>
                 </div>
                 <div className="hidden lg:block absolute top-1/2 -right-2 transform -translate-y-1/2 text-xl text-gray-300">→</div>
               </div>
               <div className="relative">
-                <div className="bg-indigo-50 rounded-xl p-5 border-2 border-indigo-200 h-full">
+                <div className="bg-primary-50 rounded-xl p-5 border-2 border-primary-200 h-full">
                   <div className="text-2xl mb-2">3️⃣</div>
-                  <h4 className="font-bold text-indigo-900 mb-2 text-sm">STEP 3 — 학교 데이터</h4>
+                  <h4 className="font-bold text-primary-900 mb-2 text-sm">STEP 3 — 학교 데이터</h4>
                   <p className="text-xs text-gray-700">특수교사가 기록한 학습 참여도, 사회성 행동, IEP 진행 상황이 통합됩니다.</p>
                 </div>
                 <div className="hidden lg:block absolute top-1/2 -right-2 transform -translate-y-1/2 text-xl text-gray-300">→</div>
               </div>
               <div className="relative">
-                <div className="bg-amber-50 rounded-xl p-5 border-2 border-amber-200 h-full">
+                <div className="bg-primary-50 rounded-xl p-5 border-2 border-primary-200 h-full">
                   <div className="text-2xl mb-2">4️⃣</div>
-                  <h4 className="font-bold text-amber-900 mb-2 text-sm">STEP 4 — 의료 판단 지원</h4>
+                  <h4 className="font-bold text-primary-900 mb-2 text-sm">STEP 4 — 의료 판단 지원</h4>
                   <p className="text-xs text-gray-700">의사는 진료 시 수개월의 행동 데이터와 치료 반응을 함께 확인할 수 있습니다.</p>
                 </div>
                 <div className="hidden lg:block absolute top-1/2 -right-2 transform -translate-y-1/2 text-xl text-gray-300">→</div>
               </div>
               <div>
-                <div className="bg-green-50 rounded-xl p-5 border-2 border-green-200 h-full">
+                <div className="bg-primary-50 rounded-xl p-5 border-2 border-primary-200 h-full">
                   <div className="text-2xl mb-2">5️⃣</div>
-                  <h4 className="font-bold text-green-900 mb-2 text-sm">STEP 5 — 진료 방식 변화</h4>
+                  <h4 className="font-bold text-primary-900 mb-2 text-sm">STEP 5 — 진료 방식 변화</h4>
                   <p className="text-xs text-gray-700">단일 진료 관찰이 아니라 장기 데이터 기반 판단이 가능해집니다.</p>
                 </div>
               </div>
@@ -923,7 +928,7 @@ export default function JarameService() {
               {/* Step 4 */}
               <div>
                 <div className="bg-orange-50 rounded-xl p-6 border-2 border-orange-200">
-                  <div className="text-4xl mb-3 text-center">4️⃣</div>
+                  <div className="text-4xl mb-3 text-center">4</div>
                   <h4 className="font-bold text-orange-900 mb-2 text-center">실시간 환류</h4>
                   <p className="text-sm text-gray-700">
                     <strong>모든 관계자에게 알림</strong>
@@ -943,7 +948,7 @@ export default function JarameService() {
             {/* Case 1 */}
             <div className="bg-white rounded-2xl p-8 shadow-lg">
               <div className="flex items-start gap-4 mb-4">
-                <div className="text-5xl">👦</div>
+                <div className="text-primary-600"><MarketingIcon name="user" className="h-10 w-10" /></div>
                 <div>
                   <h4 className="text-xl font-bold text-gray-900">사례 1: 자폐스펙트럼 7세 남아</h4>
                   <p className="text-sm text-gray-500">2022년 11월 ~ 2023년 8월 (10개월)</p>
@@ -987,7 +992,7 @@ export default function JarameService() {
             {/* Case 2 */}
             <div className="bg-white rounded-2xl p-8 shadow-lg">
               <div className="flex items-start gap-4 mb-4">
-                <div className="text-5xl">👧</div>
+                <div className="text-primary-600"><MarketingIcon name="user" className="h-10 w-10" /></div>
                 <div>
                   <h4 className="text-xl font-bold text-gray-900">사례 2: ADHD 9세 여아</h4>
                   <p className="text-sm text-gray-500">2023년 3월 ~ 2023년 12월 (10개월)</p>
@@ -1822,7 +1827,7 @@ export default function JarameService() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             {/* Subsection 1: 약물 복용 패턴 분석 */}
             <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
-              <div className="text-3xl mb-3">💊</div>
+              <div className="mb-3 text-primary-600"><MarketingIcon name="pill" className="h-7 w-7" /></div>
               <h3 className="text-lg font-bold text-gray-900 mb-2">약물 복용 패턴 분석</h3>
               <p className="text-sm text-gray-700 mb-3">
                 자람이는 단순히 약 이름을 기록하지 않고, <strong>약물 기록을 행동·발달 데이터와 함께</strong> 연결해 봅니다.
@@ -1846,7 +1851,7 @@ export default function JarameService() {
 
             {/* Subsection 2: 체중 및 영양 변화 감지 */}
             <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
-              <div className="text-3xl mb-3">⚖️</div>
+              <div className="mb-3 text-primary-600"><MarketingIcon name="scale" className="h-7 w-7" /></div>
               <h3 className="text-lg font-bold text-gray-900 mb-2">체중 및 영양 변화 감지</h3>
               <p className="text-sm text-gray-700 mb-3">
                 발달장애 아동은 약물 부작용이나 행동 특성 때문에 <strong>체중·식습관 변화</strong>가 자주 나타납니다.
@@ -1876,7 +1881,7 @@ export default function JarameService() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             {/* Subsection 3: 행동 변화와 약물 반응 연결 */}
             <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
-              <div className="text-3xl mb-3">📈</div>
+              <div className="mb-3 text-primary-600"><MarketingIcon name="trend" className="h-7 w-7" /></div>
               <h3 className="text-lg font-bold text-gray-900 mb-2">행동 변화와 약물 반응 연결</h3>
               <p className="text-sm text-gray-700 mb-3">
                 자람이는 <strong>행동 로그와 약물 변경 이력</strong>을 연결해 봅니다.
@@ -1896,7 +1901,7 @@ export default function JarameService() {
 
             {/* Subsection 4: 확장되는 AI 건강관리 */}
             <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
-              <div className="text-3xl mb-3">🌐</div>
+              <div className="mb-3 text-primary-600"><MarketingIcon name="globe" className="h-7 w-7" /></div>
               <h3 className="text-lg font-bold text-gray-900 mb-2">확장되는 AI 건강관리</h3>
               <p className="text-sm text-gray-700 mb-3">
                 자람이의 건강관리 기능은 약물 모니터링을 넘어 <strong>점점 확장되는 구조</strong>입니다.
@@ -1920,22 +1925,22 @@ export default function JarameService() {
             <h3 className="text-lg font-bold text-gray-900 mb-4 text-center">이 기능으로 부모가 얻는 것</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
               <div className="bg-gray-50 rounded-xl p-4 text-center">
-                <span className="text-2xl block mb-2">⚠️</span>
+                <span className="mb-2 flex justify-center text-primary-600"><MarketingIcon name="shield" className="h-6 w-6" /></span>
                 <p className="text-sm font-medium text-gray-800">위험 조합 조기 인지</p>
                 <p className="text-xs text-gray-600 mt-1">약물·감기약 조합 위험을 AI가 짚어 줌</p>
               </div>
               <div className="bg-gray-50 rounded-xl p-4 text-center">
-                <span className="text-2xl block mb-2">📋</span>
+                <span className="mb-2 flex justify-center text-primary-600"><MarketingIcon name="document" className="h-6 w-6" /></span>
                 <p className="text-sm font-medium text-gray-800">복용·시간 가이드</p>
                 <p className="text-xs text-gray-600 mt-1">아침/점심/저녁 안전한 복용 순서 제안</p>
               </div>
               <div className="bg-gray-50 rounded-xl p-4 text-center">
-                <span className="text-2xl block mb-2">🩺</span>
+                <span className="mb-2 flex justify-center text-primary-600"><MarketingIcon name="stethoscope" className="h-6 w-6" /></span>
                 <p className="text-sm font-medium text-gray-800">의료진 판단 지원</p>
                 <p className="text-xs text-gray-600 mt-1">상담 시 AI 요약을 전달해 판단 보조</p>
               </div>
               <div className="bg-gray-50 rounded-xl p-4 text-center">
-                <span className="text-2xl block mb-2">🛡️</span>
+                <span className="mb-2 flex justify-center text-primary-600"><MarketingIcon name="shield" className="h-6 w-6" /></span>
                 <p className="text-sm font-medium text-gray-800">불안 감소</p>
                 <p className="text-xs text-gray-600 mt-1">&ldquo;이렇게 먹여도 될까?&rdquo;에 대한 실질적 참고</p>
               </div>

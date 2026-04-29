@@ -31,23 +31,22 @@ const services = [
     status: '베타 테스트',
     mark: 'JR',
     domain: '발달장애',
-    summary:
-      '발달장애 영역에서 가장 끊기기 쉬운 가정·학교·치료 데이터를 하나로 잇는 발달 케어 인프라',
+    summary: '가정·학교·센터·병원에서 끊기기 쉬운 발달 관찰·치료 데이터를 하나의 흐름으로 잇는 케어 인프라',
     url: '/services/jarame',
     externalUrl: 'https://jarame.or.kr',
-    oneLiner: '치료·학습·행동 데이터를 같은 언어로 기록해 개입 품질을 높입니다.',
-    value: '기관 운영 효율 + 보호자 신뢰 + 장기 RWE 자산화',
+    oneLiner: '치료·학습·행동 기록을 같은 기준으로 연결해 개입 품질을 높입니다.',
+    value: '기관 운영 효율 + 보호자 신뢰 + 장기 실사용 데이터 축적',
   },
   {
     name: '시니어앤라이프',
     status: '베타 테스트',
     mark: 'SL',
     domain: '시니어·노인돌봄',
-    summary: '시니어 돌봄에서 흩어진 가족·요양·행정·생활 정보를 하나의 흐름으로 연결하는 돌봄 인프라',
+    summary: '재가·시설·병원·가족 사이에서 흩어지는 시니어 돌봄·생활·행정 정보를 하나의 흐름으로 잇는 케어 인프라',
     url: '/services/senior',
     externalUrl: 'https://seniorandlife.com',
-    oneLiner: '활동·복약·리스크 신호를 데이터로 연결해 선제 대응합니다.',
-    value: '고령화 구조적 수요 + 제도권 연계성 + 반복 사용성',
+    oneLiner: '활동·복약·위험 신호를 같은 기록 구조로 연결해 선제 대응을 돕습니다.',
+    value: '고령화 구조적 수요 + 제도권 연계 + 장기 실사용 데이터 축적',
   },
   {
     name: '토탈케어로그',
@@ -428,6 +427,7 @@ type ServiceItem = (typeof services)[number]
 
 function ServiceSummaryCard({ service }: { service: ServiceItem }) {
   const statusColor = service.status === '베타 테스트' ? 'bg-blue-100 text-blue-800' : 'bg-gray-100 text-gray-800'
+  const statusLabel = service.status === '베타 테스트' ? 'Service Status: Beta Testing' : service.status
 
   return (
     <div className="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100">
@@ -441,7 +441,7 @@ function ServiceSummaryCard({ service }: { service: ServiceItem }) {
             <p className="text-xs text-gray-500 mt-1">{service.domain}</p>
           </div>
         </div>
-        <span className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${statusColor}`}>{service.status}</span>
+        <span className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${statusColor}`}>{statusLabel}</span>
       </div>
 
       <p className="text-sm font-medium text-gray-800 mb-3 leading-relaxed">{service.summary}</p>
