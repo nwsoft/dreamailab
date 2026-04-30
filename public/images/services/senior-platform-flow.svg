@@ -1,0 +1,53 @@
+<svg width="1200" height="520" viewBox="0 0 1200 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ECFDF5"/>
+      <stop offset="1" stop-color="#F8FAFC"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10V0Z" fill="#059669"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="520" fill="url(#bg)"/>
+  <text x="600" y="56" text-anchor="middle" fill="#111827" font-size="30" font-family="Pretendard, Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-weight="700">&#49884;&#45768;&#50612;&#50528;&#46972;&#51060;&#54532; &#50868;&#50689; &#55120;&#47492;</text>
+  <text x="600" y="88" text-anchor="middle" fill="#4B5563" font-size="16" font-family="Pretendard, Apple SD Gothic Neo, Malgun Gothic, sans-serif">&#44160;&#49353;&#50640;&#49436; &#45149;&#45208;&#51648; &#50506;&#44256; &#44592;&#47197;&#183;&#48516;&#49437;&#183;&#54665;&#51221;&#44620;&#51648; &#50672;&#44208;&#46104;&#45716; &#54616;&#45208;&#51032; &#49884;&#49828;&#53596;</text>
+
+  <rect x="80" y="150" width="150" height="86" rx="14" fill="#FFFFFF" stroke="#A7F3D0" stroke-width="2"/>
+  <text x="155" y="182" text-anchor="middle" fill="#065F46" font-size="13" font-family="Pretendard, Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-weight="700">1</text>
+  <text x="155" y="210" text-anchor="middle" fill="#065F46" font-size="21" font-family="Pretendard, Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-weight="700">&#44160;&#49353;</text>
+
+  <rect x="255" y="150" width="150" height="86" rx="14" fill="#FFFFFF" stroke="#A7F3D0" stroke-width="2"/>
+  <text x="330" y="182" text-anchor="middle" fill="#065F46" font-size="13" font-family="Pretendard, Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-weight="700">2</text>
+  <text x="330" y="210" text-anchor="middle" fill="#065F46" font-size="21" font-family="Pretendard, Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-weight="700">&#48708;&#44368;</text>
+
+  <rect x="430" y="150" width="150" height="86" rx="14" fill="#FFFFFF" stroke="#A7F3D0" stroke-width="2"/>
+  <text x="505" y="182" text-anchor="middle" fill="#065F46" font-size="13" font-family="Pretendard, Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-weight="700">3</text>
+  <text x="505" y="210" text-anchor="middle" fill="#065F46" font-size="21" font-family="Pretendard, Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-weight="700">&#47588;&#52845;</text>
+
+  <rect x="605" y="150" width="170" height="86" rx="14" fill="#FFFFFF" stroke="#6EE7B7" stroke-width="2.4"/>
+  <text x="690" y="182" text-anchor="middle" fill="#065F46" font-size="13" font-family="Pretendard, Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-weight="700">4</text>
+  <text x="690" y="210" text-anchor="middle" fill="#065F46" font-size="21" font-family="Pretendard, Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-weight="700">&#46028;&#48392; &#44592;&#47197;</text>
+
+  <rect x="805" y="150" width="170" height="86" rx="14" fill="#FFFFFF" stroke="#6EE7B7" stroke-width="2.4"/>
+  <text x="890" y="182" text-anchor="middle" fill="#065F46" font-size="13" font-family="Pretendard, Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-weight="700">5</text>
+  <text x="890" y="210" text-anchor="middle" fill="#065F46" font-size="21" font-family="Pretendard, Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-weight="700">AI &#48516;&#49437;</text>
+
+  <rect x="1000" y="150" width="150" height="86" rx="14" fill="#FFFFFF" stroke="#A7F3D0" stroke-width="2"/>
+  <text x="1075" y="182" text-anchor="middle" fill="#065F46" font-size="13" font-family="Pretendard, Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-weight="700">6</text>
+  <text x="1075" y="210" text-anchor="middle" fill="#065F46" font-size="21" font-family="Pretendard, Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-weight="700">&#54665;&#51221; &#44288;&#47532;</text>
+
+  <line x1="230" y1="193" x2="255" y2="193" stroke="#059669" stroke-width="2.2" marker-end="url(#arr)"/>
+  <line x1="405" y1="193" x2="430" y2="193" stroke="#059669" stroke-width="2.2" marker-end="url(#arr)"/>
+  <line x1="580" y1="193" x2="605" y2="193" stroke="#059669" stroke-width="2.2" marker-end="url(#arr)"/>
+  <line x1="775" y1="193" x2="805" y2="193" stroke="#059669" stroke-width="2.2" marker-end="url(#arr)"/>
+  <line x1="975" y1="193" x2="1000" y2="193" stroke="#059669" stroke-width="2.2" marker-end="url(#arr)"/>
+
+  <rect x="235" y="300" width="730" height="120" rx="18" fill="#FFFFFF" stroke="#10B981" stroke-width="2.5"/>
+  <text x="600" y="344" text-anchor="middle" fill="#065F46" font-size="26" font-family="Pretendard, Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-weight="800">DAL AI &#46356;&#51648;&#53552;&#52992;&#50612;&#47196;&#44536; &#44592;&#48152; &#49436;&#48708;&#49828;</text>
+  <text x="600" y="378" text-anchor="middle" fill="#047857" font-size="17" font-family="Pretendard, Apple SD Gothic Neo, Malgun Gothic, sans-serif">&#54364;&#51456; &#44592;&#47197; &#183; &#45796;&#44592;&#44288; &#50672;&#44228; &#183; &#49892;&#49884;&#44036; &#54872;&#47448;</text>
+  <text x="600" y="404" text-anchor="middle" fill="#4B5563" font-size="14" font-family="Pretendard, Apple SD Gothic Neo, Malgun Gothic, sans-serif">&#44033; &#44592;&#45733;&#51008; &#48516;&#47532;&#46108; &#46020;&#44396;&#44032; &#50500;&#45768;&#46972; &#54616;&#45208;&#51032; &#45936;&#51060;&#53552; &#55120;&#47492;&#51004;&#47196; &#46041;&#51089;&#54633;&#45768;&#45796;</text>
+
+  <line x1="690" y1="236" x2="690" y2="300" stroke="#10B981" stroke-width="2.4" marker-end="url(#arr)"/>
+  <line x1="890" y1="236" x2="820" y2="300" stroke="#10B981" stroke-width="2.4" marker-end="url(#arr)"/>
+</svg>
