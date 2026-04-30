@@ -1434,7 +1434,7 @@ export default function JarameService() {
           <p className="text-center text-gray-600 text-sm mb-6 max-w-2xl mx-auto">자람이는 DAL의 1번 도메인이며, 동일 데이터 표준으로 교육·시니어·의료로 확장됩니다.</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-4">
             <div className="bg-blue-50 rounded-xl p-4 border border-blue-100"><h3 className="font-bold text-gray-900 mb-1">1. 자람이</h3><p className="text-gray-600">발달장애</p></div>
-            <div className="bg-cyan-50 rounded-xl p-4 border border-cyan-100"><h3 className="font-bold text-gray-900 mb-1">2. EduCareLog</h3><p className="text-gray-600">교육</p></div>
+            <div className="bg-cyan-50 rounded-xl p-4 border border-cyan-100"><h3 className="font-bold text-gray-900 mb-1">2. 에듀케어로그</h3><p className="text-gray-600">교육</p></div>
             <div className="bg-indigo-50 rounded-xl p-4 border border-indigo-100"><h3 className="font-bold text-gray-900 mb-1">3. 시니어·토탈케어</h3><p className="text-gray-600">의료·만성질환</p></div>
           </div>
           <p className="text-center text-gray-700 font-medium">하나의 케어 데이터 OS 전략</p>
@@ -2399,17 +2399,17 @@ export default function JarameService() {
             </div>
             <div className="flex items-center justify-center text-gray-400 shrink-0 text-xl min-h-[2rem] md:min-h-0" aria-hidden="true">→</div>
             <div className="bg-white rounded-xl p-6 border border-gray-100 hover:border-blue-200 transition-colors flex-1 min-w-0 text-center shadow-sm">
-              <h3 className="font-bold text-gray-900 mb-2">EduCareLog</h3>
+              <h3 className="font-bold text-gray-900 mb-2">에듀케어로그</h3>
               <p className="text-sm text-gray-600">교육 데이터 플랫폼</p>
             </div>
             <div className="flex items-center justify-center text-gray-400 shrink-0 text-xl min-h-[2rem] md:min-h-0" aria-hidden="true">→</div>
             <div className="bg-white rounded-xl p-6 border border-gray-100 hover:border-blue-200 transition-colors flex-1 min-w-0 text-center shadow-sm">
-              <h3 className="font-bold text-gray-900 mb-2">Senior Care</h3>
+              <h3 className="font-bold text-gray-900 mb-2">시니어 케어</h3>
               <p className="text-sm text-gray-600">시니어·만성질환 케어 데이터</p>
             </div>
             <div className="flex items-center justify-center text-gray-400 shrink-0 text-xl min-h-[2rem] md:min-h-0" aria-hidden="true">→</div>
             <div className="bg-white rounded-xl p-6 border border-gray-100 hover:border-blue-200 transition-colors flex-1 min-w-0 text-center shadow-sm">
-              <h3 className="font-bold text-gray-900 mb-2">TotalCareLog</h3>
+              <h3 className="font-bold text-gray-900 mb-2">토탈케어로그</h3>
               <p className="text-sm text-gray-600">전 생애 건강 데이터 플랫폼</p>
             </div>
           </div>
@@ -2419,7 +2419,7 @@ export default function JarameService() {
       {/* Contact — 3 CTA cards (제목 + 설명 + 버튼, 통일 스타일) */}
       <section className="py-14 bg-gradient-to-br from-blue-600 to-indigo-700 text-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold mb-2 text-center">Contact</h2>
+          <h2 className="text-2xl font-bold mb-2 text-center">문의</h2>
           <p className="text-center text-blue-100 text-sm mb-8">도입, 이용, 파트너십 문의</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/20 flex flex-col">

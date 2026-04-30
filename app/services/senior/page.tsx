@@ -649,7 +649,7 @@ export default function SeniorService() {
               DAL <strong>AI 디지털케어로그</strong> 기반 서비스로, 표준 기록·다기관 연계·실시간 환류를 지원합니다.
             </p>
             <p className="mt-4 text-center text-sm font-semibold text-emerald-800 max-w-2xl mx-auto leading-relaxed">
-              👉 이 6가지 기능은 각각의 기능이 아니라 <strong>하나의 흐름으로 연결된 시스템</strong>입니다.
+              이 6가지 기능은 각각의 기능이 아니라 <strong>하나의 흐름으로 연결된 시스템</strong>입니다.
             </p>
           </div>
           <div className="mt-6 bg-emerald-50/80 rounded-xl p-4 border border-emerald-100 max-w-3xl mx-auto">
@@ -1338,7 +1338,7 @@ export default function SeniorService() {
               <h3 className="font-bold text-gray-900 mb-2">현재 정책·공공 운영의 한계</h3>
               <ul className="space-y-1">
                 <li>• 현장 데이터 부족으로, 실제 서비스 질과 이용자 상태를 세밀하게 파악하기 어려움</li>
-                <li>• 기관 운영 데이터가 파편화되어 있어, 서비스 품질 평가와 비교가 어렵움</li>
+                <li>• 기관 운영 데이터가 파편화되어 있어, 서비스 품질 평가와 비교가 어려움</li>
                 <li>• 위험 상황(낙상, 급격한 체중 변화 등)을 조기에 감지·예방하기 어려움</li>
                 <li>• 민원·사후 조사 중심의 관리 구조가 반복됨</li>
               </ul>
