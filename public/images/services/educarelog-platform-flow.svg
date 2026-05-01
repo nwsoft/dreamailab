@@ -1,0 +1,37 @@
+<svg width="1100" height="400" viewBox="0 0 1100 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="edubg" x1="0" y1="0" x2="1100" y2="400" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EEF2FF"/>
+      <stop offset="1" stop-color="#F8FAFC"/>
+    </linearGradient>
+    <marker id="edar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10V0Z" fill="#4F46E5"/>
+    </marker>
+  </defs>
+  <rect width="1100" height="400" fill="url(#edubg)"/>
+  <text x="550" y="44" text-anchor="middle" fill="#0F172A" font-size="24" font-family="system-ui, sans-serif" font-weight="700">EduCareLog: five-step loop</text>
+  <text x="550" y="72" text-anchor="middle" fill="#475569" font-size="14" font-family="system-ui, sans-serif">Collect - Analyze - Path - Execute - Feedback</text>
+  <rect x="40" y="120" width="160" height="80" rx="12" fill="#FFFFFF" stroke="#A5B4FC" stroke-width="2"/>
+  <text x="120" y="155" text-anchor="middle" fill="#3730A3" font-size="12" font-family="system-ui, sans-serif" font-weight="700">1</text>
+  <text x="120" y="180" text-anchor="middle" fill="#312E81" font-size="15" font-family="system-ui, sans-serif" font-weight="700">Collect</text>
+  <rect x="230" y="120" width="160" height="80" rx="12" fill="#FFFFFF" stroke="#A5B4FC" stroke-width="2"/>
+  <text x="310" y="155" text-anchor="middle" fill="#3730A3" font-size="12" font-family="system-ui, sans-serif" font-weight="700">2</text>
+  <text x="310" y="180" text-anchor="middle" fill="#312E81" font-size="15" font-family="system-ui, sans-serif" font-weight="700">Analyze</text>
+  <rect x="420" y="120" width="160" height="80" rx="12" fill="#FFFFFF" stroke="#818CF8" stroke-width="2.2"/>
+  <text x="500" y="155" text-anchor="middle" fill="#3730A3" font-size="12" font-family="system-ui, sans-serif" font-weight="700">3</text>
+  <text x="500" y="180" text-anchor="middle" fill="#312E81" font-size="15" font-family="system-ui, sans-serif" font-weight="700">Path</text>
+  <rect x="610" y="120" width="160" height="80" rx="12" fill="#FFFFFF" stroke="#818CF8" stroke-width="2.2"/>
+  <text x="690" y="155" text-anchor="middle" fill="#3730A3" font-size="12" font-family="system-ui, sans-serif" font-weight="700">4</text>
+  <text x="690" y="180" text-anchor="middle" fill="#312E81" font-size="15" font-family="system-ui, sans-serif" font-weight="700">Execute</text>
+  <rect x="800" y="120" width="260" height="80" rx="12" fill="#FFFFFF" stroke="#A5B4FC" stroke-width="2"/>
+  <text x="930" y="155" text-anchor="middle" fill="#3730A3" font-size="12" font-family="system-ui, sans-serif" font-weight="700">5</text>
+  <text x="930" y="180" text-anchor="middle" fill="#312E81" font-size="15" font-family="system-ui, sans-serif" font-weight="700">Feedback</text>
+  <line x1="200" y1="160" x2="230" y2="160" stroke="#4F46E5" stroke-width="2" marker-end="url(#edar)"/>
+  <line x1="390" y1="160" x2="420" y2="160" stroke="#4F46E5" stroke-width="2" marker-end="url(#edar)"/>
+  <line x1="580" y1="160" x2="610" y2="160" stroke="#4F46E5" stroke-width="2" marker-end="url(#edar)"/>
+  <line x1="770" y1="160" x2="800" y2="160" stroke="#4F46E5" stroke-width="2" marker-end="url(#edar)"/>
+  <text x="550" y="238" text-anchor="middle" fill="#4338CA" font-size="13" font-family="system-ui, sans-serif">Feedback re-enters as new log rows.</text>
+  <rect x="100" y="268" width="900" height="88" rx="14" fill="#FFFFFF" stroke="#4F46E5" stroke-width="2"/>
+  <text x="550" y="308" text-anchor="middle" fill="#312E81" font-size="17" font-family="system-ui, sans-serif" font-weight="700">DAL: AI digital care log (education axis)</text>
+  <text x="550" y="334" text-anchor="middle" fill="#64748B" font-size="13" font-family="system-ui, sans-serif">One schema: home, academy, school, agency (with consent)</text>
+</svg>
