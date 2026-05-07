@@ -7,7 +7,7 @@ import { MarketingIcon, type MarketingIconName } from '../../../components/Marke
 export const metadata: Metadata = {
   title: '에듀케어로그(EduCareLog) – 학습 데이터 기반 개별화 교육 인프라 | 드림에이아이랩',
   description:
-    '학생 한 명의 학습 상태를 데이터로 이어 실행까지 연결하는 로그 기반 인프라. 학교·학원·교육청·에듀테크 파트너십.',
+    '같은 수업이라도 학생마다 속도와 막히는 지점은 다릅니다. 에듀케어로그는 학생별 수준·반응을 기록하고 AI가 맞춤 학습 경로를 이어 주는 교육 개인화 인프라(DAL 교육 축)입니다.',
   keywords: [
     '에듀케어로그',
     'EduCareLog',
@@ -21,7 +21,8 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: '에듀케어로그(EduCareLog) – 학습 데이터 기반 개별화 교육 인프라',
-    description: '로그 기반 실행 자동화. 학교·학원·지자체가 임베드하는 교육 엔진.',
+    description:
+      '학생별 맞춤 학습 경로와 실행·환류를 도와 주는 교육 개인화 인프라. 드림에이아이랩 AI 디지털케어로그 교육 축.',
     url: 'https://dreamailab.com/services/educarelog',
     siteName: 'Dream AI Lab',
     type: 'website',
@@ -29,7 +30,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: '에듀케어로그(EduCareLog) – 개별화 교육 인프라',
-    description: '학습 데이터 표준 → 경로·실행·환류까지 한 흐름.',
+    description:
+      '학생별 수준 추적·맞춤 경로. 에듀케어로그 — 교육 개인화 인프라. 본문에서 구조·도입.',
   },
   alternates: {
     canonical: 'https://dreamailab.com/services/educarelog',
@@ -50,7 +52,7 @@ export default function EduCareLogService() {
     category: 'Education',
     areaServed: 'KR',
     description:
-      '학습·행동 로그 표준화, 수준·오개념 진단, 개인화 경로 및 퀴즈·루틴·리포트 실행 자동화를 제공하는 교육 인프라 엔진.',
+      '에듀케어로그: 도입된 학습 활동 안에서 학생별 반응을 표준 학습 로그로 쌓고, 분석·맞춤 경로·퀴즈·루틴·안내·환류까지 한 학생 단위로 이어 주는 교육 개인화 인프라(DAL 교육 축). 공교·사교·가정 데이터를 서로 합치는 플랫폼이 아닙니다.',
     offers: {
       '@type': 'Offer',
       category: 'B2B/B2G 파트너십',
@@ -145,8 +147,9 @@ export default function EduCareLogService() {
   const coreFeatures: { icon: MarketingIconName; title: string; result: string }[] = [
     {
       icon: 'blocks',
-      title: '통합 학습 기록',
-      result: '학교·학원·집 반응이 한 타임라인에 모이면, "우리 아이 상태"가 말이 아니라 데이터가 됩니다.',
+      title: '학생별 학습 기록',
+      result:
+        '도입된 활동(과제·수업 반응 등)이 같은 형식으로 쌓이면, 한 학생의 막힘·속도가 말이 아니라 기록으로 남습니다.',
     },
     {
       icon: 'target',
@@ -186,8 +189,8 @@ export default function EduCareLogService() {
     },
     {
       who: '학교·교육청·지자체·연구',
-      pain: '정책은 개별화인데, 현장 데이터는 과제·플랫폼별로 조각남.',
-      gain: '같은 형식으로 쌓인 통합 학습 로그 위에서 기초학력·프로그램 효과를 비교·감시할 수 있는 층을 둡니다.',
+      pain: '정책은 개별화인데, 학급·프로그램 안에서 학생별 반응이 표준 형식으로 남기 어렵다.',
+      gain: '학교·사업 단위로 같은 형식의 로그를 쌓으면 기초학력 개입과 프로그램 효과를 근거로 설명하기 쉬워집니다.',
       icon: 'globe',
     },
   ]
@@ -201,8 +204,8 @@ export default function EduCareLogService() {
       tag: '표준 스키마',
       icon: 'blocks',
       why: [
-        '의료의 FHIR처럼, 교육에도 표준 스키마가 필요합니다. 기관이 바뀌어도 같은 학생 맥락을 이어야 공교·사교·가정이 한 명을 공유합니다. 환경마다 데이터 구조가 달라, 실제 적용의 표준화는 단계적으로 진행됩니다.',
-        '실제 적용에서는 다양한 데이터를 같은 기준으로 정리해 쌓는 과정에서 단계적으로 스키마가 맞춰집니다.',
+        '학습 반응을 같은 필드로 남겨야 수준·오개념·경로 생성이 가능합니다. 에듀케어로그는 공교와 사교 데이터를 하나로 합치는 게 아니라, 각 도입 맥락 안에서 학생별 로그를 같은 구조로 돌리기 위해 표준 형식을 둡니다.',
+        '실제 적용에서는 환경마다 데이터 소스가 달라, 같은 기준으로 정리해 쌓는 과정에서 단계적으로 맞춰 갑니다.',
       ],
     },
     {
@@ -218,13 +221,13 @@ export default function EduCareLogService() {
   ]
 
   const whyNow = [
-    '기초학력 보장·개별화 교육은 이미 정책 방향입니다. 다만 실행은 영상·교재를 더하는 일이 아니라, 데이터를 한 학생 맥락으로 묶는 일로 이어져야 합니다.',
-    '교육청·학교는 동의·표준·분석에 맞춰 로그 기반으로 전환해야 합니다. 연결 없이 쌓인 기록은 비교·개입 설계에 쓰이지 못합니다.',
+    '기초학력 보장·개별화 교육은 이미 정책 방향입니다. 다만 실행은 영상·교재를 더하는 일이 아니라, 학생별로 어디서 멈췄는지가 기록되고 그다음 활동까지 이어져야 합니다.',
+    '교육청·학교는 동의·표준에 맞춰 학급·프로그램 안에서 학생별 로그가 쌓이도록 전환해야 합니다. 점수만 남고 반응이 안 남으면 개입 설계가 어렵습니다.',
   ]
 
   const ecosystem: { name: string; focus: string; role: string; href?: string; icon: MarketingIconName }[] = [
     { name: '자람이', focus: '발달·행동·치료 맥락 데이터', role: '케어로그 검증 1축', href: '/services/jarame', icon: 'sprout' },
-    { name: '에듀케어로그', focus: '학습·수업 반응 데이터', role: '교육 도메인 엔진', icon: 'graduation' },
+    { name: '에듀케어로그', focus: '학생별 수준·경로·환류', role: '교육 개인화 엔진', icon: 'graduation' },
     { name: '시니어앤라이프', focus: '돌봄·생활 데이터', role: '시니어 인프라', href: '/services/senior', icon: 'heart' },
     { name: '토탈케어로그', focus: '의료·건강 통합', role: '헬스케어 축', href: '/services/healthcare', icon: 'stethoscope' },
   ]
@@ -240,7 +243,7 @@ export default function EduCareLogService() {
     {
       metric: '학생 개입 속도',
       before: '약점을 알아도 다음 활동 배정까지 하루·수일 걸림.',
-      after: '같은 로그에서 퀴즈·루틴·복습 순서가 바로 붙습니다. 헛돌 시간이 줄어듭니다.',
+      after: '한 학생 기준으로 퀴즈·루틴·복습 순서가 같은 흐름에서 바로 붙습니다. 헛돌 시간이 줄어듭니다.',
       icon: 'bolt',
     },
     {
@@ -264,103 +267,135 @@ export default function EduCareLogService() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
 
-      {/* 1. Hero — 자람이/헬스케어와 동일: 배지 + 계층 제목 + 이유 2문장 + 스크롤 유도 */}
-      <section className="bg-gradient-to-br from-blue-600 to-indigo-700 text-white py-16 md:py-20">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="mb-6">
-            <span className="inline-block px-4 py-2 bg-white/10 border border-white/25 text-white rounded-full text-sm font-semibold">
-              서비스 상태: 개발·고도화 중 · AI 디지털케어로그 교육 응용
-            </span>
-          </div>
-          <h1 className="font-bold leading-tight tracking-tight text-balance break-keep mb-5 max-w-3xl mx-auto">
-            <span className="block text-3xl sm:text-4xl lg:text-5xl mb-3">학습은 교실에서만 완성되지 않습니다.</span>
-            <span className="block text-xl sm:text-2xl lg:text-3xl font-semibold text-white/95 leading-snug mb-1.5">
-              에듀케어로그는 흩어진 학습 반응을 기록으로 바꾸고,
-            </span>
-            <span className="block text-xl sm:text-2xl lg:text-3xl font-semibold text-white/95 leading-snug">
-              가정·학원·학교·공공까지 같은 인프라로 연결합니다.
-            </span>
-          </h1>
-          <p className="text-lg md:text-xl max-w-2xl mx-auto text-blue-100 mb-2 leading-relaxed break-keep">
-            과제·수업·진단이 한 학생 맥락으로 잇히지 않으면 개인화는 열리지 않습니다. 통합 학습 로그와 실행 루프로 다음 행동까지 같은 줄기에 둡니다.
-          </p>
-          <p className="text-base max-w-2xl mx-auto text-white/90 leading-relaxed break-keep mb-6">
-            아래에서는 막힘의 원인, 플랫폼 다섯 단계, 역할별 화면, 기술·비전·도입 순서를 차례로 정리합니다.
-          </p>
-          <div className="flex flex-wrap justify-center gap-2 text-xs">
-            <span className="bg-white/15 border border-white/20 px-3 py-1.5 rounded-full">부모 · 교사 · 학원 · 교육청</span>
-            <span className="bg-white/15 border border-white/20 px-3 py-1.5 rounded-full">통합 학습 로그</span>
-            <span className="bg-white/15 border border-white/20 px-3 py-1.5 rounded-full">임베드형 엔진</span>
-            <span className="bg-white/15 border border-white/20 px-3 py-1.5 rounded-full">API 연동</span>
-          </div>
-        </div>
-      </section>
-
-      {/* 1b. Hero 직후 — 한 줄기·용어와 문제 정의 연결 */}
-      <section className="py-10 bg-white border-b border-gray-100">
+      {/* 1. Hero — 수업·개인 차 → 학생 맞춤 인프라 (기관 간 ‘연결’이 아님) */}
+      <section className="bg-gradient-to-br from-blue-600 to-indigo-700 text-white py-14 md:py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="rounded-2xl border border-indigo-100 bg-indigo-50/50 px-6 py-5 text-center space-y-3">
-            <p className="text-gray-900 font-medium text-sm md:text-base leading-relaxed">
-              <strong>흩어진 학습 반응</strong>이 <strong>같은 형식의 통합 학습 로그</strong>로 모이고, AI가 분석·경로·실행 초안까지 이어{' '}
-              <strong>가정·학원·학교</strong>가 같은 눈금을 보게 하는 축입니다. 브랜드·운영 명칭은 <strong>에듀케어로그</strong>
-              (DAL 플랫폼의 <strong>교육 축</strong>)입니다.
+          <div className="text-center">
+            <p className="text-xs text-white/80 mb-5">개발·고도화 중 · Dream AI Lab</p>
+            <h1 className="font-bold leading-tight tracking-tight text-balance break-keep mb-4 max-w-4xl mx-auto">
+              <span className="block text-2xl sm:text-4xl lg:text-5xl mb-2.5">
+                같은 수업을 들어도 모든 학생은 같은 속도로 이해하지 않습니다.
+              </span>
+              <span className="block text-lg sm:text-2xl lg:text-3xl font-semibold text-white/95 leading-snug mb-1">
+                에듀케어로그는 학생별 학습 수준과 막히는 지점을 기록하고,
+              </span>
+              <span className="block text-lg sm:text-2xl lg:text-3xl font-semibold text-white/95 leading-snug">
+                AI가 다음 학습 경로를 맞춤형으로 이어 주는 교육 개인화 인프라입니다.
+              </span>
+            </h1>
+            <p className="text-base md:text-lg max-w-2xl mx-auto text-blue-100 mb-2.5 leading-relaxed break-keep">
+              드림에이아이랩 <strong className="font-semibold text-white">AI 디지털케어로그</strong>의 교육 축입니다. 공교·사교·가정을 서로
+              잇는 플랫폼이 아니라, <strong className="text-white">도입된 맥락 안에서</strong> 학생 맞춤을 돕습니다.
             </p>
-            <p className="text-xs text-gray-600 max-w-2xl mx-auto leading-relaxed border-t border-indigo-100/80 pt-3">
-              <strong>통합 학습 로그</strong>는 과제·수업·진단 반응을 같은 스키마에 남기는 기록층, <strong>AI 디지털케어로그</strong>는 수집·표준화·분석·실행 안내를 담는
-              레이어, <strong>에듀케어로그</strong>는 이를 아우르는 서비스 이름입니다.
+            <p className="text-sm max-w-2xl mx-auto text-white/80 leading-relaxed">
+              문제 정의·루프·도입 시나리오는 아래에서 이어집니다.
             </p>
           </div>
         </div>
       </section>
 
-      {/* 1c. 구조 시각화 (자람이 Visual Overview 패턴) */}
-      <section className="py-12 bg-white border-b border-gray-100">
+      {/* 1b. Hero 보조 + 한 줄 정의 + 왜 지금 필요한가(압축) */}
+      <section className="py-7 md:py-10 bg-white border-b border-gray-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4 md:space-y-5">
+          <p className="text-center text-[13px] md:text-base font-medium text-gray-900 leading-relaxed break-keep">
+            기초에서 뒤처진 학생도, 빠르게 앞서는 학생도 같은 문제집으로는 설명되지 않습니다.
+          </p>
+
+          <div className="rounded-2xl border border-indigo-100 bg-indigo-50/50 px-4 md:px-6 py-4 md:py-5 text-center">
+            <p className="text-gray-900 font-semibold text-[13px] md:text-base leading-snug md:leading-relaxed break-keep">
+              에듀케어로그는 학생별 학습 수준, 오개념, 반복 정지 구간을 지속 기록하고 AI가 다음 학습 경로를 생성하는 교육 개인화 인프라입니다.
+            </p>
+          </div>
+
+          <div className="rounded-2xl border border-gray-200 bg-white px-4 md:px-6 py-4 md:py-5 text-[13px] md:text-sm text-gray-800 leading-relaxed space-y-2.5">
+            <p>
+              모든 학생은 같은 속도로 이해하지 않지만,
+              <br className="hidden md:block" />
+              현재 교육은 평균 학생 기준으로 운영됩니다.
+            </p>
+            <p>
+              기초에서 한 번 뒤처진 학생은 다음 단원을 따라가기 어려워지고,
+              <br className="hidden md:block" />
+              교사나 강사는 이를 매일 손으로 추적하기 어렵습니다.
+            </p>
+            <p className="font-medium text-gray-900">
+              결국 학생별 상태를 기록하고 다음 행동으로 이어주는 구조가 필요합니다.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 1c. 루프 시각화 — 한 학생 단위 수집→환류 (DAL 공통 루프) */}
+      <section className="py-10 md:py-12 bg-white border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">에듀케어로그 루프 한눈에 보기</h2>
-          <p className="text-center text-gray-600 text-sm mb-8 max-w-2xl mx-auto">
-            다섯 단계는 별도 기능이 아니라 한 루프입니다. 도표는 영문 레이블이며, 본문에서는 같은 순서로 한국어를 씁니다.
+          <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-2 text-center">에듀케어로그 루프 한눈에 보기</h2>
+          <p className="text-center text-gray-600 text-sm mb-6 md:mb-8 max-w-2xl mx-auto">
+            다섯 단계는 한 학생의 맞춤 루프입니다. 본문과 도표는 같은 순서·용어를 씁니다.
           </p>
           <div className="rounded-2xl overflow-hidden border border-indigo-100 bg-white shadow-sm max-w-5xl mx-auto">
             <img
               src="/images/services/educarelog-platform-flow.svg"
-              alt="에듀케어로그 플랫폼: 로그 수집, 분석, 개인화 경로, 실행(퀴즈·루틴·리포트), 환류의 다섯 단계 루프와 DAL 교육 축"
+              alt="에듀케어로그 플랫폼: 수집, 분석, 맞춤 경로, 실행, 환류의 다섯 단계 루프와 DAL 교육 축"
               className="w-full h-auto"
             />
           </div>
         </div>
       </section>
 
-      {/* 2. 문제 정의 */}
+      {/* 1d. 누가 어떻게 달라지는가 — 상단 압축 요약 */}
+      <section className="py-7 md:py-10 bg-gray-50 border-b border-gray-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-lg md:text-2xl font-bold text-gray-900 text-center mb-5 md:mb-6">누가 어떻게 달라지는가</h2>
+          <div className="grid sm:grid-cols-2 gap-3 md:gap-4 text-[13px] md:text-sm">
+            <div className="rounded-xl border border-gray-200 bg-white p-3 md:p-4">
+              <p className="font-semibold text-gray-900 mb-1">학생</p>
+              <p className="text-gray-700">막힌 개념이 개인별로 다르게 정리됩니다.</p>
+            </div>
+            <div className="rounded-xl border border-gray-200 bg-white p-3 md:p-4">
+              <p className="font-semibold text-gray-900 mb-1">보호자</p>
+              <p className="text-gray-700">아이의 학습 정지 지점을 이해할 수 있습니다.</p>
+            </div>
+            <div className="rounded-xl border border-gray-200 bg-white p-3 md:p-4">
+              <p className="font-semibold text-gray-900 mb-1">교사/강사</p>
+              <p className="text-gray-700">학생별 다음 과제가 자동 초안화됩니다.</p>
+            </div>
+            <div className="rounded-xl border border-gray-200 bg-white p-3 md:p-4">
+              <p className="font-semibold text-gray-900 mb-1">학교/학원</p>
+              <p className="text-gray-700">수준별 운영 패턴을 기록 기반으로 관리합니다.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 2. 문제 정의 — 상세 설명 구간 */}
       <section id="educ-problem" className="scroll-mt-28 py-14 bg-white border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-4">
-            교육이 개인화되지 못한 이유
+            왜 수업이 맞춤이 되지 않는가
           </h2>
           <p className="text-center text-gray-600 text-sm max-w-2xl mx-auto mb-6">
-            원인은 콘텐츠 부족이 아니라 기록 분절과 실행 단절입니다.
+            원인은 콘텐츠 부족이 아니라, <strong className="text-gray-800">학생마다 다른 속도·막힘</strong>을 수업이 평균에 맞춰 흐르는
+            점과, 그 차이를 지속 기록·실행하기 어려운 점입니다.
           </p>
           <div className="max-w-3xl mx-auto text-sm text-gray-800 space-y-3 mb-10 text-center md:text-left">
-            <p className="font-medium text-gray-900">
-              개인화는 실패한 적이 없습니다. 시스템이 개인화를 막아 온 것입니다.
-            </p>
-            <p>영상과 교재를 아무리 늘려도 학생 맥락이 한 줄로 이어지지 않으면 개인화는 열리지 않습니다.</p>
+            <p className="font-medium text-gray-900">한 반·한 교실·한 학원 반 안에도 이해도·오개념·반복이 필요한 지점은 제각각입니다.</p>
+            <p>그런데 수업·교재는 흔히 <strong className="text-gray-900">평균에 맞춘 일정</strong>으로 흘러, 뒤처지는 학생은 기초에서 누적 격차가 납니다.</p>
             <p>
-              원인은 콘텐츠가 아니라 <strong className="text-gray-900">기록 분절 + 실행 단절</strong>입니다.
+              콘텐츠를 늘려도 <strong className="text-gray-900">학생별로 어디서 멈췄는지</strong>가 기록·실행으로 이어지지 않으면 맞춤은 열리지
+              않습니다.
             </p>
-            <p>교실 한 칸·학원 한 반의 시간 한계 때문에 수작업 &quot;전원 개별&quot; 구조는 공공 현장에서 붕괴합니다.</p>
-            <p>그 공백은 사교육 쪽으로 이동합니다.</p>
+            <p>교사·강사는 전원에 대해 매일 퀴즈·루틴·피드백을 손으로 잇기엔 시간이 없습니다. 분석 뒤 실행이 끊기면 맞춤은 멈춥니다.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-4">
             <div className="bg-red-50 rounded-xl p-5 border border-red-100 flex gap-4">
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-white border border-red-100 text-red-800">
-                <MarketingIcon name="link" className="h-5 w-5" />
+                <MarketingIcon name="trend" className="h-5 w-5" />
               </div>
               <div className="min-w-0">
-                <h3 className="font-bold text-gray-900 text-sm mb-2">실패 1: 기록이 한 학생으로 합쳐지지 않음</h3>
+                <h3 className="font-bold text-gray-900 text-sm mb-2">한계 1: 개별 수준·막힘이 제대로 안 읽힘</h3>
                 <p className="text-sm text-gray-700">
-                  진단·과제·학원·가정의 기록이 한 줄기로 잇히지 않고 따로 놀면 연속 서사가 없습니다.
+                  점수만으로는 &quot;어느 개념에서 멈췄는지&quot;가 드러나지 않고, 맞춤에 쓸 입력이 부족해집니다.
                 </p>
-                <p className="text-sm text-gray-700 mt-2">개인화할 입력이 생기지 않습니다.</p>
               </div>
             </div>
             <div className="bg-red-50 rounded-xl p-5 border border-red-100 flex gap-4">
@@ -368,31 +403,30 @@ export default function EduCareLogService() {
                 <MarketingIcon name="bolt" className="h-5 w-5" />
               </div>
               <div className="min-w-0">
-                <h3 className="font-bold text-gray-900 text-sm mb-2">실패 2: 분석 뒤 실행이 사람 몫으로 남음</h3>
+                <h3 className="font-bold text-gray-900 text-sm mb-2">한계 2: 분석 뒤 실행이 사람 몫으로 남음</h3>
                 <p className="text-sm text-gray-700">
-                  오늘의 퀴즈·이번 주 루틴·학부모 설명을 매일 손으로 잇지 못하면, 수업 밖에서 개인화는 멈춥니다.
+                  퀴즈·루틴·보호자 설명을 매일 손으로 잇지 못하면, 개인화는 설계에서 끊깁니다.
                 </p>
               </div>
             </div>
             <div className="bg-red-50 rounded-xl p-5 border border-red-100 flex gap-4">
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-white border border-red-100 text-red-800">
-                <MarketingIcon name="trend" className="h-5 w-5" />
+                <MarketingIcon name="link" className="h-5 w-5" />
               </div>
               <div className="min-w-0">
-                <h3 className="font-bold text-gray-900 text-sm mb-2">실패 3: 공교육 밖으로 개인화가 빠짐</h3>
+                <h3 className="font-bold text-gray-900 text-sm mb-2">한계 3: 기초 누락이 쌓이고 정보 격차로 이어짐</h3>
                 <p className="text-sm text-gray-700">
-                  학교 안에서는 같은 밀도를 만들 구조가 없고, 맞춤 비용만 가정이 떠안습니다.
+                  아이 상태를 정확히 읽기 어려우면 사교육·과외를 감에 맡기기 쉽습니다. (공교·사교를 데이터로 &apos;합친다&apos;는 전제는 두지
+                  않습니다.)
                 </p>
               </div>
             </div>
           </div>
           <div className="mt-8 bg-indigo-50/70 border border-indigo-100 rounded-xl p-5 max-w-3xl mx-auto">
             <p className="text-sm text-gray-800 text-center leading-relaxed">
-              교육 데이터는 이미 존재하지만 연결되지 않습니다.
-              <br />
-              문제는 데이터 부족이 아니라 흐름이 없다는 점입니다.
-              <br />
-              에듀케어로그는 이 단절을 하나의 구조로 연결하기 위해 설계되었습니다.
+              에듀케어로그는 <strong className="text-gray-900">기관을 서로 연결</strong>하는 제품이 아니라, 도입된 수업·학습 안에서{' '}
+              <strong className="text-gray-900">학생 한 명씩</strong> 수준·막힘·경로·환류를 돌리는 <strong className="text-gray-900">맞춤
+              인프라</strong>입니다.
             </p>
           </div>
         </div>
@@ -433,11 +467,11 @@ export default function EduCareLogService() {
           <p className="text-center text-sm text-gray-800 max-w-3xl mx-auto mb-3 leading-relaxed">
             에듀케어로그는
             <br />
-            학습 반응·수업·과제 데이터를 기반으로
+            학습 반응·수업·과제를 바탕으로
             <br />
-            학생·교사·가정·기관의 실행을 연결하는
+            학생별 수준·막힘을 분석하고 맞춤 경로·실행·환류를 이어 주는
             <br />
-            AI 디지털케어로그 기반 운영 인프라입니다.
+            AI 디지털케어로그 기반 <strong className="text-gray-900">교육 개인화</strong> 인프라입니다.
           </p>
           <p className="text-center text-gray-600 text-sm max-w-2xl mx-auto mb-6">
             다섯 단계는 별도 기능이 아니라 한 루프입니다.
@@ -479,13 +513,12 @@ export default function EduCareLogService() {
               위 다섯 단계는 에듀케어로그만의 독자 문법이 아닙니다. <strong>DAL AI 디지털케어로그</strong>의 교육 축입니다.
             </p>
             <p className="leading-relaxed mt-2">
-              같은 구조 위에 <strong>자람이</strong>(발달·행동)·<strong>시니어앤라이프</strong>(돌봄)·
-              <strong>토탈케어로그</strong>(의료)가 이어지며, 도메인만 다릅니다.
+              같은 구조는 각 도메인의 운영 안에서 반복됩니다. 교육에서는 <strong>학생별 수준·경로·환류</strong>를 중심으로 씁니다.
             </p>
           </div>
           <div className="mt-10 max-w-3xl mx-auto text-sm text-gray-800 leading-relaxed space-y-4">
-            <p>개인화는 &quot;AI가 똑똑해서&quot;가 아니라, 같은 기준으로 기록이 누적되고 그 기록이 다음 행동으로 바로 이어질 때 열립니다.</p>
-            <p>기존에는 문제만 많이 풀어도 학생 상태가 이어지지 않습니다. &quot;언젠가 이해한다&quot;는 방식에 가깝습니다.</p>
+            <p>개인화는 &quot;AI가 똑똑해서&quot;가 아니라, 학생별 기록이 누적되고 그 기록이 다음 행동으로 바로 이어질 때 열립니다.</p>
+            <p>많이 푸는 것만으로는 막힘 지점이 해결되지 않습니다. &quot;어디서 멈췄는지&quot;를 기준으로 다음 학습을 정해야 합니다.</p>
             <p>정체된 구간이 잡히면 다음 학습으로 바로 이어집니다.</p>
             <p>수준별 맞춤이 실제로 돌아가기 쉬워집니다.</p>
           </div>
@@ -985,10 +1018,12 @@ export default function EduCareLogService() {
               <p className="font-semibold text-gray-900 mb-3">1. 교육 문제의 본질</p>
               <p>교육 문제는 교재·영상이 부족해서만 생기지 않습니다.</p>
               <p className="mt-2">
-                공교육과 사교육을 가리지 않고{' '}
-                <strong className="text-gray-900">학생 상태를 같은 기준으로 읽지 못하는 구조</strong>가 핵심입니다.
+                공교육이든 사교육이든, <strong className="text-gray-900">학생 상태를 같은 기준으로 읽고 다음 개입으로 잇기 어려운 구조</strong>가 핵심입니다.
               </p>
               <p className="mt-2">정보 격차는 데이터로 굳고, 다시 기회 격차로 이어집니다.</p>
+              <p className="mt-3 text-gray-600 text-xs leading-relaxed">
+                출발 조건·자원 격차 자체를 없앤다는 뜻은 아닙니다. 같은 학생 상태가 제대로 읽히지 않을 때 정보 비대칭이 커진다는 문제에 맞춥니다.
+              </p>
             </div>
 
             <div className="rounded-2xl border border-gray-200 bg-gray-50/80 p-5 md:p-6 space-y-4">
@@ -1109,7 +1144,7 @@ export default function EduCareLogService() {
                   교육 문제의 중심은 콘텐츠 양이 아니라, <strong className="text-gray-900">데이터와 실행이 끊기는 구조</strong>에서
                   발생합니다.
                 </li>
-                <li>같은 학생이 학교·학원·가정에서 서로 다른 말과 감으로 해석됩니다.</li>
+                <li>같은 학생도 과목·단원이 바뀌면 막히는 지점과 속도가 달라, 평균 진도만으로는 놓치는 구간이 생깁니다.</li>
                 <li>그 상태에서는 개인화가 아니라 반복·과잉 학습으로 이어지기 쉽습니다.</li>
               </ul>
             </div>
@@ -1334,15 +1369,18 @@ export default function EduCareLogService() {
             <p>
               에듀케어로그는 완성된 제품을 판매하는 서비스가 아니라, 학습 데이터 기반 교육 인프라를 함께 구축하는 구조입니다.
             </p>
+            <p className="text-gray-600 text-sm border-l-4 border-indigo-200 pl-4 py-1">
+              공개 상세 페이지에는 단가·계약 조건·실명 사례를 게재하지 않습니다. 범위와 조건은 상담을 통해 맞춥니다.
+            </p>
             <p>
               현재 교육기업, 학원, 에듀테크 기업과의 협력을 통해 실제 학습 데이터와 운영 환경에서 고도화를 진행하고 있습니다.
             </p>
             <p>
-              에듀케어로그는 공교육과 사교육을 나누는 시스템이 아니라, 같은 학생 데이터를 하나의 흐름으로 연결하는 인프라를 목표로 합니다.
+              에듀케어로그는 공교육과 사교육 데이터를 서로 합치는 시스템이 아닙니다. 각 도입 주체 안에서 학생별 맞춤 학습 루프를 돌리는 인프라를 목표로 합니다.
             </p>
             <p>
-              현실적으로 공교육은 구조 변화와 도입 속도에 한계가 있기 때문에, 초기에는 학원·교육기업 등 실제 데이터가 빠르게 쌓일 수 있는
-              환경에서 시작해 구조를 검증하고 확장하는 방식을 택하고 있습니다.
+              현실적으로 공교육은 구조 변화와 도입 속도에 한계가 있기 때문에, 초기에는 학원·교육기업 등 실제 적용 속도가 빠른 환경에서
+              먼저 검증하고, 공교육은 파일럿 단위로 단계 확대하는 방식을 택하고 있습니다.
             </p>
             <p>
               이 과정에서 쌓인 데이터와 운영 구조는 향후 공교육·정책 영역으로 확장될 수 있는 기반이 됩니다.

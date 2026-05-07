@@ -9,29 +9,29 @@
     </marker>
   </defs>
   <rect width="1100" height="400" fill="url(#edubg)"/>
-  <text x="550" y="44" text-anchor="middle" fill="#0F172A" font-size="24" font-family="system-ui, sans-serif" font-weight="700">EduCareLog: five-step loop</text>
-  <text x="550" y="72" text-anchor="middle" fill="#475569" font-size="14" font-family="system-ui, sans-serif">Collect - Analyze - Path - Execute - Feedback</text>
+  <text x="550" y="44" text-anchor="middle" fill="#0F172A" font-size="22" font-family="system-ui, Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-weight="700">에듀케어로그 다섯 단계 루프</text>
+  <text x="550" y="72" text-anchor="middle" fill="#475569" font-size="14" font-family="system-ui, Apple SD Gothic Neo, Malgun Gothic, sans-serif">수집 · 분석 · 경로 · 실행 · 환류</text>
   <rect x="40" y="120" width="160" height="80" rx="12" fill="#FFFFFF" stroke="#A5B4FC" stroke-width="2"/>
-  <text x="120" y="155" text-anchor="middle" fill="#3730A3" font-size="12" font-family="system-ui, sans-serif" font-weight="700">1</text>
-  <text x="120" y="180" text-anchor="middle" fill="#312E81" font-size="15" font-family="system-ui, sans-serif" font-weight="700">Collect</text>
+  <text x="120" y="155" text-anchor="middle" fill="#3730A3" font-size="12" font-family="system-ui, Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-weight="700">1</text>
+  <text x="120" y="180" text-anchor="middle" fill="#312E81" font-size="14" font-family="system-ui, Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-weight="700">수집</text>
   <rect x="230" y="120" width="160" height="80" rx="12" fill="#FFFFFF" stroke="#A5B4FC" stroke-width="2"/>
-  <text x="310" y="155" text-anchor="middle" fill="#3730A3" font-size="12" font-family="system-ui, sans-serif" font-weight="700">2</text>
-  <text x="310" y="180" text-anchor="middle" fill="#312E81" font-size="15" font-family="system-ui, sans-serif" font-weight="700">Analyze</text>
+  <text x="310" y="155" text-anchor="middle" fill="#3730A3" font-size="12" font-family="system-ui, Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-weight="700">2</text>
+  <text x="310" y="180" text-anchor="middle" fill="#312E81" font-size="14" font-family="system-ui, Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-weight="700">분석</text>
   <rect x="420" y="120" width="160" height="80" rx="12" fill="#FFFFFF" stroke="#818CF8" stroke-width="2.2"/>
-  <text x="500" y="155" text-anchor="middle" fill="#3730A3" font-size="12" font-family="system-ui, sans-serif" font-weight="700">3</text>
-  <text x="500" y="180" text-anchor="middle" fill="#312E81" font-size="15" font-family="system-ui, sans-serif" font-weight="700">Path</text>
+  <text x="500" y="155" text-anchor="middle" fill="#3730A3" font-size="12" font-family="system-ui, Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-weight="700">3</text>
+  <text x="500" y="180" text-anchor="middle" fill="#312E81" font-size="14" font-family="system-ui, Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-weight="700">경로</text>
   <rect x="610" y="120" width="160" height="80" rx="12" fill="#FFFFFF" stroke="#818CF8" stroke-width="2.2"/>
-  <text x="690" y="155" text-anchor="middle" fill="#3730A3" font-size="12" font-family="system-ui, sans-serif" font-weight="700">4</text>
-  <text x="690" y="180" text-anchor="middle" fill="#312E81" font-size="15" font-family="system-ui, sans-serif" font-weight="700">Execute</text>
+  <text x="690" y="155" text-anchor="middle" fill="#3730A3" font-size="12" font-family="system-ui, Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-weight="700">4</text>
+  <text x="690" y="180" text-anchor="middle" fill="#312E81" font-size="14" font-family="system-ui, Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-weight="700">실행</text>
   <rect x="800" y="120" width="260" height="80" rx="12" fill="#FFFFFF" stroke="#A5B4FC" stroke-width="2"/>
-  <text x="930" y="155" text-anchor="middle" fill="#3730A3" font-size="12" font-family="system-ui, sans-serif" font-weight="700">5</text>
-  <text x="930" y="180" text-anchor="middle" fill="#312E81" font-size="15" font-family="system-ui, sans-serif" font-weight="700">Feedback</text>
+  <text x="930" y="155" text-anchor="middle" fill="#3730A3" font-size="12" font-family="system-ui, Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-weight="700">5</text>
+  <text x="930" y="180" text-anchor="middle" fill="#312E81" font-size="14" font-family="system-ui, Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-weight="700">환류</text>
   <line x1="200" y1="160" x2="230" y2="160" stroke="#4F46E5" stroke-width="2" marker-end="url(#edar)"/>
   <line x1="390" y1="160" x2="420" y2="160" stroke="#4F46E5" stroke-width="2" marker-end="url(#edar)"/>
   <line x1="580" y1="160" x2="610" y2="160" stroke="#4F46E5" stroke-width="2" marker-end="url(#edar)"/>
   <line x1="770" y1="160" x2="800" y2="160" stroke="#4F46E5" stroke-width="2" marker-end="url(#edar)"/>
-  <text x="550" y="238" text-anchor="middle" fill="#4338CA" font-size="13" font-family="system-ui, sans-serif">Feedback re-enters as new log rows.</text>
+  <text x="550" y="238" text-anchor="middle" fill="#4338CA" font-size="13" font-family="system-ui, Apple SD Gothic Neo, Malgun Gothic, sans-serif">환류 결과가 다시 새 학습 로그로 들어갑니다.</text>
   <rect x="100" y="268" width="900" height="88" rx="14" fill="#FFFFFF" stroke="#4F46E5" stroke-width="2"/>
-  <text x="550" y="308" text-anchor="middle" fill="#312E81" font-size="17" font-family="system-ui, sans-serif" font-weight="700">DAL: AI digital care log (education axis)</text>
-  <text x="550" y="334" text-anchor="middle" fill="#64748B" font-size="13" font-family="system-ui, sans-serif">One schema: home, academy, school, agency (with consent)</text>
+  <text x="550" y="305" text-anchor="middle" fill="#312E81" font-size="16" font-family="system-ui, Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-weight="700">DAL · AI 디지털케어로그 (교육 축)</text>
+  <text x="550" y="332" text-anchor="middle" fill="#64748B" font-size="12" font-family="system-ui, Apple SD Gothic Neo, Malgun Gothic, sans-serif">각 도입 주체 안에서 학생별 맞춤 루프를 같은 데이터 형식으로 운영</text>
 </svg>
