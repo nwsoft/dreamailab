@@ -1,0 +1,17 @@
+<svg width="900" height="1320" viewBox="0 0 900 1320" xmlns="http://www.w3.org/2000/svg" fill="none">
+<rect width="900" height="1320" fill="#F8FAFC"/>
+<text x="450" y="72" text-anchor="middle" fill="#0F172A" font-size="40" font-weight="800">에듀케어로그 학습 루프</text>
+<text x="450" y="110" text-anchor="middle" fill="#475569" font-size="23">학생별 막히는 지점을 추적하고 다음 학습으로 연결</text>
+<g font-size="28" font-weight="700" text-anchor="middle">
+<rect x="130" y="170" width="640" height="120" rx="20" fill="#FFFFFF" stroke="#A5B4FC"/><text x="450" y="245" fill="#3730A3">1. 학습 기록</text>
+<text x="450" y="350" fill="#64748B" font-size="38">↓</text>
+<rect x="130" y="390" width="640" height="120" rx="20" fill="#FFFFFF" stroke="#A5B4FC"/><text x="450" y="465" fill="#3730A3">2. 오개념 분석</text>
+<text x="450" y="570" fill="#64748B" font-size="38">↓</text>
+<rect x="130" y="610" width="640" height="120" rx="20" fill="#FFFFFF" stroke="#A5B4FC"/><text x="450" y="685" fill="#3730A3">3. 맞춤 경로 생성</text>
+<text x="450" y="790" fill="#64748B" font-size="38">↓</text>
+<rect x="130" y="830" width="640" height="120" rx="20" fill="#FFFFFF" stroke="#A5B4FC"/><text x="450" y="905" fill="#3730A3">4. 수업/과제 실행</text>
+<text x="450" y="1010" fill="#64748B" font-size="38">↓</text>
+<rect x="130" y="1050" width="640" height="120" rx="20" fill="#EEF2FF" stroke="#818CF8"/><text x="450" y="1125" fill="#3730A3">5. 환류/다음 계획</text>
+</g>
+<text x="450" y="1248" text-anchor="middle" fill="#334155" font-size="23">공교육·사교육 각각의 도입 맥락 안에서 학생 맞춤 루프를 운영</text>
+</svg>

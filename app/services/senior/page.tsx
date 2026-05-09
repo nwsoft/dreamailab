@@ -391,7 +391,10 @@ export default function SeniorService() {
             생활 현장에서 시작된 기록이 분석·협업·행정으로 이어지는 구조를 시각적으로 요약했습니다.
           </p>
           <div className="rounded-2xl overflow-hidden border border-emerald-100 bg-white shadow-sm">
-            <img src="/images/services/senior-care-flow.svg" alt="시니어앤라이프 데이터 흐름 구조도" className="w-full h-auto" />
+            <picture>
+              <source media="(max-width: 768px)" srcSet="/images/services/senior-care-flow-mobile.svg" />
+              <img src="/images/services/senior-care-flow.svg" alt="시니어앤라이프 데이터 흐름 구조도" className="w-full h-auto object-contain" loading="lazy" decoding="async" />
+            </picture>
           </div>
         </div>
       </section>
@@ -643,7 +646,7 @@ export default function SeniorService() {
           </p>
           <div className="bg-emerald-50/55 rounded-2xl p-6 md:p-8 border border-emerald-200">
             <div className="rounded-2xl overflow-hidden border border-emerald-200 bg-white shadow-sm">
-              <img src="/images/services/senior-platform-flow.svg" alt="시니어앤라이프 플랫폼 6단계 흐름 구조도" className="w-full h-auto" />
+              <img src="/images/services/senior-platform-flow.svg" alt="시니어앤라이프 플랫폼 6단계 흐름 구조도" className="w-full h-auto object-contain" loading="lazy" decoding="async" />
             </div>
             <p className="mt-6 text-center text-sm text-gray-600 leading-relaxed">
               DAL <strong>AI 디지털케어로그</strong> 기반 서비스로, 표준 기록·다기관 연계·실시간 환류를 지원합니다.

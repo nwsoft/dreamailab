@@ -1,0 +1,21 @@
+<svg width="900" height="1200" viewBox="0 0 900 1200" xmlns="http://www.w3.org/2000/svg" fill="none">
+<rect width="900" height="1200" fill="#F8FAFC"/>
+<text x="450" y="70" text-anchor="middle" fill="#0F172A" font-size="40" font-weight="800">자람이 데이터 흐름</text>
+<text x="450" y="108" text-anchor="middle" fill="#475569" font-size="23">가정·학교·센터·병원 기록을 같은 구조로 연결</text>
+<rect x="90" y="160" width="720" height="150" rx="20" fill="#FFFFFF" stroke="#93C5FD"/>
+<text x="450" y="220" text-anchor="middle" fill="#1E3A8A" font-size="30" font-weight="700">기록 수집</text>
+<text x="450" y="262" text-anchor="middle" fill="#334155" font-size="22">행동·학습·치료 기록 입력</text>
+<text x="450" y="360" text-anchor="middle" fill="#64748B" font-size="36">↓</text>
+<rect x="90" y="390" width="720" height="150" rx="20" fill="#FFFFFF" stroke="#93C5FD"/>
+<text x="450" y="450" text-anchor="middle" fill="#1E3A8A" font-size="30" font-weight="700">AI 분석/권장안</text>
+<text x="450" y="492" text-anchor="middle" fill="#334155" font-size="22">개입 우선순위와 다음 행동 제시</text>
+<text x="450" y="590" text-anchor="middle" fill="#64748B" font-size="36">↓</text>
+<rect x="90" y="620" width="720" height="150" rx="20" fill="#FFFFFF" stroke="#93C5FD"/>
+<text x="450" y="680" text-anchor="middle" fill="#1E3A8A" font-size="30" font-weight="700">실행/협업</text>
+<text x="450" y="722" text-anchor="middle" fill="#334155" font-size="22">보호자·교사·치료사 동일 기준 소통</text>
+<text x="450" y="820" text-anchor="middle" fill="#64748B" font-size="36">↓</text>
+<rect x="90" y="850" width="720" height="220" rx="22" fill="#EFF6FF" stroke="#BFDBFE"/>
+<text x="450" y="920" text-anchor="middle" fill="#1E3A8A" font-size="30" font-weight="700">환류</text>
+<text x="450" y="965" text-anchor="middle" fill="#334155" font-size="22">일·주·월 리포트로 다음 개입 품질 개선</text>
+<text x="450" y="1010" text-anchor="middle" fill="#334155" font-size="22">실사용 데이터가 연구·정책 근거로 확장</text>
+</svg>

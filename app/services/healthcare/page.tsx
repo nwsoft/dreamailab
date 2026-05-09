@@ -258,7 +258,10 @@ export default function HealthcareService() {
             일상 기록에서 시작해 AI 분석과 진료 연계까지 이어지는 핵심 구조를 시각적으로 요약했습니다.
           </p>
           <div className="rounded-2xl overflow-hidden border border-cyan-100 bg-white shadow-sm">
-            <img src="/images/services/healthcare-care-flow.svg" alt="토탈케어로그 핵심 운영 흐름 구조도" className="w-full h-auto" />
+            <picture>
+              <source media="(max-width: 768px)" srcSet="/images/services/healthcare-care-flow-mobile.svg" />
+              <img src="/images/services/healthcare-care-flow.svg" alt="토탈케어로그 핵심 운영 흐름 구조도" className="w-full h-auto object-contain" loading="lazy" decoding="async" />
+            </picture>
           </div>
         </div>
       </section>
@@ -494,7 +497,7 @@ export default function HealthcareService() {
             기능 나열이 아니라, <strong>데이터가 흐르는 축</strong>만 비교합니다.
           </p>
           <div className="rounded-2xl overflow-hidden border border-cyan-100 bg-white shadow-sm mb-8">
-            <img src="/images/services/healthcare-before-after.svg" alt="기존 구조와 토탈케어로그 구조 비교도" className="w-full h-auto" />
+            <img src="/images/services/healthcare-before-after.svg" alt="기존 구조와 토탈케어로그 구조 비교도" className="w-full h-auto object-contain" loading="lazy" decoding="async" />
           </div>
           <div className="overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
             <table className="w-full min-w-[300px] text-sm text-left border-collapse">
@@ -1073,7 +1076,7 @@ export default function HealthcareService() {
             병원·연구기관·제약사와의 공동 연구 및 데이터 사업이 가능한 구조로 설계되어 있습니다.
           </p>
           <div className="mt-8 rounded-2xl overflow-hidden border border-cyan-200/60 bg-white/10 backdrop-blur-sm">
-            <img src="/images/services/healthcare-rwe-pipeline.svg" alt="토탈케어로그 데이터·연구 협력 파이프라인 구조도" className="w-full h-auto" />
+            <img src="/images/services/healthcare-rwe-pipeline.svg" alt="토탈케어로그 데이터·연구 협력 파이프라인 구조도" className="w-full h-auto object-contain" loading="lazy" decoding="async" />
           </div>
           <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">

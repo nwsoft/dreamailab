@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
+import { MarketingIcon, type MarketingIconName } from '../../../components/MarketingIcon'
 
 export const metadata: Metadata = {
   title: '국제결혼 플랫폼 글로벌커플케어 GCC | 베트남·태국·필리핀·일본·중국 결혼 전문가 비교',
@@ -35,7 +36,7 @@ export const metadata: Metadata = {
 const brand = {
   name: 'Global Couple Care',
   short: 'GCC',
-  domain: 'GlobalCoupleCare.com',
+  domain: 'https://globalcouplecare.com',
   slogans: [
     '국제결혼, 그 이후까지 함께 케어합니다.',
     '투명한 정보, 공정한 선택, 따뜻한 돌봄',
@@ -76,7 +77,7 @@ const coreFeatures = [
   },
   {
     title: '법무·비자 표준 워크플로우',
-    desc: '혼인·비자·국적 서류 자동화, 체크리스트·타임라인 제공. 복잡한 행정 절차를 쉽게',
+    desc: '혼인·비자·국적 서류 자동화, 체크리스트·타임라인 제공으로 복잡한 행정 절차를 단순화합니다.',
     icon: '⚖️',
   },
   {
@@ -98,7 +99,7 @@ const coreFeatures = [
 
 const problemPoints = [
   '정보 비대칭으로 가격이 제각각, 과다 비용·바가지 위험',
-  '비윤리적 업체·사기·허위 이력 노출, 신부/가족 측 금전 요구 리스크',
+  '비윤리적 업체·사기·허위 이력 노출, 일방적 금전 요구·브로커 개입 리스크',
   '국가별 법무/비자 절차 복잡성과 서류 누락·지연',
   '결혼 이후 언어·취업·주거·가족 적응 공백, 지속 지원 부재',
 ]
@@ -186,10 +187,26 @@ const businessDesign = [
 ]
 
 const cultureChangePoints = [
-  '"가격은 만나서 이야기하자"식 깜깜이 견적 대신, 국가/케이스별 기준 가격·비용 구조를 공개합니다.',
-  '"상품화된 배우자" 표현, 차별적 광고, 인권 침해 우려가 있는 문구를 플랫폼 내에서 금지하고 윤리 가이드라인을 제시합니다.',
-  '신부·가족에게 직접 송금 강요, 정체 불명의 현지 브로커 개입 등 불투명 관행을 차단하고 투명한 정산 구조를 설계합니다.',
-  '단기 방문 후 성급한 결혼을 조장하는 문화 대신, 충분한 정보·상담·교육 과정을 거치는 책임 있는 매칭 문화를 만듭니다.',
+  {
+    before: '"가격은 만나서 이야기하자"식 깜깜이 견적',
+    after: '국가/케이스별 기준 가격·비용 구조 공개',
+    detail: '최소 공개 항목을 표준화해 사용자 비교 가능성을 높입니다.',
+  },
+  {
+    before: '"상품화된 배우자" 표현, 차별적 광고',
+    after: '인권·윤리 가이드라인 기반 콘텐츠 운영',
+    detail: '차별/비하/인권 침해 우려 문구를 금지하고 검수 기준을 적용합니다.',
+  },
+  {
+    before: '직접 송금 강요, 불명확한 현지 브로커 개입',
+    after: '투명한 정산 구조와 검증된 파트너 체계',
+    detail: '중간 단계 비용 항목과 책임 주체를 명시해 분쟁 위험을 낮춥니다.',
+  },
+  {
+    before: '단기 방문 후 성급한 결혼 유도',
+    after: '충분한 정보·상담·교육을 거치는 책임 매칭',
+    detail: '사전 안내와 체크리스트를 통해 의사결정 시간을 확보합니다.',
+  },
 ]
 
 const targetAudiences = [
@@ -223,21 +240,31 @@ const whyMustUse = [
     title: '정보 독점 종식',
     desc: '여러 국가·전문가 정보를 한 곳에서 비교해 탐색 부담을 줄입니다.',
     reason: '탐색 시간과 비교 비용을 줄이는 데 유리',
+    detail: '국가별 정보 수집 시간을 줄이고, 동일 기준 비교로 초기 의사결정 혼선을 낮춥니다.',
   },
   {
     title: '가격 투명성',
     desc: '표준 견적으로 바가지 방지. 리뷰로 검증된 전문가 선택',
     reason: '비용·절차를 비교해 의사결정하기에 유리',
+    detail: '견적 항목 기준이 명확해 불필요한 추가 비용을 줄이고 계약 전 확인 포인트를 제공합니다.',
   },
   {
     title: '정착 이후 지원 구조',
     desc: '결혼 후에도 언어·자녀·학교·병원 등 정착 단계 핵심 이슈를 지속 지원',
     reason: '결혼 이후 정착 정보를 이어서 관리하기에 유리',
+    detail: '결혼 이후 발생하는 생활 이슈를 챗서비스와 가이드로 빠르게 연결해 초기 공백을 줄입니다.',
   },
   {
     title: '네트워크 효과',
     desc: '사용자가 많을수록 정보·리뷰·커뮤니티가 강력해짐',
     reason: '참여자가 늘수록 정보와 리뷰의 밀도가 높아짐',
+    detail: '검증 가능한 리뷰와 운영 데이터가 누적될수록 사용자 선택 정확도가 높아집니다.',
+  },
+  {
+    title: '안전·윤리 운영 기준',
+    desc: 'KYC·신고·제재·가이드라인 기반으로 신뢰 가능한 이용 환경을 운영합니다.',
+    reason: '거래·상담 과정의 리스크를 사전에 낮추는 데 유리',
+    detail: '운영 기준을 명시해 사용자와 파트너 모두 예측 가능한 절차 안에서 의사결정할 수 있습니다.',
   },
 ]
 
@@ -247,27 +274,76 @@ const howChangesTrend = [
     old: '개별 업체 중심의 닫힌 시장',
     new: '플랫폼 중심의 열린 시장',
     impact: '소비자 선택권 확대, 업체 간 건전한 경쟁',
+    visual: '폐쇄 정보 -> 공개 비교',
     icon: '🔄',
   },
   {
     old: '오프라인 중심, 지역 제한적',
     new: '온라인 통합, 글로벌 연결',
     impact: '해외 전문가 참여, 24시간 서비스 가능',
+    visual: '지역 제한 -> 글로벌 접근',
     icon: '🌍',
   },
   {
     old: '1회성 매칭 중심',
     new: '평생 케어 중심',
     impact: '결혼 이후 가족 전체 생애주기 관리',
+    visual: '단발성 연결 -> 장기 지원',
     icon: '♾️',
   },
   {
     old: '불투명한 관행, 윤리 문제',
     new: '표준화·투명화·윤리화',
     impact: '산업 신뢰도 향상, 제도권 진입',
+    visual: '위험 관행 -> 신뢰 체계',
     icon: '✨',
   },
 ]
+
+const symbolIconMap: Record<string, MarketingIconName> = {
+  '🔎': 'search',
+  '🏪': 'blocks',
+  '👨‍👩‍👧': 'heart',
+  '📱': 'mobile',
+  '💬': 'chat',
+  '📑': 'document',
+  '🔗': 'link',
+  '🛡️': 'shield',
+  '🕸️': 'globe',
+  '💼': 'cog',
+  '📊': 'chart',
+  '🌐': 'globe',
+  '📈': 'trend',
+  '🏢': 'blocks',
+  '🏛️': 'scale',
+  '🔄': 'refresh',
+  '🌍': 'globe',
+  '♾️': 'refresh',
+  '✨': 'sparkle',
+  '🎯': 'target',
+  '💑': 'heart',
+  '💰': 'scale',
+  '🚪': 'link',
+  '💡': 'lightbulb',
+  '⚠️': 'lock',
+  '⚖️': 'scale',
+  '✅': 'shield',
+  '🚀': 'rocket',
+  '⭐': 'sparkle',
+  '🚫': 'lock',
+  '📚': 'graduation',
+  '📒': 'document',
+  '🪪': 'user',
+  '🏠': 'hospital',
+  '🔌': 'cog',
+  '❌': 'lock',
+}
+
+function SymbolIcon({ symbol, className = 'h-6 w-6 text-current' }: { symbol: string; className?: string }) {
+  const mapped = symbolIconMap[symbol]
+  if (!mapped) return <span className={className}>{symbol}</span>
+  return <MarketingIcon name={mapped} className={className} />
+}
 
 export default function MarriageService() {
   // 구조화된 데이터 (JSON-LD) for SEO & AI
@@ -276,7 +352,7 @@ export default function MarriageService() {
     '@graph': [
       {
         '@type': 'Service',
-        '@id': 'https://dreamailab.com/services/marriage#service',
+        '@id': 'https://globalcouplecare.com#service',
         name: '글로벌커플케어 (GCC)',
         description:
           '국제결혼·다문화 가족을 위한 정보·절차·신뢰 인프라 플랫폼. 전문가 비교, 법무·행정 안내, 정착 지원 연계를 제공합니다.',
@@ -289,7 +365,7 @@ export default function MarriageService() {
         areaServed: ['KR', 'VN', 'TH', 'PH', 'JP', 'CN'],
         availableChannel: {
           '@type': 'ServiceChannel',
-          serviceUrl: 'https://dreamailab.com/services/marriage',
+          serviceUrl: 'https://globalcouplecare.com',
         },
         audience: {
           '@type': 'PeopleAudience',
@@ -328,7 +404,7 @@ export default function MarriageService() {
       },
       {
         '@type': 'FAQPage',
-        '@id': 'https://dreamailab.com/services/marriage#faq',
+        '@id': 'https://globalcouplecare.com#faq',
         mainEntity: [
           {
             '@type': 'Question',
@@ -382,12 +458,17 @@ export default function MarriageService() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              {brand.name} ({brand.short}) - 국제결혼 통합 플랫폼
+              국제결혼의 정보 불균형을 줄이는 신뢰 인프라
             </h1>
+            <p className="text-sm md:text-base text-white/80 mb-4">{brand.name} ({brand.short})</p>
             <p className="text-xl md:text-2xl mb-6 max-w-4xl mx-auto leading-relaxed">
               국제결혼은 정보가 아니라 구조의 문제입니다<br />
               GCC는 국가·전문가·절차를 하나의 기준으로 연결하고<br />
               결혼 이후 정착까지 이어지는 플랫폼을 설계합니다
+            </p>
+            <p className="text-sm md:text-base max-w-3xl mx-auto text-white/90">
+              드림에이아이랩의 DAL 철학을 바탕으로, 취약한 정보 접근 환경에 놓인 이용자도
+              더 공정한 기준으로 선택할 수 있도록 시작했습니다.
             </p>
             <div className="mt-6">
               <span className="inline-block px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold">Beta Testing</span>
@@ -408,7 +489,7 @@ export default function MarriageService() {
             <div className="bg-gradient-to-r from-primary-50 to-secondary-50 rounded-xl p-8 max-w-5xl mx-auto mb-8 text-left">
               <div className="bg-amber-50 border-l-4 border-amber-500 rounded-lg p-5 mb-6">
                 <h4 className="font-bold text-gray-900 mb-2 flex items-center gap-2">
-                  <span className="text-2xl">🎯</span>
+                  <SymbolIcon symbol="🎯" className="h-6 w-6 text-primary-700" />
                   {brand.short}는 국제결혼정보회사가 아닙니다
                 </h4>
                 <p className="text-sm text-gray-700 mb-2">
@@ -421,24 +502,60 @@ export default function MarriageService() {
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
                 <div className="bg-white rounded-lg p-5 border-2 border-primary-200">
-                  <div className="text-2xl mb-2">💑</div>
+                  <div className="mb-2 flex">
+                    <SymbolIcon symbol="💑" className="h-6 w-6 text-primary-700" />
+                  </div>
                   <h4 className="font-semibold text-gray-900 mb-2">결혼 희망자</h4>
                   <p className="text-sm text-gray-700">한 곳에서 여러 국가·업체 정보를 같은 기준으로 비교해 탐색 부담을 줄입니다.</p>
                 </div>
                 <div className="bg-white rounded-lg p-5 border-2 border-primary-200">
-                  <div className="text-2xl mb-2">🏢</div>
+                  <div className="mb-2 flex">
+                    <SymbolIcon symbol="🏢" className="h-6 w-6 text-primary-700" />
+                  </div>
                   <h4 className="font-semibold text-gray-900 mb-2">국내·해외 전문가</h4>
                   <p className="text-sm text-gray-700">베트남·태국·필리핀·일본·중국 등 해외 현지 전문가도 참여. 홈페이지 없이도 전문 서비스 제공 가능</p>
                 </div>
                 <div className="bg-white rounded-lg p-5 border-2 border-primary-200">
-                  <div className="text-2xl mb-2">👨‍👩‍👧</div>
+                  <div className="mb-2 flex">
+                    <SymbolIcon symbol="👨‍👩‍👧" className="h-6 w-6 text-primary-700" />
+                  </div>
                   <h4 className="font-semibold text-gray-900 mb-2">결혼이민자 가정</h4>
                   <p className="text-sm text-gray-700">언어·자녀양육·문화차이·학교·병원 등 정착 단계 핵심 이슈를 커뮤니티와 네트워크로 지원</p>
                 </div>
               </div>
 
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
+                <a
+                  href="https://globalcouplecare.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center rounded-lg border border-primary-300 bg-white px-4 py-3 text-sm font-semibold text-primary-700 hover:bg-primary-50 transition-colors"
+                >
+                  GCC 바로가기
+                </a>
+                <a
+                  href="/contact"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center rounded-lg border border-blue-200 bg-blue-50 px-4 py-3 text-sm font-semibold text-blue-700 hover:bg-blue-100 transition-colors"
+                >
+                  베타 서비스 문의
+                </a>
+                <a
+                  href="/contact"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center rounded-lg border border-gray-300 bg-white px-4 py-3 text-sm font-semibold text-gray-700 hover:bg-gray-50 transition-colors"
+                >
+                  제휴/입점 문의
+                </a>
+              </div>
+
               <div className="bg-white/50 rounded-lg p-5 border-l-4 border-primary-500">
-                <h4 className="font-semibold text-gray-900 mb-2">🌟 한 곳에서 핵심 정보를 연결하는 통합 플랫폼</h4>
+                <h4 className="font-semibold text-gray-900 mb-2 flex items-center gap-2">
+                  <SymbolIcon symbol="✨" className="h-5 w-5 text-primary-700" />
+                  한 곳에서 핵심 정보를 연결하는 통합 플랫폼
+                </h4>
                 <ul className="text-sm text-gray-700 space-y-2">
                   <li>✓ <strong>정보 통합:</strong> 국내·해외 주요 국제결혼 전문가의 서비스를 한 곳에서 비교하고 선택</li>
                   <li>✓ <strong>전문가 참여:</strong> 개인적으로 상담 활동을 하시던 분들도 공식 플랫폼에서 투명하게 서비스 제공</li>
@@ -454,7 +571,7 @@ export default function MarriageService() {
             <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 shadow-lg border-2 border-blue-200">
               <div className="text-center mb-8">
                 <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 flex items-center justify-center gap-2">
-                  <span className="text-3xl">🌍</span>
+                  <SymbolIcon symbol="🌍" className="h-7 w-7 text-primary-700" />
                   글로벌 확장 및 국가별 로드맵 – 해외 대형 결혼정보업체가 참여하기 쉬운 구조
                 </h3>
                 <p className="text-gray-700 max-w-3xl mx-auto">
@@ -467,7 +584,7 @@ export default function MarriageService() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div className="bg-white rounded-xl p-6 shadow-sm">
                   <h4 className="font-bold text-gray-900 mb-3 flex items-center gap-2">
-                    <span className="text-xl">💰</span>
+                    <SymbolIcon symbol="💰" className="h-5 w-5 text-primary-700" />
                     비용 구조의 GAP = 기회
                   </h4>
                   <div className="space-y-3">
@@ -488,7 +605,7 @@ export default function MarriageService() {
                 </div>
                 <div className="bg-white rounded-xl p-6 shadow-sm">
                   <h4 className="font-bold text-gray-900 mb-3 flex items-center gap-2">
-                    <span className="text-xl">🚪</span>
+                    <SymbolIcon symbol="🚪" className="h-5 w-5 text-primary-700" />
                     해외 업체가 입점하기 쉬운 이유
                   </h4>
                   <ul className="space-y-3 text-sm text-gray-700">
@@ -502,14 +619,17 @@ export default function MarriageService() {
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-blue-500 font-bold mt-1">✓</span>
-                      <span><strong>네트워크 효과:</strong> 해외 업체 입점 → 더 많은 후보자 데이터 → 국내 사용자 증가 → 다시 해외 업체 증가</span>
+                      <span><strong>네트워크 효과:</strong> 해외 업체 입점 → 검증 가능한 비교 정보 확대 → 국내 사용자 증가 → 다시 해외 업체 증가</span>
                     </li>
                   </ul>
                 </div>
               </div>
 
               <div className="bg-gradient-to-r from-indigo-600 to-blue-600 text-white rounded-xl p-6">
-                <h4 className="font-bold text-lg mb-3">💡 핵심 메시지</h4>
+                <h4 className="font-bold text-lg mb-3 flex items-center gap-2">
+                  <SymbolIcon symbol="💡" className="h-5 w-5 text-white" />
+                  핵심 메시지
+                </h4>
                 <p className="text-indigo-100">
                   {brand.short}는 국내용 서비스에 머무르지 않고, 국제결혼 산업의 표준 기준을 확장해가는 글로벌 인프라를 지향합니다.
                 </p>
@@ -533,7 +653,9 @@ export default function MarriageService() {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
             <div className="bg-white rounded-2xl p-8 shadow-sm border-2 border-red-200">
-              <div className="text-4xl mb-4 text-center">⚠️</div>
+              <div className="mb-4 flex justify-center text-amber-700">
+                <SymbolIcon symbol="⚠️" className="h-9 w-9" />
+              </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">사회적 문제 인식 ↑</h3>
               <ul className="space-y-3 text-sm text-gray-700">
                 <li className="flex items-start gap-2">
@@ -556,7 +678,9 @@ export default function MarriageService() {
             </div>
 
             <div className="bg-white rounded-2xl p-8 shadow-sm border-2 border-green-200">
-              <div className="text-4xl mb-4 text-center">📈</div>
+              <div className="mb-4 flex justify-center text-green-700">
+                <SymbolIcon symbol="📈" className="h-9 w-9" />
+              </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">수요는 꾸준히 증가 ↑</h3>
               <ul className="space-y-3 text-sm text-gray-700">
                 <li className="flex items-start gap-2">
@@ -579,7 +703,9 @@ export default function MarriageService() {
             </div>
 
             <div className="bg-white rounded-2xl p-8 shadow-sm border-2 border-gray-300">
-              <div className="text-4xl mb-4 text-center">❌</div>
+              <div className="mb-4 flex justify-center text-red-700">
+                <SymbolIcon symbol="❌" className="h-9 w-9" />
+              </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">표준화된 해결 인프라 부족</h3>
               <ul className="space-y-3 text-sm text-gray-700">
                 <li className="flex items-start gap-2">
@@ -603,7 +729,9 @@ export default function MarriageService() {
           </div>
 
           <div className="bg-gradient-to-r from-primary-600 to-secondary-600 rounded-2xl p-8 text-white text-center mb-8">
-            <div className="text-5xl mb-4">🎯</div>
+            <div className="mb-4 flex justify-center text-primary-100">
+              <SymbolIcon symbol="🎯" className="h-11 w-11" />
+            </div>
             <h3 className="text-2xl font-bold mb-4">결론: 구조 전환의 기회</h3>
             <p className="text-lg mb-6 max-w-3xl mx-auto">
               <strong>문제 인식은 높고</strong>, <strong>수요는 존재하며</strong>, <strong>표준화된 해결 인프라는 아직 부족합니다</strong>
@@ -627,7 +755,7 @@ export default function MarriageService() {
           {/* 비용 구조 차이 강조 */}
           <div className="bg-white rounded-2xl p-8 shadow-lg border-2 border-amber-300">
             <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center flex items-center justify-center gap-2">
-              <span className="text-3xl">📊</span>
+              <SymbolIcon symbol="📊" className="h-7 w-7 text-primary-700" />
               시장 불균형 해결: 비용 구조 투명화
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -674,7 +802,11 @@ export default function MarriageService() {
             </div>
             <div className="mt-6 bg-blue-50 rounded-xl p-6 border-l-4 border-blue-500">
               <p className="text-sm text-gray-700">
-                <strong>💡 핵심 전략:</strong> 해외 현지 업체가 직접 입점하면 사용자는 현지 비용 구조를 직접 확인할 수 있고,
+                <strong className="inline-flex items-center gap-1">
+                  <SymbolIcon symbol="💡" className="h-4 w-4 text-primary-700" />
+                  핵심 전략:
+                </strong>{' '}
+                해외 현지 업체가 직접 입점하면 사용자는 현지 비용 구조를 직접 확인할 수 있고,
                 국내 업체도 같은 기준에서 경쟁하도록 유도할 수 있습니다. 이를 통해 시장의 불균형을 구조적으로 완화하는 방향을 지향합니다.
               </p>
             </div>
@@ -702,7 +834,9 @@ export default function MarriageService() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {coreFeatures.map((f, i) => (
               <div key={i} className="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-xl p-6 hover:shadow-lg transition-shadow">
-                <div className="text-3xl mb-3">{f.icon}</div>
+                <div className="mb-3 flex justify-center text-primary-700">
+                  <SymbolIcon symbol={f.icon} className="h-7 w-7" />
+                </div>
                 <h3 className="font-semibold text-gray-900 mb-2 text-lg">{f.title}</h3>
                 <p className="text-sm text-gray-700 leading-relaxed">{f.desc}</p>
               </div>
@@ -724,7 +858,6 @@ export default function MarriageService() {
                 <span className="text-3xl font-bold text-primary-600">({brand.short})</span>
               </div>
               <p className="text-gray-700 mb-4">드림에이아이랩의 국제결혼·다문화 가족 케어 플랫폼</p>
-              <p className="text-sm text-gray-500 mb-6">도메인: {brand.domain}</p>
               <div className="bg-white rounded-lg p-6">
                 <h4 className="font-semibold text-gray-900 mb-3">브랜드 슬로건</h4>
                 <div className="space-y-2">
@@ -742,7 +875,7 @@ export default function MarriageService() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 text-left">
               <div className="bg-white rounded-xl p-8 shadow-sm">
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                  <span className="text-2xl">⚠️</span>
+                  <SymbolIcon symbol="⚠️" className="h-6 w-6 text-amber-700" />
                   국제결혼 시장의 구조적 문제
                 </h3>
                 <ul className="space-y-3">
@@ -756,7 +889,7 @@ export default function MarriageService() {
               </div>
               <div className="bg-white rounded-xl p-8 shadow-sm">
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                  <span className="text-2xl">✅</span>
+                  <SymbolIcon symbol="✅" className="h-6 w-6 text-green-700" />
                   {brand.short}의 해결 방법
                 </h3>
                 <ul className="space-y-3">
@@ -773,14 +906,29 @@ export default function MarriageService() {
             {/* 문화 변화 */}
             <div className="mt-8 bg-white rounded-xl p-8 shadow-sm text-left">
               <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                <span className="text-2xl">🔄</span>
+                <SymbolIcon symbol="🔄" className="h-6 w-6 text-primary-700" />
                 기존 잘못된 문화, 이렇게 바꿉니다
               </h3>
+              <p className="text-sm text-gray-600 mb-5">
+                관행 중심 시장을 기준 중심 시장으로 바꾸기 위해, 문제-개선 구조를 명확히 운영합니다.
+              </p>
+              <div className="rounded-2xl overflow-hidden border border-gray-200 bg-gray-50 mb-6">
+                <picture>
+                  <source media="(max-width: 768px)" srcSet="/images/services/gcc-culture-change-mobile.svg" />
+                  <img
+                    src="/images/services/gcc-culture-change.svg"
+                    alt="국제결혼 시장의 기존 문제 문화와 GCC 개선 방식 비교 도식"
+                    className="w-full h-auto object-contain" loading="lazy" decoding="async" />
+                </picture>
+              </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {cultureChangePoints.map((c, i) => (
-                  <div key={i} className="flex items-start gap-2">
-                    <span className="text-primary-500 mt-1">→</span>
-                    <span className="text-gray-700 text-sm">{c}</span>
+                  <div key={i} className="rounded-lg border border-gray-200 p-4 bg-white">
+                    <p className="text-xs text-red-600 font-semibold mb-1">기존 문제</p>
+                    <p className="text-sm text-gray-800 mb-2">{c.before}</p>
+                    <p className="text-xs text-primary-700 font-semibold mb-1">개선 방식</p>
+                    <p className="text-sm text-gray-900 font-medium mb-2">{c.after}</p>
+                    <p className="text-xs text-gray-600 leading-relaxed">{c.detail}</p>
                   </div>
                 ))}
               </div>
@@ -801,7 +949,9 @@ export default function MarriageService() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {targetAudiences.map((audience, i) => (
               <div key={i} className="bg-gray-50 rounded-xl p-6 shadow-sm text-center">
-                <div className="text-3xl mb-3">{audience.icon}</div>
+                <div className="mb-3 flex justify-center text-primary-700">
+                  <SymbolIcon symbol={audience.icon} className="h-7 w-7" />
+                </div>
                 <h3 className="font-semibold text-gray-900 mb-2">{audience.title}</h3>
                 <p className="text-sm text-gray-700 leading-relaxed">{audience.desc}</p>
               </div>
@@ -821,30 +971,40 @@ export default function MarriageService() {
               {brand.short}는 비교·투명성·정착 연계를 중시하는 사용자에게 실질적인 기준을 제공합니다
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
             {whyMustUse.map((item, i) => (
-              <div key={i} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <div key={i} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 h-full flex flex-col">
                 <h3 className="font-bold text-xl mb-3">{item.title}</h3>
-                <p className="text-sm mb-4 text-white/90">{item.desc}</p>
-                <div className="bg-white/20 rounded-lg p-3">
-                  <p className="text-xs font-semibold mb-1">💡 선택 근거</p>
-                  <p className="text-sm">{item.reason}</p>
+                <p className="text-[15px] leading-relaxed mb-4 text-white/90">{item.desc}</p>
+                <div className="bg-white/20 rounded-lg p-3 mt-auto">
+                  <p className="text-xs font-semibold mb-1 inline-flex items-center gap-1">
+                    <SymbolIcon symbol="💡" className="h-3.5 w-3.5 text-primary-700" />
+                    선택 근거
+                  </p>
+                  <p className="text-[15px] font-semibold leading-relaxed">{item.reason}</p>
+                  <p className="text-[13px] text-white/90 mt-2 leading-relaxed">{item.detail}</p>
                 </div>
               </div>
             ))}
             {/* 해외 DB 확장 추가 카드 */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border-2 border-yellow-300">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border-2 border-yellow-300 h-full flex flex-col">
               <h3 className="font-bold text-xl mb-3 flex items-center gap-2">
-                <span>🌐</span>
+                <SymbolIcon symbol="🌐" className="h-4 w-4 text-primary-700" />
                 해외 DB 확장 → 국내 사용자 선택 폭 확대
               </h3>
               <p className="text-sm mb-4 text-white/90">
-                해외 현지 업체 입점으로 대규모 결혼희망자 데이터베이스를 연결하면,
-                국내 사용자들은 더 많은 후보자와 정보를 한눈에 비교할 수 있어 비교 효율이 높아집니다.
+                해외 현지 업체 입점으로 국가·절차·비용 정보의 공개 범위를 넓히면,
+                국내 사용자는 더 다양한 선택지를 동일 기준으로 비교할 수 있어 의사결정 효율이 높아집니다.
               </p>
-              <div className="bg-white/20 rounded-lg p-3">
-                <p className="text-xs font-semibold mb-1">💡 네트워크 효과</p>
-                <p className="text-sm">해외 업체 입점 → 더 많은 후보자 → 국내 사용자 증가 → 다시 해외 업체 증가</p>
+              <div className="bg-white/20 rounded-lg p-3 mt-auto">
+                <p className="text-xs font-semibold mb-1 inline-flex items-center gap-1">
+                  <SymbolIcon symbol="💡" className="h-3.5 w-3.5 text-primary-700" />
+                  네트워크 효과
+                </p>
+                <p className="text-[15px] font-semibold leading-relaxed">해외 업체 입점 → 비교 가능한 정보 증가 → 국내 사용자 증가 → 다시 해외 업체 증가</p>
+                <p className="text-[13px] text-white/90 mt-2 leading-relaxed">
+                  참여 주체가 늘어날수록 공개 정보의 품질과 비교 정확도가 높아지는 선순환 구조를 만듭니다.
+                </p>
               </div>
             </div>
           </div>
@@ -862,22 +1022,37 @@ export default function MarriageService() {
               국제결혼 산업의 운영 방식을 점진적으로 전환합니다
             </p>
           </div>
+          <div className="max-w-4xl mx-auto mb-8 rounded-xl border border-primary-100 bg-primary-50 p-4">
+            <p className="text-sm text-primary-800 text-center">
+              <strong>기존 문제</strong>를 <strong>새로운 방식</strong>으로 전환하고, 최종적으로 <strong>임팩트</strong>를 확인하는 구조입니다.
+            </p>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {howChangesTrend.map((item, i) => (
               <div key={i} className="bg-white rounded-xl p-6 shadow-sm">
-                <div className="text-4xl mb-4 text-center">{item.icon}</div>
+                <div className="mb-4 flex justify-center text-primary-700">
+                  <SymbolIcon symbol={item.icon} className="h-9 w-9" />
+                </div>
                 <div className="space-y-3">
                   <div className="text-center pb-3 border-b border-gray-200">
                     <p className="text-xs text-gray-500 mb-1">기존 방식</p>
                     <p className="text-sm text-gray-700 line-through">{item.old}</p>
                   </div>
+                  <div className="text-center text-primary-500 font-bold">↓ 전환 ↓</div>
                   <div className="text-center pb-3 border-b border-primary-200">
                     <p className="text-xs text-primary-600 font-semibold mb-1">새로운 방식</p>
                     <p className="text-sm font-semibold text-primary-700">{item.new}</p>
                   </div>
+                  <div className="text-center rounded-md bg-gray-50 p-2">
+                    <p className="text-xs text-gray-500 mb-1">시각 변화</p>
+                    <p className="text-xs font-semibold text-gray-800">{item.visual}</p>
+                  </div>
                   <div className="bg-primary-50 rounded-lg p-3">
-                    <p className="text-xs font-semibold text-primary-700 mb-1">🚀 변화 임팩트</p>
-                    <p className="text-xs text-gray-700">{item.impact}</p>
+                    <p className="text-xs font-semibold text-primary-700 mb-1 flex items-center gap-1">
+                      <SymbolIcon symbol="🚀" className="h-3.5 w-3.5" />
+                      변화 임팩트
+                    </p>
+                    <p className="text-sm text-gray-800 font-bold">{item.impact}</p>
                   </div>
                 </div>
               </div>
@@ -943,6 +1118,38 @@ export default function MarriageService() {
         </div>
       </section>
 
+      {/* Scenario Examples */}
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">시나리오로 보는 GCC</h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">처음 탐색부터 정착 단계까지, 단계별 행동·근거·결과를 상세히 정리했습니다.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
+              <h3 className="font-semibold text-gray-900 mb-3">시나리오 A · 결혼 전 비교 탐색</h3>
+              <div className="space-y-3 text-sm">
+                <p className="text-gray-700"><strong>상황:</strong> 국제결혼을 처음 준비하며 국가·업체·절차가 제각각이라 비교 기준이 없습니다.</p>
+                <p className="text-gray-700"><strong>행동 1:</strong> GCC에서 국가별 평균 절차 기간, 필수 서류, 비용 항목을 같은 형식으로 확인합니다.</p>
+                <p className="text-gray-700"><strong>행동 2:</strong> 업체별 리뷰·응답 속도·완료율·분쟁 이력을 비교해 상담 우선순위를 정합니다.</p>
+                <p className="text-gray-700"><strong>행동 3:</strong> 체크리스트를 기반으로 누락 서류를 사전에 보완하고 상담을 요청합니다.</p>
+                <p className="text-primary-700 font-semibold"><strong>결과:</strong> 감각/지인 추천 중심 결정에서 벗어나, 근거 기반으로 파트너를 선택합니다.</p>
+              </div>
+            </div>
+            <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
+              <h3 className="font-semibold text-gray-900 mb-3">시나리오 B · 결혼 후 정착 지원</h3>
+              <div className="space-y-3 text-sm">
+                <p className="text-gray-700"><strong>상황:</strong> 결혼 후 언어·자녀교육·의료·생활행정 이슈가 동시에 발생해 정보 탐색 부담이 큽니다.</p>
+                <p className="text-gray-700"><strong>행동 1:</strong> GCC 챗서비스에서 현재 상황(거주 지역, 체류 상태, 자녀 연령)을 입력해 우선 과제를 정리합니다.</p>
+                <p className="text-gray-700"><strong>행동 2:</strong> 언어 적응, 교육/의료 안내, 지역 커뮤니티 정보를 단계별 가이드로 확인합니다.</p>
+                <p className="text-gray-700"><strong>행동 3:</strong> 필요한 경우 검증된 파트너·기관 연결 정보로 다음 행동을 이어갑니다.</p>
+                <p className="text-primary-700 font-semibold"><strong>결과:</strong> 정착 초기의 정보 공백과 시행착오를 줄이고, 가족 단위로 안정적 정착을 지원받습니다.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Post-Marriage Community & Services */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -970,7 +1177,9 @@ export default function MarriageService() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {valueProps.map((v, i) => (
               <div key={i} className="bg-gray-50 rounded-xl p-6 shadow text-center">
-                <div className="text-3xl mb-2">{v.icon}</div>
+                <div className="mb-2 flex justify-center text-primary-700">
+                  <SymbolIcon symbol={v.icon} className="h-7 w-7" />
+                </div>
                 <div className="font-semibold text-gray-900 mb-1">{v.title}</div>
                 <div className="text-sm text-gray-600">{v.desc}</div>
               </div>
@@ -992,7 +1201,9 @@ export default function MarriageService() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {bizPillars.map((b, i) => (
               <div key={i} className="bg-white rounded-xl p-6 shadow-sm">
-                <div className="text-2xl mb-2">{b.icon}</div>
+                <div className="mb-2 flex text-primary-700">
+                  <SymbolIcon symbol={b.icon} className="h-6 w-6" />
+                </div>
                 <div className="font-semibold text-gray-900 mb-1">{b.title}</div>
                 <div className="text-sm text-gray-700">{b.desc}</div>
               </div>
@@ -1004,7 +1215,9 @@ export default function MarriageService() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 {businessDesign.map((b, i) => (
                   <div key={i} className="bg-gray-50 rounded-lg p-4">
-                    <div className="text-2xl mb-1">{b.icon}</div>
+                    <div className="mb-1 flex text-primary-700">
+                      <SymbolIcon symbol={b.icon} className="h-6 w-6" />
+                    </div>
                     <div className="text-sm font-semibold text-gray-900 mb-1">{b.title}</div>
                     <div className="text-xs text-gray-700 leading-5">{b.desc}</div>
                   </div>
@@ -1083,12 +1296,18 @@ export default function MarriageService() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-white rounded-xl p-6 shadow-sm">
-              <h3 className="font-bold text-gray-900 mb-2">🔗 표준 정보 플랫폼</h3>
-              <p className="text-sm text-gray-700">국가·업체·비용·절차를 표준 포맷으로. 법률이AI·토탈케어로그와 사후 정착·의료·교육 연계.</p>
+              <h3 className="font-bold text-gray-900 mb-2 flex items-center gap-2">
+                <SymbolIcon symbol="🔗" className="h-5 w-5 text-primary-700" />
+                표준 정보 플랫폼
+              </h3>
+              <p className="text-sm text-gray-700">국가·업체·비용·절차를 표준 포맷으로 제공하고, 후속 지원은 GCC 내부 챗서비스에서 통합 안내합니다.</p>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-sm">
-              <h3 className="font-bold text-gray-900 mb-2">📊 DAL 서비스 연동</h3>
-              <p className="text-sm text-gray-700">법률 상담, 의료·교육 정보까지. 다문화 가족 맞춤형 케어로 확장.</p>
+              <h3 className="font-bold text-gray-900 mb-2 flex items-center gap-2">
+                <SymbolIcon symbol="📊" className="h-5 w-5 text-primary-700" />
+                DAL 서비스 연동
+              </h3>
+              <p className="text-sm text-gray-700">정착 이후 필요한 의료·교육·상담 정보로 확장하며, 다문화 가족 맞춤형 케어 흐름을 강화합니다.</p>
             </div>
           </div>
         </div>
@@ -1112,7 +1331,9 @@ export default function MarriageService() {
 function InfoCard({ title, desc, icon }: { title: string; desc: string; icon: string }) {
   return (
     <div className="bg-gray-50 rounded-xl p-6 shadow-sm text-center hover:shadow-md transition-shadow">
-      <div className="text-3xl mb-2">{icon}</div>
+      <div className="mb-2 flex justify-center text-primary-700">
+        <SymbolIcon symbol={icon} className="h-7 w-7" />
+      </div>
       <div className="font-semibold text-gray-900 mb-1">{title}</div>
       <div className="text-sm text-gray-700">{desc}</div>
     </div>
@@ -1122,7 +1343,9 @@ function InfoCard({ title, desc, icon }: { title: string; desc: string; icon: st
 function ModuleCard({ title, desc, icon }: { title: string; desc: string; icon: string }) {
   return (
     <div className="bg-gray-50 rounded-xl p-6 shadow text-center hover:shadow-md transition-shadow">
-      <div className="text-3xl mb-2">{icon}</div>
+      <div className="mb-2 flex justify-center text-primary-700">
+        <SymbolIcon symbol={icon} className="h-7 w-7" />
+      </div>
       <div className="font-semibold text-gray-900 mb-1">{title}</div>
       <div className="text-sm text-gray-600">{desc}</div>
     </div>

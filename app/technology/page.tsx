@@ -278,14 +278,14 @@ export default function Technology() {
       desc: 'AI 주치의 + 케어로그로 개인 맞춤 의료와 병원 매칭을 지원',
       bullets: ['진료요약/검사/복약·상호작용 기록', '생활요법·자가관리 권고', '병원 매칭 & 주치의 리포트'],
       icon: 'stethoscope',
-      href: '/services/health?type=general'
+      href: '/services/healthcare?type=general'
     },
     {
       name: '토탈케어로그 · 한방의학',
       desc: '한의 진단·처방·경과를 표준 기록으로 통합, 체질·생활양식 기반 권고',
       bullets: ['침/한약/물리요법 효과 추적', '증상·맥진·설진 기록 구조화', '체질·환경 맥락 기반 권고'],
       icon: 'leaf',
-      href: '/services/health?type=oriental'
+      href: '/services/healthcare?type=oriental'
     }
   ]
 

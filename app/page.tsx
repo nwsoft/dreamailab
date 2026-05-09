@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     '드림에이아이랩(DAL)은 돌봄·의료·교육 데이터를 표준화하는 플랫폼 기업입니다. AI디지털케어로그로 하나의 데이터 인프라 위에 발달장애, 시니어, 의료, 교육, 글로벌커플케어, 라이프스타일 6개 핵심 도메인을 연결합니다.',
   keywords:
-    '발달장애 치료, ADHD 치료, 자폐증 치료, 특수교육, 언어치료, 작업치료, 노인돌봄, 요양원, 주간보호센터, 재가요양, 노인장기요양보험, 요양시설, 돌봄센터, 채식, 비건, 베지테리안, 채식식단, 비건레시피, 채식식당, 온라인진료, AI진단, 건강관리, 만성질환관리, 복약관리, 의료AI, 진단지원, 국제결혼, 다문화가정, 결혼중개, 드림에이아이랩',
+    '발달장애 치료, ADHD 치료, 자폐증 치료, 특수교육, 언어치료, 작업치료, 노인돌봄, 요양원, 주간보호센터, 재가요양, 노인장기요양보험, 요양시설, 돌봄센터, 채식, 비건, 베지테리안, 채식식단, 비건레시피, 채식식당, 온라인진료, AI진단, 건강관리, 만성질환관리, 복약관리, 의료AI, 진단지원, 국제결혼, 다문화가정, 국제결혼정보플랫폼, 드림에이아이랩',
   openGraph: {
     title: '드림에이아이랩 | AI디지털케어로그로 의료·돌봄·교육 혁신하는 DAL',
     description:
@@ -335,7 +335,7 @@ export default function Home() {
           <div className="w-full max-w-5xl mx-auto mb-14 rounded-2xl overflow-hidden border border-blue-100 shadow-sm bg-white">
             <picture>
               <source media="(max-width: 768px)" srcSet="/images/services/platform-hub-mobile.svg" />
-              <img src="/images/services/platform-hub.svg" alt="DAL 플랫폼 허브 구조" className="w-full h-auto" />
+              <img src="/images/services/platform-hub.svg" alt="DAL 플랫폼 허브 구조" className="w-full h-auto object-contain" loading="lazy" decoding="async" />
             </picture>
           </div>
 
@@ -349,7 +349,7 @@ export default function Home() {
           <div className="w-full max-w-5xl mx-auto mb-10 rounded-2xl overflow-hidden border border-indigo-100 shadow-sm bg-white">
             <picture>
               <source media="(max-width: 768px)" srcSet="/images/services/service-flow-mobile.svg" />
-              <img src="/images/services/service-flow.svg" alt="DAL 서비스 간 연결 흐름" className="w-full h-auto" />
+              <img src="/images/services/service-flow.svg" alt="DAL 서비스 간 연결 흐름" className="w-full h-auto object-contain" loading="lazy" decoding="async" />
             </picture>
           </div>
 

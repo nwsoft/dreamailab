@@ -333,11 +333,13 @@ export default function EduCareLogService() {
             다섯 단계는 한 학생의 맞춤 루프입니다. 본문과 도표는 같은 순서·용어를 씁니다.
           </p>
           <div className="rounded-2xl overflow-hidden border border-indigo-100 bg-white shadow-sm max-w-5xl mx-auto">
-            <img
-              src="/images/services/educarelog-platform-flow.svg"
-              alt="에듀케어로그 플랫폼: 수집, 분석, 맞춤 경로, 실행, 환류의 다섯 단계 루프와 DAL 교육 축"
-              className="w-full h-auto"
-            />
+            <picture>
+              <source media="(max-width: 768px)" srcSet="/images/services/educarelog-platform-flow-mobile.svg" />
+              <img
+                src="/images/services/educarelog-platform-flow.svg"
+                alt="에듀케어로그 플랫폼: 수집, 분석, 맞춤 경로, 실행, 환류의 다섯 단계 루프와 DAL 교육 축"
+                className="w-full h-auto object-contain" loading="lazy" decoding="async" />
+            </picture>
           </div>
         </div>
       </section>
@@ -861,8 +863,7 @@ export default function EduCareLogService() {
             <img
               src="/images/services/educarelog-system-compare.svg"
               alt="일반 교육 스택과 에듀케어로그: 부가 도구 대 인프라 엔진 위치 비교"
-              className="w-full h-auto"
-            />
+              className="w-full h-auto object-contain" loading="lazy" decoding="async" />
           </div>
 
           <div className="space-y-6">

@@ -438,10 +438,13 @@ export default function JarameService() {
           </p>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div className="rounded-2xl overflow-hidden border border-blue-100 bg-white shadow-sm">
-              <img src="/images/services/jarame-data-flow.svg" alt="자람이 데이터 흐름 구조도" className="w-full h-auto" />
+              <picture>
+                <source media="(max-width: 768px)" srcSet="/images/services/jarame-data-flow-mobile.svg" />
+                <img src="/images/services/jarame-data-flow.svg" alt="자람이 데이터 흐름 구조도" className="w-full h-auto object-contain" loading="lazy" decoding="async" />
+              </picture>
             </div>
             <div className="rounded-2xl overflow-hidden border border-blue-100 bg-white shadow-sm">
-              <img src="/images/services/jarame-care-loop.svg" alt="자람이 케어 루프 구조도" className="w-full h-auto" />
+              <img src="/images/services/jarame-care-loop.svg" alt="자람이 케어 루프 구조도" className="w-full h-auto object-contain" loading="lazy" decoding="async" />
             </div>
           </div>
         </div>
