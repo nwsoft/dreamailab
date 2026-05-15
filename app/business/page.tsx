@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { absoluteUrl, defaultOpenGraph, defaultTwitter } from '../../lib/seo'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import Link from 'next/link'
@@ -8,28 +9,20 @@ export const metadata: Metadata = {
   title: '비즈니스·투자 - B2B 솔루션 & 파트너십 | 드림에이아이랩',
   description:
     'DAL의 핵심기술 AI디지털케어로그 기반 B2B 솔루션, 파트너십, 투자 포인트를 확인하세요. 창업자 정해성이 고안한 디지털케어로그를 바탕으로 표준화·기관 풀·파일럿을 전개하는 포트폴리오와 사회적 임팩트를 제시합니다.',
-  keywords: 'B2B, 파트너십, 투자, AI 솔루션, 표준화, 사회적 가치, 비즈니스 모델, 드림에이아이랩, 디지털케어로그, AI디지털케어로그, 정해성, 창업자, 개발자, 베지케어, 에듀케어로그, 토탈케어로그, 발달장애, 치매연구, 노인질병',
+  alternates: { canonical: absoluteUrl('/business') },
   openGraph: {
     title: '비즈니스·투자 - B2B 솔루션 & 파트너십 | 드림에이아이랩',
     description: 'DAL의 AI디지털케어로그 포트폴리오, 기관·연계 풀과 표준화 진행, B2B 솔루션을 확인하세요.',
-    url: 'https://dreamailab.com/business',
-    siteName: '드림에이아이랩',
-    images: [
-      {
-        url: '/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: '드림에이아이랩 비즈니스',
-      },
-    ],
-    locale: 'ko_KR',
+    url: absoluteUrl('/business'),
+    siteName: defaultOpenGraph.siteName,
+    images: defaultOpenGraph.images,
+    locale: defaultOpenGraph.locale,
     type: 'website',
   },
   twitter: {
-    card: 'summary_large_image',
+    ...defaultTwitter,
     title: '비즈니스·투자 - B2B 솔루션 & 파트너십 | 드림에이아이랩',
     description: 'DAL의 AI디지털케어로그 포트폴리오, 기관·연계 풀과 표준화 진행, B2B 솔루션을 확인하세요.',
-    images: ['/og-image.png'],
   },
 }
 

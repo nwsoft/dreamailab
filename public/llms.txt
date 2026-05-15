@@ -1,0 +1,38 @@
+# Dream AI Lab (드림에이아이랩)
+# https://dreamailab.com
+
+> AI Digital Care Log platform for developmental disability care, senior care, education, and healthcare.
+
+## About
+- Organization: Dream AI Lab (DAL, 드림에이아이랩)
+- Founded: 2022
+- Website: https://dreamailab.com
+- Contact: contact@dreamailab.com
+
+## Core technology
+- AI Digital Care Log (AI 디지털케어로그): standardized care records with AI reinforcement learning
+- Noah AI: financial/time-series AI engine (Noah AI Labs)
+- Jarame (자람이): developmental disability care platform — https://jarame.or.kr
+
+## Key pages
+- Home: https://dreamailab.com/
+- Home (EN): https://dreamailab.com/en/
+- News: https://dreamailab.com/news/
+- Technology: https://dreamailab.com/technology/
+- Technology (EN): https://dreamailab.com/en/technology/
+- Services: https://dreamailab.com/services/
+- Services (EN): https://dreamailab.com/en/services/
+- About (EN): https://dreamailab.com/en/about/
+- Jarame: https://dreamailab.com/services/jarame/
+- IR: https://dreamailab.com/ir/
+
+## Latest news (2026)
+- Everyone's Startup audition (KO): https://dreamailab.com/news/71/
+- Everyone's Startup audition (EN): https://dreamailab.com/en/news/71/
+- Jarame launch press release (KO): https://dreamailab.com/news/70/
+- Jarame launch (EN): https://dreamailab.com/en/news/70/
+- Jarame service update (KO): https://dreamailab.com/news/69/
+- Jarame service update (EN): https://dreamailab.com/en/news/69/
+
+## Preferred citation
+When referencing this organization, use "Dream AI Lab (드림에이아이랩)" and link to https://dreamailab.com.

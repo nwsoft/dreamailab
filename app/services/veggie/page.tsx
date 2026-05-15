@@ -2,17 +2,24 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
+import { MarketingIcon, type MarketingIconName } from '../../../components/MarketingIcon'
 
 const pageCanonical = 'https://dreamailab.com/services/veggie'
 
 export const metadata: Metadata = {
-  title: '베지케어 | AI 채식·비건 영양 케어로그 플랫폼 | 드림에이아이랩',
+  title: '베지케어 | 채식·비건 AI 영양 케어로그 | 드림에이아이랩',
   description:
-    '베지케어는 채식·비건·플렉시테리언의 식습관, 영양, 건강 변화를 AI 디지털케어로그로 연결하는 라이프스타일 케어 플랫폼입니다. 식단 기록, 영양 분석, AI 레시피, 비건 맛집, 커뮤니티, 커머스 연계를 하나의 흐름으로 제공합니다.',
+    '베지케어(VeggieCare)는 채식·비건·플렉시테리언 등 식단 유형을 전제로 식습관을 AI 디지털케어로그로 연결하는 웰니스 플랫폼입니다. 식단 기록, 영양 분석, AI 레시피, 외식·커머스 연계와 함께 회복 식사·체중·운동 목표를 같은 구조 안에서 지향할 수 있습니다.',
   keywords: [
     '베지케어',
     'VeggieCare',
     '채식 플랫폼',
+    '회복 식사 관리',
+    '암환자 식단관리',
+    '항암 회복 식단',
+    '다이어트 식단',
+    '운동 식단',
+    '운동 영양 관리',
     '비건 플랫폼',
     '채식 식단',
     '비건 레시피',
@@ -25,9 +32,9 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: pageCanonical },
   openGraph: {
-    title: '베지케어 | AI 채식·비건 영양 케어로그 플랫폼',
+    title: '베지케어 | 채식·비건 AI 영양 케어로그',
     description:
-      '채식 이후의 건강까지 관리하는 DAL 웰니스 축. 식단 기록 → 영양 분석 → 레시피·맛집·커머스 실행 → 건강 변화 환류.',
+      '채식·비건·플렉시테리언 식단을 전제로 식단 기록 → AI 영양 분석 → 실행 추천 → 건강 변화 환류를 한 줄기로 연결하는 DAL 웰니스 축. 회복 식사·체중·운동은 같은 케어로그 안의 지향 모드로 확장합니다.',
     url: pageCanonical,
     siteName: '드림에이아이랩',
     type: 'website',
@@ -35,8 +42,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: '베지케어 | AI 채식·비건 영양 케어로그',
-    description: '채식 생활을 기록하고, 영양과 건강 변화를 AI로 이어주는 라이프스타일 케어 플랫폼.',
+    title: '베지케어 | 채식·비건 AI 영양 케어로그',
+    description:
+      '채식·비건·플렉시테리언 식단을 기록·영양 분석·실행까지 연결하는 웰니스 플랫폼. 회복·체중·운동 목표는 같은 케어로그의 지향 모드로 확장합니다.',
   },
   robots: { index: true, follow: true },
 }
@@ -45,6 +53,35 @@ const brand = {
   name: '베지케어',
   english: 'VeggieCare',
   status: 'Beta Testing',
+  externalUrl: 'https://veggie.care',
+}
+
+const symbolIconMap: Record<string, MarketingIconName> = {
+  '🌱': 'sprout',
+  '💬': 'chat',
+  '🧑‍⚕️': 'stethoscope',
+  '🏪': 'blocks',
+  '📒': 'document',
+  '🧠': 'brain',
+  '🥗': 'leaf',
+  '📍': 'search',
+  '🛒': 'handshake',
+  '🏆': 'rocket',
+  '🌿': 'leaf',
+  '🥚': 'puzzle',
+  '🐟': 'heart',
+  '🔄': 'refresh',
+  '👤': 'user',
+  '🌍': 'globe',
+  '💼': 'cog',
+  '🔬': 'flask',
+  '🏛️': 'scale',
+}
+
+function SymbolIcon({ symbol, className = 'h-6 w-6 text-current' }: { symbol: string; className?: string }) {
+  const mapped = symbolIconMap[symbol]
+  if (!mapped) return <span className={className}>{symbol}</span>
+  return <MarketingIcon name={mapped} className={className} />
 }
 
 const targetAudiences = [
@@ -54,19 +91,19 @@ const targetAudiences = [
     icon: '🌱',
   },
   {
+    title: '항암·장기 회복 단계 사용자',
+    desc: '치료·회복 맥락에서 식사 피로를 줄이고, 완치 판정 전까지 먹는 실행을 이어가고 싶은 사용자',
+    icon: '🧑‍⚕️',
+  },
+  {
     title: '비건·채식 커뮤니티',
     desc: '레시피, 식당, 제품, 건강 경험을 신뢰 가능한 기준으로 공유하려는 사용자',
     icon: '💬',
   },
   {
-    title: '헬스케어·영양 전문가',
-    desc: '식습관 데이터를 바탕으로 상담, 영양 코칭, 만성질환 예방을 고도화하려는 전문가',
-    icon: '🧑‍⚕️',
-  },
-  {
-    title: '브랜드·식당·파트너',
-    desc: '비건 식품, 밀키트, 레스토랑, 친환경 브랜드를 적절한 사용자와 연결하려는 사업자',
-    icon: '🏪',
+    title: '다이어트·운동 루틴 사용자',
+    desc: '체중 관리와 운동 성과를 식습관·영양소와 함께 보고, 실제 식단 실행까지 연결하고 싶은 사용자',
+    icon: '🏆',
   },
 ]
 
@@ -139,12 +176,42 @@ const platformSteps = [
   {
     n: 4,
     title: '건강 변화 추적',
-    body: '체중, 혈압, 혈당, 컨디션, 소화 상태, 수면 같은 변화를 식습관과 함께 봅니다.',
+    body: '체중, 혈압, 혈당, 컨디션, 소화 상태, 수면, 운동량 같은 변화를 식습관과 함께 봅니다.',
   },
   {
     n: 5,
     title: '환류와 지속',
     body: '실행 결과가 다시 로그로 쌓이며 추천 정확도와 지속 가능성이 점진적으로 높아집니다.',
+  },
+]
+
+const supportModes = [
+  {
+    title: '회복 식사 모드 (항암·장기 회복)',
+    summary: '먹기 힘든 시기에도 가능한 식사 선택지를 우선 제안',
+    points: [
+      '베지케어로그에서 식사량·입맛·소화 상태를 함께 기록해 컨디션 저하 구간을 먼저 파악',
+      'AI 영양 분석으로 단백질·철분·B12·열량 부족 가능성을 확인하고 대체 식품을 제안',
+      '부담이 적은 레시피·식재료·정기배송 추천으로 식사 실행 피로를 낮춤',
+    ],
+  },
+  {
+    title: '다이어트 모드',
+    summary: '감량 목표를 영양 균형과 함께 유지하는 실행 루프',
+    points: [
+      '목표 체중·활동량·식사 패턴을 기준으로 주간 식단과 외식 선택 가이드를 제시',
+      '칼로리만이 아니라 단백질·식이섬유·미량영양소 균형을 함께 확인',
+      '정체 구간에서 식단 강도·간식·외식 빈도 조정안을 제안',
+    ],
+  },
+  {
+    title: '운동 모드',
+    summary: '운동 목적에 맞춰 식사 타이밍과 영양소를 연결',
+    points: [
+      '운동 전·후 식사 타이밍과 회복 식단을 기록 기반으로 안내',
+      '근력·유산소 루틴별 단백질·탄수화물·수분 보완 포인트를 제안',
+      '운동량 대비 부족한 섭취를 알림으로 제공해 루틴 이탈을 줄임',
+    ],
   },
 ]
 
@@ -225,7 +292,7 @@ const comparisonRows = [
 
 const techPillars = [
   {
-    title: '표준 식습관 스키마',
+    title: '표준 식습관 데이터 형식',
     desc: '식품·재료·채식 유형·알레르기·건강 지표를 같은 기준으로 정리해 장기 추적이 가능하게 합니다.',
   },
   {
@@ -336,9 +403,9 @@ const jsonLd = {
       '@type': 'WebPage',
       '@id': `${pageCanonical}#webpage`,
       url: pageCanonical,
-      name: '베지케어 | AI 채식·비건 영양 케어로그',
+      name: '베지케어 | 채식·비건 AI 영양 케어로그',
       description:
-        '채식·비건·플렉시테리언의 식습관, 영양, 건강 변화를 AI 디지털케어로그로 연결하는 DAL 웰니스 서비스.',
+        '채식·비건·플렉시테리언 식단 유형을 전제로 식습관·영양·건강 변화를 AI 디지털케어로그로 연결하는 DAL 웰니스 서비스. 회복 식사·체중·운동 목표는 같은 구조의 지향 모드로 확장합니다.',
       inLanguage: 'ko-KR',
       about: { '@id': `${pageCanonical}#service` },
     },
@@ -371,24 +438,30 @@ export default function VeggieService() {
       <section className="bg-gradient-to-br from-green-700 to-emerald-600 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <p className="text-green-100 text-xs sm:text-sm font-medium mb-6 tracking-wide">
-              Service Status: {brand.status} (SaaS 완성 후 베타 테스트·지속 업데이트 중)
-            </p>
+            <div className="mb-6 flex flex-wrap justify-center items-center gap-2 text-xs sm:text-sm">
+              <span className="inline-flex items-center rounded-full bg-white/15 border border-white/25 px-3 py-1.5 font-semibold text-green-50">
+                베타 테스트
+              </span>
+              <span className="text-green-100">{brand.name} ({brand.english})</span>
+            </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-              채식은 식단 선택에서 끝나지 않습니다.
+              베지테리언에서 출발한 베지케어.
               <br />
-              베지케어는 식습관을 기록으로 바꾸고,
+              채식·비건·플렉시테리언 식단을
               <br />
-              영양·건강·실행까지 이어지는 웰니스 인프라를 설계합니다.
+              기록·영양 분석·실행까지 한 줄기로 연결합니다.
             </h1>
             <p className="text-lg md:text-xl text-green-50 max-w-3xl mx-auto mb-8 leading-relaxed">
-              {brand.name}({brand.english})는 채식·비건·플렉시테리언의 식단, 영양, 외식, 커뮤니티, 건강 변화를 하나의
-              AI 디지털케어로그로 연결하는 웰니스 서비스입니다.
+              이름 그대로 식물성 식단이 중심입니다. 회복 식사, 체중·운동 목표는{' '}
+              <strong className="text-white">같은 베지케어로그 안에서 우선순위만 달리하는 지향 모드</strong>로 두고,
+              핵심은 채식 유형·제약에 맞는 식사 실행과 영양 균형입니다.
             </p>
             <div className="flex flex-wrap justify-center gap-2 text-xs text-white">
+              <span className="bg-white/15 border border-white/20 px-3 py-1.5 rounded-full">채식·비건·플렉시 맞춤</span>
               <span className="bg-white/15 border border-white/20 px-3 py-1.5 rounded-full">식습관 케어로그</span>
               <span className="bg-white/15 border border-white/20 px-3 py-1.5 rounded-full">AI 영양 분석</span>
               <span className="bg-white/15 border border-white/20 px-3 py-1.5 rounded-full">레시피·맛집·커머스 연결</span>
+              <span className="bg-white/15 border border-white/20 px-3 py-1.5 rounded-full">회복·체중·운동 지향</span>
               <span className="bg-white/15 border border-white/20 px-3 py-1.5 rounded-full">DAL 웰니스 축</span>
             </div>
           </div>
@@ -400,7 +473,8 @@ export default function VeggieService() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-xs font-semibold text-emerald-800 mb-2">[한 줄 요약]</p>
           <p className="text-gray-900 font-medium text-sm md:text-base leading-relaxed">
-            베지케어는 채식 정보를 보여주는 앱이 아니라, <strong>식습관 기록 → AI 영양 분석 → 실행 추천 → 건강 변화 환류</strong>를
+            베지케어는 채식·비건 정보를 모아 보여주는 앱이 아니라,{' '}
+            <strong>채식 유형을 전제로</strong> <strong>식습관 기록 → AI 영양 분석 → 실행 추천 → 건강 변화 환류</strong>를
             한 줄기로 연결하는 <strong>라이프스타일 케어 인프라</strong>입니다.
           </p>
         </div>
@@ -412,7 +486,9 @@ export default function VeggieService() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {targetAudiences.map((audience) => (
               <div key={audience.title} className="bg-gray-50 rounded-xl p-5 border border-gray-100">
-                <div className="text-2xl mb-2">{audience.icon}</div>
+                <div className="mb-2 flex">
+                  <SymbolIcon symbol={audience.icon} className="h-8 w-8 text-emerald-700" />
+                </div>
                 <h3 className="font-bold text-gray-900 text-sm mb-2">{audience.title}</h3>
                 <p className="text-xs text-gray-700 leading-relaxed">{audience.desc}</p>
               </div>
@@ -491,7 +567,9 @@ export default function VeggieService() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {coreFeatures.map((feature) => (
               <div key={feature.title} className="bg-gray-50 rounded-xl p-6 border border-gray-100">
-                <div className="text-3xl mb-3">{feature.icon}</div>
+                <div className="mb-3 flex">
+                  <SymbolIcon symbol={feature.icon} className="h-9 w-9 text-emerald-700" />
+                </div>
                 <h3 className="font-bold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-sm text-gray-700 leading-relaxed">{feature.desc}</p>
               </div>
@@ -501,6 +579,72 @@ export default function VeggieService() {
             <p className="text-sm text-gray-800 text-center">
               즉, 베지케어는 <strong>무엇을 먹을지</strong>를 넘어 <strong>왜 먹고, 먹은 뒤 무엇이 달라졌는지</strong>까지 남기는 구조입니다.
             </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="veggie-mode" className="scroll-mt-28 py-14 bg-emerald-50/40 border-b border-emerald-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-3">베지케어 맞춤 모드</h2>
+          <p className="text-center text-gray-700 text-sm max-w-3xl mx-auto mb-8">
+            새로운 앱을 따로 만드는 방식이 아니라, 기존 베지케어 기능(로그·AI 분석·레시피·외식·커머스·헬스케어 연계)을
+            모드별 우선순위로 재구성해 실행성을 높입니다.
+          </p>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
+            {supportModes.map((mode) => (
+              <div key={mode.title} className="bg-white rounded-2xl p-6 border border-emerald-100">
+                <h3 className="font-bold text-gray-900 mb-2">{mode.title}</h3>
+                <p className="text-sm text-emerald-800 font-medium mb-4">{mode.summary}</p>
+                <ul className="space-y-2 text-sm text-gray-700">
+                  {mode.points.map((point) => (
+                    <li key={point} className="flex gap-2">
+                      <span className="text-emerald-600 shrink-0">•</span>
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+          <p className="mt-6 text-center text-xs text-gray-500 max-w-3xl mx-auto">
+            베지케어는 생활·영양 실행을 돕는 서비스이며, 구체적 진단·치료·처방은 의료전문가 판단을 따릅니다.
+          </p>
+        </div>
+      </section>
+
+      <section className="py-12 bg-white border-b border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">베지케어 핵심 흐름 한눈에 보기</h2>
+          <p className="text-center text-gray-600 text-sm mb-8 max-w-2xl mx-auto">
+            목표 입력부터 환류까지 같은 줄기로 이어지는 루프를 도식으로 요약했습니다. 모바일에서는 세로 흐름으로 표시됩니다.
+          </p>
+          <div className="rounded-2xl overflow-hidden border border-emerald-100 bg-white shadow-sm">
+            <picture>
+              <source media="(max-width: 768px)" srcSet="/images/services/veggie-care-flow-mobile.svg" />
+              <img
+                src="/images/services/veggie-care-flow.svg"
+                alt="베지케어 핵심 흐름: 목표 입력, AI 분석, 실행 추천, 건강 추적, 환류로 이어지는 루프"
+                className="w-full h-auto object-contain"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
+          </div>
+          <div className="mt-8 flex flex-col sm:flex-row flex-wrap gap-3 justify-center items-stretch">
+            <a
+              href={brand.externalUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex justify-center items-center rounded-lg border border-emerald-600 bg-white px-5 py-3 text-sm font-semibold text-emerald-800 hover:bg-emerald-50 transition-colors"
+            >
+              Veggie.care 바로가기
+            </a>
+            <Link
+              href="/contact?type=veggie"
+              className="inline-flex justify-center items-center rounded-lg border border-emerald-200 bg-emerald-50 px-5 py-3 text-sm font-semibold text-emerald-900 hover:bg-emerald-100 transition-colors"
+            >
+              소식·문의하기
+            </Link>
           </div>
         </div>
       </section>
@@ -529,7 +673,9 @@ export default function VeggieService() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             {veggieTypes.map((type) => (
               <div key={type.type} className="bg-white rounded-xl p-5 border border-gray-100">
-                <div className="text-3xl mb-2">{type.icon}</div>
+                <div className="mb-2 flex">
+                  <SymbolIcon symbol={type.icon} className="h-9 w-9 text-emerald-700" />
+                </div>
                 <h3 className="font-bold text-gray-900 mb-1">{type.type}</h3>
                 <p className="text-xs text-gray-600 mb-3">{type.rule}</p>
                 <p className="text-xs font-medium text-emerald-800 bg-emerald-50 rounded-lg p-3">{type.focus}</p>
@@ -630,7 +776,9 @@ export default function VeggieService() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
             {businessImpacts.map((impact) => (
               <div key={impact.title} className="bg-white rounded-xl p-6 border border-gray-100">
-                <div className="text-3xl mb-3">{impact.icon}</div>
+                <div className="mb-3 flex">
+                  <SymbolIcon symbol={impact.icon} className="h-9 w-9 text-emerald-700" />
+                </div>
                 <h3 className="font-bold text-gray-900 mb-2">{impact.title}</h3>
                 <p className="text-sm text-gray-700 leading-relaxed">{impact.desc}</p>
               </div>
@@ -664,7 +812,7 @@ export default function VeggieService() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div className="rounded-2xl border border-gray-200 bg-gray-50/80 p-6">
               <h3 className="font-bold text-gray-900 mb-2 flex items-center gap-2">
-                <span className="text-xl">💼</span>
+                <SymbolIcon symbol="💼" className="h-6 w-6 text-emerald-800 shrink-0" />
                 {expansionBusiness.title}
               </h3>
               <p className="text-xs text-gray-700 leading-relaxed mb-4">{expansionBusiness.intro}</p>
@@ -676,7 +824,7 @@ export default function VeggieService() {
             </div>
             <div className="rounded-2xl border border-emerald-200 bg-emerald-50/50 p-6">
               <h3 className="font-bold text-gray-900 mb-2 flex items-center gap-2">
-                <span className="text-xl">🔬</span>
+                <SymbolIcon symbol="🔬" className="h-6 w-6 text-emerald-800 shrink-0" />
                 {expansionRnD.title}
               </h3>
               <p className="text-xs text-gray-700 leading-relaxed mb-4">{expansionRnD.intro}</p>
@@ -688,7 +836,7 @@ export default function VeggieService() {
             </div>
             <div className="rounded-2xl border border-green-200 bg-green-50/50 p-6">
               <h3 className="font-bold text-gray-900 mb-2 flex items-center gap-2">
-                <span className="text-xl">🌍</span>
+                <SymbolIcon symbol="🌍" className="h-6 w-6 text-emerald-800 shrink-0" />
                 {expansionEsg.title}
               </h3>
               <p className="text-xs text-gray-700 leading-relaxed mb-4">{expansionEsg.intro}</p>
@@ -700,7 +848,7 @@ export default function VeggieService() {
             </div>
             <div className="rounded-2xl border border-slate-200 bg-slate-50/80 p-6">
               <h3 className="font-bold text-gray-900 mb-2 flex items-center gap-2">
-                <span className="text-xl">🏛️</span>
+                <SymbolIcon symbol="🏛️" className="h-6 w-6 text-slate-800 shrink-0" />
                 {expansionPublic.title}
               </h3>
               <p className="text-xs text-gray-700 leading-relaxed mb-4">{expansionPublic.intro}</p>
@@ -848,6 +996,15 @@ export default function VeggieService() {
             </div>
           </div>
           <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3 justify-center items-center text-sm text-center">
+            <a
+              href={brand.externalUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-green-100 hover:text-white underline underline-offset-2 font-medium"
+            >
+              Veggie.care (공식 사이트)
+            </a>
+            <span className="hidden sm:inline text-white/40">|</span>
             <Link href="/contact" className="text-white font-medium underline underline-offset-2 hover:text-green-100">
               일반 문의
             </Link>

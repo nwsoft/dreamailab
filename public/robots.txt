@@ -4,8 +4,8 @@ Allow: /
 # Sitemap
 Sitemap: https://dreamailab.com/sitemap.xml
 
-# Crawl-delay
-Crawl-delay: 1
+# AI crawlers / llms.txt
+# See https://dreamailab.com/llms.txt
 
 # 실제 사용자 검색 키워드
 # 발달장애 치료, ADHD 치료, 자폐증 치료, 특수교육, 언어치료, 작업치료

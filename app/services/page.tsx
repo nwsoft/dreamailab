@@ -2,28 +2,28 @@ import type { Metadata } from 'next'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import Link from 'next/link'
+import { absoluteUrl, buildBreadcrumbJsonLd, buildPageMetadata, buildWebPageJsonLd } from '../../lib/seo'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: '서비스 생태계 허브 - AI디지털케어로그 플랫폼 인프라 | 드림에이아이랩',
   description:
     'DAL은 다수의 앱을 나열하는 페이지가 아니라, 하나의 AI디지털케어로그 인프라 위에서 발달·돌봄·의료·교육·웰니스·가족 정착 도메인이 연결·확장되는 구조를 설명하는 허브입니다.',
-  keywords: '드림에이아이랩, DAL, 서비스 허브, 플랫폼 인프라, AI디지털케어로그, 자람이, 시니어앤라이프, 토탈케어로그, 글로벌커플케어, 에듀케어로그, 베지케어, VC, 공공, ESG, R&D',
-  openGraph: {
-    title: '서비스 생태계 허브 - 드림에이아이랩',
-    description: 'AI디지털케어로그 기반 6개 도메인이 어떻게 연결되고 확장되는지 한 페이지에서 확인하세요.',
-    url: 'https://dreamailab.com/services',
-    siteName: '드림에이아이랩',
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: '드림에이아이랩 서비스 포트폴리오' }],
-    locale: 'ko_KR',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: '서비스 생태계 허브 - 드림에이아이랩',
-    description: 'AI디지털케어로그 기반 6개 도메인 서비스 연결 구조',
-    images: ['/og-image.png'],
-  },
-}
+  path: '/services',
+  ogTitle: '서비스 생태계 허브 - 드림에이아이랩',
+  ogDescription: 'AI디지털케어로그 기반 6개 도메인이 어떻게 연결되고 확장되는지 한 페이지에서 확인하세요.',
+  ogImageAlt: '드림에이아이랩 서비스 포트폴리오',
+})
+
+const servicesPageUrl = absoluteUrl('/services')
+const servicesJsonLd = buildWebPageJsonLd({
+  name: '서비스 생태계 허브',
+  description: 'AI 디지털케어로그 기반 6개 도메인 서비스 연결 구조',
+  url: servicesPageUrl,
+})
+const servicesBreadcrumbJsonLd = buildBreadcrumbJsonLd([
+  { name: '홈', url: absoluteUrl('/') },
+  { name: '서비스', url: servicesPageUrl },
+])
 
 const services = [
   {
@@ -144,6 +144,14 @@ export default function ServicePortfolio() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesBreadcrumbJsonLd) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

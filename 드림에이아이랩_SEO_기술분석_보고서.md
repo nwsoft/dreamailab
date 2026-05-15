@@ -4,6 +4,24 @@
 
 드림에이아이랩(DreamAILab) 웹사이트의 SEO 최적화 현황과 기술 스택을 종합적으로 분석한 보고서입니다. 2025년 SEO 트렌드에 맞춰 키워드 밀도 중심에서 사용자 가치 중심으로 전환하여 개선되었습니다.
 
+## 🆕 2026년 5월 적용 현황 (최신)
+
+### 완료된 개선
+- **`public/og-image.png`**, **`public/logo.png`** 배포용 OG 이미지 추가
+- **`lib/seo.ts`** — `buildPageMetadata`, `buildNewsArticleJsonLd`, `absoluteUrl`(trailing slash·확장자 처리)
+- **뉴스 상세** — OG/Twitter/canonical/`NewsArticle` JSON-LD/Breadcrumb/hreflang
+- **다국어(부분)** — `/en/`, `/en/about/`, `/en/services/`, `/en/technology/`, `/en/news/[id]/` (기사 71·70·69 영문)
+- **`app/sitemap.ts`** — trailing slash 통일, EN URL·뉴스 동적 포함
+- **`app/robots.ts`**, **`public/llms.txt`** — AI 검색·크롤러 가이드
+- **루트 WebSite 스키마** — 존재하지 않던 SearchAction 제거
+- **홈·서비스·회사소개·비즈니스·연락처** — canonical·OG 통일, 일부 `keywords` 제거
+
+### 남은 권고
+- 서비스 개별 페이지·블로그 `keywords` 필드 정리
+- `next/image` 또는 CDN WebP로 LCP 개선 (`images.unoptimized: true` 유지 시 수동 최적화)
+- 전체 뉴스 기사 영문 확장 (`i18n.en` 패턴)
+- Search Console·Bing Webmaster 사이트맵 재제출
+
 ## 🎯 2025년 SEO 전략 개선사항
 
 ### 2025년 10월 재점검 요약 (신규)

@@ -3,29 +3,25 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Link from 'next/link'
 import { IconApi, IconInvest, IconPartners, IconPublic, IconUser } from '../components/home-intent-icons'
+import { absoluteUrl, buildPageMetadata } from '../lib/seo'
 
 export const metadata: Metadata = {
-  title: '드림에이아이랩 | AI디지털케어로그 기반 플랫폼 - DAL',
-  description:
-    '드림에이아이랩(DAL)은 돌봄·의료·교육 데이터를 표준화하는 플랫폼 기업입니다. AI디지털케어로그로 하나의 데이터 인프라 위에 발달장애, 시니어, 의료, 교육, 글로벌커플케어, 라이프스타일 6개 핵심 도메인을 연결합니다.',
-  keywords:
-    '발달장애 치료, ADHD 치료, 자폐증 치료, 특수교육, 언어치료, 작업치료, 노인돌봄, 요양원, 주간보호센터, 재가요양, 노인장기요양보험, 요양시설, 돌봄센터, 채식, 비건, 베지테리안, 채식식단, 비건레시피, 채식식당, 온라인진료, AI진단, 건강관리, 만성질환관리, 복약관리, 의료AI, 진단지원, 국제결혼, 다문화가정, 국제결혼정보플랫폼, 드림에이아이랩',
-  openGraph: {
-    title: '드림에이아이랩 | AI디지털케어로그로 의료·돌봄·교육 혁신하는 DAL',
+  ...buildPageMetadata({
+    title: '드림에이아이랩 | AI디지털케어로그 기반 플랫폼 - DAL',
     description:
-      '드림에이아이랩(DAL)은 AI디지털케어로그 표준으로 케어 혁신을 지향하는 기술 기업입니다. 표준화된 데이터와 멀티모달 AI 분석으로 개인 맞춤 케어의 새로운 표준을 만들고, 토탈케어로그부터 시니어 돌봄, 발달장애, 국제결혼, 라이프스타일 영역까지 같은 플랫폼 철학으로 확장합니다.',
-    url: 'https://dreamailab.com',
-    siteName: '드림에이아이랩',
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: '드림에이아이랩' }],
-    locale: 'ko_KR',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: '드림에이아이랩 | AI디지털케어로그로 의료·돌봄·교육 혁신하는 DAL',
-    description:
-      '드림에이아이랩(DAL)은 AI디지털케어로그 표준으로 케어 혁신을 지향하는 기술 기업입니다. 표준화된 데이터와 멀티모달 AI 분석으로 개인 맞춤 케어의 새로운 표준을 만들고, 토탈케어로그부터 시니어 돌봄, 발달장애, 국제결혼, 라이프스타일 영역까지 같은 플랫폼 철학으로 확장합니다.',
-    images: ['/og-image.png'],
+      '드림에이아이랩(DAL)은 돌봄·의료·교육 데이터를 표준화하는 플랫폼 기업입니다. AI디지털케어로그로 하나의 데이터 인프라 위에 발달장애, 시니어, 의료, 교육, 글로벌커플케어, 라이프스타일 6개 핵심 도메인을 연결합니다.',
+    path: '/',
+    ogTitle: '드림에이아이랩 | AI디지털케어로그로 의료·돌봄·교육 혁신하는 DAL',
+    ogDescription:
+      'AI디지털케어로그 표준으로 케어 혁신을 지향하는 기술 기업. 발달장애·시니어·의료·교육·글로벌커플케어·웰니스 도메인을 하나의 플랫폼으로 연결합니다.',
+    ogImageAlt: '드림에이아이랩',
+  }),
+  alternates: {
+    canonical: absoluteUrl('/'),
+    languages: {
+      'ko-KR': absoluteUrl('/'),
+      'en-US': absoluteUrl('/en'),
+    },
   },
 }
 
@@ -38,8 +34,8 @@ export default function Home() {
     alternateName: 'Dream AI Lab',
     description:
       '드림에이아이랩(DAL)은 AI디지털케어로그 표준으로 케어 혁신을 지향하는 기술 기업입니다. 표준화된 데이터와 멀티모달 AI 분석으로 개인 맞춤 케어의 새로운 표준을 만들고, 토탈케어로그부터 시니어 돌봄, 발달장애, 국제결혼, 라이프스타일 영역까지 같은 플랫폼 철학으로 확장합니다.',
-    url: 'https://dreamailab.com',
-    logo: 'https://dreamailab.com/logo.png',
+    url: absoluteUrl('/'),
+    logo: absoluteUrl('/logo.png'),
     founder: {
       '@type': 'Person',
       name: '정해성',

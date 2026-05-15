@@ -80,6 +80,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <head>
+        <link rel="preload" href="/og-image.png" as="image" type="image/png" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -167,11 +168,13 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebSite",
               "name": "드림에이아이랩",
+              "alternateName": "Dream AI Lab",
               "url": "https://dreamailab.com",
-              "potentialAction": {
-                "@type": "SearchAction",
-                "target": "https://dreamailab.com/search?q={query}",
-                "query-input": "required name=query"
+              "inLanguage": ["ko-KR", "en-US"],
+              "publisher": {
+                "@type": "Organization",
+                "name": "드림에이아이랩",
+                "url": "https://dreamailab.com"
               }
             })
           }}

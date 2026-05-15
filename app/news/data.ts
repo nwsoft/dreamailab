@@ -1,3 +1,9 @@
+export interface NewsArticleLocale {
+  title: string
+  excerpt: string
+  content: string
+}
+
 export interface NewsArticle {
   id: number
   title: string
@@ -9,9 +15,141 @@ export interface NewsArticle {
   featured: boolean
   author?: string
   tags?: string[]
+  /** 영문 등 추가 언어 (해당 locale 전용 페이지·hreflang·JSON-LD에 사용) */
+  i18n?: {
+    en?: NewsArticleLocale
+  }
+}
+
+export function hasEnglishTranslation(article: NewsArticle): boolean {
+  return Boolean(article.i18n?.en?.title && article.i18n?.en?.content)
+}
+
+export function getLocalizedArticle(
+  article: NewsArticle,
+  locale: 'ko' | 'en'
+): NewsArticle {
+  if (locale === 'en' && article.i18n?.en) {
+    return {
+      ...article,
+      title: article.i18n.en.title,
+      excerpt: article.i18n.en.excerpt,
+      content: article.i18n.en.content,
+    }
+  }
+  return article
 }
 
 export const newsArticles: NewsArticle[] = [
+  {
+    id: 71,
+    title: '[단독] 국내 최고 인공지능 아키텍트, 전 국민 창업 오디션 평정 나선다… 수천억 글로벌 투자 정조준',
+    excerpt: '국가대표 창업 오디션 \'모두의 창업\'에 2만 7천 대 1 경쟁 속 AI 디지털케어로그 개발자 정해성 연구자 팀이 출사표. 자람이·노아AI 융합 BM으로 발달장애·글로벌 투자 시장을 겨냥한다.',
+    category: 'press',
+    date: '2026-05-15',
+    image: '🚀',
+    featured: true,
+    author: '스타트업투데이 디지털뉴스팀',
+    tags: ['모두의창업', '정해성', 'AI 디지털케어로그', '자람이', '노아AI', '발달장애', '창업 오디션', '글로벌 투자', '드림에이아이랩'],
+    i18n: {
+      en: {
+        title: '[Exclusive] Korea\'s Top AI Architect Joins National Startup Audition, Targeting Billions in Global Investment',
+        excerpt: 'Researcher Jung Haesung\'s team enters "Everyone\'s Startup" amid 27,000-to-1 competition, combining Jarame and Noah AI to target developmental disability care and global capital markets.',
+        content: `
+      <p class="text-sm text-gray-500 mb-6">[Startup Today = Digital News Desk]</p>
+
+      <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-4">
+        ◼ A one-of-a-kind business model to beat 27,000-to-1 odds — committed to solving developmental disability and humanity's toughest challenges with technology that surpasses the judges
+      </p>
+
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        National startup audition <strong>"Everyone's Startup"</strong>, designed to discover innovators who will shake up Korea, has drawn nationwide attention. In a record-breaking survival format with more than 27,000 applicants, <strong>Jung Haesung</strong>, a top-tier AI architecture expert and the original inventor of <strong>AI Digital Care Log</strong> technology, has entered the race. His team has begun an overwhelming push toward the final round, armed with unmatched technical maturity.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">Architecture beyond mentors and judges — "This is not a simple idea"</h2>
+
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        While most teams remain at early planning stages, Jung's team already holds a hyper-precise architecture validated in the market — a fundamentally different starting line. Through Noah AI Labs, he previously proved financial AI capabilities with tens of thousands of ultra-precise time-series datasets and self-reinforcing learning via <strong>Noah AI</strong>. Industry observers say his architecture design skills exceed this competition's mentor and judge panels.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">Jarame × Noah AI fusion — a business model aimed at multi-trillion-won markets</h2>
+
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        The team's business model targets lifelong care for developmental disabilities — a field modern medicine has struggled to address. Dream AI Lab's <strong>Jarame</strong> platform protects sensitive care data with blockchain and links it to securities (ST/tokenized securities) for data assetization. Noah AI's feedback and group reinforcement algorithms evolve in real time from field data, building a sustainable high-quality data flywheel that global investors are watching closely.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">Aiming for the final round as a milestone for human welfare</h2>
+
+      <div class="bg-primary-50 border-l-4 border-primary-600 p-6 mb-8 rounded-r-lg">
+        <p class="text-lg text-gray-800 leading-relaxed italic">
+          "Based on the AI Digital Care Log technology I first conceived, we will fuse Dream AI Lab's Jarame with Noah AI Labs' Noah AI to solve humanity's welfare challenges — and prove our unmatched maturity on the Everyone's Startup final stage on the path to becoming a global unicorn."
+        </p>
+        <p class="text-gray-600 mt-3 text-sm">— Researcher Jung Haesung</p>
+      </div>
+
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        Nationwide attention is focused on this team's challenge to reshape multi-trillion-won global markets.
+      </p>
+
+      <p class="text-sm text-gray-500 border-t border-gray-200 pt-6">
+        &lt;Copyright © Startup Today. All rights reserved.&gt;
+      </p>
+    `
+      }
+    },
+    content: `
+      <p class="text-sm text-gray-500 mb-6">[스타트업투데이=디지털뉴스팀]</p>
+
+      <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-4">
+        ◼ 2만 7천 대 1 뚫을 독보적 BM… 심사위원 능가하는 기술력으로 발달장애·인류 난제 해결 사활
+      </p>
+
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        대한민국을 흔들 혁신 창업가를 발굴하는 국가대표 창업 오디션 <strong>'모두의 창업'</strong>에 전 국민의 이목이 쏠리고 있다. 신청서 기준 무려 2만 7,000여 명의 참가자가 몰린 역대급 서바이벌 구도 속에서, 국내 최고 수준의 인공지능(AI) 아키텍처 설계 전문가이자 <strong>'AI디지털케어로그(Digital Care Log)'</strong> 기술을 최초 고안·개발한 정해성 연구자가 출사표를 던졌다. 정 연구자 팀은 타의 추종을 불허하는 독보적인 기술 완성도를 무기로 파이널 라운드 진출을 향한 압도적인 레이스를 시작했다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">멘토와 심사위원을 뛰어넘는 아키텍처… "단순 아이디어가 아니다"</h2>
+
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        '모두의 창업' 프로젝트는 국민의 참신한 아이디어를 발굴해 유니콘 기업으로 육성하는 것을 목적으로 한다. 하지만 대다수 참가 팀이 초기 기획 단계에 머물러 있는 반면, 정 연구자 팀은 이미 시장에서 완벽하게 검증된 초정밀 아키텍처를 보유하고 있어 격이 다른 출발선을 보여준다.
+      </p>
+
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        실제로 정 연구자는 앞서 노아에이아이랩스(Noah AI Labs)를 통해 수만 가지 초정밀 금융 시계열 데이터와 자가강화 학습 기술력을 입증한 금융 인공지능 <strong>'노아AI'</strong>를 성공적으로 안착시킨 바 있다. 투자 업계에서는 정 연구자 팀의 아키텍처 설계 역량이 이번 대회의 심사위원진과 멘토단의 전문성을 상회한다는 평가까지 흘러나온다. 서바이벌의 단순한 경쟁자를 넘어, 기술적 마스터로서 무대에 선 셈이다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">'자람이'와 '노아AI'의 융합, 수조 원 불치 시장 겨냥한 완벽한 BM</h2>
+
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        정 연구자 팀이 제시한 비즈니스 모델(BM)은 현대 의학이 포기한 '평생 돌봄'의 영역, 즉 발달장애 치료 시장을 관통한다. 국내 예산만 수천억 원, 글로벌 시장 규모는 수조 원에 육박하지만 뚜렷한 치료법이 없어 방치됐던 이 시장에 드림에이아이랩의 발달장애 맞춤형 플랫폼 <strong>'자람이'</strong>를 투입한다. 민감한 돌봄 데이터를 블록체인으로 완벽히 보호하고 이를 증권(ST·토큰증권) 기술과 연계해 데이터 자산화를 이뤄내는 비즈니스 구조는 기술성과 사업성 모두 완벽하다는 찬사를 받고 있다.
+      </p>
+
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        특히 핵심 엔진인 노아AI의 환류(Feedback) 및 집단강화(Group Reinforcement) 알고리즘은 현장 데이터를 실시간 수집해 스스로 진화한다. 이는 일회성 아이디어가 아닌 지속 가능한 고품질 데이터 선순환 인프라다. 글로벌 투자 업계가 이미 관련 ETF(상장지수펀드) 조성과 수천억 원 규모의 글로벌 자본 투자를 전망하는 핵심 이유가 바로 여기에 있다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">파이널 라운드 정조준, 인류 복지의 위대한 이정표로</h2>
+
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        불치의 벽을 깨부수는 정 연구자의 혁신은 '모두의 창업'이 찾던 국가대표 창업가의 표본이자 기술적 완성도의 정점이다.
+      </p>
+
+      <div class="bg-primary-50 border-l-4 border-primary-600 p-6 mb-8 rounded-r-lg">
+        <p class="text-lg text-gray-800 leading-relaxed italic">
+          "최초 고안한 AI디지털케어로그 기술을 기반으로, 드림에이아이랩의 '자람이'와 노아에이아이랩스의 '노아AI'를 융합해 인류의 복지 난제를 해결하겠다. 이번 모두의 창업 파이널 무대에서 독보적인 완성도를 입증하고 글로벌 유니콘 기업으로 도약하겠다."
+        </p>
+        <p class="text-gray-600 mt-3 text-sm">— 정해성 연구자</p>
+      </div>
+
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        수조 원의 글로벌 시장을 뒤흔들 정 연구자 팀의 위대한 도전에 전 국민의 이목이 집중된다.
+      </p>
+
+      <p class="text-sm text-gray-500 border-t border-gray-200 pt-6">
+        &lt;저작권자 © 스타트업투데이 무단전재 및 재배포 금지&gt;
+      </p>
+    `
+  },
   {
     id: 70,
     title: '[보도자료] 드림에이아이랩, 세계 최초 발달장애 맞춤형 치료·학습 플랫폼 "자람이" 공식 출시 - 2026년 국가 시범사업 추진',
@@ -22,6 +160,36 @@ export const newsArticles: NewsArticle[] = [
     featured: true,
     author: '드림에이아이랩',
     tags: ['자람이', 'AI 디지털케어로그', '발달장애', '맞춤형 치료', '세계 최초', '국가 시범사업', 'AI 엔진', 'Middleware', '투자 유치', '상장 예정'],
+    i18n: {
+      en: {
+        title: '[Press Release] Dream AI Lab Launches Jarame — World\'s First AI Digital Care Log Platform for Developmental Disabilities',
+        excerpt: 'Dream AI Lab officially launched Jarame, an AI Digital Care Log platform for developmental disabilities. Starting from 5,700 registered institutions, Jarame targets a 2026 national pilot program with AI engine middleware technology.',
+        content: `
+      <h1 class="text-4xl font-bold text-gray-900 mb-6">Jarame: World's First Developmental Disability AI Digital Care Log Platform</h1>
+      <p class="text-xl text-gray-600 mb-8">Development began in 2022 → completed in 2025 → nationwide expansion via 2026 national pilot</p>
+      <div class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-2xl p-8 mb-12">
+        <h2 class="text-2xl font-bold mb-4">Key highlights</h2>
+        <ul class="space-y-3 text-lg">
+          <li>World's only standardized AI Digital Care Log platform for developmental disabilities</li>
+          <li>5,700+ institutions registered; beta in progress</li>
+          <li>10 specialized therapy modules and 7 role-based workflows</li>
+          <li>Verified: 35% better therapy outcomes, 60% operational efficiency gains</li>
+          <li>2026 national government pilot program planned</li>
+          <li>AI engine middleware positioning for global standards leadership</li>
+        </ul>
+      </div>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        Dream AI Lab (DAL) has launched <strong>Jarame</strong>, integrating care data across home, school, center, and hospital with AI reinforcement learning for personalized care plans. The platform addresses data silos, missed golden-time intervention, and subjective assessments in developmental disability care.
+      </p>
+      <div class="bg-blue-50 border-l-4 border-blue-600 p-6 mb-8">
+        <p class="text-blue-900 font-semibold mb-3 text-lg">
+          "Developmental disability is not an untreatable condition. When we record and analyze data, we find paths to care. Jarame connects people worldwide through one standard care log system."
+        </p>
+        <p class="text-blue-800 text-sm">— Jung Haesung, CTO</p>
+      </div>
+    `
+      }
+    },
     content: `
       <h1 class="text-4xl font-bold text-gray-900 mb-6">🎉 세계 최초 발달장애 AI 디지털케어로그 플랫폼, 자람이 공식 출시</h1>
       <p class="text-xl text-gray-600 mb-8">2022년 개발 시작 → 2025년 완성 → 2026년 국가 시범사업으로 전국 확대</p>
@@ -308,6 +476,32 @@ export const newsArticles: NewsArticle[] = [
     featured: true,
     author: '드림에이아이랩',
     tags: ['자람이', 'AI 디지털케어로그', '발달장애', '맞춤형 치료', '골든타임', '세계 최초', '데이터 통합', 'AI 엔진', '치료 표준'],
+    i18n: {
+      en: {
+        title: '[Service Update] Jarame Sets a New Standard with AI Digital Care Log for Developmental Disabilities',
+        excerpt: 'After three years of development since 2022, Jarame solves fundamental limits in developmental disability care with AI—unifying fragmented data across hospital, center, school, and home.',
+        content: `
+      <h1 class="text-4xl font-bold text-gray-900 mb-6">Jarame: A New Standard in Developmental Disability Care</h1>
+      <p class="text-xl text-gray-600 mb-8">From "untreatable" to "treatable when we record" — powered by the world's first AI Digital Care Log</p>
+      <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8 mb-12 border-l-4 border-blue-600">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Why Jarame</h2>
+        <p class="text-lg text-gray-700 leading-relaxed">
+          Developmental disability care suffers from data silos, inequality, and weak cross-institution collaboration. Jarame uses AI to turn care records into actionable, personalized therapy—Dream AI Lab's first step toward AI for humanity's hardest welfare challenges.
+        </p>
+      </div>
+      <h2 class="text-3xl font-bold text-gray-900 mb-6">Problems Jarame addresses</h2>
+      <ul class="list-disc list-inside space-y-2 text-gray-700 mb-8">
+        <li>Missed golden-time intervention (ages 3–7)</li>
+        <li>Disconnected home, school, center, and hospital records</li>
+        <li>Unaffordable care without guaranteed outcomes</li>
+        <li>Subjective assessments instead of objective data</li>
+      </div>
+      <p class="text-lg text-gray-700 leading-relaxed">
+        Jarame unifies care data in real time, applies multimodal AI and reinforcement learning, and supports personalized care plans validated across thousands of institutions.
+      </p>
+    `
+      }
+    },
     content: `
       <h1 class="text-4xl font-bold text-gray-900 mb-6">🚀 자람이, 발달장애 치료의 새로운 표준을 제시하다</h1>
       <p class="text-xl text-gray-600 mb-8">세계 최초 AI 디지털케어로그로 '치료할 수 없는 병'에서 '기록하면 치료할 수 있는 병'으로</p>

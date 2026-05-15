@@ -3,29 +3,25 @@ import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import Link from 'next/link'
 import { MarketingIcon } from '../../components/MarketingIcon'
+import { absoluteUrl, buildPageMetadata } from '../../lib/seo'
 
 export const metadata: Metadata = {
-  title: '회사소개 - AI디지털케어로그 기반 데이터 인프라 기업 | 드림에이아이랩',
-  description:
-    'DAL은 돌봄·의료·교육 데이터를 표준화하는 플랫폼 기업입니다. 자람이·시니어앤라이프에 공공·연계 기준으로 등록된 기관·사업자 규모(MAU와 별개)와 표준화·파일럿 진행을 확인하세요.',
-  keywords: '드림에이아이랩, 회사소개, AI디지털케어로그, 데이터 표준화, 사회적가치, 투자, 혁신',
-  alternates: { canonical: 'https://dreamailab.com/about' },
-  openGraph: {
-    title: '회사소개 - AI디지털케어로그로 표준을 만드는 드림에이아이랩',
+  ...buildPageMetadata({
+    title: '회사소개 - AI디지털케어로그 기반 데이터 인프라 기업 | 드림에이아이랩',
     description:
-      'DAL은 자체 개발한 AI디지털케어로그로 의료·돌봄·교육 데이터를 통합해 개인 맞춤 케어를 제안하는 표준 플랫폼을 지향합니다. 사회적 가치와 확장 가능한 비즈니스를 함께 염두에 둡니다.',
-    url: 'https://dreamailab.com/about',
-    siteName: '드림에이아이랩',
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: '드림에이아이랩 회사소개' }],
-    locale: 'ko_KR',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: '회사소개 - AI디지털케어로그로 표준을 만드는 드림에이아이랩',
-    description:
-      'DAL은 자체 개발한 AI디지털케어로그로 의료·돌봄·교육 데이터를 통합해 개인 맞춤 케어를 제안하는 표준 플랫폼을 지향합니다. 사회적 가치와 확장 가능한 비즈니스를 함께 염두에 둡니다.',
-    images: ['/og-image.png'],
+      'DAL은 돌봄·의료·교육 데이터를 표준화하는 플랫폼 기업입니다. 자람이·시니어앤라이프에 공공·연계 기준으로 등록된 기관·사업자 규모(MAU와 별개)와 표준화·파일럿 진행을 확인하세요.',
+    path: '/about',
+    ogTitle: '회사소개 - AI디지털케어로그로 표준을 만드는 드림에이아이랩',
+    ogDescription:
+      'DAL은 AI디지털케어로그로 의료·돌봄·교육 데이터를 통합해 개인 맞춤 케어 표준 플랫폼을 지향합니다.',
+    ogImageAlt: '드림에이아이랩 회사소개',
+  }),
+  alternates: {
+    canonical: absoluteUrl('/about'),
+    languages: {
+      'ko-KR': absoluteUrl('/about'),
+      'en-US': absoluteUrl('/en/about'),
+    },
   },
 }
 

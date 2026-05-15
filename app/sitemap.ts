@@ -1,149 +1,186 @@
 import { MetadataRoute } from 'next'
-import { newsArticles } from './news/data'
+import { newsArticles, hasEnglishTranslation } from './news/data'
+
+const baseUrl = 'https://dreamailab.com'
+
+function url(path: string): string {
+  if (path === '/' || path === '') return `${baseUrl}/`
+  const normalized = path.startsWith('/') ? path : `/${path}`
+  return normalized.endsWith('/') ? `${baseUrl}${normalized}` : `${baseUrl}${normalized}/`
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://dreamailab.com'
-  
-  // 뉴스 개별 페이지들을 동적으로 생성
-  const newsUrls = newsArticles.map((article) => ({
-    url: `${baseUrl}/news/${article.id}`,
-    lastModified: new Date(article.date),
-    changeFrequency: 'weekly' as const,
-    priority: 0.6,
-  }))
-  
+  const newsUrls = newsArticles.flatMap((article) => {
+    const entries: MetadataRoute.Sitemap = [
+      {
+        url: url(`/news/${article.id}`),
+        lastModified: new Date(article.date),
+        changeFrequency: 'weekly',
+        priority: article.featured ? 0.8 : 0.6,
+      },
+    ]
+    if (hasEnglishTranslation(article)) {
+      entries.push({
+        url: url(`/en/news/${article.id}`),
+        lastModified: new Date(article.date),
+        changeFrequency: 'weekly',
+        priority: article.featured ? 0.75 : 0.55,
+      })
+    }
+    return entries
+  })
+
   return [
-    // 홈페이지 - 최고 우선순위
     {
-      url: baseUrl,
+      url: url('/'),
       lastModified: new Date(),
       changeFrequency: 'daily',
       priority: 1.0,
     },
-    // 핵심 서비스 페이지들 - 높은 우선순위
     {
-      url: `${baseUrl}/services`,
+      url: url('/services'),
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/services/jarame`,
+      url: url('/services/jarame'),
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/services/senior`,
+      url: url('/services/senior'),
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/services/healthcare`,
+      url: url('/services/healthcare'),
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/services/marriage`,
+      url: url('/services/marriage'),
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/services/veggie`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.8,
-    },
-    // 회사 정보 페이지들 - 중간 우선순위
-    {
-      url: `${baseUrl}/about`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/vision`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/business`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/public`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/ir`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/technology`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/technology/educarelog`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    // 기타 서비스 페이지들 - 낮은 우선순위
-    {
-      url: `${baseUrl}/services/finance`,
+      url: url('/services/veggie'),
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/services/educarelog`,
+      url: url('/about'),
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: url('/vision'),
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: url('/business'),
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: url('/public'),
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: url('/ir'),
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: url('/technology'),
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: url('/technology/educarelog'),
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: url('/services/finance'),
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: url('/services/educarelog'),
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.6,
     },
     {
-      url: `${baseUrl}/news`,
+      url: url('/news'),
       lastModified: new Date(),
       changeFrequency: 'daily',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/contact`,
+      url: url('/en'),
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    {
+      url: url('/en/about'),
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.65,
+    },
+    {
+      url: url('/en/services'),
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.75,
+    },
+    {
+      url: url('/en/technology'),
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: url('/contact'),
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.6,
     },
     {
-      url: `${baseUrl}/blog/veggiecare`,
+      url: url('/blog/veggiecare'),
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.6,
     },
     {
-      url: `${baseUrl}/resources/veggiecare`,
+      url: url('/resources/veggiecare'),
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.6,
     },
     {
-      url: `${baseUrl}/blog/noahai-technical-whitepaper`,
+      url: url('/blog/noahai-technical-whitepaper'),
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.9,
     },
-    // 뉴스 개별 페이지들 추가
     ...newsUrls,
   ]
-} 
+}
