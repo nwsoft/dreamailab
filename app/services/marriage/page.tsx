@@ -8,8 +8,6 @@ export const metadata: Metadata = {
   title: '국제결혼 플랫폼 글로벌커플케어 GCC | 베트남·태국·필리핀·일본·중국 결혼 전문가 비교',
   description:
     '국제결혼·다문화 가족을 위한 통합 플랫폼 GCC. 베트남·태국·필리핀·일본·중국 등 다양한 국가의 결혼 전문가를 한 곳에서 비교하고, 가격·절차·법무·정착 정보를 투명하게 제공합니다.',
-  keywords:
-    '국제결혼, 국제결혼플랫폼, 글로벌커플케어, GCC, 베트남결혼, 태국결혼, 필리핀결혼, 일본결혼, 중국결혼, 다문화가정, 결혼비자, 혼인신고, 결혼정착지원, 언어치료, 자녀양육, 국제커플, 결혼전문가비교, 투명한가격, 결혼이민, 다문화가족지원, 국제결혼상담, 법무지원, 웨딩플랫폼, 여행사협력, 항공사제휴',
   openGraph: {
     title: '글로벌커플케어 GCC - 국제결혼 전문가 통합 플랫폼',
     description: '국제결혼 정보·절차·정착 지원을 하나로 연결하는 플랫폼 인프라',
@@ -471,7 +469,7 @@ export default function MarriageService() {
               더 공정한 기준으로 선택할 수 있도록 시작했습니다.
             </p>
             <div className="mt-6">
-              <span className="inline-block px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold">Beta Testing</span>
+              <span className="inline-block px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold">In Development</span>
             </div>
           </div>
         </div>
@@ -533,22 +531,18 @@ export default function MarriageService() {
                 >
                   GCC 바로가기
                 </a>
-                <a
-                  href="/contact"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/contact?service=marriage&type=general"
                   className="inline-flex items-center justify-center rounded-lg border border-blue-200 bg-blue-50 px-4 py-3 text-sm font-semibold text-blue-700 hover:bg-blue-100 transition-colors"
                 >
                   베타 서비스 문의
-                </a>
-                <a
-                  href="/contact"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                </Link>
+                <Link
+                  href="/contact?service=marriage&type=b2b"
                   className="inline-flex items-center justify-center rounded-lg border border-gray-300 bg-white px-4 py-3 text-sm font-semibold text-gray-700 hover:bg-gray-50 transition-colors"
                 >
                   제휴/입점 문의
-                </a>
+                </Link>
               </div>
 
               <div className="bg-white/50 rounded-lg p-5 border-l-4 border-primary-500">
@@ -1281,7 +1275,7 @@ export default function MarriageService() {
       {/* 7. Service Status */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="inline-block px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold mb-4">Beta Testing</span>
+          <span className="inline-block px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold mb-4">In Development</span>
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">{brand.name} (개발 중 공개 사전 안내)</h2>
           <p className="text-gray-600">글로벌커플케어는 SaaS 기본 구조 완성 후 베타 테스트를 진행하며, 국제결혼 <strong>정보·비즈니스 인프라</strong> 기능을 지속 업데이트 중입니다. 정착 연계·다문화 가족 지원·파트너 공개를 순차적으로 확장합니다.</p>
         </div>
@@ -1317,7 +1311,7 @@ export default function MarriageService() {
       <section className="py-12 lg:py-16 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-gray-600 mb-6">파트너 공개 및 제휴 문의를 받고 있습니다.</p>
-          <Link href="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-lg transition-colors">
+          <Link href="/contact?service=marriage&type=b2b" className="inline-flex items-center justify-center px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-lg transition-colors">
             문의하기
           </Link>
         </div>

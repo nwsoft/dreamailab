@@ -11,8 +11,6 @@ const technologyDescription =
 export const metadata: Metadata = {
   title: '핵심 기술 - AI디지털케어로그 플랫폼 구조 | 드림에이아이랩',
   description: technologyDescription,
-  keywords:
-    '드림에이아이랩, DAL, AI디지털케어로그, 디지털케어로그, 정해성, 창업자, 개발자, 발달장애, 치매연구, 노인질병, 토탈케어로그, 정신심리치료, RWE, 신약개발, 글로벌커플케어, 베지케어, 치매, 항암, 데이터표준화, AI분석, FHIR',
   alternates: { canonical: technologyCanonical },
   openGraph: {
     title: '핵심 기술 - AI디지털케어로그 플랫폼 구조 | 드림에이아이랩',
@@ -475,17 +473,20 @@ export default function Technology() {
           <p className="text-xl max-w-4xl mx-auto mb-6">
             표준 기록 → AI 분석 → 실행 연결 → 환류(학습). 하나의 데이터 파이프라인으로 모든 서비스가 연결됩니다. 돌봄·의료·교육 데이터를 표준화하는 플랫폼 구조입니다.
           </p>
-          <div className="bg-white/10 rounded-2xl p-6 max-w-3xl mx-auto">
+          <div className="bg-white/10 rounded-2xl p-6 max-w-3xl mx-auto mb-8">
             <p className="text-lg font-semibold">
-              "분산·비표준 데이터를 표준 기록으로 정렬하고,
-              AI가 분석해 개인 맞춤 실행으로 잇는
-              통합 인프라"
+              &quot;분산·비표준 데이터를 표준 기록으로 정렬하고, AI가 분석해 개인 맞춤 실행으로 잇는 통합 인프라&quot;
             </p>
           </div>
+          <Link
+            href="/technology/platform"
+            className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-white text-primary-700 font-semibold hover:bg-gray-100 transition-colors"
+          >
+            플랫폼 기술 개요 (IR·R&D용)
+          </Link>
         </div>
       </section>
 
-      {/* 플랫폼 연결 구조 - 서비스가 하나의 데이터 플랫폼 위에 존재 */}
       <section className="py-12 lg:py-16 bg-gray-50 border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
@@ -1038,7 +1039,7 @@ export default function Technology() {
             </div>
           </div>
           <div className="text-center mt-12">
-            <Link href="/contact" className="inline-block bg-primary-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-700 transition-colors text-lg">
+            <Link href="/contact?type=tech&service=platform" className="inline-block bg-primary-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-700 transition-colors text-lg">
               기술 협력/라이선스 문의
             </Link>
           </div>
@@ -1055,10 +1056,10 @@ export default function Technology() {
             분산된 현장 데이터를 표준화하고 AI로 RWE(현장 근거) 기반 연구·서비스 개선을 목표로 합니다. 투자·파트너십·서비스 도입 문의를 환영합니다.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/contact" className="bg-white text-primary-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+            <Link href="/contact?type=ir&service=platform" className="bg-white text-primary-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
               투자 문의
             </Link>
-            <Link href="/business" className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors">
+            <Link href="/contact?type=b2b&service=platform" className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors">
               파트너십 문의
             </Link>
             <Link href="/services" className="border-2 border-white/70 text-white/95 px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors">

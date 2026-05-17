@@ -10,8 +10,6 @@ export const metadata: Metadata = {
   title: '헬스케어AI 플랫폼 | AI 디지털케어로그 | 토탈케어로그',
   description:
     '토탈케어로그는 표준화된 AI 디지털케어로그를 기반으로 일상 기록→AI 분석→병원/약국/요양 연계를 통합 제공합니다. 항암집중 모드, 정신건강 맞춤 대화 챗봇까지 하나의 헬스케어AI 플랫폼으로 운영됩니다.',
-  keywords:
-    '토탈케어로그, 헬스케어AI, AI 디지털케어로그, 항암집중 모드, 정신건강 챗봇, 온라인 상담, AI 건강분석, 만성질환관리, 복약관리, 병원 비즈니스, 약국 연동, RWE 데이터',
   alternates: { canonical: pageCanonical },
   openGraph: {
     title: '토탈케어로그 | AI 디지털케어로그 · DAL 헬스케어 축',
@@ -1213,13 +1211,13 @@ export default function HealthcareService() {
               공개 체험 준비 중
             </span>
             <Link
-              href="/contact?type=partner"
+              href="/contact?service=healthcare&type=b2b"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors"
             >
               사업·도입·제휴 문의
             </Link>
             <Link
-              href="/contact?type=ir"
+              href="/contact?service=healthcare&type=ir"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors"
             >
               IR·투자 문의

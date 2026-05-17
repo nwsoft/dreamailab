@@ -11,7 +11,6 @@ const visionDescription =
 export const metadata: Metadata = {
   title: '비전 - 드림에이아이랩',
   description: visionDescription,
-  keywords: '드림에이아이랩, 비전, 데이터 표준화, 사회적 가치, 임팩트, 투자',
   alternates: { canonical: visionCanonical },
   openGraph: {
     title: '비전 - 드림에이아이랩',

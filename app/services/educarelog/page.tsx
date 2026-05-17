@@ -8,17 +8,6 @@ export const metadata: Metadata = {
   title: '에듀케어로그(EduCareLog) – 학습 데이터 기반 개별화 교육 인프라 | 드림에이아이랩',
   description:
     '같은 수업이라도 학생마다 속도와 막히는 지점은 다릅니다. 에듀케어로그는 학생별 수준·반응을 기록하고 AI가 맞춤 학습 경로를 이어 주는 교육 개인화 인프라(DAL 교육 축)입니다.',
-  keywords: [
-    '에듀케어로그',
-    'EduCareLog',
-    'AI 디지털케어로그',
-    '개별화 교육',
-    '학습 로그',
-    '교육 인프라',
-    'DAL',
-    '드림에이아이랩',
-    '교과·콘텐츠 연동',
-  ],
   openGraph: {
     title: '에듀케어로그(EduCareLog) – 학습 데이터 기반 개별화 교육 인프라',
     description:
@@ -1423,7 +1412,7 @@ export default function EduCareLogService() {
               <p className="text-xs font-semibold text-blue-200 mb-1">학교 · 교육청 · 지자체</p>
               <p className="text-sm text-blue-50 mb-4">기초학력·개별화 과제에 맞는 도입 범위와 파일럿을 같이 정합니다.</p>
               <Link
-                href="/contact?type=partner"
+                href="/contact?service=educarelog&type=b2b"
                 className="inline-flex w-full justify-center items-center bg-white text-indigo-800 font-semibold px-4 py-2.5 rounded-lg text-sm hover:bg-blue-50 transition-colors"
               >
                 우리 기관에 적용 가능한지 확인하기
@@ -1436,7 +1425,7 @@ export default function EduCareLogService() {
               <p className="text-xs font-semibold text-blue-200 mb-1">학원</p>
               <p className="text-sm text-blue-50 mb-4">원생·강사 데이터로 운영·이탈 대응을 쌓는 방식을 상담합니다.</p>
               <Link
-                href="/contact?type=partner"
+                href="/contact?service=educarelog&type=b2b"
                 className="inline-flex w-full justify-center items-center bg-white text-indigo-800 font-semibold px-4 py-2.5 rounded-lg text-sm hover:bg-blue-50 transition-colors"
               >
                 운영·데이터 활용 도입 문의하기
@@ -1449,7 +1438,7 @@ export default function EduCareLogService() {
               <p className="text-xs font-semibold text-blue-200 mb-1">기업 · 에듀테크</p>
               <p className="text-sm text-blue-50 mb-4">기존 제품에 CareLog 엔진·API를 얹는 경로를 같이 봅니다.</p>
               <Link
-                href="/contact?type=tech"
+                href="/contact?service=educarelog&type=tech"
                 className="inline-flex w-full justify-center items-center bg-white text-indigo-800 font-semibold px-4 py-2.5 rounded-lg text-sm hover:bg-blue-50 transition-colors"
               >
                 임베드·API 도입 가능 여부 확인하기
@@ -1457,16 +1446,16 @@ export default function EduCareLogService() {
             </div>
           </div>
           <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3 justify-center items-center text-sm text-center">
-            <Link href="/contact?type=partner" className="text-white font-medium underline underline-offset-2 hover:text-blue-100">
+            <Link href="/contact?service=educarelog&type=b2b" className="text-white font-medium underline underline-offset-2 hover:text-blue-100">
               파일럿 도입 상담 요청하기
             </Link>
             <span className="hidden sm:inline text-white/40">|</span>
-            <Link href="/contact?type=ir" className="text-blue-100 hover:text-white underline underline-offset-2">
+            <Link href="/contact?service=educarelog&type=ir" className="text-blue-100 hover:text-white underline underline-offset-2">
               IR 문의
             </Link>
             <span className="hidden sm:inline text-white/40">|</span>
             <Link
-              href="/contact?type=strategic-partnership"
+              href="/contact?service=educarelog&type=ir"
               className="text-blue-100 hover:text-white underline underline-offset-2 font-medium"
             >
               전략적 파트너십 및 투자 협력 문의

@@ -110,6 +110,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: url('/technology/platform'),
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    {
       url: url('/technology/educarelog'),
       lastModified: new Date(),
       changeFrequency: 'monthly',

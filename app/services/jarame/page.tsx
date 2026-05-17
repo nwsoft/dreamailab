@@ -2351,11 +2351,13 @@ export default function JarameService() {
               <p className="text-lg text-gray-700 mb-4">
                 <strong>드림에이아이랩과 함께 세상을 바꾸는 기술에 투자하세요.</strong>
               </p>
-              <a 
-                href="/contact" 
+              <a
+                href="https://jarame.or.kr"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
               >
-                파트너십 문의하기
+                jarame.or.kr에서 문의하기
               </a>
             </div>
           </div>
@@ -2428,22 +2430,26 @@ export default function JarameService() {
             <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/20 flex flex-col">
               <h3 className="font-bold text-white mb-2">기관 도입 문의</h3>
               <p className="text-sm text-blue-100 mb-4 flex-1">센터 · 병원 · 학교 대상</p>
-              <Link
-                href="/contact?type=institution"
+              <a
+                href="https://jarame.or.kr"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center bg-white text-blue-600 px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-blue-50 transition-colors"
               >
-                문의하기
-              </Link>
+                jarame.or.kr 문의
+              </a>
             </div>
             <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/20 flex flex-col">
               <h3 className="font-bold text-white mb-2">공공·파트너십 문의</h3>
               <p className="text-sm text-blue-100 mb-4 flex-1">정부 · 투자 · 협력 문의</p>
-              <Link
-                href="/contact?type=partner"
-                className="inline-flex items-center justify-center border-2 border-white text-white px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-white/10 transition-colors"
+              <a
+                href="https://jarame.or.kr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center border-2 border-white text-white px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-blue-50 transition-colors"
               >
-                문의하기
-              </Link>
+                jarame.or.kr 문의
+              </a>
             </div>
             <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/20 flex flex-col">
               <h3 className="font-bold text-white mb-2">보호자 이용 시작</h3>

@@ -1,8 +1,10 @@
 # 자람이 (Jarame) — 스펙 요약 (웹 정합)
 
-- **last_reviewed:** 2026-04-28  
+- **last_reviewed:** 2026-05-17  
 - **canonical 웹:** https://dreamailab.com/services/jarame  
 - **외부:** https://jarame.or.kr  
+
+> **DAL 웹:** 자람이 페이지 문의·도입 CTA는 **jarame.or.kr** 로 연결 (DAL `/contact` 미사용). 본 MD는 DAL 허브와의 **용어 정합** 참고용.
 
 ## 한 줄
 

@@ -7,18 +7,6 @@ export const metadata: Metadata = {
   title: '시니어앤라이프 | AI 시니어 돌봄 디지털케어로그 - 요양·재가복지 통합 플랫폼',
   description:
     '드림에이아이랩의 AI 디지털케어로그 기술 기반 시니어 돌봄 통합 플랫폼. 재가노인복지서비스, 요양원, 요양병원, 주야간보호, 의료보조기기, 요양보호사 구인구직을 하나로 연결하고, AI가 수면·활동·복약 패턴을 실시간 분석하여 이상 징후를 조기 감지합니다. 가족과 요양보호사가 함께 보는 개인 맞춤형 케어로 시니어 건강 관리의 새로운 표준을 제시합니다.',
-  keywords: [
-    // 최근 검색 트렌드에 맞춘 핵심 키워드 위주 구성
-    '시니어 돌봄 플랫폼',
-    '시니어 디지털케어로그',
-    '요양원 검색 매칭',
-    '재가요양 서비스',
-    '요양보호사 구인구직',
-    '요양 행정 SaaS',
-    'AI 시니어 헬스케어',
-    'DAL AI',
-    '드림에이아이랩',
-  ],
   openGraph: {
     title: '시니어앤라이프 | AI 시니어 돌봄 디지털케어로그',
     description: 'AI 기술로 시니어 돌봄의 품질을 높이고, 가족에게 안심을 제공하는 통합 플랫폼',
@@ -377,7 +365,7 @@ export default function SeniorService() {
               <span className="bg-white/10 px-4 py-2 rounded-full font-medium">가족 / 기관 / 의료 / 공공 연결</span>
             </div>
             <div className="mt-8">
-              <span className="inline-block px-4 py-2 bg-emerald-100 text-emerald-800 rounded-full text-sm font-semibold">Service Status: Beta Testing (지속 업데이트)</span>
+              <span className="inline-block px-4 py-2 bg-emerald-100 text-emerald-800 rounded-full text-sm font-semibold">Service Status: Pilot (지속 업데이트)</span>
             </div>
           </div>
         </div>
@@ -1523,15 +1511,15 @@ export default function SeniorService() {
               <span>우리 부모님에게 맞는 시설 찾기</span>
               <span className="text-xs font-normal text-emerald-100 mt-1 opacity-95">seniorandlife.com</span>
             </a>
-            <a
-              href="mailto:senior@dreamailab.com?subject=%5B%EA%B8%B0%EA%B4%80%20%EB%8F%84%EC%9E%85%5D%20AI%20%EC%BC%80%EC%96%B4%EB%A1%9C%EA%B7%B8%20%EC%83%81%EB%8B%B4"
+            <Link
+              href="/contact?service=senior&type=b2b"
               className="inline-flex flex-col items-center justify-center bg-white border-2 border-emerald-600 text-emerald-800 px-6 py-4 rounded-xl text-sm font-semibold hover:bg-emerald-50 transition-colors shadow-sm flex-1 min-w-[220px]"
             >
               <span>우리 기관에 AI 케어로그 도입 상담</span>
-              <span className="text-xs font-normal text-gray-600 mt-1">senior@dreamailab.com</span>
-            </a>
+              <span className="text-xs font-normal text-gray-600 mt-1">기관·B2B 문의</span>
+            </Link>
             <Link
-              href="/contact?type=tech"
+              href="/contact?service=senior&type=tech"
               className="inline-flex flex-col items-center justify-center bg-white border-2 border-gray-800 text-gray-900 px-6 py-4 rounded-xl text-sm font-semibold hover:bg-gray-50 transition-colors shadow-sm flex-1 min-w-[220px]"
             >
               <span>3분 데모로 직접 확인하기</span>
@@ -1541,13 +1529,13 @@ export default function SeniorService() {
 
           <div className="max-w-3xl mx-auto flex flex-col sm:flex-row gap-4 justify-center items-center text-sm">
             <Link
-              href="/contact?type=ir"
+              href="/contact?service=senior&type=ir"
               className="text-emerald-800 font-medium underline underline-offset-2 hover:text-emerald-900"
             >
               IR · 투자 문의
             </Link>
             <span className="hidden sm:inline text-gray-300">|</span>
-            <Link href="/contact" className="text-gray-600 hover:text-gray-900">
+            <Link href="/contact?service=senior&type=general" className="text-gray-600 hover:text-gray-900">
               일반 문의
             </Link>
           </div>

@@ -114,6 +114,7 @@ export default function IRPage() {
           </div>
           <p className="text-[11px] sm:text-xs text-gray-400 mt-6 max-w-3xl leading-relaxed">
             ※ 등록 기관·사업자 수는 공공·연계 기준의 확보 규모이며, 서비스 일일 이용자(DAU)나 전면 상용 전환을 의미하지 않습니다.
+            보도·뉴스 아카이브는 당시 홍보 문맥이며, 투자·사업 현황은 본 IR·각 서비스 페이지를 기준으로 합니다.
           </p>
         </div>
       </section>
@@ -198,7 +199,7 @@ export default function IRPage() {
             투자자 및 사업 협력 파트너의 문의를 환영합니다.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/contact" className="bg-white text-primary-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+            <Link href="/contact?type=ir" className="bg-white text-primary-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
               투자 문의
             </Link>
             <Link href="/business" className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors">

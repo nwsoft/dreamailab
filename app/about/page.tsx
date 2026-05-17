@@ -154,9 +154,29 @@ export default function About() {
               <p className="text-lg text-gray-600 mb-6">
                 이 기술은 ① 발달장애 케어 ‘자람이’, ② 노인 돌봄 ‘시니어앤라이프’, ③ 건강·질병 관리 ‘토탈케어로그(AI 주치의·항암·한방)’, ④ 사회문제 해결형 ‘국제결혼 플랫폼(글로벌커플케어)’로 확장되고 있습니다. (국제결혼은 커뮤니티·매칭 중심으로 케어로그 직접 적용 없이 운영됩니다.)
               </p>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-gray-600 mb-6">
                 우리는 공익에 가까운 돌봄·교육·의료 데이터 표준화에 집중해 신뢰를 쌓고 있습니다. 동의·규제를 전제로 한 기록은 연구·정책·현장 개선으로 환류될 수 있도록 설계하며, 공공·NGO·연구기관과의 협력으로 사회적 임팩트를 넓혀 갑니다.
               </p>
+              <div className="rounded-xl border border-primary-100 bg-primary-50/80 p-5 text-sm text-gray-700">
+                <p className="font-semibold text-gray-900 mb-2">조직·브랜드 구조</p>
+                <ul className="space-y-1.5 list-disc list-inside">
+                  <li>
+                    <strong>DAL</strong> — AI디지털케어로그 플랫폼·R&D·TIPS·VC·B2B (본 사이트)
+                  </li>
+                  <li>
+                    <strong>자람이</strong> — 발달장애 축 대표 제품. 모두의창업 등은{' '}
+                    <strong>정해성</strong> 개인·자람이 기준 신청 맥락이며, 투자 시 노아AI와 같이{' '}
+                    <strong>독립 법인</strong>으로 전환될 수 있습니다.
+                  </li>
+                  <li>
+                    <strong>Noah AI Labs</strong> — 노아AI는 이미 분리 운영 (
+                    <Link href="/services/finance" className="text-primary-600 underline">
+                      이전 안내
+                    </Link>
+                    )
+                  </li>
+                </ul>
+              </div>
             </div>
             <div className="relative">
               <div className="bg-gradient-to-br from-primary-100 to-secondary-100 rounded-2xl p-8">
@@ -401,7 +421,7 @@ export default function About() {
             AI디지털케어로그 기반으로 하나의 플랫폼 위 도메인을 확장하고 있습니다. 함께 표준을 만들 파트너를 찾습니다.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/contact" className="bg-white text-primary-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+            <Link href="/contact?type=ir&service=platform" className="bg-white text-primary-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
               투자 문의
             </Link>
             <Link href="/business" className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors">

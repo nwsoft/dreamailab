@@ -45,7 +45,7 @@ export default function Business() {
       market: '발달장애 시장',
       impact:
         '공공·연계 등으로 약 5,700개 기관 정보를 확보한 B2B·행정 표준화 대상. 행정·케어 시스템과 케어로그로 가정·센터·병원 연계 도입을 지향(등록 수 ≠ 전원 일상 사용자)',
-      status: '표준 지향',
+      status: 'Beta',
       powered: 'Powered by AI디지털케어로그',
     },
     {
@@ -56,7 +56,7 @@ export default function Business() {
       market: '고령화 시장',
       impact:
         '공공·연계 등으로 약 2만 2천여 돌봄 사업자 정보를 확보한 대상 풀. 표준화 행정·검색·매칭 등 B2B 도입을 지향(등록 수 ≠ 전원 일상 사용자)',
-      status: '표준 지향',
+      status: 'Pilot',
       powered: 'Powered by AI디지털케어로그',
     },
     {
@@ -67,7 +67,7 @@ export default function Business() {
       market: '개인 맞춤 의료 시장',
       impact:
         '개인 맞춤 건강관리·병원 연계를 지향. 기존 마음이AI의 심리·정신건강 상담 보조 역량은 별도 브랜드 없이 본 축으로 통합·전개합니다.',
-      status: '개발·통합',
+      status: 'In Development',
       powered: 'Powered by AI디지털케어로그',
     },
     {
@@ -77,7 +77,7 @@ export default function Business() {
       achievement: '신규',
       market: 'AI 교육 시장',
       impact: '개인 맞춤 학습 지원',
-      status: '개발 중',
+      status: 'Pilot',
       powered: 'Powered by AI디지털케어로그',
     },
     {
@@ -87,7 +87,7 @@ export default function Business() {
       achievement: '신규',
       market: '국제결혼 시장',
       impact: '국제결혼 시장의 신뢰성과 투명성 혁신, 결혼 전후 맞춤 케어로 행복한 가정 만들기',
-      status: '베타 테스트',
+      status: 'In Development',
       powered: 'Powered by AI디지털케어로그',
     },
     {
@@ -97,7 +97,7 @@ export default function Business() {
       achievement: '전개 중',
       market: '베지터리안 시장',
       impact: '채식주의자를 위한 AI 기반 건강관리·맛집·레시피·커뮤니티 통합 플랫폼',
-      status: '베타 테스트',
+      status: 'In Development',
       powered: 'Powered by AI디지털케어로그',
     },
   ]
@@ -467,10 +467,10 @@ export default function Business() {
   </div>
 </div>
             <div className="mt-10 flex flex-wrap justify-center gap-4">
-              <Link href="/contact" className="bg-white text-primary-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors" aria-label="투자 문의">
+              <Link href="/contact?type=ir&service=platform" className="bg-white text-primary-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors" aria-label="투자 문의">
                 투자 문의
               </Link>
-              <Link href="/contact" className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors" aria-label="파트너십 문의">
+              <Link href="/contact?type=b2b&service=platform" className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors" aria-label="파트너십 문의">
                 파트너십 문의
               </Link>
               <Link href="/services" className="border-2 border-white/70 text-white/95 px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors" aria-label="서비스 생태계 보기">
@@ -942,10 +942,10 @@ export default function Business() {
   </div>
 </div>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/contact" className="bg-white text-primary-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+            <Link href="/contact?type=ir&service=platform" className="bg-white text-primary-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
               투자 문의
             </Link>
-            <Link href="/contact" className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors">
+            <Link href="/contact?type=b2b&service=platform" className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors">
               파트너십 문의
             </Link>
             <Link href="/services" className="border-2 border-white/70 text-white/95 px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors">

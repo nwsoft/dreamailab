@@ -2,241 +2,347 @@
 
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
-import { useState } from 'react'
+import Link from 'next/link'
+import { useSearchParams } from 'next/navigation'
+import { Suspense, useEffect, useMemo, useState } from 'react'
+import {
+  buildMailtoHref,
+  isFormspreeConfigured,
+  submitContactForm,
+  type ContactFormPayload,
+} from '../../lib/contact-form'
 
-export default function Contact() {
+const CONTACT_EMAIL = 'contact@dreamailab.com'
+const inputClass =
+  'w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent'
+
+const INQUIRY_TYPES = [
+  { value: 'general', label: '일반 문의' },
+  { value: 'b2b', label: '사업 제휴·기관 도입' },
+  { value: 'ir', label: '투자·IR' },
+  { value: 'tech', label: '기술·R&D' },
+  { value: 'press', label: '언론·보도' },
+  { value: 'other', label: '기타' },
+] as const
+
+const SERVICES = [
+  { value: 'platform', label: 'DAL 플랫폼·AI디지털케어로그' },
+  { value: 'jarame', label: '자람이' },
+  { value: 'senior', label: '시니어앤라이프' },
+  { value: 'healthcare', label: '토탈케어로그' },
+  { value: 'educarelog', label: '에듀케어로그' },
+  { value: 'marriage', label: '글로벌커플케어' },
+  { value: 'veggie', label: '베지케어' },
+  { value: 'other', label: '기타·복수' },
+] as const
+
+type InquiryType = (typeof INQUIRY_TYPES)[number]['value']
+type ServiceSlug = (typeof SERVICES)[number]['value']
+
+function mapUrlTypeToInquiry(type: string | null): InquiryType {
+  switch (type) {
+    case 'ir':
+    case 'strategic-partnership':
+      return 'ir'
+    case 'partner':
+    case 'institution':
+    case 'b2b':
+      return 'b2b'
+    case 'tech':
+      return 'tech'
+    case 'press':
+      return 'press'
+    case 'veggie':
+      return 'general'
+    default:
+      return 'general'
+  }
+}
+
+function mapUrlService(service: string | null, type: string | null): ServiceSlug {
+  if (type === 'veggie') return 'veggie'
+  const allowed = new Set(SERVICES.map((s) => s.value))
+  if (service && allowed.has(service as ServiceSlug)) {
+    return service as ServiceSlug
+  }
+  return 'platform'
+}
+
+function NoticeBanner({
+  children,
+  variant = 'success',
+}: {
+  children: React.ReactNode
+  variant?: 'success' | 'info' | 'error'
+}) {
+  const styles =
+    variant === 'info'
+      ? 'bg-blue-50 border-blue-200 text-blue-900'
+      : variant === 'error'
+        ? 'bg-red-50 border-red-200 text-red-800'
+        : 'bg-green-50 border-green-200 text-green-800'
+  return <div className={`mb-6 p-4 border rounded-lg text-sm ${styles}`}>{children}</div>
+}
+
+function ContactForm() {
+  const searchParams = useSearchParams()
+  const formspreeEnabled = isFormspreeConfigured()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
-    subject: '',
-    message: ''
+    inquiryType: 'general' as InquiryType,
+    service: 'platform' as ServiceSlug,
+    message: '',
   })
-
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+  const [submitMessage, setSubmitMessage] = useState('')
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target
-    setFormData(prev => ({
+  useEffect(() => {
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      inquiryType: mapUrlTypeToInquiry(searchParams.get('type')),
+      service: mapUrlService(searchParams.get('service'), searchParams.get('type')),
     }))
+  }, [searchParams])
+
+  const inquiryLabel = useMemo(
+    () => INQUIRY_TYPES.find((t) => t.value === formData.inquiryType)?.label ?? '',
+    [formData.inquiryType]
+  )
+  const serviceLabel = useMemo(
+    () => SERVICES.find((s) => s.value === formData.service)?.label ?? '',
+    [formData.service]
+  )
+
+  const buildPayload = (): ContactFormPayload => ({
+    name: formData.name,
+    email: formData.email,
+    company: formData.company,
+    inquiryType: formData.inquiryType,
+    inquiryLabel,
+    service: formData.service,
+    serviceLabel,
+    message: formData.message,
+  })
+
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
+    const { name, value } = e.target
+    setFormData((prev) => ({ ...prev, [name]: value }))
+  }
+
+  const resetForm = () => {
+    setFormData({
+      name: '',
+      email: '',
+      company: '',
+      inquiryType: mapUrlTypeToInquiry(searchParams.get('type')),
+      service: mapUrlService(searchParams.get('service'), searchParams.get('type')),
+      message: '',
+    })
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    
-    // 실제 구현에서는 여기에 폼 제출 로직을 추가합니다
-    // 예: API 호출, 이메일 전송 등
-    
-    // 시뮬레이션을 위한 지연
-    await new Promise(resolve => setTimeout(resolve, 2000))
-    
+    setSubmitStatus('idle')
+    setSubmitMessage('')
+
+    const payload = buildPayload()
+
+    if (formspreeEnabled) {
+      const result = await submitContactForm(payload)
+      setIsSubmitting(false)
+
+      if (result.ok) {
+        setSubmitStatus('success')
+        setSubmitMessage('문의가 접수되었습니다. 빠른 시일 내에 답변드리겠습니다.')
+        resetForm()
+        setTimeout(() => setSubmitStatus('idle'), 8000)
+        return
+      }
+
+      if (result.error) {
+        setSubmitStatus('error')
+        setSubmitMessage(`${result.error} 메일 앱으로 보내기를 시도합니다.`)
+      }
+    }
+
+    window.location.href = buildMailtoHref(payload, CONTACT_EMAIL)
     setIsSubmitting(false)
     setSubmitStatus('success')
-    
-    // 폼 초기화
-    setFormData({
-      name: '',
-      email: '',
-      company: '',
-      subject: '',
-      message: ''
-    })
-    
-    // 3초 후 상태 초기화
-    setTimeout(() => setSubmitStatus('idle'), 3000)
+    setSubmitMessage(
+      formspreeEnabled
+        ? '자동 전송에 실패해 메일 앱을 엽니다. 보내기를 눌러야 전달됩니다.'
+        : '메일 앱이 열립니다. 보내기를 눌러야 문의가 전달됩니다.'
+    )
+    setTimeout(() => setSubmitStatus('idle'), 8000)
   }
 
-  const contactInfo = [
-    {
-      title: '이메일',
-      value: 'contact@dreamailab.com',
-      icon: '📧',
-      link: 'mailto:contact@dreamailab.com'
-    },
-    {
-      title: '주소',
-      value: '서울시 마포구 방울내로',
-      icon: '📍',
-      link: '#'
-    }
-  ]
+  return (
+    <>
+      {submitStatus === 'success' && <NoticeBanner>{submitMessage}</NoticeBanner>}
+      {submitStatus === 'error' && <NoticeBanner variant="error">{submitMessage}</NoticeBanner>}
 
-  const serviceInquiries = [
-    {
-      name: '자람이',
-      description: '발달장애인을 위한 AI 커뮤니티 플랫폼',
-      contact: 'jarame@dreamailab.com'
-    },
-    {
-      name: '시니어앤라이프',
-      description: '노인돌봄을 위한 AI 플랫폼',
-      contact: 'senior@dreamailab.com'
-    },
-    {
-      name: '히포크라테스AI',
-      description: '의료진을 위한 AI 진단 지원 시스템',
-      contact: 'medical@dreamailab.com'
-    },
-    {
-      name: '노아AI',
-      description: '재테크 투자를 위한 AI 플랫폼',
-      contact: 'finance@dreamailab.com'
-    }
+      <form onSubmit={handleSubmit} className="space-y-6">
+        <NoticeBanner variant="info">
+          {formspreeEnabled ? (
+            <>
+              문의는 <strong>{CONTACT_EMAIL}</strong>로 자동 접수됩니다. 제출 후 완료 메시지를 확인해 주세요.
+            </>
+          ) : (
+            <>
+              문의는 <strong>{CONTACT_EMAIL}</strong>로 전달됩니다. 제출 시 메일 앱에서{' '}
+              <strong>보내기</strong>를 눌러 주세요. (운영: Cloudflare에{' '}
+              <code className="text-xs bg-blue-100 px-1 rounded">NEXT_PUBLIC_FORMSPREE_FORM_ID</code> 설정 시 자동
+              접수)
+            </>
+          )}
+        </NoticeBanner>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <label className="block">
+            <span className="block text-sm font-medium text-gray-700 mb-2">이름 *</span>
+            <input
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleInputChange}
+              required
+              disabled={isSubmitting}
+              className={inputClass}
+            />
+          </label>
+          <label className="block">
+            <span className="block text-sm font-medium text-gray-700 mb-2">이메일 *</span>
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleInputChange}
+              required
+              disabled={isSubmitting}
+              className={inputClass}
+            />
+          </label>
+        </div>
+
+        <label className="block">
+          <span className="block text-sm font-medium text-gray-700 mb-2">회사/기관</span>
+          <input
+            type="text"
+            name="company"
+            value={formData.company}
+            onChange={handleInputChange}
+            disabled={isSubmitting}
+            className={inputClass}
+          />
+        </label>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <label className="block">
+            <span className="block text-sm font-medium text-gray-700 mb-2">문의 유형 *</span>
+            <select
+              name="inquiryType"
+              value={formData.inquiryType}
+              onChange={handleInputChange}
+              required
+              disabled={isSubmitting}
+              className={inputClass}
+            >
+              {INQUIRY_TYPES.map((t) => (
+                <option key={t.value} value={t.value}>
+                  {t.label}
+                </option>
+              ))}
+            </select>
+          </label>
+          <label className="block">
+            <span className="block text-sm font-medium text-gray-700 mb-2">관심 서비스 *</span>
+            <select
+              name="service"
+              value={formData.service}
+              onChange={handleInputChange}
+              required
+              disabled={isSubmitting}
+              className={inputClass}
+            >
+              {SERVICES.map((s) => (
+                <option key={s.value} value={s.value}>
+                  {s.label}
+                </option>
+              ))}
+            </select>
+          </label>
+        </div>
+
+        <label className="block">
+          <span className="block text-sm font-medium text-gray-700 mb-2">문의 내용 *</span>
+          <textarea
+            name="message"
+            value={formData.message}
+            onChange={handleInputChange}
+            required
+            rows={6}
+            disabled={isSubmitting}
+            className={inputClass}
+          />
+        </label>
+
+        <button
+          type="submit"
+          disabled={isSubmitting}
+          className="w-full bg-primary-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-primary-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+        >
+          {isSubmitting ? '전송 중…' : formspreeEnabled ? '문의 보내기' : '메일 앱으로 문의 보내기'}
+        </button>
+      </form>
+    </>
+  )
+}
+
+export default function Contact() {
+  const contactInfo = [
+    { title: '이메일', value: CONTACT_EMAIL, icon: '📧', link: `mailto:${CONTACT_EMAIL}` },
+    { title: '주소', value: '서울시 마포구 방울내로', icon: '📍', link: '#' },
   ]
 
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
-      
-      {/* Hero Section */}
+
       <section className="bg-gradient-to-br from-primary-600 to-secondary-600 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              문의하기
-            </h1>
-            <p className="text-xl max-w-3xl mx-auto">
-              드림에이아이랩에 대한 문의사항이 있으시면 언제든 연락주세요. 
-              빠르고 정확한 답변을 드리겠습니다.
-            </p>
-          </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">문의하기</h1>
+          <p className="text-xl max-w-3xl mx-auto">
+            투자·B2B·R&D·서비스 도입 문의를 환영합니다. 플랫폼(DAL)·도메인별 관심 사항을 선택해 주세요.
+          </p>
         </div>
       </section>
 
-      {/* Contact Form Section */}
       <section className="py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
             <div className="bg-white rounded-2xl shadow-lg p-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                문의 양식
-              </h2>
-              
-              {submitStatus === 'success' && (
-                <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
-                  <p className="text-green-800">문의가 성공적으로 전송되었습니다. 빠른 시일 내에 답변드리겠습니다.</p>
-                </div>
-              )}
-
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                      이름 *
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                      placeholder="이름을 입력하세요"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                      이메일 *
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                      placeholder="이메일을 입력하세요"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-                    회사/기관
-                  </label>
-                  <input
-                    type="text"
-                    id="company"
-                    name="company"
-                    value={formData.company}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                    placeholder="회사 또는 기관명을 입력하세요"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-                    문의 제목 *
-                  </label>
-                  <select
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                  >
-                    <option value="">문의 제목을 선택하세요</option>
-                    <option value="general">일반 문의</option>
-                    <option value="business">사업 제휴</option>
-                    <option value="technical">기술 문의</option>
-                    <option value="service">서비스 문의</option>
-                    <option value="support">고객 지원</option>
-                    <option value="other">기타</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    문의 내용 *
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    required
-                    rows={6}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                    placeholder="문의 내용을 자세히 입력해주세요"
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full bg-primary-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-primary-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-                >
-                  {isSubmitting ? '전송 중...' : '문의하기'}
-                </button>
-              </form>
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">문의 양식</h2>
+              <Suspense fallback={<p className="text-gray-500 text-sm">양식 불러오는 중…</p>}>
+                <ContactForm />
+              </Suspense>
             </div>
 
-            {/* Contact Information */}
             <div className="space-y-8">
-              {/* General Contact Info */}
               <div className="bg-white rounded-2xl shadow-lg p-8">
-                <h3 className="text-xl font-bold text-gray-900 mb-6">
-                  연락처 정보
-                </h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-6">연락처</h3>
                 <div className="space-y-4">
                   {contactInfo.map((info, index) => (
                     <div key={index} className="flex items-center">
                       <div className="text-2xl mr-4">{info.icon}</div>
                       <div>
                         <p className="font-medium text-gray-900">{info.title}</p>
-                        <a 
-                          href={info.link}
-                          className="text-primary-600 hover:text-primary-700 transition-colors"
-                        >
+                        <a href={info.link} className="text-primary-600 hover:text-primary-700 transition-colors">
                           {info.value}
                         </a>
                       </div>
@@ -245,37 +351,54 @@ export default function Contact() {
                 </div>
               </div>
 
-              {/* Service-specific Contacts */}
               <div className="bg-white rounded-2xl shadow-lg p-8">
-                <h3 className="text-xl font-bold text-gray-900 mb-6">
-                  서비스별 문의
-                </h3>
-                <div className="space-y-4">
-                  {serviceInquiries.map((service, index) => (
-                    <div key={index} className="border-b border-gray-200 pb-4 last:border-b-0">
-                      <h4 className="font-semibold text-gray-900 mb-1">{service.name}</h4>
-                      <p className="text-sm text-gray-600 mb-2">{service.description}</p>
-                      <a 
-                        href={`mailto:${service.contact}`}
-                        className="text-primary-600 hover:text-primary-700 text-sm transition-colors"
-                      >
-                        {service.contact}
-                      </a>
-                    </div>
-                  ))}
-                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">관련 링크</h3>
+                <ul className="space-y-3 text-sm text-gray-700">
+                  <li>
+                    <Link href="/technology/platform" className="text-primary-600 hover:underline">
+                      플랫폼 기술 개요
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/ir" className="text-primary-600 hover:underline">
+                      투자·IR
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/business" className="text-primary-600 hover:underline">
+                      비즈니스·파트너십
+                    </Link>
+                  </li>
+                  <li>
+                    <a
+                      href="https://noahailabs.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary-600 hover:underline"
+                    >
+                      Noah AI Labs
+                    </a>
+                    <span className="text-gray-500"> (노아AI·분리 법인)</span>
+                  </li>
+                </ul>
               </div>
 
-              {/* Office Hours */}
               <div className="bg-gradient-to-r from-primary-600 to-secondary-600 rounded-2xl p-8 text-white">
                 <h3 className="text-xl font-bold mb-4">운영 시간</h3>
-                <div className="space-y-2">
-                  <p><span className="font-medium">평일:</span> 09:00 - 18:00</p>
-                  <p><span className="font-medium">토요일:</span> 09:00 - 13:00</p>
-                  <p><span className="font-medium">일요일:</span> 휴무</p>
+                <div className="space-y-2 text-sm">
+                  <p>
+                    <span className="font-medium">평일:</span> 09:00 – 18:00
+                  </p>
+                  <p>
+                    <span className="font-medium">토요일:</span> 09:00 – 13:00
+                  </p>
+                  <p>
+                    <span className="font-medium">일요일:</span> 휴무
+                  </p>
                 </div>
                 <p className="text-sm text-primary-100 mt-4">
-                  * 긴급한 문의사항은 이메일로 연락주시면 빠른 답변을 드리겠습니다.
+                  보도·뉴스 아카이브는 당시 홍보 문맥이며, 현재 사업·제품 현황은 IR·각 서비스 페이지를 기준으로
+                  합니다.
                 </p>
               </div>
             </div>
@@ -283,56 +406,25 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-16 lg:py-24 bg-white">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              자주 묻는 질문
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              고객님들이 자주 문의하시는 내용들을 정리했습니다.
-            </p>
-          </div>
-
+          <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">자주 묻는 질문</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-gray-50 rounded-xl p-6">
-              <h3 className="text-lg font-bold text-gray-900 mb-3">
-                문의 후 답변은 언제 받을 수 있나요?
-              </h3>
-              <p className="text-gray-600">
-                일반적으로 1-2일 내에 답변을 드리며, 긴급한 문의사항의 경우 
-                더 빠른 답변을 제공합니다.
+              <h3 className="text-lg font-bold text-gray-900 mb-3">투자 문의는 어디로 하나요?</h3>
+              <p className="text-gray-600 text-sm">
+                DAL 플랫폼 투자는 「투자·IR」 유형을 선택하거나{' '}
+                <Link href="/contact?type=ir&service=platform" className="text-primary-600 underline">
+                  이 링크
+                </Link>
+                를 이용해 주세요.
               </p>
             </div>
-
             <div className="bg-gray-50 rounded-xl p-6">
-              <h3 className="text-lg font-bold text-gray-900 mb-3">
-                서비스 도입 문의도 가능한가요?
-              </h3>
-              <p className="text-gray-600">
-                네, 기업 및 기관의 서비스 도입 문의를 환영합니다. 
-                맞춤형 솔루션을 제공해드립니다.
-              </p>
-            </div>
-
-            <div className="bg-gray-50 rounded-xl p-6">
-              <h3 className="text-lg font-bold text-gray-900 mb-3">
-                기술 지원은 어떻게 받을 수 있나요?
-              </h3>
-              <p className="text-gray-600">
-                각 서비스별 전용 이메일로 기술 지원을 받으실 수 있으며, 
-                필요시 원격 지원도 제공합니다.
-              </p>
-            </div>
-
-            <div className="bg-gray-50 rounded-xl p-6">
-              <h3 className="text-lg font-bold text-gray-900 mb-3">
-                제휴 및 협력 문의는 어디로 해야 하나요?
-              </h3>
-              <p className="text-gray-600">
-                제휴 및 협력 문의는 contact@dreamailab.com으로 보내주시거나 
-                문의 양식을 통해 연락주세요.
+              <h3 className="text-lg font-bold text-gray-900 mb-3">모두의창업과 DAL의 관계는?</h3>
+              <p className="text-gray-600 text-sm">
+                출전·신청은 <strong>정해성</strong> 개인·<strong>자람이</strong> 제품 기준입니다. DAL은
+                플랫폼·R&D·TIPS·VC 주체이며, 별도 오디션 페이지는 두지 않습니다.
               </p>
             </div>
           </div>
@@ -342,4 +434,4 @@ export default function Contact() {
       <Footer />
     </div>
   )
-} 
+}

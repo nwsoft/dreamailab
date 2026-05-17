@@ -28,7 +28,7 @@ const servicesBreadcrumbJsonLd = buildBreadcrumbJsonLd([
 const services = [
   {
     name: '자람이',
-    status: '베타 테스트',
+    status: 'Beta',
     mark: 'JR',
     domain: '발달장애',
     summary: '가정·학교·센터·병원에서 끊기기 쉬운 발달 관찰·치료 데이터를 하나의 흐름으로 잇는 케어 인프라',
@@ -39,7 +39,7 @@ const services = [
   },
   {
     name: '시니어앤라이프',
-    status: '베타 테스트',
+    status: 'Pilot',
     mark: 'SL',
     domain: '시니어·노인돌봄',
     summary: '재가·시설·병원·가족 사이에서 흩어지는 시니어 돌봄·생활·행정 정보를 하나의 흐름으로 잇는 케어 인프라',
@@ -50,7 +50,7 @@ const services = [
   },
   {
     name: '토탈케어로그',
-    status: '개발 중',
+    status: 'In Development',
     mark: 'TC',
     domain: '의료',
     summary: '병원 밖에서 끊기는 증상·복약·생활 데이터를 다음 의료로 연결하는 헬스케어 인프라',
@@ -61,7 +61,7 @@ const services = [
   },
   {
     name: '에듀케어로그',
-    status: '개발 중',
+    status: 'Pilot',
     mark: 'ED',
     domain: '교육',
     summary: '학생의 오답이 아니라 멈춘 지점을 기록하고, 다음 학습으로 이어주는 교육 운영 인프라',
@@ -72,7 +72,7 @@ const services = [
   },
   {
     name: '글로벌커플케어',
-    status: '베타 테스트',
+    status: 'In Development',
     mark: 'GC',
     domain: '글로벌커플케어',
     summary: '국제결혼·다문화 가족 영역의 정보·절차·신뢰를 하나의 기준으로 연결하는 글로벌 가족 인프라',
@@ -83,7 +83,7 @@ const services = [
   },
   {
     name: '베지케어',
-    status: '베타 테스트',
+    status: 'In Development',
     mark: 'VG',
     domain: '라이프스타일',
     summary: '식습관·영양·건강 데이터를 실행과 소비·환경 행동까지 연결하는 웰니스 인프라',
@@ -378,19 +378,19 @@ export default function ServicePortfolio() {
           <p className="text-xl mb-8 text-white/90">투자, 공공 협력, 파트너십, 서비스 도입까지 한 인프라에서 연결합니다.</p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
-              href="/contact"
+              href="/contact?type=ir&service=platform"
               className="bg-white text-primary-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               투자 문의
             </Link>
             <Link
-              href="/business"
+              href="/contact?type=b2b&service=platform"
               className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors"
             >
               파트너십 문의
             </Link>
             <Link
-              href="/contact"
+              href="/contact?type=general&service=platform"
               className="border-2 border-white/70 text-white/95 px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors"
             >
               서비스 체험
@@ -434,8 +434,15 @@ function Section({
 type ServiceItem = (typeof services)[number]
 
 function ServiceSummaryCard({ service }: { service: ServiceItem }) {
-  const statusColor = service.status === '베타 테스트' ? 'bg-blue-100 text-blue-800' : 'bg-gray-100 text-gray-800'
-  const statusLabel = service.status === '베타 테스트' ? 'Service Status: Beta Testing' : service.status
+  const statusStyles: Record<string, { color: string; label: string }> = {
+    Beta: { color: 'bg-blue-100 text-blue-800', label: 'Service Status: Beta' },
+    Pilot: { color: 'bg-emerald-100 text-emerald-800', label: 'Service Status: Pilot' },
+    'In Development': { color: 'bg-gray-100 text-gray-800', label: 'Service Status: In Development' },
+  }
+  const statusMeta = statusStyles[service.status] ?? {
+    color: 'bg-gray-100 text-gray-800',
+    label: `Service Status: ${service.status}`,
+  }
 
   return (
     <div className="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100">
@@ -449,7 +456,9 @@ function ServiceSummaryCard({ service }: { service: ServiceItem }) {
             <p className="text-xs text-gray-500 mt-1">{service.domain}</p>
           </div>
         </div>
-        <span className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${statusColor}`}>{statusLabel}</span>
+        <span className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${statusMeta.color}`}>
+          {statusMeta.label}
+        </span>
       </div>
 
       <p className="text-sm font-medium text-gray-800 mb-3 leading-relaxed">{service.summary}</p>

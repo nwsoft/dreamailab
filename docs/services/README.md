@@ -2,6 +2,9 @@
 
 웹 구현과 비교해 톤·기능 나열이 맞는지 검증할 때 사용합니다.
 
+- 문의·CTA 통일: [../EXTERNAL_READINESS_AND_CONTACT_PLAN.md](../EXTERNAL_READINESS_AND_CONTACT_PLAN.md)
+- 뉴스 vs 웹 톤: [../CONTENT_SSOT_AND_NEWS_POLICY.md](../CONTENT_SSOT_AND_NEWS_POLICY.md)
+
 | 서비스 | 웹 경로 | 스펙 MD |
 |--------|---------|-----------|
 | 자람이 | `/services/jarame` | [jarame.md](./jarame.md) |

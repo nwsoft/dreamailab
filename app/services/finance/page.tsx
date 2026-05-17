@@ -9,18 +9,6 @@ export const metadata: Metadata = {
   title: '노아AI 이전 안내 | Noah AI Labs 분리 운영',
   description:
     '노아AI는 Dream AI Lab에서 Noah AI Labs로 기술이전·분리 운영 중입니다. AI디지털케어로그 기반 재테크·금융 플랫폼의 최신 업데이트와 VC/TIPS/R&D 관련 소식은 Noah AI Labs에서 확인하세요.',
-  keywords: [
-    '노아AI',
-    'Noah AI',
-    'Noah AI Labs',
-    '기술이전',
-    '분리 운영',
-    'AI디지털케어로그',
-    '재테크 금융 플랫폼',
-    'VC',
-    'TIPS',
-    'R&D',
-  ],
   alternates: { canonical: pageCanonical },
   openGraph: {
     title: '노아AI 이전 안내 | Noah AI Labs',
@@ -97,10 +85,10 @@ export default function FinanceServiceNoticePage() {
               <h3 className="font-bold text-gray-900 mb-2">기술 백서</h3>
               <p className="text-sm text-gray-600">노아AI 기술 개요 참고</p>
             </Link>
-            <Link href="/contact" className="bg-white rounded-xl p-6 border border-gray-200 hover:border-indigo-300 transition-colors">
+            <Link href="/contact?type=general&service=platform" className="bg-white rounded-xl p-6 border border-gray-200 hover:border-indigo-300 transition-colors">
               <p className="text-xs font-semibold text-indigo-700 mb-2">일반 문의</p>
               <h3 className="font-bold text-gray-900 mb-2">Dream AI Lab</h3>
-              <p className="text-sm text-gray-600">DAL 서비스 관련 문의</p>
+              <p className="text-sm text-gray-600">DAL 플랫폼·도메인 서비스 문의</p>
             </Link>
           </div>
         </div>

@@ -10,26 +10,6 @@ export const metadata: Metadata = {
   title: '베지케어 | 채식·비건 AI 영양 케어로그 | 드림에이아이랩',
   description:
     '베지케어(VeggieCare)는 채식·비건·플렉시테리언 등 식단 유형을 전제로 식습관을 AI 디지털케어로그로 연결하는 웰니스 플랫폼입니다. 식단 기록, 영양 분석, AI 레시피, 외식·커머스 연계와 함께 회복 식사·체중·운동 목표를 같은 구조 안에서 지향할 수 있습니다.',
-  keywords: [
-    '베지케어',
-    'VeggieCare',
-    '채식 플랫폼',
-    '회복 식사 관리',
-    '암환자 식단관리',
-    '항암 회복 식단',
-    '다이어트 식단',
-    '운동 식단',
-    '운동 영양 관리',
-    '비건 플랫폼',
-    '채식 식단',
-    '비건 레시피',
-    '채식 영양관리',
-    '식습관 케어로그',
-    'AI 디지털케어로그',
-    '플렉시테리언',
-    '비건 맛집',
-    '드림에이아이랩',
-  ],
   alternates: { canonical: pageCanonical },
   openGraph: {
     title: '베지케어 | 채식·비건 AI 영양 케어로그',
@@ -52,7 +32,7 @@ export const metadata: Metadata = {
 const brand = {
   name: '베지케어',
   english: 'VeggieCare',
-  status: 'Beta Testing',
+  status: 'In Development',
   externalUrl: 'https://veggie.care',
 }
 
@@ -440,7 +420,7 @@ export default function VeggieService() {
           <div className="text-center">
             <div className="mb-6 flex flex-wrap justify-center items-center gap-2 text-xs sm:text-sm">
               <span className="inline-flex items-center rounded-full bg-white/15 border border-white/25 px-3 py-1.5 font-semibold text-green-50">
-                베타 테스트
+                개발 중 (In Development)
               </span>
               <span className="text-green-100">{brand.name} ({brand.english})</span>
             </div>
@@ -640,7 +620,7 @@ export default function VeggieService() {
               Veggie.care 바로가기
             </a>
             <Link
-              href="/contact?type=veggie"
+              href="/contact?service=veggie&type=general"
               className="inline-flex justify-center items-center rounded-lg border border-emerald-200 bg-emerald-50 px-5 py-3 text-sm font-semibold text-emerald-900 hover:bg-emerald-100 transition-colors"
             >
               소식·문의하기
@@ -968,7 +948,7 @@ export default function VeggieService() {
               <p className="text-xs font-semibold text-green-100 mb-1">사용자 · 커뮤니티</p>
               <p className="text-sm text-green-50 mb-4">사전 공개 소식과 커뮤니티 참여 가능성을 안내받습니다.</p>
               <Link
-                href="/contact?type=veggie"
+                href="/contact?service=veggie&type=general"
                 className="inline-flex w-full justify-center items-center bg-white text-emerald-800 font-semibold px-4 py-2.5 rounded-lg text-sm hover:bg-green-50 transition-colors"
               >
                 베지케어 소식 받기
@@ -978,7 +958,7 @@ export default function VeggieService() {
               <p className="text-xs font-semibold text-green-100 mb-1">식당 · 브랜드 · 커머스</p>
               <p className="text-sm text-green-50 mb-4">메뉴·제품·정기배송·리워드 파트너십을 논의합니다.</p>
               <Link
-                href="/contact?type=partner"
+                href="/contact?service=veggie&type=b2b"
                 className="inline-flex w-full justify-center items-center bg-white text-emerald-800 font-semibold px-4 py-2.5 rounded-lg text-sm hover:bg-green-50 transition-colors"
               >
                 파트너십 문의
@@ -988,7 +968,7 @@ export default function VeggieService() {
               <p className="text-xs font-semibold text-green-100 mb-1">헬스케어 · 연구 · IR</p>
               <p className="text-sm text-green-50 mb-4">식습관 데이터, 웰니스, 헬스케어 연계 협력을 상담합니다.</p>
               <Link
-                href="/contact?type=ir"
+                href="/contact?service=veggie&type=ir"
                 className="inline-flex w-full justify-center items-center bg-white text-emerald-800 font-semibold px-4 py-2.5 rounded-lg text-sm hover:bg-green-50 transition-colors"
               >
                 전략 협력 문의
@@ -1005,7 +985,7 @@ export default function VeggieService() {
               Veggie.care (공식 사이트)
             </a>
             <span className="hidden sm:inline text-white/40">|</span>
-            <Link href="/contact" className="text-white font-medium underline underline-offset-2 hover:text-green-100">
+            <Link href="/contact?service=veggie&type=general" className="text-white font-medium underline underline-offset-2 hover:text-green-100">
               일반 문의
             </Link>
             <span className="hidden sm:inline text-white/40">|</span>
