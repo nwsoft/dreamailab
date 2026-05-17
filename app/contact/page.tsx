@@ -5,12 +5,7 @@ import Footer from '../../components/Footer'
 import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
 import { Suspense, useEffect, useMemo, useState } from 'react'
-import {
-  buildMailtoHref,
-  isFormspreeConfigured,
-  submitContactForm,
-  type ContactFormPayload,
-} from '../../lib/contact-form'
+import { buildMailtoHref, type ContactFormPayload } from '../../lib/contact-form'
 
 const CONTACT_EMAIL = 'contact@dreamailab.com'
 const inputClass =
@@ -86,7 +81,6 @@ function NoticeBanner({
 
 function ContactForm() {
   const searchParams = useSearchParams()
-  const formspreeEnabled = isFormspreeConfigured()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -96,7 +90,7 @@ function ContactForm() {
     message: '',
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success'>('idle')
   const [submitMessage, setSubmitMessage] = useState('')
 
   useEffect(() => {
@@ -134,73 +128,31 @@ function ContactForm() {
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
 
-  const resetForm = () => {
-    setFormData({
-      name: '',
-      email: '',
-      company: '',
-      inquiryType: mapUrlTypeToInquiry(searchParams.get('type')),
-      service: mapUrlService(searchParams.get('service'), searchParams.get('type')),
-      message: '',
-    })
-  }
-
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
     setSubmitStatus('idle')
     setSubmitMessage('')
 
     const payload = buildPayload()
-
-    if (formspreeEnabled) {
-      const result = await submitContactForm(payload)
-      setIsSubmitting(false)
-
-      if (result.ok) {
-        setSubmitStatus('success')
-        setSubmitMessage('문의가 접수되었습니다. 빠른 시일 내에 답변드리겠습니다.')
-        resetForm()
-        setTimeout(() => setSubmitStatus('idle'), 8000)
-        return
-      }
-
-      if (result.error) {
-        setSubmitStatus('error')
-        setSubmitMessage(`${result.error} 메일 앱으로 보내기를 시도합니다.`)
-      }
-    }
-
     window.location.href = buildMailtoHref(payload, CONTACT_EMAIL)
+
     setIsSubmitting(false)
     setSubmitStatus('success')
     setSubmitMessage(
-      formspreeEnabled
-        ? '자동 전송에 실패해 메일 앱을 엽니다. 보내기를 눌러야 전달됩니다.'
-        : '메일 앱이 열립니다. 보내기를 눌러야 문의가 전달됩니다.'
+      '메일 앱이 열립니다. 받는 사람·내용을 확인한 뒤 보내기를 눌러 주셔야 문의가 전달됩니다.'
     )
-    setTimeout(() => setSubmitStatus('idle'), 8000)
+    setTimeout(() => setSubmitStatus('idle'), 10000)
   }
 
   return (
     <>
       {submitStatus === 'success' && <NoticeBanner>{submitMessage}</NoticeBanner>}
-      {submitStatus === 'error' && <NoticeBanner variant="error">{submitMessage}</NoticeBanner>}
 
       <form onSubmit={handleSubmit} className="space-y-6">
         <NoticeBanner variant="info">
-          {formspreeEnabled ? (
-            <>
-              문의는 <strong>{CONTACT_EMAIL}</strong>로 자동 접수됩니다. 제출 후 완료 메시지를 확인해 주세요.
-            </>
-          ) : (
-            <>
-              문의는 <strong>{CONTACT_EMAIL}</strong>로 전달됩니다. 제출 시 메일 앱에서{' '}
-              <strong>보내기</strong>를 눌러 주세요. (운영: Cloudflare에{' '}
-              <code className="text-xs bg-blue-100 px-1 rounded">NEXT_PUBLIC_FORMSPREE_FORM_ID</code> 설정 시 자동
-              접수)
-            </>
-          )}
+          문의는 <strong>{CONTACT_EMAIL}</strong>로 전달됩니다. 아래에서 제출하면 메일 앱에 제목·본문이 채워지며,{' '}
+          <strong>보내기</strong>를 눌러야 최종 전송됩니다. (Cloudflare 이메일 라우팅으로 수신)
         </NoticeBanner>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -297,7 +249,7 @@ function ContactForm() {
           disabled={isSubmitting}
           className="w-full bg-primary-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-primary-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
         >
-          {isSubmitting ? '전송 중…' : formspreeEnabled ? '문의 보내기' : '메일 앱으로 문의 보내기'}
+          {isSubmitting ? '메일 앱 여는 중…' : '메일 앱으로 문의 보내기'}
         </button>
       </form>
     </>

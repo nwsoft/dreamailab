@@ -1,7 +1,7 @@
 # 외부 방문·문의·IR 대비 수정 계획
 
 **last_reviewed:** 2026-05-17  
-**상태:** Phase 0·2·3(Status)·4 완료 / Phase 1 — **CF `NEXT_PUBLIC_FORMSPREE_FORM_ID` + 재배포 + 수신 1건 테스트만 잔여**
+**상태:** Phase 0~4 완료 / Phase 1 문의 — **mailto 확정** (Formspree·CF 환경 변수 불사용)
 
 관련: [BUSINESS_ROADMAP_AND_ENTITY_STRATEGY.md](./BUSINESS_ROADMAP_AND_ENTITY_STRATEGY.md) (비즈니스·법인 Living SSOT), [CONTENT_SSOT_AND_NEWS_POLICY.md](./CONTENT_SSOT_AND_NEWS_POLICY.md), [BUSINESS_SERVICES_SYNC.md](./BUSINESS_SERVICES_SYNC.md)
 
@@ -62,10 +62,10 @@
 | 빌드 | Next.js `output: 'export'` → `out/` 정적 파일 |
 | 호스팅 | Cloudflare Pages (`배포_가이드.md`) |
 | 백엔드 | **없음** (`app/api` 없음) |
-| 문의 폼 | `app/contact/page.tsx` + `lib/contact-form.ts` — Formspree 또는 mailto |
+| 문의 폼 | `app/contact/page.tsx` + `lib/contact-form.ts` — **mailto** (`contact@dreamailab.com`) |
 | `?type=` / `?service=` | contact 페이지 **prefill 구현** |
 
-Formspree: `NEXT_PUBLIC_FORMSPREE_FORM_ID` (Cloudflare Pages 환경 변수). 미설정 시 mailto fallback. 상세: `배포_가이드.md` §문의 폼.
+수신: Cloudflare 이메일 라우팅. 상세: `배포_가이드.md` §문의 폼.
 
 ---
 
@@ -105,12 +105,11 @@ Formspree: `NEXT_PUBLIC_FORMSPREE_FORM_ID` (Cloudflare Pages 환경 변수). 미
 **목표:** 제출 → 실제 수신(이메일 또는 스프레드시트/CRM).
 
 - [x] 가짜 2초 시뮬레이션·허위 “전송 완료” 제거
-- [x] **mailto** 방식: 메일 앱에서 최종 발송 (정적 사이트 호환)
-- [x] Formspree 연동 코드 (`lib/contact-form.ts`, `.env.example`)
-- [ ] Cloudflare에 `NEXT_PUBLIC_FORMSPREE_FORM_ID` 설정 + **자동 수신 1건 테스트**
+- [x] **mailto** 방식: 메일 앱에서 최종 발송 (정적 사이트·이메일 라우팅)
+- [x] Formspree 미사용 (운영 단순화)
 - [x] 수신 주소 표기: `contact@dreamailab.com`
 
-**완료 기준 (현재):** mailto prefill 동작. **완료 기준 (목표):** Formspree env 설정 후 자동 수신 1건 테스트.
+**완료 기준:** 제출 → 메일 앱 prefill → 사용자 보내기 → `contact@` 수신.
 
 ---
 
@@ -210,7 +209,7 @@ Formspree: `NEXT_PUBLIC_FORMSPREE_FORM_ID` (Cloudflare Pages 환경 변수). 미
 
 ## 10. 의사결정 대기 (구현 전 확인)
 
-1. **문의 연동 방식:** Formspree / Resend / Cloudflare Worker 중 선호?
+1. ~~문의 연동 방식~~ → **mailto 확정** (2026-05)
 2. **서비스별 이메일** (`jarame@` 등) 완전 폐지 vs mailto 보조 유지?
 3. **about**에 모두의창업 1문장 노출 여부 (링크: 해당 뉴스 기사만)?
 

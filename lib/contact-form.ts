@@ -9,14 +9,7 @@ export type ContactFormPayload = {
   message: string
 }
 
-/** Cloudflare Pages / 빌드 시 `NEXT_PUBLIC_FORMSPREE_FORM_ID` 설정 (예: xyzabcde) */
-export function getFormspreeEndpoint(): string | null {
-  const raw = process.env.NEXT_PUBLIC_FORMSPREE_FORM_ID?.trim()
-  if (!raw) return null
-  if (raw.startsWith('http')) return raw
-  return `https://formspree.io/f/${raw}`
-}
-
+/** 문의 양식 제출 → contact@ 로 mailto (제목·본문 prefill). 사용자가 메일 앱에서 보내기를 눌러야 전달됨. */
 export function buildMailtoHref(payload: ContactFormPayload, contactEmail: string): string {
   const subject = encodeURIComponent(
     `[DAL 문의] ${payload.inquiryLabel} · ${payload.serviceLabel}${payload.company ? ` · ${payload.company}` : ''}`
@@ -38,52 +31,4 @@ export function buildMailtoHref(payload: ContactFormPayload, contactEmail: strin
       .join('\n')
   )
   return `mailto:${contactEmail}?subject=${subject}&body=${body}`
-}
-
-export async function submitContactForm(
-  payload: ContactFormPayload
-): Promise<{ ok: boolean; mode: 'formspree' | 'mailto'; error?: string }> {
-  const endpoint = getFormspreeEndpoint()
-  if (!endpoint) {
-    return { ok: false, mode: 'mailto' }
-  }
-
-  try {
-    const res = await fetch(endpoint, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json',
-      },
-      body: JSON.stringify({
-        name: payload.name,
-        email: payload.email,
-        company: payload.company || '',
-        inquiry_type: payload.inquiryType,
-        inquiry_label: payload.inquiryLabel,
-        service_slug: payload.service,
-        service_label: payload.serviceLabel,
-        message: payload.message,
-        _subject: `[DAL 문의] ${payload.inquiryLabel} · ${payload.serviceLabel}`,
-        _replyto: payload.email,
-      }),
-    })
-
-    if (res.ok) {
-      return { ok: true, mode: 'formspree' }
-    }
-
-    const data = (await res.json().catch(() => null)) as { error?: string } | null
-    return {
-      ok: false,
-      mode: 'formspree',
-      error: data?.error ?? `전송 실패 (${res.status})`,
-    }
-  } catch {
-    return { ok: false, mode: 'formspree', error: '네트워크 오류로 전송하지 못했습니다.' }
-  }
-}
-
-export function isFormspreeConfigured(): boolean {
-  return Boolean(getFormspreeEndpoint())
 }
