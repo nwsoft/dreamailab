@@ -7,7 +7,6 @@ export default function Footer() {
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center mb-4">
               <div className="w-8 h-8 bg-gradient-to-r from-primary-600 to-secondary-600 rounded-lg flex items-center justify-center">
@@ -16,15 +15,17 @@ export default function Footer() {
               <span className="ml-2 text-xl font-bold">드림에이아이랩</span>
             </div>
             <p className="text-gray-300 mb-4 max-w-md">
-              DAL은 AI디지털케어로그 기반 플랫폼으로 
-              돌봄·의료·교육 데이터를 연결하는 
-              플랫폼 인프라 기업입니다.
+              DAL은 AI디지털케어로그 기반 플랫폼으로 돌봄·의료·교육 데이터를 연결하는 플랫폼 인프라 기업입니다.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
                 <span className="sr-only">Facebook</span>
                 <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path fillRule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clipRule="evenodd" />
+                  <path
+                    fillRule="evenodd"
+                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                    clipRule="evenodd"
+                  />
                 </svg>
               </a>
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
@@ -36,17 +37,18 @@ export default function Footer() {
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
                 <span className="sr-only">LinkedIn</span>
                 <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path fillRule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clipRule="evenodd" />
+                  <path
+                    fillRule="evenodd"
+                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                    clipRule="evenodd"
+                  />
                 </svg>
               </a>
             </div>
           </div>
 
-          {/* Quick Links */}
           <div>
-            <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase mb-4">
-              회사
-            </h3>
+            <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase mb-4">회사</h3>
             <ul className="space-y-2">
               <li>
                 <Link href="/about" className="text-gray-300 hover:text-white transition-colors">
@@ -68,62 +70,46 @@ export default function Footer() {
                   기술
                 </Link>
               </li>
+              <li>
+                <Link href="/ir" className="text-gray-300 hover:text-white transition-colors">
+                  투자·IR
+                </Link>
+              </li>
             </ul>
           </div>
 
-          {/* 플랫폼 & 협력 */}
           <div>
-            <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase mb-4">
-              플랫폼·협력
-            </h3>
-            <div className="space-y-2 mb-4">
-              <Link href="/services" className="text-gray-300 hover:text-white transition-colors text-sm block">
-                서비스 생태계
-              </Link>
-              <Link href="/technology" className="text-gray-300 hover:text-white transition-colors text-sm block">
-                AI디지털케어로그
-              </Link>
-              <Link href="/business" className="text-gray-300 hover:text-white transition-colors text-sm block">
-                비즈니스
-              </Link>
-              <Link href="/public" className="text-gray-300 hover:text-white transition-colors text-sm block">
-                공공 협력
-              </Link>
-              <Link href="/ir" className="text-gray-300 hover:text-white transition-colors text-sm block">
-                투자·사업 협력
-              </Link>
-            </div>
-            <Link href="/contact" className="inline-block mt-2 bg-primary-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-primary-500 transition-colors">
-              파트너십 문의
-            </Link>
+            <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase mb-4">플랫폼</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link href="/services" className="text-gray-300 hover:text-white transition-colors">
+                  서비스 생태계
+                </Link>
+              </li>
+              <li>
+                <Link href="/public" className="text-gray-300 hover:text-white transition-colors">
+                  공공 협력
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="text-gray-300 hover:text-white transition-colors">
+                  문의하기
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
 
-        <div className="mt-8 pt-8 border-t border-gray-800">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-gray-400 text-sm">
-              © {currentYear} 드림에이아이랩. AI디지털케어로그 기반 플랫폼.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/contact" className="text-gray-400 hover:text-white text-sm transition-colors">
-                문의하기
-              </Link>
-              <Link href="/public" className="text-gray-400 hover:text-white text-sm transition-colors">
-                공공 협력
-              </Link>
-              <Link href="/ir" className="text-gray-400 hover:text-white text-sm transition-colors">
-                투자·사업 협력
-              </Link>
-              <Link href="/business" className="text-gray-400 hover:text-white text-sm transition-colors">
-                파트너십
-              </Link>
-              <Link href="/services" className="text-gray-400 hover:text-white text-sm transition-colors">
-                서비스
-              </Link>
-            </div>
-          </div>
+        <div className="mt-8 pt-8 border-t border-gray-800 flex flex-col sm:flex-row justify-between items-center gap-4">
+          <p className="text-gray-400 text-sm">© {currentYear} 드림에이아이랩. AI디지털케어로그 기반 플랫폼.</p>
+          <Link
+            href="/contact"
+            className="text-sm font-semibold text-white bg-primary-600 hover:bg-primary-500 px-4 py-2 rounded-lg transition-colors"
+          >
+            문의하기
+          </Link>
         </div>
       </div>
     </footer>
   )
-} 
+}

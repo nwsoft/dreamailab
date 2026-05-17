@@ -111,6 +111,15 @@
 
 **완료 기준:** 제출 → 메일 앱 prefill → 사용자 보내기 → `contact@` 수신.
 
+**CTA 규칙 (2026-05):**
+
+| 라벨 | 링크 | 비고 |
+|------|------|------|
+| 투자 문의 | `/contact?type=ir&service=platform` (또는 서비스 slug) | |
+| 파트너십·B2B·공공 협력 문의 | `/contact?type=b2b&service=...` | `/business` 로 보내지 않음 |
+| 비즈니스 상세 | `/business` | 소개 페이지만 |
+| 푸터 | `/contact` 1곳 | 파트너십 문의 버튼 중복 제거 |
+
 ---
 
 ### Phase 2 — 문의 **단일 UX** (노아·구의료 정리 포함)

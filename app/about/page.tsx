@@ -424,7 +424,10 @@ export default function About() {
             <Link href="/contact?type=ir&service=platform" className="bg-white text-primary-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
               투자 문의
             </Link>
-            <Link href="/business" className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors">
+            <Link
+              href="/contact?type=b2b&service=platform"
+              className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+            >
               파트너십 문의
             </Link>
             <Link href="/services" className="border-2 border-white/70 text-white/95 px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors">
