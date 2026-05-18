@@ -152,7 +152,7 @@ function ContactForm() {
       <form onSubmit={handleSubmit} className="space-y-6">
         <NoticeBanner variant="info">
           문의는 <strong>{CONTACT_EMAIL}</strong>로 전달됩니다. 아래에서 제출하면 메일 앱에 제목·본문이 채워지며,{' '}
-          <strong>보내기</strong>를 눌러야 최종 전송됩니다. (Cloudflare 이메일 라우팅으로 수신)
+          <strong>보내기</strong>를 눌러야 최종 전송됩니다.
         </NoticeBanner>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -270,7 +270,7 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">문의하기</h1>
           <p className="text-xl max-w-3xl mx-auto">
-            투자·B2B·R&D·서비스 도입 문의를 환영합니다. 플랫폼(DAL)·도메인별 관심 사항을 선택해 주세요.
+            투자·제휴·서비스 도입 문의를 환영합니다. 관심 분야를 선택해 주세요.
           </p>
         </div>
       </section>

@@ -14,8 +14,9 @@ export default function Footer() {
               </div>
               <span className="ml-2 text-xl font-bold">드림에이아이랩</span>
             </div>
-            <p className="text-gray-300 mb-4 max-w-md">
-              DAL은 AI디지털케어로그 기반 플랫폼으로 돌봄·의료·교육 데이터를 연결하는 플랫폼 인프라 기업입니다.
+            <p className="text-gray-300 mb-4 max-w-md leading-relaxed">
+              드림에이아이랩(DAL)은 AI디지털케어로그를 직접 개발해, 발달·돌봄·의료·교육·가족·웰니스 등 사람을
+              돕는 영역에 표준화된 기록과 맞춤 서비스를 올리는 플랫폼·데이터 인프라 기업입니다.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
@@ -91,23 +92,28 @@ export default function Footer() {
                   공공 협력
                 </Link>
               </li>
-              <li>
-                <Link href="/contact" className="text-gray-300 hover:text-white transition-colors">
-                  문의하기
-                </Link>
-              </li>
             </ul>
           </div>
         </div>
 
-        <div className="mt-8 pt-8 border-t border-gray-800 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-gray-400 text-sm">© {currentYear} 드림에이아이랩. AI디지털케어로그 기반 플랫폼.</p>
-          <Link
-            href="/contact"
-            className="text-sm font-semibold text-white bg-primary-600 hover:bg-primary-500 px-4 py-2 rounded-lg transition-colors"
-          >
-            문의하기
-          </Link>
+        <div className="mt-8 pt-8 border-t border-gray-800">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-gray-400 text-sm">© {currentYear} 드림에이아이랩. AI디지털케어로그 기반 플랫폼.</p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link href="/contact" className="text-gray-400 hover:text-white text-sm transition-colors">
+                문의하기
+              </Link>
+              <Link href="/public" className="text-gray-400 hover:text-white text-sm transition-colors">
+                공공 협력
+              </Link>
+              <Link href="/ir" className="text-gray-400 hover:text-white text-sm transition-colors">
+                투자·사업 협력
+              </Link>
+              <Link href="/services" className="text-gray-400 hover:text-white text-sm transition-colors">
+                서비스
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
