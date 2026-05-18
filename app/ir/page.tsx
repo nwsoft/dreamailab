@@ -3,6 +3,7 @@ import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import Link from 'next/link'
 import { MarketingIcon, type MarketingIconName } from '../../components/MarketingIcon'
+import { COMPANY_META_LINE } from '../../lib/company-copy'
 
 const irCanonical = 'https://dreamailab.com/ir'
 const irDescription = 'DAL AI디지털케어로그 플랫폼의 시장 기회, 수익 모델, 데이터 자산. 투자 및 사업 협력 문의.'
@@ -91,7 +92,7 @@ export default function IRPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">DAL 플랫폼 핵심 요약</h2>
           <p className="text-lg text-gray-700 mb-8 max-w-4xl">
-            돌봄·의료·교육 데이터를 표준화하는 데이터 인프라 기업입니다. 하나의 AI디지털케어로그 위에 핵심 6개 도메인을 연결하며,
+            {COMPANY_META_LINE}입니다. 하나의 AI디지털케어로그 위에 핵심 6개 도메인을 연결하며,
             초기에 집중해 온 4대 축(발달·시니어·국제결혼·라이프스타일)을 전개 중입니다. 노아AI(금융)는 별도 법인 Noah AI Labs로 기술이전되어 분리 운영 중입니다.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">

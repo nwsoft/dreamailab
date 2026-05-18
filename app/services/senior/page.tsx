@@ -1528,14 +1528,7 @@ export default function SeniorService() {
           </div>
 
           <div className="max-w-3xl mx-auto flex flex-col sm:flex-row gap-4 justify-center items-center text-sm">
-            <Link
-              href="/contact?service=senior&type=ir"
-              className="text-emerald-800 font-medium underline underline-offset-2 hover:text-emerald-900"
-            >
-              IR · 투자 문의
-            </Link>
-            <span className="hidden sm:inline text-gray-300">|</span>
-            <Link href="/contact?service=senior&type=general" className="text-gray-600 hover:text-gray-900">
+            <Link href="/contact?service=senior&type=general" className="text-emerald-800 font-medium underline underline-offset-2 hover:text-emerald-900">
               일반 문의
             </Link>
           </div>

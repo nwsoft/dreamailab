@@ -1450,15 +1450,8 @@ export default function EduCareLogService() {
               파일럿 도입 상담 요청하기
             </Link>
             <span className="hidden sm:inline text-white/40">|</span>
-            <Link href="/contact?service=educarelog&type=ir" className="text-blue-100 hover:text-white underline underline-offset-2">
-              IR 문의
-            </Link>
-            <span className="hidden sm:inline text-white/40">|</span>
-            <Link
-              href="/contact?service=educarelog&type=ir"
-              className="text-blue-100 hover:text-white underline underline-offset-2 font-medium"
-            >
-              전략적 파트너십 및 투자 협력 문의
+            <Link href="/contact?service=educarelog&type=general" className="text-blue-100 hover:text-white underline underline-offset-2">
+              일반 문의
             </Link>
           </div>
         </div>

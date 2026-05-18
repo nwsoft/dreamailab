@@ -965,13 +965,13 @@ export default function VeggieService() {
               </Link>
             </div>
             <div className="bg-white/10 rounded-xl p-5 border border-white/20 text-left">
-              <p className="text-xs font-semibold text-green-100 mb-1">헬스케어 · 연구 · IR</p>
+              <p className="text-xs font-semibold text-green-100 mb-1">연구 · 웰니스</p>
               <p className="text-sm text-green-50 mb-4">식습관 데이터, 웰니스, 헬스케어 연계 협력을 상담합니다.</p>
               <Link
-                href="/contact?service=veggie&type=ir"
+                href="/contact?service=veggie&type=tech"
                 className="inline-flex w-full justify-center items-center bg-white text-emerald-800 font-semibold px-4 py-2.5 rounded-lg text-sm hover:bg-green-50 transition-colors"
               >
-                전략 협력 문의
+                협력 문의
               </Link>
             </div>
           </div>

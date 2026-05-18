@@ -1,19 +1,19 @@
 import type { Metadata } from 'next'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import PageClosingSection from '../components/PageClosingSection'
 import Link from 'next/link'
+import { COMPANY_HERO_LINE, COMPANY_META_LINE } from '../lib/company-copy'
 import { IconApi, IconInvest, IconPartners, IconPublic, IconUser } from '../components/home-intent-icons'
 import { absoluteUrl, buildPageMetadata } from '../lib/seo'
 
 export const metadata: Metadata = {
   ...buildPageMetadata({
     title: '드림에이아이랩 | AI디지털케어로그 기반 플랫폼 - DAL',
-    description:
-      '드림에이아이랩(DAL)은 돌봄·의료·교육 데이터를 표준화하는 플랫폼 기업입니다. AI디지털케어로그로 하나의 데이터 인프라 위에 발달장애, 시니어, 의료, 교육, 글로벌커플케어, 라이프스타일 6개 핵심 도메인을 연결합니다.',
+    description: `${COMPANY_META_LINE}입니다.`,
     path: '/',
-    ogTitle: '드림에이아이랩 | AI디지털케어로그로 의료·돌봄·교육 혁신하는 DAL',
-    ogDescription:
-      'AI디지털케어로그 표준으로 케어 혁신을 지향하는 기술 기업. 발달장애·시니어·의료·교육·글로벌커플케어·웰니스 도메인을 하나의 플랫폼으로 연결합니다.',
+    ogTitle: '드림에이아이랩 | AI디지털케어로그 플랫폼 - DAL',
+    ogDescription: `${COMPANY_META_LINE}입니다.`,
     ogImageAlt: '드림에이아이랩',
   }),
   alternates: {
@@ -32,8 +32,7 @@ export default function Home() {
     '@type': 'Organization',
     name: '드림에이아이랩',
     alternateName: 'Dream AI Lab',
-    description:
-      '드림에이아이랩(DAL)은 AI디지털케어로그 표준으로 케어 혁신을 지향하는 기술 기업입니다. 표준화된 데이터와 멀티모달 AI 분석으로 개인 맞춤 케어의 새로운 표준을 만들고, 토탈케어로그부터 시니어 돌봄, 발달장애, 국제결혼, 라이프스타일 영역까지 같은 플랫폼 철학으로 확장합니다.',
+    description: `${COMPANY_META_LINE}입니다.`,
     url: absoluteUrl('/'),
     logo: absoluteUrl('/logo.png'),
     founder: {
@@ -237,9 +236,7 @@ export default function Home() {
             <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-6 leading-tight">
               AI디지털케어로그 기반 플랫폼
             </h1>
-            <p className="text-xl md:text-2xl font-semibold text-white/95 mb-4">
-              돌봄·의료·교육 데이터를 표준화하고 현장 실행을 연결하는 플랫폼 인프라
-            </p>
+            <p className="text-xl md:text-2xl font-semibold text-white/95 mb-4">{COMPANY_HERO_LINE}</p>
             <p className="text-lg text-white/90 max-w-3xl mx-auto leading-relaxed mb-6">
               여러 서비스가 아니라, 하나의 데이터 플랫폼 위에 연결된 서비스 생태계입니다.
             </p>
@@ -287,8 +284,8 @@ export default function Home() {
               <span className="mb-3 text-primary-600 group-hover:text-primary-700">
                 <IconInvest className="w-10 h-10 mx-auto" />
               </span>
-              <span className="font-semibold text-gray-900 group-hover:text-primary-700">투자·사업 협력</span>
-              <span className="text-sm text-gray-500 mt-1">IR, 투자 검토</span>
+              <span className="font-semibold text-gray-900 group-hover:text-primary-700">투자·IR</span>
+              <span className="text-sm text-gray-500 mt-1">투자자·사업 정보</span>
             </Link>
             <Link href="/technology#api" className="group flex flex-col items-center p-6 rounded-xl border-2 border-gray-200 hover:border-primary-500 hover:bg-primary-50/50 transition-all text-center">
               <span className="mb-3 text-primary-600 group-hover:text-primary-700">
@@ -589,24 +586,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA - 투자/파트너/서비스 통일 */}
-      <section className="py-16 lg:py-24 bg-gradient-to-r from-primary-700 to-secondary-700 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">AI디지털케어로그 기반 플랫폼</h2>
-          <p className="text-lg max-w-3xl mx-auto text-white/90 mb-8">투자·파트너십·서비스 도입 문의를 환영합니다.</p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/contact?type=ir&service=platform" className="bg-white text-primary-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-              투자 문의
-            </Link>
-            <Link href="/contact?type=b2b&service=platform" className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-              파트너십 문의
-            </Link>
-            <Link href="/services" className="border-2 border-white/70 text-white/95 px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-              서비스 생태계 보기
-            </Link>
-          </div>
-        </div>
-      </section>
+      <PageClosingSection
+        title="더 알고 싶으신가요?"
+        description="기술·서비스·협력에 대해 궁금한 점이 있으시면 편하게 문의해 주세요."
+        secondary={[{ label: '서비스 생태계 보기', href: '/services' }]}
+      />
 
       <Footer />
     </div>

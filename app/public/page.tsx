@@ -1,7 +1,9 @@
 import type { Metadata } from 'next'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
+import PageClosingSection from '../../components/PageClosingSection'
 import Link from 'next/link'
+import { COMPANY_META_LINE } from '../../lib/company-copy'
 import { MarketingIcon, type MarketingIconName } from '../../components/MarketingIcon'
 
 const publicCanonical = 'https://dreamailab.com/public'
@@ -60,8 +62,8 @@ export default function PublicPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">DAL 플랫폼 개요</h2>
           <p className="text-lg text-gray-700 mb-6 max-w-4xl">
-            드림에이아이랩(DAL)은 돌봄·의료·교육 데이터를 표준화하는 플랫폼 기업입니다. 
-            AI디지털케어로그 기술로 하나의 데이터 인프라 위에 발달장애, 시니어 돌봄, 토탈케어로그, 교육, 국제결혼, 라이프스타일 도메인을 연결합니다. 
+            {COMPANY_META_LINE}입니다.
+            AI디지털케어로그로 공공·기관 협력과 시범사업에 대응합니다.
             시범·실증 사업 논의에 적합한 구조를 지향하며, 지자체·공공기관 협력과 데이터 기반 정책 지원을 함께 염두에 둔 플랫폼입니다.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
@@ -162,26 +164,11 @@ export default function PublicPage() {
         </div>
       </section>
 
-      {/* 5. CTA */}
-      <section className="py-16 lg:py-24 bg-gradient-to-r from-primary-600 to-secondary-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-6">공공 협력 문의</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto text-white/90">
-            정부·지자체·공공기관 담당자분들의 협력 문의를 환영합니다.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/contact?type=b2b&service=platform" className="bg-white text-primary-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-              공공 협력 문의
-            </Link>
-            <Link href="/contact?type=ir&service=platform" className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-              투자 문의
-            </Link>
-            <Link href="/services" className="border-2 border-white/70 text-white/95 px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-              서비스 생태계 보기
-            </Link>
-          </div>
-        </div>
-      </section>
+      <PageClosingSection
+        title="공공·기관 협력"
+        description="정부·지자체·공공기관 담당자분의 협력·시범 문의를 받습니다."
+        primary={{ label: '협력 문의', href: '/contact?type=b2b&service=platform' }}
+      />
 
       <Footer />
     </div>

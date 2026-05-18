@@ -1216,12 +1216,6 @@ export default function HealthcareService() {
             >
               사업·도입·제휴 문의
             </Link>
-            <Link
-              href="/contact?service=healthcare&type=ir"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors"
-            >
-              IR·투자 문의
-            </Link>
           </div>
         </div>
       </section>

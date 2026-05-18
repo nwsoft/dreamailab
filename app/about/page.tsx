@@ -1,15 +1,16 @@
 import type { Metadata } from 'next'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
+import PageClosingSection from '../../components/PageClosingSection'
 import Link from 'next/link'
+import { COMPANY_HERO_LINE, COMPANY_META_LINE } from '../../lib/company-copy'
 import { MarketingIcon } from '../../components/MarketingIcon'
 import { absoluteUrl, buildPageMetadata } from '../../lib/seo'
 
 export const metadata: Metadata = {
   ...buildPageMetadata({
     title: '회사소개 - AI디지털케어로그 기반 데이터 인프라 기업 | 드림에이아이랩',
-    description:
-      'DAL은 돌봄·의료·교육 데이터를 표준화하는 플랫폼 기업입니다. 자람이·시니어앤라이프에 공공·연계 기준으로 등록된 기관·사업자 규모(MAU와 별개)와 표준화·파일럿 진행을 확인하세요.',
+    description: `${COMPANY_META_LINE}입니다. 자람이·시니어앤라이프 연계 기관·사업자 규모(MAU와 별개)와 표준화·파일럿 진행을 소개합니다.`,
     path: '/about',
     ogTitle: '회사소개 - AI디지털케어로그로 표준을 만드는 드림에이아이랩',
     ogDescription:
@@ -102,8 +103,8 @@ export default function About() {
               회사소개 · Dream AI Lab
             </h1>
             <p className="text-xl max-w-3xl mx-auto">
-              등록·연계로 확보한 현장 풀과 제품·파일럿을 바탕으로<br />
-              돌봄·의료·교육 데이터 표준화를 단계적으로 쌓아가고 있습니다.
+              {COMPANY_HERO_LINE}.<br />
+              등록·연계로 확보한 현장 풀과 제품·파일럿을 바탕으로 표준화를 단계적으로 쌓아가고 있습니다.
             </p>
           </div>
         </div>
@@ -161,7 +162,7 @@ export default function About() {
                 <p className="font-semibold text-gray-900 mb-2">조직·브랜드 구조</p>
                 <ul className="space-y-1.5 list-disc list-inside">
                   <li>
-                    <strong>DAL</strong> — AI디지털케어로그 플랫폼·R&D·TIPS·VC·B2B (본 사이트)
+                    <strong>DAL</strong> — AI디지털케어로그 플랫폼·기술·서비스 (본 사이트)
                   </li>
                   <li>
                     <strong>자람이</strong> — 발달장애 축 대표 제품. 모두의창업 등은{' '}
@@ -411,31 +412,11 @@ export default function About() {
         </div>
       </section>
 
-      {/* CTA Section - 투자/파트너/서비스 통일 */}
-      <section className="py-16 lg:py-24 bg-gradient-to-r from-primary-600 to-secondary-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-6">
-            파트너십·투자와 함께 표준을 확장합니다
-          </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto text-gray-100">
-            AI디지털케어로그 기반으로 하나의 플랫폼 위 도메인을 확장하고 있습니다. 함께 표준을 만들 파트너를 찾습니다.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/contact?type=ir&service=platform" className="bg-white text-primary-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-              투자 문의
-            </Link>
-            <Link
-              href="/contact?type=b2b&service=platform"
-              className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors"
-            >
-              파트너십 문의
-            </Link>
-            <Link href="/services" className="border-2 border-white/70 text-white/95 px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-              서비스 생태계 보기
-            </Link>
-          </div>
-        </div>
-      </section>
+      <PageClosingSection
+        title="함께 이야기해요"
+        description="플랫폼·서비스·협력에 관심이 있으시면 문의해 주세요."
+        secondary={[{ label: '서비스 생태계 보기', href: '/services' }]}
+      />
 
       <Footer />
     </div>

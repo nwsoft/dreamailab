@@ -3,11 +3,11 @@ import { absoluteUrl, defaultOpenGraph, defaultTwitter } from '../../lib/seo'
 
 export const metadata: Metadata = {
   title: '연락처 - 드림에이아이랩',
-  description: '드림에이아이랩에 문의하세요. AI 서비스, 파트너십, 투자 등 다양한 문의사항에 대해 답변드립니다.',
+  description: '드림에이아이랩에 문의하세요. 서비스 도입·이용·협력·투자·IR 등 문의 유형을 선택해 연락해 주세요.',
   alternates: { canonical: absoluteUrl('/contact') },
   openGraph: {
     title: '연락처 - 드림에이아이랩',
-    description: '드림에이아이랩에 문의하세요. AI 서비스, 파트너십, 투자 등 다양한 문의사항에 대해 답변드립니다.',
+    description: '드림에이아이랩에 문의하세요. 서비스 도입·이용·협력·투자·IR 등 문의 유형을 선택해 연락해 주세요.',
     url: absoluteUrl('/contact'),
     siteName: defaultOpenGraph.siteName,
     images: defaultOpenGraph.images,
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   twitter: {
     ...defaultTwitter,
     title: '연락처 - 드림에이아이랩',
-    description: '드림에이아이랩에 문의하세요. AI 서비스, 파트너십, 투자 등 다양한 문의사항에 대해 답변드립니다.',
+    description: '드림에이아이랩에 문의하세요. 서비스 도입·이용·협력·투자·IR 등 문의 유형을 선택해 연락해 주세요.',
   },
 }
 

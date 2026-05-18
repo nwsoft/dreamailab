@@ -363,20 +363,20 @@ export default function Contact() {
           <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">자주 묻는 질문</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-gray-50 rounded-xl p-6">
-              <h3 className="text-lg font-bold text-gray-900 mb-3">투자 문의는 어디로 하나요?</h3>
+              <h3 className="text-lg font-bold text-gray-900 mb-3">투자·IR 문의는 어디로 하나요?</h3>
               <p className="text-gray-600 text-sm">
-                DAL 플랫폼 투자는 「투자·IR」 유형을 선택하거나{' '}
-                <Link href="/contact?type=ir&service=platform" className="text-primary-600 underline">
-                  이 링크
+                투자 검토·IR 자료는{' '}
+                <Link href="/ir" className="text-primary-600 underline">
+                  투자·IR 페이지
                 </Link>
-                를 이용해 주세요.
+                를 참고하시고, 문의 양식에서 「투자·IR」 유형을 선택해 주세요.
               </p>
             </div>
             <div className="bg-gray-50 rounded-xl p-6">
               <h3 className="text-lg font-bold text-gray-900 mb-3">모두의창업과 DAL의 관계는?</h3>
               <p className="text-gray-600 text-sm">
-                출전·신청은 <strong>정해성</strong> 개인·<strong>자람이</strong> 제품 기준입니다. DAL은
-                플랫폼·R&D·TIPS·VC 주체이며, 별도 오디션 페이지는 두지 않습니다.
+                출전·신청은 <strong>정해성</strong> 개인·<strong>자람이</strong> 제품 기준입니다. DAL 회사 소개는
+                본 사이트를, 자람이 상세는 jarame.or.kr을 참고해 주세요.
               </p>
             </div>
           </div>

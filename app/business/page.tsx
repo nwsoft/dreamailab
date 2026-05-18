@@ -467,14 +467,11 @@ export default function Business() {
   </div>
 </div>
             <div className="mt-10 flex flex-wrap justify-center gap-4">
-              <Link href="/contact?type=ir&service=platform" className="bg-white text-primary-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors" aria-label="투자 문의">
-                투자 문의
-              </Link>
-              <Link href="/contact?type=b2b&service=platform" className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors" aria-label="파트너십 문의">
-                파트너십 문의
-              </Link>
-              <Link href="/services" className="border-2 border-white/70 text-white/95 px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors" aria-label="서비스 생태계 보기">
+              <Link href="/services" className="bg-white text-primary-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                 서비스 생태계 보기
+              </Link>
+              <Link href="/contact?type=b2b&service=platform" className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors">
+                협력·도입 문의
               </Link>
             </div>
           </div>
@@ -913,47 +910,6 @@ export default function Business() {
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="py-16 lg:py-24 bg-gradient-to-r from-primary-600 to-secondary-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-6">
-            AI디지털케어로그 파트너와 함께 성장하세요
-          </h2>
-          <p className="text-xl mb-8 max-w-3xl mx-auto text-white/90">
-파일럿·기관 도입 경험을 바탕으로,
-파트너와 함께 표준화를 추진하고 확장 가능한 성장을 만들어갑니다.
-데이터 표준화·AI 분석·네트워크 효과로 지속 가능한 수익을 지향합니다.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-  <div className="bg-white/10 rounded-xl p-4">
-    <div className="text-sm">전환 장벽</div>
-    <div className="text-2xl font-bold">기관 락인</div>
-    <div className="text-sm text-white/90">워크플로우·권한·감사</div>
-  </div>
-  <div className="bg-white/10 rounded-xl p-4">
-    <div className="text-sm">성장 엔진</div>
-    <div className="text-2xl font-bold">네트워크 효과</div>
-    <div className="text-sm text-white/90">커뮤니티·마켓플레이스</div>
-  </div>
-  <div className="bg-white/10 rounded-xl p-4">
-    <div className="text-sm">지속 가능성</div>
-    <div className="text-2xl font-bold">장기 LTV</div>
-    <div className="text-sm text-white/90">가족·기관 단위 락인</div>
-  </div>
-</div>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/contact?type=ir&service=platform" className="bg-white text-primary-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-              투자 문의
-            </Link>
-            <Link href="/contact?type=b2b&service=platform" className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-              파트너십 문의
-            </Link>
-            <Link href="/services" className="border-2 border-white/70 text-white/95 px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-              서비스 생태계 보기
-            </Link>
-          </div>
-        </div>
-      </section>
       <Footer />
     </div>
   )

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
+import PageClosingSection from '../../components/PageClosingSection'
 import Link from 'next/link'
 import { absoluteUrl, buildBreadcrumbJsonLd, buildPageMetadata, buildWebPageJsonLd } from '../../lib/seo'
 
@@ -371,33 +372,11 @@ export default function ServicePortfolio() {
         </div>
       </main>
 
-      {/* CTA */}
-      <section className="py-20 bg-gradient-to-r from-primary-600 to-secondary-600 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">DAL 플랫폼 생태계와 함께 확장하세요</h2>
-          <p className="text-xl mb-8 text-white/90">투자, 공공 협력, 파트너십, 서비스 도입까지 한 인프라에서 연결합니다.</p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              href="/contact?type=ir&service=platform"
-              className="bg-white text-primary-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-            >
-              투자 문의
-            </Link>
-            <Link
-              href="/contact?type=b2b&service=platform"
-              className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors"
-            >
-              파트너십 문의
-            </Link>
-            <Link
-              href="/contact?type=general&service=platform"
-              className="border-2 border-white/70 text-white/95 px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors"
-            >
-              서비스 체험
-            </Link>
-          </div>
-        </div>
-      </section>
+      <PageClosingSection
+        title="관심 있는 서비스가 있으신가요?"
+        description="도입·이용·협력 문의는 서비스별 페이지나 문의 양식을 이용해 주세요."
+        primary={{ label: '문의하기', href: '/contact' }}
+      />
 
       <Footer />
     </div>
