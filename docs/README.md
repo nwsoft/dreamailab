@@ -15,7 +15,7 @@
 
 | 문서 | 용도 |
 |------|------|
-| [services/README.md](./services/README.md) | 6대 도메인 ↔ 웹 경로 매핑 |
+| [services/README.md](./services/README.md) | 6대 도메인 ↔ 웹 경로 · **개발↔DAL 동기화 워크플로** |
 | [services/*.md](./services/) | 서비스별 정합 체크리스트 |
 
 ## 페이지 구조·QA (참고)

@@ -93,6 +93,21 @@ const coreFeatures = [
     desc: '국제결혼 경험담, 문화 차이 극복 방법, 자녀 양육 노하우 등을 실제 경험자들과 공유',
     icon: '💬',
   },
+  {
+    title: '프로필·매칭·에스크로',
+    desc: '프로필 검증, 매칭 흐름, 에스크로·계약 모듈로 신뢰 거래 기반을 구축합니다. (베타·MVP 운영)',
+    icon: '🤝',
+  },
+  {
+    title: '교육·커뮤니티·정착 확장',
+    desc: '교육·여행·웨딩·AI 도구 등 정착 단계 기능을 순차 확장합니다.',
+    icon: '🌏',
+  },
+  {
+    title: '이벤트·채팅·정산',
+    desc: '이벤트·실시간 채팅·정산 모듈로 매칭 이후 협업·거래 흐름을 지원합니다. (파일럿)',
+    icon: '📅',
+  },
 ]
 
 const problemPoints = [
@@ -469,7 +484,7 @@ export default function MarriageService() {
               더 공정한 기준으로 선택할 수 있도록 시작했습니다.
             </p>
             <div className="mt-6">
-              <span className="inline-block px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold">In Development</span>
+              <span className="inline-block px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold">Service Status: Pilot (베타·지속 업데이트)</span>
             </div>
           </div>
         </div>
@@ -1275,9 +1290,9 @@ export default function MarriageService() {
       {/* 7. Service Status */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="inline-block px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold mb-4">In Development</span>
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">{brand.name} (개발 중 공개 사전 안내)</h2>
-          <p className="text-gray-600">글로벌커플케어는 SaaS 기본 구조 완성 후 베타 테스트를 진행하며, 국제결혼 <strong>정보·비즈니스 인프라</strong> 기능을 지속 업데이트 중입니다. 정착 연계·다문화 가족 지원·파트너 공개를 순차적으로 확장합니다.</p>
+          <span className="inline-block px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold mb-4">Service Status: Pilot</span>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">{brand.name} (베타·파일럿 운영)</h2>
+          <p className="text-gray-600">글로벌커플케어는 프로필·매칭·에스크로·계약 등 MVP 핵심 모듈을 베타로 운영 중이며, 국제결혼 <strong>정보·비즈니스 인프라</strong>를 지속 업데이트합니다. 교육·커뮤니티·정착·AI 도구는 순차 확장합니다. <strong>직접 중개가 아닌</strong> 정보·파트너 연결 플랫폼입니다.</p>
         </div>
       </section>
 

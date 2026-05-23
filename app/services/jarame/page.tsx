@@ -99,6 +99,18 @@ export default function JarameService() {
       description: '익명화된 집계 데이터로 정책·연구·서비스 개선에 기여합니다.',
       icon: '📈',
       details: ['집계 통계 대시보드', '데이터 내보내기(익명화)', '윤리/보안 원칙 준수']
+    },
+    {
+      title: 'XAI·학습 루프',
+      description: '의사결정 추적과 연합·강화학습으로 맞춤 개입을 단계적으로 정밀화합니다.',
+      icon: '🧠',
+      details: ['XAI Phase 1~4 파이프라인', '패턴·권장안 설명 가능성', '기관 베타와 함께 검증']
+    },
+    {
+      title: '표준 연동·FHIR',
+      description: '다기관 기록을 국제 표준 스키마로 보내 의료·헬스케어 축과 연계합니다.',
+      icon: '🔗',
+      details: ['FHIR 호환 export', '병원·센터·학교 API 연동', 'RBAC·감사 로그']
     }
   ]
 
@@ -400,6 +412,32 @@ export default function JarameService() {
             <p className="text-base max-w-2xl mx-auto text-white/90 leading-relaxed break-keep">
               지금까지 해결되지 않았던 데이터 단절·재입력·해석 차이를, 표준 케어로그와 실시간 분석 환류 구조로 줄이는 것이 자람이의 핵심입니다.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 플랫폼 구현 현황 — 개발 저장소(jarame) 정본 */}
+      <section className="py-10 bg-white border-b border-gray-100" aria-labelledby="jarame-impl-status">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 id="jarame-impl-status" className="text-xl font-bold text-gray-900 mb-2 text-center">플랫폼 구현 현황</h2>
+          <p className="text-center text-sm text-gray-600 mb-6 max-w-2xl mx-auto">
+            DAL 소개 페이지는 jarame.or.kr 개발 코드·<code className="text-xs bg-gray-100 px-1 rounded">PROJECT_STATUS.md</code>와 정합합니다.
+          </p>
+          <div className="overflow-x-auto rounded-xl border border-blue-100">
+            <table className="w-full text-sm text-left">
+              <thead className="bg-blue-50 text-gray-800">
+                <tr>
+                  <th className="px-4 py-3 font-semibold">상태</th>
+                  <th className="px-4 py-3 font-semibold">기능</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-100">
+                <tr><td className="px-4 py-3 text-blue-700 font-medium">✅ 베타</td><td className="px-4 py-3 text-gray-700">케어로그·AI 상담·리포트·자가진단·RBAC·학교·홈티·FHIR export</td></tr>
+                <tr><td className="px-4 py-3 text-blue-700 font-medium">✅ 베타</td><td className="px-4 py-3 text-gray-700">XAI Phase 1~4·AI 맞춤 교재·학습경로·10종 치료 API</td></tr>
+                <tr><td className="px-4 py-3 text-amber-700 font-medium">🔄 검증 중</td><td className="px-4 py-3 text-gray-700">강화학습·연합학습 — 시뮬레이션·파일럿 (상용 RL 톤 지양)</td></tr>
+                <tr><td className="px-4 py-3 text-amber-700 font-medium">🔄 진행</td><td className="px-4 py-3 text-gray-700">Gate 3 실기관 실호출 (3~5개 기관)</td></tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
@@ -1999,8 +2037,8 @@ export default function JarameService() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {coreFeatures.slice(0, 4).map((feature, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
+            {coreFeatures.map((feature, index) => (
               <div key={index} className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-shadow">
                 <div className="mb-4 text-primary-600">
                   <MarketingIcon name={iconFromEmoji(feature.icon)} className="h-9 w-9" />

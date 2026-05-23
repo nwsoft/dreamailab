@@ -9,12 +9,12 @@ const pageCanonical = 'https://dreamailab.com/services/veggie'
 export const metadata: Metadata = {
   title: '베지케어 | 채식·비건 AI 영양 케어로그 | 드림에이아이랩',
   description:
-    '베지케어(VeggieCare)는 채식·비건·플렉시테리언 등 식단 유형을 전제로 식습관을 AI 디지털케어로그로 연결하는 웰니스 플랫폼입니다. 식단 기록, 영양 분석, AI 레시피, 외식·커머스 연계와 함께 회복 식사·체중·운동 목표를 같은 구조 안에서 지향할 수 있습니다.',
+    '베지케어(VeggieCare)는 채식·비건·플렉시테리언 식습관을 AI 디지털케어로그로 연결하는 웰니스 플랫폼입니다. 베지케어로그·AI 영양·레시피·맛집·마켓·커뮤니티는 베타 운영 중이며, 회복·다이어트·운동 맞춤 모드 UI는 로드맵입니다.',
   alternates: { canonical: pageCanonical },
   openGraph: {
     title: '베지케어 | 채식·비건 AI 영양 케어로그',
     description:
-      '채식·비건·플렉시테리언 식단을 전제로 식단 기록 → AI 영양 분석 → 실행 추천 → 건강 변화 환류를 한 줄기로 연결하는 DAL 웰니스 축. 회복 식사·체중·운동은 같은 케어로그 안의 지향 모드로 확장합니다.',
+      '식단 기록 → AI 영양 분석 → 실행·마켓 연계를 한 줄기로 연결하는 DAL 웰니스 축. 회복·체중·운동 맞춤 모드는 로드맵입니다.',
     url: pageCanonical,
     siteName: '드림에이아이랩',
     type: 'website',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: '베지케어 | 채식·비건 AI 영양 케어로그',
     description:
-      '채식·비건·플렉시테리언 식단을 기록·영양 분석·실행까지 연결하는 웰니스 플랫폼. 회복·체중·운동 목표는 같은 케어로그의 지향 모드로 확장합니다.',
+      '베지케어로그·영양 분석·레시피·마켓을 베타로 운영하는 웰니스 플랫폼. 맞춤 모드 UI는 로드맵입니다.',
   },
   robots: { index: true, follow: true },
 }
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 const brand = {
   name: '베지케어',
   english: 'VeggieCare',
-  status: 'In Development',
+  status: 'Beta',
   externalUrl: 'https://veggie.care',
 }
 
@@ -225,6 +225,16 @@ const coreFeatures = [
     icon: '🏆',
     title: '챌린지·커뮤니티',
     desc: '한 달 채식, 탄소 절감, 건강 루틴 같은 챌린지를 기록하고 경험을 공유합니다.',
+  },
+  {
+    icon: '🛒',
+    title: '베지 마켓·정기배송',
+    desc: '식재료·밀키트·영양 제품을 마켓과 구독으로 연결합니다. (베타)',
+  },
+  {
+    icon: '🌿',
+    title: '영양소 가이드·오늘의 식단',
+    desc: '핵심 영양소 설명과 당일 실행 식단을 빠르게 확인합니다. (베타)',
   },
 ]
 
@@ -420,7 +430,7 @@ export default function VeggieService() {
           <div className="text-center">
             <div className="mb-6 flex flex-wrap justify-center items-center gap-2 text-xs sm:text-sm">
               <span className="inline-flex items-center rounded-full bg-white/15 border border-white/25 px-3 py-1.5 font-semibold text-green-50">
-                개발 중 (In Development)
+                Service Status: Beta
               </span>
               <span className="text-green-100">{brand.name} ({brand.english})</span>
             </div>
@@ -432,9 +442,8 @@ export default function VeggieService() {
               기록·영양 분석·실행까지 한 줄기로 연결합니다.
             </h1>
             <p className="text-lg md:text-xl text-green-50 max-w-3xl mx-auto mb-8 leading-relaxed">
-              이름 그대로 식물성 식단이 중심입니다. 회복 식사, 체중·운동 목표는{' '}
-              <strong className="text-white">같은 베지케어로그 안에서 우선순위만 달리하는 지향 모드</strong>로 두고,
-              핵심은 채식 유형·제약에 맞는 식사 실행과 영양 균형입니다.
+              이름 그대로 식물성 식단이 중심입니다. 회복·다이어트·운동 맞춤 모드는{' '}
+              <strong className="text-white">로드맵</strong>이며, 현재는 베지케어로그·레시피·맛집·마켓·커뮤니티 베타 운영에 집중합니다.
             </p>
             <div className="flex flex-wrap justify-center gap-2 text-xs text-white">
               <span className="bg-white/15 border border-white/20 px-3 py-1.5 rounded-full">채식·비건·플렉시 맞춤</span>
@@ -565,10 +574,10 @@ export default function VeggieService() {
 
       <section id="veggie-mode" className="scroll-mt-28 py-14 bg-emerald-50/40 border-b border-emerald-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-3">베지케어 맞춤 모드</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-3">베지케어 맞춤 모드 <span className="text-base font-semibold text-emerald-700">(로드맵)</span></h2>
           <p className="text-center text-gray-700 text-sm max-w-3xl mx-auto mb-8">
-            새로운 앱을 따로 만드는 방식이 아니라, 기존 베지케어 기능(로그·AI 분석·레시피·외식·커머스·헬스케어 연계)을
-            모드별 우선순위로 재구성해 실행성을 높입니다.
+            베지케어로그·AI 분석·레시피·마켓은 베타 운영 중입니다. 회복·다이어트·운동 전용 모드 UI는{' '}
+            <code className="text-xs bg-white px-1 rounded border">docs/DAL_SYNC_ROADMAP.md</code>에 따라 단계적으로 구현합니다.
           </p>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
             {supportModes.map((mode) => (
@@ -888,10 +897,10 @@ export default function VeggieService() {
           <span className="inline-block px-4 py-2 bg-gray-100 text-gray-800 rounded-full text-sm font-semibold mb-4">
             {brand.status}
           </span>
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">{brand.name} 개발 중 공개 사전 안내</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">{brand.name} (베타·지속 업데이트)</h2>
           <p className="text-gray-600 leading-relaxed">
-            베지케어는 SaaS 기본 구조 완성 후 베타 테스트를 진행하고 있으며, AI 디지털케어로그 기반 기능을 지속 업데이트 중입니다.
-            식단 기록, AI 영양 분석, 레시피·맛집·커뮤니티, 파트너 연계 범위를 단계적으로 확장합니다.
+            레시피·맛집·커뮤니티·마켓·파트너 대시보드는 베타 운영 중입니다. 케어로그·AI 레시피 API는 백엔드 마운트·OpenAI 연동(PRIORITY §7)을 진행 중이며,
+            회복·다이어트·운동 맞춤 모드 UI는 로드맵입니다.
           </p>
         </div>
       </section>

@@ -34,26 +34,26 @@ export default function SeniorService() {
   // 섹션 2: AI+디지털케어로그 핵심 가치
   const coreValues = [
     {
-      title: '실시간 건강 모니터링과 기록',
-      description: '하루의 상태를 간단히 기록하면, AI가 변화와 위험 신호를 자동으로 감지합니다.',
+      title: '건강 모니터링과 기록 (로드맵 P0)',
+      description: '현장 입력·보호자 공유·이상 패턴 탐지를 케어로그 API와 연동하는 구조를 단계적으로 구축합니다.',
       icon: '📊',
     },
     {
-      title: '가족과 요양보호사 간 원활한 소통',
+      title: '가족·요양보호사 소통 (P0 연동 후)',
       description:
-        '가족은 앱으로 오늘 있었던 일과 건강 상태를 확인하고, 요양보호사·간호사와 동일한 정보를 기반으로 소통할 수 있습니다.',
+        '동일 케어로그 기준으로 가족·현장·기관이 소통하도록 설계합니다. (API 연동 전에는 시설 검색·안내 중심)',
       icon: '💬',
     },
     {
-      title: '개인 맞춤 케어 계획 제공',
+      title: '맞춤 케어 계획 (단계적)',
       description:
-        '"모든 시니어에게 똑같은 프로그램"이 아닌, 개인별 질환·생활패턴·가족환경에 맞춘 케어 계획을 제안합니다.',
+        '개인별 질환·생활패턴을 반영한 권고안을 목표로 하며, AI·케어로그 연동 후 단계적으로 제공합니다.',
       icon: '🎯',
     },
     {
-      title: '표준 행정 서식 자동 연계',
+      title: '표준 행정 연계 (로드맵 P1)',
       description:
-        '현장에서 사용하는 표준 서식과 자동 연계하여, 기록 → 청구·보고까지 한 번에 연결할 수 있는 구조를 제공합니다.',
+        '방문·근태·급여·보고 모듈 활성화 후, 기록 → 청구·보고 한 흐름을 목표로 합니다.',
       icon: '📑',
     },
   ]
@@ -61,27 +61,27 @@ export default function SeniorService() {
   // 섹션 3: DAL AI 독자 기술
   const dalTech = [
     {
-      title: '멀티모달 AI 분석',
+      title: '멀티모달 입력 (로드맵)',
       description:
-        '음성·사진·문자 입력을 자동 분석하여, 단순한 숫자 기록이 아닌, 실제 일상을 이해할 수 있는 데이터로 변환합니다.',
+        '음성·사진·문자 입력 분석을 목표로 설계합니다. 현재는 시설 검색·챗봇(규칙 기반) 등 단계적 기능이 우선입니다.',
       icon: '🎤',
     },
     {
-      title: '시계열 학습 기반 이상 패턴 탐지',
+      title: '시계열 이상 패턴 (P0 이후)',
       description:
-        '수면, 활동량, 복약 시간, 정서 상태 등 시계열 데이터를 학습해 평소 패턴에서 벗어나는 위험 징후를 빠르게 발견합니다.',
+        '수면·활동·복약 시계열 학습은 케어로그 API 활성화(P0) 이후 단계적으로 연동합니다.',
       icon: '📈',
     },
     {
-      title: '개인별 맞춤 모델',
+      title: '개인별 맞춤 분석 (단계적)',
       description:
-        '시니어마다 다른 건강 상태·생활 습관을 반영한 맞춤형 모델로, 같은 변화라도 "누구에게서 나타났는가"를 기준으로 다르게 판단합니다.',
+        '기록이 축적된 뒤 개인별 기준선을 반영한 분석을 목표로 합니다. 의료·돌봄 결정은 전문가 판단을 따릅니다.',
       icon: '👤',
     },
     {
-      title: 'AI 기반 의사결정 지원 및 리스크 관리',
+      title: 'AI 권고·리스크 인사이트 (단계적)',
       description:
-        '보호자·요양보호사·의료진이 "지금 무엇을 해야 하는가?"를 고민할 때 참고할 수 있는 실행 가능한 권고안과 리스크 관리 인사이트를 제공합니다.',
+        '실행 가능한 권고안·알림을 목표로 하며, 챗봇·리포트는 규칙·데이터 연동을 순차 확장합니다.',
       icon: '🧠',
     },
   ]
@@ -356,8 +356,8 @@ export default function SeniorService() {
               </span>
             </h1>
             <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto text-green-100 leading-relaxed break-keep">
-              AI가 수면·활동·복약 패턴을 분석해 이상 징후 대응을 돕고,
-              보호자·기관·의료·공공이 같은 데이터 기준으로 협업하도록 지원합니다.
+              시설 검색·구인구직·장기요양 안내는 운영 중이며,
+              AI 디지털케어로그·행정 SaaS·심화 AI 분석은 단계적으로 연결하는 구조입니다.
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm">
               <span className="bg-white/10 px-4 py-2 rounded-full font-medium">AI 디지털케어로그</span>
@@ -367,6 +367,33 @@ export default function SeniorService() {
             <div className="mt-8">
               <span className="inline-block px-4 py-2 bg-emerald-100 text-emerald-800 rounded-full text-sm font-semibold">Service Status: Pilot (지속 업데이트)</span>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 플랫폼 구현 현황 — 개발 저장소 정본 */}
+      <section className="py-10 bg-white border-b border-gray-100" aria-labelledby="senior-impl-status">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 id="senior-impl-status" className="text-xl font-bold text-gray-900 mb-2 text-center">플랫폼 구현 현황</h2>
+          <p className="text-center text-sm text-gray-600 mb-6 max-w-2xl mx-auto">
+            아래는 시니어앤라이프 개발 코드 기준입니다. IR·협력 문서는 이 표와{' '}
+            <code className="text-xs bg-gray-100 px-1 rounded">DAL_SYNC_DEVELOPMENT_PLAN.md</code>를 따릅니다.
+          </p>
+          <div className="overflow-x-auto rounded-xl border border-emerald-100">
+            <table className="w-full text-sm text-left">
+              <thead className="bg-emerald-50 text-gray-800">
+                <tr>
+                  <th className="px-4 py-3 font-semibold">상태</th>
+                  <th className="px-4 py-3 font-semibold">기능</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-100">
+                <tr><td className="px-4 py-3 text-emerald-700 font-medium">✅ 운영</td><td className="px-4 py-3 text-gray-700">시설 검색·상세, 구인구직, 장기요양 계산기</td></tr>
+                <tr><td className="px-4 py-3 text-amber-700 font-medium">🔄 단계적</td><td className="px-4 py-3 text-gray-700">상담·견학 예약, 리뷰, AI 챗봇(규칙 기반)</td></tr>
+                <tr><td className="px-4 py-3 text-blue-700 font-medium">📄 로드맵 P0</td><td className="px-4 py-3 text-gray-700">AI 디지털케어로그 API·보호자 마이페이지 연동</td></tr>
+                <tr><td className="px-4 py-3 text-blue-700 font-medium">📄 로드맵 P1</td><td className="px-4 py-3 text-gray-700">행정 SaaS — 방문·근태·급여·보고</td></tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </section>

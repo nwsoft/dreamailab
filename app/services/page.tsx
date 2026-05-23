@@ -73,7 +73,7 @@ const services = [
   },
   {
     name: '글로벌커플케어',
-    status: 'In Development',
+    status: 'Pilot',
     mark: 'GC',
     domain: '글로벌커플케어',
     summary: '국제결혼·다문화 가족 영역의 정보·절차·신뢰를 하나의 기준으로 연결하는 글로벌 가족 인프라',
@@ -84,7 +84,7 @@ const services = [
   },
   {
     name: '베지케어',
-    status: 'In Development',
+    status: 'Beta',
     mark: 'VG',
     domain: '라이프스타일',
     summary: '식습관·영양·건강 데이터를 실행과 소비·환경 행동까지 연결하는 웰니스 인프라',

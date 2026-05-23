@@ -134,10 +134,10 @@ export default function Home() {
   /** /services 허브와 동일: 핵심 6도메인 + Noah는 별도 안내 */
   const domainHubTiles = [
     { mark: 'JR', name: '발달장애', url: '/services/jarame', status: '베타 테스트' },
-    { mark: 'SL', name: '시니어·노인돌봄', url: '/services/senior', status: '베타 테스트' },
+    { mark: 'SL', name: '시니어·노인돌봄', url: '/services/senior', status: '파일럿' },
     { mark: 'TC', name: '의료', url: '/services/healthcare', status: '개발 중' },
     { mark: 'ED', name: '교육', url: '/services/educarelog', status: '개발 중' },
-    { mark: 'GC', name: '글로벌커플케어', url: '/services/marriage', status: '베타 테스트' },
+    { mark: 'GC', name: '글로벌커플케어', url: '/services/marriage', status: '파일럿' },
     { mark: 'VG', name: '라이프스타일', url: '/services/veggie', status: '베타 테스트' },
   ]
 
@@ -154,7 +154,7 @@ export default function Home() {
         '가정·학교·센터·병원 한 줄기 케어로그',
         'AI 상담·권장안·일·주·월 리포트',
         '자가진단·평가(M-CHAT·ASRS 등)와 다음 단계 안내',
-        '맞춤 교육·치료 플랜·기관 RBAC·학교 관리자 도구',
+        'AI 맞춤 교재·학습경로·기관 RBAC·학교 관리자',
         '홈티 매칭·센터·병원 연계',
         '익명 집계로 정책·연구·현장 개선에 환류',
       ],
@@ -163,18 +163,18 @@ export default function Home() {
     },
     {
       name: '시니어앤라이프',
-      desc: '시니어와 가족·요양보호사를 위한 AI디지털케어로그 기반 돌봄 플랫폼입니다. 수면·활동·복약 패턴을 분석해 이상 징후를 조기에 포착하고, 맞춤 케어 계획과 가족·기관 리포트를 제공합니다. 돌봄을 수행하는 이들의 정서·번아웃 예방과 심리 지원까지 같은 철학 아래 확장합니다.',
+      desc: '시설 검색·구인구직·장기요양 안내는 운영 중이며, AI 디지털케어로그·행정 SaaS·심화 AI 분석은 단계적으로 연결하는 시니어 돌봄 플랫폼입니다. 돌봄 종사자 정서·번아웃 지원은 같은 철학 아래 확장합니다.',
       url: '/services/senior',
       externalUrl: 'https://seniorandlife.com',
       color: 'from-green-500 to-emerald-500',
       mark: 'SL',
       features: [
-        '수면·활동·복약 패턴 분석·위험 징후 조기 감지',
-        '가족·요양보호사 동일 정보 기반 소통',
-        '케어기버·가족 정서·번아웃 완화(기록·리포트·가이드·연계 중심)',
-        '개인 맞춤 케어 계획·AI 권고·리스크 인사이트',
-        '재가·요양원·주간보호·요양병원·구인구직 연계',
-        '표준 행정·알림·기관 대시보드',
+        '시설 검색·비교·구인구직·장기요양 계산기 (운영)',
+        '상담·견학·리뷰 (단계적 오픈)',
+        'AI 디지털케어로그·가족 공유 (로드맵 P0)',
+        '행정 SaaS — 방문·근태·급여·보고 (로드맵 P1)',
+        'AI 챗봇·권고 (단계적, 의료결정 대체 아님)',
+        '케어기버 정서·번아웃 지원 (단계적)',
       ],
       innovation:
         'DAL은 시니어만이 아니라 돌봄을 실행하는 사람의 지속가능성도 케어의 일부로 봅니다. 기록 표준화와 가족·현장 연결이 그 출발점입니다.',
@@ -204,7 +204,14 @@ export default function Home() {
       externalUrl: 'https://globalcouplecare.com',
       color: 'from-indigo-500 to-purple-500',
       mark: 'GC',
-      features: ['업체별 가격·서비스 비교', 'AI 상담·번역·통역', '법무·비자 표준 워크플로우', '커뮤니티·후기', '결혼 후 정착·가족 라이프로그', 'KYC·신고·윤리 가이드'],
+      features: [
+        '업체·전문가 비교·프로필·매칭·에스크로 (파일럿)',
+        '법무·비자 가이드·체크리스트 (단계적 자동화)',
+        'AI 상담·번역 (API 키·단계적 오픈)',
+        '교육·커뮤니티·이벤트·채팅',
+        '결혼 후 정착·생활 서비스 연계',
+        'KYC·신고·검수·윤리 (직접 중개 아님)',
+      ],
       innovation: '정보 비대칭을 줄이고, 동의 기반으로 정착·육아·행정을 이어가는 글로벌커플케어 인프라를 지향합니다.',
     },
   ]
