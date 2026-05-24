@@ -7,7 +7,7 @@ import { MarketingIcon, type MarketingIconName } from '../../../components/Marke
 export const metadata: Metadata = {
   title: 'AI 디지털케어로그 | 발달장애 표준 기술 | 자람이 | 드림에이아이랩',
   description:
-    '발달장애 치료·학습을 위한 AI 디지털케어로그. 데이터 표준·기관 연계·AI 강화학습 기반 맞춤형 치료·학습. 공공·연계 등으로 약 5,700개 기관이 플랫폼에 등록(MAU와 별개), 일부 기관 베타. 가정·학교·센터·병원 연계를 지향. DAL 플랫폼 1번 도메인.',
+    '발달장애 치료·학습을 위한 AI 디지털케어로그. 데이터 표준·기관 연계·XAI·패턴 분석 기반 권장안. 연계·등록 기관 약 5,700+(MAU와 별개), 일부 기관 베타. 가정·학교·센터·병원 연계를 지향. DAL 1번 도메인.',
   keywords: 'AI 디지털케어로그, 발달장애 표준, 맞춤형 치료, 맞춤형 학습, 골든타임, 발달장애 치료 방법, ADHD 치료, 자폐증 치료, 특수교육, 언어치료, 작업치료, 행동치료 ABA, IEP 개별화교육계획, 치료사 협업, 다기관 연계, 자람이, 드림에이아이랩, 케어로그 표준화, 강화학습, Middleware, AI 엔진',
   alternates: {
     canonical: 'https://dreamailab.com/services/jarame',
@@ -101,10 +101,10 @@ export default function JarameService() {
       details: ['집계 통계 대시보드', '데이터 내보내기(익명화)', '윤리/보안 원칙 준수']
     },
     {
-      title: 'XAI·학습 루프',
-      description: '의사결정 추적과 연합·강화학습으로 맞춤 개입을 단계적으로 정밀화합니다.',
+      title: 'XAI·학습 루프 (베타·검증 중)',
+      description: 'XAI로 권장안·패턴을 설명 가능하게 추적합니다. 연합·강화학습은 시뮬레이션·파일럿 단계입니다.',
       icon: '🧠',
-      details: ['XAI Phase 1~4 파이프라인', '패턴·권장안 설명 가능성', '기관 베타와 함께 검증']
+      details: ['XAI Phase 1~4 (Gate2 검증)', '감사·전문가 검토 대시보드', 'RL·연합학습은 기관 파일럿 순']
     },
     {
       title: '표준 연동·FHIR',
@@ -303,7 +303,7 @@ export default function JarameService() {
         "name": "자람이의 AI 기술은 어떤 원리로 작동하나요?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "자람이는 강화학습 기반 AI 엔진으로, 입력(다기관 기록) → 표준화(FHIR 스키마) → AI 분석(패턴 인식·예측) → 맞춤형 출력(치료·학습 계획)의 실시간 피드백 루프를 구현합니다. 알고리즘 검증이 완료된 맞춤형 치료·학습 기술이며, 자람이 데모를 통해 실제 작동 방식을 체험할 수 있습니다. 개인별 데이터가 쌓일수록 더 정밀한 맞춤형 계획을 제공합니다."
+          "text": "자람이는 다기관 기록을 FHIR 호환 표준 스키마로 통합하고, XAI·패턴 분석으로 권장안을 제시하는 Care Data Infrastructure입니다. 강화학습·연합학습 루프는 시뮬레이션·기관 파일럿에서 단계적으로 검증 중이며, 의료·치료 결정은 전문가 판단을 따릅니다. jarame.or.kr 데모로 케어로그·리포트 흐름을 확인할 수 있습니다."
         }
       }
     ]
@@ -314,7 +314,7 @@ export default function JarameService() {
     "@context": "https://schema.org",
     "@type": "TechArticle",
     "headline": "발달장애 AI 디지털케어로그: 표준 케어로그·실시간 환류 기반 Care Data Infrastructure",
-    "description": "연계·등록 기관 약 5,700+ 규모의 풀과 일부 기관 베타. AI 강화학습 기반 맞춤형 치료·학습. 가정·학교·센터·병원 통합 기록을 지향. AI 엔진형 Middleware 기술.",
+    "description": "연계·등록 기관 약 5,700+ 규모의 풀과 일부 기관 베타. 표준 케어로그·XAI·패턴 분석 기반 권장안. 가정·학교·센터·병원 통합 기록을 지향.",
     "author": {
       "@type": "Organization",
       "name": "드림에이아이랩",
@@ -410,34 +410,8 @@ export default function JarameService() {
               기존에는 기관별 문서와 경험에 의존해 치료 맥락이 끊겼습니다. 자람이는 표준 기록과 AI 패턴 분석으로 다음 중재를 공통 기준으로 제안합니다.
             </p>
             <p className="text-base max-w-2xl mx-auto text-white/90 leading-relaxed break-keep">
-              지금까지 해결되지 않았던 데이터 단절·재입력·해석 차이를, 표준 케어로그와 실시간 분석 환류 구조로 줄이는 것이 자람이의 핵심입니다.
+              지금까지 해결되지 않았던 데이터 단절·재입력·해석 차이를, 표준 케어로그와 패턴 분석·환류 구조로 줄이는 것이 자람이의 핵심입니다.
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* 플랫폼 구현 현황 — 개발 저장소(jarame) 정본 */}
-      <section className="py-10 bg-white border-b border-gray-100" aria-labelledby="jarame-impl-status">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 id="jarame-impl-status" className="text-xl font-bold text-gray-900 mb-2 text-center">플랫폼 구현 현황</h2>
-          <p className="text-center text-sm text-gray-600 mb-6 max-w-2xl mx-auto">
-            DAL 소개 페이지는 jarame.or.kr 개발 코드·<code className="text-xs bg-gray-100 px-1 rounded">PROJECT_STATUS.md</code>와 정합합니다.
-          </p>
-          <div className="overflow-x-auto rounded-xl border border-blue-100">
-            <table className="w-full text-sm text-left">
-              <thead className="bg-blue-50 text-gray-800">
-                <tr>
-                  <th className="px-4 py-3 font-semibold">상태</th>
-                  <th className="px-4 py-3 font-semibold">기능</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-gray-100">
-                <tr><td className="px-4 py-3 text-blue-700 font-medium">✅ 베타</td><td className="px-4 py-3 text-gray-700">케어로그·AI 상담·리포트·자가진단·RBAC·학교·홈티·FHIR export</td></tr>
-                <tr><td className="px-4 py-3 text-blue-700 font-medium">✅ 베타</td><td className="px-4 py-3 text-gray-700">XAI Phase 1~4·AI 맞춤 교재·학습경로·10종 치료 API</td></tr>
-                <tr><td className="px-4 py-3 text-amber-700 font-medium">🔄 검증 중</td><td className="px-4 py-3 text-gray-700">강화학습·연합학습 — 시뮬레이션·파일럿 (상용 RL 톤 지양)</td></tr>
-                <tr><td className="px-4 py-3 text-amber-700 font-medium">🔄 진행</td><td className="px-4 py-3 text-gray-700">Gate 3 실기관 실호출 (3~5개 기관)</td></tr>
-              </tbody>
-            </table>
           </div>
         </div>
       </section>
@@ -1375,10 +1349,10 @@ export default function JarameService() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              10가지 전문 치료 모듈 & 검증된 성과
+              10가지 전문 치료 모듈 & 베타 관찰 지표
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              실제 데이터로 입증된 자람이의 치료 효과
+              표준 기록 위에서 패턴·추이를 보는 구조입니다. 아래 수치는 파일럿·베타 맥락의 <strong>관찰 예시</strong>이며, 기관·대상에 따라 달라질 수 있습니다.
             </p>
           </div>
 
@@ -1393,11 +1367,14 @@ export default function JarameService() {
               ))}
             </div>
             <p className="text-center text-gray-600 mt-6">
-              각 치료사의 전문 분야에 맞춘 표준화된 기록 시스템으로 <strong className="text-green-600">치료 효과를 AI가 실시간 분석</strong>합니다.
+              각 치료사의 전문 분야에 맞춘 표준화된 기록으로 <strong className="text-green-600">패턴·추이를 AI가 분석·리포트</strong>합니다. (의료·치료 결정은 전문가 판단)
             </p>
           </div>
 
-          {/* 검증된 성과 */}
+          {/* 베타·파일럿 관찰 예시 */}
+          <p className="text-center text-xs text-gray-500 mb-4 max-w-3xl mx-auto">
+            Gate 3 실기관 UAT 전까지 IR·대외 자료에서는 아래를 「목표·관찰 예시」로 인용합니다. 공식 효과 주장은 기관별 PoC 결과를 따릅니다.
+          </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-white rounded-2xl p-6 shadow-lg text-center">
               <div className="mb-3 flex justify-center text-primary-600"><MarketingIcon name="target" className="h-8 w-8" /></div>
@@ -1435,7 +1412,7 @@ export default function JarameService() {
               <p className="text-sm text-gray-600 mb-3">기관 연계</p>
               <div className="text-xs text-gray-500 space-y-1 text-left">
                 <p>• 기존: 월 1회 보고서 공유</p>
-                <p>• 자람이: 실시간 연계 시스템</p>
+                <p>• 자람이: 기록 기반 연계·리포트 (베타)</p>
               </div>
             </div>
           </div>
@@ -2032,13 +2009,37 @@ export default function JarameService() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               핵심 기능
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              발달장애인과 가족들을 위한 통합적인 AI 디지털케어로그 서비스
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-2">
+              발달장애인과 가족을 위한 AI 디지털케어로그 — <strong className="text-gray-800">대표 4축</strong>
+            </p>
+            <p className="text-sm text-gray-500 max-w-2xl mx-auto">
+              확장 기능·10종 치료·맞춤 교재는 본문 섹션·<a href="#deployment-status" className="text-blue-600 underline">Deployment Status</a>와 연결됩니다.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
-            {coreFeatures.map((feature, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+            {coreFeatures.slice(0, 4).map((feature, index) => (
+              <div key={index} className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-shadow">
+                <div className="mb-4 text-primary-600">
+                  <MarketingIcon name={iconFromEmoji(feature.icon)} className="h-9 w-9" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
+                <p className="text-gray-700 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.details.slice(0, 2).map((detail, detailIndex) => (
+                    <li key={detailIndex} className="flex items-center text-sm text-gray-600">
+                      <span className="text-blue-500 mr-2">•</span>
+                      {detail}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          <h3 className="text-lg font-bold text-gray-900 text-center mb-6">확장 기능 (베타·표준 연동)</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {coreFeatures.slice(4).map((feature, index) => (
               <div key={index} className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-shadow">
                 <div className="mb-4 text-primary-600">
                   <MarketingIcon name={iconFromEmoji(feature.icon)} className="h-9 w-9" />
@@ -2367,7 +2368,7 @@ export default function JarameService() {
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-start gap-2">
                     <span className="text-blue-500">✓</span>
-                    <span><strong>검증된 기술</strong>: AI 강화학습 기반 맞춤형 치료·학습</span>
+                    <span><strong>검증 중인 기술</strong>: 표준 케어로그·XAI·패턴 분석 (RL·연합학습은 파일럿)</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-blue-500">✓</span>
@@ -2402,27 +2403,35 @@ export default function JarameService() {
         </div>
       </section>
 
-      {/* Deployment Status — 3 status cards (Hero와 중복 방지) */}
-      <section className="py-14 bg-white border-b border-gray-100">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Deployment Status — 단계·검증·도입 범위 */}
+      <section className="py-14 bg-white border-b border-gray-100" id="deployment-status">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">Deployment Status</h2>
-          <p className="text-center text-gray-600 text-sm mb-8 max-w-xl mx-auto">현재 단계·검증·도입 가능 범위를 안내합니다.</p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <p className="text-center text-gray-600 text-sm mb-8 max-w-2xl mx-auto">
+            IR·협력용 단계 요약입니다. 세부 Gate·구현 상태는 jarame.or.kr 개발 문서(PROJECT_STATUS)를 정본으로 합니다.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <div className="bg-white rounded-xl p-6 shadow-md border-2 border-orange-200">
               <p className="text-xs font-semibold text-orange-600 uppercase tracking-wide mb-2">Current Stage</p>
-              <p className="text-lg font-bold text-gray-900">Beta Testing (기관 베타 테스트)</p>
-              <p className="text-sm text-gray-600 mt-1">기관 베타 테스트 진행 중</p>
+              <p className="text-lg font-bold text-gray-900">Beta Testing (기관 베타)</p>
+              <p className="text-sm text-gray-600 mt-1">Gate 2 파일럿 UI·API 검증 완료, Gate 3 실기관 실호출 진행</p>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-md border border-gray-200">
               <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Validation</p>
-              <p className="text-sm text-gray-900 font-semibold mb-1">다기관 협업 구조 검증</p>
-              <p className="text-sm text-gray-600">가정·센터·학교·병원 데이터 연계 검증</p>
+              <p className="text-sm text-gray-900 font-semibold mb-1">다기관·XAI 검증</p>
+              <p className="text-sm text-gray-600">케어로그·리포트·XAI Phase 1~4 베타. RL·연합학습은 시뮬레이션·파일럿</p>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-md border border-gray-200">
               <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Deployment Readiness</p>
               <p className="text-sm text-gray-900 font-semibold mb-1">기관 도입 가능 범위</p>
-              <p className="text-sm text-gray-600">제한적 기관 도입·공공 PoC 협의 가능</p>
+              <p className="text-sm text-gray-600">제한적 기관 도입·공공 PoC 협의. 전원 상용 전제 아님</p>
             </div>
+          </div>
+          <div className="rounded-xl border border-blue-100 bg-blue-50/40 p-5 text-sm text-gray-700">
+            <p className="font-semibold text-gray-900 mb-2">베타 운영 중 (대표)</p>
+            <p className="mb-3">케어로그 · AI 상담·리포트 · 자가진단 · RBAC · 학교·홈티 · FHIR export · 10종 치료 기록 · AI 맞춤 교재·학습경로</p>
+            <p className="font-semibold text-gray-900 mb-2">검증·로드맵</p>
+            <p>강화학습·연합학습 실기관 루프 · Gate 3 (3~5개 기관 실호출)</p>
           </div>
         </div>
       </section>
