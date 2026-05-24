@@ -407,7 +407,7 @@ export default function JarameService() {
               </span>
             </h1>
             <p className="text-lg md:text-xl max-w-2xl mx-auto text-blue-100 mb-2 leading-relaxed break-keep">
-              기관별 문서와 기억에 의존하던 발달지원 과정을 표준 기록, AI 요약, 패턴 분석, 리포트 환류 구조로 연결해 조기개입, 협업, 개별화 지원의 정확도를 높이는 것을 목표로 합니다.
+              기관별 문서와 기억에 의존하던 발달지원 과정을 표준 기록, AI 요약, 패턴 분석, 리포트 환류 구조로 연결해 조기개입, 협업, 개별화 지원의 <strong className="text-white">근거를 더 명확하게</strong> 만드는 것을 목표로 합니다.
             </p>
             <p className="text-base max-w-2xl mx-auto text-white/90 leading-relaxed break-keep">
               자람이는 의료기기·진단·처방 시스템이 아니라, 전문가 판단을 돕는 기록·분석·협업 인프라입니다.
@@ -1016,7 +1016,7 @@ export default function JarameService() {
                   <ul className="mt-1 space-y-1 text-gray-600">
                     <li>• 눈 맞춤: 주 15~20회로 증가</li>
                     <li>• 단어 발화: "엄마", "물", "좋아" 등 12개 단어</li>
-                    <li>• 소음 적응: 사전 알림으로 패닉 80% 감소</li>
+                    <li>• 소음 적응: 사전 알림으로 패닉 빈도 감소 (시나리오)</li>
                   </ul>
                 </div>
               </div>
@@ -1226,7 +1226,7 @@ export default function JarameService() {
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-orange-600">▸</span>
-                      <span><strong>의학적 권장</strong>: 의사 협업 자료</span>
+                      <span><strong>의료진 참고 자료</strong>: 진료 상담·협업용 요약 리포트</span>
                     </li>
                   </ul>
                 </div>
@@ -1296,7 +1296,7 @@ export default function JarameService() {
               AI 디지털케어로그
             </h2>
             <p className="text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-600 mb-6">
-              치료의 언어이자, 치료의 발단
+              발달지원의 공통 언어이자, 협업의 출발점
             </p>
             
             <div className="max-w-4xl mx-auto space-y-4">
@@ -1305,7 +1305,7 @@ export default function JarameService() {
                 <strong className="text-cyan-600"> AI 분석 → 기록 환류(폐루프)</strong>로 맞춤 치료·학습 권장안을 제시합니다.
               </p>
               <p className="text-xl text-gray-700 leading-relaxed">
-                챗봇·콘텐츠 추천이 아니라 <strong>기록·표준화·실행 자동화</strong>가 연결된 Care Data Infrastructure입니다.
+                챗봇·콘텐츠 추천이 아니라 <strong>기록·표준화·협업 실행</strong>이 연결된 Care Data Infrastructure입니다. 맞춤 지원안은 현장 전문가 검토·확정을 전제로 하며, AI는 치료·의료 판단을 대체하지 않습니다.
               </p>
               
               <div className="bg-gradient-to-r from-amber-50 to-orange-50 rounded-xl p-6 border-l-4 border-amber-500 my-6">
@@ -1344,7 +1344,7 @@ export default function JarameService() {
               <h3 className="text-xl font-bold text-gray-900 mb-3">AI 분석 & 리포트</h3>
               <ul className="space-y-2 text-gray-600 list-disc list-inside">
                 <li>발달 추이 분석 및 시각화</li>
-                <li>개인 맞춤형 치료·교육 제안</li>
+                <li>개인 맞춤형 치료·교육 지원안 (전문가 검토·확정)</li>
                 <li>이상 징후 조기 탐지 알림</li>
               </ul>
             </div>
@@ -1371,10 +1371,10 @@ export default function JarameService() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              10가지 전문 치료 모듈 & 베타 관찰 지표
+              10가지 전문 치료 모듈 & 파일럿 KPI
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              표준 기록 위에서 패턴·추이를 보는 구조입니다. 아래 수치는 파일럿·베타 맥락의 <strong>관찰 예시</strong>이며, 기관·대상에 따라 달라질 수 있습니다.
+              표준 기록 위에서 패턴·추이를 보는 구조입니다. 효과적 치료·교육을 위한 <strong>기록·분석·협업 인프라</strong>이며, 모든 중재는 현장 전문가 확인을 전제로 합니다.
             </p>
           </div>
 
@@ -1393,43 +1393,18 @@ export default function JarameService() {
             </p>
           </div>
 
-          {/* 베타·파일럿 관찰 예시 — IR용 목표치(코드·PoC 리포트 미연동) */}
-          <p className="text-center text-xs text-gray-500 mb-4 max-w-3xl mx-auto">
-            아래 수치는 초기 IR·내부 시나리오용 <strong className="font-medium text-gray-600">목표·관찰 예시</strong>이며, 저장소 PoC·Gate3 UAT 결과와 자동 연동되지 않습니다. 공식 효과는 기관별 파일럿 KPI로 갱신합니다.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm text-center">
-              <div className="mb-3 flex justify-center text-primary-600"><MarketingIcon name="target" className="h-8 w-8" /></div>
-              <p className="text-2xl font-bold text-primary-700 mb-1">목표 예시 +35%p</p>
-              <p className="text-sm text-gray-600 mb-3">치료 목표 달성률 (3개월)</p>
-              <div className="text-xs text-gray-500 space-y-1 text-left">
-                <p>• 기존(가정): 45% → 자람이(목표): 80%</p>
-              </div>
-            </div>
-            <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm text-center">
-              <div className="mb-3 flex justify-center text-primary-600"><MarketingIcon name="chart" className="h-8 w-8" /></div>
-              <p className="text-2xl font-bold text-primary-700 mb-1">목표 예시 −60%</p>
-              <p className="text-sm text-gray-600 mb-3">행정 업무 시간 (주간)</p>
-              <div className="text-xs text-gray-500 space-y-1 text-left">
-                <p>• 기존(가정): 20시간 → 자람이(목표): 8시간</p>
-              </div>
-            </div>
-            <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm text-center">
-              <div className="mb-3 flex justify-center text-primary-600"><MarketingIcon name="chart" className="h-8 w-8" /></div>
-              <p className="text-2xl font-bold text-primary-700 mb-1">목표 예시 95%</p>
-              <p className="text-sm text-gray-600 mb-3">객관 지표 기반 기록</p>
-              <div className="text-xs text-gray-500 space-y-1 text-left">
-                <p>• 기존(가정): 주관 70% → 자람이(목표): 객관 95%</p>
-              </div>
-            </div>
-            <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm text-center">
-              <div className="mb-3 flex justify-center text-primary-600"><MarketingIcon name="handshake" className="h-8 w-8" /></div>
-              <p className="text-2xl font-bold text-primary-700 mb-1">베타 연계</p>
-              <p className="text-sm text-gray-600 mb-3">다기관 리포트·공유</p>
-              <div className="text-xs text-gray-500 space-y-1 text-left">
-                <p>• 기존(가정): 월 1회 보고 → 기록 기반 연계·리포트 (베타)</p>
-              </div>
-            </div>
+          <div className="bg-white rounded-xl p-8 border border-gray-100 shadow-sm max-w-3xl mx-auto">
+            <h3 className="text-lg font-bold text-gray-900 mb-4 text-center">기관별 파일럿에서 측정할 핵심 KPI (예시)</h3>
+            <ul className="text-sm text-gray-700 space-y-2 max-w-md mx-auto">
+              <li>• 치료·교육 목표 달성 추이 (케어로그·리포트 기반)</li>
+              <li>• 기록 완성도·표준 필드 준수</li>
+              <li>• 행정·중복 입력 소요 시간</li>
+              <li>• 보호자·담당자 이해도·협업 만족도</li>
+              <li>• 다기관 연계·리포트 활용 (베타)</li>
+            </ul>
+            <p className="text-xs text-gray-500 mt-4 text-center leading-relaxed">
+              % 목표치는 Gate3 UAT·PoC 결과에 따라 기관·IR 자료에서 별도 제시합니다. 본 페이지에 고정 수치를 두지 않습니다.
+            </p>
           </div>
         </div>
       </section>
@@ -1446,7 +1421,7 @@ export default function JarameService() {
             </div>
             <div className="bg-white rounded-xl p-5 shadow-sm">
               <h3 className="font-bold text-gray-900 mb-2">치료사·센터</h3>
-              <p className="text-sm text-gray-600">치료 모듈 기록 · 성과 분석 · 행정 자동화</p>
+              <p className="text-sm text-gray-600">치료 모듈 기록 · 성과 분석 · 행정·기록 보조</p>
             </div>
             <div className="bg-white rounded-xl p-5 shadow-sm">
               <h3 className="font-bold text-gray-900 mb-2">의사·병원</h3>
@@ -1454,7 +1429,7 @@ export default function JarameService() {
             </div>
             <div className="bg-white rounded-xl p-5 shadow-sm">
               <h3 className="font-bold text-gray-900 mb-2">교사·학교</h3>
-              <p className="text-sm text-gray-600">IEP 자동화 · AI 교재 · 학습 데이터 분석</p>
+              <p className="text-sm text-gray-600">IEP·교재 작성 보조 · 학습 데이터 분석</p>
             </div>
           </div>
         </div>
@@ -1967,8 +1942,8 @@ export default function JarameService() {
               </div>
               <div className="bg-gray-50 rounded-xl p-4 text-center">
                 <span className="mb-2 flex justify-center text-primary-600"><MarketingIcon name="document" className="h-6 w-6" /></span>
-                <p className="text-sm font-medium text-gray-800">복용·시간 가이드</p>
-                <p className="text-xs text-gray-600 mt-1">아침/점심/저녁 안전한 복용 순서 제안</p>
+                <p className="text-sm font-medium text-gray-800">의료진 상담 준비</p>
+                <p className="text-xs text-gray-600 mt-1">복용 시간·조합 우려를 정리해 상담 자료로 제공</p>
               </div>
               <div className="bg-gray-50 rounded-xl p-4 text-center">
                 <span className="mb-2 flex justify-center text-primary-600"><MarketingIcon name="stethoscope" className="h-6 w-6" /></span>
@@ -2212,11 +2187,10 @@ export default function JarameService() {
               
               <div className="space-y-3 text-gray-700">
                 <div className="bg-white rounded-lg p-4">
-                  <h4 className="font-bold text-primary-700 mb-2">시장 규모</h4>
-                  <p className="text-sm">
-                    <strong>국내 발달장애인 30만명</strong> (2024년 통계청)
-                    <br/>전 세계 <strong>1억명+</strong> 추정
-                    <br/>연간 시장 규모: <strong>수조원대</strong>
+                  <h4 className="font-bold text-primary-700 mb-2">시장·확장</h4>
+                  <p className="text-sm leading-relaxed">
+                    국내 발달장애 등록·지원 인구와 특수교육·치료·돌봄 시장을 기반으로 한 확장 가능 영역입니다.
+                    <br/>구체 인구·시장 규모 수치는 <strong>IR·공식 통계(통계청 등) 출처와 함께 별도 자료</strong>에서 제시합니다.
                   </p>
                 </div>
 
@@ -2259,7 +2233,7 @@ export default function JarameService() {
                   <ul className="text-sm space-y-1">
                     <li>• 다기관 데이터 통합 표준 스키마</li>
                     <li>• 기록 환류 + RL·연합학습(파일럿)</li>
-                    <li>• 개인별 맞춤형 치료 자동화</li>
+                    <li>• 개인별 맞춤형 치료·교육 지원 (현장 전문가 검토·확정)</li>
                     <li>• 골든타임 조기 탐지 알림</li>
                   </ul>
                 </div>
@@ -2392,7 +2366,7 @@ export default function JarameService() {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-blue-500">✓</span>
-                    <span><strong>명확한 시장</strong>: 국내 30만명 → 전 세계 1억명</span>
+                    <span><strong>확장 시장</strong>: 발달·교육·돌봄 데이터 인프라 (IR 자료·공식 통계 별도)</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-blue-500">✓</span>
