@@ -1,6 +1,6 @@
 # 자람이 (Jarame) — 스펙 요약 (웹·플랫폼 정합)
 
-- **last_reviewed:** 2026-05-23 (Deployment Status 통합·coreFeatures 4+6·RL 톤 정리)
+- **last_reviewed:** 2026-05-24 (Hero·의료 표현·5,700+ 공공데이터 정의·검증 3단·구역 목차)
 - **canonical 웹:** https://dreamailab.com/services/jarame
 - **외부 플랫폼:** https://jarame.or.kr
 - **DAL 도메인:** 발달장애 (JR) · **상태:** Beta
@@ -72,7 +72,7 @@
 
 ## 지표·상태 (웹 메타 기준)
 
-- 연계·등록 기관 **약 5,700+** (MAU와 별개, Executive Summary)
+- 공공·개방 데이터 기반 전국 기관 정보 **약 5,700+** (검색·연계 후보, MAU·도입 기관 수와 별개)
 - 2022년 착수 · Gate2·XAI 골격(코드 기준) · **Gate3·기관 베타** 진행 — 「2025 기술 완성」은 IR 과대 표현으로 사용하지 않음
 - MD에 고정 수치를 두지 않고 **웹 메타·히어로 숫자**를 따름
 

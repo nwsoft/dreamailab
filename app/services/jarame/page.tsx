@@ -7,7 +7,7 @@ import { MarketingIcon, type MarketingIconName } from '../../../components/Marke
 export const metadata: Metadata = {
   title: 'AI 디지털케어로그 | 발달장애 표준 기술 | 자람이 | 드림에이아이랩',
   description:
-    '발달장애 치료·학습을 위한 AI 디지털케어로그. 데이터 표준·기관 연계·XAI·패턴 분석 기반 권장안. 연계·등록 기관 약 5,700+(MAU와 별개), 일부 기관 베타. 가정·학교·센터·병원 연계를 지향. DAL 1번 도메인.',
+    '발달장애 치료·학습을 위한 AI 디지털케어로그. 데이터 표준·XAI·패턴 분석 권장안. 공공데이터 기반 전국 기관 정보 5,700+(검색·연계 후보, MAU와 별개). 일부 기관 베타. DAL 1번 도메인.',
   keywords: 'AI 디지털케어로그, 발달장애 표준, 맞춤형 치료, 맞춤형 학습, 골든타임, 발달장애 치료 방법, ADHD 치료, 자폐증 치료, 특수교육, 언어치료, 작업치료, 행동치료 ABA, IEP 개별화교육계획, 치료사 협업, 다기관 연계, 자람이, 드림에이아이랩, 케어로그 표준화, 강화학습, Middleware, AI 엔진',
   alternates: {
     canonical: 'https://dreamailab.com/services/jarame',
@@ -223,7 +223,7 @@ export default function JarameService() {
         "name": "자람이를 사용하는 기관은 몇 개인가요?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "공공·개방 데이터 연계 등으로 약 5,700개의 특수교육·발달장애 치료·소아정신 관련 기관 정보가 자람이에 등록되어 있습니다. 이는 전원이 동일 제품을 일상 사용한다는 뜻이 아니라, B2B·행정 연동과 케어로그 도입을 논의할 수 있는 현장 풀 규모에 가깝습니다. 일부 센터·병원·특수교사와 베타 테스트를 진행 중이며, 정부 정책과 연계한 확대를 준비하고 있습니다. 2022년 프로젝트 착수 후 Gate2·XAI 등 플랫폼 골격을 구축했으며, Gate3 실기관 파일럿은 진행·준비 단계입니다."
+          "text": "공공·개방 데이터 기반으로 약 5,700개의 특수교육·발달장애 치료·소아정신 관련 기관 정보를 jarame.or.kr에서 검색·연계 후보로 제공합니다. 이는 전국 센터 찾기·마케팅 풀이며, 제품 도입·일상 사용(MAU) 기관 수와 별개입니다. 일부 센터·병원·특수교사와 케어로그 베타를 진행 중이며, Gate3 실기관 파일럿은 진행·준비 단계입니다."
         }
       },
       {
@@ -346,7 +346,7 @@ export default function JarameService() {
     "alternateName": "Dream AI Lab",
     "url": "https://dreamailab.ai",
     "logo": "https://dreamailab.ai/logo.png",
-    "description": "불치병과 사회 약자를 위한 AI 기술. 발달장애 AI 디지털케어로그 표준·다기관 연계·기록 환류 기반 Care Data Infrastructure를 구축하는 AI 엔진형 Middleware 기업.",
+    "description": "발달장애·돌봄·의료 취약 영역을 위한 AI 기술. 발달장애 AI 디지털케어로그 표준·다기관 연계·기록 환류 기반 Care Data Infrastructure를 구축하는 AI 엔진형 Middleware 기업.",
     "foundingDate": "2022",
     "founder": {
       "@type": "Person",
@@ -397,20 +397,20 @@ export default function JarameService() {
             {/* Hero: 문제 인식 -> 해결 구조 -> AI 근거 */}
             <h1 className="font-bold leading-tight tracking-tight text-balance break-keep mb-5 max-w-3xl mx-auto">
               <span className="block text-3xl sm:text-4xl lg:text-5xl mb-3">
-                발달장애 치료의 성패는 연결된 기록에서 갈립니다.
+                발달장애 지원의 핵심은 흩어진 기록을 연결하는 것입니다.
               </span>
               <span className="block text-xl sm:text-2xl lg:text-3xl font-semibold text-white/95 leading-snug mb-1.5">
-                자람이는 가정·학교·센터·병원에 흩어진 관찰과 훈련 반응을
+                자람이는 가정·센터·학교·병원의 관찰, 치료, 학습, 생활 기록을
               </span>
               <span className="block text-xl sm:text-2xl lg:text-3xl font-semibold text-white/95 leading-snug">
-                하나의 AI 디지털케어로그로 연결해 조기개입과 협업 정확도 향상을 지향합니다.
+                하나의 AI디지털케어로그로 구조화해 보호자와 전문가가 같은 기준으로 아이의 변화를 이해하고 다음 지원을 이어갈 수 있도록 돕습니다.
               </span>
             </h1>
             <p className="text-lg md:text-xl max-w-2xl mx-auto text-blue-100 mb-2 leading-relaxed break-keep">
-              기존에는 기관별 문서와 경험에 의존해 치료 맥락이 끊겼습니다. 자람이는 표준 기록과 AI 패턴 분석으로 다음 중재를 공통 기준으로 제안합니다.
+              기관별 문서와 기억에 의존하던 발달지원 과정을 표준 기록, AI 요약, 패턴 분석, 리포트 환류 구조로 연결해 조기개입, 협업, 개별화 지원의 정확도를 높이는 것을 목표로 합니다.
             </p>
             <p className="text-base max-w-2xl mx-auto text-white/90 leading-relaxed break-keep">
-              지금까지 해결되지 않았던 데이터 단절·재입력·해석 차이를, 표준 케어로그와 패턴 분석·환류 구조로 줄이는 것이 자람이의 핵심입니다.
+              자람이는 의료기기·진단·처방 시스템이 아니라, 전문가 판단을 돕는 기록·분석·협업 인프라입니다.
             </p>
           </div>
         </div>
@@ -420,10 +420,13 @@ export default function JarameService() {
       <section className="py-14 bg-white border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">Executive Summary</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+          <p className="text-center text-xs text-gray-500 max-w-2xl mx-auto mt-4 mb-2">
+            <strong className="font-medium text-gray-600">5,700+</strong>는 공공·개방 데이터 기반 전국 기관 정보(검색·연계 후보)이며, 제품 도입·일상 사용 기관 수와 별개입니다.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
             <div className="bg-white rounded-xl p-6 border border-gray-100 hover:border-blue-200 transition-colors shadow-sm">
-              <h3 className="font-bold text-gray-900 mb-2">기관 커뮤니티</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">5,700+ 연계·등록 기관 풀</p>
+              <h3 className="font-bold text-gray-900 mb-2">기관 정보 DB</h3>
+              <p className="text-sm text-gray-600 leading-relaxed">5,700+ 전국 센터·병원·특수교육 시설 (공공데이터·검색)</p>
             </div>
             <div className="bg-white rounded-xl p-6 border border-gray-100 hover:border-blue-200 transition-colors shadow-sm">
               <h3 className="font-bold text-gray-900 mb-2">개발 기간</h3>
@@ -440,6 +443,18 @@ export default function JarameService() {
           </div>
         </div>
       </section>
+
+      <nav
+        aria-label="페이지 구역"
+        className="sticky top-0 z-20 bg-white/95 backdrop-blur border-b border-gray-100 py-2.5"
+      >
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap justify-center gap-x-4 gap-y-1 text-xs sm:text-sm">
+          <a href="#for-families" className="text-blue-700 font-medium hover:underline">보호자·전문가</a>
+          <a href="#for-institutions" className="text-blue-700 font-medium hover:underline">기관·기술</a>
+          <a href="#deployment-status" className="text-blue-700 font-medium hover:underline">베타·검증</a>
+          <a href="#for-ir" className="text-blue-700 font-medium hover:underline">공공·IR</a>
+        </div>
+      </nav>
 
       {/* Visual Overview */}
       <section className="py-12 bg-white border-b border-gray-100">
@@ -477,8 +492,8 @@ export default function JarameService() {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white rounded-xl p-6 border border-gray-100 hover:border-blue-200 transition-colors shadow-sm">
-              <h3 className="font-bold text-gray-900 mb-2">기관 커뮤니티 기반</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">5,700+ 연계·등록 기관 네트워크(도입 잠재 풀)</p>
+              <h3 className="font-bold text-gray-900 mb-2">전국 기관 찾기</h3>
+              <p className="text-sm text-gray-600 leading-relaxed">5,700+ 공공·개방 데이터 기반 기관 정보(검색·마케팅 풀)</p>
             </div>
             <div className="bg-white rounded-xl p-6 border border-gray-100 hover:border-blue-200 transition-colors shadow-sm">
               <h3 className="font-bold text-gray-900 mb-2">기관 베타 테스트</h3>
@@ -493,7 +508,8 @@ export default function JarameService() {
       </section>
 
       {/* Who Jarame Is For (ICP) — 3-column card layout */}
-      <section className="py-14 bg-gray-50 border-b border-gray-100">
+      <section id="for-families" className="py-14 bg-gray-50 border-b border-gray-100 scroll-mt-14">
+        <p className="text-center text-xs font-semibold text-blue-800 uppercase tracking-wide mb-4 max-w-6xl mx-auto px-4">For 보호자·치료사·교사·의사</p>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">Who Jarame Is For</h2>
           <p className="text-center text-gray-600 text-sm mb-8 max-w-2xl mx-auto">B2B·B2G 구매 주체와 최종 사용자를 명확히 구분합니다.</p>
@@ -783,7 +799,7 @@ export default function JarameService() {
       <section className="py-14 bg-gray-50 border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">의료 현장의 현실적인 한계</h2>
-          <p className="text-center text-gray-600 text-sm mb-8">의료 현실 → 데이터 문제 → 해결 → 의료 판단 변화</p>
+          <p className="text-center text-gray-600 text-sm mb-8">의료 현실 → 데이터 문제 → 기록 통합 → 의료 판단 지원·참고</p>
           <div className="bg-white rounded-2xl p-8 md:p-10 border border-gray-100 shadow-sm">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-3">
               <div className="relative">
@@ -821,7 +837,7 @@ export default function JarameService() {
               <div>
                 <div className="bg-primary-50 rounded-xl p-5 border-2 border-primary-200 h-full">
                   <div className="text-2xl mb-2">5️⃣</div>
-                  <h4 className="font-bold text-primary-900 mb-2 text-sm">STEP 5 — 의료 판단 변화</h4>
+                  <h4 className="font-bold text-primary-900 mb-2 text-sm">STEP 5 — 의료 판단 지원·참고</h4>
                   <p className="text-xs text-gray-700">장기 데이터(행동·약물 반응·치료 진행) 기반 진료 가능.</p>
                 </div>
               </div>
@@ -1344,7 +1360,7 @@ export default function JarameService() {
             </div>
           </div>
           <p className="mt-10 text-lg text-gray-700 max-w-4xl mx-auto text-center">
-            치료할 수 없는 병이 아니라, <strong>기록하고 분석하면</strong> 치료의 실마리를 찾을 수 있는 병으로 전환합니다.
+            단편적 관찰만으로는 어려운 영역입니다. <strong>구조화된 기록과 패턴 분석</strong>으로 보호자·전문가가 같은 기준으로 변화를 이해하고 다음 지원을 이어가도록 돕습니다.
           </p>
         </div>
       </section>
@@ -1822,12 +1838,15 @@ export default function JarameService() {
               </ul>
             </div>
             <div className="bg-green-50/80 rounded-2xl p-6 border-2 border-green-200">
-              <h3 className="text-lg font-bold text-gray-900 mb-4">AI 권장 가이드</h3>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">시나리오 예시 (처방·복약 지시 아님)</h3>
+              <p className="text-xs text-amber-900 mb-4 leading-relaxed">
+                UI·교육용 가상 사례입니다. 실제 복용·시간·약물 변경은 반드시 담당 의료진과 상담하세요.
+              </p>
               <div className="space-y-3 text-sm text-gray-700">
-                <p><strong className="text-gray-800">아침</strong> — 콘서타</p>
-                <p><strong className="text-gray-800">점심/저녁</strong> — 슈다페드 제외</p>
-                <p><strong className="text-gray-800">취침 전</strong> — 라투다 + 페니라민</p>
-                <p className="pt-2 border-t border-green-200"><strong className="text-gray-800">대체 방법</strong> — 슈다페드 → 시노나즈 스프레이</p>
+                <p><strong className="text-gray-800">의료진 상담 시 논의할 수 있는 예시</strong></p>
+                <p>· 시간대별 복용 분리(아침 ADHD 약 / 취침 전 정신과 약 등)</p>
+                <p>· 상호작용 우려 시 감기약 성분(슈다페드 등) 대안 검토</p>
+                <p>· 위험 신호 발생 시 즉시 연락·내원</p>
               </div>
             </div>
           </div>
@@ -1984,7 +2003,8 @@ export default function JarameService() {
       </section>
 
       {/* Institutions/Integration Section */}
-      <section id="institutions" className="py-16 lg:py-24 bg-white">
+      <section id="for-institutions" className="py-16 lg:py-24 bg-white scroll-mt-14">
+        <p className="text-center text-xs font-semibold text-blue-800 uppercase tracking-wide mb-4 max-w-7xl mx-auto px-4">For 기관·기술 도입</p>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">기관 연동 & 학교 관리자</h2>
@@ -2087,7 +2107,8 @@ export default function JarameService() {
       </section>
 
       {/* 투자자·파트너 관점 */}
-      <section className="py-16 lg:py-24 bg-white">
+      <section id="for-ir" className="py-16 lg:py-24 bg-white scroll-mt-14">
+        <p className="text-center text-xs font-semibold text-blue-800 uppercase tracking-wide mb-4">For 공공·IR·파트너</p>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">투자자·파트너가 주목하는 이유</h2>
@@ -2117,7 +2138,7 @@ export default function JarameService() {
                   <p className="text-sm text-blue-600">발달장애 전용</p>
                 </div>
                 <ul className="text-sm text-gray-700 space-y-2">
-                  <li>✓ 5,700+ 연계·등록 기관 풀</li>
+                  <li>✓ 5,700+ 공공데이터 기반 기관 정보(검색)</li>
                   <li>✓ 2022~ Gate2·XAI 골격 · Gate3 진행</li>
                   <li>✓ 2026년 시범사업 준비</li>
                 </ul>
@@ -2210,9 +2231,9 @@ export default function JarameService() {
                 <div className="bg-white rounded-lg p-4">
                   <h4 className="font-bold text-primary-700 mb-2">ESG·사회적 임팩트</h4>
                   <p className="text-sm">
-                    불치병·사회 약자를 위한 기술
-                    <br/>치료 비용 <strong>30~50% 절감</strong> 가능
-                    <br/>골든타임 놓치는 아이들 구제
+                    발달장애·돌봄 취약 영역 지원 기술
+                    <br/>행정·중복기록·반복상담 비용 <strong>절감 가능성</strong> (파일럿·PoC 검증 전제)
+                    <br/>조기개입·연속 기록으로 지원 공백 완화 지향
                   </p>
                 </div>
               </div>
@@ -2263,7 +2284,7 @@ export default function JarameService() {
                 <div className="bg-white rounded-lg p-4">
                   <h4 className="font-bold text-primary-700 mb-2">현재 성과</h4>
                   <ul className="text-sm space-y-1">
-                    <li>• <strong>5,700+</strong> 연계·등록 기관 풀</li>
+                    <li>• <strong>5,700+</strong> 공공데이터 기반 기관 정보(검색·연계 후보)</li>
                     <li>• <strong>2022~</strong> 착수 · Gate2·XAI 골격 · Gate3·파일럿</li>
                     <li>• 일부 센터·병원·특수교사 <strong>베타 테스트 중</strong></li>
                   </ul>
@@ -2378,7 +2399,7 @@ export default function JarameService() {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-blue-500">✓</span>
-                    <span><strong>사회적 임팩트</strong>: 불치병·사회 약자를 위한 기술</span>
+                    <span><strong>사회적 임팩트</strong>: 발달장애·돌봄 취약 영역 지원</span>
                   </li>
                 </ul>
               </div>
@@ -2402,12 +2423,26 @@ export default function JarameService() {
       </section>
 
       {/* Deployment Status — 단계·검증·도입 범위 */}
-      <section className="py-14 bg-white border-b border-gray-100" id="deployment-status">
+      <section className="py-14 bg-white border-b border-gray-100 scroll-mt-14" id="deployment-status">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">Deployment Status</h2>
-          <p className="text-center text-gray-600 text-sm mb-8 max-w-2xl mx-auto">
+          <p className="text-center text-gray-600 text-sm mb-6 max-w-2xl mx-auto">
             IR·협력용 단계 요약입니다. 세부 Gate·구현 상태는 jarame.or.kr 개발 문서(PROJECT_STATUS)를 정본으로 합니다.
           </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 text-sm">
+            <div className="rounded-xl border-2 border-emerald-200 bg-emerald-50/60 p-4">
+              <p className="font-bold text-emerald-900 mb-1">현행 구현</p>
+              <p className="text-gray-700 leading-relaxed">케어로그·리포트·RBAC·XAI Phase 1~4·10종 치료 기록·FHIR export·자가진단 등 (Gate2)</p>
+            </div>
+            <div className="rounded-xl border-2 border-orange-200 bg-orange-50/60 p-4">
+              <p className="font-bold text-orange-900 mb-1">베타 검증</p>
+              <p className="text-gray-700 leading-relaxed">기관 베타·Gate3 실기관 UAT·다기관 연계·홈티 파일럿</p>
+            </div>
+            <div className="rounded-xl border-2 border-gray-200 bg-gray-50 p-4">
+              <p className="font-bold text-gray-800 mb-1">연구·로드맵</p>
+              <p className="text-gray-700 leading-relaxed">RL·연합학습 실기관 루프·공공 PoC·상용 확대</p>
+            </div>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <div className="bg-white rounded-xl p-6 shadow-md border-2 border-orange-200">
               <p className="text-xs font-semibold text-orange-600 uppercase tracking-wide mb-2">Current Stage</p>
