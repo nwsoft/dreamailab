@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     siteName: '드림에이아이랩',
     title: '자람이 — 발달장애 AI 디지털케어로그 | DAL 플랫폼 1번 도메인',
     description:
-      'DAL 플랫폼의 첫 도메인. 발달장애 AI 디지털케어로그 표준 기술. 연계·등록 기관 약 5,700+, 일부 기관 베타. 가정·학교·센터·병원 연계를 지향. AI 강화학습 기반 맞춤형 치료·학습.',
+      'DAL 플랫폼의 첫 도메인. 발달장애 AI 디지털케어로그 표준 기술. 연계·등록 기관 약 5,700+, 일부 기관 베타. 가정·학교·센터·병원 연계를 지향. XAI·패턴 분석 권장안(RL·연합학습은 파일럿).',
     images: [
       {
         url: '/og/jarame.jpg',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: '자람이 — 발달장애 AI 디지털케어로그 | DAL 1번 도메인',
     description:
-      '연계·등록 기관 약 5,700+, 일부 기관 베타. AI 강화학습 기반 맞춤형 치료·학습. 데이터 표준·기관 연계·정책 연계.',
+      '연계·등록 기관 약 5,700+, 일부 기관 베타. XAI·패턴 분석 권장안. 데이터 표준·기관 연계·정책 연계.',
     images: ['/og/jarame.jpg'],
   },
   robots: { index: true, follow: true },
@@ -183,7 +183,7 @@ export default function JarameService() {
     "@id": "https://dreamailab.com/services/jarame",
     "url": "https://dreamailab.com/services/jarame",
     "name": "자람이 | 발달장애 AI 디지털케어로그 · Care Data Infrastructure",
-    "description": "발달장애 골든타임과 맞춤형 치료·학습을 실현하는 AI 표준 기술. 가정·학교·센터·병원 통합 기록 + 실시간 AI 분석.",
+    "description": "발달장애 맞춤형 치료·학습을 위한 AI 표준 기술. 가정·학교·센터·병원 통합 기록과 XAI·패턴 분석 기반 권장안(의료·치료 결정은 전문가 판단).",
     "inLanguage": "ko-KR",
     "datePublished": "2022-01-01",
     "dateModified": "2025-11-12",
@@ -199,7 +199,7 @@ export default function JarameService() {
         "name": "자람이는 어떤 서비스인가요?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "자람이는 발달장애 아동의 가정·학교·센터·병원 기록을 하나의 표준 케어로그로 통합하고, 실시간 AI 분석·환류로 맞춤형 치료·학습 계획을 제안하는 Care Data Infrastructure입니다. 표준 스키마·다기관 연계·기관 베타 검증을 통해 골든타임과 효과적 치료·교육을 지원합니다."
+          "text": "자람이는 발달장애 아동의 가정·학교·센터·병원 기록을 하나의 표준 케어로그로 통합하고, XAI·패턴 분석으로 맞춤형 치료·학습 권장안을 제시하는 Care Data Infrastructure입니다. 표준 스키마·다기관 연계·기관 베타를 통해 조기개입·협업을 지원하며, 의료·치료 결정은 전문가 판단을 따릅니다."
         }
       },
       {
@@ -215,7 +215,7 @@ export default function JarameService() {
         "name": "ADHD 치료와 자폐증 치료 방법이 다른가요?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "네, 완전히 다릅니다. ADHD는 주의력·충동 조절에 초점을 맞추고(약물치료+행동치료), 자폐증(ASD)은 사회적 상호작용·의사소통 개선에 중점을 둡니다(ABA, 언어치료, 감각통합). 자람이 AI는 개인별 증상 패턴을 분석하여 최적의 치료 조합을 제안합니다."
+          "text": "네, 접근이 다릅니다. ADHD는 주의력·충동 조절에 초점을 맞추고(약물치료+행동치료), 자폐증(ASD)은 사회적 상호작용·의사소통 개선에 중점을 둡니다(ABA, 언어치료, 감각통합). 자람이 AI는 개인별 증상 패턴을 참고해 치료·교육 조합을 권장하며, 최종 결정은 전문가·보호자와 함께 합니다."
         }
       },
       {
@@ -223,7 +223,7 @@ export default function JarameService() {
         "name": "자람이를 사용하는 기관은 몇 개인가요?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "공공·개방 데이터 연계 등으로 약 5,700개의 특수교육·발달장애 치료·소아정신 관련 기관 정보가 자람이에 등록되어 있습니다. 이는 전원이 동일 제품을 일상 사용한다는 뜻이 아니라, B2B·행정 연동과 케어로그 도입을 논의할 수 있는 현장 풀 규모에 가깝습니다. 일부 센터·병원·특수교사와 베타 테스트를 진행 중이며, 정부 정책과 연계한 확대를 준비하고 있습니다. 2022년부터 기술 개발을 시작해 2025년 초 플랫폼 기술을 완성했습니다."
+          "text": "공공·개방 데이터 연계 등으로 약 5,700개의 특수교육·발달장애 치료·소아정신 관련 기관 정보가 자람이에 등록되어 있습니다. 이는 전원이 동일 제품을 일상 사용한다는 뜻이 아니라, B2B·행정 연동과 케어로그 도입을 논의할 수 있는 현장 풀 규모에 가깝습니다. 일부 센터·병원·특수교사와 베타 테스트를 진행 중이며, 정부 정책과 연계한 확대를 준비하고 있습니다. 2022년 프로젝트 착수 후 Gate2·XAI 등 플랫폼 골격을 구축했으며, Gate3 실기관 파일럿은 진행·준비 단계입니다."
         }
       },
       {
@@ -231,7 +231,7 @@ export default function JarameService() {
         "name": "발달장애 골든타임이 왜 중요한가요?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "발달장애는 조기 발견·조기 치료가 예후에 결정적입니다. 특히 만 3-6세는 뇌 가소성이 가장 높은 시기로, 이때 집중 치료를 받으면 언어·사회성·인지 능력이 크게 향상됩니다. 자람이는 실시간 AI 분석으로 이상 징후를 조기 탐지하고, 즉시 맞춤형 중재를 제안하여 골든타임을 지킵니다."
+          "text": "발달장애는 조기 발견·조기 치료가 예후에 중요합니다. 특히 만 3-6세는 뇌 가소성이 높은 시기로 알려져 있습니다. 자람이는 기록·패턴 분석으로 이상 징후 탐지와 맞춤형 중재 권장안을 지원하며, 조기개입에 도움이 되도록 설계되었습니다. 의료·치료 판단은 전문가가 합니다."
         }
       },
       {
@@ -239,7 +239,7 @@ export default function JarameService() {
         "name": "AI 상담 기능은 어떻게 작동하나요?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "24시간 언제든 '우리 아이가 눈을 안 마주쳐요', 'ADHD 약 먹어야 하나요?' 같은 질문을 하면, 소아정신과 전문의 수준의 정보를 바탕으로 AI가 답변합니다. 개인별 케어로그 데이터를 반영하여 맞춤형 행동 이해 리포트와 가정 내 중재 가이드를 제공합니다."
+          "text": "24시간 '우리 아이가 눈을 안 마주쳐요', 'ADHD 약 먹어야 하나요?' 같은 질문에 AI가 일반 정보·탐색 답변을 제공합니다(의료 진단·처방 대체 아님). 동의·연동된 케어로그가 있으면 맥락을 반영한 행동 이해 리포트·가정 중재 가이드를 함께 제시합니다."
         }
       },
       {
@@ -247,7 +247,7 @@ export default function JarameService() {
         "name": "특수교사나 치료사가 자람이를 어떻게 활용하나요?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "특수교사는 IEP(개별화교육계획) 작성, 학급 관리, 출석·성과 통계를 자람이에서 관리하고 AI가 학생별 맞춤 교재를 자동 생성합니다. 치료사는 세션 기록을 입력하면 AI가 치료 효과를 분석하고 다음 중재 전략을 제안하여 치료 정확도를 높입니다."
+          "text": "특수교사는 IEP(개별화교육계획) 작성, 학급 관리, 출석·성과 통계를 자람이에서 관리하고 AI가 학생별 맞춤 교재 초안을 지원합니다. 치료사는 세션 기록을 입력하면 AI가 추이·패턴을 요약하고 다음 중재 전략 초안을 제안합니다(전문가 검토·수정 전제)."
         }
       },
       {
@@ -255,7 +255,7 @@ export default function JarameService() {
         "name": "가정-학교-센터-병원 기록이 어떻게 연결되나요?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "부모가 가정에서 아이의 행동을 기록하면 → 센터 치료사가 실시간 확인 → 학교 교사가 교실 환경에 반영 → 병원 의사가 통합 데이터를 보고 치료 방향 결정. 모두가 하나의 표준 케어로그를 공유하여 중복 기록 없이 협업하고, AI가 전체 데이터를 분석하여 최적의 치료·학습 계획을 제안합니다."
+          "text": "부모가 가정에서 기록 → (동의·연동 시) 센터·학교·병원 담당자가 공유 범위 내 열람 → 의사·치료사·교사가 맥락을 참고해 판단. 하나의 표준 케어로그로 중복 입력을 줄이고, AI가 패턴·권장안을 제시합니다. 전 기관·전원이 동시에 실시간 연동된다는 뜻은 아닙니다."
         }
       },
       {
@@ -287,7 +287,7 @@ export default function JarameService() {
         "name": "언어치료와 ABA 치료 중 어떤 것을 먼저 해야 하나요?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "아이의 증상에 따라 다릅니다. 의사소통 문제가 주요 증상이면 언어치료를, 행동·사회성 문제가 크면 ABA를 우선 시작하거나 병행합니다. 자람이 AI는 개인별 증상 패턴과 발달 단계를 분석하여 최적의 치료 우선순위와 조합을 제안합니다. 전문가 상담과 함께 활용하면 더 효과적입니다."
+          "text": "아이의 증상에 따라 다릅니다. 의사소통 문제가 주요 증상이면 언어치료를, 행동·사회성 문제가 크면 ABA를 우선 시작하거나 병행하는 경우가 많습니다. 자람이 AI는 패턴을 참고해 치료 우선순위·조합을 권장하며, 반드시 전문가 상담·진단과 함께 활용해야 합니다."
         }
       },
       {
@@ -295,7 +295,7 @@ export default function JarameService() {
         "name": "경계성지능 아동도 자람이를 사용할 수 있나요?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "네, 자람이는 경계성지능(IQ 70-85) 아동의 학습 기록과 인지 발달 패턴도 추적합니다. AI가 개인별 학습 속도와 강점·약점을 분석하여 맞춤형 교육 계획을 제안하고, 교사와 부모가 협력하여 아이의 잠재력을 최대한 끌어올릴 수 있도록 지원합니다."
+          "text": "경계성지능(IQ 70-85) 아동의 학습 기록·인지 발달 패턴 추적을 지원합니다. AI가 학습 속도와 강점·약점을 참고해 교육 계획 초안을 제안하며, 교사·부모와 함께 활용할 수 있습니다(전문가 판단·IEP 검토 전제)."
         }
       },
       {
@@ -313,7 +313,7 @@ export default function JarameService() {
   const techArticleLd = {
     "@context": "https://schema.org",
     "@type": "TechArticle",
-    "headline": "발달장애 AI 디지털케어로그: 표준 케어로그·실시간 환류 기반 Care Data Infrastructure",
+    "headline": "발달장애 AI 디지털케어로그: 표준 케어로그·기록 환류 기반 Care Data Infrastructure",
     "description": "연계·등록 기관 약 5,700+ 규모의 풀과 일부 기관 베타. 표준 케어로그·XAI·패턴 분석 기반 권장안. 가정·학교·센터·병원 통합 기록을 지향.",
     "author": {
       "@type": "Organization",
@@ -330,7 +330,7 @@ export default function JarameService() {
     },
     "datePublished": "2022-01-01",
     "dateModified": "2025-11-12",
-    "keywords": "AI 디지털케어로그, 발달장애 표준, 케어로그 표준화, 맞춤형 치료, 맞춤형 학습, 골든타임, 다기관 연계, 실시간 환류, 강화학습, Middleware, AI 엔진",
+    "keywords": "AI 디지털케어로그, 발달장애 표준, 케어로그 표준화, 맞춤형 치료, 맞춤형 학습, 골든타임, 다기관 연계, 기록 환류, 강화학습 파일럿, Middleware, AI 엔진",
     "articleSection": "Healthcare Technology",
     "about": {
       "@type": "Thing",
@@ -346,7 +346,7 @@ export default function JarameService() {
     "alternateName": "Dream AI Lab",
     "url": "https://dreamailab.ai",
     "logo": "https://dreamailab.ai/logo.png",
-    "description": "불치병과 사회 약자를 위한 AI 기술. 발달장애 AI 디지털케어로그 표준·다기관 연계·실시간 환류 기반 Care Data Infrastructure를 구축하는 AI 엔진형 Middleware 기업.",
+    "description": "불치병과 사회 약자를 위한 AI 기술. 발달장애 AI 디지털케어로그 표준·다기관 연계·기록 환류 기반 Care Data Infrastructure를 구축하는 AI 엔진형 Middleware 기업.",
     "foundingDate": "2022",
     "founder": {
       "@type": "Person",
@@ -403,7 +403,7 @@ export default function JarameService() {
                 자람이는 가정·학교·센터·병원에 흩어진 관찰과 훈련 반응을
               </span>
               <span className="block text-xl sm:text-2xl lg:text-3xl font-semibold text-white/95 leading-snug">
-                하나의 AI 디지털케어로그로 연결해 조기개입과 협업 정확도를 높입니다.
+                하나의 AI 디지털케어로그로 연결해 조기개입과 협업 정확도 향상을 지향합니다.
               </span>
             </h1>
             <p className="text-lg md:text-xl max-w-2xl mx-auto text-blue-100 mb-2 leading-relaxed break-keep">
@@ -427,7 +427,7 @@ export default function JarameService() {
             </div>
             <div className="bg-white rounded-xl p-6 border border-gray-100 hover:border-blue-200 transition-colors shadow-sm">
               <h3 className="font-bold text-gray-900 mb-2">개발 기간</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">2022 개발 → 2025 기술 완성</p>
+              <p className="text-sm text-gray-600 leading-relaxed">2022년 착수 · Gate2·XAI 골격 · Gate3·파일럿 진행</p>
             </div>
             <div className="bg-white rounded-xl p-6 border border-gray-100 hover:border-blue-200 transition-colors shadow-sm">
               <h3 className="font-bold text-gray-900 mb-2">현재 단계</h3>
@@ -448,15 +448,21 @@ export default function JarameService() {
           <p className="text-center text-gray-600 text-sm mb-8 max-w-2xl mx-auto">
             기록 표준화와 케어 실행 루프를 시각적으로 요약했습니다.
           </p>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            <div className="rounded-2xl overflow-hidden border border-blue-100 bg-white shadow-sm">
-              <picture>
-                <source media="(max-width: 768px)" srcSet="/images/services/jarame-data-flow-mobile.svg" />
-                <img src="/images/services/jarame-data-flow.svg" alt="자람이 데이터 흐름 구조도" className="w-full h-auto object-contain" loading="lazy" decoding="async" />
-              </picture>
+          <div className="flex flex-col gap-10 max-w-4xl mx-auto">
+            <div>
+              <p className="text-sm font-semibold text-gray-800 mb-3 text-center">데이터 흐름</p>
+              <div className="rounded-2xl overflow-hidden border border-blue-100 bg-white shadow-sm">
+                <picture>
+                  <source media="(max-width: 768px)" srcSet="/images/services/jarame-data-flow-mobile.svg" />
+                  <img src="/images/services/jarame-data-flow.svg" alt="자람이 데이터 흐름 구조도" className="w-full h-auto object-contain min-h-[280px] md:min-h-[360px]" loading="lazy" decoding="async" />
+                </picture>
+              </div>
             </div>
-            <div className="rounded-2xl overflow-hidden border border-blue-100 bg-white shadow-sm">
-              <img src="/images/services/jarame-care-loop.svg" alt="자람이 케어 루프 구조도" className="w-full h-auto object-contain" loading="lazy" decoding="async" />
+            <div>
+              <p className="text-sm font-semibold text-gray-800 mb-3 text-center">케어 실행 루프</p>
+              <div className="rounded-2xl overflow-hidden border border-blue-100 bg-white shadow-sm">
+                <img src="/images/services/jarame-care-loop.svg" alt="자람이 케어 루프 구조도" className="w-full h-auto object-contain min-h-[280px] md:min-h-[360px]" loading="lazy" decoding="async" />
+              </div>
             </div>
           </div>
         </div>
@@ -564,7 +570,7 @@ export default function JarameService() {
       <section className="py-14 bg-gradient-to-br from-blue-50 to-indigo-50 border-b border-gray-100">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">왜 지금 자람이인가</h2>
-          <p className="text-center text-gray-600 text-sm mb-8 max-w-2xl mx-auto">데이터 단절, 골든타임 놓침, 비용 대비 불확실한 효과 — 세 가지 구조적 문제를 해결합니다.</p>
+          <p className="text-center text-gray-600 text-sm mb-8 max-w-2xl mx-auto">데이터 단절, 골든타임 놓침, 비용 대비 불확실한 효과 — 세 가지 구조적 문제를 줄이는 것을 목표로 합니다.</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100">
               <h3 className="font-bold text-gray-900 mb-3">1️⃣ 데이터 단절</h3>
@@ -888,11 +894,11 @@ export default function JarameService() {
             <br />
             AI 디지털케어로그 기반 운영 인프라입니다.
           </p>
-          <p className="text-center text-gray-600 text-sm mb-8 max-w-2xl mx-auto">입력 → 표준화 → AI 분석 → 실시간 환류. 데이터가 쌓일수록 정확도가 높아지는 강화학습 구조입니다.</p>
+          <p className="text-center text-gray-600 text-sm mb-8 max-w-2xl mx-auto">입력 → 표준화 → AI 분석 → 기록 환류. RL·연합학습 루프는 파일럿·시뮬레이션 단계이며, 데이터 축적에 따른 개선은 Gate3 UAT에서 검증합니다.</p>
 
           {/* 기술 작동 원리 */}
           <div className="bg-gray-50/50 rounded-2xl p-8 md:p-12 border border-gray-100 mb-12">
-            <h3 className="text-lg font-bold text-gray-900 mb-6 text-center">실시간 환류 시스템의 작동 방식</h3>
+            <h3 className="text-lg font-bold text-gray-900 mb-6 text-center">기록 환류(폐루프) 작동 방식</h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {/* Step 1 */}
@@ -934,7 +940,7 @@ export default function JarameService() {
                     <strong>패턴 인식 + 예측</strong>
                     <br/>• 발달 추이 시각화
                     <br/>• 이상 징후 조기 탐지
-                    <br/>• 개인별 최적 전략 추천
+                    <br/>• 개인별 권장 전략 초안
                   </p>
                 </div>
                 <div className="hidden lg:block absolute top-1/2 -right-3 transform -translate-y-1/2 text-3xl text-indigo-400">→</div>
@@ -944,9 +950,9 @@ export default function JarameService() {
               <div>
                 <div className="bg-orange-50 rounded-xl p-6 border-2 border-orange-200">
                   <div className="text-4xl mb-3 text-center">4</div>
-                  <h4 className="font-bold text-orange-900 mb-2 text-center">실시간 환류</h4>
+                  <h4 className="font-bold text-orange-900 mb-2 text-center">기록 환류</h4>
                   <p className="text-sm text-gray-700">
-                    <strong>모든 관계자에게 알림</strong>
+                    <strong>동의·연동된 관계자 알림</strong>
                     <br/>• 부모: 가정 실천 과제
                     <br/>• 치료사: 전략 조정 제안
                     <br/>• 교사: 학교 환경 팁
@@ -955,7 +961,7 @@ export default function JarameService() {
               </div>
             </div>
 
-            <p className="mt-4 text-center text-sm text-gray-700">자람이는 단순 기록 시스템이 아니라 <strong>데이터가 쌓일수록 정확도가 높아지는 강화학습 구조</strong>입니다.</p>
+            <p className="mt-4 text-center text-sm text-gray-700">자람이는 단순 기록 시스템이 아니라 <strong>표준 기록 위 RL·환류를 검증 중인 Care Data Infrastructure</strong>입니다.</p>
           </div>
 
           {/* ⑤ 실제 사례 1~2개 */}
@@ -1000,7 +1006,7 @@ export default function JarameService() {
 
               <p className="mt-4 text-sm text-gray-600 italic text-center">
                 "AI가 아이의 강점(시각)을 찾아내지 않았다면, 
-                <br/>우리는 계속 소리로만 가르치고 있었을 겁니다." — 부모 후기
+                <br/>우리는 계속 소리로만 가르치고 있었을 겁니다." — 시나리오 기반 부모 후기
               </p>
             </div>
 
@@ -1044,7 +1050,7 @@ export default function JarameService() {
 
               <p className="mt-4 text-sm text-gray-600 italic text-center">
                 "AI가 오전 시간대 집중력 패턴을 찾아냈고,
-                <br/>그걸 기반으로 학습 계획을 바꾸니 효과가 즉시 나타났어요." — 특수교사 후기
+                <br/>그걸 기반으로 학습 계획을 바꾸니 변화가 빨리 보였어요." — 시나리오 기반 특수교사 후기
               </p>
             </div>
           </div>
@@ -1056,12 +1062,12 @@ export default function JarameService() {
       <section className="py-14 bg-white border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">기술 아키텍처 요약</h2>
-          <p className="text-center text-gray-600 text-sm mb-6 max-w-2xl mx-auto">표준 스키마·다기관 협업·AI Middleware·실시간 환류. 케어 서비스가 아닌 Care Data Infrastructure(케이스별 기록·표준·다기관 연계를 하나의 데이터 인프라로 구축하는 구조)입니다.</p>
+          <p className="text-center text-gray-600 text-sm mb-6 max-w-2xl mx-auto">표준 스키마·다기관 협업·AI Middleware·기록 환류. 케어 서비스가 아닌 Care Data Infrastructure(기록·표준·다기관 연계를 하나의 데이터 인프라로 구축하는 구조)입니다.</p>
           <ul className="text-center text-gray-600 mb-4 space-y-1 text-sm md:text-base max-w-2xl mx-auto">
             <li>· 표준 스키마 기반 데이터 파이프라인</li>
             <li>· 다기관 협업 구조</li>
             <li>· AI Middleware 중심 설계</li>
-            <li>· 실시간 환류 루프</li>
+            <li>· 기록 환류(폐루프) 루프</li>
           </ul>
           <blockquote className="text-center text-gray-800 font-semibold mb-8 border-l-4 border-blue-500 pl-4 py-2 max-w-xl mx-auto bg-blue-50/50 rounded-r">
             &ldquo;케어 서비스&rdquo;가 아니라 <strong className="text-blue-700">Care Data Infrastructure</strong>
@@ -1187,7 +1193,7 @@ export default function JarameService() {
                   <ul className="space-y-2 text-sm text-gray-700">
                     <li className="flex items-start gap-2">
                       <span className="text-orange-600">▸</span>
-                      <span><strong>치료 계획</strong>: 개인별 IEP 자동 생성</span>
+                      <span><strong>치료 계획</strong>: 개인별 IEP 초안 지원</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-orange-600">▸</span>
@@ -1195,7 +1201,7 @@ export default function JarameService() {
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-orange-600">▸</span>
-                      <span><strong>실시간 알림</strong>: 부모·교사·치료사</span>
+                      <span><strong>알림·리포트</strong>: 동의·연동된 보호자·교사·치료사</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-orange-600">▸</span>
@@ -1215,13 +1221,12 @@ export default function JarameService() {
               <div className="flex items-center justify-center gap-4">
                 <MarketingIcon name="refresh" className="h-7 w-7 text-primary-600" />
                 <p className="text-lg text-gray-800 font-semibold">
-                  <strong className="text-blue-700">강화학습 루프</strong>: 
-                  출력 결과 → 실제 효과 측정 → AI 모델 업데이트 → 정확도 향상 → 다시 입력
+                  <strong className="text-blue-700">강화학습 루프(파일럿)</strong>: 
+                  출력 → 효과 관찰 → 모델·권장안 조정 → 재입력 (상용 전제 아님)
                 </p>
               </div>
               <p className="text-center text-sm text-gray-600 mt-3">
-                동의·연동된 기록이 쌓일수록 AI는 더 정확한 치료 계획을 제시합니다. 등록 풀 전체가 즉시 동일 데이터 파이프라인에
-                올라간다는 뜻은 아닙니다.
+                동의·연동된 기록이 쌓이면 권장안 품질 개선을 지향합니다. 등록 풀 전체가 즉시 동일 파이프라인에 올라간다는 뜻은 아닙니다.
               </p>
             </div>
           </div>
@@ -1244,14 +1249,14 @@ export default function JarameService() {
                 <ul className="text-sm text-gray-700 space-y-1">
                   <li>• LLM (자연어 분석·생성)</li>
                   <li>• 행동 패턴 인식 모델</li>
-                  <li>• 강화학습 추천 엔진</li>
+                  <li>• 강화학습 추천 엔진 (파일럿)</li>
                 </ul>
               </div>
 
               <div className="bg-white rounded-xl p-6 shadow">
                 <h4 className="font-bold text-primary-700 mb-3">애플리케이션 레이어</h4>
                 <ul className="text-sm text-gray-700 space-y-1">
-                  <li>• 실시간 대시보드</li>
+                  <li>• 파일럿 운영 대시보드</li>
                   <li>• 다기관 협업 인터페이스</li>
                   <li>• API (구조 설계 완료, 공개 협의 중)</li>
                 </ul>
@@ -1280,7 +1285,7 @@ export default function JarameService() {
             <div className="max-w-4xl mx-auto space-y-4">
               <p className="text-xl text-gray-700 leading-relaxed">
                 <strong className="text-blue-600">표준 케어로그</strong>로 가정·센터·학교·병원 기록을 하나의 파이프라인에 모으고, 
-                <strong className="text-cyan-600"> AI 분석 → 실시간 환류(폐루프)</strong>로 맞춤 치료·학습 경로를 제안합니다.
+                <strong className="text-cyan-600"> AI 분석 → 기록 환류(폐루프)</strong>로 맞춤 치료·학습 권장안을 제시합니다.
               </p>
               <p className="text-xl text-gray-700 leading-relaxed">
                 챗봇·콘텐츠 추천이 아니라 <strong>기록·표준화·실행 자동화</strong>가 연결된 Care Data Infrastructure입니다.
@@ -1296,9 +1301,9 @@ export default function JarameService() {
               <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl p-6 my-6">
                 <p className="text-lg font-bold mb-2">표준과 폐루프</p>
                 <p className="text-base mb-3">
-                  데이터가 쌓일수록 AI 정확도가 높아지는 강화학습 구조. 
-기관·정책 요구에 대응하는 <strong className="text-cyan-300">표준 데이터 스키마·역할 기반 접근(RBAC, 담당자 역할에 따라 열람 권한 제한)·감사 로깅(누가 언제 어떤 데이터에 접근했는지 기록)</strong>으로
-                  공공 도입과 확장을 준비합니다.
+                  RL·연합학습은 파일럿·시뮬레이션 단계이며, 데이터 축적에 따른 개선은 UAT에서 검증합니다.
+기관·정책 요구에 대응하는 <strong className="text-cyan-300">표준 데이터 스키마·역할 기반 접근(RBAC)·감사 로깅</strong>으로
+                  공공 도입·확장을 준비합니다.
                 </p>
               </div>
             </div>
@@ -1344,7 +1349,7 @@ export default function JarameService() {
         </div>
       </section>
 
-      {/* 10가지 전문 치료 모듈 & 검증된 성과 */}
+      {/* 10가지 전문 치료 모듈 & 베타 관찰 지표 */}
       <section className="py-16 lg:py-24 bg-gradient-to-br from-emerald-50 to-green-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -1371,48 +1376,41 @@ export default function JarameService() {
             </p>
           </div>
 
-          {/* 베타·파일럿 관찰 예시 */}
+          {/* 베타·파일럿 관찰 예시 — IR용 목표치(코드·PoC 리포트 미연동) */}
           <p className="text-center text-xs text-gray-500 mb-4 max-w-3xl mx-auto">
-            Gate 3 실기관 UAT 전까지 IR·대외 자료에서는 아래를 「목표·관찰 예시」로 인용합니다. 공식 효과 주장은 기관별 PoC 결과를 따릅니다.
+            아래 수치는 초기 IR·내부 시나리오용 <strong className="font-medium text-gray-600">목표·관찰 예시</strong>이며, 저장소 PoC·Gate3 UAT 결과와 자동 연동되지 않습니다. 공식 효과는 기관별 파일럿 KPI로 갱신합니다.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-white rounded-2xl p-6 shadow-lg text-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm text-center">
               <div className="mb-3 flex justify-center text-primary-600"><MarketingIcon name="target" className="h-8 w-8" /></div>
-              <p className="text-3xl font-bold text-green-600 mb-2">35%</p>
-              <p className="text-sm text-gray-600 mb-3">치료 효과 향상</p>
+              <p className="text-2xl font-bold text-primary-700 mb-1">목표 예시 +35%p</p>
+              <p className="text-sm text-gray-600 mb-3">치료 목표 달성률 (3개월)</p>
               <div className="text-xs text-gray-500 space-y-1 text-left">
-                <p>• 기존: 3개월 목표 달성률 45%</p>
-                <p>• 자람이: 3개월 목표 달성률 80%</p>
+                <p>• 기존(가정): 45% → 자람이(목표): 80%</p>
               </div>
             </div>
-            
-            <div className="bg-white rounded-2xl p-6 shadow-lg text-center">
-              <div className="text-4xl mb-3">⏱️</div>
-              <p className="text-3xl font-bold text-blue-600 mb-2">60%</p>
-              <p className="text-sm text-gray-600 mb-3">업무 효율성 개선</p>
-              <div className="text-xs text-gray-500 space-y-1 text-left">
-                <p>• 기존: 주간 20시간 행정 업무</p>
-                <p>• 자람이: 주간 8시간 행정 업무</p>
-              </div>
-            </div>
-            
-            <div className="bg-white rounded-2xl p-6 shadow-lg text-center">
+            <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm text-center">
               <div className="mb-3 flex justify-center text-primary-600"><MarketingIcon name="chart" className="h-8 w-8" /></div>
-              <p className="text-3xl font-bold text-purple-600 mb-2">95%</p>
-              <p className="text-sm text-gray-600 mb-3">데이터 정확성</p>
+              <p className="text-2xl font-bold text-primary-700 mb-1">목표 예시 −60%</p>
+              <p className="text-sm text-gray-600 mb-3">행정 업무 시간 (주간)</p>
               <div className="text-xs text-gray-500 space-y-1 text-left">
-                <p>• 기존: 주관적 평가 70%</p>
-                <p>• 자람이: 객관적 데이터 95%</p>
+                <p>• 기존(가정): 20시간 → 자람이(목표): 8시간</p>
               </div>
             </div>
-            
-            <div className="bg-white rounded-2xl p-6 shadow-lg text-center">
-              <div className="mb-3 flex justify-center text-primary-600"><MarketingIcon name="handshake" className="h-8 w-8" /></div>
-              <p className="text-3xl font-bold text-orange-600 mb-2">100%</p>
-              <p className="text-sm text-gray-600 mb-3">기관 연계</p>
+            <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm text-center">
+              <div className="mb-3 flex justify-center text-primary-600"><MarketingIcon name="chart" className="h-8 w-8" /></div>
+              <p className="text-2xl font-bold text-primary-700 mb-1">목표 예시 95%</p>
+              <p className="text-sm text-gray-600 mb-3">객관 지표 기반 기록</p>
               <div className="text-xs text-gray-500 space-y-1 text-left">
-                <p>• 기존: 월 1회 보고서 공유</p>
-                <p>• 자람이: 기록 기반 연계·리포트 (베타)</p>
+                <p>• 기존(가정): 주관 70% → 자람이(목표): 객관 95%</p>
+              </div>
+            </div>
+            <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm text-center">
+              <div className="mb-3 flex justify-center text-primary-600"><MarketingIcon name="handshake" className="h-8 w-8" /></div>
+              <p className="text-2xl font-bold text-primary-700 mb-1">베타 연계</p>
+              <p className="text-sm text-gray-600 mb-3">다기관 리포트·공유</p>
+              <div className="text-xs text-gray-500 space-y-1 text-left">
+                <p>• 기존(가정): 월 1회 보고 → 기록 기반 연계·리포트 (베타)</p>
               </div>
             </div>
           </div>
@@ -1451,16 +1449,16 @@ export default function JarameService() {
           <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">DAL 플랫폼 확장 전략</h2>
           <p className="text-center text-gray-600 text-sm mb-6 max-w-2xl mx-auto">자람이는 DAL의 1번 도메인이며, 동일 데이터 표준으로 교육·시니어·의료로 확장됩니다.</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-4">
-            <div className="bg-blue-50 rounded-xl p-4 border border-blue-100"><h3 className="font-bold text-gray-900 mb-1">1. 자람이</h3><p className="text-gray-600">발달장애</p></div>
-            <div className="bg-cyan-50 rounded-xl p-4 border border-cyan-100"><h3 className="font-bold text-gray-900 mb-1">2. 에듀케어로그</h3><p className="text-gray-600">교육</p></div>
-            <div className="bg-indigo-50 rounded-xl p-4 border border-indigo-100"><h3 className="font-bold text-gray-900 mb-1">3. 시니어·토탈케어</h3><p className="text-gray-600">의료·만성질환</p></div>
+            <div className="bg-white rounded-xl p-4 border border-gray-100 shadow-sm hover:border-blue-200 transition-colors"><h3 className="font-bold text-gray-900 mb-1">1. 자람이</h3><p className="text-gray-600">발달장애</p></div>
+            <div className="bg-white rounded-xl p-4 border border-gray-100 shadow-sm hover:border-blue-200 transition-colors"><h3 className="font-bold text-gray-900 mb-1">2. 에듀케어로그</h3><p className="text-gray-600">교육</p></div>
+            <div className="bg-white rounded-xl p-4 border border-gray-100 shadow-sm hover:border-blue-200 transition-colors"><h3 className="font-bold text-gray-900 mb-1">3. 시니어·토탈케어</h3><p className="text-gray-600">의료·만성질환</p></div>
           </div>
           <p className="text-center text-gray-700 font-medium">하나의 케어 데이터 OS 전략</p>
         </div>
       </section>
 
-      {/* Policy Alignment / Public Deployment — 4+4 card groups (통일 카드 스타일) */}
-      <section className="py-14 bg-white border-b border-gray-100">
+      {/* Policy Alignment / Public Deployment — Executive Summary와 동일 카드 토큰 */}
+      <section className="py-14 bg-gray-50 border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">Policy Alignment / Public Deployment</h2>
           <p className="text-center text-gray-600 text-sm mb-10 max-w-2xl mx-auto">정책 정합성과 공공 도입 아키텍처를 구분해 안내합니다.</p>
@@ -1468,19 +1466,19 @@ export default function JarameService() {
           <div className="mb-10">
             <h3 className="text-lg font-bold text-gray-900 mb-4 text-center">Policy Alignment</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="bg-white rounded-xl p-6 border border-gray-100 hover:border-blue-200 transition-colors">
+              <div className="bg-white rounded-xl p-6 border border-gray-100 hover:border-blue-200 transition-colors shadow-sm">
                 <h4 className="font-bold text-gray-900 mb-2">발달장애 정책</h4>
                 <p className="text-sm text-gray-600">발달장애 권리보장·지원 정책 정합</p>
               </div>
-              <div className="bg-white rounded-xl p-6 border border-gray-100 hover:border-blue-200 transition-colors">
+              <div className="bg-white rounded-xl p-6 border border-gray-100 hover:border-blue-200 transition-colors shadow-sm">
                 <h4 className="font-bold text-gray-900 mb-2">특수교육 정책</h4>
                 <p className="text-sm text-gray-600">개별화교육·IEP 정책 대응</p>
               </div>
-              <div className="bg-white rounded-xl p-6 border border-gray-100 hover:border-blue-200 transition-colors">
+              <div className="bg-white rounded-xl p-6 border border-gray-100 hover:border-blue-200 transition-colors shadow-sm">
                 <h4 className="font-bold text-gray-900 mb-2">AI 사회문제 해결 전략</h4>
                 <p className="text-sm text-gray-600">AI 기반 사회문제 해결 정책 부합</p>
               </div>
-              <div className="bg-white rounded-xl p-6 border border-gray-100 hover:border-blue-200 transition-colors">
+              <div className="bg-white rounded-xl p-6 border border-gray-100 hover:border-blue-200 transition-colors shadow-sm">
                 <h4 className="font-bold text-gray-900 mb-2">디지털 헬스케어 전환</h4>
                 <p className="text-sm text-gray-600">데이터 기반 케어 인프라 정책</p>
               </div>
@@ -1490,19 +1488,19 @@ export default function JarameService() {
           <div>
             <h3 className="text-lg font-bold text-gray-900 mb-4 text-center">Public Deployment Architecture</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="bg-white rounded-xl p-6 border border-gray-100 hover:border-blue-200 transition-colors">
+              <div className="bg-white rounded-xl p-6 border border-gray-100 hover:border-blue-200 transition-colors shadow-sm">
                 <h4 className="font-bold text-gray-900 mb-2">표준 데이터 스키마</h4>
                 <p className="text-sm text-gray-600">기관·정책 요구 대응 데이터 구조</p>
               </div>
-              <div className="bg-white rounded-xl p-6 border border-gray-100 hover:border-blue-200 transition-colors">
+              <div className="bg-white rounded-xl p-6 border border-gray-100 hover:border-blue-200 transition-colors shadow-sm">
                 <h4 className="font-bold text-gray-900 mb-2">RBAC 접근 제어</h4>
                 <p className="text-sm text-gray-600">역할 기반 권한 관리 — 담당자 역할에 따라 필요한 정보만 열람</p>
               </div>
-              <div className="bg-white rounded-xl p-6 border border-gray-100 hover:border-blue-200 transition-colors">
+              <div className="bg-white rounded-xl p-6 border border-gray-100 hover:border-blue-200 transition-colors shadow-sm">
                 <h4 className="font-bold text-gray-900 mb-2">감사 로깅</h4>
                 <p className="text-sm text-gray-600">누가 언제 어떤 데이터에 접근·변경했는지 이력 추적</p>
               </div>
-              <div className="bg-white rounded-xl p-6 border border-gray-100 hover:border-blue-200 transition-colors">
+              <div className="bg-white rounded-xl p-6 border border-gray-100 hover:border-blue-200 transition-colors shadow-sm">
                 <h4 className="font-bold text-gray-900 mb-2">기관 간 데이터 연계</h4>
                 <p className="text-sm text-gray-600">다기관 협업 구조 지원</p>
               </div>
@@ -1595,7 +1593,7 @@ export default function JarameService() {
               &ldquo;치료가 실제로 효과가 있는지 알 수 없다.&rdquo;
             </p>
             <p className="text-gray-700 text-center max-w-2xl mx-auto">
-              자람이는 이러한 불확실성을 <strong>데이터 기반 이해로 바꾸는 시스템</strong>입니다.
+              자람이는 이러한 불확실성을 <strong>데이터 기반 이해로 줄이는 것을 지향하는 인프라</strong>입니다.
             </p>
           </div>
 
@@ -1671,7 +1669,7 @@ export default function JarameService() {
               <div className="mb-3 flex justify-center text-primary-600"><MarketingIcon name="trend" className="h-8 w-8" /></div>
               <h3 className="text-lg font-bold text-gray-900 mb-3 text-center">아이의 변화 확인</h3>
               <p className="text-sm text-gray-600 mb-3">
-                자람이는 부모가 이해하기 쉬운 <strong>진행 리포트</strong>를 자동 생성합니다.
+                자람이는 부모가 이해하기 쉬운 <strong>진행 리포트</strong> 초안을 생성·공유합니다(전문가 검토 권장).
               </p>
               <p className="text-sm text-gray-700 mb-3">부모는 다음을 볼 수 있습니다.</p>
               <ul className="text-xs text-gray-600 space-y-1 mb-3">
@@ -1974,7 +1972,7 @@ export default function JarameService() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">홈티 매칭</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              자격 검증된 특수교사와 아동을 연결하고, 세션 기록은 케어로그로 자동 연동됩니다.
+              프로필·자격 검증 절차를 거친 특수교사 매칭을 지향하며, 세션 기록은 케어로그로 연동됩니다(베타·기관 설정에 따름).
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -2104,8 +2102,8 @@ export default function JarameService() {
               AI CareTech Core: 자람이에서 시작된 확장 전략
             </h3>
             <p className="text-center text-gray-600 mb-8 max-w-3xl mx-auto">
-              발달장애에서 검증된 <strong>AI 디지털케어로그 기술</strong>을 
-              의료·교육·돌봄 전 영역으로 확장하는 <strong>공공기술 기반 플랫폼</strong>
+              발달장애에서 축적 중인 <strong>AI 디지털케어로그 기술</strong>을 
+              의료·교육·돌봄 영역으로 확장하는 <strong>공공기술 지향 플랫폼</strong>
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
@@ -2120,7 +2118,7 @@ export default function JarameService() {
                 </div>
                 <ul className="text-sm text-gray-700 space-y-2">
                   <li>✓ 5,700+ 연계·등록 기관 풀</li>
-                  <li>✓ 2022~2025 기술 개발</li>
+                  <li>✓ 2022~ Gate2·XAI 골격 · Gate3 진행</li>
                   <li>✓ 2026년 시범사업 준비</li>
                 </ul>
               </div>
@@ -2176,10 +2174,10 @@ export default function JarameService() {
 
             <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl p-6">
               <p className="text-center text-lg leading-relaxed">
-                <strong className="text-cyan-300">2026 정부 AI 정책 핵심 수혜</strong>: 
-                "AI를 사회문제 해결 1대 과제로 선정" (2025년 발표) → 
-                자람이는 <strong>AI 사회문제 해결형 기술의 선도 사례</strong>로 평가받고 있으며, 
-                정책적 정합성과 표준 케어로그 구조·파일럿 축적을 바탕으로 한 <strong>발달장애 AI 디지털케어로그 표준 플랫폼</strong>을 지향합니다.
+                <strong className="text-cyan-300">2026 정부 AI 정책 정합성(논의·준비)</strong>: 
+                "AI를 사회문제 해결 1대 과제로 선정" (2025년 발표) 등과의 정합을 검토 중이며, 
+                자람이는 <strong>발달장애 영역 Care Data Infrastructure</strong>로 
+                표준 케어로그·파일럿 축적을 바탕 시범·PoC를 준비합니다.
               </p>
             </div>
           </div>
@@ -2238,7 +2236,7 @@ export default function JarameService() {
                   <h4 className="font-bold text-primary-700 mb-2">기술 차별성</h4>
                   <ul className="text-sm space-y-1">
                     <li>• 다기관 데이터 통합 표준 스키마</li>
-                    <li>• 실시간 환류 + AI 강화학습</li>
+                    <li>• 기록 환류 + RL·연합학습(파일럿)</li>
                     <li>• 개인별 맞춤형 치료 자동화</li>
                     <li>• 골든타임 조기 탐지 알림</li>
                   </ul>
@@ -2256,17 +2254,17 @@ export default function JarameService() {
               </div>
             </div>
 
-            {/* 검증된 시장 */}
+            {/* 시장·검증 현황 */}
             <div className="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-2xl p-8 shadow-lg">
               <div className="mb-4 flex justify-center text-primary-600"><MarketingIcon name="shield" className="h-10 w-10" /></div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">검증된 시장</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">시장·검증 현황</h3>
               
               <div className="space-y-3 text-gray-700">
                 <div className="bg-white rounded-lg p-4">
                   <h4 className="font-bold text-primary-700 mb-2">현재 성과</h4>
                   <ul className="text-sm space-y-1">
                     <li>• <strong>5,700+</strong> 연계·등록 기관 풀</li>
-                    <li>• <strong>2022~2025</strong> 기술 개발 완료</li>
+                    <li>• <strong>2022~</strong> 착수 · Gate2·XAI 골격 · Gate3·파일럿</li>
                     <li>• 일부 센터·병원·특수교사 <strong>베타 테스트 중</strong></li>
                   </ul>
                 </div>
@@ -2274,7 +2272,7 @@ export default function JarameService() {
                 <div className="bg-white rounded-lg p-4">
                   <h4 className="font-bold text-primary-700 mb-2">파트너십</h4>
                   <p className="text-sm">
-                    센터·학교·병원과 <strong>실증 완료</strong>
+                    센터·학교·병원과 <strong>베타·실증 논의</strong>
                     <br/>교육청·보건복지부 <strong>협력 논의</strong>
                     <br/>2025년 일부 파일럿, <strong>2026년 정부 시범사업 준비</strong>
                   </p>
@@ -2283,10 +2281,10 @@ export default function JarameService() {
                 <div className="bg-white rounded-lg p-4">
                   <h4 className="font-bold text-primary-700 mb-2">2026 정부 AI 정책 정합성</h4>
                   <p className="text-sm">
-                    <strong>"AI 사회문제 해결형 과제 1순위"</strong> (2025년 발표)
+                    <strong>"AI 사회문제 해결형 과제"</strong> (2025년 발표 등 — 정합 검토 중)
                     <br/>• 헬스케어·교육 분야 AI 사회문제 해결
                     <br/>• 데이터 표준화·공공기술 기반 권장
-                    <br/>• 자람이 = 정책 부합 사례
+                    <br/>• 자람이 = 정책 정합 지향(시범·PoC 준비)
                   </p>
                 </div>
               </div>
@@ -2319,7 +2317,7 @@ export default function JarameService() {
               <div className="bg-white/10 rounded-xl p-6 backdrop-blur-sm">
                 <h4 className="text-xl font-bold mb-3 text-cyan-300">단계별 확장</h4>
                 <ul className="space-y-2 text-sm">
-                  <li><strong>1단계</strong>: 발달장애 표준 확립 (자람이 완성)</li>
+                  <li><strong>1단계</strong>: 발달장애 표준 확립 (자람이 1차 도메인 · Gate3·파일럿)</li>
                   <li><strong>2단계</strong>: 일반 교육·학습부진 지원</li>
                   <li><strong>3단계</strong>: 독거 어르신·시니어·만성질환</li>
                   <li><strong>4단계</strong>: 난치병 환자 및 모든 사회 약자 지원</li>
