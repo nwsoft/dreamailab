@@ -7,7 +7,7 @@ import { MarketingIcon, type MarketingIconName } from '../../../components/Marke
 export const metadata: Metadata = {
   title: 'AI 디지털케어로그 | 발달장애 표준 기술 | 자람이 | 드림에이아이랩',
   description:
-    '발달장애 치료·학습을 위한 AI 디지털케어로그. 데이터 표준·XAI·패턴 분석 권장안. 공공데이터 기반 전국 기관 정보 5,700+(검색·연계 후보, MAU와 별개). 일부 기관 베타. DAL 1번 도메인.',
+    '발달장애 치료·학습을 위한 AI 디지털케어로그. 공공데이터 기반 전국 센터 약 5,700+, 병원 약 2,200+, 특수학교 약 130+(검색·연계, MAU와 별개). XAI·패턴 분석 권장안. DAL 1번 도메인.',
   keywords: 'AI 디지털케어로그, 발달장애 표준, 맞춤형 치료, 맞춤형 학습, 골든타임, 발달장애 치료 방법, ADHD 치료, 자폐증 치료, 특수교육, 언어치료, 작업치료, 행동치료 ABA, IEP 개별화교육계획, 치료사 협업, 다기관 연계, 자람이, 드림에이아이랩, 케어로그 표준화, 강화학습, Middleware, AI 엔진',
   alternates: {
     canonical: 'https://dreamailab.com/services/jarame',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     siteName: '드림에이아이랩',
     title: '자람이 — 발달장애 AI 디지털케어로그 | DAL 플랫폼 1번 도메인',
     description:
-      'DAL 플랫폼의 첫 도메인. 발달장애 AI 디지털케어로그 표준 기술. 연계·등록 기관 약 5,700+, 일부 기관 베타. 가정·학교·센터·병원 연계를 지향. XAI·패턴 분석 권장안(RL·연합학습은 파일럿).',
+      'DAL 플랫폼의 첫 도메인. 공공데이터 기반 센터 약 5,700+, 병원·특수학교 검색. 일부 기관 베타. XAI·패턴 분석 권장안(RL·연합학습은 파일럿).',
     images: [
       {
         url: '/og/jarame.jpg',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: '자람이 — 발달장애 AI 디지털케어로그 | DAL 1번 도메인',
     description:
-      '연계·등록 기관 약 5,700+, 일부 기관 베타. XAI·패턴 분석 권장안. 데이터 표준·기관 연계·정책 연계.',
+      '센터 약 5,700+, 병원·특수학교 공공데이터 검색. 일부 기관 베타. XAI·패턴 분석 권장안.',
     images: ['/og/jarame.jpg'],
   },
   robots: { index: true, follow: true },
@@ -223,7 +223,7 @@ export default function JarameService() {
         "name": "자람이를 사용하는 기관은 몇 개인가요?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "공공·개방 데이터 기반으로 약 5,700개의 특수교육·발달장애 치료·소아정신 관련 기관 정보를 jarame.or.kr에서 검색·연계 후보로 제공합니다. 이는 전국 센터 찾기·마케팅 풀이며, 제품 도입·일상 사용(MAU) 기관 수와 별개입니다. 일부 센터·병원·특수교사와 케어로그 베타를 진행 중이며, Gate3 실기관 파일럿은 진행·준비 단계입니다."
+          "text": "공공·개방 데이터 기반으로 jarame.or.kr에서 전국 발달·치료 센터 약 5,700곳, 병원 약 2,200곳, 특수학교 약 130곳을 검색·연계 후보로 제공합니다(수치는 변동). 5,700은 센터 수이며 병원·학교와 합산한 숫자가 아닙니다. 제품 도입·일상 사용(MAU)과 별개입니다. 일부 센터·병원·특수교사와 케어로그 베타를 진행 중이며, Gate3 실기관 파일럿은 진행·준비 단계입니다."
         }
       },
       {
@@ -314,7 +314,7 @@ export default function JarameService() {
     "@context": "https://schema.org",
     "@type": "TechArticle",
     "headline": "발달장애 AI 디지털케어로그: 표준 케어로그·기록 환류 기반 Care Data Infrastructure",
-    "description": "연계·등록 기관 약 5,700+ 규모의 풀과 일부 기관 베타. 표준 케어로그·XAI·패턴 분석 기반 권장안. 가정·학교·센터·병원 통합 기록을 지향.",
+    "description": "공공데이터 기반 센터 약 5,700+, 병원 약 2,200+, 특수학교 약 130+ 검색 풀. 일부 기관 베타. 표준 케어로그·XAI·패턴 분석 권장안.",
     "author": {
       "@type": "Organization",
       "name": "드림에이아이랩",
@@ -421,12 +421,13 @@ export default function JarameService() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">Executive Summary</h2>
           <p className="text-center text-xs text-gray-500 max-w-2xl mx-auto mt-4 mb-2">
-            <strong className="font-medium text-gray-600">5,700+</strong>는 공공·개방 데이터 기반 전국 기관 정보(검색·연계 후보)이며, 제품 도입·일상 사용 기관 수와 별개입니다.
+            <strong className="font-medium text-gray-600">5,700+</strong>는 <strong className="font-medium text-gray-600">센터</strong> 수(공공·개방 데이터)입니다.
+            병원 약 2,200+, 특수학교 약 130+는 별도 집계이며 수치는 변동합니다. 제품 도입·MAU와 별개입니다.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
             <div className="bg-white rounded-xl p-6 border border-gray-100 hover:border-blue-200 transition-colors shadow-sm">
-              <h3 className="font-bold text-gray-900 mb-2">기관 정보 DB</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">5,700+ 전국 센터·병원·특수교육 시설 (공공데이터·검색)</p>
+              <h3 className="font-bold text-gray-900 mb-2">전국 센터 DB</h3>
+              <p className="text-sm text-gray-600 leading-relaxed">센터 약 5,700+ (공공데이터·검색·마케팅 핵심)</p>
             </div>
             <div className="bg-white rounded-xl p-6 border border-gray-100 hover:border-blue-200 transition-colors shadow-sm">
               <h3 className="font-bold text-gray-900 mb-2">개발 기간</h3>
@@ -492,8 +493,8 @@ export default function JarameService() {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white rounded-xl p-6 border border-gray-100 hover:border-blue-200 transition-colors shadow-sm">
-              <h3 className="font-bold text-gray-900 mb-2">전국 기관 찾기</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">5,700+ 공공·개방 데이터 기반 기관 정보(검색·마케팅 풀)</p>
+              <h3 className="font-bold text-gray-900 mb-2">전국 센터 찾기</h3>
+              <p className="text-sm text-gray-600 leading-relaxed">센터 약 5,700+ · 병원 약 2,200+ · 특수학교 약 130+ (각각 별도, 약수·변동)</p>
             </div>
             <div className="bg-white rounded-xl p-6 border border-gray-100 hover:border-blue-200 transition-colors shadow-sm">
               <h3 className="font-bold text-gray-900 mb-2">기관 베타 테스트</h3>
@@ -2138,7 +2139,7 @@ export default function JarameService() {
                   <p className="text-sm text-blue-600">발달장애 전용</p>
                 </div>
                 <ul className="text-sm text-gray-700 space-y-2">
-                  <li>✓ 5,700+ 공공데이터 기반 기관 정보(검색)</li>
+                  <li>✓ 센터 약 5,700+ · 병원 약 2,200+ · 특수학교 약 130+ (공공데이터)</li>
                   <li>✓ 2022~ Gate2·XAI 골격 · Gate3 진행</li>
                   <li>✓ 2026년 시범사업 준비</li>
                 </ul>
@@ -2284,7 +2285,7 @@ export default function JarameService() {
                 <div className="bg-white rounded-lg p-4">
                   <h4 className="font-bold text-primary-700 mb-2">현재 성과</h4>
                   <ul className="text-sm space-y-1">
-                    <li>• <strong>5,700+</strong> 공공데이터 기반 기관 정보(검색·연계 후보)</li>
+                    <li>• <strong>센터 약 5,700+</strong> · 병원 약 2,200+ · 특수학교 약 130+ (공공데이터·검색)</li>
                     <li>• <strong>2022~</strong> 착수 · Gate2·XAI 골격 · Gate3·파일럿</li>
                     <li>• 일부 센터·병원·특수교사 <strong>베타 테스트 중</strong></li>
                   </ul>
