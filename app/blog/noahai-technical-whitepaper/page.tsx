@@ -6,7 +6,7 @@ import Head from 'next/head'
 
 export const metadata: Metadata = {
   title: '노아AI 공식 기술백서 | 세계 최초 AI 자율 재테크 플랫폼 기술 분석 | DreamAILab',
-  description: 'DAL이 개발한 노아AI의 공식 기술백서. 세계 최초 실시간 AI 학습형 재테크 어시스턴트의 기술적 아키텍처, 강화학습 시스템, XAI 투명성 정책을 상세히 공개합니다.',
+  description: 'DAL이 개발한 노아AI의 공식 기술백서. 세계 최초 실시간 AI 학습형 재테크 어시스턴트의 기술적 아키텍처, 강화학습 시스템, XAI 투명성 정책과 최신 운영 기준(v3.8.9.27)을 공개합니다.',
   keywords: [
     '노아AI 기술백서','AI 자율재테크 기술분석','강화학습 시스템','XAI 투명성',
     '멀티모달 AI 분석','실시간 학습','의료AI 금융적용','DAL 기술백서',
@@ -16,9 +16,10 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: '노아AI 공식 기술백서 | 세계 최초 AI 자율 재테크 플랫폼',
-    description: 'DAL이 개발한 노아AI의 공식 기술백서. 세계 최초 실시간 AI 학습형 재테크 어시스턴트의 기술적 아키텍처를 상세히 공개합니다.',
+    description: 'DAL이 개발한 노아AI의 공식 기술백서. 세계 최초 실시간 AI 학습형 재테크 어시스턴트의 기술적 아키텍처와 최신 운영 기준(v3.8.9.27)을 공개합니다.',
     type: 'article',
     publishedTime: '2025-01-20T00:00:00Z',
+    modifiedTime: '2026-07-06T00:00:00Z',
     authors: ['정해성', 'DAL(드림에이아이랩)'],
     tags: ['AI 기술백서', '재테크 AI', '강화학습', 'XAI', '기술분석']
   }
@@ -33,7 +34,7 @@ export default function NoahAITechnicalWhitepaper() {
             '@context': 'https://schema.org',
             '@type': 'TechArticle',
             headline: '노아AI 공식 기술백서 | 세계 최초 AI 자율 재테크 플랫폼',
-            description: 'DAL이 개발한 노아AI의 공식 기술백서. 세계 최초 실시간 AI 학습형 재테크 어시스턴트의 기술적 아키텍처를 상세히 공개합니다.',
+            description: 'DAL이 개발한 노아AI의 공식 기술백서. 세계 최초 실시간 AI 학습형 재테크 어시스턴트의 기술적 아키텍처와 최신 운영 기준(v3.8.9.27)을 공개합니다.',
             author: {
               '@type': 'Person',
               name: '정해성',
@@ -51,7 +52,7 @@ export default function NoahAITechnicalWhitepaper() {
               }
             },
             datePublished: '2025-01-20T00:00:00Z',
-            dateModified: '2025-01-20T00:00:00Z',
+            dateModified: '2026-07-06T00:00:00Z',
             mainEntityOfPage: {
               '@type': 'WebPage',
               '@id': 'https://dreamailab.com/blog/noahai-technical-whitepaper'
@@ -60,7 +61,8 @@ export default function NoahAITechnicalWhitepaper() {
               '@type': 'SoftwareApplication',
               name: '노아AI',
               applicationCategory: 'FinanceApplication',
-              description: '세계 최초 실시간 AI 학습형 재테크 어시스턴트'
+              description: '세계 최초 실시간 AI 학습형 재테크 어시스턴트',
+              softwareVersion: '3.8.9.27'
             },
             keywords: '노아AI 기술백서, AI 자율재테크, 강화학습, XAI, 멀티모달 AI',
             inLanguage: 'ko-KR'
@@ -290,9 +292,9 @@ export default function NoahAITechnicalWhitepaper() {
               <h3 className="text-xl font-bold text-gray-900 mb-4">실시간 거래 로그</h3>
               <p className="text-gray-600 mb-6">XAI 투명성 정책에 따른 실제 거래 과정 로그</p>
               <div className="bg-black rounded-lg p-4 text-green-400 font-mono text-xs mb-4">
-                <div>2025-10-20 03:25:00 | INFO - [analysis] 시장 분석 시작</div>
-                <div>2025-10-20 03:25:03 | INFO - [trade] ADAUSDT 시그널: SHORT</div>
-                <div>2025-10-20 03:25:06 | INFO - [exit] ADAUSDT 익절 청산 완료</div>
+                <div>2026-07-06 03:25:00 | INFO - [analysis] 시장 분석 시작</div>
+                <div>2026-07-06 03:25:03 | INFO - [trade] ADAUSDT 시그널: SHORT</div>
+                <div>2026-07-06 03:25:06 | INFO - [exit] ADAUSDT 익절 청산 완료</div>
               </div>
               <p className="text-gray-500 text-sm">모든 거래 과정이 실시간 로그로 기록됩니다</p>
             </div>
@@ -412,9 +414,9 @@ export default function NoahAITechnicalWhitepaper() {
       <section className="py-8 bg-gray-50 border-t">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-sm text-gray-600 space-y-1 text-center">
-            <p>본 기술백서는 실제 구현된 코드 기반(NoahAI v3.8.8.3)을 토대로 작성되었습니다.</p>
+            <p>본 기술백서는 실제 구현된 코드 기반(NoahAI v3.8.9.27)을 토대로 최신 기준에 맞춰 업데이트되었습니다.</p>
             <p>모든 알고리즘은 실제 거래 로그와 데이터베이스 기록을 통해 검증되었습니다.</p>
-            <p><strong>© 2025 DAL(드림에이아이랩). All Rights Reserved.</strong></p>
+            <p><strong>© 2026 DAL(드림에이아이랩). All Rights Reserved.</strong></p>
           </div>
         </div>
       </section>
