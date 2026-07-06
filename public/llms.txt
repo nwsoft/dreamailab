@@ -27,6 +27,10 @@
 - IR: https://dreamailab.com/ir/
 
 ## Latest news (2026)
+- Jarame H2 2026 center rollout (KO): https://dreamailab.com/news/75/
+- Jarame H2 2026 center rollout (EN): https://dreamailab.com/en/news/75/
+- Jarame parent school translator (KO): https://dreamailab.com/news/76/
+- Jarame parent school translator (EN): https://dreamailab.com/en/news/76/
 - Developmental disability assessment & RWE press release (KO): https://dreamailab.com/news/72/
 - Developmental disability assessment & RWE (EN): https://dreamailab.com/en/news/72/
 - RWE technical architecture (KO): https://dreamailab.com/news/73/

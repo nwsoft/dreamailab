@@ -42,6 +42,288 @@ export function getLocalizedArticle(
 
 export const newsArticles: NewsArticle[] = [
   {
+    id: 76,
+    title: '부모는 학교에서 무엇을 배우는지 알고 계신가요? — 자람이, 교사의 교육 언어를 부모의 생활 언어로 번역합니다',
+    excerpt: '특수학교 수업안·성취기준·AAC 같은 전문 용어는 부모에게 어렵습니다. 자람이는 교사의 수업안·활동지·사진·영상을 AI가 읽고, “오늘 우리 아이는 무엇을 배웠나요?”에 답합니다. 교사를 대신하지 않고, 학교와 가정을 잇는 통역 AI입니다.',
+    category: 'press',
+    date: '2026-07-07',
+    image: '📚',
+    featured: true,
+    author: '드림에이아이랩',
+    tags: ['자람이', '발달장애', '특수교육', '특수학교', '수업참관', 'AAC', '보호자', '부모', '디지털케어로그', 'RWE', '학교', '가정연계', 'AI 통역'],
+    i18n: {
+      en: {
+        title: 'Do You Know What Your Child Learned at School Today? Jarame Translates Teacher Language into Parent Language',
+        excerpt: 'IEP goals, achievement standards, and AAC jargon are hard for parents. Jarame reads lesson plans, worksheets, photos, and videos—then answers: "What did my child learn today?" It connects school and home without replacing teachers.',
+        content: `
+      <p class="text-sm text-gray-500 mb-6">[Press Release · 2026-07-07]</p>
+
+      <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-4">
+        Jarame is not AI that teaches class or replaces teachers. It is AI that <strong>translates educators' language into parents' everyday language</strong>—so school learning continues at home.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">The question parents cannot answer</h2>
+      <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+        Schools send lesson plans. Parents read achievement standards, learning goals, Activity 1, Activity 2, AAC, curriculum terms—and still ask:
+      </p>
+      <p class="text-xl font-bold text-primary-700 mb-6">"So what did my child actually learn today?"</p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        Children with developmental disabilities often cannot fully describe their school day either. Important lessons happen—but meaning is lost between school and home.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Example: "Reading faces and feelings"</h2>
+      <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+        A lesson titled <strong>"Reading facial expressions and moods"</strong> may look like matching pictures to emotions. The deeper goal is social communication: understanding others' feelings, expressing one's own, using AAC, and interacting with peers—through language class.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        Jarame reads the teacher's plan, worksheets, and prints (plus photos/videos via OCR/AI), understands purpose—not just text—and explains in parent language.
+      </p>
+
+      <div class="bg-primary-50 border border-primary-200 rounded-xl p-6 mb-8">
+        <p class="font-bold text-gray-900 mb-3">What parents see in Jarame</p>
+        <p class="text-gray-700 leading-relaxed mb-4">Today in language class, your child practiced reading joy, sadness, anger, and surprise from faces. The real goal: social and communication skills—not just guessing moods.</p>
+        <p class="font-semibold text-gray-800 mb-2">Try at home tonight:</p>
+        <p class="text-gray-700">At dinner, look at family faces and ask: "How might Mom feel? How might Dad feel?"—continuing school learning naturally at home.</p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">School → home → center → hospital</h2>
+      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-8 ml-2">
+        <li><strong>Parents</strong> continue today's lesson at home</li>
+        <li><strong>Therapists</strong> know what happened at school and align treatment</li>
+        <li><strong>Clinicians</strong> see months of emotion-expression trends in data</li>
+      </ul>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        Jarame is a Digital Care Log: teacher records → parent understanding → home practice → child growth. Class ends in a day; development continues for years.
+      </p>
+
+      <div class="bg-amber-50 border-l-4 border-amber-500 p-5 mb-8">
+        <p class="text-amber-900 text-sm"><strong>Note:</strong> Jarame does not diagnose, prescribe, or replace teachers, therapists, or doctors. School linkage rolls out in phases after center adoption.</p>
+      </div>
+
+      <p class="text-lg text-gray-700 mb-6"><a href="/services/jarame" class="text-primary-600 underline">Jarame service page</a> · <a href="/contact" class="text-primary-600 underline">Contact</a></p>
+    `
+      }
+    },
+    content: `
+      <p class="text-sm text-gray-500 mb-6">[보도자료 · 2026-07-07]</p>
+
+      <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-4">
+        자람이는 교사를 대신하는 AI가 아닙니다. 수업을 대신하는 AI도 아닙니다. <strong>교사의 교육 언어를 부모의 생활 언어로 번역하는 AI</strong>입니다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">부모는 학교에서 무엇을 배우는지 알고 계신가요?</h2>
+      <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+        학교에서는 수업안이 전달됩니다. 성취기준, 학습목표, 활동1·활동2, AAC, 국어과 교육과정——전문 용어가 많아 <strong>부모는 전문가가 아니기 때문에</strong> 읽어도 핵심을 놓치기 쉽습니다.
+      </p>
+      <p class="text-xl font-bold text-primary-700 mb-6">"그래서 우리 아이는 오늘 무엇을 배웠나요?"</p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        아이 역시 학교에서 있었던 일을 자세히 설명하기 어려운 경우가 많습니다. 중요한 수업이 이루어졌지만, 부모는 그 의미를 모른 채 하루가 지나갑니다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">사례: ‘인물의 표정을 보고 기분 알기’</h2>
+      <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+        수업 제목만 보면 그림을 보고 기분을 맞히는 활동처럼 보입니다. 실제 목표는 훨씬 깊습니다. 아이들은 <strong>다른 사람의 감정을 이해하고, 자신의 감정을 표현하며, AAC로 의사소통하고, 친구와 상호작용하는 방법</strong>을 배웁니다. 즉 국어 수업을 통해 <strong>사회성과 의사소통 능력</strong>을 기르는 시간입니다.
+      </p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        자람이는 교사가 작성한 <strong>수업안, 활동지, 프린트물</strong>과 <strong>사진·영상(OCR)</strong>을 AI로 읽고, 수업의 목적과 의미를 파악한 뒤 <strong>부모가 이해할 수 있는 언어</strong>로 다시 설명합니다.
+      </p>
+
+      <div class="bg-primary-50 border border-primary-200 rounded-xl p-6 mb-8">
+        <p class="font-bold text-gray-900 mb-3">부모에게 전달되는 예시</p>
+        <p class="text-gray-700 leading-relaxed mb-4">
+          오늘 국어시간에는 표정을 보고 기쁨·슬픔·화남·놀람을 이해하는 활동을 했습니다. 진짜 목적은 기분 맞히기가 아니라, <strong>감정 이해·표현, AAC 활용, 또래 상호작용</strong>입니다.
+        </p>
+        <p class="font-semibold text-gray-800 mb-2">오늘 집에서 이렇게 해보세요</p>
+        <p class="text-gray-700">
+          저녁 식사 때 가족 표정을 보며 "엄마는 지금 어떤 기분일까?" "아빠는 어떤 기분일까?"를 함께 이야기해 보세요. 학교에서 배운 내용을 가정에서 자연스럽게 이어갈 수 있습니다.
+        </p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">학교·가정·센터·병원이 같은 아이를 이해하게</h2>
+      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6 ml-2">
+        <li><strong>학교:</strong> 오늘 감정 표현 수업 진행</li>
+        <li><strong>부모:</strong> 저녁에 같은 활동으로 가정 연계</li>
+        <li><strong>센터 치료사:</strong> 학교 수업 내용을 알고 치료 이어가기</li>
+        <li><strong>병원:</strong> 몇 달간 감정 표현 변화를 데이터로 확인</li>
+      </ul>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        자람이는 기록만 저장하는 시스템이 아닙니다. <strong>교사의 기록 → 부모의 이해 → 가정의 실천 → 아이의 성장</strong>으로 이어지는 AI 디지털케어로그입니다. 수업은 하루면 끝나지만, 발달은 계속되어야 합니다.
+      </p>
+
+      <div class="bg-primary-50 border-l-4 border-primary-600 p-6 mb-8 rounded-r-lg">
+        <p class="text-lg text-gray-800 leading-relaxed italic">
+          "부모가 학교 수업의 의미를 알 때, 가정·센터·병원의 개입이 같은 방향으로 맞춰집니다. 자람이는 그 통역과 연결의 첫 다리입니다."
+        </p>
+        <p class="text-gray-600 text-sm mt-3">— 정해성 CTO, 드림에이아이랩</p>
+      </div>
+
+      <div class="bg-amber-50 border-l-4 border-amber-500 p-5 mb-8">
+        <p class="text-amber-900 text-sm leading-relaxed">
+          <strong>안내:</strong> 자람이는 진단·처방·수업·치료를 대체하지 않습니다. 학교 연계는 센터 확산 이후 단계적으로 확대됩니다. 보호자·학교 이용은 소속 센터·기관 도입 및 동의 범위에 따릅니다.
+        </p>
+      </div>
+
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        <a href="/services/jarame" class="text-primary-600 underline font-medium">자람이 서비스 페이지</a> · <a href="/contact" class="text-primary-600 underline font-medium">문의하기</a>
+      </p>
+    `
+  },
+  {
+    id: 75,
+    title: '자람이, 2026 하반기 전국 발달센터 대상 본격 배포 — 센터 행정·치료일지 AI부터 RWE 생태계까지',
+    excerpt: '드림에이아이랩 자람이가 2026년 하반기 전국 발달센터 대상 본격 배포에 나섭니다. CRM·일정·출석·바우처·세무 등 센터 행정과 AI 치료일지(사진·영상·키워드 입력)를 한 플랫폼에 담고, 센터→보호자→학교·병원 순 단계적 확산을 목표로 합니다.',
+    category: 'press',
+    date: '2026-07-07',
+    image: '🏢',
+    featured: true,
+    author: '드림에이아이랩',
+    tags: ['자람이', '발달센터', '치료센터', '센터 행정', 'CRM', '치료일지', 'AI', '바우처', '세무', '디지털케어로그', 'RWE', '배포', '2026'],
+    i18n: {
+      en: {
+        title: 'Jarame Launches Nationwide Center Rollout in H2 2026 — Admin, AI Treatment Logs, and RWE Ecosystem',
+        excerpt: 'Dream AI Lab\'s Jarame begins phased deployment to developmental centers nationwide in H2 2026—combining CRM, scheduling, voucher/tax admin, and AI treatment logs from photos, video, or keywords, then expanding to families, schools, and hospitals.',
+        content: `
+      <p class="text-sm text-gray-500 mb-6">[Press Release · 2026-07-07]</p>
+
+      <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-4">
+        Jarame's first step is not "parents only"—it is building a daily-used AI Digital Care Log ecosystem across <strong>centers, therapists, and guardians</strong>.
+      </p>
+
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        <strong>Dream AI Lab (DAL)</strong> will begin <strong>phased nationwide deployment</strong> of <strong>Jarame</strong> to developmental centers in <strong>H2 2026</strong>. The goal is not revenue alone—it is enabling centers to run on a <strong>powerful, standardized admin platform</strong> while therapists spend less time on paperwork and more on care.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">Why centers first</h2>
+      <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+        Most care records are created at centers. Therapists observe daily; guardians stay for years. When centers and therapists use Jarame, guardian logs connect to treatment—and <strong>RWE (Real World Evidence)</strong> can grow. Schools and hospitals follow in later phases.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Center admin + care on one platform</h2>
+      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6 ml-2">
+        <li>Registration, scheduling, attendance, billing, waitlists</li>
+        <li>CRM-style guardian communication and case history</li>
+        <li><strong>Welfare voucher and tax-related</strong> workflow support</li>
+        <li>Standardized documents where formats varied before</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">AI treatment logs: photos, video, a few words</h2>
+      <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+        Therapists upload photos, short videos, voice memos, or keywords like "more eye contact" or "10 min focused play." AI drafts SOAP notes, guardian explanations, home tasks, and monthly reports—therapists <strong>review and save</strong>. AI assists documentation; it does not replace clinical judgment.
+      </p>
+
+      <div class="bg-gray-50 border border-gray-200 rounded-lg overflow-hidden mb-8 text-sm">
+        <div class="grid grid-cols-2 bg-gray-100 font-semibold text-gray-800">
+          <div class="p-3 border-r border-gray-200">Before</div>
+          <div class="p-3">With Jarame</div>
+        </div>
+        <div class="grid grid-cols-2 border-t border-gray-200 text-gray-700">
+          <div class="p-3 border-r border-gray-200">Manual treatment logs after each session</div>
+          <div class="p-3">Photo/video/voice/keywords → AI draft</div>
+        </div>
+        <div class="grid grid-cols-2 border-t border-gray-200 text-gray-700">
+          <div class="p-3 border-r border-gray-200">Repeat same content for parents, center, reports</div>
+          <div class="p-3">One record → guardian share, homework, monthly report</div>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Rollout plan</h2>
+      <ol class="list-decimal list-inside text-gray-700 space-y-2 mb-8 ml-2">
+        <li><strong>Phase 1 (H2 2026):</strong> Centers and therapists nationwide (phased onboarding)</li>
+        <li><strong>Phase 2:</strong> Guardian participation and RWE accumulation</li>
+        <li><strong>Phase 3:</strong> School and hospital linkage</li>
+      </ol>
+
+      <div class="bg-primary-50 border-l-4 border-primary-600 p-6 mb-8 rounded-r-lg">
+        <p class="text-lg text-gray-800 leading-relaxed italic">
+          "We deploy to centers first so families can use Digital Care Log and RWE on a real foundation—not in isolation. Standardized center operations and AI-assisted logs are the first step toward connecting school and hospital."
+        </p>
+        <p class="text-gray-600 text-sm mt-3">— Jung Haesung, CTO, Dream AI Lab</p>
+      </div>
+
+      <p class="text-gray-600 text-sm mb-6">
+        ※ Rollout is phased by region and center readiness; not all sites switch on the same day. 5,700+ center pool refers to public/linked data (not MAU). Adoption: <a href="/contact" class="text-primary-600 underline">contact</a> · <a href="/services/jarame" class="text-primary-600 underline">Jarame</a>
+      </p>
+    `
+      }
+    },
+    content: `
+      <p class="text-sm text-gray-500 mb-6">[보도자료 · 2026-07-07]</p>
+
+      <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-4">
+        자람이의 첫걸음은 보호자 앱만이 아닙니다. <strong>센터·치료사·보호자가 매일 쓰는 AI 디지털케어로그 생태계</strong>를 만드는 것입니다.
+      </p>
+
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        드림에이아이랩(DAL)의 발달장애 맞춤형 플랫폼 <strong>자람이</strong>가 <strong>2026년 하반기</strong>, <strong>전국 발달센터를 대상으로 본격 배포</strong>에 나섭니다. 이번 확산의 목적은 수익만이 아닙니다. 센터가 실제로 쓸 수 있는 <strong>강력한 행정·CRM 프로그램</strong>을 제공하고, 기존에 표준화되지 못했던 치료·행정 기록을 <strong>하나의 표준</strong>으로 묶으며, 치료사가 <strong>치료에 집중할 시간</strong>을 되돌려주기 위함입니다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">왜 센터부터인가</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        발달장애 치료에서 가장 많은 기록이 쌓이는 곳은 <strong>센터</strong>입니다. 가장 지속적으로 아이를 보는 사람은 <strong>치료사</strong>, 가장 오래 함께하는 사람은 <strong>보호자</strong>입니다. 센터와 치료사가 자람이를 써야 보호자 기록이 치료에 반영되고, 보호자·가정의 기록이 RWE로 이어집니다. <strong>학교와 병원은 이후 단계</strong>에서 자연스럽게 연결됩니다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">센터 행정·CRM — 돈이 아니라 운영의 기반</h2>
+      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6 ml-2">
+        <li>아동·보호자·치료사 등록, 일정·출석·결석/보강, 수납·대기자 관리</li>
+        <li>상담 이력, 센터 공지, 문서·이용 이력 등 <strong>CRM형 센터 운영</strong></li>
+        <li><strong>바우처·세무</strong> 등 센터 실무와 맞닿은 행정 지원</li>
+        <li>센터마다 제각각이던 양식·기록 방식의 <strong>표준화</strong></li>
+      </ul>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        기존 센터 프로그램이 일정·수납·출석에 머무는 반면, 자람이는 행정 위에 <strong>아이 중심 AI 디지털케어로그</strong>를 얹습니다. 센터의 핵심 가치인 <strong>치료 변화와 보호자 신뢰</strong>를 데이터로 보이게 합니다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">사진·영상·단어 몇 개면 AI가 치료일지를 요약</h2>
+      <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+        치료사는 치료 후 사진 몇 장, 짧은 영상, 음성 메모, 또는 「눈맞춤 증가」「공놀이 10분 집중」 같은 <strong>키워드만</strong> 입력할 수 있습니다. AI가 치료일지·SOAP 기록·보호자 설명·가정 과제·다음 회기 목표·월간 리포트 <strong>초안</strong>을 생성하고, 치료사는 검토·수정 후 저장합니다.
+      </p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        <strong>AI는 치료사를 대신하지 않습니다.</strong> 반복적인 문서 작성을 줄여, 남는 시간을 치료와 상담에 씁니다.
+      </p>
+
+      <div class="bg-gray-50 border border-gray-200 rounded-lg overflow-hidden mb-8 text-sm">
+        <div class="grid grid-cols-2 bg-gray-100 font-semibold text-gray-800">
+          <div class="p-3 border-r border-gray-200">기존</div>
+          <div class="p-3">자람이 도입 후</div>
+        </div>
+        <div class="grid grid-cols-2 border-t border-gray-200 text-gray-700">
+          <div class="p-3 border-r border-gray-200">치료 후 치료일지 직접 작성</div>
+          <div class="p-3">사진·영상·음성·키워드 → AI 초안</div>
+        </div>
+        <div class="grid grid-cols-2 border-t border-gray-200 text-gray-700">
+          <div class="p-3 border-r border-gray-200">보호자 설명·과제·리포트 각각 작성</div>
+          <div class="p-3">한 번 기록 → 자동 확장·공유</div>
+        </div>
+        <div class="grid grid-cols-2 border-t border-gray-200 text-gray-700">
+          <div class="p-3 border-r border-gray-200">병원·학교와 단절</div>
+          <div class="p-3">진료·학교 공유 요약 자동 생성(단계적)</div>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">단계별 확산 로드맵</h2>
+      <ol class="list-decimal list-inside text-gray-700 space-y-2 mb-8 ml-2">
+        <li><strong>1단계 (2026 하반기):</strong> 전국 발달센터·치료사 대상 본격 배포 (지역·센터별 단계적 온보딩)</li>
+        <li><strong>2단계:</strong> 보호자 참여 확대 → 가정·센터 RWE 누적</li>
+        <li><strong>3단계:</strong> 특수학교·병원 연계 확대</li>
+      </ol>
+
+      <div class="bg-primary-50 border-l-4 border-primary-600 p-6 mb-8 rounded-r-lg">
+        <p class="text-lg text-gray-800 leading-relaxed italic mb-4">
+          "센터가 먼저 써야 보호자 가족도 AI 디지털케어로그와 RWE를 제대로 쓸 수 있습니다. 표준화된 센터 운영과 AI 치료일지가 학교·병원으로 이어지는 첫걸음입니다. 발달장애 치료의 문제는 전문가 수만이 아니라, 끊긴 기록 구조였고, 자람이는 그 연결을 설계했습니다."
+        </p>
+        <p class="text-gray-600 text-sm">— 정해성 CTO, 드림에이아이랩 (AI 디지털케어로그 최초 고안·개발)</p>
+      </div>
+
+      <p class="text-gray-600 text-sm mb-6 leading-relaxed">
+        ※ 전국 모든 센터가 동일 일자에 전환되는 것은 아니며, 지역·센터 준비도에 따라 단계적으로 도입됩니다. 5,700+는 공공·연계 센터 풀 규모(MAU·전원 도입과 별개)입니다. 도입·파트너 문의: <a href="/contact" class="text-primary-600 underline">문의 페이지</a> · <a href="/services/jarame" class="text-primary-600 underline">자람이 서비스</a>
+      </p>
+
+      <p class="text-sm text-gray-500 border-t border-gray-200 pt-6">
+        문의: partnership@dreamailab.co.kr · press@dreamailab.com
+      </p>
+    `
+  },
+  {
     id: 74,
     title: '자람이, 보호자·교사·치료사·병원 기록을 하나의 아이 타임라인으로 연결',
     excerpt: '발달장애 아동 맞춤형 AI 디지털케어로그 자람이가 보호자 일지, 교사·치료사 관찰 기록, 병원 요약 리포트를 아이 중심 타임라인으로 통합하는 기능을 업데이트했습니다. 수면·행동·치료 반응을 함께 보고, AI가 패턴을 요약합니다.',

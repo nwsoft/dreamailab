@@ -41,7 +41,7 @@ export default function EnHomePage() {
         { label: 'Services', href: '/en/services' },
         { label: 'Technology', href: '/en/technology' },
         { label: 'About', href: '/en/about' },
-        { label: 'Latest news', href: '/en/news/72' },
+        { label: 'Latest news', href: '/en/news/75' },
       ]}
     />
   )
