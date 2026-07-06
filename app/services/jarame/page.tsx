@@ -7,7 +7,7 @@ import { MarketingIcon, type MarketingIconName } from '../../../components/Marke
 export const metadata: Metadata = {
   title: 'AI 디지털케어로그 | 발달장애 표준 기술 | 자람이 | 드림에이아이랩',
   description:
-    '발달장애 치료·학습을 위한 AI 디지털케어로그. 공공데이터 기반 전국 센터 약 5,700+, 병원 약 2,200+, 특수학교 약 130+(검색·연계, MAU와 별개). XAI·패턴 분석 권장안. DAL 1번 도메인.',
+    '발달장애 AI 디지털케어로그 자람이. 2026 하반기 전국 발달센터 본격 배포(단계적). 센터 행정·CRM·AI 치료일지, 보호자 학교 수업 통역, RWE 연계. 센터 약 5,700+ 연계 풀(MAU 별개).',
   keywords: 'AI 디지털케어로그, 발달장애 표준, 맞춤형 치료, 맞춤형 학습, 골든타임, 발달장애 치료 방법, ADHD 치료, 자폐증 치료, 특수교육, 언어치료, 작업치료, 행동치료 ABA, IEP 개별화교육계획, 치료사 협업, 다기관 연계, 자람이, 드림에이아이랩, 케어로그 표준화, 강화학습, Middleware, AI 엔진',
   alternates: {
     canonical: 'https://dreamailab.com/services/jarame',
@@ -391,7 +391,7 @@ export default function JarameService() {
           <div className="text-center">
             <div className="mb-6">
               <span className="inline-block px-4 py-2 bg-orange-100 text-orange-800 rounded-full text-sm font-semibold">
-                Service Status: Beta Testing (기관 베타 테스트·지속 업데이트 중)
+                2026 하반기 전국 발달센터 본격 배포 · 기관 베타 병행
               </span>
             </div>
             {/* Hero: 문제 인식 -> 해결 구조 -> AI 근거 */}
@@ -435,7 +435,7 @@ export default function JarameService() {
             </div>
             <div className="bg-white rounded-xl p-6 border border-gray-100 hover:border-blue-200 transition-colors shadow-sm">
               <h3 className="font-bold text-gray-900 mb-2">현재 단계</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">기관 베타 테스트 진행</p>
+              <p className="text-sm text-gray-600 leading-relaxed">2026 하반기 센터 본격 배포(단계적) · 기관 베타 병행</p>
             </div>
             <div className="bg-white rounded-xl p-6 border border-gray-100 hover:border-blue-200 transition-colors shadow-sm">
               <h3 className="font-bold text-gray-900 mb-2">플랫폼 위치</h3>
@@ -450,6 +450,8 @@ export default function JarameService() {
         className="sticky top-0 z-20 bg-white/95 backdrop-blur border-b border-gray-100 py-2.5"
       >
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap justify-center gap-x-4 gap-y-1 text-xs sm:text-sm">
+          <a href="#h2-2026-rollout" className="text-blue-700 font-medium hover:underline">2026 센터 배포</a>
+          <a href="#school-translator" className="text-blue-700 font-medium hover:underline">학교·가정 연결</a>
           <a href="#for-families" className="text-blue-700 font-medium hover:underline">보호자·전문가</a>
           <a href="#for-institutions" className="text-blue-700 font-medium hover:underline">기관·기술</a>
           <a href="#deployment-status" className="text-blue-700 font-medium hover:underline">베타·검증</a>
@@ -505,6 +507,74 @@ export default function JarameService() {
               <p className="text-sm text-gray-600 leading-relaxed">가정·센터·학교·병원 데이터 연계 검증</p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* 2026 H2 — 전국 센터 본격 배포 */}
+      <section id="h2-2026-rollout" className="py-14 bg-gradient-to-b from-blue-50 to-white border-b border-blue-100 scroll-mt-14">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-center text-xs font-semibold text-blue-800 uppercase tracking-wide mb-3">2026 하반기</p>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2 text-center">
+            전국 발달센터 대상 본격 배포
+          </h2>
+          <p className="text-center text-gray-600 text-sm mb-8 max-w-3xl mx-auto leading-relaxed">
+            목적은 수익만이 아닙니다. 센터가 매일 쓸 수 있는 <strong className="text-gray-800">행정·CRM</strong>과{' '}
+            <strong className="text-gray-800">AI 치료일지</strong>로 기록을 표준화하고, 치료사가 치료에 집중할 시간을 되돌려줍니다.
+            센터·치료사가 먼저 써야 보호자 가족의 RWE가 자연스럽게 이어집니다. 학교·병원은 이후 단계로 확대합니다.
+          </p>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+            <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
+              <h3 className="font-bold text-gray-900 mb-3">센터 행정·CRM (바우처·세무 포함)</h3>
+              <ul className="text-sm text-gray-700 space-y-2 list-disc list-inside">
+                <li>아동·보호자·치료사 등록, 일정·출석·수납·대기자·상담 이력</li>
+                <li>센터마다 달랐던 양식·기록의 <strong>표준화</strong></li>
+                <li><strong>바우처·세무</strong> 등 센터 실무와 맞닿은 행정 지원</li>
+              </ul>
+            </div>
+            <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
+              <h3 className="font-bold text-gray-900 mb-3">AI 치료일지 — 사진·영상·키워드만으로</h3>
+              <p className="text-sm text-gray-700 mb-3">
+                치료 후 사진·짧은 영상·음성·「눈맞춤 증가」 같은 키워드만 입력하면 AI가 치료일지·보호자 설명·가정 과제·월간 리포트{' '}
+                <strong>초안</strong>을 생성합니다. 치료사는 검토·수정 후 저장합니다.
+              </p>
+              <p className="text-xs text-amber-800 bg-amber-50 border border-amber-100 rounded-lg px-3 py-2">
+                AI는 치료사·의사를 대체하지 않습니다. 반복 문서 작성을 줄이는 보조 도구입니다.
+              </p>
+            </div>
+          </div>
+
+          <div className="rounded-xl border border-blue-200 bg-white p-6 mb-6">
+            <h3 className="font-bold text-gray-900 mb-3 text-center">단계별 확산</h3>
+            <ol className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-gray-700">
+              <li className="rounded-lg bg-blue-50 p-4 border border-blue-100">
+                <span className="font-bold text-blue-800">1단계 · 2026 하반기</span>
+                <p className="mt-1">전국 발달센터·치료사 (지역·센터별 단계적 온보딩)</p>
+              </li>
+              <li className="rounded-lg bg-gray-50 p-4 border border-gray-100">
+                <span className="font-bold text-gray-800">2단계</span>
+                <p className="mt-1">보호자 참여 확대 → 가정·센터 RWE 누적</p>
+              </li>
+              <li className="rounded-lg bg-gray-50 p-4 border border-gray-100">
+                <span className="font-bold text-gray-800">3단계</span>
+                <p className="mt-1">특수학교·병원 연계 확대</p>
+              </li>
+            </ol>
+          </div>
+
+          <blockquote className="border-l-4 border-blue-600 pl-4 text-gray-700 text-sm italic mb-4 max-w-3xl mx-auto">
+            &ldquo;센터가 먼저 써야 보호자도 AI 디지털케어로그와 RWE를 제대로 쓸 수 있습니다. 끊긴 기록 구조를 연결하는 첫걸음입니다.&rdquo;
+            <span className="block not-italic text-gray-500 mt-2 text-xs">— 정해성 CTO, AI 디지털케어로그 최초 고안·개발</span>
+          </blockquote>
+
+          <p className="text-center text-xs text-gray-500 mb-4">
+            ※ 전국 모든 센터가 동일 일자에 전환되지는 않습니다. 5,700+는 연계·공공데이터 센터 풀(전원 MAU·동시 도입 아님).
+          </p>
+          <p className="text-center text-sm">
+            <Link href="/news/75" className="text-blue-700 font-medium hover:underline">
+              보도자료: 2026 하반기 센터 배포 →
+            </Link>
+          </p>
         </div>
       </section>
 
@@ -580,6 +650,53 @@ export default function JarameService() {
               <p className="text-sm text-gray-800"><span className="text-blue-700 font-semibold">자람이:</span> 동의·비식별 전제의 표준 로그 축적을 통해 정책·연구의 공통 기준을 지향합니다.</p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* 학교 수업 → 부모 생활 언어 통역 */}
+      <section id="school-translator" className="py-14 bg-indigo-50/50 border-b border-indigo-100 scroll-mt-14">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-center text-xs font-semibold text-indigo-800 uppercase tracking-wide mb-3">For 보호자</p>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2 text-center">
+            부모는 학교에서 무엇을 배우는지 알고 계신가요?
+          </h2>
+          <p className="text-center text-gray-600 text-sm mb-8 max-w-3xl mx-auto leading-relaxed">
+            성취기준·AAC·교육과정 용어는 부모에게 어렵습니다. 자람이는 교사의 <strong className="text-gray-800">교육 언어</strong>를{' '}
+            <strong className="text-gray-800">부모의 생활 언어</strong>로 번역합니다. 교사·수업을 대체하지 않습니다.
+          </p>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+            <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
+              <h3 className="font-bold text-gray-900 mb-2">부모의 질문</h3>
+              <p className="text-lg font-semibold text-indigo-700 mb-3">&ldquo;그래서 우리 아이는 오늘 무엇을 배웠나요?&rdquo;</p>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                수업안·활동지가 전달되어도 전문 용어 때문에 의미를 놓치기 쉽고, 아이도 학교 일을 자세히 설명하기 어려운 경우가 많습니다.
+              </p>
+            </div>
+            <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
+              <h3 className="font-bold text-gray-900 mb-2">자람이가 하는 일</h3>
+              <p className="text-sm text-gray-700 mb-3">
+                수업안·활동지·프린트와 <strong>사진·영상(OCR)</strong>을 AI가 읽고, 수업의 진짜 목적을 파악해 부모 언어로 설명합니다.
+              </p>
+              <p className="text-xs text-gray-500">예: 「인물의 표정을 보고 기분 알기」→ 사회성·AAC·가정에서 이어갈 활동 제안</p>
+            </div>
+          </div>
+
+          <div className="rounded-xl border border-indigo-200 bg-white p-6 mb-6 max-w-3xl mx-auto">
+            <p className="text-sm font-semibold text-gray-900 mb-2">부모에게 전달되는 예시</p>
+            <p className="text-sm text-gray-700 leading-relaxed mb-3">
+              오늘 국어시간의 목적은 기분 맞히기가 아니라, 감정 이해·표현과 또래 상호작용입니다. 저녁 식사 때 가족 표정을 보며 함께 이야기해 보세요.
+            </p>
+            <p className="text-xs text-gray-500">
+              → 센터 치료사는 학교 수업을 알고 치료를 이어가고, 병원은 감정 표현 변화 추이를 데이터로 확인합니다 (단계적 연계).
+            </p>
+          </div>
+
+          <p className="text-center text-sm">
+            <Link href="/news/76" className="text-indigo-700 font-medium hover:underline">
+              보도자료: 교육 언어를 생활 언어로 번역 →
+            </Link>
+          </p>
         </div>
       </section>
 
@@ -2421,8 +2538,8 @@ export default function JarameService() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <div className="bg-white rounded-xl p-6 shadow-md border-2 border-orange-200">
               <p className="text-xs font-semibold text-orange-600 uppercase tracking-wide mb-2">Current Stage</p>
-              <p className="text-lg font-bold text-gray-900">Beta Testing (기관 베타)</p>
-              <p className="text-sm text-gray-600 mt-1">Gate 2 파일럿 UI·API 검증 완료, Gate 3 실기관 실호출 진행</p>
+              <p className="text-lg font-bold text-gray-900">2026 H2 센터 본격 배포</p>
+              <p className="text-sm text-gray-600 mt-1">전국 발달센터 단계적 온보딩 · 기관 베타·Gate3 파일럿 병행</p>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-md border border-gray-200">
               <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Validation</p>
@@ -2431,8 +2548,8 @@ export default function JarameService() {
             </div>
             <div className="bg-white rounded-xl p-6 shadow-md border border-gray-200">
               <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Deployment Readiness</p>
-              <p className="text-sm text-gray-900 font-semibold mb-1">기관 도입 가능 범위</p>
-              <p className="text-sm text-gray-600">제한적 기관 도입·공공 PoC 협의. 전원 상용 전제 아님</p>
+              <p className="text-sm text-gray-900 font-semibold mb-1">센터 → 보호자 → 학교·병원</p>
+              <p className="text-sm text-gray-600">2026 하반기 센터 우선 배포. 지역·센터별 단계 도입, 전원 동시 상용 전제 아님</p>
             </div>
           </div>
           <div className="rounded-xl border border-blue-100 bg-blue-50/40 p-5 text-sm text-gray-700">
