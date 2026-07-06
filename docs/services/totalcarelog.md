@@ -1,6 +1,6 @@
 # 토탈케어로그 (TotalCareLog) — 스펙 요약 (웹·플랫폼 정합)
 
-- **last_reviewed:** 2026-05-23
+- **last_reviewed:** 2026-07-06
 - **canonical 웹:** https://dreamailab.com/services/healthcare
 - **외부 플랫폼:** https://totalcarelog.com
 - **DAL 도메인:** 의료 (TC) · **상태:** In Development

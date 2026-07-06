@@ -44,7 +44,7 @@ export const newsArticles: NewsArticle[] = [
   {
     id: 71,
     title: '[단독] 국내 최고 인공지능 아키텍트, 전 국민 창업 오디션 평정 나선다… 수천억 글로벌 투자 정조준',
-    excerpt: '국가대표 창업 오디션 \'모두의 창업\'에 2만 7천 대 1 경쟁 속 AI 디지털케어로그 개발자 정해성 연구자 팀이 출사표. 자람이·노아AI 융합 BM으로 발달장애·글로벌 투자 시장을 겨냥한다.',
+    excerpt: '국가대표 창업 오디션 \'모두의 창업\'에 6만 3천여 명이 지원한 가운데 AI 디지털케어로그 개발자 정해성 연구자 팀이 출사표. 자람이·노아AI 융합 BM으로 발달장애·글로벌 투자 시장을 겨냥한다.',
     category: 'press',
     date: '2026-05-15',
     image: '🚀',
@@ -54,16 +54,16 @@ export const newsArticles: NewsArticle[] = [
     i18n: {
       en: {
         title: '[Exclusive] Korea\'s Top AI Architect Joins National Startup Audition, Targeting Billions in Global Investment',
-        excerpt: 'Researcher Jung Haesung\'s team enters "Everyone\'s Startup" amid 27,000-to-1 competition, combining Jarame and Noah AI to target developmental disability care and global capital markets.',
+        excerpt: 'Researcher Jung Haesung\'s team enters "Everyone\'s Startup" with more than 63,000 applicants, combining Jarame and Noah AI to target developmental disability care and global capital markets.',
         content: `
       <p class="text-sm text-gray-500 mb-6">[Startup Today = Digital News Desk]</p>
 
       <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-4">
-        ◼ A one-of-a-kind business model to beat 27,000-to-1 odds — committed to solving developmental disability and humanity's toughest challenges with technology that surpasses the judges
+        ◼ A one-of-a-kind business model standing out among 63,000 applicants — committed to solving developmental disability and humanity's toughest challenges with technology that surpasses the judges
       </p>
 
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        National startup audition <strong>"Everyone's Startup"</strong>, designed to discover innovators who will shake up Korea, has drawn nationwide attention. In a record-breaking survival format with more than 27,000 applicants, <strong>Jung Haesung</strong>, a top-tier AI architecture expert and the original inventor of <strong>AI Digital Care Log</strong> technology, has entered the race. His team has begun an overwhelming push toward the final round, armed with unmatched technical maturity.
+        National startup audition <strong>"Everyone's Startup"</strong>, designed to discover innovators who will shake up Korea, has drawn nationwide attention. In a record-breaking survival format with more than 63,000 applicants, <strong>Jung Haesung</strong>, a top-tier AI architecture expert and the original inventor of <strong>AI Digital Care Log</strong> technology, has entered the race. His team has begun an overwhelming push toward the final round, armed with unmatched technical maturity.
       </p>
 
       <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">Architecture beyond mentors and judges — "This is not a simple idea"</h2>
@@ -101,11 +101,11 @@ export const newsArticles: NewsArticle[] = [
       <p class="text-sm text-gray-500 mb-6">[스타트업투데이=디지털뉴스팀]</p>
 
       <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-4">
-        ◼ 2만 7천 대 1 뚫을 독보적 BM… 심사위원 능가하는 기술력으로 발달장애·인류 난제 해결 사활
+        ◼ 6만 3천여 명 지원 속 독보적 BM… 심사위원 능가하는 기술력으로 발달장애·인류 난제 해결 사활
       </p>
 
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        대한민국을 흔들 혁신 창업가를 발굴하는 국가대표 창업 오디션 <strong>'모두의 창업'</strong>에 전 국민의 이목이 쏠리고 있다. 신청서 기준 무려 2만 7,000여 명의 참가자가 몰린 역대급 서바이벌 구도 속에서, 국내 최고 수준의 인공지능(AI) 아키텍처 설계 전문가이자 <strong>'AI디지털케어로그(Digital Care Log)'</strong> 기술을 최초 고안·개발한 정해성 연구자가 출사표를 던졌다. 정 연구자 팀은 타의 추종을 불허하는 독보적인 기술 완성도를 무기로 파이널 라운드 진출을 향한 압도적인 레이스를 시작했다.
+        대한민국을 흔들 혁신 창업가를 발굴하는 국가대표 창업 오디션 <strong>'모두의 창업'</strong>에 전 국민의 이목이 쏠리고 있다. 신청서 기준 무려 6만 3,000여 명이 지원한 역대급 서바이벌 구도 속에서, 국내 최고 수준의 인공지능(AI) 아키텍처 설계 전문가이자 <strong>'AI디지털케어로그(Digital Care Log)'</strong> 기술을 최초 고안·개발한 정해성 연구자가 출사표를 던졌다. 정 연구자 팀은 타의 추종을 불허하는 독보적인 기술 완성도를 무기로 파이널 라운드 진출을 향한 압도적인 레이스를 시작했다.
       </p>
 
       <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">멘토와 심사위원을 뛰어넘는 아키텍처… "단순 아이디어가 아니다"</h2>
@@ -154,7 +154,7 @@ export const newsArticles: NewsArticle[] = [
     id: 70,
     title: '[보도자료] 드림에이아이랩, 세계 최초 발달장애 맞춤형 치료·학습 플랫폼 "자람이" 공식 출시 - 2026년 국가 시범사업 추진',
     excerpt: '드림에이아이랩이 세계 최초로 AI 디지털케어로그 기반 발달장애 맞춤형 치료·학습 플랫폼 "자람이"를 공식 출시했다. 전국 5,700개 기관이 등록된 커뮤니티에서 시작해 AI 엔진형 Middleware 기술로 발전한 자람이는 2026년 정부 국가 시범사업 추진을 목표로 하고 있다.',
-    category: '보도자료',
+    category: 'press',
     date: '2025-11-14',
     image: '🎉',
     featured: true,
@@ -470,7 +470,7 @@ export const newsArticles: NewsArticle[] = [
     id: 69,
     title: '[서비스 업데이트] 자람이, 세계 최초 발달장애 AI 디지털케어로그로 치료의 새로운 표준 제시',
     excerpt: '2022년부터 3년간의 개발 끝에 완성된 자람이가 발달장애 치료의 근본적 한계를 AI 기술로 해결한다. 병원·센터·학교·가정의 데이터 단절을 통합하고, 골든타임을 놓치는 문제를 AI 실시간 분석으로 극복하며, 주관적 평가에서 객관적 데이터 기반 치료로 패러다임을 전환한다.',
-    category: '서비스 업데이트',
+    category: 'updates',
     date: '2025-11-14',
     image: '🚀',
     featured: true,
@@ -1231,7 +1231,7 @@ export const newsArticles: NewsArticle[] = [
         </p>
       </div>
     `,
-    category: '기술',
+    category: 'tech',
     date: '2025-11-14',
     image: '🛡️',
     featured: true,
@@ -1587,7 +1587,7 @@ export const newsArticles: NewsArticle[] = [
         </p>
       </div>
     `,
-    category: '비즈니스',
+    category: 'company',
     date: '2025-11-14',
     image: '🤝',
     featured: true,
@@ -1967,7 +1967,7 @@ export const newsArticles: NewsArticle[] = [
         </p>
       </div>
     `,
-    category: '서비스 업데이트',
+    category: 'updates',
     date: '2025-11-14',
     image: '🌏',
     featured: true,
@@ -2252,7 +2252,7 @@ export const newsArticles: NewsArticle[] = [
         </a>
       </div>
     `,
-    category: '제품',
+    category: 'updates',
     date: '2025-11-12',
     image: '💊',
     featured: true,
@@ -2478,7 +2478,7 @@ export const newsArticles: NewsArticle[] = [
         </p>
       </div>
     `,
-    category: '파트너십',
+    category: 'company',
     date: '2025-11-12',
     image: '🤝',
     featured: true,
@@ -2497,8 +2497,8 @@ export const newsArticles: NewsArticle[] = [
         <h2 class="text-2xl font-bold text-gray-900 mb-4">🔬 연구 배경</h2>
         <p class="text-gray-700 mb-4">
           드림에이아이랩의 <strong>AI 디지털케어로그 기술</strong>은 2019년 발달장애 치료 현장에서 시작되었습니다. 
-          자람이 플랫폼을 통해 전국 5,700개 기관, 30만명의 발달장애 아동·청소년의 행동·학습·치료 데이터를 
-          수집·분석하며 개인화 방법론을 정교화해왔습니다.
+          자람이 플랫폼을 통해 전국 5,700+ 기관 연계 풀과 일부 기관·현장 파일럿에서 축적한 행동·학습·치료 데이터를 
+          바탕으로 개인화 방법론을 정교화해왔습니다. (전국 발달장애 타겟 인구 383만+는 IR·서비스 페이지 기준과 동일합니다.)
         </p>
         <p class="text-gray-700 mb-4">
           특수교육에서 검증된 이 기술은 <strong>개별 학습자의 주의 패턴, 오개념 형성, 학습 속도</strong> 등을 
@@ -2814,7 +2814,7 @@ export const newsArticles: NewsArticle[] = [
         </div>
       </div>
     `,
-    category: '사례 연구',
+    category: 'tech',
     date: '2025-11-10',
     image: '📚',
     featured: true,
@@ -3102,6 +3102,14 @@ export const newsArticles: NewsArticle[] = [
     title: '노아AI 공식 기술백서 공개 | 세계 최초 AI 자율 재테크 플랫폼의 기술적 혁신 상세 공개',
     excerpt: 'DAL이 개발한 노아AI의 공식 기술백서가 공개되었습니다. 세계 최초 실시간 AI 학습형 재테크 어시스턴트의 기술적 아키텍처, 강화학습 시스템, XAI 투명성 정책을 상세히 공개합니다.',
     content: `
+      <div class="bg-amber-50 border border-amber-200 rounded-lg p-5 mb-8">
+        <p class="text-amber-900 text-sm leading-relaxed">
+          <strong>📌 최신 기준 안내:</strong> 본 기사는 2025년 1월 당시 기술백서(v3.8.8.3) 공개 보도입니다.
+          노아AI는 <strong>Noah AI Labs</strong>로 이전 완료되었으며, 최신 운영 기준은 <strong>v3.8.9.27</strong>(2026-07-06)입니다.
+          <a href="/blog/noahai-technical-whitepaper" class="text-primary-600 underline font-medium">최신 기술백서</a> ·
+          <a href="/services/finance" class="text-primary-600 underline font-medium">이전·운영 안내</a>를 참고하세요.
+        </p>
+      </div>
       <h1 class="text-3xl font-bold text-gray-900 mb-6">노아AI 공식 기술백서 공개</h1>
       <p class="text-lg text-gray-600 mb-6">세계 최초 AI 자율 재테크 플랫폼의 기술적 혁신을 상세히 공개합니다.</p>
       
@@ -3172,9 +3180,9 @@ export const newsArticles: NewsArticle[] = [
         </ul>
       </div>
 
-      <p class="text-gray-600 mt-8">본 기술백서는 실제 구현된 코드 기반(NoahAI v3.8.8.3)을 토대로 작성되었으며, 모든 알고리즘은 실제 거래 로그와 데이터베이스 기록을 통해 검증되었습니다.</p>
+      <p class="text-gray-600 mt-8">본 기술백서는 실제 구현된 코드 기반(NoahAI v3.8.8.3, 당시 기준)을 토대로 작성되었습니다. 최신 버전·운영 현황은 <a href="/blog/noahai-technical-whitepaper" class="text-primary-600 underline">노아AI 기술백서 (v3.8.9.27)</a> 및 <a href="/services/finance" class="text-primary-600 underline">Noah AI Labs 이전 안내</a>를 확인하세요.</p>
     `,
-    category: '기술',
+    category: 'tech',
     date: '2025-01-20',
     image: '📖',
     featured: true,
@@ -6399,9 +6407,7 @@ export const getCategoryCounts = () => {
   const counts: { [key: string]: number } = {}
   
   newsArticles.forEach(article => {
-    if (!article.featured) { // 주요 소식 제외
-      counts[article.category] = (counts[article.category] || 0) + 1
-    }
+    counts[article.category] = (counts[article.category] || 0) + 1
   })
   
   return counts

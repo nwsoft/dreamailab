@@ -1,6 +1,6 @@
 # 자람이 (Jarame) — 스펙 요약 (웹·플랫폼 정합)
 
-- **last_reviewed:** 2026-05-24 (Hero 근거 명확화·KPI % 제거·전문가 검토 전제·IR 시장 수치 완화)
+- **last_reviewed:** 2026-07-06
 - **canonical 웹:** https://dreamailab.com/services/jarame
 - **외부 플랫폼:** https://jarame.or.kr
 - **DAL 도메인:** 발달장애 (JR) · **상태:** Beta

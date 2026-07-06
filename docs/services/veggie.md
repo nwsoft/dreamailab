@@ -1,6 +1,6 @@
 # 베지케어 (VeggieCare) — 스펙 요약 (웹·플랫폼 정합)
 
-- **last_reviewed:** 2026-05-23
+- **last_reviewed:** 2026-07-06
 - **canonical 웹:** https://dreamailab.com/services/veggie
 - **외부 플랫폼:** https://veggie.care
 - **DAL 도메인:** 라이프스타일 (VG) · **상태:** Beta

@@ -1,6 +1,6 @@
 # 시니어앤라이프 (Senior & Life) — 스펙 요약 (웹·플랫폼 정합)
 
-- **last_reviewed:** 2026-05-23
+- **last_reviewed:** 2026-07-06
 - **canonical 웹:** https://dreamailab.com/services/senior
 - **외부 플랫폼:** https://seniorandlife.com
 - **DAL 도메인:** 시니어·노인돌봄 (SL) · **상태:** Pilot

@@ -1,6 +1,6 @@
 # 에듀케어로그 (EduCareLog) — 스펙 요약 (웹·플랫폼 정합)
 
-- **last_reviewed:** 2026-05-23
+- **last_reviewed:** 2026-07-06
 - **canonical 웹:** https://dreamailab.com/services/educarelog
 - **외부 플랫폼:** _(공개 URL 없음 — 허브 `externalUrl: #`)_
 - **DAL 도메인:** 교육 (ED) · **상태:** Pilot (허브) / 페이지 Hero 「개발·고도화 중」

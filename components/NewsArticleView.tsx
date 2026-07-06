@@ -21,6 +21,15 @@ const labels = {
     newsPath: (id: number) => `/news/${id}`,
     langSwitch: 'English',
     langSwitchHref: (id: number) => `/en/news/${id}`,
+    archiveTitle: '아카이브 안내',
+    archiveBody:
+      '이 글은 당시 보도·홍보 문맥을 보존한 아카이브입니다. 제품·사업·수치의 현재 기준은 아래 페이지를 참고하세요.',
+    archiveLinks: [
+      { href: '/services/jarame', label: '자람이 서비스' },
+      { href: '/ir', label: 'IR' },
+      { href: '/about', label: '회사 소개' },
+      { href: '/services/finance', label: '노아AI 이전 안내' },
+    ],
   },
   en: {
     author: 'Author',
@@ -32,6 +41,15 @@ const labels = {
     newsPath: (id: number) => `/en/news/${id}`,
     langSwitch: '한국어',
     langSwitchHref: (id: number) => `/news/${id}`,
+    archiveTitle: 'Archive notice',
+    archiveBody:
+      'This article is preserved as a press/archive snapshot. For current product, business, and metrics, see:',
+    archiveLinks: [
+      { href: '/services/jarame', label: 'Jarame' },
+      { href: '/ir', label: 'IR' },
+      { href: '/about', label: 'About' },
+      { href: '/services/finance', label: 'Noah AI migration' },
+    ],
   },
 } as const
 
@@ -95,6 +113,19 @@ export default function NewsArticleView({
       <section className="py-16 lg:py-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <article className="bg-white rounded-2xl shadow-lg p-8 lg:p-12">
+            <div className="mb-8 rounded-xl border border-gray-200 bg-gray-50 p-5">
+              <p className="text-sm font-semibold text-gray-900 mb-2">{t.archiveTitle}</p>
+              <p className="text-sm text-gray-600 leading-relaxed mb-3">{t.archiveBody}</p>
+              <ul className="flex flex-wrap gap-x-4 gap-y-2 list-none p-0 m-0 text-sm">
+                {t.archiveLinks.map((link) => (
+                  <li key={link.href}>
+                    <Link href={link.href} className="text-primary-600 hover:text-primary-700 underline">
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
             <div
               className="max-w-none text-gray-900 leading-relaxed"
               dangerouslySetInnerHTML={{ __html: article.content }}

@@ -12,12 +12,22 @@ export default function News() {
   const [currentPage, setCurrentPage] = useState(1)
   const [articlesPerPage] = useState(6)
   
-  // 주요 소식 필터링 (최대 3개)
-  const featuredArticles = newsArticles.filter(article => article.featured).slice(0, 3)
+  // 주요 소식 (featured 중 최신 3건)
+  const featuredArticles = useMemo(() => {
+    return [...newsArticles]
+      .filter((article) => article.featured)
+      .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+      .slice(0, 3)
+  }, [])
 
-  // 필터링된 기사들
+  const featuredIds = useMemo(
+    () => new Set(featuredArticles.map((article) => article.id)),
+    [featuredArticles]
+  )
+
+  // 필터링된 기사들 (주요 소식 3건 제외, 전체 목록 노출)
   const filteredArticles = useMemo(() => {
-    let filtered = newsArticles.filter(article => !article.featured)
+    let filtered = newsArticles.filter((article) => !featuredIds.has(article.id))
     
     // 카테고리 필터링
     if (selectedCategory !== 'all') {
@@ -30,7 +40,7 @@ export default function News() {
     })
     
     return filtered
-  }, [selectedCategory])
+  }, [selectedCategory, featuredIds])
 
   // 페이지네이션
   const totalPages = Math.ceil(filteredArticles.length / articlesPerPage)
@@ -137,7 +147,8 @@ export default function News() {
                 </button>
                 {newsCategories.filter(cat => cat.value !== 'all').map((category) => {
                   const categoryCount = newsArticles.filter(
-                    article => !article.featured && article.category === category.value
+                    (article) =>
+                      article.category === category.value && !featuredIds.has(article.id)
                   ).length
                   
                   return (
