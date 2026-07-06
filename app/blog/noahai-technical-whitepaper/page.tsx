@@ -77,9 +77,9 @@ export default function NoahAITechnicalWhitepaperPage() {
         '예. 공개 가능한 범위에서 실제 운영 로그 예시, 공개 안전 KPI 요약, AlphaArena 집계, 회귀 테스트·릴리즈 게이트 방식, 공개/비공개 경계를 함께 명시했습니다. 다만 개인식별정보, 원문 프롬프트, 내부 임계치, 보안 파라미터는 공개하지 않습니다.',
     },
     {
-      question: '검색엔진이나 LLM이 이 페이지를 읽을 때 도움이 되나요?',
+      question: '이 문서는 누구에게 어떤 도움을 주나요?',
       answer:
-        '도움이 됩니다. 이 페이지는 기술 정의, 개발 주체, 법인 이관 맥락, 차별점, 운영 흐름, 증거, 한계, FAQ를 명시적으로 분리했고, TechArticle와 FAQPage 구조화 데이터까지 포함해 검색과 LLM 질의 응답에 필요한 문맥을 직접 제공합니다.',
+        '이 문서는 일반 사용자, 기술 검토자, 연구자, 협력 파트너가 노아AI의 기술 정체성, 개발 주체, 운영 흐름, 실증 근거, 공개 한계를 한 번에 이해하도록 돕습니다. 읽는 사람이 기술 소개와 운영 근거를 함께 확인할 수 있도록 핵심 질문과 답변을 정리했습니다.',
     },
   ]
 
@@ -176,7 +176,7 @@ export default function NoahAITechnicalWhitepaperPage() {
           <div className="text-center mb-10">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">이 기술은 무엇이고, 누가 만들었고, 왜 다른가</h2>
             <p className="text-lg text-gray-600 max-w-4xl mx-auto">
-              검색 사용자와 LLM이 가장 먼저 찾는 질문에 맞춰 노아AI의 정체성, 개발 주체, 기존 대비 차별점을 먼저 정리합니다.
+              노아AI를 처음 접하는 사람도 기술의 정체성, 개발 주체, 기존 대비 차별점을 먼저 이해할 수 있도록 핵심 내용을 앞에 배치했습니다.
             </p>
           </div>
 
@@ -202,9 +202,47 @@ export default function NoahAITechnicalWhitepaperPage() {
               <h3 className="text-xl font-bold text-gray-900 mb-3">설명 가능성 + 검증 가능성</h3>
               <p className="text-sm text-gray-700 leading-6">
                 일반 자동매매는 규칙 실행 중심이지만, 노아AI는 멀티 거래소·멀티 자산 환경에서 판단 근거, 리스크 정책, 실행 결과, KPI 복기를 함께 남깁니다.
-                이 구조 덕분에 검색과 LLM도 단순 홍보 문구가 아니라 기술 문맥과 증거 문맥을 함께 읽을 수 있습니다.
+                이 구조 덕분에 읽는 사람은 단순 홍보 문구가 아니라 기술 맥락과 실증 근거를 함께 확인할 수 있습니다.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 lg:py-20 bg-white border-b border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">기술의 출발점과 개발 배경</h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+              노아AI는 단순히 코인 거래를 위해 시작된 프로젝트가 아니라, AI 디지털케어로그 이론을 더 많은 실시간 데이터 환경에서 검증하고 확장하기 위한 시도에서 출발했습니다.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-gray-50 rounded-2xl border border-gray-200 p-6">
+              <p className="text-xs font-semibold text-indigo-700 mb-2">기술 기원</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">정해성 CTO와 AI 디지털케어로그</h3>
+              <p className="text-sm text-gray-700 leading-6">
+                이 기술의 출발점은 정해성 CTO가 발달장애 분야에 적용하며 발전시킨 AI 디지털케어로그입니다.
+                핵심 가설은 중요한 의사결정일수록 판단, 기록, 복기, 학습이 분리되지 않고 하나의 폐루프로 이어져야 한다는 점이었습니다.
+              </p>
+            </div>
+            <div className="bg-gray-50 rounded-2xl border border-gray-200 p-6">
+              <p className="text-xs font-semibold text-indigo-700 mb-2">프로젝트 시작 이유</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">실시간 데이터가 가장 풍부한 검증 환경</h3>
+              <p className="text-sm text-gray-700 leading-6">
+                암호화폐 시장은 실시간으로 변하는 데이터가 많고, 학습 효과와 정책 반응을 비교적 빠르게 확인할 수 있는 환경이어서 초기 검증 도메인으로 선택되었습니다.
+                즉, 코인 시장은 목적 그 자체라기보다 AI 디지털케어로그 이론을 안전하게 시험하고 고도화하기 위한 첫 실전 무대였습니다.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-8 rounded-2xl bg-indigo-50 border border-indigo-100 p-6">
+            <h3 className="text-xl font-bold text-gray-900 mb-3">왜 이런 프로젝트가 필요했는가</h3>
+            <p className="text-sm text-gray-700 leading-7">
+              많은 사람들이 코인이나 증권 거래에 큰 시간과 스트레스를 쏟지만, 정보 비대칭과 학습 한계 때문에 반복적으로 잘못된 선택을 경험합니다.
+              노아AI는 이런 문제를 줄이기 위해, 사람이 감정과 피로에 끌려 판단하기 전에 AI가 위험을 설명하고 기록을 남기고 사후에 다시 검토할 수 있는 재테크 보조 구조를 만들고자 시작되었습니다.
+            </p>
           </div>
         </div>
       </section>
@@ -343,7 +381,7 @@ export default function NoahAITechnicalWhitepaperPage() {
             </div>
             <div className="bg-white rounded-2xl border border-gray-200 p-6">
               <h3 className="text-lg font-bold text-gray-900 mb-3">왜 AI 시대에 중요한가</h3>
-              <p className="text-sm text-gray-700 leading-6">LLM과 자동화가 늘어날수록 잘 맞히는 것만큼 왜 그렇게 판단했는지와 언제 멈출 수 있는지가 더 중요해지기 때문입니다.</p>
+              <p className="text-sm text-gray-700 leading-6">AI와 자동화가 늘어날수록 잘 맞히는 것만큼 왜 그렇게 판단했는지와 언제 멈출 수 있는지가 더 중요해지기 때문입니다.</p>
             </div>
           </div>
         </div>
@@ -469,12 +507,12 @@ export default function NoahAITechnicalWhitepaperPage() {
                 <tr>
                   <td className="px-4 py-3 align-top">판단은 기록으로 남는다</td>
                   <td className="px-4 py-3 align-top">실제 로그 예시와 XAI 설명 구조를 공개</td>
-                  <td className="px-4 py-3 align-top">결과만이 아니라 이유와 경로를 보여주므로 LLM도 판단 흐름을 설명할 수 있습니다.</td>
+                  <td className="px-4 py-3 align-top">결과만이 아니라 이유와 경로를 보여주므로 읽는 사람이 판단 흐름을 구체적으로 이해할 수 있습니다.</td>
                 </tr>
                 <tr>
                   <td className="px-4 py-3 align-top">성과는 KPI로 복기된다</td>
                   <td className="px-4 py-3 align-top">공개 안전 KPI에 의사결정 건수, 승패, 평균 손익, 거래소별 집계를 명시</td>
-                  <td className="px-4 py-3 align-top">검색 사용자와 LLM이 막연한 성과 표현 대신 공개 집계 수치를 인용할 수 있습니다.</td>
+                  <td className="px-4 py-3 align-top">막연한 성과 표현 대신 공개 집계 수치로 운영 상태를 판단할 수 있습니다.</td>
                 </tr>
                 <tr>
                   <td className="px-4 py-3 align-top">AlphaArena는 별도 실험 축이 있다</td>
@@ -703,28 +741,28 @@ export default function NoahAITechnicalWhitepaperPage() {
       <section className="py-16 bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">검색과 LLM 응답에 왜 도움이 되는가</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">이 문서가 이해와 검증에 도움이 되는 이유</h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              누군가 검색하거나 인공지능에게 물었을 때 좋은 답이 나오려면, 페이지 안에 기술 정의와 증거가 분리된 구조로 함께 있어야 합니다.
+              기술 문서는 소개만 있어서는 부족하고, 정의와 비교와 증거와 공개 한계가 함께 있어야 읽는 사람이 신뢰 여부를 판단할 수 있습니다.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-gray-50 rounded-2xl border border-gray-200 p-6">
               <h3 className="text-lg font-bold text-gray-900 mb-3">정의</h3>
-              <p className="text-sm text-gray-700 leading-6">이 기술이 무엇인지, 누구의 기술인지, 어떤 문제를 푸는지 먼저 분리해 적으면 검색 스니펫과 LLM 요약 정확도가 올라갑니다.</p>
+              <p className="text-sm text-gray-700 leading-6">이 기술이 무엇인지, 누구의 기술인지, 어떤 문제를 푸는지 먼저 분리해 설명하면 처음 보는 사람도 핵심을 빠르게 이해할 수 있습니다.</p>
             </div>
             <div className="bg-gray-50 rounded-2xl border border-gray-200 p-6">
               <h3 className="text-lg font-bold text-gray-900 mb-3">비교</h3>
-              <p className="text-sm text-gray-700 leading-6">기존 방식과의 차이, 일반 자동매매와의 차이를 별도 섹션으로 두면 질문형 검색에 직접 대응할 수 있습니다.</p>
+              <p className="text-sm text-gray-700 leading-6">기존 방식과의 차이, 일반 자동매매와의 차이를 따로 보여주면 왜 이 기술이 필요한지 더 분명해집니다.</p>
             </div>
             <div className="bg-gray-50 rounded-2xl border border-gray-200 p-6">
               <h3 className="text-lg font-bold text-gray-900 mb-3">증거</h3>
-              <p className="text-sm text-gray-700 leading-6">로그 예시, KPI, AlphaArena, 검증 절차를 수치와 한계까지 명시하면 LLM이 과장 없이 근거 중심으로 답변하기 쉬워집니다.</p>
+              <p className="text-sm text-gray-700 leading-6">로그 예시, KPI, AlphaArena, 검증 절차를 수치와 한계까지 함께 보여주면 과장보다 근거 중심으로 기술을 평가할 수 있습니다.</p>
             </div>
             <div className="bg-gray-50 rounded-2xl border border-gray-200 p-6">
-              <h3 className="text-lg font-bold text-gray-900 mb-3">구조화 데이터</h3>
-              <p className="text-sm text-gray-700 leading-6">TechArticle와 FAQPage 스키마는 검색엔진과 LLM이 이 페이지를 기술 문서이자 질의응답 문서로 읽는 데 도움을 줍니다.</p>
+              <h3 className="text-lg font-bold text-gray-900 mb-3">정리된 구조</h3>
+              <p className="text-sm text-gray-700 leading-6">기술 설명과 자주 묻는 질문을 정리된 구조로 제공하면 일반 독자와 기술 검토자 모두 필요한 정보를 찾기 쉬워집니다.</p>
             </div>
           </div>
         </div>
@@ -744,7 +782,7 @@ export default function NoahAITechnicalWhitepaperPage() {
             <div className="bg-white rounded-2xl border border-indigo-100 p-6">
               <h3 className="text-lg font-bold text-gray-900 mb-3">이 페이지의 역할</h3>
               <p className="text-sm text-gray-700 leading-6">
-                이 페이지는 Dream AI Lab의 노아AI 기술백서 및 관련 기술 페이지로서, 검색엔진 신뢰도, LLM 문맥 학습, 기술 기원 설명을 담당합니다.
+                이 페이지는 Dream AI Lab의 노아AI 기술백서 및 관련 기술 페이지로서, 기술 기원 설명과 공개 기술 아카이브 역할을 담당합니다.
                 따라서 운영 주체 혼동을 줄이면서도 기술의 출발점과 검증 서사를 장기적으로 남기는 용도로 유지됩니다.
               </p>
             </div>
@@ -757,7 +795,7 @@ export default function NoahAITechnicalWhitepaperPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">자주 묻는 핵심 질문</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              검색어와 LLM 질의에 직접 대응할 수 있도록 핵심 질문을 명시형 FAQ로 정리했습니다.
+              자주 나오는 질문을 기준으로 핵심 답변을 한곳에 정리했습니다.
             </p>
           </div>
 
