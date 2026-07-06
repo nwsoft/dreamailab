@@ -42,6 +42,491 @@ export function getLocalizedArticle(
 
 export const newsArticles: NewsArticle[] = [
   {
+    id: 74,
+    title: '자람이, 보호자·교사·치료사·병원 기록을 하나의 아이 타임라인으로 연결',
+    excerpt: '발달장애 아동 맞춤형 AI 디지털케어로그 자람이가 보호자 일지, 교사·치료사 관찰 기록, 병원 요약 리포트를 아이 중심 타임라인으로 통합하는 기능을 업데이트했습니다. 수면·행동·치료 반응을 함께 보고, AI가 패턴을 요약합니다.',
+    category: 'updates',
+    date: '2026-07-06',
+    image: '📋',
+    featured: false,
+    author: '드림에이아이랩',
+    tags: ['자람이', '디지털케어로그', '발달장애', '보호자 일지', '서비스 업데이트', 'AI 리포트', '타임라인', '특수교육', '치료센터', '조기개입'],
+    i18n: {
+      en: {
+        title: 'Jarame Connects Guardian, Teacher, Therapist, and Hospital Records in One Child Timeline',
+        excerpt: 'Jarame\'s AI Digital Care Log now unifies guardian logs, teacher and therapist observations, and hospital summary reports into a child-centered timeline—with AI pattern summaries for sleep, behavior, and treatment response.',
+        content: `
+      <p class="text-sm text-gray-500 mb-6">[Service Update · 2026-07-06]</p>
+
+      <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-4">
+        Jarame is an AI Digital Care Log that records, connects, and helps you understand a child\'s day in developmental disability care.
+      </p>
+
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        Dream AI Lab\'s <strong>Jarame</strong> platform now connects records from guardians, teachers, therapists, and hospitals into a <strong>single child-centered timeline</strong>. This update focuses on <strong>practical workflows</strong>—what to record and how data flows across home, school, center, and clinic.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">👨‍👩‍👧 Guardian Log — Home</h2>
+      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6 ml-2">
+        <li>Sleep duration and quality, morning condition</li>
+        <li>Meals and appetite changes</li>
+        <li>Emotional state, challenging behaviors (when and where)</li>
+        <li>Medication and post-dose changes in sleep, appetite, or behavior</li>
+        <li>Notes before/after center or hospital visits</li>
+      </ul>
+      <p class="text-gray-600 text-sm mb-6">※ Diagnosis and prescriptions remain clinical decisions. Guardian logs build <strong>real-world evidence</strong> from daily life.</p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">🏫 Teacher Observations — School</h2>
+      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6 ml-2">
+        <li>Class participation and task completion</li>
+        <li>Peer relationships and group activity responses</li>
+        <li>Sensory responses (sound, light, touch)</li>
+        <li>Problem behaviors and antecedents at school</li>
+        <li>Notes for guardians and therapists</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">🧩 Therapist Records — Center Sessions</h2>
+      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6 ml-2">
+        <li>Session goals and performance level</li>
+        <li>Child response and task completion</li>
+        <li>Next intervention focus</li>
+        <li>Observations to share with home and school</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">🏥 Hospital Summary Report — Before Visits</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        Authorized clinical staff can review summaries of recent sleep, behavior, medication, school, and center changes—so visits rely less on memory alone and more on <strong>longitudinal patterns</strong>.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">📊 Child Timeline &amp; AI Analysis Reports</h2>
+      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6 ml-2">
+        <li>Pattern summaries (e.g., poor sleep → lower school focus → evening behaviors)</li>
+        <li>Before/after comparisons for medication, therapy, or school changes</li>
+        <li>Weekly/monthly summaries for guardians and professionals</li>
+      </ul>
+      <div class="bg-amber-50 border-l-4 border-amber-500 p-5 mb-8 rounded-r-lg">
+        <p class="text-amber-900 text-sm leading-relaxed">
+          <strong>Important:</strong> Jarame AI does <strong>not</strong> diagnose, prescribe, or replace clinical decisions. It supports professionals with summaries and pattern organization.
+        </p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">🔗 School · Center · Hospital Linkage</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        Institutions can link care logs with consent-based permissions. Some sites are in beta/pilot. See <a href="/contact" class="text-primary-600 underline">contact</a> for adoption inquiries.
+      </p>
+
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        Full features and rollout status: <a href="/services/jarame" class="text-primary-600 underline font-medium">Jarame service page</a>.
+      </p>
+    `
+      }
+    },
+    content: `
+      <p class="text-sm text-gray-500 mb-6">[서비스 업데이트 · 2026-07-06]</p>
+
+      <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-4">
+        자람이는 발달장애 아이의 하루를 기록하고, 연결하고, 이해하게 만드는 AI 디지털케어로그입니다.
+      </p>
+
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        드림에이아이랩(DAL)의 발달장애 맞춤형 플랫폼 <strong>자람이</strong>가 보호자·교사·치료사·병원이 각각 남기던 기록을 <strong>하나의 아이 중심 타임라인</strong>으로 연결하는 통합 케어로그 기능을 업데이트했습니다. 이번 업데이트는 철학 설명보다 <strong>실제 사용 흐름</strong>과 <strong>무엇을 기록하고 어떻게 연결되는지</strong>에 초점을 맞췄습니다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">👨‍👩‍👧 보호자 일지 — 집에서의 하루</h2>
+      <p class="text-lg text-gray-700 mb-4 leading-relaxed">보호자는 앱에서 아래 항목을 간단히 기록할 수 있습니다.</p>
+      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6 ml-2">
+        <li>수면 시간·질, 기상 후 컨디션</li>
+        <li>식사·식욕 변화</li>
+        <li>감정 상태, 문제행동 발생 시점·상황</li>
+        <li>약 복용 여부 및 복용 후 수면·식욕·행동 변화</li>
+        <li>센터·병원 방문 전후 변화 메모</li>
+      </ul>
+      <p class="text-gray-600 text-sm mb-6">※ 진단·처방은 의료진 영역입니다. 보호자 기록은 <strong>실제 생활 근거</strong>를 남기는 용도입니다.</p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">🏫 교사 관찰 기록 — 학교에서의 하루</h2>
+      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6 ml-2">
+        <li>수업 참여도, 과제 수행 수준</li>
+        <li>또래 관계, 놀이·그룹 활동 반응</li>
+        <li>감각 민감 반응(소리·빛·촉각 등)</li>
+        <li>학교 내 문제행동·선행행동 기록</li>
+        <li>특이 사항 및 보호자·치료사 공유 메모</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">🧩 치료사 기록 — 센터에서의 세션</h2>
+      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6 ml-2">
+        <li>당일 치료 목표 및 수행 수준</li>
+        <li>아동 반응, 과제 완료도</li>
+        <li>다음 세션 중재 포인트</li>
+        <li>가정·학교와 연계가 필요한 관찰 사항</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">🏥 병원 요약 리포트 — 진료 전 한눈에</h2>
+      <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+        병원 관계자(동의·권한 범위 내)는 진료 전 <strong>최근 수면·행동·약물·학교·센터 변화</strong>가 요약된 리포트를 확인할 수 있습니다. 의사가 부모의 기억에만 의존하지 않고, <strong>기간별 흐름</strong>을 파악하는 데 활용할 수 있도록 설계되었습니다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">📊 아이별 타임라인 &amp; AI 분석 리포트</h2>
+      <p class="text-lg text-gray-700 mb-4 leading-relaxed">흩어진 기록은 <strong>시간순 타임라인</strong>으로 모입니다. AI는 다음을 돕습니다.</p>
+      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6 ml-2">
+        <li>반복 패턴 요약 (예: 수면 부족 → 학교 집중 저하 → 저녁 문제행동)</li>
+        <li>약물·치료·학교 환경 변화 전후 비교</li>
+        <li>보호자·교사·치료사가 함께 볼 수 있는 주간·월간 요약</li>
+      </ul>
+      <div class="bg-amber-50 border-l-4 border-amber-500 p-5 mb-8 rounded-r-lg">
+        <p class="text-amber-900 text-sm leading-relaxed">
+          <strong>중요:</strong> 자람이 AI는 <strong>진단·처방·치료 결정을 대신하지 않습니다.</strong> 전문가 판단을 보조하는 요약·패턴 정리 도구입니다.
+        </p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">🔗 학교·센터·병원 연계</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        기관·학교·병원은 동의·권한 설정에 따라 아이의 케어로그를 연계할 수 있습니다. 센터에서 효과 있었던 중재가 학교에 공유되고, 학교 관찰이 진료 요약에 반영되는 <strong>끊기지 않는 기록 흐름</strong>을 지향합니다. 일부 기관·현장은 베타·파일럿 단계이며, 도입 문의는 <a href="/contact" class="text-primary-600 underline">문의 페이지</a>를 이용해 주세요.
+      </p>
+
+      <div class="bg-primary-50 border border-primary-200 rounded-xl p-6 mb-8">
+        <p class="text-gray-800 font-semibold mb-2">이번 업데이트 한 줄 요약</p>
+        <p class="text-gray-700 leading-relaxed">
+          보호자·교사·치료사·병원이 각각 쓰던 기록 → <strong>하나의 아이 타임라인</strong> → AI 요약·패턴 분석 → 전문가가 아이를 더 입체적으로 이해하는 데 활용
+        </p>
+      </div>
+
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        자세한 기능·도입 상태는 <a href="/services/jarame" class="text-primary-600 underline font-medium">자람이 서비스 페이지</a>에서 확인할 수 있습니다.
+      </p>
+    `
+  },
+  {
+    id: 73,
+    title: '발달장애 치료에서 RWE가 중요한 이유: 자람이 디지털케어로그의 기술 구조',
+    excerpt: 'RWE(실제생활근거)와 RWD가 발달장애 영역에서 왜 핵심인지, 자람이가 가정·학교·센터·병원 데이터를 아이 중심 타임라인으로 연결하는 기술 구조와 AI의 역할·한계를 정해성 CTO의 설계 관점에서 설명합니다.',
+    category: 'tech',
+    date: '2026-07-06',
+    image: '🔬',
+    featured: false,
+    author: '드림에이아이랩 기술팀',
+    tags: ['RWE', 'RWD', '디지털케어로그', '자람이', '발달장애', 'Longitudinal Data', 'AI', '정해성', '실제생활근거', '패턴 분석', '기술블로그'],
+    i18n: {
+      en: {
+        title: 'Why RWE Matters in Developmental Disability Care: Jarame Digital Care Log Architecture',
+        excerpt: 'How Real World Evidence (RWE) and RWD apply to autism, ADHD, and developmental delays—and how Jarame connects home, school, center, and hospital data in a child-centered timeline, with clear AI boundaries.',
+        content: `
+      <p class="text-sm text-gray-500 mb-6">[Tech Blog · 2026-07-06]</p>
+
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        In developmental disability care—including autism spectrum, ADHD, and developmental delay—a single clinic test often cannot capture how a child lives across <strong>home, school, center, and hospital</strong>. This article explains why <strong>RWE (Real World Evidence)</strong> matters and how Dream AI Lab\'s <strong>Jarame</strong> implements it as a Digital Care Log.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">1. Why care data is hard to capture</h2>
+      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-8 ml-2">
+        <li><strong>Context-dependent behaviors</strong> vary with sleep, sensory load, peers, and environment</li>
+        <li><strong>Multi-site fragmentation</strong> without shared timelines or standards</li>
+        <li><strong>Longitudinal needs</strong> for early intervention and golden-window decisions</li>
+        <li><strong>Recall bias</strong> when visits rely on parent or teacher memory</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">2. Why RWE is needed</h2>
+      <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+        <strong>RWD</strong> is observational data from real environments; <strong>RWE</strong> is structured evidence derived by connecting and analyzing it. In this domain, RWE means weeks-to-months of life patterns—not a single test day.
+      </p>
+      <p class="text-gray-700 mb-8 leading-relaxed">
+        Observation-based, context-linked approaches many guardians recognize from media align with an RWE mindset. (No official partnership between any specific program or expert and Jarame is implied.)
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">3. Jarame data architecture</h2>
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 mb-6">
+        <p class="font-mono text-sm text-gray-800 leading-relaxed">
+          Child Profile → Care Events (timestamped) → Guardian / Teacher / Therapist / Clinical layers → AI Summary Layer
+        </p>
+      </div>
+      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-8 ml-2">
+        <li>Role-based standardized inputs</li>
+        <li>Single child ID and timeline alignment</li>
+        <li>Consent and RBAC-based sharing</li>
+        <li>Longitudinal care data archive</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">4. What AI does and does not do</h2>
+      <p class="text-gray-700 mb-4"><strong>Does:</strong> summarize multi-site logs, detect patterns, prepare visit-ready trend reports.</p>
+      <p class="text-gray-700 mb-8"><strong>Does not:</strong> confirm diagnoses, prescribe treatment, or replace clinicians, therapists, or teachers.</p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">5. Value by setting</h2>
+      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-8 ml-2">
+        <li><strong>Home:</strong> structured logs instead of recall-only intake</li>
+        <li><strong>School:</strong> observations linked to center and home context</li>
+        <li><strong>Center:</strong> interventions adjusted with school/home signals</li>
+        <li><strong>Hospital:</strong> real-world history within limited visit time</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">6. Design philosophy — Jung Haesung, CTO</h2>
+      <div class="bg-primary-50 border-l-4 border-primary-600 p-6 mb-8 rounded-r-lg">
+        <p class="text-lg text-gray-800 leading-relaxed italic">
+          "The core problem is not only a shortage of experts—it is that real-life data around the child is disconnected. Jarame extends deep contextual observation into a shared Digital Care Log and AI analysis layer. AI does not replace doctors; it builds infrastructure for real-world evidence."
+        </p>
+        <p class="text-gray-600 text-sm mt-3">— Jung Haesung, CTO, Dream AI Lab</p>
+      </div>
+
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        See <a href="/services/jarame" class="text-primary-600 underline">Jarame</a> and <a href="/technology" class="text-primary-600 underline">Technology</a> for details.
+      </p>
+    `
+      }
+    },
+    content: `
+      <p class="text-sm text-gray-500 mb-6">[기술 블로그 · 2026-07-06]</p>
+
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        발달장애·자폐 스펙트럼·ADHD·발달지연 영역에서 치료 효과를 논할 때, 임상시험실 안의 단일 검사만으로는 부족한 경우가 많습니다. 아이는 <strong>가정, 학교, 센터, 병원</strong>이라는 서로 다른 맥락에서 하루를 살아가기 때문입니다. 이 글은 <strong>RWE(Real World Evidence, 실제생활근거)</strong>가 왜 필요한지, 드림에이아이랩(DAL)의 <strong>자람이</strong>가 이를 디지털케어로그로 어떻게 구현하는지 기술 관점에서 정리합니다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">1. 발달장애 치료에서 데이터가 어려운 이유</h2>
+      <p class="text-lg text-gray-700 mb-4 leading-relaxed">발달장애 케어 데이터는 일반적인 EHR만으로 포착하기 어렵습니다.</p>
+      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6 ml-2">
+        <li><strong>맥락 의존성:</strong> 동일 행동도 수면·감각·또래 관계·환경에 따라 의미가 달라짐</li>
+        <li><strong>다기관 분산:</strong> 가정·학교·센터·병원 기록이 표준·시간축 없이 분리</li>
+        <li><strong>Longitudinal 특성:</strong> 조기개입·골든타임 논의에 장기 추적 데이터가 필수</li>
+        <li><strong>주관적 회상:</strong> 진료 시 부모·교사의 기억에 의존하면 패턴 누락</li>
+      </ul>
+      <p class="text-gray-700 mb-8 leading-relaxed">
+        문제는 개별 의료진·치료사·교사의 역량이 아니라, <strong>끊어진 시스템 구조</strong>에 가깝습니다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">2. RWE가 필요한 이유</h2>
+      <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+        <strong>RWD(Real World Data)</strong>는 실제 환경에서 축적되는 관찰·기록이고, <strong>RWE</strong>는 이를 체계적으로 연결·분석해 얻는 근거입니다. 발달장애 영역에서 RWE는 다음을 의미합니다.
+      </p>
+      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6 ml-2">
+        <li>검사실 하루가 아닌, <strong>수 주~수 개월간의 생활 패턴</strong></li>
+        <li>약물·중재·학교 환경 변화 전후의 <strong>반복 관찰</strong></li>
+        <li>가정·학교·센터·병원이 남긴 기록의 <strong>교차 검증 가능한 타임라인</strong></li>
+      </ul>
+      <p class="text-gray-700 mb-8 leading-relaxed">
+        최근 많은 보호자가 미디어를 통해 접한 <strong>관찰 기반·맥락 연결형 접근</strong>도, 본질적으로 아이의 생활 전체를 보는 RWE적 시각과 맞닿아 있습니다. (특정 방송·전문가와 자람이의 제휴·공식 관계는 없습니다.)
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">3. 자람이 디지털케어로그의 데이터 구조</h2>
+      <p class="text-lg text-gray-700 mb-4 leading-relaxed">자람이의 핵심은 <strong>아이(child) 중심 단일 타임라인</strong>입니다.</p>
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 mb-6">
+        <p class="font-mono text-sm text-gray-800 leading-relaxed">
+          Child Profile<br/>
+          └── Care Events (timestamped)<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;├── Guardian Log (수면, 식사, 행동, 약물)<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;├── Teacher Observation (수업, 또래, 감각, 문제행동)<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;├── Therapist Session (목표, 수행, 반응, 중재)<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;└── Clinical Note / Summary (진료 소견, 관찰 포인트)<br/>
+          └── AI Summary Layer (패턴, 추이, 교차 맥락 요약)
+        </p>
+      </div>
+      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-8 ml-2">
+        <li><strong>역할별 입력:</strong> 부모·교사·치료사·의료진 각자의 관찰을 표준 필드로 기록</li>
+        <li><strong>시간축 정렬:</strong> 모든 이벤트를 동일 아이 ID·타임스탬프로 정렬</li>
+        <li><strong>동의·권한:</strong> 기관·가정 간 공유 범위를 역할(RBAC) 기반으로 제어</li>
+        <li><strong>Longitudinal Care Data:</strong> 단발 검사가 아닌 장기 생활 데이터 아카이브</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">4. AI가 하는 일과 하지 않는 일</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        <div class="bg-green-50 border border-green-200 rounded-lg p-5">
+          <h3 class="font-bold text-green-900 mb-3">✅ AI가 하는 일</h3>
+          <ul class="text-green-800 text-sm space-y-2">
+            <li>· 다기관 기록 요약·타임라인 정리</li>
+            <li>· 수면·행동·치료 반응 간 패턴 탐지</li>
+            <li>·진료·상담 전 변화 추이 리포트 생성</li>
+            <li>·보호자·전문가가 공유할 요약 문장 제안</li>
+          </ul>
+        </div>
+        <div class="bg-red-50 border border-red-200 rounded-lg p-5">
+          <h3 class="font-bold text-red-900 mb-3">❌ AI가 하지 않는 일</h3>
+          <ul class="text-red-800 text-sm space-y-2">
+            <li>· 발달장애·자폐·ADHD 등 <strong>진단 확정</strong></li>
+            <li>· 약물·치료 <strong>처방·대체</strong></li>
+            <li>· 의사·치료사·교사 <strong>역할 대체</strong></li>
+            <li>· 근거 없는 예후 단정</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">5. 병원·센터·학교·가정에 주는 가치</h2>
+      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-8 ml-2">
+        <li><strong>가정:</strong> 기억·설문이 아닌 구조화된 일지로 진료·상담 준비</li>
+        <li><strong>학교:</strong> 센터·가정 맥락을 반영한 IEP·관찰 공유</li>
+        <li><strong>센터:</strong> 학교·가정 변화와 연계한 중재 조정</li>
+        <li><strong>병원:</strong> 제한된 진료 시간 안에서 <strong>실제생활근거</strong> 기반 히스토리 파악</li>
+        <li><strong>연구·정책:</strong> 동의·비식별 전제 하 RWE 축적 가능성 (파일럿 단계)</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">6. 정해성 CTO의 설계 철학</h2>
+      <div class="bg-primary-50 border-l-4 border-primary-600 p-6 mb-8 rounded-r-lg">
+        <p class="text-lg text-gray-800 leading-relaxed italic mb-4">
+          "발달장애 치료의 가장 큰 문제를 전문가 부족만으로 보지 않았다. 진짜 문제는 아이를 둘러싼 <strong>실제 생활 데이터가 연결되지 않는 구조</strong>다. 자람이는 특정 명의에게만 가능했던 깊은 관찰·맥락 분석을, 부모·학교·센터·병원이 함께 기록하는 디지털케어로그와 AI 분석으로 확장하는 것이 목표다. AI가 의사를 대신하는 게 아니라, 모든 전문가가 아이를 더 입체적으로 이해할 수 있도록 <strong>실제 생활 근거</strong>를 만드는 인프라다."
+        </p>
+        <p class="text-gray-600 text-sm">— 정해성 CTO, 드림에이아이랩</p>
+      </div>
+
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        기술 상세·도입 상태는 <a href="/services/jarame" class="text-primary-600 underline">자람이 서비스 페이지</a> 및 <a href="/technology" class="text-primary-600 underline">기술 소개</a>를 참고하세요.
+      </p>
+    `
+  },
+  {
+    id: 72,
+    title: '우리 아이의 발달장애 검사는 정말 충분한 정보를 바탕으로 이루어지고 있을까?',
+    excerpt: '몇 주 대기, 수십만~백만 원 검사비, 낯선 환경의 하루 관찰, 부모의 기억에 의존한 설문——발달장애 조기개입의 골든타임을 놓치지 않으려면 기억이 아닌 실제생활근거(RWE)가 필요합니다. 자람이는 부모·학교·센터·병원의 디지털케어로그를 연결합니다.',
+    category: 'press',
+    date: '2026-07-06',
+    image: '❓',
+    featured: true,
+    author: '드림에이아이랩',
+    tags: ['발달장애', '자폐', 'ADHD', '발달지연', '발달장애 검사', '발달장애 치료', '조기개입', '골든타임', '디지털케어로그', 'RWE', '실제생활근거', '자람이', '발달장애 AI', '소아정신과', '특수교육'],
+    i18n: {
+      en: {
+        title: 'Is Your Child\'s Developmental Disability Assessment Based on Enough Real-World Information?',
+        excerpt: 'Weeks of waiting, high test costs, one day in an unfamiliar room, parent recall on forms—early intervention needs Real World Evidence (RWE), not memory alone. Jarame connects Digital Care Logs across home, school, center, and hospital.',
+        content: `
+      <p class="text-sm text-gray-500 mb-6">[Press Release · 2026-07-06]</p>
+
+      <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-red-500 pl-4">
+        If your child\'s care still depends on memory and questionnaires, it may not rest on enough real-world evidence. Developmental disability care and early intervention need <strong>RWE (Real World Evidence)</strong> from daily life—not a single test day.
+      </p>
+
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        If you waited weeks and paid a large fee for an autism, ADHD, or developmental delay assessment—does that evaluation truly reflect your child\'s <strong>everyday self</strong>?
+      </p>
+
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        Can one day in an unfamiliar clinic, with an unfamiliar examiner, capture months of sleep, emotions, school life, therapy response, medication changes, and behavior patterns—especially when forms rely on <strong>parent recall</strong>?
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">Golden time: what we fear most is lost time</h2>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        In developmental disability care, the deepest risk is not cost alone—it is <strong>missed time</strong>. Delayed intervention, broken records, and disconnected settings can let a child\'s golden window pass. What matters is not one score but patterns across <strong>home, school, center, and hospital</strong>.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">Observation-based care many parents relate to</h2>
+      <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+        Many guardians resonate with <strong>observation-based, context-linked</strong> approaches seen in media—not because of celebrity, but because they show how home, school, relationships, emotions, and daily routines connect. This mirrors the core of <strong>RWE</strong>: evidence built where the child actually lives.
+      </p>
+      <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+        <em>※ This release does not imply any official partnership or endorsement between Jarame and any specific program or expert.</em>
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">A disconnected system—not individual failure</h2>
+      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-8 ml-2">
+        <li>Clinicians see limited visit time and parent recall</li>
+        <li>Therapists see the child in the therapy room; teachers see school; parents see home</li>
+        <li>These views rarely flow into one timeline</li>
+        <li>Medication, sleep, mood, and behaviors stay unlinked</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">Jarame: shared RWE Digital Care Log</h2>
+      <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+        Dream AI Lab\'s <strong>Jarame</strong> connects daily Digital Care Logs from parents, teachers, therapists, and clinicians—and helps build child-level <strong>RWE</strong> with AI pattern support.
+      </p>
+      <div class="bg-gray-50 border border-gray-200 rounded-lg p-5 mb-6 font-medium text-gray-800">
+        Poor sleep → lower school focus → weaker therapy response → evening challenging behaviors
+      </div>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        <strong>Jarame does not replace doctors.</strong> It connects the child\'s life outside the clinic so professionals can understand more accurately.
+      </p>
+
+      <div class="bg-primary-50 border-l-4 border-primary-600 p-6 mb-8 rounded-r-lg">
+        <p class="text-lg text-gray-800 leading-relaxed italic">
+          "Observation across a child\'s whole life can scale when home, school, center, and hospital record together. Jarame builds that infrastructure."
+        </p>
+        <p class="text-gray-600 text-sm mt-3">— Jung Haesung, CTO, Dream AI Lab</p>
+      </div>
+
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        Jarame draws on a nationwide center linkage pool of 5,700+ (public/open data; not MAU). Beta and pilot programs are underway. See <a href="/services/jarame" class="text-primary-600 underline font-medium">Jarame</a> and <a href="/contact" class="text-primary-600 underline font-medium">contact</a>.
+      </p>
+
+      <p class="text-sm text-gray-500 border-t border-gray-200 pt-6">
+        Press: press@dreamailab.com · Partnerships: partnership@dreamailab.co.kr
+      </p>
+    `
+      }
+    },
+    content: `
+      <p class="text-sm text-gray-500 mb-6">[보도자료 · 2026-07-06]</p>
+
+      <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-red-500 pl-4">
+        우리 아이의 치료가 기억과 설문에 의존하고 있다면, 아직 충분한 근거 위에서 이루어지고 있지 않을 수 있습니다. 발달장애 맞춤형 치료·조기개입에는 아이의 <strong>실제 생활 근거, RWE(Real World Evidence)</strong>가 필요합니다.
+      </p>
+
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        우리 아이가 발달장애·자폐 스펙트럼·ADHD·발달지연 등 검사를 받기 위해 몇 주를 기다리고, 수십만 원에서 백만 원 가까운 비용을 지불했다면——그 검사는 정말 <strong>우리 아이의 평소 모습</strong>을 충분히 담고 있을까요?
+      </p>
+
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        낯선 병원, 낯선 검사실, 낯선 검사자 앞에서 보인 <strong>하루의 반응</strong>이 아이의 전부일까요? 부모가 기억을 더듬어 작성한 설문지만으로 지난 몇 달간의 수면, 감정, 학교생활, 치료 반응, 약물 변화, 문제행동의 <strong>흐름</strong>을 충분히 설명할 수 있을까요?
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">치료의 골든타임, 비용보다 무서운 것은 ‘놓친 시간’</h2>
+      <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+        발달장애 치료에서 가장 무서운 것은 비용만이 아닙니다. <strong>놓쳐버린 시간</strong>입니다. 잘못된 판단, 늦은 개입, 끊어진 기록, 연결되지 않는 치료는 아이의 골든타임을 지나가게 할 수 있습니다. 부모는 그 결과를 몇 달이 아니라, <strong>몇 년</strong> 동안 감당해야 할 수도 있습니다.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        중요한 것은 단 한 번의 검사 결과가 아닙니다. 아이가 실제로 살아가는 <strong>가정, 학교, 센터, 병원</strong>에서 반복되는 변화와 패턴입니다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">많은 부모가 공감한 ‘관찰 기반 접근’——그것은 RWE와 닮아 있습니다</h2>
+      <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+        최근 많은 보호자가 TV 프로그램 등을 통해 접한 <strong>관찰 기반 상담</strong>에 공감한 이유는, 유명인 때문만이 아닙니다. 아이의 행동 하나만 보는 것이 아니라, <strong>가정·학교·관계·감정·양육 환경·생활 패턴</strong>이 연결되어 해석되는 과정을 보았기 때문입니다.
+      </p>
+      <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+        <em>※ 본 보도자료는 특정 방송·특정 전문가와 자람이의 공식 제휴·사용 관계를 의미하지 않습니다.</em>
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        이 과정은 발달장애 치료에서 매우 중요한 <strong>실제생활근거(RWE)</strong>의 핵심과 닮아 있습니다. RWE는 병원 안에서만 만들어지는 데이터가 아니라, <strong>아이가 실제로 살아가는 환경에서 축적되는 관찰과 변화의 기록</strong>입니다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">끊어진 시스템——누구를 탓하는 문제가 아닙니다</h2>
+      <p class="text-lg text-gray-700 mb-4 leading-relaxed">현실에서 이런 한계가 반복됩니다.</p>
+      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6 ml-2">
+        <li>의사는 <strong>제한된 진료 시간</strong>과 부모의 기억에 의존한다</li>
+        <li>치료사는 <strong>치료실 안</strong>의 아이를 본다</li>
+        <li>교사는 <strong>학교 안</strong>의 아이를 본다</li>
+        <li>부모는 <strong>집 안</strong>의 아이를 본다</li>
+        <li>하지만 이 정보들이 <strong>하나의 흐름으로 연결되지 않는다</strong></li>
+      </ul>
+      <p class="text-lg text-gray-700 mb-4 leading-relaxed">그 결과——</p>
+      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-8 ml-2">
+        <li>병원은 학교생활을, 센터는 가정 변화를, 학교는 센터 중재 효과를 충분히 모른 채 개입한다</li>
+        <li>약물 변화 후 수면·식욕·감정·행동 변화가 <strong>연결되지 않는다</strong></li>
+        <li>아이의 치료가 데이터가 아니라 <strong>기억과 인상</strong>에 의존한다</li>
+      </ul>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        이것은 특정 의사·병원·치료사·교사의 잘못이 아닙니다. <strong>끊어진 구조</strong>의 문제입니다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">자람이——부모·학교·센터·병원이 함께 만드는 RWE 디지털케어로그</h2>
+      <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+        드림에이아이랩(DAL)의 발달장애 맞춤형 플랫폼 <strong>자람이</strong>는 이 과정을 특정 전문가에게만 맡기지 않습니다. 부모, 교사, 치료사, 의사가 매일 남기는 <strong>디지털케어로그</strong>를 하나로 연결하고, AI가 아이별 <strong>실제생활근거(RWE)</strong>를 만들 수 있도록 돕습니다.
+      </p>
+      <p class="text-lg text-gray-700 mb-4 leading-relaxed">예를 들어 이런 흐름을 발견할 수 있습니다.</p>
+      <div class="bg-gray-50 border border-gray-200 rounded-lg p-5 mb-6 font-medium text-gray-800">
+        수면 부족 → 학교 집중력 저하 → 센터 치료 반응 감소 → 저녁 문제행동 증가
+      </div>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        <strong>자람이는 의사를 대신하는 AI가 아닙니다.</strong> 전문가가 우리 아이를 더 정확하게 이해할 수 있도록, <strong>진료실 밖 아이의 하루를 데이터로 연결</strong>하는 발달장애 맞춤형 AI 디지털케어로그입니다.
+      </p>
+
+      <div class="bg-primary-50 border-l-4 border-primary-600 p-6 mb-8 rounded-r-lg">
+        <p class="text-lg text-gray-800 leading-relaxed italic mb-4">
+          "관찰 기반으로 아이의 삶 전체를 보는 방식은, 이제 부모·학교·센터·병원이 함께 기록하는 RWE 디지털케어로그로 확장될 수 있습니다. 자람이는 그 인프라를 만듭니다."
+        </p>
+        <p class="text-gray-600 text-sm">— 정해성 CTO, 드림에이아이랩</p>
+      </div>
+
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        자람이는 전국 센터 약 5,700+ 기관 연계 풀(공공·개방 데이터, MAU와 별개)을 바탕으로 일부 기관·현장 베타·파일럿을 진행 중이며, 2026년 국가 시범사업 논의를 염두에 두고 있습니다. 자세한 내용은 <a href="/services/jarame" class="text-primary-600 underline font-medium">자람이 서비스 페이지</a> 및 <a href="/contact" class="text-primary-600 underline font-medium">도입 문의</a>를 참고해 주세요.
+      </p>
+
+      <p class="text-sm text-gray-500 border-t border-gray-200 pt-6">
+        문의: press@dreamailab.com · 제휴·도입: partnership@dreamailab.co.kr
+      </p>
+    `
+  },
+  {
     id: 71,
     title: '[단독] 국내 최고 인공지능 아키텍트, 전 국민 창업 오디션 평정 나선다… 수천억 글로벌 투자 정조준',
     excerpt: '국가대표 창업 오디션 \'모두의 창업\'에 6만 3천여 명이 지원한 가운데 AI 디지털케어로그 개발자 정해성 연구자 팀이 출사표. 자람이·노아AI 융합 BM으로 발달장애·글로벌 투자 시장을 겨냥한다.',

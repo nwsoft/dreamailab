@@ -27,6 +27,12 @@
 - IR: https://dreamailab.com/ir/
 
 ## Latest news (2026)
+- Developmental disability assessment & RWE press release (KO): https://dreamailab.com/news/72/
+- Developmental disability assessment & RWE (EN): https://dreamailab.com/en/news/72/
+- RWE technical architecture (KO): https://dreamailab.com/news/73/
+- RWE technical architecture (EN): https://dreamailab.com/en/news/73/
+- Jarame unified care timeline update (KO): https://dreamailab.com/news/74/
+- Jarame unified care timeline update (EN): https://dreamailab.com/en/news/74/
 - Everyone's Startup audition (KO): https://dreamailab.com/news/71/
 - Everyone's Startup audition (EN): https://dreamailab.com/en/news/71/
 - Jarame launch press release (KO): https://dreamailab.com/news/70/
