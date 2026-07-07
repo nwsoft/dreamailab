@@ -450,6 +450,7 @@ export default function JarameService() {
         className="sticky top-0 z-20 bg-white/95 backdrop-blur border-b border-gray-100 py-2.5"
       >
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap justify-center gap-x-4 gap-y-1 text-xs sm:text-sm">
+          <a href="#free-plan" className="text-blue-700 font-medium hover:underline">무료 요금제</a>
           <a href="#h2-2026-rollout" className="text-blue-700 font-medium hover:underline">2026 센터 배포</a>
           <a href="#school-translator" className="text-blue-700 font-medium hover:underline">학교·가정 연결</a>
           <a href="#for-families" className="text-blue-700 font-medium hover:underline">보호자·전문가</a>
@@ -573,6 +574,49 @@ export default function JarameService() {
           <p className="text-center text-sm">
             <Link href="/news/75" className="text-blue-700 font-medium hover:underline">
               보도자료: 2026 하반기 센터 배포 →
+            </Link>
+            {' · '}
+            <Link href="/news/77" className="text-blue-700 font-medium hover:underline">
+              무료 요금제 →
+            </Link>
+          </p>
+        </div>
+      </section>
+
+      {/* 무료 요금제 · 사회적 보급 */}
+      <section id="free-plan" className="py-14 bg-emerald-50/60 border-b border-emerald-100 scroll-mt-14">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-center text-xs font-semibold text-emerald-800 uppercase tracking-wide mb-3">Pricing</p>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2 text-center">
+            센터·보호자 무료 요금제
+          </h2>
+          <p className="text-center text-gray-600 text-sm mb-8 max-w-3xl mx-auto leading-relaxed">
+            발달장애 케어 표준화는 국가·보건복지부가 해야 할 일이지만, 절차 지연 속 현장은 기다릴 수 없습니다.
+            자람이는 <strong className="text-gray-800">기본 기능 무료</strong>, AI 호출 비용 <strong className="text-gray-800">최소화</strong>,
+            <strong className="text-gray-800"> 영세 센터(20인 이하)</strong>·<strong className="text-gray-800">바우처 미지원 보호자</strong> 가정을 위한 무료 플랜으로 사회적 약자 보급에 나섭니다.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <div className="bg-white rounded-xl p-6 border border-emerald-100 shadow-sm">
+              <h3 className="font-bold text-gray-900 mb-2">센터·치료사</h3>
+              <ul className="text-sm text-gray-700 space-y-1.5 list-disc list-inside">
+                <li>기본 행정·케어로그·보호자 연계 무료</li>
+                <li>AI 치료일지 초안 — 호출 비용 최소화</li>
+                <li>종사자 20인 이하 영세 센터 무료 플랜</li>
+              </ul>
+            </div>
+            <div className="bg-white rounded-xl p-6 border border-emerald-100 shadow-sm">
+              <h3 className="font-bold text-gray-900 mb-2">보호자·가정</h3>
+              <ul className="text-sm text-gray-700 space-y-1.5 list-disc list-inside">
+                <li>가정 일지·요약·연계 기본 기능 무료</li>
+                <li>바우처로 치료비는 충당하나 디지털 도구는 미지원인 경우 많음</li>
+                <li>해당 가정 대상 무료 플랜 병행</li>
+              </ul>
+            </div>
+          </div>
+          <p className="text-center text-xs text-gray-500 mb-3">※ 무료 범위·AI 한도는 약관·도입 시점에 따릅니다.</p>
+          <p className="text-center text-sm">
+            <Link href="/news/77" className="text-emerald-800 font-medium hover:underline">
+              보도자료: 무료 요금제·정해성 CTO의 현장 보급 →
             </Link>
           </p>
         </div>
