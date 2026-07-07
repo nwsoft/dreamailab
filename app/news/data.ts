@@ -173,7 +173,7 @@ export const newsArticles: NewsArticle[] = [
 
       <h2 class="text-2xl font-bold text-gray-900 mb-4">그럼에도 포기하지 않은 이유</h2>
       <p class="text-lg text-gray-700 mb-8 leading-relaxed">
-        정해성 CTO는 이 문제를 시장 아이템이 아니라 <strong>누군가 반드시 해야 하는 일</strong>로 보았습니다. 아버지로서, 그리고 AI 연구자로서 현장에서 반복되는 기록 단절을 그냥 둘 수 없었습니다. “어렵기 때문에 하지 말자”가 아니라, “어렵기 때문에 제대로 해야 한다”는 결론이 자람이의 출발점이었습니다.
+        정해성은 이 문제를 시장 아이템이 아니라 <strong>누군가 반드시 해야 하는 일</strong>로 보았습니다. 아버지이자 AI 연구자로서 현장에서 반복되는 기록 단절을 그냥 둘 수 없었습니다. “어렵기 때문에 하지 말자”가 아니라, “어렵기 때문에 제대로 해야 한다”는 결론이 자람이의 출발점이었습니다.
       </p>
 
       <h2 class="text-2xl font-bold text-gray-900 mb-4">자람이가 만들고 있는 것</h2>
