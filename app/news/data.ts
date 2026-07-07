@@ -47,6 +47,171 @@ export function getLocalizedArticle(
 
 export const newsArticles: NewsArticle[] = [
   {
+    id: 80,
+    title: '발달장애 가족은 왜 늘 불안한가 — 기록이 끊긴 시스템을 다시 설계해야 하는 이유',
+    excerpt: '발달장애 치료의 핵심 문제는 부모·학교·센터·병원의 정보가 하나로 연결되지 않는 구조입니다. 이 글은 개인의 노력이 아니라 시스템 재설계가 왜 필요한지, 그리고 기록 연결이 왜 치료의 합리성을 높이는지 인사이트 관점에서 정리합니다.',
+    category: 'insight',
+    date: '2026-07-07',
+    image: '💡',
+    featured: false,
+    author: '드림에이아이랩 인사이트팀',
+    tags: ['인사이트', '발달장애', '기록 단절', '부모 불안', '치료 데이터', '시스템 설계', '자람이'],
+    content: `
+      <p class="text-sm text-gray-500 mb-6">[인사이트 · 2026-07-07]</p>
+
+      <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-4">
+        발달장애 가족이 지치는 이유는 노력 부족이 아니라, <strong>아이를 전체로 볼 수 있는 기록 구조가 없기 때문</strong>입니다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">부모가 반복해서 묻는 질문</h2>
+      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-8 ml-2">
+        <li>우리 아이는 실제로 좋아지고 있는가</li>
+        <li>지금 치료가 맞는 방향인가</li>
+        <li>센터·학교·병원 판단이 왜 서로 다른가</li>
+        <li>내가 놓친 정보 때문에 골든타임을 잃는 것은 아닌가</li>
+      </ul>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        이 질문은 과민 반응이 아니라, 정보가 분절된 시스템에서 생기는 구조적 불안입니다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">문제는 현장이 아니라 연결 구조</h2>
+      <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+        발달장애 현장에는 아이를 위해 최선을 다하는 부모·치료사·교사·의사가 많습니다. 그러나 각자의 기록은 서로 잘 연결되지 않습니다.
+      </p>
+      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-8 ml-2">
+        <li>병원은 제한된 진료 시간 안에서 부모 설명에 의존</li>
+        <li>센터 기록은 센터 내부 문서에 머무름</li>
+        <li>학교 관찰은 치료 계획과 체계적으로 연결되기 어려움</li>
+        <li>부모는 카톡·메모·기억에 분산된 정보를 매번 다시 정리</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">왜 치료가 비합리적으로 느껴지는가</h2>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        많은 부모가 확신 없이도 치료를 계속합니다. 대안이 부족하고, 중단에 대한 두려움이 크기 때문입니다. 이때 필요한 것은 “더 강한 권유”가 아니라 <strong>목표·과정·결과를 비교 가능한 기록</strong>으로 남기는 체계입니다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">무엇이 바뀌어야 하는가</h2>
+      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-8 ml-2">
+        <li>아이 중심 타임라인으로 기록 통합</li>
+        <li>역할별 표준 입력(보호자·교사·치료사·의료진)</li>
+        <li>동의·권한 기반 공유(RBAC)</li>
+        <li>부모가 이해할 수 있는 언어로 요약·설명</li>
+        <li>시간 경과에 따른 변화 추적과 근거 비교</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">데이터가 쌓이면 달라지는 점</h2>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        데이터의 의미는 “숫자가 많아지는 것”이 아닙니다. 아이의 하루가 사라지지 않고 남는 것입니다. 부모의 막연한 불안이 확인 가능한 근거로 바뀌고, 전문가 경험이 다음 판단에 재사용 가능한 지식이 됩니다.
+      </p>
+
+      <div class="bg-amber-50 border-l-4 border-amber-500 p-5 mb-8 rounded-r-lg">
+        <p class="text-amber-900 text-sm leading-relaxed">
+          <strong>중요:</strong> 기록 연결 시스템은 진단·처방을 대체하지 않습니다. 전문가 판단을 더 정확하게 돕기 위한 기반입니다.
+        </p>
+      </div>
+
+      <div class="bg-white border border-gray-200 rounded-xl p-6 mb-8">
+        <p class="font-semibold text-gray-900 mb-3">관련 콘텐츠</p>
+        <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+          <li><a href="/news/79" class="text-primary-600 underline">왜 포기하지 않았는가 (Founder Story)</a></li>
+          <li><a href="/news/76" class="text-primary-600 underline">부모-학교 언어 번역 인사이트</a></li>
+          <li><a href="/news/74" class="text-primary-600 underline">아이 타임라인 업데이트</a></li>
+          <li><a href="/technology/platform" class="text-primary-600 underline">AI디지털케어로그 기술 개요</a></li>
+          <li><a href="/services/jarame" class="text-primary-600 underline">자람이 서비스 보기</a></li>
+        </ul>
+      </div>
+    `,
+  },
+  {
+    id: 79,
+    title: '우리는 왜 자람이를 만드는가 — 발달장애 가족이 혼자 버티지 않아도 되는 사회를 위해',
+    excerpt: '자람이는 치료 앱 하나를 만드는 프로젝트가 아니라, 가정·학교·센터·병원에 흩어진 기록을 아이 중심으로 연결하는 시스템을 만드는 시도입니다. 모두가 어렵다고 말했지만, “누군가는 반드시 해야 하는 일”이라는 믿음으로 시작한 Founder Story입니다.',
+    category: 'founder',
+    date: '2026-07-07',
+    image: '🧠',
+    featured: true,
+    author: '정해성 CTO · 드림에이아이랩',
+    tags: ['Founder Story', '자람이', '발달장애', 'AI디지털케어로그', '기록 단절', '연결 시스템', '정해성', '철학'],
+    content: `
+      <p class="text-sm text-gray-500 mb-6">[Founder Story · 2026-07-07]</p>
+
+      <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-4">
+        자람이는 “기능을 하나 더 붙인 서비스”가 아니라, <strong>발달장애 가족이 혼자 버티지 않아도 되게 하는 연결 시스템</strong>을 만들려는 프로젝트입니다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">우리가 마주한 질문</h2>
+      <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+        발달장애 가족은 매일 같은 질문 앞에 섭니다.
+      </p>
+      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-8 ml-2">
+        <li>우리 아이는 정말 좋아지고 있는가</li>
+        <li>지금 받는 치료가 맞는가</li>
+        <li>병원·센터·학교 설명이 왜 서로 다른가</li>
+        <li>부모가 놓치고 있는 핵심은 없는가</li>
+      </ul>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        이 질문은 불안이 아니라 현실입니다. 아이의 삶은 하나인데 기록은 기관별로 흩어져 있고, 판단은 짧은 상담 시간에 조각난 정보로 이루어집니다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">현장의 문제는 사람보다 시스템에 있었다</h2>
+      <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+        현장에는 이미 좋은 부모, 좋은 치료사, 좋은 교사, 좋은 의사가 많습니다. 그럼에도 어려운 이유는 선의가 부족해서가 아니라 <strong>기록이 연결되지 않는 구조</strong> 때문이었습니다.
+      </p>
+      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-8 ml-2">
+        <li>병원은 병원 기록만, 센터는 센터 기록만 봅니다.</li>
+        <li>학교 관찰과 가정 변화가 치료 계획에 체계적으로 연결되기 어렵습니다.</li>
+        <li>부모는 결국 기억과 감정으로 설명할 수밖에 없습니다.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">왜 많은 시도가 중간에서 멈췄는가</h2>
+      <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+        처음 이 문제를 꺼냈을 때 돌아온 말은 비슷했습니다. “법적 이슈가 너무 크다”, “기관 협력이 불가능하다”, “현장은 바빠서 못 쓴다”, “데이터를 모아도 책임이 커진다.”
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        대부분 틀린 말은 아니었습니다. 실제로 어려운 문제였습니다. 그래서 많은 팀이 시도 단계에서 멈추거나, 기능 단위 제품으로 축소하다가 본질적인 연결 문제를 건드리지 못했습니다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">그럼에도 포기하지 않은 이유</h2>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        정해성 CTO는 이 문제를 시장 아이템이 아니라 <strong>누군가 반드시 해야 하는 일</strong>로 보았습니다. 아버지로서, 그리고 AI 연구자로서 현장에서 반복되는 기록 단절을 그냥 둘 수 없었습니다. “어렵기 때문에 하지 말자”가 아니라, “어렵기 때문에 제대로 해야 한다”는 결론이 자람이의 출발점이었습니다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">자람이가 만들고 있는 것</h2>
+      <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+        자람이는 치료를 대체하지 않습니다. 전문가를 대체하지도 않습니다. 대신 아이를 둘러싼 데이터를 <strong>하나의 흐름</strong>으로 연결합니다.
+      </p>
+      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-8 ml-2">
+        <li>가정·학교·센터·병원의 기록을 아이 중심 타임라인으로 정렬</li>
+        <li>부모가 이해할 수 있는 언어로 변화와 패턴을 설명</li>
+        <li>전문가가 다음 판단을 더 정확히 할 수 있게 근거를 축적</li>
+      </ul>
+
+      <div class="bg-primary-50 border border-primary-200 rounded-xl p-6 mb-8">
+        <p class="font-semibold text-gray-900 mb-2">Founder Note</p>
+        <p class="text-gray-700 leading-relaxed italic">
+          "발달장애 가족이 시스템의 빈틈을 혼자 메우는 시대를 끝내고 싶었습니다. 자람이는 그 빈틈을 연결하는 인프라가 되기 위해 시작됐습니다."
+        </p>
+        <p class="text-gray-600 text-sm mt-3">— 정해성 CTO, 드림에이아이랩</p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">우리가 포기하지 않는 이유</h2>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        발달장애는 단순한 문제가 아니며, 의료·교육·복지·가정·기술이 모두 얽힌 영역입니다. 그래서 더 오래 걸릴 수 있습니다. 하지만 아이를 키우는 부모가 매일 포기하지 않듯, 현장의 전문가가 매일 다시 시도하듯, 우리도 포기하지 않습니다. <strong>발달장애 가족이 더 이상 혼자 버티지 않아도 되는 사회</strong>, 그것이 자람이를 만드는 이유입니다.
+      </p>
+
+      <div class="bg-white border border-gray-200 rounded-xl p-6 mb-8">
+        <p class="font-semibold text-gray-900 mb-3">관련 콘텐츠</p>
+        <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+          <li><a href="/news/76" class="text-primary-600 underline">왜 부모-학교 언어 번역이 필요한가 (인사이트)</a></li>
+          <li><a href="/news/75" class="text-primary-600 underline">전국 센터 배포 회사 뉴스</a></li>
+          <li><a href="/news/74" class="text-primary-600 underline">아이 타임라인 업데이트</a></li>
+          <li><a href="/technology/platform" class="text-primary-600 underline">AI디지털케어로그 기술 개요</a></li>
+          <li><a href="/services/jarame" class="text-primary-600 underline">자람이 서비스 소개</a></li>
+        </ul>
+      </div>
+    `,
+  },
+  {
     id: 78,
     title: '글로벌커플케어(GCC), 2026 상반기 오픈 — 국내 최초 국제결혼 마켓플레이스',
     excerpt: 'GCC는 회원을 직접 매칭하거나 결혼을 주선하지 않습니다. 검증된 국제결혼 업체가 입점하고, 소비자가 가격·절차·후기를 비교해 선택하는 국내 최초 마켓플레이스입니다. 2026년 상반기 공식 오픈을 목표로 합니다.',
