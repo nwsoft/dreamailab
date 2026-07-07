@@ -1,3 +1,8 @@
+import {
+  getCategoryName as getNewsCategoryName,
+  getNewsCategoriesForFilter,
+} from '../../lib/news-categories'
+
 export interface NewsArticleLocale {
   title: string
   excerpt: string
@@ -43,58 +48,95 @@ export function getLocalizedArticle(
 export const newsArticles: NewsArticle[] = [
   {
     id: 78,
-    title: '글로벌커플케어(GCC), 2026 상반기 공식 오픈 예정 — AI 디지털케어로그 기반 국제결혼·가족 케어 인프라',
-    excerpt: '단순 프로필 매칭을 넘어 만남부터 결혼·다문화 정착까지 생활 데이터를 연결하는 글로벌커플케어(GCC)가 2026년 상반기 공식 오픈을 목표로 합니다. 국제결혼 사기·조기 이혼·가격 비대칭을 줄이고, 검증된 업체만 입점하는 신뢰 마켓플레이스를 지향합니다.',
+    title: '글로벌커플케어(GCC), 2026 상반기 오픈 — 국내 최초 국제결혼 마켓플레이스',
+    excerpt: 'GCC는 회원을 직접 매칭하거나 결혼을 주선하지 않습니다. 검증된 국제결혼 업체가 입점하고, 소비자가 가격·절차·후기를 비교해 선택하는 국내 최초 마켓플레이스입니다. 2026년 상반기 공식 오픈을 목표로 합니다.',
     category: 'press',
     date: '2026-07-07',
     image: '💒',
     featured: true,
     author: '드림에이아이랩',
-    tags: ['글로벌커플케어', 'GCC', '국제결혼', '다문화가족', 'AI 디지털케어로그', '예측형 매칭', '사회문제해결', '정해성', '2026 상반기', '마켓플레이스', '공공협력'],
+    tags: ['글로벌커플케어', 'GCC', '국제결혼', '마켓플레이스', '다문화가족', '정보 비교', '투명성', '2026 상반기', '플랫폼', '검증 입점'],
     i18n: {
       en: {
-        title: 'Global Couple Care (GCC) Targets H1 2026 Launch — AI Digital Care Log for International Marriage & Family Life',
-        excerpt: 'Beyond profile-only dating apps, GCC connects meeting, marriage, and multicultural settlement in one care architecture. It aims to reduce fraud, early divorce, and price opacity through a verified marketplace—not direct brokerage.',
+        title: 'Global Couple Care (GCC) Targets H1 2026 Launch — Korea\'s First International Marriage Marketplace',
+        excerpt: 'GCC does not match members or arrange marriages directly. Verified international marriage agencies list on the platform; consumers compare pricing, procedures, and reviews. Official launch targeted for H1 2026.',
         content: `
       <p class="text-sm text-gray-500 mb-6">[Press Release · 2026-07-07]</p>
 
       <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-4">
-        International marriage touches families, immigration, language, and children—not just a match. <strong>Global Couple Care (GCC)</strong> is Dream AI Lab's answer: an <strong>AI Digital Care Log–based</strong> platform that links pre-marriage transparency with post-marriage family support, targeting <strong>official launch in H1 2026</strong>.
+        <strong>Global Couple Care (GCC)</strong> is a <strong>marketplace platform</strong> where verified international marriage agencies and partners list services—and consumers compare and choose. Like Encar for used cars or Yanolja for lodging, GCC brings <strong>transparent comparison</strong> to a market that has long lacked it. <strong>Official launch is targeted for H1 2026.</strong>
       </p>
 
-      <h2 class="text-2xl font-bold text-gray-900 mb-4">Social problems we address</h2>
-      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-8 ml-2">
-        <li><strong>Information asymmetry</strong> — opaque pricing, hidden fees, hard-to-verify agencies</li>
-        <li><strong>Fraud &amp; unethical brokers</strong> — fake profiles, one-sided payments, weak accountability</li>
-        <li><strong>Early divorce &amp; settlement failure</strong> — support stops after the contract is signed</li>
-        <li><strong>Haphazard start</strong> — couples begin without standard procedures, then pay more to fix mistakes</li>
-      </ul>
-
-      <h2 class="text-2xl font-bold text-gray-900 mb-4">What GCC innovates</h2>
-      <p class="text-lg text-gray-700 mb-4 leading-relaxed">
-        GCC is designed as the world's first <strong>global couple matching + life-care architecture</strong> built on AI Digital Care Log—extending beyond swipe-based apps to track <strong>consent-based communication, conflict-resolution patterns, and settlement milestones</strong> across the family lifecycle.
-      </p>
       <p class="text-lg text-gray-700 mb-8 leading-relaxed">
-        In Korea, GCC is building a <strong>predictive matching fusion model</strong> to support marriage immigrants and multicultural families—with infrastructure that can link to <strong>public institutions and NGOs</strong> for ongoing care, not one-off introductions.
+        GCC is <strong>not</strong> a marriage agency, matchmaking app, or service that directly introduces spouses. It does <strong>not</strong> guarantee marriage outcomes. Users review verified listings, compare quotes and procedures, and contract with the partner they select.
       </p>
 
-      <h2 class="text-2xl font-bold text-gray-900 mb-4">Building a fair market</h2>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Problems in the market today</h2>
       <ul class="list-disc list-inside text-gray-700 space-y-2 mb-8 ml-2">
-        <li><strong>Verified marketplace</strong> — KYC, reviews, completion rates; bad actors removed</li>
-        <li><strong>Transparent pricing</strong> — standard quotes, procedures, timelines by country</li>
-        <li><strong>Not direct brokerage</strong> — users compare and contract with verified partners</li>
-        <li><strong>End-to-end services</strong> — legal, visa, travel, wedding, health, education after marriage</li>
+        <li><strong>Information asymmetry</strong> — hard to compare agencies, pricing, or real outcomes</li>
+        <li><strong>No standard procedures</strong> — different rules by country; documents and timelines unclear</li>
+        <li><strong>Weak post-contract support</strong> — little help after fees are paid</li>
+        <li><strong>Settlement gaps</strong> — language, employment, housing, and childcare after marriage</li>
+        <li><strong>Trust risk</strong> — unverified brokers, hidden costs, unethical practices</li>
       </ul>
 
-      <div class="bg-primary-50 border-l-4 border-primary-600 p-6 mb-8 rounded-r-lg">
-        <p class="text-lg text-gray-800 leading-relaxed italic">
-          "International marriage should not start in the dark. We connect transparency before marriage with care after marriage—so families build on trust, not guesswork."
-        </p>
-        <p class="text-gray-600 text-sm mt-3">— Jung Haesung, CTO &amp; inventor of AI Digital Care Log, Dream AI Lab</p>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">What GCC is — a marketplace first</h2>
+      <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+        GCC’s core model is <strong>Marketplace → trust → standardization</strong>. Verified agencies and professionals join under platform rules; consumers see <strong>standard quotes, checklists, reviews, and completion metrics</strong> before they decide.
+      </p>
+      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-8 ml-2">
+        <li><strong>Verification &amp; KYC</strong> — onboarding, reporting, and removal of bad actors</li>
+        <li><strong>Transparent pricing</strong> — country- and case-based reference costs</li>
+        <li><strong>Procedure standardization</strong> — marriage, visa, and document workflows</li>
+        <li><strong>Partner ecosystem</strong> — legal, administrative, translation, travel, and settlement services</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">How it differs from traditional agencies</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+          <h3 class="font-bold text-gray-900 mb-3">Traditional practice</h3>
+          <ul class="text-sm text-gray-700 space-y-2 list-disc list-inside">
+            <li>Word-of-mouth agency selection</li>
+            <li>Quotes only after meetings</li>
+            <li>Little accountability after contract</li>
+            <li>Settlement support often missing</li>
+          </ul>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+          <h3 class="font-bold text-gray-900 mb-3">On GCC</h3>
+          <ul class="text-sm text-gray-700 space-y-2 list-disc list-inside">
+            <li>Compare multiple verified listings in one place</li>
+            <li>Published procedures and timelines</li>
+            <li>Reviews and platform safety rules</li>
+            <li>Guides and partners for post-marriage settlement</li>
+          </ul>
+        </div>
       </div>
 
-      <p class="text-gray-600 text-sm mb-6">
-        ※ GCC is an information &amp; partner-connection platform, not a direct matchmaking broker. Launch scope follows terms at open. <a href="/services/marriage" class="text-primary-600 underline">GCC service</a> · <a href="/contact?service=marriage" class="text-primary-600 underline">Contact</a>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Where AI fits — platform competitiveness</h2>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        AI supports the marketplace—it is not the product itself. GCC applies AI to <strong>translation, document checklists, and administrative assistance</strong> so users and agencies spend less time on repetitive work. GCC does <strong>not</strong> claim to predict marriage success or recommend “ideal couples.”
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">H1 2026 launch plan</h2>
+      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-8 ml-2">
+        <li><strong>Now</strong> — MVP pilot (profiles, escrow, contracts, core modules)</li>
+        <li><strong>H1 2026</strong> — public launch; marketplace and verification scaled up</li>
+        <li><strong>Phased</strong> — community, settlement guides, education and partner links</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Long-term direction</h2>
+      <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+        GCC starts as a <strong>pre-marriage marketplace</strong>. Over time it can extend along the family journey—<strong>marriage → settlement → family life → education and health services → public and NGO partnerships</strong>. Dream AI Lab’s <strong>AI Digital Care Log</strong> is the long-term technical foundation for connecting family-life data after marriage; it is not the headline of today’s launch.
+      </p>
+      <p class="text-gray-600 text-sm mb-6 leading-relaxed">
+        ※ GCC is an information and partner-connection platform, not a direct broker. Contracts are between users and listed partners. Scope at launch follows published terms.
+        <a href="/services/marriage" class="text-primary-600 underline">GCC service</a> ·
+        <a href="https://globalcouplecare.com" class="text-primary-600 underline">globalcouplecare.com</a> ·
+        <a href="/contact?service=marriage" class="text-primary-600 underline">Contact</a>
+      </p>
+      <p class="text-sm text-gray-500 border-t border-gray-200 pt-6">
+        press@dreamailab.com · partnership@dreamailab.co.kr
       </p>
     `
       }
@@ -103,103 +145,103 @@ export const newsArticles: NewsArticle[] = [
       <p class="text-sm text-gray-500 mb-6">[보도자료 · 2026-07-07]</p>
 
       <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-4">
-        국제결혼은 두 사람의 만남이 아니라 <strong>가족·이민·언어·자녀·정착</strong>까지 이어지는 사회적 선택입니다. 드림에이아이랩(DAL)의 <strong>글로벌커플케어(GCC, Global Couple Care)</strong>는 AI 디지털케어로그를 기반으로 <strong>만남 전 투명성</strong>과 <strong>결혼 이후 가족 케어</strong>를 하나의 인프라로 연결하며, <strong>2026년 상반기 공식 오픈</strong>을 목표로 합니다.
+        <strong>글로벌커플케어(GCC, Global Couple Care)</strong>는 <strong>검증된 국제결혼 업체·전문 파트너가 입점하고, 소비자가 가격·절차·후기를 비교해 선택하는 국내 최초 국제결혼 마켓플레이스</strong>입니다. 중고차·숙박·부동산 플랫폼이 정보 비교를 일상화했듯, GCC는 국제결혼 시장에 <strong>플랫폼과 투명한 비교</strong>를 가져옵니다. <strong>2026년 상반기 공식 오픈</strong>을 목표로 합니다.
       </p>
 
-      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">왜 지금 — 어떤 사회 문제인가</h2>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed bg-gray-50 border border-gray-200 rounded-xl p-5">
+        GCC는 <strong>결혼정보회사가 아니며</strong>, 회원을 직접 매칭하거나 결혼을 주선·중개하지 않습니다. 이용자는 플랫폼에서 업체 정보를 비교한 뒤, <strong>선택한 검증 파트너와 직접 상담·계약</strong>합니다. 결혼 성공이나 매칭 결과를 보장하는 서비스도 아닙니다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">국제결혼 시장, 무엇이 문제인가</h2>
       <p class="text-lg text-gray-700 mb-4 leading-relaxed">
-        국내 국제결혼 시장은 오랫동안 <strong>정보 비대칭·과다 비용·비윤리적 중개</strong>가 반복되어 왔습니다. 비용과 절차가 처음부터 표준화되지 않고 주먹구구식으로 시작되면, 이후 바가지·추가 비용·분쟁으로 이어지기 쉽습니다. 결혼 직후에는 언어·취업·가족 갈등에 대한 지원이 끊기면서 <strong>조기 이혼·정착 실패</strong>가 사회적 비용으로 남습니다.
+        국제결혼은 개인의 선택을 넘어 가족·이민·언어·자녀·정착까지 이어집니다. 그러나 시장은 여전히 다음과 같은 구조적 문제를 안고 있습니다.
       </p>
       <ul class="list-disc list-inside text-gray-700 space-y-2 mb-8 ml-2">
-        <li><strong>국제결혼 사기·허위 이력</strong> — 검증 없는 업체·브로커 개입</li>
-        <li><strong>가격·절차 불투명</strong> — 만나서 말해주는 견적, 숨은 비용</li>
-        <li><strong>결혼 후 방치</strong> — 계약 후 연락 두절, 다문화 가족 정착 공백</li>
-        <li><strong>잘못된 시장 문화 고착</strong> — 윤리 기준 없는 입점, 소비자 피해 반복</li>
-      </ul>
-
-      <h2 class="text-2xl font-bold text-gray-900 mb-4">GCC가 제안하는 혁신 — 결혼·가족 영역</h2>
-
-      <div class="bg-rose-50 border border-rose-100 rounded-xl p-6 mb-6">
-        <h3 class="font-bold text-gray-900 mb-2">🌍 AI 디지털케어로그 기반 글로벌 커플 매칭·라이프케어 아키텍처</h3>
-        <p class="text-gray-700 leading-relaxed">
-          단순히 프로필 조건만 맞추는 기존 매칭 앱의 한계를 넘어, <strong>만남 → 상담 → 결혼 → 다문화 정착</strong>까지의 행동·생활 데이터를 <strong>동의 기반</strong>으로 하나의 로그(Log)로 연결·예측하는 통합 체계를 설계했습니다. 발달장애 케어에서 검증된 AI 디지털케어로그 철학을 <strong>가족·결혼 영역</strong>으로 확장한 아키텍처입니다.
-        </p>
-      </div>
-
-      <div class="bg-blue-50 border border-blue-100 rounded-xl p-6 mb-8">
-        <h3 class="font-bold text-gray-900 mb-2">🇰🇷 국내 최초 예측형 매칭 융합 모델 — 정착·다문화 가족 안정</h3>
-        <p class="text-gray-700 leading-relaxed mb-3">
-          국제결혼 사기·조기 이혼 예방을 위해 <strong>소통 방식·갈등 해결 행동 로그 패턴</strong>을 분석해 지속 가능한 커플을 추천하는 독자 모델을 구축합니다. 국내 최초로 <strong>공공·NGO 기관과 연계 가능한</strong> 다문화 가족 케어 인프라를 함께 설계·증명해 나갑니다.
-        </p>
-        <p class="text-sm text-gray-600">
-          ※ 모든 데이터 수집·분석은 이용자 동의와 윤리 가이드라인을 전제로 합니다. GCC는 직접 중개가 아닌 <strong>정보·파트너 연결 플랫폼</strong>입니다.
-        </p>
-      </div>
-
-      <h2 class="text-2xl font-bold text-gray-900 mb-4">올바른 시장을 만드는 방법</h2>
-      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        GCC는 기존 산업을 없애는 것이 아니라, <strong>검증된 업체만 경쟁하는 신뢰 마켓플레이스</strong>로 바꿉니다. 엔카가 중고차 시장에 투명성을, 배달·숙박 플랫폼이 정보 비교를 가져온 것처럼, 국제결혼에도 <strong>표준 견적·리뷰·완료율·KYC</strong>를 도입합니다.
-      </p>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-        <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-          <h3 class="font-bold text-gray-900 mb-3">Before — 기존 관행</h3>
-          <ul class="text-sm text-gray-700 space-y-2 list-disc list-inside">
-            <li>가격은 만나서 이야기 — 비교 불가</li>
-            <li>검증 없는 업체 입점 — 사기·바가지</li>
-            <li>결혼 후 지원 없음 — 정착 실패 반복</li>
-            <li>주먹구구 절차 — 추가 비용·분쟁</li>
-          </ul>
-        </div>
-        <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-          <h3 class="font-bold text-gray-900 mb-3">After — GCC 플랫폼</h3>
-          <ul class="text-sm text-gray-700 space-y-2 list-disc list-inside">
-            <li>국가·케이스별 <strong>표준 견적·절차</strong> 공개</li>
-            <li>KYC·리뷰·신고로 <strong>부정 업체 퇴출</strong></li>
-            <li>결혼 후 언어·취업·자녀교육·<strong>가족 라이프로그</strong></li>
-            <li>법무·비자·여행·웨딩·의료·교육 <strong>생태계 연결</strong></li>
-          </ul>
-        </div>
-      </div>
-
-      <h2 class="text-2xl font-bold text-gray-900 mb-4">주도하는 사업 구조</h2>
-      <p class="text-lg text-gray-700 mb-4 leading-relaxed">
-        GCC는 B2C(가족)·B2B(업체)·B2G(공공)를 아우르는 <strong>정보·프로세스·데이터 인프라</strong>입니다. 네 가지 기둥으로 설계됩니다.
-      </p>
-      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-8 ml-2">
-        <li><strong>Agency SaaS</strong> — 중개·대행사용 고객·서류·타임라인·정산 관리</li>
-        <li><strong>Marketplace</strong> — 법률·행정·통번역·보험·주거 파트너 검증·연결</li>
-        <li><strong>Consumer App</strong> — 가족 커뮤니케이션·체크리스트·문서·정착 가이드</li>
-        <li><strong>Data &amp; Risk</strong> — 사기 방지 신호·성공 패턴·국가별 리스크 인텔리전스</li>
+        <li><strong>정보 비대칭</strong> — 업체별 서비스·실제 비용·성공 사례를 한곳에서 비교하기 어렵다</li>
+        <li><strong>업체 비교 불가</strong> — 지인 소개·광고에 의존해 선택하는 경우가 많다</li>
+        <li><strong>국가마다 다른 절차</strong> — 혼인·비자·서류·기간이 제각각이고 누락·지연이 잦다</li>
+        <li><strong>계약 이후 관리 부재</strong> — 비용 수납 후 연락이 끊기거나 책임 소재가 불분명하다</li>
+        <li><strong>결혼 이후 정착 지원 부족</strong> — 언어·취업·주거·자녀 양육에서 도움이 끊긴다</li>
       </ul>
       <p class="text-lg text-gray-700 mb-8 leading-relaxed">
-        이용자는 정보를 비교·선택하고, 국내·해외 업체는 <strong>표준 프로세스와 윤리 규칙</strong> 안에서 서비스 품질로 경쟁합니다. 정착 이후에는 DAL 생태계(<a href="/services/healthcare" class="text-primary-600 underline">토탈케어로그</a>, <a href="/services/educarelog" class="text-primary-600 underline">에듀케어로그</a> 등)와 연계 가능한 구조입니다.
+        사기·바가지 같은 극단적 사례만이 문제가 아닙니다. <strong>비교할 수 없고, 절차가 표준화되지 않으며, 결혼 이후까지 이어지지 않는 구조</strong> 자체가 소비자와 양질의 업체 모두에게 부담입니다.
       </p>
 
-      <h2 class="text-2xl font-bold text-gray-900 mb-4">AI 연구자 정해성 — 왜 GCC인가</h2>
-      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        <strong>정해성</strong> CTO는 AI 디지털케어로그를 최초 고안·개발했습니다. 발달장애 현장에서 “끊긴 기록이 가족을 고통스럽게 한다”는 문제를 해결한 경험을, <strong>국제결혼·다문화 가족</strong> 영역에 확장합니다. “만남만 연결하고 끝나는 앱”이 아니라, <strong>가족이 살아가는 데이터를 연결하는 인프라</strong>가 필요하다고 판단했습니다.
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">GCC가 하는 일 — 마켓플레이스</h2>
+      <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+        GCC의 핵심은 <strong>마켓플레이스 → 신뢰 → 표준화</strong>입니다. 검증을 통과한 국내·해외 업체와 법무·행정·통번역 등 파트너가 플랫폼 규칙 안에 입점하고, 소비자는 아래 정보를 기준으로 스스로 선택합니다.
       </p>
-
-      <div class="bg-primary-50 border-l-4 border-primary-600 p-6 mb-8 rounded-r-lg">
-        <p class="text-lg text-gray-800 leading-relaxed italic mb-4">
-          "국제결혼은 어둠 속에서 시작되어서는 안 됩니다. 결혼 전에는 투명한 비교와 검증을, 결혼 후에는 정착과 가족 케어를 이어야 합니다. GCC는 AI 디지털케어로그로 그 연결을 만들고, 좋은 가격에 올바른 선택을 할 수 있는 시장을 만들겠습니다."
-        </p>
-        <p class="text-gray-600 text-sm">— 정해성 CTO, AI 디지털케어로그 최초 고안·개발 · 드림에이아이랩</p>
-      </div>
-
-      <h2 class="text-2xl font-bold text-gray-900 mb-4">2026 상반기 오픈 로드맵</h2>
       <ul class="list-disc list-inside text-gray-700 space-y-2 mb-8 ml-2">
-        <li><strong>현재</strong> — 프로필·매칭·에스크로·계약 등 MVP 베타·파일럿 운영 (~93%)</li>
-        <li><strong>2026 상반기</strong> — 공식 오픈, 표준 견적·KYC·업체 마켓플레이스 본격화</li>
-        <li><strong>순차 확장</strong> — 교육·커뮤니티·AI 도구·가족 라이프로그·공공 연계</li>
+        <li><strong>표준 견적·비용 구조</strong> — 국가·케이스별 참고 가격과 항목</li>
+        <li><strong>절차·타임라인</strong> — 혼인·비자·서류 체크리스트</li>
+        <li><strong>리뷰·완료율·응답 속도</strong> — 이용자 피드백과 운영 지표</li>
+        <li><strong>KYC·신고·제재</strong> — 허위·비윤리 업체 퇴출</li>
       </ul>
 
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">기존 방식과 무엇이 다른가</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+          <h3 class="font-bold text-gray-900 mb-3">기존 관행</h3>
+          <ul class="text-sm text-gray-700 space-y-2 list-disc list-inside">
+            <li>“가격은 만나서” — 사전 비교 어려움</li>
+            <li>검증 없는 입점·중개</li>
+            <li>계약 후 지원 단절</li>
+            <li>결혼 이후 정착은 개인 부담</li>
+          </ul>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+          <h3 class="font-bold text-gray-900 mb-3">GCC 플랫폼</h3>
+          <ul class="text-sm text-gray-700 space-y-2 list-disc list-inside">
+            <li>한곳에서 <strong>여러 검증 업체 비교</strong></li>
+            <li>공개된 <strong>절차·기간·비용 항목</strong></li>
+            <li>플랫폼 <strong>신뢰·윤리 규칙</strong>과 리뷰</li>
+            <li>결혼 후 <strong>정착·커뮤니티·연계 서비스</strong>로 확장</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">플랫폼이 지향하는 사업 구조</h2>
+      <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+        GCC는 가족(B2C)·업체(B2B)·공공·NGO(B2G)를 연결하는 <strong>정보·프로세스 플랫폼</strong>입니다. 소비자는 비교·선택하고, 업체는 <strong>서비스 품질과 신뢰</strong>로 경쟁합니다.
+      </p>
+      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-8 ml-2">
+        <li><strong>Marketplace</strong> — 검증된 국제결혼·법무·행정 파트너 입점</li>
+        <li><strong>Agency SaaS</strong> — 입점 업체용 고객·서류·일정·정산 도구</li>
+        <li><strong>Consumer</strong> — 비교·상담 요청·문서·체크리스트</li>
+        <li><strong>Trust &amp; Risk</strong> — 신고·블랙리스트·분쟁 예방 기준</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">AI는 어디에 쓰이는가</h2>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        GCC의 첫인상은 <strong>플랫폼</strong>이고, AI는 그 경쟁력을 높이는 <strong>보조 기술</strong>입니다. 번역·서류 안내·행정 체크리스트 등 반복 업무를 줄여 업체와 이용자의 부담을 낮춥니다. GCC는 <strong>결혼 성공률을 예측하거나 커플을 추천하는 서비스가 아닙니다.</strong>
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">2026년 상반기 오픈 계획</h2>
+      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-8 ml-2">
+        <li><strong>현재</strong> — 프로필·에스크로·계약 등 핵심 모듈 베타·파일럿 운영</li>
+        <li><strong>2026 상반기</strong> — 공식 오픈, 마켓플레이스·검증 입점 본격화</li>
+        <li><strong>이후 순차</strong> — 커뮤니티, 정착 가이드, 교육·파트너 연계</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">장기 방향 — 결혼 이후까지</h2>
+      <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+        GCC는 <strong>결혼 전 마켓플레이스</strong>에서 출발해, 장기적으로 아래 흐름으로 확장하는 구조를 지향합니다.
+      </p>
+      <p class="text-center text-gray-800 font-medium mb-6 leading-relaxed">
+        마켓플레이스 → 결혼 → 정착 → 가족 → 교육 → 의료·복지 → 공공·NGO 연계
+      </p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        결혼 이후 가족·정착 데이터를 이어 붙이는 기술 기반으로, 드림에이아이랩이 다른 영역에서 검증해 온 <strong>AI 디지털케어로그</strong>를 활용할 수 있습니다. 이는 <strong>당장의 오픈 기능이 아니라 장기적인 플랫폼 기반</strong>이며, 정착·교육·헬스케어 등 DAL 생태계(<a href="/services/educarelog" class="text-primary-600 underline">에듀케어로그</a>, <a href="/services/healthcare" class="text-primary-600 underline">토탈케어로그</a> 등)와의 연계 가능성을 열어 둡니다.
+      </p>
+      <p class="text-gray-600 text-sm mb-8 leading-relaxed italic border-l-4 border-gray-300 pl-4">
+        “국제결혼 시장에 비교와 검증이 없으면, 좋은 업체도 소비자도 모두 손해를 봅니다. GCC는 그 비교가 일어나는 플랫폼을 만들겠습니다.” — 드림에이아이랩 GCC 사업팀
+      </p>
+
       <p class="text-gray-600 text-sm mb-6 leading-relaxed">
-        ※ GCC는 직접 중개·결혼 주선 서비스가 아닙니다. 이용자와 검증된 파트너 간 계약·거래가 이루어집니다. 오픈 범위·약관은 공식 오픈 시점에 따릅니다.
+        ※ GCC는 직접 중개·결혼 주선 서비스가 아닙니다. 계약·거래는 이용자와 입점 파트너 간에 이루어집니다. 오픈 시점 기능·약관은 공식 오픈 때 안내됩니다.
         <a href="/services/marriage" class="text-primary-600 underline">글로벌커플케어 서비스</a> ·
         <a href="https://globalcouplecare.com" class="text-primary-600 underline">globalcouplecare.com</a> ·
-        <a href="/contact?service=marriage&type=b2b" class="text-primary-600 underline">B2B·파트너 문의</a>
+        <a href="/contact?service=marriage&type=b2b" class="text-primary-600 underline">B2B·파트너 입점 문의</a>
       </p>
 
       <p class="text-sm text-gray-500 border-t border-gray-200 pt-6">
@@ -209,43 +251,59 @@ export const newsArticles: NewsArticle[] = [
   },
   {
     id: 77,
-    title: '자람이, 발달장애 센터·보호자 무료 요금제 공개 — 현장 보급을 앞당기다',
-    excerpt: '발달장애 디지털 케어 표준화는 정부·공공 영역에서도 중요한 과제이나, 제도가 현장에 안착하기까지는 시간이 걸립니다. AI 연구자 정해성이 고안한 자람이는 그 간극을 메우기 위해 센터·보호자 무료 플랜을 공개했습니다. 영세 센터(20인 이하)와 바우처 미지원 가정도 포함합니다.',
-    category: 'press',
+    title: '자람이, 발달센터·보호자 대상 무료 요금제 공개',
+    excerpt: '자람이가 발달센터·치료사·보호자가 기본 기능을 무료로 시작할 수 있는 요금제를 공개했습니다. 영세 센터(종사자 20인 이하)와 바우처 미지원 가정까지 포함해 현장 보급을 우선 추진합니다.',
+    category: 'updates',
     date: '2026-07-07',
     image: '💙',
     featured: true,
     author: '드림에이아이랩',
-    tags: ['자람이', '무료 요금제', '발달장애', '보호자', '발달센터', '영세사업자', '바우처', '사회약자', '정해성', 'AI 디지털케어로그', '현장 보급', '공공 협력'],
+    tags: ['자람이', '무료 요금제', '발달장애', '보호자', '발달센터', '영세사업자', '바우처', '현장 보급', '정해성', 'AI 디지털케어로그'],
     i18n: {
       en: {
-        title: 'Jarame Launches Free Plans for Centers and Guardians — Accelerating Field Access',
-        excerpt: 'Digital care standardization is an important public policy goal, yet reaching every center and family takes time. Jung Haesung\'s Jarame bridges that gap with free core plans—including micro centers (≤20 staff) and guardians not yet covered by vouchers.',
+        title: 'Jarame Launches Free Plans for Developmental Centers and Guardians',
+        excerpt: 'Jarame announced free core plans for developmental centers, therapists, and guardians. The program includes micro centers (≤20 staff) and families not covered by vouchers to expand field access first.',
         content: `
       <p class="text-sm text-gray-500 mb-6">[Press Release · 2026-07-07]</p>
 
       <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-4">
-        Standardizing developmental disability care data is a vital goal for government and public institutions—and for the field. Jarame complements that direction by offering <strong>free plans</strong> so centers and families can start now, not only after every policy step is complete.
+        Jarame announced a <strong>free plan</strong> so developmental centers, therapists, and guardians can start core functions without cost barriers. The free tier is designed for field adoption first, including micro centers and families not covered by vouchers.
       </p>
 
-      <h2 class="text-2xl font-bold text-gray-900 mb-4">Why free—now</h2>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Why free now</h2>
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        There is a natural gap between policy design and daily practice at centers and homes. Jarame fills that gap with <strong>free basic features</strong> for centers and guardians. AI treatment-log drafts are designed to <strong>minimize call costs</strong> so therapists can focus on care.
+        In developmental-disability care, records are often fragmented across home, center, school, and hospital. Therapists repeatedly rewrite similar notes, and guardians struggle to connect scattered updates. Digital tools are needed, but cost can block adoption. Jarame opens <strong>free core features</strong> first so the field can start immediately.
       </p>
 
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Who gets what for free</h2>
       <ul class="list-disc list-inside text-gray-700 space-y-2 mb-8 ml-2">
-        <li><strong>Centers:</strong> core admin, care logs, guardian linkage—free tier</li>
-        <li><strong>Micro centers (≤20 employees):</strong> extended free plan</li>
-        <li><strong>Guardians:</strong> home logs, summaries, school linkage basics—free tier (many families rely on vouchers that do not yet cover digital care tools)</li>
+        <li><strong>Centers/Therapists:</strong> core admin, care logs, guardian linkage, AI draft notes</li>
+        <li><strong>Guardians:</strong> home logs, summaries, center linkage, child record management</li>
+        <li><strong>Micro centers (≤20 employees):</strong> expanded free support</li>
+        <li><strong>Families not covered by vouchers:</strong> free plan to reduce burden</li>
       </ul>
 
-      <h2 class="text-2xl font-bold text-gray-900 mb-4">Why Jung Haesung built Jarame</h2>
-      <div class="bg-primary-50 border-l-4 border-primary-600 p-6 mb-8 rounded-r-lg">
-        <p class="text-lg text-gray-800 leading-relaxed italic">
-          "Care standardization must advance with public policy—but disconnected records are a problem families face today. I built AI Digital Care Log to connect centers, therapists, and guardians now. Free access is our way to help the field while policy and practice meet in the middle."
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Field impact</h2>
+      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-8 ml-2">
+        <li>Therapists reduce repetitive documentation workload</li>
+        <li>Guardians understand child progress and care flow more clearly</li>
+        <li>Centers improve guardian communication and basic admin efficiency</li>
+        <li>Long term: groundwork for connected records across center, home, school, and hospital</li>
+      </ul>
+
+      <div class="bg-primary-50 border border-primary-200 rounded-xl p-6 mb-8">
+        <h3 class="font-bold text-gray-900 mb-2">Technology background</h3>
+        <p class="text-gray-700 leading-relaxed mb-4">
+          Jarame is built on AI Digital Care Log, originally conceived by Jung Haesung (CTO), to solve fragmented records in developmental-disability care. The platform is designed to connect child-centered records across home, center, school, and hospital, and to make recording and understanding easier for therapists and guardians.
         </p>
-        <p class="text-gray-600 text-sm mt-3">— Jung Haesung, CTO &amp; inventor of AI Digital Care Log, Dream AI Lab</p>
+        <p class="text-gray-700 italic">
+          "Record fragmentation in the field is a daily burden for families and therapists. Jarame opens free plans first so centers and guardians can start now, and we can build child-centered connected records through real adoption."
+        </p>
       </div>
+
+      <p class="text-gray-600 text-sm mb-6 leading-relaxed">
+        ※ Free-plan scope, AI call limits, and micro-center criteria follow terms and rollout timing. Jarame is not a medical device, diagnosis, or prescription system.
+      </p>
 
       <p class="text-lg text-gray-700 mb-6">
         <a href="/services/jarame" class="text-primary-600 underline">Jarame</a> · <a href="/contact" class="text-primary-600 underline">Contact</a>
@@ -257,68 +315,55 @@ export const newsArticles: NewsArticle[] = [
       <p class="text-sm text-gray-500 mb-6">[보도자료 · 2026-07-07]</p>
 
       <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-4">
-        발달장애 가족의 기록 표준화와 AI 디지털케어로그 보급은 보건복지부를 비롯한 <strong>정부·공공 부문에서도 중요한 과제</strong>로 논의되고 있습니다. 다만 제도가 설계·검토되는 과정과 <strong>현장 센터·가정에 실제로 도달하는 시점</strong> 사이에는 자연스럽게 시간차가 생깁니다. 그 간극 속에서도 부모와 치료사는 매일 기록과 비용의 문제에 직면합니다. 자람이는 <strong>정책과 협력하는 동시에</strong>, 현장에 먼저 닿을 수 있도록 <strong>무료 요금제</strong>로 보급에 나섭니다.
+        드림에이아이랩(DAL)의 발달장애 플랫폼 <strong>자람이</strong>가 발달센터·치료사·보호자가 기본 기능을 부담 없이 시작할 수 있도록 <strong>무료 요금제</strong>를 공개했습니다. 영세 센터(종사자 20인 이하)와 바우처 미지원 가정까지 포함해, 발달장애 현장 보급을 우선 추진합니다.
       </p>
 
-      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">무료 요금제 — 누구를 위한 것인가</h2>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">왜 무료 요금제인가</h2>
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        드림에이아이랩(DAL)의 발달장애 맞춤형 플랫폼 <strong>자람이</strong>는 센터와 보호자 모두 <strong>기본 기능을 무료</strong>로 사용할 수 있는 플랜을 공개했습니다. 인공지능 치료일지·요약 기능도 <strong>AI 호출 비용을 최소화</strong>해 핵심 사용은 무료에 가깝게 설계했습니다. 치료사가 문서 작성 비용 때문에 기록을 줄이지 않도록 하기 위함입니다.
+        발달장애 현장에서는 기록이 가정·센터·학교·병원으로 끊겨 있고, 치료사는 같은 내용을 반복 문서화해야 하며, 보호자는 여러 기관 정보를 각각 설명해야 하는 부담이 큽니다. 디지털 케어 도구가 필요하지만 비용 장벽 때문에 현장 도달이 늦어질 수 있습니다. 자람이는 이 간극을 줄이기 위해 <strong>기본 기능 무료 공개</strong>를 먼저 선택했습니다.
       </p>
 
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">무료 대상과 기능</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
         <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
           <h3 class="font-bold text-gray-900 mb-3">🏢 발달센터·치료사</h3>
           <ul class="text-sm text-gray-700 space-y-2 list-disc list-inside">
             <li>기본 행정·케어로그·보호자 연계 <strong>무료</strong></li>
             <li>사진·영상·키워드 기반 AI 치료일지 초안 (호출 비용 최소화)</li>
-            <li><strong>영세 사업자(종사자 20인 이하)</strong> 센터 — 무료 플랜 확대 지원</li>
+            <li><strong>영세 사업자(종사자 20인 이하) 센터</strong> — 무료 지원 확대</li>
           </ul>
         </div>
         <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
           <h3 class="font-bold text-gray-900 mb-3">👨‍👩‍👧 보호자·발달장애 가정</h3>
           <ul class="text-sm text-gray-700 space-y-2 list-disc list-inside">
-            <li>가정 일지·요약·센터 연계 기본 기능 <strong>무료</strong></li>
-            <li>많은 가정이 <strong>바우처</strong>로 치료비를 충당하지만, 디지털 케어 도구는 아직 지원 대상이 아닌 경우가 많음</li>
+            <li>가정 일지·요약·센터 연계·아이 기록 관리 <strong>무료</strong></li>
+            <li>바우처로 치료비를 충당해도 디지털 도구는 미지원인 경우가 많음</li>
             <li>바우처 미지원·부담 가정을 위한 <strong>무료 플랜</strong> 병행</li>
           </ul>
         </div>
       </div>
 
-      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
-        자람이는 <strong>사회적 약자와 현장</strong>을 우선하는 보급 전략입니다. 빠른 배포와 대중화는 수익보다 <strong>끊긴 기록 구조를 먼저 고치는 일</strong>이기 때문입니다. 2026년 하반기 전국 센터 배포와 함께 무료 플랜은 즉시 적용을 목표로 합니다.
-      </p>
-
-      <h2 class="text-2xl font-bold text-gray-900 mb-4">AI 연구자 정해성 — 왜 만들었는가</h2>
-      <p class="text-lg text-gray-700 mb-4 leading-relaxed">
-        <strong>정해성</strong> 연구자(드림에이아이랩 CTO)는 <strong>AI 디지털케어로그(Digital Care Log)</strong>를 최초 고안·개발했습니다. 2019년 발달장애 현장에서 출발해, 다음 문제를 반복해서 보았습니다.
-      </p>
-      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6 ml-2">
-        <li>가정·센터·학교·병원 기록이 <strong>끊겨</strong> 부모는 기억과 설명에 의존한다</li>
-        <li>치료사는 같은 내용을 치료일지·보호자 설명·리포트에 <strong>여러 번</strong> 쓴다</li>
-        <li>검사·행정은 표준화되지 않아 <strong>조기개입·RWE</strong>가 어렵다</li>
-        <li>제도가 현장에 안착하기까지는 시간이 걸리지만, <strong>아이의 성장과 기록은 매일</strong> 이어진다</li>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">현장에 주는 효과</h2>
+      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-8 ml-2">
+        <li>치료사는 같은 내용을 반복 작성하는 문서 부담을 줄일 수 있습니다.</li>
+        <li>보호자는 아이의 변화와 치료 흐름을 더 쉽게 이해할 수 있습니다.</li>
+        <li>센터는 보호자 소통과 기본 행정 효율을 높일 수 있습니다.</li>
+        <li>장기적으로 센터·가정·학교·병원 기록 연결의 기반을 만듭니다.</li>
       </ul>
-      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        정 연구자는 “전문가가 부족해서만이 아니라, <strong>아이를 둘러싼 실제 생활 데이터가 연결되지 않는 구조</strong>가 문제”라고 판단했습니다. 자람이는 그 연결을 센터·치료사·보호자가 함께 쓰는 플랫폼으로 구현한 것이고, <strong>무료 플랜은 정책을 대체하는 것이 아니라 현장이 먼저 쓸 수 있는 실용 인프라를 제공하기 위한 선택</strong>입니다.
-      </p>
 
-      <div class="bg-primary-50 border-l-4 border-primary-600 p-6 mb-8 rounded-r-lg">
-        <p class="text-lg text-gray-800 leading-relaxed italic mb-4">
-          "발달장애 케어 표준화는 정부·공공과 함께 가야 할 길입니다. 다만 현장의 부모와 치료사가 매일 맞닥뜨리는 기록 단절은 오늘의 문제입니다. AI 디지털케어로그로 연결하고, 센터와 보호자가 부담 없이 쓸 수 있도록 무료 요금제를 만들었습니다. 정책과 현장이 만나는 다리가 되겠습니다."
+      <div class="bg-primary-50 border border-primary-200 rounded-xl p-6 mb-8">
+        <h3 class="font-bold text-gray-900 mb-2">기술 배경</h3>
+        <p class="text-gray-700 leading-relaxed mb-4">
+          자람이는 AI 연구자 정해성 CTO가 발달장애 현장의 기록 단절 문제를 해결하기 위해 최초로 고안·개발한 AI디지털케어로그 기반 플랫폼입니다. 가정·센터·학교·병원에 흩어진 기록을 아이 중심으로 연결하고, 치료사와 보호자가 더 쉽게 기록하고 이해할 수 있도록 설계되었습니다.
         </p>
-        <p class="text-gray-600 text-sm">— 정해성 CTO, AI 디지털케어로그 최초 고안·개발 · 드림에이아이랩</p>
+        <p class="text-gray-700 italic">
+          “발달장애 현장의 기록 단절은 오늘도 부모와 치료사가 겪는 문제입니다. 자람이는 센터와 보호자가 부담 없이 시작할 수 있도록 무료 요금제를 먼저 열고, 현장 보급을 통해 아이 중심의 기록 연결을 만들어가겠습니다.”
+        </p>
+        <p class="text-gray-600 text-sm mt-3">— 정해성 CTO, 드림에이아이랩</p>
       </div>
 
-      <h2 class="text-2xl font-bold text-gray-900 mb-4">기존에 해결하려는 문제</h2>
-      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-8 ml-2">
-        <li>끊긴 기록 → <strong>아이 중심 AI 디지털케어로그·RWE</strong></li>
-        <li>치료사 문서 부담 → <strong>AI 초안·한 번 기록 다중 활용</strong></li>
-        <li>부모의 정보 비대칭 → <strong>학교·센터 내용을 생활 언어로 번역</strong></li>
-        <li>현장 도달까지의 간극 → <strong>무료 플랜으로 먼저 연결·2026 하반기 센터 배포</strong></li>
-      </ul>
-
       <p class="text-gray-600 text-sm mb-6 leading-relaxed">
-        ※ 무료 플랜 범위·AI 호출 한도·영세 센터 기준은 도입 시점·약관에 따릅니다. 자람이는 의료기기·진단·처방 시스템이 아닙니다. 도입 문의: <a href="/contact" class="text-primary-600 underline">문의 페이지</a> · <a href="/services/jarame" class="text-primary-600 underline">자람이 서비스</a> · 관련 보도: <a href="/news/75" class="text-primary-600 underline">센터 배포</a>, <a href="/news/72" class="text-primary-600 underline">RWE</a>
+        ※ 무료 플랜 범위·AI 호출 한도·영세 센터 기준은 도입 시점·약관에 따릅니다. 자람이는 의료기기·진단·처방 시스템이 아닙니다. 도입 문의: <a href="/contact" class="text-primary-600 underline">문의 페이지</a> · <a href="/services/jarame" class="text-primary-600 underline">자람이 서비스</a>
       </p>
 
       <p class="text-sm text-gray-500 border-t border-gray-200 pt-6">
@@ -330,7 +375,7 @@ export const newsArticles: NewsArticle[] = [
     id: 76,
     title: '부모는 학교에서 무엇을 배우는지 알고 계신가요? — 자람이, 교사의 교육 언어를 부모의 생활 언어로 번역합니다',
     excerpt: '특수학교 수업안·성취기준·AAC 같은 전문 용어는 부모에게 어렵습니다. 자람이는 교사의 수업안·활동지·사진·영상을 AI가 읽고, “오늘 우리 아이는 무엇을 배웠나요?”에 답합니다. 교사를 대신하지 않고, 학교와 가정을 잇는 통역 AI입니다.',
-    category: 'press',
+    category: 'insight',
     date: '2026-07-07',
     image: '📚',
     featured: true,
@@ -341,7 +386,7 @@ export const newsArticles: NewsArticle[] = [
         title: 'Do You Know What Your Child Learned at School Today? Jarame Translates Teacher Language into Parent Language',
         excerpt: 'IEP goals, achievement standards, and AAC jargon are hard for parents. Jarame reads lesson plans, worksheets, photos, and videos—then answers: "What did my child learn today?" It connects school and home without replacing teachers.',
         content: `
-      <p class="text-sm text-gray-500 mb-6">[Press Release · 2026-07-07]</p>
+      <p class="text-sm text-gray-500 mb-6">[Insight · 2026-07-07]</p>
 
       <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-4">
         Jarame is not AI that teaches class or replaces teachers. It is AI that <strong>translates educators' language into parents' everyday language</strong>—so school learning continues at home.
@@ -378,8 +423,16 @@ export const newsArticles: NewsArticle[] = [
         <li><strong>Clinicians</strong> see months of emotion-expression trends in data</li>
       </ul>
       <p class="text-lg text-gray-700 mb-8 leading-relaxed">
-        Jarame is a Digital Care Log: teacher records → parent understanding → home practice → child growth. Class ends in a day; development continues for years.
+        Jarame connects teacher records, parent understanding, home practice, and child growth. Class ends in a day; development continues for years.
       </p>
+
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-5 mb-8">
+        <p class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">Related service</p>
+        <p class="text-gray-700 text-sm leading-relaxed">
+          Jarame translates lesson plans and worksheets into parent-friendly language.
+          <a href="/services/jarame" class="text-primary-600 underline ml-1">Jarame service page</a>
+        </p>
+      </div>
 
       <div class="bg-amber-50 border-l-4 border-amber-500 p-5 mb-8">
         <p class="text-amber-900 text-sm"><strong>Note:</strong> Jarame does not diagnose, prescribe, or replace teachers, therapists, or doctors. School linkage rolls out in phases after center adoption.</p>
@@ -390,7 +443,7 @@ export const newsArticles: NewsArticle[] = [
       }
     },
     content: `
-      <p class="text-sm text-gray-500 mb-6">[보도자료 · 2026-07-07]</p>
+      <p class="text-sm text-gray-500 mb-6">[인사이트 · 2026-07-07]</p>
 
       <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-4">
         자람이는 교사를 대신하는 AI가 아닙니다. 수업을 대신하는 AI도 아닙니다. <strong>교사의 교육 언어를 부모의 생활 언어로 번역하는 AI</strong>입니다.
@@ -432,14 +485,15 @@ export const newsArticles: NewsArticle[] = [
         <li><strong>병원:</strong> 몇 달간 감정 표현 변화를 데이터로 확인</li>
       </ul>
       <p class="text-lg text-gray-700 mb-8 leading-relaxed">
-        자람이는 기록만 저장하는 시스템이 아닙니다. <strong>교사의 기록 → 부모의 이해 → 가정의 실천 → 아이의 성장</strong>으로 이어지는 AI 디지털케어로그입니다. 수업은 하루면 끝나지만, 발달은 계속되어야 합니다.
+        자람이는 기록만 저장하는 시스템이 아닙니다. <strong>교사의 기록 → 부모의 이해 → 가정의 실천 → 아이의 성장</strong>으로 이어지는 연결입니다. 수업은 하루면 끝나지만, 발달은 계속되어야 합니다.
       </p>
 
-      <div class="bg-primary-50 border-l-4 border-primary-600 p-6 mb-8 rounded-r-lg">
-        <p class="text-lg text-gray-800 leading-relaxed italic">
-          "부모가 학교 수업의 의미를 알 때, 가정·센터·병원의 개입이 같은 방향으로 맞춰집니다. 자람이는 그 통역과 연결의 첫 다리입니다."
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-5 mb-8">
+        <p class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">관련 서비스</p>
+        <p class="text-gray-700 text-sm leading-relaxed">
+          이 문제를 해결하기 위해 드림에이아이랩은 자람이에서 <strong>교사 수업안·활동지를 부모 언어로 번역</strong>하는 기능을 제공합니다.
+          <a href="/services/jarame" class="text-primary-600 underline ml-1">자람이 서비스 페이지</a>
         </p>
-        <p class="text-gray-600 text-sm mt-3">— 정해성 CTO, 드림에이아이랩</p>
       </div>
 
       <div class="bg-amber-50 border-l-4 border-amber-500 p-5 mb-8">
@@ -456,8 +510,8 @@ export const newsArticles: NewsArticle[] = [
   {
     id: 75,
     title: '자람이, 2026 하반기 전국 발달센터 대상 본격 배포 — 센터 행정·치료일지 AI부터 RWE 생태계까지',
-    excerpt: '드림에이아이랩 자람이가 2026년 하반기 전국 발달센터 대상 본격 배포에 나섭니다. CRM·일정·출석·바우처·세무 등 센터 행정과 AI 치료일지(사진·영상·키워드 입력)를 한 플랫폼에 담고, 센터→보호자→학교·병원 순 단계적 확산을 목표로 합니다.',
-    category: 'press',
+    excerpt: '드림에이아이랩 자람이가 2026년 하반기 전국 발달센터 대상 본격 배포를 시작합니다. 이번 회사 뉴스의 핵심은 센터 도입 확대이며, 센터 운영 기능과 도입 효과, 단계별 확산 일정만 간결하게 안내합니다.',
+    category: 'company',
     date: '2026-07-07',
     image: '🏢',
     featured: true,
@@ -466,145 +520,137 @@ export const newsArticles: NewsArticle[] = [
     i18n: {
       en: {
         title: 'Jarame Launches Nationwide Center Rollout in H2 2026 — Admin, AI Treatment Logs, and RWE Ecosystem',
-        excerpt: 'Dream AI Lab\'s Jarame begins phased deployment to developmental centers nationwide in H2 2026—combining CRM, scheduling, voucher/tax admin, and AI treatment logs from photos, video, or keywords, then expanding to families, schools, and hospitals.',
+        excerpt: 'Dream AI Lab begins a nationwide center rollout for Jarame in H2 2026. This company-news update focuses on center deployment, center-facing operations, and phased adoption milestones.',
         content: `
-      <p class="text-sm text-gray-500 mb-6">[Press Release · 2026-07-07]</p>
+      <p class="text-sm text-gray-500 mb-6">[Company News · 2026-07-07]</p>
 
-      <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-4">
-        Jarame's first step is not "parents only"—it is building a daily-used AI Digital Care Log ecosystem across <strong>centers, therapists, and guardians</strong>.
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        <strong>Dream AI Lab</strong> will begin <strong>nationwide rollout of Jarame to developmental centers in H2 2026</strong>. This rollout targets center operators and therapists who need practical tools for daily operations and documentation.
       </p>
 
-      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        <strong>Dream AI Lab (DAL)</strong> will begin <strong>phased nationwide deployment</strong> of <strong>Jarame</strong> to developmental centers in <strong>H2 2026</strong>. The goal is not revenue alone—it is enabling centers to run on a <strong>powerful, standardized admin platform</strong> while therapists spend less time on paperwork and more on care.
+      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">Why start from centers</h2>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        Centers are where daily treatment and administrative records are generated most consistently. Starting from centers allows adoption to happen where workflow impact is immediate and measurable.
       </p>
 
-      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">Why centers first</h2>
-      <p class="text-lg text-gray-700 mb-4 leading-relaxed">
-        Most care records are created at centers. Therapists observe daily; guardians stay for years. When centers and therapists use Jarame, guardian logs connect to treatment—and <strong>RWE (Real World Evidence)</strong> can grow. Schools and hospitals follow in later phases.
-      </p>
-
-      <h2 class="text-2xl font-bold text-gray-900 mb-4">Center admin + care on one platform</h2>
-      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6 ml-2">
-        <li>Registration, scheduling, attendance, billing, waitlists</li>
-        <li>CRM-style guardian communication and case history</li>
-        <li><strong>Welfare voucher and tax-related</strong> workflow support</li>
-        <li>Standardized documents where formats varied before</li>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">What centers use in practice</h2>
+      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-8 ml-2">
+        <li>CRM-style registration and guardian communication history</li>
+        <li>Scheduling, attendance, make-up sessions, and waitlist handling</li>
+        <li>Billing, voucher-related workflow, and tax/admin support</li>
+        <li>AI-assisted treatment note drafts and SOAP draft support</li>
       </ul>
 
-      <h2 class="text-2xl font-bold text-gray-900 mb-4">AI treatment logs: photos, video, a few words</h2>
-      <p class="text-lg text-gray-700 mb-4 leading-relaxed">
-        Therapists upload photos, short videos, voice memos, or keywords like "more eye contact" or "10 min focused play." AI drafts SOAP notes, guardian explanations, home tasks, and monthly reports—therapists <strong>review and save</strong>. AI assists documentation; it does not replace clinical judgment.
-      </p>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Expected center-side impact</h2>
+      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-8 ml-2">
+        <li>Less repetitive documentation time for therapists</li>
+        <li>Higher operational consistency across center staff</li>
+        <li>Simpler communication with guardians through standardized records</li>
+        <li>More time spent on care delivery instead of repetitive admin work</li>
+      </ul>
 
-      <div class="bg-gray-50 border border-gray-200 rounded-lg overflow-hidden mb-8 text-sm">
-        <div class="grid grid-cols-2 bg-gray-100 font-semibold text-gray-800">
-          <div class="p-3 border-r border-gray-200">Before</div>
-          <div class="p-3">With Jarame</div>
-        </div>
-        <div class="grid grid-cols-2 border-t border-gray-200 text-gray-700">
-          <div class="p-3 border-r border-gray-200">Manual treatment logs after each session</div>
-          <div class="p-3">Photo/video/voice/keywords → AI draft</div>
-        </div>
-        <div class="grid grid-cols-2 border-t border-gray-200 text-gray-700">
-          <div class="p-3 border-r border-gray-200">Repeat same content for parents, center, reports</div>
-          <div class="p-3">One record → guardian share, homework, monthly report</div>
-        </div>
-      </div>
-
-      <h2 class="text-2xl font-bold text-gray-900 mb-4">Rollout plan</h2>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Rollout roadmap (short)</h2>
       <ol class="list-decimal list-inside text-gray-700 space-y-2 mb-8 ml-2">
-        <li><strong>Phase 1 (H2 2026):</strong> Centers and therapists nationwide (phased onboarding)</li>
-        <li><strong>Phase 2:</strong> Guardian participation and RWE accumulation</li>
-        <li><strong>Phase 3:</strong> School and hospital linkage</li>
+        <li><strong>Phase 1:</strong> Centers</li>
+        <li><strong>Phase 2:</strong> Guardians</li>
+        <li><strong>Phase 3:</strong> Schools</li>
+        <li><strong>Phase 4:</strong> Hospitals</li>
       </ol>
 
       <div class="bg-primary-50 border-l-4 border-primary-600 p-6 mb-8 rounded-r-lg">
-        <p class="text-lg text-gray-800 leading-relaxed italic">
-          "We deploy to centers first so families can use Digital Care Log and RWE on a real foundation—not in isolation. Standardized center operations and AI-assisted logs are the first step toward connecting school and hospital."
-        </p>
+        <p class="text-lg text-gray-800 leading-relaxed italic">"Center adoption comes first, because connected records start where daily care actually happens."</p>
         <p class="text-gray-600 text-sm mt-3">— Jung Haesung, CTO, Dream AI Lab</p>
       </div>
 
-      <p class="text-gray-600 text-sm mb-6">
-        ※ Rollout is phased by region and center readiness; not all sites switch on the same day. 5,700+ center pool refers to public/linked data (not MAU). Adoption: <a href="/contact" class="text-primary-600 underline">contact</a> · <a href="/services/jarame" class="text-primary-600 underline">Jarame</a>
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 mb-8">
+        <p class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">Technical background</p>
+        <p class="text-gray-700 text-sm leading-relaxed">
+          Jarame is a platform based on AI Digital Care Log, originally designed and developed by Jung Haesung to address record fragmentation in developmental-disability care.
+          Its long-term goal is to connect records around the child across centers, guardians, schools, and hospitals.
+        </p>
+      </div>
+
+      <div class="bg-white border border-gray-200 rounded-xl p-6 mb-8">
+        <p class="font-semibold text-gray-900 mb-3">Related content</p>
+        <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+          <li><a href="/services/jarame" class="text-primary-600 underline">See center features</a></li>
+          <li><a href="/news/74" class="text-primary-600 underline">See AI treatment timeline update</a></li>
+          <li><a href="/news/77" class="text-primary-600 underline">See free plan announcement</a></li>
+          <li><a href="/technology/platform" class="text-primary-600 underline">See AI Digital Care Log technology</a></li>
+          <li><a href="/news?category=founder" class="text-primary-600 underline">See Founder Story</a></li>
+        </ul>
+      </div>
+
+      <p class="text-gray-600 text-sm mb-6 leading-relaxed">
+        ※ Rollout is phased by region and center readiness. Adoption schedule and onboarding support are provided step by step.
       </p>
     `
       }
     },
     content: `
-      <p class="text-sm text-gray-500 mb-6">[보도자료 · 2026-07-07]</p>
+      <p class="text-sm text-gray-500 mb-6">[회사 뉴스 · 2026-07-07]</p>
 
-      <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-4">
-        자람이의 첫걸음은 보호자 앱만이 아닙니다. <strong>센터·치료사·보호자가 매일 쓰는 AI 디지털케어로그 생태계</strong>를 만드는 것입니다.
-      </p>
-
-      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        드림에이아이랩(DAL)의 발달장애 맞춤형 플랫폼 <strong>자람이</strong>가 <strong>2026년 하반기</strong>, <strong>전국 발달센터를 대상으로 본격 배포</strong>에 나섭니다. 이번 확산의 목적은 수익만이 아닙니다. 센터가 실제로 쓸 수 있는 <strong>강력한 행정·CRM 프로그램</strong>을 제공하고, 기존에 표준화되지 못했던 치료·행정 기록을 <strong>하나의 표준</strong>으로 묶으며, 치료사가 <strong>치료에 집중할 시간</strong>을 되돌려주기 위함입니다.
-      </p>
-
-      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">왜 센터부터인가</h2>
-      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        발달장애 치료에서 가장 많은 기록이 쌓이는 곳은 <strong>센터</strong>입니다. 가장 지속적으로 아이를 보는 사람은 <strong>치료사</strong>, 가장 오래 함께하는 사람은 <strong>보호자</strong>입니다. 센터와 치료사가 자람이를 써야 보호자 기록이 치료에 반영되고, 보호자·가정의 기록이 RWE로 이어집니다. <strong>학교와 병원은 이후 단계</strong>에서 자연스럽게 연결됩니다.
-      </p>
-
-      <h2 class="text-2xl font-bold text-gray-900 mb-4">센터 행정·CRM — 돈이 아니라 운영의 기반</h2>
-      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6 ml-2">
-        <li>아동·보호자·치료사 등록, 일정·출석·결석/보강, 수납·대기자 관리</li>
-        <li>상담 이력, 센터 공지, 문서·이용 이력 등 <strong>CRM형 센터 운영</strong></li>
-        <li><strong>바우처·세무</strong> 등 센터 실무와 맞닿은 행정 지원</li>
-        <li>센터마다 제각각이던 양식·기록 방식의 <strong>표준화</strong></li>
-      </ul>
       <p class="text-lg text-gray-700 mb-8 leading-relaxed">
-        기존 센터 프로그램이 일정·수납·출석에 머무는 반면, 자람이는 행정 위에 <strong>아이 중심 AI 디지털케어로그</strong>를 얹습니다. 센터의 핵심 가치인 <strong>치료 변화와 보호자 신뢰</strong>를 데이터로 보이게 합니다.
+        드림에이아이랩의 <strong>자람이</strong>가 <strong>2026년 하반기 전국 발달센터 대상 본격 배포</strong>를 시작합니다.
+        이번 소식의 핵심은 센터 도입 확대이며, 센터가 실제로 쓰는 운영 기능과 도입 효과를 중심으로 안내합니다.
       </p>
 
-      <h2 class="text-2xl font-bold text-gray-900 mb-4">사진·영상·단어 몇 개면 AI가 치료일지를 요약</h2>
-      <p class="text-lg text-gray-700 mb-4 leading-relaxed">
-        치료사는 치료 후 사진 몇 장, 짧은 영상, 음성 메모, 또는 「눈맞춤 증가」「공놀이 10분 집중」 같은 <strong>키워드만</strong> 입력할 수 있습니다. AI가 치료일지·SOAP 기록·보호자 설명·가정 과제·다음 회기 목표·월간 리포트 <strong>초안</strong>을 생성하고, 치료사는 검토·수정 후 저장합니다.
-      </p>
-      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        <strong>AI는 치료사를 대신하지 않습니다.</strong> 반복적인 문서 작성을 줄여, 남는 시간을 치료와 상담에 씁니다.
+      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">왜 센터부터 시작하나</h2>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        발달센터는 치료 기록과 운영 데이터가 가장 꾸준히 쌓이는 현장입니다.
+        따라서 센터부터 도입해야 실제 업무 개선이 빠르게 일어나고, 배포 효과를 안정적으로 확인할 수 있습니다.
       </p>
 
-      <div class="bg-gray-50 border border-gray-200 rounded-lg overflow-hidden mb-8 text-sm">
-        <div class="grid grid-cols-2 bg-gray-100 font-semibold text-gray-800">
-          <div class="p-3 border-r border-gray-200">기존</div>
-          <div class="p-3">자람이 도입 후</div>
-        </div>
-        <div class="grid grid-cols-2 border-t border-gray-200 text-gray-700">
-          <div class="p-3 border-r border-gray-200">치료 후 치료일지 직접 작성</div>
-          <div class="p-3">사진·영상·음성·키워드 → AI 초안</div>
-        </div>
-        <div class="grid grid-cols-2 border-t border-gray-200 text-gray-700">
-          <div class="p-3 border-r border-gray-200">보호자 설명·과제·리포트 각각 작성</div>
-          <div class="p-3">한 번 기록 → 자동 확장·공유</div>
-        </div>
-        <div class="grid grid-cols-2 border-t border-gray-200 text-gray-700">
-          <div class="p-3 border-r border-gray-200">병원·학교와 단절</div>
-          <div class="p-3">진료·학교 공유 요약 자동 생성(단계적)</div>
-        </div>
-      </div>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">센터가 실제 사용하는 기능</h2>
+      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-8 ml-2">
+        <li>아동·보호자 등록, 상담 이력, 공지 관리 등 CRM형 운영</li>
+        <li>일정, 출석, 결석/보강, 대기자 관리</li>
+        <li>수납, 바우처, 세무 관련 행정 지원</li>
+        <li>AI 치료일지 작성 보조 및 SOAP 초안 생성</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">도입 효과 (센터 관점)</h2>
+      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-8 ml-2">
+        <li>치료사의 반복 문서 작성 시간 단축</li>
+        <li>행정 처리 흐름 표준화로 운영 효율 개선</li>
+        <li>보호자 안내·소통 품질 향상</li>
+        <li>반복 업무를 줄여 치료와 상담에 집중 가능</li>
+      </ul>
 
       <h2 class="text-2xl font-bold text-gray-900 mb-4">단계별 확산 로드맵</h2>
       <ol class="list-decimal list-inside text-gray-700 space-y-2 mb-8 ml-2">
-        <li><strong>1단계 (2026 하반기):</strong> 전국 발달센터·치료사 대상 본격 배포 (지역·센터별 단계적 온보딩)</li>
-        <li><strong>2단계:</strong> 보호자 참여 확대 → 가정·센터 RWE 누적</li>
-        <li><strong>3단계:</strong> 특수학교·병원 연계 확대</li>
+        <li><strong>1단계:</strong> 센터</li>
+        <li><strong>2단계:</strong> 보호자</li>
+        <li><strong>3단계:</strong> 학교</li>
+        <li><strong>4단계:</strong> 병원</li>
       </ol>
 
       <div class="bg-primary-50 border-l-4 border-primary-600 p-6 mb-8 rounded-r-lg">
-        <p class="text-lg text-gray-800 leading-relaxed italic mb-4">
-          "센터가 먼저 써야 보호자 가족도 AI 디지털케어로그와 RWE를 제대로 쓸 수 있습니다. 표준화된 센터 운영과 AI 치료일지가 학교·병원으로 이어지는 첫걸음입니다. 발달장애 치료의 문제는 전문가 수만이 아니라, 끊긴 기록 구조였고, 자람이는 그 연결을 설계했습니다."
+        <p class="text-lg text-gray-800 leading-relaxed italic">"센터가 먼저 연결되어야 보호자와 아이의 기록도 이어질 수 있습니다."</p>
+        <p class="text-gray-600 text-sm mt-3">— 정해성 CTO, 드림에이아이랩</p>
+      </div>
+
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 mb-8">
+        <p class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">기술 배경</p>
+        <p class="text-gray-700 text-sm leading-relaxed">
+          자람이는 AI 연구자 정해성 CTO가 발달장애 현장의 기록 단절 문제를 해결하기 위해 최초로 고안·개발한 AI디지털케어로그 기반 플랫폼입니다.
+          센터·보호자·학교·병원에 흩어진 기록을 아이 중심으로 연결하는 것을 목표로 합니다.
         </p>
-        <p class="text-gray-600 text-sm">— 정해성 CTO, 드림에이아이랩 (AI 디지털케어로그 최초 고안·개발)</p>
+      </div>
+
+      <div class="bg-white border border-gray-200 rounded-xl p-6 mb-8">
+        <p class="font-semibold text-gray-900 mb-3">관련 콘텐츠</p>
+        <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+          <li><a href="/services/jarame" class="text-primary-600 underline">센터 기능 자세히 보기</a></li>
+          <li><a href="/news/74" class="text-primary-600 underline">AI 치료일지 업데이트 보기</a></li>
+          <li><a href="/news/77" class="text-primary-600 underline">무료 요금제 보기</a></li>
+          <li><a href="/technology/platform" class="text-primary-600 underline">AI디지털케어로그 기술 보기</a></li>
+          <li><a href="/news?category=founder" class="text-primary-600 underline">Founder Story 보기</a></li>
+        </ul>
       </div>
 
       <p class="text-gray-600 text-sm mb-6 leading-relaxed">
-        ※ 전국 모든 센터가 동일 일자에 전환되는 것은 아니며, 지역·센터 준비도에 따라 단계적으로 도입됩니다. 5,700+는 공공·연계 센터 풀 규모(MAU·전원 도입과 별개)입니다. 도입·파트너 문의: <a href="/contact" class="text-primary-600 underline">문의 페이지</a> · <a href="/services/jarame" class="text-primary-600 underline">자람이 서비스</a>
-      </p>
-
-      <p class="text-sm text-gray-500 border-t border-gray-200 pt-6">
-        문의: partnership@dreamailab.co.kr · press@dreamailab.com
+        ※ 전국 모든 센터가 동일 일자에 전환되는 것은 아니며, 지역·센터 준비도에 따라 단계적으로 도입됩니다.
       </p>
     `
   },
@@ -632,6 +678,36 @@ export const newsArticles: NewsArticle[] = [
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
         Dream AI Lab\'s <strong>Jarame</strong> platform now connects records from guardians, teachers, therapists, and hospitals into a <strong>single child-centered timeline</strong>. This update focuses on <strong>practical workflows</strong>—what to record and how data flows across home, school, center, and clinic.
       </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">✅ Update Highlights (What changed)</h2>
+      <div class="bg-white border border-gray-200 rounded-xl p-6 mb-8">
+        <ul class="list-disc list-inside text-gray-700 space-y-2">
+          <li><strong>Unified Child Timeline:</strong> home, school, center, and hospital records in one time-ordered view</li>
+          <li><strong>AI Pattern Analysis:</strong> weekly/monthly pattern summaries and before/after comparisons</li>
+          <li><strong>Hospital Summary Report:</strong> pre-visit summary by consent and role permissions</li>
+          <li><strong>Permission Sharing:</strong> role-based sharing controls across guardian/school/center/hospital</li>
+        </ul>
+      </div>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">🖥️ UI Preview (wireframe)</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8 text-sm">
+        <div class="border border-gray-200 rounded-lg p-4 bg-gray-50">
+          <p class="font-semibold text-gray-900 mb-2">1) Child Timeline</p>
+          <p class="text-gray-700">Chronological events with tags (sleep, behavior, class, session, visit) and role filter chips.</p>
+        </div>
+        <div class="border border-gray-200 rounded-lg p-4 bg-gray-50">
+          <p class="font-semibold text-gray-900 mb-2">2) AI Pattern Analysis</p>
+          <p class="text-gray-700">Pattern cards like "Sleep ↓ → Focus ↓" with confidence, period, and related events.</p>
+        </div>
+        <div class="border border-gray-200 rounded-lg p-4 bg-gray-50">
+          <p class="font-semibold text-gray-900 mb-2">3) Hospital Summary Report</p>
+          <p class="text-gray-700">Visit-ready summary including recent changes, medication notes, and key trend bullets.</p>
+        </div>
+        <div class="border border-gray-200 rounded-lg p-4 bg-gray-50">
+          <p class="font-semibold text-gray-900 mb-2">4) Permission Sharing</p>
+          <p class="text-gray-700">Access matrix by role and period (guardian/school/center/hospital), with consent history.</p>
+        </div>
+      </div>
 
       <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">👨‍👩‍👧 Guardian Log — Home</h2>
       <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6 ml-2">
@@ -698,6 +774,36 @@ export const newsArticles: NewsArticle[] = [
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
         드림에이아이랩(DAL)의 발달장애 맞춤형 플랫폼 <strong>자람이</strong>가 보호자·교사·치료사·병원이 각각 남기던 기록을 <strong>하나의 아이 중심 타임라인</strong>으로 연결하는 통합 케어로그 기능을 업데이트했습니다. 이번 업데이트는 철학 설명보다 <strong>실제 사용 흐름</strong>과 <strong>무엇을 기록하고 어떻게 연결되는지</strong>에 초점을 맞췄습니다.
       </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">✅ 업데이트 하이라이트 (이번에 달라진 점)</h2>
+      <div class="bg-white border border-gray-200 rounded-xl p-6 mb-8">
+        <ul class="list-disc list-inside text-gray-700 space-y-2">
+          <li><strong>아이 타임라인 통합:</strong> 가정·학교·센터·병원 기록을 시간순으로 한 화면에서 확인</li>
+          <li><strong>AI 패턴 분석:</strong> 주간·월간 패턴 요약과 변화 전후 비교 제공</li>
+          <li><strong>병원 요약 리포트:</strong> 진료 전 핵심 변화 요약을 권한 범위 내 제공</li>
+          <li><strong>권한 공유 화면:</strong> 보호자·학교·센터·병원별 공유 범위를 역할 기반으로 설정</li>
+        </ul>
+      </div>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">🖥️ 화면 미리보기 (와이어프레임 기준)</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8 text-sm">
+        <div class="border border-gray-200 rounded-lg p-4 bg-gray-50">
+          <p class="font-semibold text-gray-900 mb-2">1) 아이 타임라인</p>
+          <p class="text-gray-700">수면·행동·수업·치료·진료 이벤트를 시간순 카드로 보여주고, 역할별 필터를 제공합니다.</p>
+        </div>
+        <div class="border border-gray-200 rounded-lg p-4 bg-gray-50">
+          <p class="font-semibold text-gray-900 mb-2">2) AI 패턴 분석</p>
+          <p class="text-gray-700">예: "수면 저하 → 학교 집중 저하" 같은 패턴 카드와 기간·근거 이벤트를 표시합니다.</p>
+        </div>
+        <div class="border border-gray-200 rounded-lg p-4 bg-gray-50">
+          <p class="font-semibold text-gray-900 mb-2">3) 병원 요약 리포트</p>
+          <p class="text-gray-700">진료 전 확인할 최근 변화, 복약 메모, 핵심 추세를 요약된 형식으로 제공합니다.</p>
+        </div>
+        <div class="border border-gray-200 rounded-lg p-4 bg-gray-50">
+          <p class="font-semibold text-gray-900 mb-2">4) 권한 공유 화면</p>
+          <p class="text-gray-700">보호자 동의 이력과 함께 기관별 열람 범위(역할/기간)를 설정할 수 있습니다.</p>
+        </div>
+      </div>
 
       <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">👨‍👩‍👧 보호자 일지 — 집에서의 하루</h2>
       <p class="text-lg text-gray-700 mb-4 leading-relaxed">보호자는 앱에서 아래 항목을 간단히 기록할 수 있습니다.</p>
@@ -938,7 +1044,7 @@ export const newsArticles: NewsArticle[] = [
     id: 72,
     title: '우리 아이의 발달장애 검사는 정말 충분한 정보를 바탕으로 이루어지고 있을까?',
     excerpt: '몇 주 대기, 수십만~백만 원 검사비, 낯선 환경의 하루 관찰, 부모의 기억에 의존한 설문——발달장애 조기개입의 골든타임을 놓치지 않으려면 기억이 아닌 실제생활근거(RWE)가 필요합니다. 자람이는 부모·학교·센터·병원의 디지털케어로그를 연결합니다.',
-    category: 'press',
+    category: 'insight',
     date: '2026-07-06',
     image: '❓',
     featured: true,
@@ -1097,7 +1203,7 @@ export const newsArticles: NewsArticle[] = [
     id: 71,
     title: '[단독] 국내 최고 인공지능 아키텍트, 전 국민 창업 오디션 평정 나선다… 수천억 글로벌 투자 정조준',
     excerpt: '국가대표 창업 오디션 \'모두의 창업\'에 6만 3천여 명이 지원한 가운데 AI 디지털케어로그 개발자 정해성 연구자 팀이 출사표. 자람이·노아AI 융합 BM으로 발달장애·글로벌 투자 시장을 겨냥한다.',
-    category: 'press',
+    category: 'company',
     date: '2026-05-15',
     image: '🚀',
     featured: true,
@@ -2283,7 +2389,7 @@ export const newsArticles: NewsArticle[] = [
         </p>
       </div>
     `,
-    category: 'tech',
+    category: 'insight',
     date: '2025-11-14',
     image: '🛡️',
     featured: true,
@@ -3019,7 +3125,7 @@ export const newsArticles: NewsArticle[] = [
         </p>
       </div>
     `,
-    category: 'updates',
+    category: 'company',
     date: '2025-11-14',
     image: '🌏',
     featured: true,
@@ -5097,7 +5203,7 @@ export const newsArticles: NewsArticle[] = [
         <p class="text-indigo-600 text-sm mt-3">- 드림에이아이랩 비전</p>
       </div>
     `,
-    category: 'company',
+    category: 'insight',
     date: '2025-09-29',
     image: '🎯',
     featured: true,
@@ -5481,7 +5587,7 @@ export const newsArticles: NewsArticle[] = [
         </div>
       </div>
     `,
-    category: 'press',
+    category: 'company',
     date: '2024-12-20',
     image: '📰',
     featured: true,
@@ -5629,7 +5735,7 @@ export const newsArticles: NewsArticle[] = [
       
       <p class="text-lg text-gray-700 leading-relaxed font-semibold">CT와 MRI가 진단의 패러다임을 바꿨듯, 디지털케어로그는 발달장애 치료의 패러다임을 바꾸는 혁신입니다.</p>
     `,
-    category: 'tech',
+    category: 'insight',
     date: '2024-12-20',
     image: '💡',
     featured: false,
@@ -5686,7 +5792,7 @@ export const newsArticles: NewsArticle[] = [
       
       <p class="text-lg text-gray-700 leading-relaxed font-semibold">그래서 자람이는 단순 플랫폼이 아니라, 발달장애 치료 패러다임을 바꿀 수 있는 최초의 글로벌 모델입니다.</p>
     `,
-    category: 'tech',
+    category: 'founder',
     date: '2024-12-18',
     image: '🚀',
     featured: false,
@@ -5744,7 +5850,7 @@ export const newsArticles: NewsArticle[] = [
       
       <p class="text-lg text-gray-700 leading-relaxed font-semibold">CT와 MRI가 진단을 바꿨듯, 디지털케어로그는 발달장애 치료를 바꾸는 혁신입니다. 그리고 이 혁신은 발달장애 가족의 삶을 바꾸고, 나아가 인류 보건 패러다임까지 변화시킬 수 있습니다.</p>
     `,
-    category: 'tech',
+    category: 'insight',
     date: '2024-12-16',
     image: '🔬',
     featured: false,
@@ -5812,7 +5918,7 @@ export const newsArticles: NewsArticle[] = [
       <h3 class="text-2xl font-bold text-gray-900 mb-4 mt-8">미래 방향</h3>
       <p class="text-lg text-gray-700 leading-relaxed">앞으로도 윤리적 AI 개발을 위한 가이드라인을 지속적으로 발전시키고, 모든 사람이 AI 기술의 혜택을 누릴 수 있는 포용적인 세상을 만들어가겠습니다.</p>
     `,
-    category: 'tech',
+    category: 'insight',
     date: '2023-12-10',
     image: '🤝',
     featured: false,
@@ -5880,7 +5986,7 @@ export const newsArticles: NewsArticle[] = [
       <h3 class="text-2xl font-bold text-gray-900 mb-4 mt-8">도전 과제</h3>
       <p class="text-lg text-gray-700 leading-relaxed">의료 AI의 발전을 위해서는 데이터 품질 향상, 윤리적 가이드라인 수립, 의료진과의 협력 강화 등이 필요합니다. 드림에이아이랩은 이러한 도전 과제들을 해결하기 위해 지속적으로 노력하고 있습니다.</p>
     `,
-    category: 'tech',
+    category: 'insight',
     date: '2023-11-30',
     image: '🔬',
     featured: false,
@@ -5946,7 +6052,7 @@ export const newsArticles: NewsArticle[] = [
       <h3 class="text-2xl font-bold text-gray-900 mb-4 mt-8">미래 계획</h3>
       <p class="text-lg text-gray-700 leading-relaxed">자람이는 발달장애인들이 자신의 페이스에 맞춰 성장할 수 있는 환경을 조성하고, 가족과 전문가들의 협업을 통해 더 나은 지원을 제공할 계획입니다. 이를 통해 발달장애 지원의 새로운 표준을 제시하고, 모든 발달장애인이 자신의 잠재력을 최대한 발휘할 수 있도록 지원하겠습니다.</p>
     `,
-    category: 'press',
+    category: 'company',
     date: '2024-12-01',
     image: '🌱',
     featured: false,
@@ -5974,7 +6080,7 @@ export const newsArticles: NewsArticle[] = [
       <h3 class="text-2xl font-bold text-gray-900 mb-4 mt-8">사회적 기여 목표</h3>
       <p class="text-lg text-gray-700 leading-relaxed">히포크라테스AI는 현재 우리 사회가 마주한 의료 접근성 문제에 대한 창의적인 해결책을 제시하고자 합니다. 특히 갑작스럽게 건강 문제에 직면한 일반 사용자들이 신속하게 정보를 얻을 수 있도록 돕고, 의료 상담이 필요한 취약계층에게 쉽게 접근할 수 있는 방법을 제공하는 것을 목표로 합니다.</p>
     `,
-    category: 'press',
+    category: 'updates',
     date: '2024-11-28',
     image: '🏥',
     featured: false,
@@ -6157,7 +6263,7 @@ export const newsArticles: NewsArticle[] = [
         <p class="text-lg text-gray-700 leading-relaxed font-semibold">CT와 MRI가 진단의 방식을 바꿨듯, 디지털케어로그는 발달장애 치료의 방식을 바꾸는 혁신입니다.</p>
       </div>
     `,
-    category: 'tech',
+    category: 'insight',
     date: '2025-01-20',
     image: '👨‍👩‍👧‍👦',
     featured: false,
@@ -6272,7 +6378,7 @@ export const newsArticles: NewsArticle[] = [
         <p class="text-lg text-gray-700 leading-relaxed font-semibold">CT와 MRI가 진단의 방식을 바꿨듯, 시니어앤라이프는 노인 케어의 방식을 바꾸는 혁신입니다.</p>
       </div>
     `,
-    category: 'tech',
+    category: 'insight',
     date: '2025-01-25',
     image: '👴👵',
     featured: false,
@@ -6387,7 +6493,7 @@ export const newsArticles: NewsArticle[] = [
         <p class="text-lg text-gray-700 leading-relaxed font-semibold text-center">"이제 부모님의 하루를 눈으로 확인할 수 있어서 마음이 한결 편해졌습니다. 모든 보호자분들께 추천드리고 싶은 서비스입니다."</p>
       </div>
     `,
-    category: 'tech',
+    category: 'insight',
     date: '2025-01-30',
     image: '👨‍👩‍👧‍👦',
     featured: true,
@@ -6553,7 +6659,7 @@ export const newsArticles: NewsArticle[] = [
         <p class="text-lg text-gray-700 leading-relaxed font-semibold text-center">"시니어 돌봄의 미래는 데이터와 AI가 만나는 곳에서 시작됩니다. 시니어앤라이프가 그 길을 제시하고 있습니다."</p>
       </div>
     `,
-    category: 'tech',
+    category: 'insight',
     date: '2025-02-05',
     image: '🏥',
     featured: true,
@@ -6943,7 +7049,7 @@ export const newsArticles: NewsArticle[] = [
         <p class="text-lg text-gray-700 leading-relaxed font-semibold text-center">"AI와 플랫폼이 만나 국제결혼의 새로운 패러다임을 만들어갑니다. 드림에이아이랩이 그 변화의 중심에 서 있습니다."</p>
       </div>
     `,
-    category: 'tech',
+    category: 'insight',
     date: '2025-07-15',
     image: '🌍',
     featured: false,
@@ -7086,7 +7192,7 @@ export const newsArticles: NewsArticle[] = [
         </ul>
       </div>
     `,
-    category: 'press',
+    category: 'company',
     date: '2025-09-01',
     image: '📰',
     featured: false,
@@ -7467,29 +7573,12 @@ export const getCategoryCounts = () => {
 
 // 동적으로 카테고리 정보 생성
 export const getNewsCategories = () => {
-  const counts = getCategoryCounts()
-  const totalCount = Object.values(counts).reduce((sum, count) => sum + count, 0)
-  
-  return [
-    { name: '전체', value: 'all', count: totalCount },
-    { name: '회사 뉴스', value: 'company', count: counts.company || 0 },
-    { name: '서비스 업데이트', value: 'updates', count: counts.updates || 0 },
-    { name: '보도자료', value: 'press', count: counts.press || 0 },
-    { name: '기술 블로그', value: 'tech', count: counts.tech || 0 }
-  ]
+  return getNewsCategoriesForFilter(getCategoryCounts())
 }
 
 export const newsCategories = getNewsCategories()
 
-export const getCategoryName = (category: string) => {
-  const categoryMap: { [key: string]: string } = {
-    'company': '회사 뉴스',
-    'updates': '서비스 업데이트',
-    'press': '보도자료',
-    'tech': '기술 블로그'
-  }
-  return categoryMap[category] || category
-}
+export const getCategoryName = getNewsCategoryName
 
 export const formatDate = (dateString: string) => {
   const date = new Date(dateString)

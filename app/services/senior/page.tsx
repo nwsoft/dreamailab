@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 import Link from 'next/link'
+import { SymbolIcon } from '../../../components/SymbolIcon'
 
 export const metadata: Metadata = {
   title: '시니어앤라이프 | AI 시니어 돌봄 디지털케어로그 - 요양·재가복지 통합 플랫폼',
@@ -1568,40 +1569,48 @@ export default function SeniorService() {
 }
 
 // 헬퍼 컴포넌트
-function ServiceCard({ title, description }: { title: string; description: string; icon: string }) {
+function ServiceCard({ title, description, icon }: { title: string; description: string; icon: string }) {
   return (
     <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6 text-center hover:shadow-lg transition-shadow">
-      <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-3">CARE</div>
+      <div className="mb-3 flex justify-center text-emerald-700">
+        <SymbolIcon symbol={icon} className="h-8 w-8" />
+      </div>
       <h3 className="text-lg font-bold text-gray-900 mb-2">{title}</h3>
       <p className="text-sm text-gray-700">{description}</p>
     </div>
   )
 }
 
-function FeatureCard({ title, description }: { title: string; description: string; icon: string }) {
+function FeatureCard({ title, description, icon }: { title: string; description: string; icon: string }) {
   return (
     <div className="bg-white rounded-xl p-6 shadow hover:shadow-lg transition-shadow">
-      <div className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-3">AI</div>
+      <div className="mb-3 flex justify-center text-emerald-700">
+        <SymbolIcon symbol={icon} className="h-8 w-8" />
+      </div>
       <h3 className="text-lg font-bold text-gray-900 mb-2">{title}</h3>
       <p className="text-sm text-gray-700">{description}</p>
     </div>
   )
 }
 
-function ExpectCard({ title, description }: { title: string; description: string; icon: string }) {
+function ExpectCard({ title, description, icon }: { title: string; description: string; icon: string }) {
   return (
     <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6">
-      <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-3">LOG</div>
+      <div className="mb-3 flex justify-center text-emerald-700">
+        <SymbolIcon symbol={icon} className="h-8 w-8" />
+      </div>
       <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
       <p className="text-gray-700">{description}</p>
     </div>
   )
 }
 
-function VisionCard({ title, description }: { icon: string; title: string; description: string }) {
+function VisionCard({ title, description, icon }: { icon: string; title: string; description: string }) {
   return (
     <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-      <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/20 text-white text-xs font-bold mb-3">DAL</div>
+      <div className="mb-3 flex justify-center text-white">
+        <SymbolIcon symbol={icon} className="h-8 w-8" />
+      </div>
       <h4 className="text-xl font-bold mb-3">{title}</h4>
       <p className="text-sm text-green-100">{description}</p>
     </div>

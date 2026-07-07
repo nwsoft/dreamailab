@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
-import { MarketingIcon, type MarketingIconName } from '../../../components/MarketingIcon'
+import { SymbolIcon } from '../../../components/SymbolIcon'
 
 export const metadata: Metadata = {
   title: '국제결혼 플랫폼 글로벌커플케어 GCC | 베트남·태국·필리핀·일본·중국 결혼 전문가 비교',
@@ -312,51 +312,6 @@ const howChangesTrend = [
     icon: '✨',
   },
 ]
-
-const symbolIconMap: Record<string, MarketingIconName> = {
-  '🔎': 'search',
-  '🏪': 'blocks',
-  '👨‍👩‍👧': 'heart',
-  '📱': 'mobile',
-  '💬': 'chat',
-  '📑': 'document',
-  '🔗': 'link',
-  '🛡️': 'shield',
-  '🕸️': 'globe',
-  '💼': 'cog',
-  '📊': 'chart',
-  '🌐': 'globe',
-  '📈': 'trend',
-  '🏢': 'blocks',
-  '🏛️': 'scale',
-  '🔄': 'refresh',
-  '🌍': 'globe',
-  '♾️': 'refresh',
-  '✨': 'sparkle',
-  '🎯': 'target',
-  '💑': 'heart',
-  '💰': 'scale',
-  '🚪': 'link',
-  '💡': 'lightbulb',
-  '⚠️': 'lock',
-  '⚖️': 'scale',
-  '✅': 'shield',
-  '🚀': 'rocket',
-  '⭐': 'sparkle',
-  '🚫': 'lock',
-  '📚': 'graduation',
-  '📒': 'document',
-  '🪪': 'user',
-  '🏠': 'hospital',
-  '🔌': 'cog',
-  '❌': 'lock',
-}
-
-function SymbolIcon({ symbol, className = 'h-6 w-6 text-current' }: { symbol: string; className?: string }) {
-  const mapped = symbolIconMap[symbol]
-  if (!mapped) return <span className={className}>{symbol}</span>
-  return <MarketingIcon name={mapped} className={className} />
-}
 
 export default function MarriageService() {
   // 구조화된 데이터 (JSON-LD) for SEO & AI
@@ -1295,7 +1250,7 @@ export default function MarriageService() {
           <p className="text-gray-600 mb-4">글로벌커플케어는 프로필·매칭·에스크로·계약 등 MVP 핵심 모듈을 베타로 운영 중이며, <strong>2026년 상반기 공식 오픈</strong>을 목표로 국제결혼 <strong>정보·비즈니스 인프라</strong>를 지속 업데이트합니다. 교육·커뮤니티·정착·AI 도구는 순차 확장합니다. <strong>직접 중개가 아닌</strong> 정보·파트너 연결 플랫폼입니다.</p>
           <p className="text-sm">
             <Link href="/news/78" className="text-blue-700 font-medium hover:underline">
-              보도자료: 2026 상반기 오픈·AI 디지털케어로그 기반 가족 케어 인프라 →
+              보도자료: 2026 상반기 오픈·국내 최초 국제결혼 마켓플레이스 →
             </Link>
           </p>
         </div>

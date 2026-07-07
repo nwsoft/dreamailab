@@ -3,6 +3,7 @@ import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 import Link from 'next/link'
 import { MarketingIcon, type MarketingIconName } from '../../../components/MarketingIcon'
+import { emojiToIcon } from '../../../lib/icon-system'
 
 export const metadata: Metadata = {
   title: 'AI 디지털케어로그 | 발달장애 표준 기술 | 자람이 | 드림에이아이랩',
@@ -2176,7 +2177,7 @@ export default function JarameService() {
             {coreFeatures.slice(0, 4).map((feature, index) => (
               <div key={index} className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-shadow">
                 <div className="mb-4 text-primary-600">
-                  <MarketingIcon name={iconFromEmoji(feature.icon)} className="h-9 w-9" />
+                  <MarketingIcon name={emojiToIcon(feature.icon)} className="h-9 w-9" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
                 <p className="text-gray-700 mb-4">{feature.description}</p>
@@ -2197,7 +2198,7 @@ export default function JarameService() {
             {coreFeatures.slice(4).map((feature, index) => (
               <div key={index} className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-shadow">
                 <div className="mb-4 text-primary-600">
-                  <MarketingIcon name={iconFromEmoji(feature.icon)} className="h-9 w-9" />
+                  <MarketingIcon name={emojiToIcon(feature.icon)} className="h-9 w-9" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
                 <p className="text-gray-700 mb-4">{feature.description}</p>
@@ -2688,35 +2689,8 @@ export default function JarameService() {
   )
 }
 
-function iconFromEmoji(icon: string): MarketingIconName {
-  const map: Record<string, MarketingIconName> = {
-    '🧸': 'heart',
-    '🧠': 'brain',
-    '🎯': 'target',
-    '📋': 'document',
-    '📝': 'document',
-    '✅': 'shield',
-    '📈': 'trend',
-    '🔐': 'lock',
-    '🏫': 'graduation',
-    '📤': 'upload',
-    '💊': 'pill',
-    '⚖️': 'scale',
-    '🌐': 'globe',
-    '⚠️': 'shield',
-    '🩺': 'stethoscope',
-    '📒': 'document',
-    '🤖': 'robot',
-    '📊': 'chart',
-    '🧩': 'puzzle',
-    '🏥': 'hospital',
-    '🏠': 'link',
-  }
-  return map[icon] ?? 'sparkle'
-}
-
 function ValueCard({ title, desc, icon }: { title: string; desc: string; icon: string }) {
-  const iconName = iconFromEmoji(icon)
+  const iconName = emojiToIcon(icon)
   return (
     <div className="bg-white rounded-xl p-6 shadow hover:shadow-lg transition-shadow">
       <div className="mb-3 text-primary-600">

@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Header from './Header'
 import Footer from './Footer'
+import { NewsCategoryIcon } from './NewsCategoryIcon'
 import {
   newsArticles,
   formatDate,
@@ -84,8 +85,8 @@ export default function NewsArticleView({
                 </Link>
               </div>
             )}
-            <div className="text-6xl mb-6" aria-hidden="true">
-              {article.image}
+            <div className="flex justify-center mb-6" aria-hidden="true">
+              <NewsCategoryIcon category={article.category} className="h-20 w-20 text-white" />
             </div>
             <div className="flex items-center justify-center mb-4 flex-wrap gap-2">
               <span className="bg-white text-primary-600 px-3 py-1 rounded-full text-sm font-medium">
@@ -174,9 +175,7 @@ export default function NewsArticleView({
                   className="bg-gray-50 rounded-xl overflow-hidden hover:shadow-lg transition-shadow"
                 >
                   <div className="h-48 bg-gradient-to-br from-primary-100 to-secondary-100 flex items-center justify-center">
-                    <span className="text-6xl" aria-hidden="true">
-                      {relatedArticle.image}
-                    </span>
+                    <NewsCategoryIcon category={relatedArticle.category} />
                   </div>
                   <div className="p-6">
                     <div className="flex items-center mb-3">

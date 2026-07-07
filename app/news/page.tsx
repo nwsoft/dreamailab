@@ -3,6 +3,7 @@
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import Link from 'next/link'
+import { NewsCategoryIcon } from '../../components/NewsCategoryIcon'
 import { useState, useEffect, useMemo } from 'react'
 import { newsArticles, newsCategories, formatDate, getCategoryName } from './data'
 
@@ -66,19 +67,33 @@ export default function News() {
       <div className="min-h-screen bg-gray-50">
         <Header />
         
-        {/* Hero Section - 플랫폼 성장·정책 연계 강조 */}
+        {/* Hero Section — 미디어 허브 */}
         <section className="bg-gradient-to-br from-primary-600 to-secondary-600 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <div className="inline-block px-4 py-1.5 rounded-full text-sm font-medium bg-white/15 text-white/95 mb-6">
-                플랫폼 성장 · 기술 진보 · 정책 연계
+                Dream AI Lab Media
               </div>
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                뉴스 및 소식
+                뉴스센터
               </h1>
-              <p className="text-xl max-w-3xl mx-auto">
-                회사 성장, 기술 진보, 정책 연계, 플랫폼 확장 관련 최신 소식을 확인하세요.
+              <p className="text-xl max-w-3xl mx-auto mb-8">
+                회사 소식, 서비스 업데이트, 기술·인사이트, 창업자 이야기, 보도자료를
+                목적별로 나누어 확인하세요.
               </p>
+              <div className="flex flex-wrap justify-center gap-2 text-sm text-white/90">
+                {newsCategories
+                  .filter((c) => c.value !== 'all')
+                  .map((c) => (
+                    <span
+                      key={c.value}
+                      className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10"
+                    >
+                      <NewsCategoryIcon category={c.value} className="h-4 w-4" />
+                      {c.name}
+                    </span>
+                  ))}
+              </div>
             </div>
           </div>
         </section>
@@ -90,7 +105,9 @@ export default function News() {
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 주요 소식
               </h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">플랫폼 확장 및 시장 선점 관련 핵심 뉴스</p>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                최근 회사·서비스·기술 관련 핵심 글
+              </p>
             </div>
 
             {/* 3개 카드 그리드 */}
@@ -98,7 +115,7 @@ export default function News() {
               {featuredArticles.slice(0, 3).map((article) => (
                 <article key={article.id} className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                   <div className="h-48 bg-gradient-to-br from-primary-100 to-secondary-100 flex items-center justify-center">
-                    <div className="text-6xl">{article.image}</div>
+                    <NewsCategoryIcon category={article.category} />
                   </div>
                   <div className="p-6">
                     <div className="flex items-center mb-3">
@@ -175,7 +192,7 @@ export default function News() {
                   {currentArticles.map((article) => (
                     <article key={article.id} className="bg-gray-50 rounded-xl overflow-hidden hover:shadow-lg transition-shadow">
                       <div className="h-48 bg-gradient-to-br from-primary-100 to-secondary-100 flex items-center justify-center">
-                        <div className="text-6xl">{article.image}</div>
+                        <NewsCategoryIcon category={article.category} className="h-14 w-14 text-primary-600" />
                       </div>
                       <div className="p-6">
                         <div className="flex items-center mb-3">
@@ -262,7 +279,9 @@ export default function News() {
               </>
             ) : (
               <div className="text-center py-16">
-                <div className="text-6xl mb-4">📰</div>
+                <div className="flex justify-center mb-4">
+                  <NewsCategoryIcon category={selectedCategory === 'all' ? 'press' : selectedCategory} className="h-16 w-16 text-gray-400" />
+                </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">해당 카테고리에 뉴스가 없습니다</h3>
                 <p className="text-gray-600 mb-6">
                   다른 카테고리를 시도해보세요.

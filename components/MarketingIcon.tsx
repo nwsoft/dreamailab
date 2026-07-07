@@ -3,6 +3,7 @@
  * 의미가 분명한 구간에만 사용 (장식 남발 지양).
  */
 import type { SVGProps } from 'react'
+import { resolveIcon } from '../lib/icon-system'
 export type MarketingIconName =
   | 'scale'
   | 'chart'
@@ -40,13 +41,30 @@ export type MarketingIconName =
   | 'shield'
   | 'pill'
   | 'dna'
+  | 'phone'
+  | 'users'
+  | 'home'
+  | 'buildings'
+  | 'bell'
+  | 'clock'
+  | 'mic'
+  | 'trophy'
+  | 'pin'
+  | 'megaphone'
+  | 'download'
+  | 'baby'
+  | 'child'
+  | 'alert'
+  | 'camera'
+  | 'accessibility'
 
 type Props = {
-  name: MarketingIconName
+  name: MarketingIconName | string
   className?: string
 } & Pick<SVGProps<SVGSVGElement>, 'aria-label'>
 
 export function MarketingIcon({ name, className = 'h-8 w-8 text-current', 'aria-label': ariaLabel }: Props) {
+  const icon = resolveIcon(name)
   const common: SVGProps<SVGSVGElement> = {
     className,
     viewBox: '0 0 24 24',
@@ -59,7 +77,7 @@ export function MarketingIcon({ name, className = 'h-8 w-8 text-current', 'aria-
     'aria-label': ariaLabel,
   }
 
-  switch (name) {
+  switch (icon) {
     case 'scale':
       return (
         <svg {...common}>
@@ -294,6 +312,109 @@ export function MarketingIcon({ name, className = 'h-8 w-8 text-current', 'aria-
       return (
         <svg {...common}>
           <path d="M6 4c2 2 2 4 0 6M18 4c-2 2-2 4 0 6M6 14c2 2 2 4 0 6M18 14c-2 2-2 4 0 6M8 7h8M8 17h8" />
+        </svg>
+      )
+    case 'phone':
+      return (
+        <svg {...common}>
+          <rect x="7" y="3" width="10" height="18" rx="2" />
+          <path d="M10 18h4" />
+        </svg>
+      )
+    case 'users':
+      return (
+        <svg {...common}>
+          <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM20 8v6M23 11h-6M17 21v-2a4 4 0 0 1 3-3.87" />
+        </svg>
+      )
+    case 'home':
+      return (
+        <svg {...common}>
+          <path d="M3 11.5 12 4l9 7.5M5 10.5V20h14v-9.5M9 20v-6h6v6" />
+        </svg>
+      )
+    case 'buildings':
+      return (
+        <svg {...common}>
+          <path d="M3 21V8l6-3v16M9 21V4l6-2v19M15 21V11l6-3v13M6 10h1M6 14h1M18 14h1M12 6h1M12 10h1" />
+        </svg>
+      )
+    case 'bell':
+      return (
+        <svg {...common}>
+          <path d="M18 16v-5a6 6 0 1 0-12 0v5l-2 2h16l-2-2zM10 20a2 2 0 0 0 4 0" />
+        </svg>
+      )
+    case 'clock':
+      return (
+        <svg {...common}>
+          <circle cx="12" cy="12" r="10" />
+          <path d="M12 6v6l4 2" />
+        </svg>
+      )
+    case 'mic':
+      return (
+        <svg {...common}>
+          <path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zM19 11a7 7 0 0 1-14 0M12 18v3" />
+        </svg>
+      )
+    case 'trophy':
+      return (
+        <svg {...common}>
+          <path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4zM5 4H3v2a3 3 0 0 0 3 3M19 4h2v2a3 3 0 0 1-3 3" />
+        </svg>
+      )
+    case 'pin':
+      return (
+        <svg {...common}>
+          <path d="M12 21s7-4.5 7-11a7 7 0 1 0-14 0c0 6.5 7 11 7 11z" />
+          <circle cx="12" cy="10" r="2.5" />
+        </svg>
+      )
+    case 'megaphone':
+      return (
+        <svg {...common}>
+          <path d="m3 11 4-2v6l-4-2v-2zM7 9l10-4v14L7 15V9zM17 8.5a4 4 0 0 1 0 7" />
+        </svg>
+      )
+    case 'download':
+      return (
+        <svg {...common}>
+          <path d="M12 3v12M8 11l4 4 4-4M5 21h14" />
+        </svg>
+      )
+    case 'baby':
+      return (
+        <svg {...common}>
+          <circle cx="12" cy="10" r="4" />
+          <path d="M8 21v-1a4 4 0 0 1 8 0v1" />
+        </svg>
+      )
+    case 'child':
+      return (
+        <svg {...common}>
+          <circle cx="12" cy="9" r="3.5" />
+          <path d="M7 20v-1a5 5 0 0 1 10 0v1" />
+        </svg>
+      )
+    case 'alert':
+      return (
+        <svg {...common}>
+          <path d="M12 3 2 19h20L12 3zM12 10v4M12 17h.01" />
+        </svg>
+      )
+    case 'camera':
+      return (
+        <svg {...common}>
+          <path d="M4 8h4l2-2h4l2 2h4v11H4V8z" />
+          <circle cx="12" cy="13" r="3" />
+        </svg>
+      )
+    case 'accessibility':
+      return (
+        <svg {...common}>
+          <circle cx="12" cy="5" r="2" />
+          <path d="M7 9h10M12 7v5M9 20l3-5 3 5M7 12h10" />
         </svg>
       )
     default:

@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
-import { MarketingIcon, type MarketingIconName } from '../../../components/MarketingIcon'
+import { SymbolIcon } from '../../../components/SymbolIcon'
 
 const pageCanonical = 'https://dreamailab.com/services/veggie'
 
@@ -34,34 +34,6 @@ const brand = {
   english: 'VeggieCare',
   status: 'Beta',
   externalUrl: 'https://veggie.care',
-}
-
-const symbolIconMap: Record<string, MarketingIconName> = {
-  '🌱': 'sprout',
-  '💬': 'chat',
-  '🧑‍⚕️': 'stethoscope',
-  '🏪': 'blocks',
-  '📒': 'document',
-  '🧠': 'brain',
-  '🥗': 'leaf',
-  '📍': 'search',
-  '🛒': 'handshake',
-  '🏆': 'rocket',
-  '🌿': 'leaf',
-  '🥚': 'puzzle',
-  '🐟': 'heart',
-  '🔄': 'refresh',
-  '👤': 'user',
-  '🌍': 'globe',
-  '💼': 'cog',
-  '🔬': 'flask',
-  '🏛️': 'scale',
-}
-
-function SymbolIcon({ symbol, className = 'h-6 w-6 text-current' }: { symbol: string; className?: string }) {
-  const mapped = symbolIconMap[symbol]
-  if (!mapped) return <span className={className}>{symbol}</span>
-  return <MarketingIcon name={mapped} className={className} />
 }
 
 const targetAudiences = [
