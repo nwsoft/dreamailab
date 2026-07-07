@@ -1292,7 +1292,12 @@ export default function MarriageService() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="inline-block px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold mb-4">Service Status: Pilot</span>
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">{brand.name} (베타·파일럿 운영)</h2>
-          <p className="text-gray-600">글로벌커플케어는 프로필·매칭·에스크로·계약 등 MVP 핵심 모듈을 베타로 운영 중이며, 국제결혼 <strong>정보·비즈니스 인프라</strong>를 지속 업데이트합니다. 교육·커뮤니티·정착·AI 도구는 순차 확장합니다. <strong>직접 중개가 아닌</strong> 정보·파트너 연결 플랫폼입니다.</p>
+          <p className="text-gray-600 mb-4">글로벌커플케어는 프로필·매칭·에스크로·계약 등 MVP 핵심 모듈을 베타로 운영 중이며, <strong>2026년 상반기 공식 오픈</strong>을 목표로 국제결혼 <strong>정보·비즈니스 인프라</strong>를 지속 업데이트합니다. 교육·커뮤니티·정착·AI 도구는 순차 확장합니다. <strong>직접 중개가 아닌</strong> 정보·파트너 연결 플랫폼입니다.</p>
+          <p className="text-sm">
+            <Link href="/news/78" className="text-blue-700 font-medium hover:underline">
+              보도자료: 2026 상반기 오픈·AI 디지털케어로그 기반 가족 케어 인프라 →
+            </Link>
+          </p>
         </div>
       </section>
 

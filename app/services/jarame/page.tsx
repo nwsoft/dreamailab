@@ -591,9 +591,9 @@ export default function JarameService() {
             센터·보호자 무료 요금제
           </h2>
           <p className="text-center text-gray-600 text-sm mb-8 max-w-3xl mx-auto leading-relaxed">
-            발달장애 케어 표준화는 국가·보건복지부가 해야 할 일이지만, 절차 지연 속 현장은 기다릴 수 없습니다.
-            자람이는 <strong className="text-gray-800">기본 기능 무료</strong>, AI 호출 비용 <strong className="text-gray-800">최소화</strong>,
-            <strong className="text-gray-800"> 영세 센터(20인 이하)</strong>·<strong className="text-gray-800">바우처 미지원 보호자</strong> 가정을 위한 무료 플랜으로 사회적 약자 보급에 나섭니다.
+            발달장애 케어 표준화는 정부·공공 영역에서도 중요한 과제입니다. 제도가 현장에 안착하기까지는 시간이 걸리지만, 가정과 센터의 필요는 매일 이어집니다.
+            자람이는 <strong className="text-gray-800">정책과 협력하는 동시에</strong> 현장에 먼저 닿을 수 있도록 <strong className="text-gray-800">기본 기능 무료</strong>, AI 호출 비용 <strong className="text-gray-800">최소화</strong>,
+            <strong className="text-gray-800"> 영세 센터(20인 이하)</strong>·<strong className="text-gray-800">바우처 미지원 보호자</strong> 가정을 위한 무료 플랜을 제공합니다.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
             <div className="bg-white rounded-xl p-6 border border-emerald-100 shadow-sm">

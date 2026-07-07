@@ -1,6 +1,6 @@
 # 글로벌커플케어 (GCC) — 스펙 요약 (웹·플랫폼 정합)
 
-- **last_reviewed:** 2026-07-06
+- **last_reviewed:** 2026-07-07
 - **canonical 웹:** https://dreamailab.com/services/marriage
 - **외부 플랫폼:** https://globalcouplecare.com
 - **DAL 도메인:** 글로벌커플케어 (GC) · **상태:** Pilot (베타·MVP ~93%)
@@ -21,6 +21,8 @@
 | oneLiner | 결혼 전 비대칭 완화 → 정착 데이터 |
 | value | 신뢰 거래 + 다문화·공공 연계 |
 | status | Pilot |
+
+**2026 상반기:** 공식 오픈 목표 (현재 MVP 베타·파일럿). 보도: `/news/78`
 
 ## 홈(`app/page.tsx`) 정합
 

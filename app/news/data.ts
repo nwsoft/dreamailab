@@ -42,29 +42,195 @@ export function getLocalizedArticle(
 
 export const newsArticles: NewsArticle[] = [
   {
+    id: 78,
+    title: '글로벌커플케어(GCC), 2026 상반기 공식 오픈 예정 — AI 디지털케어로그 기반 국제결혼·가족 케어 인프라',
+    excerpt: '단순 프로필 매칭을 넘어 만남부터 결혼·다문화 정착까지 생활 데이터를 연결하는 글로벌커플케어(GCC)가 2026년 상반기 공식 오픈을 목표로 합니다. 국제결혼 사기·조기 이혼·가격 비대칭을 줄이고, 검증된 업체만 입점하는 신뢰 마켓플레이스를 지향합니다.',
+    category: 'press',
+    date: '2026-07-07',
+    image: '💒',
+    featured: true,
+    author: '드림에이아이랩',
+    tags: ['글로벌커플케어', 'GCC', '국제결혼', '다문화가족', 'AI 디지털케어로그', '예측형 매칭', '사회문제해결', '정해성', '2026 상반기', '마켓플레이스', '공공협력'],
+    i18n: {
+      en: {
+        title: 'Global Couple Care (GCC) Targets H1 2026 Launch — AI Digital Care Log for International Marriage & Family Life',
+        excerpt: 'Beyond profile-only dating apps, GCC connects meeting, marriage, and multicultural settlement in one care architecture. It aims to reduce fraud, early divorce, and price opacity through a verified marketplace—not direct brokerage.',
+        content: `
+      <p class="text-sm text-gray-500 mb-6">[Press Release · 2026-07-07]</p>
+
+      <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-4">
+        International marriage touches families, immigration, language, and children—not just a match. <strong>Global Couple Care (GCC)</strong> is Dream AI Lab's answer: an <strong>AI Digital Care Log–based</strong> platform that links pre-marriage transparency with post-marriage family support, targeting <strong>official launch in H1 2026</strong>.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Social problems we address</h2>
+      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-8 ml-2">
+        <li><strong>Information asymmetry</strong> — opaque pricing, hidden fees, hard-to-verify agencies</li>
+        <li><strong>Fraud &amp; unethical brokers</strong> — fake profiles, one-sided payments, weak accountability</li>
+        <li><strong>Early divorce &amp; settlement failure</strong> — support stops after the contract is signed</li>
+        <li><strong>Haphazard start</strong> — couples begin without standard procedures, then pay more to fix mistakes</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">What GCC innovates</h2>
+      <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+        GCC is designed as the world's first <strong>global couple matching + life-care architecture</strong> built on AI Digital Care Log—extending beyond swipe-based apps to track <strong>consent-based communication, conflict-resolution patterns, and settlement milestones</strong> across the family lifecycle.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        In Korea, GCC is building a <strong>predictive matching fusion model</strong> to support marriage immigrants and multicultural families—with infrastructure that can link to <strong>public institutions and NGOs</strong> for ongoing care, not one-off introductions.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Building a fair market</h2>
+      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-8 ml-2">
+        <li><strong>Verified marketplace</strong> — KYC, reviews, completion rates; bad actors removed</li>
+        <li><strong>Transparent pricing</strong> — standard quotes, procedures, timelines by country</li>
+        <li><strong>Not direct brokerage</strong> — users compare and contract with verified partners</li>
+        <li><strong>End-to-end services</strong> — legal, visa, travel, wedding, health, education after marriage</li>
+      </ul>
+
+      <div class="bg-primary-50 border-l-4 border-primary-600 p-6 mb-8 rounded-r-lg">
+        <p class="text-lg text-gray-800 leading-relaxed italic">
+          "International marriage should not start in the dark. We connect transparency before marriage with care after marriage—so families build on trust, not guesswork."
+        </p>
+        <p class="text-gray-600 text-sm mt-3">— Jung Haesung, CTO &amp; inventor of AI Digital Care Log, Dream AI Lab</p>
+      </div>
+
+      <p class="text-gray-600 text-sm mb-6">
+        ※ GCC is an information &amp; partner-connection platform, not a direct matchmaking broker. Launch scope follows terms at open. <a href="/services/marriage" class="text-primary-600 underline">GCC service</a> · <a href="/contact?service=marriage" class="text-primary-600 underline">Contact</a>
+      </p>
+    `
+      }
+    },
+    content: `
+      <p class="text-sm text-gray-500 mb-6">[보도자료 · 2026-07-07]</p>
+
+      <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-4">
+        국제결혼은 두 사람의 만남이 아니라 <strong>가족·이민·언어·자녀·정착</strong>까지 이어지는 사회적 선택입니다. 드림에이아이랩(DAL)의 <strong>글로벌커플케어(GCC, Global Couple Care)</strong>는 AI 디지털케어로그를 기반으로 <strong>만남 전 투명성</strong>과 <strong>결혼 이후 가족 케어</strong>를 하나의 인프라로 연결하며, <strong>2026년 상반기 공식 오픈</strong>을 목표로 합니다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">왜 지금 — 어떤 사회 문제인가</h2>
+      <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+        국내 국제결혼 시장은 오랫동안 <strong>정보 비대칭·과다 비용·비윤리적 중개</strong>가 반복되어 왔습니다. 비용과 절차가 처음부터 표준화되지 않고 주먹구구식으로 시작되면, 이후 바가지·추가 비용·분쟁으로 이어지기 쉽습니다. 결혼 직후에는 언어·취업·가족 갈등에 대한 지원이 끊기면서 <strong>조기 이혼·정착 실패</strong>가 사회적 비용으로 남습니다.
+      </p>
+      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-8 ml-2">
+        <li><strong>국제결혼 사기·허위 이력</strong> — 검증 없는 업체·브로커 개입</li>
+        <li><strong>가격·절차 불투명</strong> — 만나서 말해주는 견적, 숨은 비용</li>
+        <li><strong>결혼 후 방치</strong> — 계약 후 연락 두절, 다문화 가족 정착 공백</li>
+        <li><strong>잘못된 시장 문화 고착</strong> — 윤리 기준 없는 입점, 소비자 피해 반복</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">GCC가 제안하는 혁신 — 결혼·가족 영역</h2>
+
+      <div class="bg-rose-50 border border-rose-100 rounded-xl p-6 mb-6">
+        <h3 class="font-bold text-gray-900 mb-2">🌍 AI 디지털케어로그 기반 글로벌 커플 매칭·라이프케어 아키텍처</h3>
+        <p class="text-gray-700 leading-relaxed">
+          단순히 프로필 조건만 맞추는 기존 매칭 앱의 한계를 넘어, <strong>만남 → 상담 → 결혼 → 다문화 정착</strong>까지의 행동·생활 데이터를 <strong>동의 기반</strong>으로 하나의 로그(Log)로 연결·예측하는 통합 체계를 설계했습니다. 발달장애 케어에서 검증된 AI 디지털케어로그 철학을 <strong>가족·결혼 영역</strong>으로 확장한 아키텍처입니다.
+        </p>
+      </div>
+
+      <div class="bg-blue-50 border border-blue-100 rounded-xl p-6 mb-8">
+        <h3 class="font-bold text-gray-900 mb-2">🇰🇷 국내 최초 예측형 매칭 융합 모델 — 정착·다문화 가족 안정</h3>
+        <p class="text-gray-700 leading-relaxed mb-3">
+          국제결혼 사기·조기 이혼 예방을 위해 <strong>소통 방식·갈등 해결 행동 로그 패턴</strong>을 분석해 지속 가능한 커플을 추천하는 독자 모델을 구축합니다. 국내 최초로 <strong>공공·NGO 기관과 연계 가능한</strong> 다문화 가족 케어 인프라를 함께 설계·증명해 나갑니다.
+        </p>
+        <p class="text-sm text-gray-600">
+          ※ 모든 데이터 수집·분석은 이용자 동의와 윤리 가이드라인을 전제로 합니다. GCC는 직접 중개가 아닌 <strong>정보·파트너 연결 플랫폼</strong>입니다.
+        </p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">올바른 시장을 만드는 방법</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        GCC는 기존 산업을 없애는 것이 아니라, <strong>검증된 업체만 경쟁하는 신뢰 마켓플레이스</strong>로 바꿉니다. 엔카가 중고차 시장에 투명성을, 배달·숙박 플랫폼이 정보 비교를 가져온 것처럼, 국제결혼에도 <strong>표준 견적·리뷰·완료율·KYC</strong>를 도입합니다.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+          <h3 class="font-bold text-gray-900 mb-3">Before — 기존 관행</h3>
+          <ul class="text-sm text-gray-700 space-y-2 list-disc list-inside">
+            <li>가격은 만나서 이야기 — 비교 불가</li>
+            <li>검증 없는 업체 입점 — 사기·바가지</li>
+            <li>결혼 후 지원 없음 — 정착 실패 반복</li>
+            <li>주먹구구 절차 — 추가 비용·분쟁</li>
+          </ul>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+          <h3 class="font-bold text-gray-900 mb-3">After — GCC 플랫폼</h3>
+          <ul class="text-sm text-gray-700 space-y-2 list-disc list-inside">
+            <li>국가·케이스별 <strong>표준 견적·절차</strong> 공개</li>
+            <li>KYC·리뷰·신고로 <strong>부정 업체 퇴출</strong></li>
+            <li>결혼 후 언어·취업·자녀교육·<strong>가족 라이프로그</strong></li>
+            <li>법무·비자·여행·웨딩·의료·교육 <strong>생태계 연결</strong></li>
+          </ul>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">주도하는 사업 구조</h2>
+      <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+        GCC는 B2C(가족)·B2B(업체)·B2G(공공)를 아우르는 <strong>정보·프로세스·데이터 인프라</strong>입니다. 네 가지 기둥으로 설계됩니다.
+      </p>
+      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-8 ml-2">
+        <li><strong>Agency SaaS</strong> — 중개·대행사용 고객·서류·타임라인·정산 관리</li>
+        <li><strong>Marketplace</strong> — 법률·행정·통번역·보험·주거 파트너 검증·연결</li>
+        <li><strong>Consumer App</strong> — 가족 커뮤니케이션·체크리스트·문서·정착 가이드</li>
+        <li><strong>Data &amp; Risk</strong> — 사기 방지 신호·성공 패턴·국가별 리스크 인텔리전스</li>
+      </ul>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        이용자는 정보를 비교·선택하고, 국내·해외 업체는 <strong>표준 프로세스와 윤리 규칙</strong> 안에서 서비스 품질로 경쟁합니다. 정착 이후에는 DAL 생태계(<a href="/services/healthcare" class="text-primary-600 underline">토탈케어로그</a>, <a href="/services/educarelog" class="text-primary-600 underline">에듀케어로그</a> 등)와 연계 가능한 구조입니다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">AI 연구자 정해성 — 왜 GCC인가</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        <strong>정해성</strong> CTO는 AI 디지털케어로그를 최초 고안·개발했습니다. 발달장애 현장에서 “끊긴 기록이 가족을 고통스럽게 한다”는 문제를 해결한 경험을, <strong>국제결혼·다문화 가족</strong> 영역에 확장합니다. “만남만 연결하고 끝나는 앱”이 아니라, <strong>가족이 살아가는 데이터를 연결하는 인프라</strong>가 필요하다고 판단했습니다.
+      </p>
+
+      <div class="bg-primary-50 border-l-4 border-primary-600 p-6 mb-8 rounded-r-lg">
+        <p class="text-lg text-gray-800 leading-relaxed italic mb-4">
+          "국제결혼은 어둠 속에서 시작되어서는 안 됩니다. 결혼 전에는 투명한 비교와 검증을, 결혼 후에는 정착과 가족 케어를 이어야 합니다. GCC는 AI 디지털케어로그로 그 연결을 만들고, 좋은 가격에 올바른 선택을 할 수 있는 시장을 만들겠습니다."
+        </p>
+        <p class="text-gray-600 text-sm">— 정해성 CTO, AI 디지털케어로그 최초 고안·개발 · 드림에이아이랩</p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">2026 상반기 오픈 로드맵</h2>
+      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-8 ml-2">
+        <li><strong>현재</strong> — 프로필·매칭·에스크로·계약 등 MVP 베타·파일럿 운영 (~93%)</li>
+        <li><strong>2026 상반기</strong> — 공식 오픈, 표준 견적·KYC·업체 마켓플레이스 본격화</li>
+        <li><strong>순차 확장</strong> — 교육·커뮤니티·AI 도구·가족 라이프로그·공공 연계</li>
+      </ul>
+
+      <p class="text-gray-600 text-sm mb-6 leading-relaxed">
+        ※ GCC는 직접 중개·결혼 주선 서비스가 아닙니다. 이용자와 검증된 파트너 간 계약·거래가 이루어집니다. 오픈 범위·약관은 공식 오픈 시점에 따릅니다.
+        <a href="/services/marriage" class="text-primary-600 underline">글로벌커플케어 서비스</a> ·
+        <a href="https://globalcouplecare.com" class="text-primary-600 underline">globalcouplecare.com</a> ·
+        <a href="/contact?service=marriage&type=b2b" class="text-primary-600 underline">B2B·파트너 문의</a>
+      </p>
+
+      <p class="text-sm text-gray-500 border-t border-gray-200 pt-6">
+        문의: press@dreamailab.com · partnership@dreamailab.co.kr
+      </p>
+    `
+  },
+  {
     id: 77,
-    title: '자람이, 발달장애 센터·보호자 무료 요금제 공개 — 탁상공론 너머 현장 보급에 나선다',
-    excerpt: '보건복지부·국가가 해야 할 디지털 표준화가 절차 때문에 현장에 늦어지는 가운데, AI 연구자 정해성이 고안한 자람이가 무료 플랜으로 센터·보호자 기본 기능과 AI 치료일지를 제공합니다. 영세 센터(20인 이하)와 바우처 미지원 보호자 가정도 포함합니다.',
+    title: '자람이, 발달장애 센터·보호자 무료 요금제 공개 — 현장 보급을 앞당기다',
+    excerpt: '발달장애 디지털 케어 표준화는 정부·공공 영역에서도 중요한 과제이나, 제도가 현장에 안착하기까지는 시간이 걸립니다. AI 연구자 정해성이 고안한 자람이는 그 간극을 메우기 위해 센터·보호자 무료 플랜을 공개했습니다. 영세 센터(20인 이하)와 바우처 미지원 가정도 포함합니다.',
     category: 'press',
     date: '2026-07-07',
     image: '💙',
     featured: true,
     author: '드림에이아이랩',
-    tags: ['자람이', '무료 요금제', '발달장애', '보호자', '발달센터', '영세사업자', '바우처', '사회약자', '정해성', 'AI 디지털케어로그', '보건복지부', '현장 보급'],
+    tags: ['자람이', '무료 요금제', '발달장애', '보호자', '발달센터', '영세사업자', '바우처', '사회약자', '정해성', 'AI 디지털케어로그', '현장 보급', '공공 협력'],
     i18n: {
       en: {
-        title: 'Jarame Launches Free Plans for Centers and Guardians — Field Rollout Beyond Policy Gridlock',
-        excerpt: 'While national policy moves slowly, AI researcher Jung Haesung\'s Jarame offers free core features for developmental centers and families—including micro centers (≤20 staff) and guardians not covered by vouchers.',
+        title: 'Jarame Launches Free Plans for Centers and Guardians — Accelerating Field Access',
+        excerpt: 'Digital care standardization is an important public policy goal, yet reaching every center and family takes time. Jung Haesung\'s Jarame bridges that gap with free core plans—including micro centers (≤20 staff) and guardians not yet covered by vouchers.',
         content: `
       <p class="text-sm text-gray-500 mb-6">[Press Release · 2026-07-07]</p>
 
       <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-4">
-        Standardizing developmental disability care data is work the Ministry of Health and Welfare and the state should lead—but desk-bound debate and complex procedures delay field adoption. Jarame moves first with <strong>free plans</strong> for vulnerable families and centers.
+        Standardizing developmental disability care data is a vital goal for government and public institutions—and for the field. Jarame complements that direction by offering <strong>free plans</strong> so centers and families can start now, not only after every policy step is complete.
       </p>
 
       <h2 class="text-2xl font-bold text-gray-900 mb-4">Why free—now</h2>
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        Jarame is not waiting for perfect policy to reach the field. <strong>Basic features are free</strong> for centers and guardians. AI treatment-log drafts are priced to <strong>minimize call costs</strong>—free at the core tier so therapists can focus on care, not paperwork fees.
+        There is a natural gap between policy design and daily practice at centers and homes. Jarame fills that gap with <strong>free basic features</strong> for centers and guardians. AI treatment-log drafts are designed to <strong>minimize call costs</strong> so therapists can focus on care.
       </p>
 
       <ul class="list-disc list-inside text-gray-700 space-y-2 mb-8 ml-2">
@@ -76,7 +242,7 @@ export const newsArticles: NewsArticle[] = [
       <h2 class="text-2xl font-bold text-gray-900 mb-4">Why Jung Haesung built Jarame</h2>
       <div class="bg-primary-50 border-l-4 border-primary-600 p-6 mb-8 rounded-r-lg">
         <p class="text-lg text-gray-800 leading-relaxed italic">
-          "The problem was never only a shortage of experts—it was that real-life data around each child was disconnected. I designed AI Digital Care Log so centers, therapists, guardians, and later schools and hospitals could build RWE together. If policy is slow, the field cannot wait. Free access is how we reach families who need it first."
+          "Care standardization must advance with public policy—but disconnected records are a problem families face today. I built AI Digital Care Log to connect centers, therapists, and guardians now. Free access is our way to help the field while policy and practice meet in the middle."
         </p>
         <p class="text-gray-600 text-sm mt-3">— Jung Haesung, CTO &amp; inventor of AI Digital Care Log, Dream AI Lab</p>
       </div>
@@ -91,7 +257,7 @@ export const newsArticles: NewsArticle[] = [
       <p class="text-sm text-gray-500 mb-6">[보도자료 · 2026-07-07]</p>
 
       <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-4">
-        발달장애 가족의 기록 표준화와 AI 디지털케어로그 보급은 <strong>보건복지부와 국가가 앞장서야 할 일</strong>입니다. 하지만 탁상공론과 복잡한 절차 때문에 <strong>현장 도입은 늦어지고</strong>, 그 사이 아이들의 골든타임은 흘러갑니다. 자람이는 기다리지 않고 <strong>무료 요금제</strong>로 현장 보급에 나섭니다.
+        발달장애 가족의 기록 표준화와 AI 디지털케어로그 보급은 보건복지부를 비롯한 <strong>정부·공공 부문에서도 중요한 과제</strong>로 논의되고 있습니다. 다만 제도가 설계·검토되는 과정과 <strong>현장 센터·가정에 실제로 도달하는 시점</strong> 사이에는 자연스럽게 시간차가 생깁니다. 그 간극 속에서도 부모와 치료사는 매일 기록과 비용의 문제에 직면합니다. 자람이는 <strong>정책과 협력하는 동시에</strong>, 현장에 먼저 닿을 수 있도록 <strong>무료 요금제</strong>로 보급에 나섭니다.
       </p>
 
       <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">무료 요금제 — 누구를 위한 것인가</h2>
@@ -130,15 +296,15 @@ export const newsArticles: NewsArticle[] = [
         <li>가정·센터·학교·병원 기록이 <strong>끊겨</strong> 부모는 기억과 설명에 의존한다</li>
         <li>치료사는 같은 내용을 치료일지·보호자 설명·리포트에 <strong>여러 번</strong> 쓴다</li>
         <li>검사·행정은 표준화되지 않아 <strong>조기개입·RWE</strong>가 어렵다</li>
-        <li>정책·표준 논의는 길고, <strong>현장은 그대로</strong>다</li>
+        <li>제도가 현장에 안착하기까지는 시간이 걸리지만, <strong>아이의 성장과 기록은 매일</strong> 이어진다</li>
       </ul>
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        정 연구자는 “전문가가 부족해서만이 아니라, <strong>아이를 둘러싼 실제 생활 데이터가 연결되지 않는 구조</strong>가 문제”라고 판단했습니다. 자람이는 그 연결을 센터·치료사·보호자가 함께 쓰는 플랫폼으로 구현한 것이고, <strong>무료 플랜은 그 구조가 정책을 기다리지 않고 현장에 닿게 하기 위한 선택</strong>입니다.
+        정 연구자는 “전문가가 부족해서만이 아니라, <strong>아이를 둘러싼 실제 생활 데이터가 연결되지 않는 구조</strong>가 문제”라고 판단했습니다. 자람이는 그 연결을 센터·치료사·보호자가 함께 쓰는 플랫폼으로 구현한 것이고, <strong>무료 플랜은 정책을 대체하는 것이 아니라 현장이 먼저 쓸 수 있는 실용 인프라를 제공하기 위한 선택</strong>입니다.
       </p>
 
       <div class="bg-primary-50 border-l-4 border-primary-600 p-6 mb-8 rounded-r-lg">
         <p class="text-lg text-gray-800 leading-relaxed italic mb-4">
-          "이 일은 원래 국가와 보건복지부가 표준과 예산으로 해야 합니다. 하지만 아이의 골든타임은 절차를 기다려 주지 않습니다. 저는 AI 디지털케어로그로 현장에서 먼저 연결하고, 센터와 보호자가 부담 없이 쓸 수 있도록 무료 요금제를 만들었습니다. 영세 센터와 바우처 밖 가정까지—사회적 약자 보급이 우선입니다."
+          "발달장애 케어 표준화는 정부·공공과 함께 가야 할 길입니다. 다만 현장의 부모와 치료사가 매일 맞닥뜨리는 기록 단절은 오늘의 문제입니다. AI 디지털케어로그로 연결하고, 센터와 보호자가 부담 없이 쓸 수 있도록 무료 요금제를 만들었습니다. 정책과 현장이 만나는 다리가 되겠습니다."
         </p>
         <p class="text-gray-600 text-sm">— 정해성 CTO, AI 디지털케어로그 최초 고안·개발 · 드림에이아이랩</p>
       </div>
@@ -148,7 +314,7 @@ export const newsArticles: NewsArticle[] = [
         <li>끊긴 기록 → <strong>아이 중심 AI 디지털케어로그·RWE</strong></li>
         <li>치료사 문서 부담 → <strong>AI 초안·한 번 기록 다중 활용</strong></li>
         <li>부모의 정보 비대칭 → <strong>학교·센터 내용을 생활 언어로 번역</strong></li>
-        <li>도입 지연 → <strong>무료 플랜·2026 하반기 센터 배포</strong></li>
+        <li>현장 도달까지의 간극 → <strong>무료 플랜으로 먼저 연결·2026 하반기 센터 배포</strong></li>
       </ul>
 
       <p class="text-gray-600 text-sm mb-6 leading-relaxed">
