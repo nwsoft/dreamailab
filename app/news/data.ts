@@ -54,7 +54,7 @@ export const newsArticles: NewsArticle[] = [
     date: '2026-07-07',
     image: '💡',
     featured: false,
-    author: '드림에이아이랩 인사이트팀',
+    author: '자람이팀',
     tags: ['인사이트', '발달장애', '기록 단절', '부모 불안', '치료 데이터', '시스템 설계', '자람이'],
     content: `
       <p class="text-sm text-gray-500 mb-6">[인사이트 · 2026-07-07]</p>
@@ -102,6 +102,11 @@ export const newsArticles: NewsArticle[] = [
       <h2 class="text-2xl font-bold text-gray-900 mb-4">데이터가 쌓이면 달라지는 점</h2>
       <p class="text-lg text-gray-700 mb-8 leading-relaxed">
         데이터의 의미는 “숫자가 많아지는 것”이 아닙니다. 아이의 하루가 사라지지 않고 남는 것입니다. 부모의 막연한 불안이 확인 가능한 근거로 바뀌고, 전문가 경험이 다음 판단에 재사용 가능한 지식이 됩니다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">그래서, 왜 늘 불안한가</h2>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        발달장애 가족이 늘 불안한 이유는 사랑이 부족해서도, 노력이 부족해서도 아닙니다. <strong>아이를 전체로 볼 수 있는 기록이 어디에도 모이지 않기 때문</strong>입니다. 불안을 줄이는 길은 “더 열심히 하라”는 요구가 아니라, 흩어진 기록을 아이 중심으로 잇는 <strong>시스템의 재설계</strong>입니다. 기록이 연결되면 부모는 근거를 갖고 판단할 수 있고, 전문가는 아이를 더 입체적으로 이해할 수 있으며, 치료는 훨씬 더 합리적으로 바뀔 수 있습니다. 자람이가 만들고자 하는 것이 바로 그 연결의 기반입니다.
       </p>
 
       <div class="bg-amber-50 border-l-4 border-amber-500 p-5 mb-8 rounded-r-lg">
@@ -431,57 +436,73 @@ export const newsArticles: NewsArticle[] = [
   {
     id: 77,
     title: '자람이, 발달센터·보호자 대상 무료 요금제 공개',
-    excerpt: '자람이가 발달센터·치료사·보호자가 기본 기능을 무료로 시작할 수 있는 요금제를 공개했습니다. 영세 센터(종사자 20인 이하)와 바우처 미지원 가정까지 포함해 현장 보급을 우선 추진합니다.',
+    excerpt: '자람이가 발달센터·치료사·보호자가 행정·기록·연계 기본 기능을 무료로 시작할 수 있는 요금제를 공개했습니다. 1인·소규모 개인 운영 센터와 바우처 미지원 가정까지 포함해 현장 보급을 우선 추진하며, AI 자동 치료일지 등 연산 비용이 드는 기능은 유료로 제공합니다.',
     category: 'updates',
     date: '2026-07-07',
     image: '💙',
     featured: true,
-    author: '드림에이아이랩',
-    tags: ['자람이', '무료 요금제', '발달장애', '보호자', '발달센터', '영세사업자', '바우처', '현장 보급', '정해성', 'AI 디지털케어로그'],
+    author: '자람이팀',
+    tags: ['자람이', '무료 요금제', '발달장애', '보호자', '발달센터', '소규모 센터', '바우처', '현장 보급', '정해성', 'AI 디지털케어로그'],
     i18n: {
       en: {
-        title: 'Jarame Launches Free Plans for Developmental Centers and Guardians',
-        excerpt: 'Jarame announced free core plans for developmental centers, therapists, and guardians. The program includes micro centers (≤20 staff) and families not covered by vouchers to expand field access first.',
+        title: 'Jarame Opens Free Core Plans for Developmental Centers and Guardians',
+        excerpt: 'Jarame announced free core plans—admin, records, and linkage—for developmental centers, therapists, and guardians. Solo and small centers and families not covered by vouchers are prioritized, while AI auto-logging and other compute-intensive features are offered on paid plans.',
         content: `
       <p class="text-sm text-gray-500 mb-6">[Press Release · 2026-07-07]</p>
 
       <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-4">
-        Jarame announced a <strong>free plan</strong> so developmental centers, therapists, and guardians can start core functions without cost barriers. The free tier is designed for field adoption first, including micro centers and families not covered by vouchers.
+        Dream AI Lab’s developmental-disability platform <strong>Jarame</strong> opened a plan where centers, therapists, and guardians can start <strong>core admin, record, and linkage features for free</strong>. Solo and small centers and families not covered by vouchers are prioritized. Features where AI automatically writes, summarizes, or analyzes treatment logs incur compute cost and are offered on <strong>paid plans</strong>.
       </p>
 
-      <h2 class="text-2xl font-bold text-gray-900 mb-4">Why free now</h2>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Why open core features for free</h2>
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        In developmental-disability care, records are often fragmented across home, center, school, and hospital. Therapists repeatedly rewrite similar notes, and guardians struggle to connect scattered updates. Digital tools are needed, but cost can block adoption. Jarame opens <strong>free core features</strong> first so the field can start immediately.
+        In developmental-disability care, records are fragmented across home, center, school, and hospital. Therapists rewrite similar notes repeatedly, and guardians must re-explain the same situation to each institution. Digital tools help, but cost is a barrier—especially for solo and small centers. Jarame therefore opens <strong>core admin, record, and linkage features for free</strong> so anyone can start.
       </p>
 
-      <h2 class="text-2xl font-bold text-gray-900 mb-4">Who gets what for free</h2>
-      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-8 ml-2">
-        <li><strong>Centers/Therapists:</strong> core admin, care logs, guardian linkage, AI draft notes</li>
-        <li><strong>Guardians:</strong> home logs, summaries, center linkage, child record management</li>
-        <li><strong>Micro centers (≤20 employees):</strong> expanded free support</li>
-        <li><strong>Families not covered by vouchers:</strong> free plan to reduce burden</li>
-      </ul>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Free vs. paid</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
+        <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+          <h3 class="font-bold text-gray-900 mb-3">✅ Free (core)</h3>
+          <ul class="text-sm text-gray-700 space-y-2 list-disc list-inside">
+            <li><strong>Centers/Therapists:</strong> registration, scheduling/attendance, care logs, guardian linkage, basic admin</li>
+            <li><strong>Guardians:</strong> home logs, child record management, center linkage</li>
+            <li>Manually written treatment/activity records</li>
+          </ul>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+          <h3 class="font-bold text-gray-900 mb-3">💳 Paid (AI automation)</h3>
+          <ul class="text-sm text-gray-700 space-y-2 list-disc list-inside">
+            <li><strong>AI auto-drafted treatment logs</strong> from photos, video, and keywords</li>
+            <li><strong>AI summaries, pattern analysis</strong>, and SOAP drafts</li>
+            <li>Trend reports over time and other compute-intensive features</li>
+          </ul>
+        </div>
+      </div>
+      <p class="text-gray-600 text-sm mb-8 leading-relaxed">
+        AI automation is paid because it incurs real compute (AI call) cost. In return, <strong>solo and small centers and families not covered by vouchers</strong> receive expanded free or discounted support so cost never blocks access to needed tools.
+      </p>
 
       <h2 class="text-2xl font-bold text-gray-900 mb-4">Field impact</h2>
       <ul class="list-disc list-inside text-gray-700 space-y-2 mb-8 ml-2">
-        <li>Therapists reduce repetitive documentation workload</li>
-        <li>Guardians understand child progress and care flow more clearly</li>
-        <li>Centers improve guardian communication and basic admin efficiency</li>
+        <li>Centers can organize registration, scheduling, and guardian communication with free core features alone</li>
+        <li>Guardians manage a child’s changes and care flow in one place</li>
+        <li>Therapists who want to cut repetitive documentation can save time with paid AI automation</li>
         <li>Long term: groundwork for connected records across center, home, school, and hospital</li>
       </ul>
 
       <div class="bg-primary-50 border border-primary-200 rounded-xl p-6 mb-8">
         <h3 class="font-bold text-gray-900 mb-2">Technology background</h3>
         <p class="text-gray-700 leading-relaxed mb-4">
-          Jarame is built on AI Digital Care Log, originally conceived by Jung Haesung (CTO), to solve fragmented records in developmental-disability care. The platform is designed to connect child-centered records across home, center, school, and hospital, and to make recording and understanding easier for therapists and guardians.
+          Jarame is built on AI Digital Care Log, originally conceived and developed by Jung Haesung (CTO) to solve fragmented records in developmental-disability care. The platform connects child-centered records across home, center, school, and hospital, and makes recording and understanding easier for therapists and guardians.
         </p>
         <p class="text-gray-700 italic">
-          "Record fragmentation in the field is a daily burden for families and therapists. Jarame opens free plans first so centers and guardians can start now, and we can build child-centered connected records through real adoption."
+          "Record fragmentation is a daily burden for families and therapists. Jarame opens core features for free first so centers and guardians can start now, and builds child-centered connected records through real adoption."
         </p>
+        <p class="text-gray-600 text-sm mt-3">— Jung Haesung, CTO, Dream AI Lab</p>
       </div>
 
       <p class="text-gray-600 text-sm mb-6 leading-relaxed">
-        ※ Free-plan scope, AI call limits, and micro-center criteria follow terms and rollout timing. Jarame is not a medical device, diagnosis, or prescription system.
+        ※ The detailed scope of free and paid plans, AI usage limits, and support criteria for small centers and families follow terms and rollout timing. Jarame is not a medical device, diagnosis, or prescription system.
       </p>
 
       <p class="text-lg text-gray-700 mb-6">
@@ -494,55 +515,58 @@ export const newsArticles: NewsArticle[] = [
       <p class="text-sm text-gray-500 mb-6">[보도자료 · 2026-07-07]</p>
 
       <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-4">
-        드림에이아이랩(DAL)의 발달장애 플랫폼 <strong>자람이</strong>가 발달센터·치료사·보호자가 기본 기능을 부담 없이 시작할 수 있도록 <strong>무료 요금제</strong>를 공개했습니다. 영세 센터(종사자 20인 이하)와 바우처 미지원 가정까지 포함해, 발달장애 현장 보급을 우선 추진합니다.
+        드림에이아이랩(DAL)의 발달장애 플랫폼 <strong>자람이</strong>가 발달센터·치료사·보호자가 <strong>행정·기록·연계 기본 기능을 무료로</strong> 시작할 수 있는 요금제를 공개했습니다. 1인·소규모로 운영되는 센터와 바우처 미지원 가정까지 포함해 현장 보급을 우선 추진합니다. 다만 AI가 치료일지를 자동으로 작성·요약·분석하는 기능은 연산 비용이 들기 때문에 <strong>유료 플랜</strong>으로 제공합니다.
       </p>
 
-      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">왜 무료 요금제인가</h2>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">왜 기본 기능을 무료로 여는가</h2>
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        발달장애 현장에서는 기록이 가정·센터·학교·병원으로 끊겨 있고, 치료사는 같은 내용을 반복 문서화해야 하며, 보호자는 여러 기관 정보를 각각 설명해야 하는 부담이 큽니다. 디지털 케어 도구가 필요하지만 비용 장벽 때문에 현장 도달이 늦어질 수 있습니다. 자람이는 이 간극을 줄이기 위해 <strong>기본 기능 무료 공개</strong>를 먼저 선택했습니다.
+        발달장애 현장에서는 기록이 가정·센터·학교·병원으로 끊겨 있고, 치료사는 같은 내용을 반복해서 문서로 남겨야 하며, 보호자는 여러 기관에 같은 상황을 매번 다시 설명해야 하는 부담이 큽니다. 디지털 도구가 필요하지만, 특히 1인·소규모 센터에는 비용이 진입 장벽이 됩니다. 그래서 자람이는 <strong>행정·기록·연계 같은 기본 기능을 먼저 무료로</strong> 열어, 누구나 부담 없이 시작할 수 있게 했습니다.
       </p>
 
-      <h2 class="text-2xl font-bold text-gray-900 mb-4">무료 대상과 기능</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">무료 기능과 유료 기능</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
         <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-          <h3 class="font-bold text-gray-900 mb-3">🏢 발달센터·치료사</h3>
+          <h3 class="font-bold text-gray-900 mb-3">✅ 무료 (기본 기능)</h3>
           <ul class="text-sm text-gray-700 space-y-2 list-disc list-inside">
-            <li>기본 행정·케어로그·보호자 연계 <strong>무료</strong></li>
-            <li>사진·영상·키워드 기반 AI 치료일지 초안 (호출 비용 최소화)</li>
-            <li><strong>영세 사업자(종사자 20인 이하) 센터</strong> — 무료 지원 확대</li>
+            <li><strong>센터·치료사:</strong> 아동·보호자 등록, 일정·출석, 케어로그, 보호자 연계 등 기본 행정</li>
+            <li><strong>보호자·가정:</strong> 가정 일지, 아이 기록 관리, 센터 연계</li>
+            <li>손으로 직접 쓰는 치료·활동 기록</li>
           </ul>
         </div>
         <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-          <h3 class="font-bold text-gray-900 mb-3">👨‍👩‍👧 보호자·발달장애 가정</h3>
+          <h3 class="font-bold text-gray-900 mb-3">💳 유료 (AI 자동화)</h3>
           <ul class="text-sm text-gray-700 space-y-2 list-disc list-inside">
-            <li>가정 일지·요약·센터 연계·아이 기록 관리 <strong>무료</strong></li>
-            <li>바우처로 치료비를 충당해도 디지털 도구는 미지원인 경우가 많음</li>
-            <li>바우처 미지원·부담 가정을 위한 <strong>무료 플랜</strong> 병행</li>
+            <li>사진·영상·키워드 기반 <strong>AI 치료일지 자동 작성</strong></li>
+            <li>기록 <strong>AI 자동 요약·패턴 분석</strong>, SOAP 초안 생성</li>
+            <li>기간별 변화 추이 리포트 등 연산 비용이 드는 기능</li>
           </ul>
         </div>
       </div>
+      <p class="text-gray-600 text-sm mb-8 leading-relaxed">
+        AI 자동화 기능은 실제 연산(AI 호출) 비용이 발생하기 때문에 유료로 운영합니다. 대신 <strong>1인·소규모 개인 운영 센터와 바우처 미지원 가정</strong>에는 별도의 무료·할인 지원을 확대해, 비용 때문에 필요한 도구를 못 쓰는 일이 없도록 합니다.
+      </p>
 
       <h2 class="text-2xl font-bold text-gray-900 mb-4">현장에 주는 효과</h2>
       <ul class="list-disc list-inside text-gray-700 space-y-2 mb-8 ml-2">
-        <li>치료사는 같은 내용을 반복 작성하는 문서 부담을 줄일 수 있습니다.</li>
-        <li>보호자는 아이의 변화와 치료 흐름을 더 쉽게 이해할 수 있습니다.</li>
-        <li>센터는 보호자 소통과 기본 행정 효율을 높일 수 있습니다.</li>
-        <li>장기적으로 센터·가정·학교·병원 기록 연결의 기반을 만듭니다.</li>
+        <li>센터는 무료 기본 기능만으로도 등록·일정·보호자 소통 등 행정을 정리할 수 있습니다.</li>
+        <li>보호자는 아이의 변화와 치료 흐름을 한곳에서 관리할 수 있습니다.</li>
+        <li>반복 문서 작성을 줄이고 싶은 치료사는 유료 AI 자동화로 시간을 아낄 수 있습니다.</li>
+        <li>장기적으로 센터·가정·학교·병원 기록을 잇는 기반이 됩니다.</li>
       </ul>
 
       <div class="bg-primary-50 border border-primary-200 rounded-xl p-6 mb-8">
         <h3 class="font-bold text-gray-900 mb-2">기술 배경</h3>
         <p class="text-gray-700 leading-relaxed mb-4">
-          자람이는 AI 연구자 정해성 CTO가 발달장애 현장의 기록 단절 문제를 해결하기 위해 최초로 고안·개발한 AI디지털케어로그 기반 플랫폼입니다. 가정·센터·학교·병원에 흩어진 기록을 아이 중심으로 연결하고, 치료사와 보호자가 더 쉽게 기록하고 이해할 수 있도록 설계되었습니다.
+          자람이는 정해성 CTO가 발달장애 현장의 기록 단절 문제를 해결하기 위해 최초로 고안·개발한 AI디지털케어로그 기반 플랫폼입니다. 가정·센터·학교·병원에 흩어진 기록을 아이 중심으로 연결하고, 치료사와 보호자가 더 쉽게 기록하고 이해할 수 있도록 설계되었습니다.
         </p>
         <p class="text-gray-700 italic">
-          “발달장애 현장의 기록 단절은 오늘도 부모와 치료사가 겪는 문제입니다. 자람이는 센터와 보호자가 부담 없이 시작할 수 있도록 무료 요금제를 먼저 열고, 현장 보급을 통해 아이 중심의 기록 연결을 만들어가겠습니다.”
+          “발달장애 현장의 기록 단절은 오늘도 부모와 치료사가 겪는 문제입니다. 자람이는 센터와 보호자가 부담 없이 시작할 수 있도록 기본 기능을 먼저 무료로 열고, 현장 보급을 통해 아이 중심의 기록 연결을 만들어가겠습니다.”
         </p>
         <p class="text-gray-600 text-sm mt-3">— 정해성 CTO, 드림에이아이랩</p>
       </div>
 
       <p class="text-gray-600 text-sm mb-6 leading-relaxed">
-        ※ 무료 플랜 범위·AI 호출 한도·영세 센터 기준은 도입 시점·약관에 따릅니다. 자람이는 의료기기·진단·처방 시스템이 아닙니다. 도입 문의: <a href="/contact" class="text-primary-600 underline">문의 페이지</a> · <a href="/services/jarame" class="text-primary-600 underline">자람이 서비스</a>
+        ※ 무료·유료 플랜의 세부 범위, AI 사용 한도, 소규모 센터·가정 지원 기준은 도입 시점과 약관에 따릅니다. 자람이는 의료기기·진단·처방 시스템이 아닙니다. 도입 문의: <a href="/contact" class="text-primary-600 underline">문의 페이지</a> · <a href="/services/jarame" class="text-primary-600 underline">자람이 서비스</a>
       </p>
 
       <p class="text-sm text-gray-500 border-t border-gray-200 pt-6">
@@ -558,7 +582,7 @@ export const newsArticles: NewsArticle[] = [
     date: '2026-07-07',
     image: '📚',
     featured: true,
-    author: '드림에이아이랩',
+    author: '자람이팀',
     tags: ['자람이', '발달장애', '특수교육', '특수학교', '수업참관', 'AAC', '보호자', '부모', '디지털케어로그', 'RWE', '학교', '가정연계', 'AI 통역'],
     i18n: {
       en: {
@@ -630,7 +654,7 @@ export const newsArticles: NewsArticle[] = [
 
       <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">부모는 학교에서 무엇을 배우는지 알고 계신가요?</h2>
       <p class="text-lg text-gray-700 mb-4 leading-relaxed">
-        학교에서는 수업안이 전달됩니다. 성취기준, 학습목표, 활동1·활동2, AAC, 국어과 교육과정——전문 용어가 많아 <strong>부모는 전문가가 아니기 때문에</strong> 읽어도 핵심을 놓치기 쉽습니다.
+        학교에서는 수업안이 전달됩니다. 성취기준, 학습목표, 활동1·활동2, AAC(보완대체의사소통), 국어과 교육과정——전문 용어가 많아 부모가 읽어도 핵심을 놓치기 쉽습니다.
       </p>
       <p class="text-xl font-bold text-primary-700 mb-6">"그래서 우리 아이는 오늘 무엇을 배웠나요?"</p>
       <p class="text-lg text-gray-700 mb-8 leading-relaxed">
@@ -665,6 +689,11 @@ export const newsArticles: NewsArticle[] = [
       </ul>
       <p class="text-lg text-gray-700 mb-8 leading-relaxed">
         자람이는 기록만 저장하는 시스템이 아닙니다. <strong>교사의 기록 → 부모의 이해 → 가정의 실천 → 아이의 성장</strong>으로 이어지는 연결입니다. 수업은 하루면 끝나지만, 발달은 계속되어야 합니다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">부모가 이해하면, 교육이 집까지 이어집니다</h2>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        부모가 “오늘 우리 아이가 무엇을, 왜 배웠는지”를 이해하면, 학교에서 끝났을 배움이 저녁 식탁에서 다시 이어집니다. 교사의 전문성은 부모의 실천으로 확장되고, 아이는 같은 목표를 학교와 집에서 반복하며 더 단단하게 성장합니다. 자람이가 교사의 언어를 부모의 언어로 번역하는 이유가 바로 여기에 있습니다. <strong>번역은 정보 전달을 넘어, 학교와 가정을 같은 방향으로 연결하는 일</strong>입니다.
       </p>
 
       <div class="bg-gray-50 border border-gray-200 rounded-xl p-5 mb-8">
@@ -812,7 +841,7 @@ export const newsArticles: NewsArticle[] = [
       <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 mb-8">
         <p class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">기술 배경</p>
         <p class="text-gray-700 text-sm leading-relaxed">
-          자람이는 AI 연구자 정해성 CTO가 발달장애 현장의 기록 단절 문제를 해결하기 위해 최초로 고안·개발한 AI디지털케어로그 기반 플랫폼입니다.
+          자람이는 정해성 CTO가 발달장애 현장의 기록 단절 문제를 해결하기 위해 최초로 고안·개발한 AI디지털케어로그 기반 플랫폼입니다.
           센터·보호자·학교·병원에 흩어진 기록을 아이 중심으로 연결하는 것을 목표로 합니다.
         </p>
       </div>
@@ -1213,6 +1242,14 @@ export const newsArticles: NewsArticle[] = [
         </p>
         <p class="text-gray-600 text-sm">— 정해성 CTO, 드림에이아이랩</p>
       </div>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">7. 정리</h2>
+      <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+        발달장애 치료에서 RWE가 중요한 이유는 한 문장으로 요약됩니다. <strong>아이는 검사실이 아니라 생활 속에서 자라기 때문</strong>입니다. 하루짜리 검사보다 수 주~수 개월의 생활 기록이, 한 기관의 관점보다 가정·학교·센터·병원이 함께 남긴 기록이 아이를 훨씬 정확하게 설명합니다.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        자람이 디지털케어로그는 이 흩어진 기록을 <strong>아이 중심의 단일 타임라인</strong>으로 모으고, 동의·권한 안에서 안전하게 공유하며, AI가 요약·패턴 분석으로 전문가의 판단을 돕는 구조입니다. AI는 진단하거나 처방하지 않습니다. 대신 모든 전문가가 아이를 더 입체적으로 볼 수 있도록 <strong>실제 생활 근거(RWE)</strong>를 만드는 인프라 역할을 합니다.
+      </p>
 
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
         기술 상세·도입 상태는 <a href="/services/jarame" class="text-primary-600 underline">자람이 서비스 페이지</a> 및 <a href="/technology" class="text-primary-600 underline">기술 소개</a>를 참고하세요.
@@ -2151,7 +2188,7 @@ export const newsArticles: NewsArticle[] = [
       <div class="bg-gradient-to-r from-red-50 to-orange-50 rounded-lg p-6 mb-8">
         <h2 class="text-2xl font-bold text-gray-900 mb-4">📢 기술로 해결하는 사회문제</h2>
         <p class="text-gray-700 mb-4">
-          드림에이아이랩(DAL, 대표 정해성)이 <strong>AI 디지털 케어로그 기술</strong>을 활용하여 
+          드림에이아이랩(DAL, 대표 이지수, CTO 정해성)이 <strong>AI 디지털 케어로그 기술</strong>을 활용하여 
           국제결혼 시장의 구조적 문제를 해결하는 사회적 가치 창출에 나섰다고 14일 밝혔다.
         </p>
         <p class="text-gray-700 mb-4">
@@ -2166,7 +2203,7 @@ export const newsArticles: NewsArticle[] = [
             가족의 미래가 걸린 중대한 사회문제입니다. 우리는 AI 기술로 이 문제를 
             근본적으로 해결하고, 모든 다문화 가정이 행복하게 정착할 수 있도록 돕겠습니다."
           </p>
-          <p class="text-red-800 text-sm mt-2">- 정해성 대표</p>
+          <p class="text-red-800 text-sm mt-2">- 정해성 CTO</p>
         </div>
       </div>
 
@@ -2602,7 +2639,7 @@ export const newsArticles: NewsArticle[] = [
       <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-6 mb-8">
         <h2 class="text-2xl font-bold text-gray-900 mb-4">📢 파트너십 모집 개요</h2>
         <p class="text-gray-700 mb-4">
-          드림에이아이랩(DAL, 대표 정해성)이 국제결혼 통합 플랫폼 
+          드림에이아이랩(DAL, 대표 이지수, CTO 정해성)이 국제결혼 통합 플랫폼 
           <strong>'글로벌커플케어(GCC)'</strong>를 기반으로 다양한 산업 분야의 
           비즈니스 파트너를 대규모로 모집한다고 14일 밝혔다.
         </p>
@@ -2618,7 +2655,7 @@ export const newsArticles: NewsArticle[] = [
             하지만 그동안 이 시장을 제대로 서비스하는 플랫폼이 없었습니다. 
             GCC는 여행부터 정착까지 모든 과정에서 필요한 서비스를 연결하는 허브가 될 것입니다."
           </p>
-          <p class="text-blue-800 text-sm mt-2">- 정해성 대표</p>
+          <p class="text-blue-800 text-sm mt-2">- 정해성 CTO</p>
         </div>
       </div>
 
@@ -2890,7 +2927,7 @@ export const newsArticles: NewsArticle[] = [
       <h2 class="text-2xl font-bold text-gray-900 mb-4">🌟 비전과 기대 효과</h2>
       <div class="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-6 shadow-lg mb-8">
         <p class="text-gray-700 mb-4">
-          정해성 대표는 "국제결혼은 여행, 숙박, 웨딩, 의료, 교육 등 
+          정해성 CTO는 "국제결혼은 여행, 숙박, 웨딩, 의료, 교육 등 
           <strong>20개 이상의 산업이 연결되는 거대한 생태계</strong>지만, 
           그동안 이를 통합적으로 서비스하는 플랫폼이 없었다"며 
           "GCC는 국제결혼 전후의 모든 니즈를 한 곳에서 해결할 수 있는 
@@ -2957,7 +2994,7 @@ export const newsArticles: NewsArticle[] = [
       <div class="bg-gradient-to-r from-rose-50 to-pink-50 rounded-lg p-6 mb-8">
         <h2 class="text-2xl font-bold text-gray-900 mb-4">📢 서비스 개요</h2>
         <p class="text-gray-700 mb-4">
-          드림에이아이랩(DAL, 대표 정해성)이 국제결혼 시장의 구조적 문제를 해결하는 
+          드림에이아이랩(DAL, 대표 이지수, CTO 정해성)이 국제결혼 시장의 구조적 문제를 해결하는 
           <strong>통합 플랫폼 '글로벌커플케어(GCC, Global Couple Care)'</strong>를 공식 출시했다.
         </p>
         <p class="text-gray-700 mb-4">
@@ -2972,7 +3009,7 @@ export const newsArticles: NewsArticle[] = [
             GCC는 엔카가 중고차 시장을, 배민이 음식 배달을, 야놀자가 숙박을 투명하게 만든 것처럼, 
             국제결혼 시장에 신뢰와 투명성을 가져올 것입니다."
           </p>
-          <p class="text-rose-800 text-sm mt-2">- 정해성 대표</p>
+          <p class="text-rose-800 text-sm mt-2">- 정해성 CTO</p>
         </div>
       </div>
 
@@ -3343,7 +3380,7 @@ export const newsArticles: NewsArticle[] = [
       <div class="bg-gradient-to-r from-cyan-50 to-blue-50 rounded-lg p-6 mb-8">
         <h2 class="text-2xl font-bold text-gray-900 mb-4">📢 기능 개요</h2>
         <p class="text-gray-700 mb-4">
-          드림에이아이랩(DAL, 대표 정해성)의 발달장애 AI 디지털케어로그 플랫폼 <strong>'자람이'</strong>가 
+          드림에이아이랩(DAL, 대표 이지수, CTO 정해성)의 발달장애 AI 디지털케어로그 플랫폼 <strong>'자람이'</strong>가 
           치료·학습 기록 관리를 넘어 <strong>약물 관리, 영양 균형, 체중 조절</strong> 등 
           종합적인 건강관리 기능을 추가할 예정입니다.
         </p>
@@ -3359,7 +3396,7 @@ export const newsArticles: NewsArticle[] = [
             일상에서 관찰하고 대응하는 것이 삶의 질을 좌우합니다. AI가 부모의 눈이 되어 
             놓치기 쉬운 건강 신호를 먼저 포착합니다."
           </p>
-          <p class="text-cyan-800 text-sm mt-2">- 정해성 대표</p>
+          <p class="text-cyan-800 text-sm mt-2">- 정해성 CTO</p>
         </div>
       </div>
 
@@ -3606,7 +3643,7 @@ export const newsArticles: NewsArticle[] = [
       <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-6 mb-8">
         <h2 class="text-2xl font-bold text-gray-900 mb-4">📢 발표 개요</h2>
         <p class="text-gray-700 mb-4">
-          드림에이아이랩(DAL, 대표 정해성)은 2025년 11월 12일, 의료·돌봄 분야에서 검증된 
+          드림에이아이랩(DAL, 대표 이지수, CTO 정해성)은 2025년 11월 12일, 의료·돌봄 분야에서 검증된 
           <strong>AI 디지털케어로그 기술을 교육 도메인으로 확장</strong>한 EduCareLog(에듀케어로그)의 
           2026년 파트너십 오픈을 공식 발표했습니다.
         </p>
@@ -3620,7 +3657,7 @@ export const newsArticles: NewsArticle[] = [
             "우리는 교육 '서비스 제공자'가 아닙니다. 학교·학원·지자체·에듀테크가 즉시 임베드할 수 있는 
             데이터 표준화 + AI 분석 + 실행 자동화 엔진을 제공합니다."
           </p>
-          <p class="text-blue-800 text-sm mt-2">- 정해성 대표</p>
+          <p class="text-blue-800 text-sm mt-2">- 정해성 CTO</p>
         </div>
       </div>
 
@@ -3846,7 +3883,7 @@ export const newsArticles: NewsArticle[] = [
             "특수교육에서 쌓은 5년의 데이터와 경험이 일반교육의 개별화를 가능하게 합니다. 
             모든 아이는 다르게 배우며, 그것이 정상입니다."
           </p>
-          <p class="text-blue-800 text-sm mt-2">- 정해성 대표, 드림에이아이랩</p>
+          <p class="text-blue-800 text-sm mt-2">- 정해성 CTO, 드림에이아이랩</p>
         </div>
       </div>
 

@@ -38,7 +38,7 @@ export default function Home() {
     founder: {
       '@type': 'Person',
       name: '정해성',
-      jobTitle: '창업자 & CEO',
+      jobTitle: '공동창업자 & CTO',
       description: '디지털케어로그 최초 고안자 및 개발자',
       knowsAbout: [
         '디지털케어로그',
