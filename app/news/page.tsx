@@ -339,10 +339,10 @@ export default function News() {
                 문의하기
               </Link>
               <a 
-                href="mailto:press@dreamailab.com"
+                href="mailto:contact@dreamailab.com"
                 className="border-2 border-primary-600 text-primary-600 px-8 py-3 rounded-lg font-semibold hover:bg-primary-50 transition-colors"
               >
-                press@dreamailab.com
+                contact@dreamailab.com
               </a>
             </div>
           </div>

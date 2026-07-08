@@ -280,8 +280,8 @@ export const newsArticles: NewsArticle[] = [
     date: '2026-07-07',
     image: '💒',
     featured: true,
-    author: '드림에이아이랩',
-    tags: ['글로벌커플케어', 'GCC', '국제결혼', '마켓플레이스', '다문화가족', '정보 비교', '투명성', '2026 상반기', '플랫폼', '검증 입점'],
+    author: '글로벌커플케어팀',
+    tags: ['글로벌커플케어', 'GCC', '국제결혼', '마켓플레이스', '다문화가족', '정보 비교', '가격 비교', '에스크로 안전거래', '2026 상반기', '검증 입점'],
     i18n: {
       en: {
         title: 'Global Couple Care (GCC) Targets H1 2026 Launch — Korea\'s First International Marriage Marketplace',
@@ -290,79 +290,69 @@ export const newsArticles: NewsArticle[] = [
       <p class="text-sm text-gray-500 mb-6">[Press Release · 2026-07-07]</p>
 
       <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-4">
-        <strong>Global Couple Care (GCC)</strong> is a <strong>marketplace platform</strong> where verified international marriage agencies and partners list services—and consumers compare and choose. Like Encar for used cars or Yanolja for lodging, GCC brings <strong>transparent comparison</strong> to a market that has long lacked it. <strong>Official launch is targeted for H1 2026.</strong>
+        Dream AI Lab announced that it will officially launch <strong>‘Global Couple Care (GCC)’</strong>, Korea’s first international marriage marketplace, in the first half of 2026. On GCC, consumers can compare verified agencies’ information and pricing in one place and complete contracts through <strong>escrow-protected transactions</strong>.
       </p>
 
-      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
-        GCC is <strong>not</strong> a marriage agency, matchmaking app, or service that directly introduces spouses. It does <strong>not</strong> guarantee marriage outcomes. Users review verified listings, compare quotes and procedures, and contract with the partner they select.
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        Until now, consumers preparing for an international marriage had to gather scattered information agency by agency, with little way to compare pricing or procedures in advance. Choosing agencies based on word-of-mouth or advertising left many exposed to excessive costs, opaque contracts, and fraud. GCC aims to replace this with a model of <strong>‘compare in one place, choose for yourself, and contract safely.’</strong>
       </p>
 
-      <h2 class="text-2xl font-bold text-gray-900 mb-4">Problems in the market today</h2>
-      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-8 ml-2">
-        <li><strong>Information asymmetry</strong> — hard to compare agencies, pricing, or real outcomes</li>
-        <li><strong>No standard procedures</strong> — different rules by country; documents and timelines unclear</li>
-        <li><strong>Weak post-contract support</strong> — little help after fees are paid</li>
-        <li><strong>Settlement gaps</strong> — language, employment, housing, and childcare after marriage</li>
-        <li><strong>Trust risk</strong> — unverified brokers, hidden costs, unethical practices</li>
-      </ul>
-
-      <h2 class="text-2xl font-bold text-gray-900 mb-4">What GCC is — a marketplace first</h2>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">Consumers compare and choose in one place</h2>
       <p class="text-lg text-gray-700 mb-4 leading-relaxed">
-        GCC’s core model is <strong>Marketplace → trust → standardization</strong>. Verified agencies and professionals join under platform rules; consumers see <strong>standard quotes, checklists, reviews, and completion metrics</strong> before they decide.
+        GCC users can compare, on a single screen, the service packages, candidate profiles, pricing, procedures, and reviews offered by multiple verified agencies. Instead of visiting agencies one by one, they choose the right partner for themselves based on published information.
       </p>
       <ul class="list-disc list-inside text-gray-700 space-y-2 mb-8 ml-2">
-        <li><strong>Verification &amp; KYC</strong> — onboarding, reporting, and removal of bad actors</li>
-        <li><strong>Transparent pricing</strong> — country- and case-based reference costs</li>
-        <li><strong>Procedure standardization</strong> — marriage, visa, and document workflows</li>
-        <li><strong>Partner ecosystem</strong> — legal, administrative, translation, travel, and settlement services</li>
+        <li>Compare <strong>services, candidate information, and pricing</strong> from multiple verified agencies in one place</li>
+        <li>Choose directly from <strong>published information</strong>, not word-of-mouth or ads</li>
+        <li>Check <strong>marriage, visa, and document checklists</strong> and expected timelines by country</li>
+        <li>See real usage metrics such as <strong>reviews, response speed, and completion rates</strong></li>
       </ul>
 
-      <h2 class="text-2xl font-bold text-gray-900 mb-4">How it differs from traditional agencies</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-        <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-          <h3 class="font-bold text-gray-900 mb-3">Traditional practice</h3>
-          <ul class="text-sm text-gray-700 space-y-2 list-disc list-inside">
-            <li>Word-of-mouth agency selection</li>
-            <li>Quotes only after meetings</li>
-            <li>Little accountability after contract</li>
-            <li>Settlement support often missing</li>
-          </ul>
-        </div>
-        <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-          <h3 class="font-bold text-gray-900 mb-3">On GCC</h3>
-          <ul class="text-sm text-gray-700 space-y-2 list-disc list-inside">
-            <li>Compare multiple verified listings in one place</li>
-            <li>Published procedures and timelines</li>
-            <li>Reviews and platform safety rules</li>
-            <li>Guides and partners for post-marriage settlement</li>
-          </ul>
-        </div>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Escrow transactions block fraud risk</h2>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        A second pillar of GCC is <strong>escrow (safe transactions)</strong>. Payments are held securely by the platform and settled to the agency only after agreed steps are completed. This structurally reduces risks such as “pay first, then disappear,” protecting both consumers and honest agencies.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Only verified agencies list</h2>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        Only domestic and overseas marriage agencies and legal, administrative, and translation partners that pass KYC and verification can list on GCC. Reporting and sanction systems continuously filter out fraudulent or unethical actors, so listed agencies compete on <strong>service quality and trust</strong> rather than undercutting on price.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Connecting through to post-marriage settlement</h2>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        GCC does not stop at pre-marriage comparison and contracting. It plans to connect post-marriage settlement—language, employment, housing, and childcare—through community and partner services. In the long term, Dream AI Lab’s <strong>AI Digital Care Log</strong> technology, proven in other domains, will provide the foundation for securely linking family and settlement data.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Official launch in H1 2026</h2>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        GCC currently runs beta and pilot programs for core modules including profiles, escrow, and contracts. With the official H1 2026 launch, it will scale up the marketplace and verified listings, followed by community, settlement guides, and education and partner integrations.
+      </p>
+
+      <div class="bg-primary-50 border-l-4 border-primary-600 p-6 mb-8 rounded-r-lg">
+        <p class="text-lg text-gray-800 leading-relaxed italic">
+          A GCC representative said, “When a marriage market lacks comparison and verification, both good agencies and consumers lose. We will build a platform where consumers can compare and choose with confidence in one place, and honest agencies are fairly evaluated.”
+        </p>
       </div>
 
-      <h2 class="text-2xl font-bold text-gray-900 mb-4">Where AI fits — platform competitiveness</h2>
-      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
-        AI supports the marketplace—it is not the product itself. GCC applies AI to <strong>translation, document checklists, and administrative assistance</strong> so users and agencies spend less time on repetitive work. GCC does <strong>not</strong> claim to predict marriage success or recommend “ideal couples.”
-      </p>
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 mb-8">
+        <h3 class="font-bold text-gray-900 mb-2">About Global Couple Care (GCC)</h3>
+        <p class="text-gray-700 text-sm leading-relaxed mb-4">
+          Global Couple Care is Korea’s first international marriage marketplace where verified agencies and professional partners list, and consumers compare pricing, procedures, and reviews to choose for themselves. GCC is not a marriage agency and does not match members or arrange marriages directly; contracts are made between users and listed partners.
+        </p>
+        <h3 class="font-bold text-gray-900 mb-2">About Dream AI Lab</h3>
+        <p class="text-gray-700 text-sm leading-relaxed">
+          Dream AI Lab develops and operates impact-driven services built on AI Digital Care Log technology, including the developmental-disability platform ‘Jarame,’ senior care ‘Senior &amp; Life,’ and medical and financial AI.
+        </p>
+      </div>
 
-      <h2 class="text-2xl font-bold text-gray-900 mb-4">H1 2026 launch plan</h2>
-      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-8 ml-2">
-        <li><strong>Now</strong> — MVP pilot (profiles, escrow, contracts, core modules)</li>
-        <li><strong>H1 2026</strong> — public launch; marketplace and verification scaled up</li>
-        <li><strong>Phased</strong> — community, settlement guides, education and partner links</li>
-      </ul>
-
-      <h2 class="text-2xl font-bold text-gray-900 mb-4">Long-term direction</h2>
-      <p class="text-lg text-gray-700 mb-4 leading-relaxed">
-        GCC starts as a <strong>pre-marriage marketplace</strong>. Over time it can extend along the family journey—<strong>marriage → settlement → family life → education and health services → public and NGO partnerships</strong>. Dream AI Lab’s <strong>AI Digital Care Log</strong> is the long-term technical foundation for connecting family-life data after marriage; it is not the headline of today’s launch.
-      </p>
       <p class="text-gray-600 text-sm mb-6 leading-relaxed">
-        ※ GCC is an information and partner-connection platform, not a direct broker. Contracts are between users and listed partners. Scope at launch follows published terms.
+        ※ GCC is an information and partner-connection platform, not a direct broker. Contracts are between users and listed partners, and features and terms at launch follow the published terms.
         <a href="/services/marriage" class="text-primary-600 underline">GCC service</a> ·
         <a href="https://globalcouplecare.com" class="text-primary-600 underline">globalcouplecare.com</a> ·
         <a href="/contact?service=marriage" class="text-primary-600 underline">Contact</a>
       </p>
       <p class="text-sm text-gray-500 border-t border-gray-200 pt-6">
-        press@dreamailab.com · partnership@dreamailab.co.kr
+        Contact: contact@dreamailab.com
       </p>
     `
       }
@@ -371,107 +361,70 @@ export const newsArticles: NewsArticle[] = [
       <p class="text-sm text-gray-500 mb-6">[보도자료 · 2026-07-07]</p>
 
       <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-4">
-        <strong>글로벌커플케어(GCC, Global Couple Care)</strong>는 <strong>검증된 국제결혼 업체·전문 파트너가 입점하고, 소비자가 가격·절차·후기를 비교해 선택하는 국내 최초 국제결혼 마켓플레이스</strong>입니다. 중고차·숙박·부동산 플랫폼이 정보 비교를 일상화했듯, GCC는 국제결혼 시장에 <strong>플랫폼과 투명한 비교</strong>를 가져옵니다. <strong>2026년 상반기 공식 오픈</strong>을 목표로 합니다.
+        드림에이아이랩(Dream AI Lab)이 검증된 국제결혼 업체들의 정보와 가격을 한곳에서 비교하고 에스크로 안전거래로 계약까지 진행할 수 있는 국내 최초 국제결혼 마켓플레이스 <strong>‘글로벌커플케어(GCC, Global Couple Care)’</strong>를 2026년 상반기 정식 오픈한다고 7일 밝혔다.
       </p>
 
-      <p class="text-lg text-gray-700 mb-8 leading-relaxed bg-gray-50 border border-gray-200 rounded-xl p-5">
-        GCC는 <strong>결혼정보회사가 아니며</strong>, 회원을 직접 매칭하거나 결혼을 주선·중개하지 않습니다. 이용자는 플랫폼에서 업체 정보를 비교한 뒤, <strong>선택한 검증 파트너와 직접 상담·계약</strong>합니다. 결혼 성공이나 매칭 결과를 보장하는 서비스도 아닙니다.
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        그동안 국제결혼을 준비하는 소비자는 업체마다 흩어진 정보를 일일이 찾아다녀야 했고, 가격과 절차를 미리 비교하기 어려웠다. 지인 소개나 광고에 의존해 업체를 고르다 보니 과도한 비용, 불투명한 계약, 사기 피해 위험에 노출되는 경우도 적지 않았다. GCC는 이 과정을 <strong>‘한곳에서 비교하고, 직접 선택하고, 안전하게 계약하는’</strong> 구조로 바꾸겠다는 목표를 내세웠다.
       </p>
 
-      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">국제결혼 시장, 무엇이 문제인가</h2>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">소비자는 한곳에서 비교하고 직접 선택한다</h2>
       <p class="text-lg text-gray-700 mb-4 leading-relaxed">
-        국제결혼은 개인의 선택을 넘어 가족·이민·언어·자녀·정착까지 이어집니다. 그러나 시장은 여전히 다음과 같은 구조적 문제를 안고 있습니다.
+        GCC 이용자는 여러 검증 업체가 제공하는 서비스 구성, 결혼희망자 정보, 가격, 절차, 후기를 한 화면에서 비교할 수 있다. 더 이상 업체를 하나하나 따로 찾아다닐 필요 없이, 공개된 정보를 바탕으로 자신에게 맞는 업체를 스스로 고르는 방식이다.
       </p>
       <ul class="list-disc list-inside text-gray-700 space-y-2 mb-8 ml-2">
-        <li><strong>정보 비대칭</strong> — 업체별 서비스·실제 비용·성공 사례를 한곳에서 비교하기 어렵다</li>
-        <li><strong>업체 비교 불가</strong> — 지인 소개·광고에 의존해 선택하는 경우가 많다</li>
-        <li><strong>국가마다 다른 절차</strong> — 혼인·비자·서류·기간이 제각각이고 누락·지연이 잦다</li>
-        <li><strong>계약 이후 관리 부재</strong> — 비용 수납 후 연락이 끊기거나 책임 소재가 불분명하다</li>
-        <li><strong>결혼 이후 정착 지원 부족</strong> — 언어·취업·주거·자녀 양육에서 도움이 끊긴다</li>
+        <li>여러 검증 업체의 <strong>서비스·결혼희망자 정보·가격을 한곳에서 비교</strong></li>
+        <li>지인 소개·광고가 아닌 <strong>공개된 정보로 직접 선택</strong></li>
+        <li>국가별 <strong>혼인·비자·서류 체크리스트</strong>와 예상 기간 확인</li>
+        <li><strong>리뷰·응답 속도·완료율</strong> 등 실제 이용 지표 제공</li>
       </ul>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">에스크로 안전거래로 사기 위험을 차단한다</h2>
       <p class="text-lg text-gray-700 mb-8 leading-relaxed">
-        사기·바가지 같은 극단적 사례만이 문제가 아닙니다. <strong>비교할 수 없고, 절차가 표준화되지 않으며, 결혼 이후까지 이어지지 않는 구조</strong> 자체가 소비자와 양질의 업체 모두에게 부담입니다.
+        GCC의 또 다른 축은 <strong>에스크로(안전거래)</strong>다. 이용자가 결제한 금액을 플랫폼이 안전하게 보관하고, 약속된 절차가 이행된 뒤 업체에 정산하는 구조다. 이를 통해 ‘선입금 후 잠적’ 같은 사기 위험을 구조적으로 줄이고, 소비자와 정직한 업체를 함께 보호한다.
       </p>
 
-      <h2 class="text-2xl font-bold text-gray-900 mb-4">GCC가 하는 일 — 마켓플레이스</h2>
-      <p class="text-lg text-gray-700 mb-4 leading-relaxed">
-        GCC의 핵심은 <strong>마켓플레이스 → 신뢰 → 표준화</strong>입니다. 검증을 통과한 국내·해외 업체와 법무·행정·통번역 등 파트너가 플랫폼 규칙 안에 입점하고, 소비자는 아래 정보를 기준으로 스스로 선택합니다.
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">검증된 업체만 입점한다</h2>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        GCC에는 KYC·검증 절차를 통과한 국내외 국제결혼 업체와 법무·행정·통번역 파트너만 입점한다. 신고·제재 체계로 허위·비윤리 업체를 지속적으로 걸러내며, 입점 업체는 가격 후려치기가 아니라 <strong>서비스 품질과 신뢰</strong>로 경쟁하게 된다.
       </p>
-      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-8 ml-2">
-        <li><strong>표준 견적·비용 구조</strong> — 국가·케이스별 참고 가격과 항목</li>
-        <li><strong>절차·타임라인</strong> — 혼인·비자·서류 체크리스트</li>
-        <li><strong>리뷰·완료율·응답 속도</strong> — 이용자 피드백과 운영 지표</li>
-        <li><strong>KYC·신고·제재</strong> — 허위·비윤리 업체 퇴출</li>
-      </ul>
 
-      <h2 class="text-2xl font-bold text-gray-900 mb-4">기존 방식과 무엇이 다른가</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-        <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-          <h3 class="font-bold text-gray-900 mb-3">기존 관행</h3>
-          <ul class="text-sm text-gray-700 space-y-2 list-disc list-inside">
-            <li>“가격은 만나서” — 사전 비교 어려움</li>
-            <li>검증 없는 입점·중개</li>
-            <li>계약 후 지원 단절</li>
-            <li>결혼 이후 정착은 개인 부담</li>
-          </ul>
-        </div>
-        <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-          <h3 class="font-bold text-gray-900 mb-3">GCC 플랫폼</h3>
-          <ul class="text-sm text-gray-700 space-y-2 list-disc list-inside">
-            <li>한곳에서 <strong>여러 검증 업체 비교</strong></li>
-            <li>공개된 <strong>절차·기간·비용 항목</strong></li>
-            <li>플랫폼 <strong>신뢰·윤리 규칙</strong>과 리뷰</li>
-            <li>결혼 후 <strong>정착·커뮤니티·연계 서비스</strong>로 확장</li>
-          </ul>
-        </div>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">결혼 이후 정착까지 잇는다</h2>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        GCC는 결혼 전 비교·계약에서 멈추지 않는다. 결혼 이후 언어·취업·주거·자녀 양육 등 정착 과정까지 커뮤니티와 파트너 서비스로 연결해 나갈 계획이다. 장기적으로는 드림에이아이랩이 다른 영역에서 검증해 온 <strong>AI디지털케어로그</strong> 기술을 활용해 가족·정착 데이터를 안전하게 이어 붙이는 기반으로 확장한다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">2026년 상반기 정식 오픈</h2>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        GCC는 현재 프로필·에스크로·계약 등 핵심 모듈의 베타·파일럿을 운영 중이며, 2026년 상반기 정식 오픈과 함께 마켓플레이스와 검증 입점을 본격화한다. 이후 커뮤니티, 정착 가이드, 교육·파트너 연계 기능을 순차적으로 선보일 예정이다.
+      </p>
+
+      <div class="bg-primary-50 border-l-4 border-primary-600 p-6 mb-8 rounded-r-lg">
+        <p class="text-lg text-gray-800 leading-relaxed italic">
+          글로벌커플케어(GCC) 관계자는 “국제결혼 시장에 비교와 검증이 없으면 좋은 업체도, 소비자도 모두 손해를 본다”며 “소비자가 한곳에서 안심하고 비교·선택하고, 정직한 업체가 정당하게 평가받는 플랫폼을 만들겠다”고 말했다.
+        </p>
       </div>
 
-      <h2 class="text-2xl font-bold text-gray-900 mb-4">플랫폼이 지향하는 사업 구조</h2>
-      <p class="text-lg text-gray-700 mb-4 leading-relaxed">
-        GCC는 가족(B2C)·업체(B2B)·공공·NGO(B2G)를 연결하는 <strong>정보·프로세스 플랫폼</strong>입니다. 소비자는 비교·선택하고, 업체는 <strong>서비스 품질과 신뢰</strong>로 경쟁합니다.
-      </p>
-      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-8 ml-2">
-        <li><strong>Marketplace</strong> — 검증된 국제결혼·법무·행정 파트너 입점</li>
-        <li><strong>Agency SaaS</strong> — 입점 업체용 고객·서류·일정·정산 도구</li>
-        <li><strong>Consumer</strong> — 비교·상담 요청·문서·체크리스트</li>
-        <li><strong>Trust &amp; Risk</strong> — 신고·블랙리스트·분쟁 예방 기준</li>
-      </ul>
-
-      <h2 class="text-2xl font-bold text-gray-900 mb-4">AI는 어디에 쓰이는가</h2>
-      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
-        GCC의 첫인상은 <strong>플랫폼</strong>이고, AI는 그 경쟁력을 높이는 <strong>보조 기술</strong>입니다. 번역·서류 안내·행정 체크리스트 등 반복 업무를 줄여 업체와 이용자의 부담을 낮춥니다. GCC는 <strong>결혼 성공률을 예측하거나 커플을 추천하는 서비스가 아닙니다.</strong>
-      </p>
-
-      <h2 class="text-2xl font-bold text-gray-900 mb-4">2026년 상반기 오픈 계획</h2>
-      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-8 ml-2">
-        <li><strong>현재</strong> — 프로필·에스크로·계약 등 핵심 모듈 베타·파일럿 운영</li>
-        <li><strong>2026 상반기</strong> — 공식 오픈, 마켓플레이스·검증 입점 본격화</li>
-        <li><strong>이후 순차</strong> — 커뮤니티, 정착 가이드, 교육·파트너 연계</li>
-      </ul>
-
-      <h2 class="text-2xl font-bold text-gray-900 mb-4">장기 방향 — 결혼 이후까지</h2>
-      <p class="text-lg text-gray-700 mb-4 leading-relaxed">
-        GCC는 <strong>결혼 전 마켓플레이스</strong>에서 출발해, 장기적으로 아래 흐름으로 확장하는 구조를 지향합니다.
-      </p>
-      <p class="text-center text-gray-800 font-medium mb-6 leading-relaxed">
-        마켓플레이스 → 결혼 → 정착 → 가족 → 교육 → 의료·복지 → 공공·NGO 연계
-      </p>
-      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        결혼 이후 가족·정착 데이터를 이어 붙이는 기술 기반으로, 드림에이아이랩이 다른 영역에서 검증해 온 <strong>AI 디지털케어로그</strong>를 활용할 수 있습니다. 이는 <strong>당장의 오픈 기능이 아니라 장기적인 플랫폼 기반</strong>이며, 정착·교육·헬스케어 등 DAL 생태계(<a href="/services/educarelog" class="text-primary-600 underline">에듀케어로그</a>, <a href="/services/healthcare" class="text-primary-600 underline">토탈케어로그</a> 등)와의 연계 가능성을 열어 둡니다.
-      </p>
-      <p class="text-gray-600 text-sm mb-8 leading-relaxed italic border-l-4 border-gray-300 pl-4">
-        “국제결혼 시장에 비교와 검증이 없으면, 좋은 업체도 소비자도 모두 손해를 봅니다. GCC는 그 비교가 일어나는 플랫폼을 만들겠습니다.” — 드림에이아이랩 GCC 사업팀
-      </p>
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 mb-8">
+        <h3 class="font-bold text-gray-900 mb-2">글로벌커플케어(GCC) 개요</h3>
+        <p class="text-gray-700 text-sm leading-relaxed mb-4">
+          글로벌커플케어는 검증된 국제결혼 업체·전문 파트너가 입점하고, 소비자가 가격·절차·후기를 비교해 직접 선택하는 국내 최초 국제결혼 마켓플레이스다. GCC는 결혼정보회사가 아니며, 회원을 직접 매칭하거나 결혼을 주선·중개하지 않는다. 계약과 거래는 이용자와 입점 파트너 간에 이루어진다.
+        </p>
+        <h3 class="font-bold text-gray-900 mb-2">드림에이아이랩(Dream AI Lab) 개요</h3>
+        <p class="text-gray-700 text-sm leading-relaxed">
+          드림에이아이랩은 AI디지털케어로그 기술을 기반으로 발달장애 플랫폼 ‘자람이’, 시니어 돌봄 ‘시니어앤라이프’, 의료·금융 AI 등 사회적 임팩트 중심의 서비스를 개발·운영하는 기업이다.
+        </p>
+      </div>
 
       <p class="text-gray-600 text-sm mb-6 leading-relaxed">
-        ※ GCC는 직접 중개·결혼 주선 서비스가 아닙니다. 계약·거래는 이용자와 입점 파트너 간에 이루어집니다. 오픈 시점 기능·약관은 공식 오픈 때 안내됩니다.
+        ※ GCC는 직접 중개·결혼 주선 서비스가 아닙니다. 계약·거래는 이용자와 입점 파트너 간에 이루어지며, 오픈 시점 기능·약관은 공식 오픈 때 안내됩니다.
         <a href="/services/marriage" class="text-primary-600 underline">글로벌커플케어 서비스</a> ·
         <a href="https://globalcouplecare.com" class="text-primary-600 underline">globalcouplecare.com</a> ·
         <a href="/contact?service=marriage&type=b2b" class="text-primary-600 underline">B2B·파트너 입점 문의</a>
       </p>
 
       <p class="text-sm text-gray-500 border-t border-gray-200 pt-6">
-        문의: press@dreamailab.com · partnership@dreamailab.co.kr
+        문의: contact@dreamailab.com
       </p>
     `
   },
@@ -593,7 +546,7 @@ export const newsArticles: NewsArticle[] = [
       </p>
 
       <p class="text-sm text-gray-500 border-t border-gray-200 pt-6">
-        문의: press@dreamailab.com · partnership@dreamailab.co.kr
+        문의: contact@dreamailab.com
       </p>
     `
   },
@@ -1339,7 +1292,7 @@ export const newsArticles: NewsArticle[] = [
       </p>
 
       <p class="text-sm text-gray-500 border-t border-gray-200 pt-6">
-        Press: press@dreamailab.com · Partnerships: partnership@dreamailab.co.kr
+        Contact: contact@dreamailab.com
       </p>
     `
       }
@@ -1421,7 +1374,7 @@ export const newsArticles: NewsArticle[] = [
       </p>
 
       <p class="text-sm text-gray-500 border-t border-gray-200 pt-6">
-        문의: press@dreamailab.com · 제휴·도입: partnership@dreamailab.co.kr
+        문의: contact@dreamailab.com
       </p>
     `
   },
@@ -2928,9 +2881,8 @@ export const newsArticles: NewsArticle[] = [
           <h4 class="font-bold text-blue-900 mb-2">📞 파트너십 문의</h4>
           <p class="text-sm text-blue-800">
             <strong>담당:</strong> 드림에이아이랩 파트너십팀<br/>
-            <strong>이메일:</strong> partnership@dreamailab.co.kr<br/>
-            <strong>전화:</strong> 02-xxxx-xxxx<br/>
-            <strong>웹사이트:</strong> www.dreamailab.co.kr/services/marriage
+            <strong>이메일:</strong> contact@dreamailab.com<br/>
+            <strong>웹사이트:</strong> dreamailab.com/services/marriage
           </p>
         </div>
       </div>
@@ -2967,7 +2919,7 @@ export const newsArticles: NewsArticle[] = [
           여행, 항공, 호텔, 웨딩, 의료, 교육 등 모든 분야의 파트너를 환영합니다.
         </p>
         <p class="text-blue-100 text-sm">
-          <strong class="text-white">연락처:</strong> partnership@dreamailab.co.kr | 02-xxxx-xxxx
+          <strong class="text-white">연락처:</strong> contact@dreamailab.com
         </p>
       </div>
     `,
@@ -3331,8 +3283,8 @@ export const newsArticles: NewsArticle[] = [
           <div class="bg-blue-50 rounded-lg p-4">
             <p class="text-sm text-gray-700">
               <strong>문의:</strong> 드림에이아이랩<br/>
-              <strong>이메일:</strong> contact@dreamailab.co.kr<br/>
-              <strong>웹사이트:</strong> www.dreamailab.co.kr/services/marriage
+              <strong>이메일:</strong> contact@dreamailab.com<br/>
+              <strong>웹사이트:</strong> dreamailab.com/services/marriage
             </p>
           </div>
         </div>
@@ -3837,7 +3789,7 @@ export const newsArticles: NewsArticle[] = [
       <div class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl p-8 text-center">
         <p class="text-xl font-bold mb-4">2026년 개별화교육 혁신을 함께 만들어갈 파트너를 기다립니다</p>
         <div class="space-y-2 mb-6">
-          <p class="text-blue-100">이메일: partnership@dreamailab.com</p>
+          <p class="text-blue-100">이메일: contact@dreamailab.com</p>
         </div>
         <div class="inline-flex gap-4">
           <a href="/services/educarelog" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
@@ -5749,7 +5701,7 @@ export const newsArticles: NewsArticle[] = [
       </ol>
       
       <h3 class="text-2xl font-bold text-gray-900 mb-4 mt-8">참여 안내</h3>
-      <p class="text-lg text-gray-700 mb-4 leading-relaxed">베타 테스터/식당/브랜드 파트너 상시 모집 중입니다. 제휴 문의: partners@dreamailab.com, 미디어 문의: press@dreamailab.com</p>
+      <p class="text-lg text-gray-700 mb-4 leading-relaxed">베타 테스터/식당/브랜드 파트너 상시 모집 중입니다. 문의: contact@dreamailab.com</p>
       
       <div class="bg-green-50 border-l-4 border-green-500 p-6 mt-8">
         <p class="text-lg font-semibold text-gray-900 mb-2">베지케어 – 채식, 그 이후까지 함께 케어합니다.</p>
@@ -5808,8 +5760,7 @@ export const newsArticles: NewsArticle[] = [
         <p class="text-gray-700 mb-4">드림에이아이랩은 AI 디지털케어로그 기술을 기반으로 발달장애 플랫폼 '자람이', 시니어 돌봄 '시니어앤라이프', 의료 AI, 법률 AI 등 사회적 임팩트 중심의 서비스를 개발·운영한다. 데이터 기반 맞춤형 분석과 커뮤니티 경험을 결합해 지속가능한 생활 변화를 만드는 것이 목표다.</p>
         <div class="text-sm text-gray-600">
           <p>• 웹사이트: dreamailab.com</p>
-          <p>• 미디어 문의: press@dreamailab.com</p>
-          <p>• 제휴 문의: partners@dreamailab.com</p>
+          <p>• 문의: contact@dreamailab.com</p>
         </div>
       </div>
     `,
