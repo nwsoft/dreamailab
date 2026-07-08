@@ -254,7 +254,7 @@ export const newsArticles: NewsArticle[] = [
         <p class="text-gray-700 leading-relaxed italic">
           "발달장애 가족이 시스템의 빈틈을 혼자 메우는 시대를 끝내고 싶었습니다. 자람이는 그 빈틈을 연결하는 인프라가 되기 위해 시작됐습니다."
         </p>
-        <p class="text-gray-600 text-sm mt-3">— 정해성</p>
+        <p class="text-gray-600 text-sm mt-3">— 정해성, AI디지털케어로그 최초 고안자</p>
       </div>
 
       <h2 class="text-2xl font-bold text-gray-900 mb-4">우리는 왜 포기하지 않는가</h2>
