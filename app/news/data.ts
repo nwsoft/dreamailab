@@ -47,6 +47,128 @@ export function getLocalizedArticle(
 
 export const newsArticles: NewsArticle[] = [
   {
+    id: 81,
+    title: '일상 기록이 진료 근거로… 발달장애 통합 플랫폼 자람이, AI 디지털 케어로그 실사용 검증 확대',
+    excerpt: '자람이가 발달장애인의 일상, 치료, 약물, 교육 기록을 하나로 연결하는 AI 디지털 케어로그의 실사용 검증을 확대한다. 보호자는 진료용 리포트로 병원 준비를 돕고, 의료진은 약물 반응과 생활 변화를 시계열로 확인할 수 있다.',
+    category: 'press',
+    date: '2026-07-15',
+    image: '📰',
+    featured: true,
+    author: '드림에이아이랩',
+    tags: [
+      '발달장애 통합 플랫폼',
+      '자람이',
+      'AI 디지털 케어로그',
+      '실사용 검증',
+      '진료 리포트',
+      '발달장애 RWD',
+      '발달장애 RWE',
+      '약물 반응 추적',
+      '보호자 기록',
+      '치료사 기록',
+      '의사결정 지원',
+      '디지털 헬스케어',
+    ],
+    content: `
+      <p class="text-sm text-gray-500 mb-6">[보도자료 · 2026-07-15]</p>
+
+      <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-4">
+        발달장애인의 일상, 치료, 약물 복용, 교육 기록을 하나로 연결하는 AI 기반 디지털 케어로그 플랫폼 <strong>‘자람이’</strong>가 본격적인 실사용 검증에 나선다. 드림에이아이랩은 보호자·치료사·활동지원사·치료센터를 대상으로 실제 환경에서의 사용성을 확인하고, 발달장애 분야에 최적화된 기록·분석 인프라를 고도화할 계획이라고 15일 밝혔다.
+      </p>
+
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        자람이는 발달장애 분야에서 일상 데이터를 수집하고, 이를 개인 맞춤형 치료와 교육에 활용할 수 있는 실사용데이터(RWD, Real-World Data)로 축적하는 것을 목표로 한다. 나아가 장기적으로는 실제 현장의 기록을 임상과 교육에 연결하는 실사용근거(RWE, Real-World Evidence) 기반으로 발전시켜, 개인별 특성에 맞는 치료·교육 의사결정을 지원하는 통합 플랫폼으로 확장한다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">기억 대신 리포트로, 진료 준비를 바꾸다</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        자람이의 핵심은 흩어진 기록을 단순 저장하는 데 있지 않다. 보호자와 치료사가 일상에서 남긴 정보를 시계열로 정리해, 의료진이 실제 진료 현장에서 바로 참고할 수 있는 리포트로 제공하는 데 있다. 보호자는 수개월간의 변화를 기억에 의존해 설명하지 않아도 되고, 의료진은 아이의 상태 변화를 보다 객관적으로 살필 수 있다.
+      </p>
+      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-8 ml-2">
+        <li><strong>생체·행동 데이터:</strong> 수면, 식사량, 감정 변화, 문제행동</li>
+        <li><strong>치료·약물 데이터:</strong> 의사소통 반응, 감각 변화, 센터 치료 내용, 복용 전후 변화</li>
+      </ul>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        이 구조를 통해 보호자는 진료실에서 아이의 상태를 처음부터 다시 설명해야 하는 부담을 줄이고, 의료진은 시간 흐름에 따른 변화를 한눈에 확인할 수 있다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">병원 밖에서 드러나는 약물 반응까지 기록</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        발달장애인의 약물 반응은 진료실 안의 짧은 관찰만으로는 충분히 파악하기 어렵다. 졸림, 수면 패턴 변화, 공격성이나 자해 행동의 증감, 불안과 예민도 변화, 식욕 변화 등은 가정과 센터 등 실제 생활 공간에서 먼저 관찰되는 경우가 많다. 그러나 기존에는 이런 변화가 보호자의 기억이나 단편적인 메모에 의존해 의료진이 처방을 조율하기 어려웠다.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        자람이 플랫폼은 보호자, 치료사, 활동지원사가 각기 다른 공간에서 관찰한 변화를 시간순으로 통합해, 의료진이 처방 조정과 경과 판단에 참고할 수 있도록 돕는다.
+      </p>
+
+      <div class="bg-amber-50 border-l-4 border-amber-500 p-5 mb-8 rounded-r-lg">
+        <p class="text-amber-900 text-sm leading-relaxed">
+          <strong>주의:</strong> 자람이는 약물의 치료 효과를 AI가 임의로 판정하거나 의료진의 처방을 대체하는 진단 시스템이 아니다. 일상 변화를 객관적인 지표로 시각화해 의료진의 판단을 돕는 의사결정 지원 도구다.
+        </p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">치료실과 집의 기록을 연결하는 이유</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        발달장애 치료 현장에서는 “치료실에서는 잘하는데 집에서는 왜 이어지지 않을까?”라는 질문이 오래된 과제로 남아 있다. 치료실 내의 긍정적 변화가 가정이나 학교 같은 실제 생활로 연결되지 않거나, 반대로 일상에서 먼저 나타난 변화를 치료사가 제때 파악하지 못해 비효율적인 목표가 유지되는 경우가 적지 않기 때문이다.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        자람이는 치료사의 회기 기록, 보호자의 일상 관찰 데이터, 활동지원사의 외부 활동 기록을 유기적으로 연결해 이러한 단절을 줄이고자 한다. 이를 통해 치료사는 이전 목표 대비 실제 반응과 문제행동 변화를 다각도로 확인하고, 치료 방향을 보다 빠르게 점검할 수 있다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">맞춤형 치료·교육의 근거를 쌓는 데이터 인프라</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        발달장애는 동일한 진단명 아래에서도 의사소통 수준, 감각 예민도, 행동 양상, 약물 반응성이 크게 다르다. 따라서 획일적인 접근보다 개인의 시계열 변화에 기반한 정밀한 맞춤형 지원이 필요하다. 자람이는 일상 속 사용 과정 자체를 고품질 RWD로 전환하고, 이를 기반으로 향후 RWE를 축적하는 방향을 지향한다.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        드림에이아이랩은 자람이를 단순한 기록 앱이나 센터 행정 도구가 아니라, 보호자·병원·치료센터·사회적 돌봄망을 연결하는 발달장애 데이터 인프라로 발전시킬 계획이다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">실사용 검증에서 확인할 항목</h2>
+      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-8 ml-2">
+        <li>보호자의 기록 편의성</li>
+        <li>진료용 리포트의 임상적 유효성</li>
+        <li>치료센터의 치료계획 개선 기여도</li>
+        <li>약물 반응 추적의 정확성</li>
+        <li>사용자 그룹별 권한 및 개인정보 보호 구조</li>
+      </ul>
+
+      <div class="bg-primary-50 border border-primary-200 rounded-xl p-6 mb-8">
+        <h3 class="font-bold text-gray-900 mb-2">정해성 CTO 발언</h3>
+        <p class="text-gray-700 leading-relaxed italic mb-4">
+          "보호자는 아이를 가장 잘 아는 관찰자이지만, 짧은 진료 시간 안에 수개월의 일상을 논리적으로 설명하기는 쉽지 않습니다. 자람이 리포트 한 장으로 의료진이 복약 상태와 치료, 일상생활의 인과관계를 체계적으로 파악할 수 있도록 하는 것이 목표입니다."
+        </p>
+        <p class="text-gray-700 leading-relaxed italic">
+          "치료센터 역시 치료일지를 작성하는 데 그치지 않고 실제 삶에서의 개선 효과를 확인해야 합니다. 자람이는 정보의 파편화를 줄이고, 발달장애 분야의 맞춤형 치료·교육이 가능하도록 돕는 인프라를 지향합니다."
+        </p>
+      </div>
+
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 mb-8">
+        <h3 class="font-bold text-gray-900 mb-2">검색에 잘 잡히는 핵심 키워드</h3>
+        <p class="text-gray-700 text-sm leading-relaxed">
+          발달장애 통합 플랫폼, AI 디지털 케어로그, 발달장애 RWD, 발달장애 RWE, 진료 리포트, 약물 반응 추적, 보호자 기록, 치료사 기록, 맞춤형 치료, 디지털 헬스케어
+        </p>
+      </div>
+
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        자람이는 향후 주요 치료센터와 보호자 커뮤니티를 중심으로 사용자 기반을 넓히고, 대학병원·특수학교·공공 복지기관·지역사회 통합돌봄 체계까지 연동 범위를 확장할 계획이다. 기억에 의존하던 발달장애 치료·교육이 데이터 기반의 정밀 맞춤형 체계로 전환될 수 있을지 관심이 모이고 있다.
+      </p>
+
+      <div class="bg-white border border-gray-200 rounded-xl p-6 mb-8">
+        <p class="font-semibold text-gray-900 mb-3">관련 콘텐츠</p>
+        <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+          <li><a href="/news/80" class="text-primary-600 underline">발달장애 가족은 왜 늘 불안한가</a></li>
+          <li><a href="/news/77" class="text-primary-600 underline">자람이 무료 요금제 공개</a></li>
+          <li><a href="/technology/platform" class="text-primary-600 underline">AI 디지털 케어로그 기술 개요</a></li>
+          <li><a href="/services/jarame" class="text-primary-600 underline">자람이 서비스 보기</a></li>
+          <li><a href="/contact" class="text-primary-600 underline">문의하기</a></li>
+        </ul>
+      </div>
+
+      <p class="text-gray-600 text-sm border-t border-gray-200 pt-6 leading-relaxed">
+        문의: contact@dreamailab.com · 본 기사는 발달장애 데이터 기록 및 의사결정 지원 관련 서비스 안내를 포함하며, 의료기기·진단·처방을 대체하지 않습니다.
+      </p>
+    `,
+  },
+  {
     id: 80,
     title: '발달장애 가족은 왜 늘 불안한가 — 기록이 끊긴 시스템을 다시 설계해야 하는 이유',
     excerpt: '발달장애 치료의 핵심 문제는 부모·학교·센터·병원의 정보가 하나로 연결되지 않는 구조입니다. 이 글은 개인의 노력이 아니라 시스템 재설계가 왜 필요한지, 그리고 기록 연결이 왜 치료의 합리성을 높이는지 인사이트 관점에서 정리합니다.',
