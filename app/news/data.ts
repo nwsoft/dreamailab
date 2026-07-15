@@ -47,6 +47,213 @@ export function getLocalizedArticle(
 
 export const newsArticles: NewsArticle[] = [
   {
+    id: 83,
+    title: '노아AI, SaaS 전환 앞두고 통합 KPI 대시보드 공개… 운영·AI 추론·학습 데이터 기록 한눈에',
+    excerpt: 'Noah AI Labs가 SaaS 서비스 전환을 앞두고 플랫폼·블록체인·증권·ETF 운영 이벤트와 AI 추론, 학습 데이터 기록을 기간별로 확인할 수 있는 통합 KPI 대시보드를 공개했습니다.',
+    category: 'company',
+    date: '2026-07-15',
+    image: '📊',
+    featured: true,
+    author: 'Noah AI Labs',
+    tags: [
+      '노아AI',
+      'Noah AI Labs',
+      'AI 금융',
+      '금융 SaaS',
+      '통합 KPI 대시보드',
+      '운영 데이터',
+      'AI 추론',
+      '학습 데이터 기록',
+      '가드레일',
+      '금융 의사결정 인프라',
+      '디지털케어로그',
+      '핀테크',
+    ],
+    content: `
+      <p class="text-sm text-gray-500 mb-6">[회사 뉴스 · 2026-07-15]</p>
+
+      <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-4">
+        금융 인공지능 서비스 <strong>노아AI</strong>를 운영하는 <strong>Noah AI Labs</strong>가 SaaS 서비스 전환을 앞두고 플랫폼 운영과 금융 의사결정 인프라의 상태를 확인할 수 있는 통합 KPI 대시보드를 공개했다. 대시보드는 1일·7일·30일·90일 구간을 선택해 플랫폼, 블록체인, 증권, ETF, AI 추론, 학습 데이터 기록, 주문 처리 결과를 구분해 보여준다.
+      </p>
+
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        노아AI는 드림에이아이랩에서 분리된 금융 AI 서비스로, 시장·계정 데이터를 바탕으로 판단을 보조하고 위험 신호와 실행 전 통제 과정을 기록하는 금융 의사결정 인프라를 지향한다. 실제 주문과 자금 이동은 사용자의 계정과 외부 거래소·증권사 API 조건에 따라 수행되며, 노아AI가 수익을 보장하거나 자산을 직접 운용하는 구조는 아니다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">1일·7일·30일·90일 단위로 운영 상태 확인</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        통합 KPI 대시보드는 짧은 기간의 운영 상태와 누적 흐름을 함께 확인할 수 있도록 기간 선택 기능을 제공한다. 로그인·세션·상태 점검 같은 플랫폼 이벤트, 블록체인 및 학습 데이터 기록, 증권·ETF 주문 이벤트, AI 추론 완료 건수와 응답시간을 한 화면에서 확인하는 방식이다.
+      </p>
+      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-8 ml-2">
+        <li><strong>플랫폼 지표:</strong> 로그인, 세션, 상태 점검과 서비스 이용 흐름</li>
+        <li><strong>AI 지표:</strong> 추론 완료 건수와 평균 응답시간</li>
+        <li><strong>학습 데이터 지표:</strong> 운영 과정에서 기록된 학습 데이터 이벤트</li>
+        <li><strong>거래 지표:</strong> 거래소·자산군별 주문 이벤트와 처리 결과</li>
+        <li><strong>사용자 지표:</strong> DAU, MAU, 재방문율과 사용자별 이용 흐름</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">이벤트 수와 거래 성과를 분리해 공개</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        대시보드의 핵심은 이벤트 수와 실제 거래 성과를 같은 의미로 해석하지 않도록 지표를 분리한 데 있다. 최근 30일 화면에는 플랫폼·블록체인·증권·ETF 등 여러 영역의 이벤트가 함께 집계되며, 이 중 학습 데이터 기록과 AI 추론은 시스템 활동량을 보여주는 운영 지표다. 이벤트가 많이 기록됐다는 사실만으로 수익률이나 투자 성과가 높다고 판단할 수는 없다.
+      </p>
+      <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-8">
+        <h3 class="font-bold text-gray-900 mb-3">공개 KPI를 읽는 기준</h3>
+        <ul class="list-disc list-inside text-gray-700 space-y-2">
+          <li>이벤트 성공률은 데이터 처리 또는 주문 처리 성공률이며, 매매 승률과 다르다.</li>
+          <li>학습 데이터 기록 건수는 데이터가 축적된 활동량이며, 모델 성능 개선을 직접 의미하지 않는다.</li>
+          <li>주문 성공률은 주문 요청의 처리 결과이며, 거래 후 손익과는 별도로 확인해야 한다.</li>
+          <li>사용자 성과를 말하려면 수수료·슬리피지·순손익·최대낙폭을 함께 공개해야 한다.</li>
+        </ul>
+      </div>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">가드레일은 차단 건수만으로 판단하지 않는다</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        노아AI의 가드레일은 위험 신호를 확인하고, 조건에 맞지 않는 실행을 제한하거나 보류하는 안전 계층이다. 따라서 가드레일의 유효성을 검증하려면 위험 이벤트가 발생했는지뿐 아니라 전체 평가 건수, 차단 건수, 차단률, 주문 거부 사유, 반복 실패 보호가 함께 기록되어야 한다. 특정 기간에 리스크 이벤트가 0건으로 표시되는 경우에도 차단 조건이 작동하지 않았다는 뜻인지, 해당 이벤트 수집이 없는 것인지 구분할 필요가 있다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">학습 구조는 기간·동일 기준 비교로 검증</h2>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        운영 데이터가 쌓인다는 사실은 노아AI의 피드백 루프가 작동하기 위한 기반을 보여준다. 다만 학습으로 선택 구조가 개선되고 사용자 순손익이 상승했다는 결론을 내리려면 동일한 사용자군과 동일한 집계 기준으로 기간을 나눠 승률, 순손익, 최대낙폭, 거래 비용, 손실 사용자 비중을 비교해야 한다. 단순 이벤트 누적이나 짧은 기간의 승률만으로 강화학습 또는 연합학습의 성능을 단정하지 않는 것이 노아AI의 공개 원칙이다.
+      </p>
+
+      <div class="bg-amber-50 border-l-4 border-amber-500 p-5 mb-8 rounded-r-lg">
+        <p class="text-amber-900 text-sm leading-relaxed">
+          <strong>투자 유의사항:</strong> 본 KPI는 운영 로그와 집계 지표를 공개하는 기술 투명성 자료다. 투자 자문, 일임 운용, 수익 보장 또는 손실 방지를 의미하지 않는다. 실제 주문·체결·손익은 사용자의 계정과 외부 금융 API, 시장 상황에 따라 달라질 수 있다.
+        </p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">SaaS 전환을 위한 공개 기준선</h2>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        Noah AI Labs는 SaaS 전환 과정에서 기능 소개만 공개하는 방식에서 벗어나, 서비스가 실제로 어떤 이벤트를 수집하고 어떤 상태를 확인하는지 공개하는 운영 기준선을 마련하고 있다. 향후에는 기간별 데이터의 기준 시각, 집계 범위, 사용자군 정의, 순손익 산식, 가드레일 평가 건수를 함께 제공해 KPI가 기술 운영과 사용자 경험을 어떻게 연결하는지 검증할 수 있도록 할 계획이다.
+      </p>
+
+      <div class="bg-white border border-gray-200 rounded-xl p-6 mb-8">
+        <p class="font-semibold text-gray-900 mb-3">공식 확인 경로</p>
+        <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+          <li><a href="https://noahailabs.com/ko" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">Noah AI Labs 공식 사이트</a></li>
+          <li><a href="https://daltrading.net/admin/kpi?days=7" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">7일 KPI 대시보드</a></li>
+          <li><a href="https://daltrading.net/admin/kpi?days=30" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">30일 KPI 대시보드</a></li>
+          <li><a href="/services/finance" class="text-primary-600 underline">드림에이아이랩의 노아AI 이전 안내</a></li>
+          <li><a href="/blog/noahai-technical-whitepaper" class="text-primary-600 underline">노아AI 기술 기준 요약</a></li>
+        </ul>
+      </div>
+
+      <p class="text-gray-600 text-sm border-t border-gray-200 pt-6 leading-relaxed">
+        ※ NoahAI는 Noah AI Labs에서 독립 운영되는 금융 AI 서비스입니다. 본 글은 공개 KPI의 구조와 해석 기준을 설명하기 위한 회사 뉴스이며, 특정 금융상품의 매수·매도 추천이나 투자 성과를 보장하지 않습니다.
+      </p>
+    `,
+  },
+  {
+    id: 82,
+    title: '자람이, 발달센터 도입 과정 공개… 센터 행정·치료기록·보호자 연계를 하나의 흐름으로',
+    excerpt: '드림에이아이랩이 발달장애 플랫폼 자람이의 발달센터 도입 과정을 공개했습니다. 센터 초기 설정부터 치료기록, 보호자 소통, 단계별 확산까지 실제 운영 흐름을 중심으로 설명합니다.',
+    category: 'company',
+    date: '2026-07-15',
+    image: '🏢',
+    featured: true,
+    author: '드림에이아이랩',
+    tags: [
+      '자람이',
+      '발달센터 도입',
+      '발달장애 플랫폼',
+      '치료센터 행정',
+      '치료일지',
+      '보호자 연계',
+      '센터 운영',
+      '발달장애 SaaS',
+      'AI 디지털 케어로그',
+      '권한 관리',
+      '센터 온보딩',
+      '디지털 헬스케어',
+    ],
+    content: `
+      <p class="text-sm text-gray-500 mb-6">[회사 뉴스 · 2026-07-15]</p>
+
+      <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-4">
+        드림에이아이랩이 발달장애 플랫폼 <strong>자람이</strong>의 발달센터 도입 과정을 공개했다. 센터 운영자가 기본 정보를 설정하는 단계부터 아동·보호자 등록, 일정과 출석 관리, 치료기록 작성, 보호자 소통까지 실제 업무가 이어지는 흐름을 중심으로 센터 도입 방식을 설명한다.
+      </p>
+
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        발달센터는 상담, 치료, 일정, 출결, 보호자 안내, 치료기록 등 여러 업무를 동시에 처리한다. 기록이 종이·메신저·개별 파일로 나뉘면 같은 내용을 반복해서 입력하거나, 보호자에게 상황을 다시 설명하는 일이 생기기 쉽다. 자람이는 센터에서 발생하는 기록을 아이 중심으로 연결하고, 역할별 권한에 따라 필요한 정보를 확인하도록 설계된 AI 디지털 케어로그 플랫폼이다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">1단계: 센터 운영 구조와 권한 설정</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        도입은 센터의 운영 구조를 확인하는 것에서 시작한다. 센터 관리자, 치료사, 보호자 등 사용자 역할을 구분하고, 각 역할이 입력하거나 확인할 수 있는 기록 범위를 정한다. 여러 사람이 같은 아동의 정보를 다루는 만큼, 기능을 빠르게 여는 것보다 권한과 동의 범위를 먼저 정하는 것이 중요하다.
+      </p>
+      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-8 ml-2">
+        <li>센터 기본 정보와 운영자 계정 설정</li>
+        <li>치료사·보호자 등 사용자 역할과 접근 범위 설정</li>
+        <li>아동·보호자 등록 및 이용 동의 확인</li>
+        <li>센터 내부 공지와 소통 채널 정리</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">2단계: 일정·출석·치료기록을 한 흐름으로 연결</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        기본 설정이 끝나면 센터 업무의 중심인 일정과 치료기록을 연결한다. 예약과 출석을 확인한 뒤 치료 목표, 회기 관찰, 과제 수행, 보호자 전달사항을 같은 아동의 기록 흐름 안에 남길 수 있도록 구성한다. 이를 통해 치료일지가 단순히 회기별 문서로 끝나지 않고, 다음 회기와 보호자 소통에 참고할 수 있는 누적 기록으로 이어진다.
+      </p>
+      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-8 ml-2">
+        <li>상담·치료 일정과 출석 상태 확인</li>
+        <li>치료 목표와 회기별 관찰 기록 작성</li>
+        <li>결석·보강·대기자 등 센터 운영 흐름 관리</li>
+        <li>보호자에게 전달할 변화와 다음 과제 정리</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">3단계: 보호자 기록과 센터 기록 연결</h2>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        치료실에서의 관찰만으로는 아이의 하루를 모두 설명하기 어렵다. 자람이는 센터 기록과 보호자가 가정에서 남긴 수면, 식사, 감정, 행동, 생활 변화를 연결해 치료실 밖의 맥락을 함께 확인하는 방향을 지향한다. 다만 보호자 기록의 열람 범위와 공유 기간은 기관 정책과 동의 범위에 따라 달라질 수 있다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">센터 도입 후 달라지는 업무 흐름</h2>
+      <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-8">
+        <ul class="list-disc list-inside text-gray-700 space-y-2">
+          <li><strong>기존:</strong> 일정, 출석, 치료일지, 보호자 안내가 서로 다른 문서와 대화에 분산</li>
+          <li><strong>도입 후:</strong> 아동을 기준으로 일정·치료·가정 기록을 연결해 확인</li>
+          <li><strong>관리자:</strong> 센터 운영 현황과 사용자 권한을 한 화면에서 점검</li>
+          <li><strong>치료사:</strong> 회기 기록과 이전 목표를 이어 보고 다음 치료 방향을 검토</li>
+          <li><strong>보호자:</strong> 센터에서 진행된 내용과 가정에서 관찰한 변화를 같은 흐름으로 확인</li>
+        </ul>
+      </div>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">단계별 확산으로 현장 부담을 줄인다</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        센터 전체 업무를 한 번에 바꾸기보다 핵심 기능부터 적용하고 사용 범위를 넓히는 방식이 현실적이다. 자람이는 센터 운영과 치료기록을 우선 연결한 뒤 보호자, 학교, 병원 등 관련 주체와의 기록 연계를 단계적으로 확장하는 구조를 제시한다.
+      </p>
+      <ol class="list-decimal list-inside text-gray-700 space-y-2 mb-8 ml-2">
+        <li><strong>센터:</strong> 운영자·치료사 계정, 아동 등록, 일정과 기록 설정</li>
+        <li><strong>보호자:</strong> 가정 관찰 기록과 센터 소통 연계</li>
+        <li><strong>학교:</strong> 교육·생활 관찰 정보의 연계 범위 검토</li>
+        <li><strong>병원:</strong> 진료 참고 리포트와 동의 기반 정보 공유 검토</li>
+      </ol>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">정해성 CTO가 설계한 기록 연결 인프라</h2>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        정해성 CTO는 발달장애 현장에서 반복되는 기록 단절 문제를 기술적으로 해결하기 위해 AI 디지털 케어로그 구조를 설계해 왔다. 자람이는 센터의 행정 솔루션에 그치지 않고, 치료사와 보호자가 남긴 기록이 다음 치료와 상담의 참고자료로 이어지도록 하는 연결 인프라를 목표로 한다.
+      </p>
+
+      <div class="bg-amber-50 border-l-4 border-amber-500 p-5 mb-8 rounded-r-lg">
+        <p class="text-amber-900 text-sm leading-relaxed">
+          <strong>안내:</strong> 자람이는 진단·처방·수업·치료를 대체하지 않는다. 센터·보호자·학교·병원 간 정보 공유는 기관 도입 정책과 이용자 동의 범위에 따라 운영되며, 실제 기능과 도입 일정은 센터별 조건에 따라 달라질 수 있다.
+        </p>
+      </div>
+
+      <div class="bg-white border border-gray-200 rounded-xl p-6 mb-8">
+        <p class="font-semibold text-gray-900 mb-3">관련 콘텐츠</p>
+        <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+          <li><a href="/services/jarame" class="text-primary-600 underline">자람이 서비스 보기</a></li>
+          <li><a href="/news/74" class="text-primary-600 underline">보호자·교사·치료사·병원 기록 타임라인 업데이트</a></li>
+          <li><a href="/news/77" class="text-primary-600 underline">발달센터·보호자 무료 요금제 안내</a></li>
+          <li><a href="/news/81" class="text-primary-600 underline">AI 디지털 케어로그 실사용 검증 확대</a></li>
+          <li><a href="/contact" class="text-primary-600 underline">센터 도입 문의</a></li>
+        </ul>
+      </div>
+
+      <p class="text-gray-600 text-sm border-t border-gray-200 pt-6 leading-relaxed">
+        ※ 본 글은 자람이의 센터 도입 흐름과 기능 방향을 설명하는 회사 뉴스입니다. 센터별 적용 범위, 계정 권한, 데이터 보관과 공유 기준은 계약·약관·기관 정책에 따릅니다.
+      </p>
+    `,
+  },
+  {
     id: 81,
     title: '일상 기록이 진료 근거로… 발달장애 통합 플랫폼 자람이, AI 디지털 케어로그 실사용 검증 확대',
     excerpt: '자람이가 발달장애인의 일상, 치료, 약물, 교육 기록을 하나로 연결하는 AI 디지털 케어로그의 실사용 검증을 확대한다. 보호자는 진료용 리포트로 병원 준비를 돕고, 의료진은 약물 반응과 생활 변화를 시계열로 확인할 수 있다.',
