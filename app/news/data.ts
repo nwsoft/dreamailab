@@ -47,6 +47,193 @@ export function getLocalizedArticle(
 
 export const newsArticles: NewsArticle[] = [
   {
+    id: 84,
+    title:
+      '[보도자료] 노아에이아이랩스, 6개 코인 거래소·4개 증권사 동시 운용 ‘노아AI(NoahAI)’ 클라이언트 소프트웨어 상용화',
+    excerpt:
+      '노아에이아이랩스가 바이낸스·바이비트·OKX·비트겟·업비트·빗썸 등 6개 암호화폐 거래소와 키움·신한·미래에셋·한국투자증권 등 4대 증권사를 개인 PC에서 동시 운용하는 노아AI 클라이언트(v3.8.9.29)를 공식 출시했다. 실시간 시장 국면 인식 기반 맞춤형 전략 조율과 제한 자율 가드레일을 탑재했다.',
+    category: 'press',
+    date: '2026-07-20',
+    image: '📰',
+    featured: true,
+    author: 'Noah AI Labs',
+    tags: [
+      '보도자료',
+      '노아AI',
+      'NoahAI',
+      '노아에이아이랩스',
+      'Noah AI Labs',
+      '클라이언트 소프트웨어',
+      '6개 거래소',
+      '4개 증권사',
+      '바이낸스',
+      '소프트뱅크',
+      '커스텀 AI',
+      '유튜브 전략',
+      '트레이딩뷰',
+      '시장 국면',
+      '가드레일',
+      '정해성 CTO',
+      '금융 AI',
+    ],
+    i18n: {
+      en: {
+        title:
+          '[Press Release] NoahAI Labs Commercializes NoahAI Client — Simultaneous Operation Across 6 Crypto Exchanges and 4 Securities Brokers',
+        excerpt:
+          'NoahAI Labs has officially launched NoahAI Client (v3.8.9.29), enabling simultaneous operation across six crypto exchanges and four major Korean securities brokers on a personal PC. The release includes real-time market-regime–aware strategy tuning and AI-adjusted constrained-autonomy guardrails.',
+        content: `
+      <p class="text-sm text-gray-500 mb-6">[Press Release · 2026-07-20 · Seoul=NewsTab]</p>
+
+      <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 mb-8">
+        <ul class="space-y-3 text-gray-800 leading-relaxed">
+          <li>- Watched by global capital and infrastructure players including Binance, the world’s largest crypto exchange, and SoftBank</li>
+          <li>- Unprecedented simultaneous connectivity across 10 major financial channels — fully commercialized in a personal PC environment</li>
+          <li>- “Even a strong strategy can lose when markets shift” — NoahAI ships real-time market recognition and adaptive strategy tuning</li>
+          <li>- AI researcher and CTO Jung Haesung: “The automation and asset-neutral infrastructure investors have dreamed of”</li>
+        </ul>
+      </div>
+
+      <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-4">
+        <strong>NoahAI Labs</strong>, a specialist in vertical AI infrastructure R&amp;D for finance, has commercialized a capability it describes as unprecedented in domestic and global fintech. On July 20 the company announced the official release and rollout of <strong>NoahAI (Client v3.8.9.29)</strong>, a user-centric financial decision-support client that can operate six global crypto exchanges and four major Korean securities brokers in an integrated workflow.
+      </p>
+
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        The commercialized NoahAI client runs API adapters for Binance, Bybit, OKX, Bitget, Upbit, and Bithumb, together with Kiwoom Securities, Shinhan Securities, Mirae Asset Securities, and Korea Investment &amp; Securities, as independent processes on the user’s personal PC. Supporting ten heterogeneous financial channels in real time without cross-channel error, the company says, demonstrates NoahAI Labs’ systems-engineering strength.
+      </p>
+
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        The product also draws a clear line against conventional SaaS models that centralize assets on a server or push one-size-fits-all investment guidance. NoahAI continues to ship as standalone client software that runs locally on the user’s PC, keeping personal asset data and trading logic from leaving the device and offering a safer, regulation-aligned technical alternative.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">An architecture watched by Binance, SoftBank, and other global players</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        NoahAI’s infrastructure design is already drawing global attention. Binance, the world’s largest crypto exchange, first saw NoahAI’s early autonomous coin-trading paradigm at a Dubai AI event during the initial build, and has continued to follow the technology’s progress.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        SoftBank Group is also tracking NoahAI’s trajectory. SoftBank previously invested about USD 146 million (roughly KRW 170 billion) in a Korean AI asset-management fintech startup after valuing its AI-driven ETF capabilities. Having seen the impact of AI financial infrastructure, SoftBank is described as positively assessing NoahAI’s local-client architecture — free of central-server custody risk — and its feedback-driven scalability, while reviewing strategic collaboration opportunities.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">“The technology investors have always dreamed of” — automation that breaks the knowledge barrier</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        For years, beginners and self-taught investors watched masters’ books, quality finance videos, and YouTube techniques — then failed to execute and validate them on live trading screens. Coding barriers and monitoring limits stood in the way. NoahAI (v3.8.9.29) is built to close that gap.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        The client lets AI analyze user-supplied PDFs (books), TradingView indicators and Pine Script, YouTube links, or plain-text ideas and structure them into executable conditions. Users no longer need deep financial engineering to turn trusted strategies into fully automated workflows through a private AI assistant.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">“Even the best strategy fails when markets change” — regime response and guardrails</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        NoahAI’s real edge is market responsiveness. A strong strategy can turn into large losses or dead weight when regimes shift among uptrends, downtrends, ranges, and sharp volatility. NoahAI addresses this with a real-time market-regime recognition engine.
+      </p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        The client monitors markets around the clock. When users build multiple strategies into the system, AI judges which strategy best fits the live regime and helps tune and run the optimal one in real time.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        To contain risks from autonomous AI decisions, NoahAI applies constrained-autonomy guardrails — including leverage bounds (1–10x), position-size limits (1–50%), and outright rejection of withdrawal instructions — that the AI continuously adjusts to market and operating conditions. Safety is further reinforced through a three-stage validation path: Historical Replay, Live Observation, and Limited Live operation at minimum size.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">CTO Jung Haesung: “Collective feedback loops drive real financial innovation”</h2>
+      <div class="bg-blue-50 border-l-4 border-blue-600 p-6 mb-6">
+        <p class="text-blue-900 leading-relaxed mb-3">
+          “NoahAI Client is not just a trading tool — it is the completion of a distinctive financial AI infrastructure that succeeded in multi-channel connectivity once thought unreachable in a personal trading environment. We insisted on standalone software distribution to overcome the legal and security limits of SaaS platforms.”
+        </p>
+        <p class="text-blue-800 text-sm">— Jung Haesung, CTO</p>
+      </div>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        Jung added that the flexible, safe financial automation individual investors had only imagined is now becoming real, and that as users’ ideas run on this client infrastructure and regime-aware feedback accumulates, the software can become one of the most disruptive infrastructure layers in live markets.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        NoahAI transfers the judgment–log–review structure of its foundational AI Digital Care Log technology into financial decision-making, advancing explainable AI (XAI). The company plans further browser-connection upgrades and expansion into life-finance risk assessment, aiming to become an irreplaceable infrastructure presence in global vertical AI for finance.
+      </p>
+
+      <div class="bg-white border border-gray-200 rounded-xl p-6 mb-8">
+        <p class="font-semibold text-gray-900 mb-3">Contact / Links</p>
+        <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+          <li><a href="https://noahailabs.com/ko" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">Noah AI Labs official site</a></li>
+          <li><a href="/services/finance" class="text-primary-600 underline">Dream AI Lab — NoahAI migration notice</a></li>
+          <li><a href="/blog/noahai-technical-whitepaper" class="text-primary-600 underline">NoahAI technical summary</a></li>
+        </ul>
+      </div>
+    `,
+      },
+    },
+    content: `
+      <p class="text-sm text-gray-500 mb-6">[보도자료 · 2026-07-20 · 서울=뉴스탭]</p>
+
+      <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 mb-8">
+        <ul class="space-y-3 text-gray-800 leading-relaxed">
+          <li>- 세계 최대 거래소 바이낸스 및 소프트뱅크 등 글로벌 자본·인프라 기업들이 주시</li>
+          <li>- 국내 전례 없는 10대 대형 금융 채널 동시 연동… 개인 PC 환경 내 완벽 상용화로 기술력 입증</li>
+          <li>- “좋은 전략도 시장 바뀌면 손실”… 노아AI, 실시간 시장 인식 기반 ‘맞춤형 전략 조율’ 기능 탑재</li>
+          <li>- AI 연구자 정해성 CTO “투자자들이 꿈꿔오던 완벽한 자동화 및 자산 중립적 인프라의 완성”</li>
+        </ul>
+      </div>
+
+      <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-4">
+        금융 버티컬 AI 인프라 R&amp;D 전문 기업 <strong>‘노아에이아이랩스(NoahAI Labs)’</strong>가 국내외 금융 테크 역사상 전례가 없는 독보적인 기술력을 상용화하는 데 성공했다. 노아에이아이랩스는 글로벌 6대 암호화폐 거래소와 국내 4대 대형 증권사를 통합 운용할 수 있는 사용자 중심의 금융 의사결정 클라이언트 소프트웨어 <strong>‘노아AI(NoahAI, Client v3.8.9.29)’</strong>를 공식 출시하고 본격적인 배포에 나선다고 20일 밝혔다.
+      </p>
+
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        이번에 상용화된 노아AI 클라이언트는 바이낸스(Binance), 바이비트(Bybit), OKX, 비트겟(Bitget), 업비트, 빗썸 등 6개 암호화폐 거래소와 키움증권, 신한투자증권, 미래에셋증권, 한국투자증권 등 국내 4대 증권사 API 어댑터 연동을 모두 개인 PC 환경 내에서 독립 프로세스로 구동한다. 인공지능 알고리즘이 이처럼 방대하고 서로 다른 10대 금융 채널을 오차 없이 실시간으로 동시 지원하는 것은 국내외를 막론하고 전례가 없는 일로, 노아에이아이랩스의 압도적인 시스템 엔지니어링 능력을 입증한 쾌거다.
+      </p>
+
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        특히 자산을 중앙 서버에서 통제하거나 일괄적인 투자 리딩을 제공하는 기존의 SaaS(웹 서비스) 방식과 명확히 선을 그었다. 노아AI는 사용자의 로컬 PC 자체에서 독립적으로 구동되는 ‘독립형 클라이언트 소프트웨어’ 형태로 지속 배포된다. 이를 통해 개인의 자산 데이터와 투자 로직이 외부로 유출되는 것을 원천 차단하고, 엄격한 금융 규제 트렌드 속에서 가장 안전하고 적법한 기술적 대안을 완성했다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">바이낸스·소프트뱅크 등 글로벌 금융 거물들이 예의주시하는 아키텍처</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        노아AI가 제시한 독창적인 인프라 구조는 이미 글로벌 시장에서 뜨거운 관심을 받고 있다. 세계 최대 암호화폐 거래소인 바이낸스(Binance)는 노아AI의 초기 버전 빌드 당시 두바이 AI 행사에 직접 참가, 인공지능을 활용한 자율형 코인 거래 패러다임을 최초로 목격한 이후 지속적으로 해당 기술의 발전을 팔로업하며 주시하고 있다.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        일본 소프트뱅크(SoftBank) 그룹 역시 노아AI의 행보를 예의주시하고 있다. 소프트뱅크는 과거 한국의 AI 자산운용 핀테크 스타트업에 AI 기반 ETF 투자 기술력을 높이 평가해 1억 4600만 달러(약 1700억 원) 규모의 대형 투자를 집행한 전례가 있다. 인공지능 기반 금융 인프라의 파괴력을 확인한 소프트뱅크 측은 중앙 서버 리스크가 없는 노아AI의 독립 클라이언트 구동 아키텍처와 사용자 피드백 기반의 확장성을 긍정적으로 평가하며 전략적 협력 기회를 검토 중이다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">"투자자들이 평생 꿈꿔오던 기술"… 지식의 한계를 부수는 완벽한 자동화</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        그동안 수많은 초보 투자자들과 시장을 공부하는 이들은 대가들의 책이나 양질의 금융 지식 영상, 유튜브 투자 기법을 보더라도 이를 실제 매매 화면에서 완벽히 실행하고 검증하는 데 번번이 실패해 왔다. 난해한 코딩 장벽과 실시간 모니터링의 한계 때문이었다. 노아AI(v3.8.9.29)는 투자자들이 평생 꿈꿔왔던 이 갈증을 완벽하게 해소한다.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        노아AI 클라이언트는 사용자가 입력한 PDF(책), 트레이딩뷰(TradingView) 지표 및 파인스크립트(Pine Script) 코드, 유튜브 영상 링크, 혹은 메모장에 적어둔 아이디어 텍스트를 인공지능이 스스로 분석하여 실행 가능한 조건으로 구조화해 준다. 사용자는 더 이상 복잡한 금융 공학을 공부하지 않아도, 자신이 신뢰하는 대가들의 전략을 나만의 프라이빗 인공지능 비서를 통해 100% 자동화된 형태로 구현할 수 있게 된다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">"아무리 좋은 전략도 시장이 바뀌면 무용지물"… 실시간 국면 대응 및 가드레일</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        노아AI의 진정한 진가는 시장 대응력에 있다. 아무리 훌륭한 투자 전략이라도 시장의 흐름(상승·하락·횡보·급변동)이 바뀌면 순식간에 큰 손실을 내거나 쓸모없는 전략으로 전락하기 마련이다. 노아AI는 이 고질적인 문제를 해결하기 위해 ‘실시간 시장 국면 인식 엔진’을 탑재했다.
+      </p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        노아AI 클라이언트는 24시간 내내 실시간으로 시장을 정밀 모니터링한다. 사용자가 다양한 전략들을 시스템에 구축해 두면, 인공지능이 현재의 실시간 시장 상황에 가장 적합한 전략이 무엇인지 판단하여 최적의 전략을 구동할 수 있도록 실시간으로 조율하고 돕는다.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        동시에 인공지능의 자율 판단이 가져올 수 있는 위험을 방지하기 위해 레버리지 제한(1~10배), 포지션 비율 제한(1~50%) 및 출금 지시 원천 거부 등의 ‘제한 자율 가드레일’을 AI가 시장·운용 상황에 맞게 지속적으로 조절하도록 설계했다. 또한, 과거 데이터 재생(Historical Replay), 실시간 관찰학습(Live Observation), 최소 단위 제한 운용(Limited Live)의 철저한 3단계 검증 프로세스를 거쳐 안전성을 극대화했다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">최고기술책임자(CTO) 정해성 “집단지성 피드백 루프가 만드는 진짜 금융 혁신”</h2>
+      <div class="bg-blue-50 border-l-4 border-blue-600 p-6 mb-6">
+        <p class="text-blue-900 leading-relaxed mb-3">
+          “노아AI 클라이언트는 단순한 트레이딩 툴이 아니라, 개인 거래 환경에서 전례 없는 다중 금융 채널 연동을 성공시킨 독보적인 금융 AI 인프라의 완성”이라며, “기존 SaaS 형태의 플랫폼들이 가진 법적 리스크와 보안 한계를 완벽히 극복하기 위해 독립형 소프트웨어 배포 방식을 고수했다.”
+        </p>
+        <p class="text-blue-800 text-sm">— 정해성 CTO</p>
+      </div>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        이어 정해성 CTO는 “개인 투자자들이 그동안 머릿속으로만 꿈꿔왔던 ‘유연하고 안전한 금융 자동화’가 드디어 현실화된 것”이라며, “이제 상용화의 첫발을 뗀 만큼, 앞으로 전 세계 수많은 사용자들의 독창적인 투자 아이디어가 이 클라이언트 인프라 위에서 구현되고, 시장 상황에 맞춘 피드백이 쌓이며 알고리즘이 고도화된다면 실제 금융 시장에서 가장 파괴적이고 혁신적인 인프라 소프트웨어로 자리 잡을 것”이라고 강조했다.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        노아AI는 원천 기술인 ‘AI 디지털케어로그’의 판단·로그·복기 구조를 금융 의사결정에 완벽히 이식하여 설명 가능한 AI(XAI)의 표준을 제시하고 있다. 향후 웹 브라우저 연결 기술 고도화 및 생활금융 위험 평가 도메인으로의 확장을 지속하여, 글로벌 금융 버티컬 AI 분야에서 대체 불가능한 독보적인 인프라 존재로 자리매김할 계획이다.
+      </p>
+
+      <div class="bg-white border border-gray-200 rounded-xl p-6 mb-8">
+        <p class="font-semibold text-gray-900 mb-3">문의·확인</p>
+        <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+          <li><a href="https://noahailabs.com/ko" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">Noah AI Labs 공식 사이트</a></li>
+          <li><a href="/services/finance" class="text-primary-600 underline">드림에이아이랩의 노아AI 이전 안내</a></li>
+          <li><a href="/blog/noahai-technical-whitepaper" class="text-primary-600 underline">노아AI 기술 기준 요약</a></li>
+        </ul>
+      </div>
+    `,
+  },
+  {
     id: 83,
     title: '노아AI, SaaS 전환 앞두고 통합 KPI 대시보드 공개… 운영·AI 추론·학습 데이터 기록 한눈에',
     excerpt: 'Noah AI Labs가 SaaS 서비스 전환을 앞두고 플랫폼·블록체인·증권·ETF 운영 이벤트와 AI 추론, 학습 데이터 기록을 기간별로 확인할 수 있는 통합 KPI 대시보드를 공개했습니다.',
