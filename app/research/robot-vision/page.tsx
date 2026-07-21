@@ -323,7 +323,7 @@ const techReuseItems: { title: string; desc: string; icon: MarketingIconName }[]
   },
   {
     title: '행동 분석',
-    desc: '자람이(Beta)·시니어앤라이프(Pilot)에서 검증·전개 중인 행동 패턴 분석·이상 탐지 로직을 로봇이 관찰하는 신호에 재학습하는 방향을 연구합니다.',
+    desc: '자람이(상용)·시니어앤라이프(상용베타)에서 검증·전개 중인 행동 패턴 분석·이상 탐지 로직을 로봇이 관찰하는 신호에 재학습하는 방향을 연구합니다.',
     icon: 'eye',
   },
   {

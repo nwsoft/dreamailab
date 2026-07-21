@@ -63,9 +63,9 @@ const pipeline = [
 ]
 
 const domains = [
-  { name: '시니어앤라이프', status: 'Pilot', href: '/services/senior' },
-  { name: '토탈케어로그', status: 'In Development', href: '/services/healthcare' },
-  { name: '글로벌커플케어', status: 'Pilot', href: '/services/marriage' },
+  { name: '시니어앤라이프', status: 'Commercial Beta', href: '/services/senior' },
+  { name: '토탈케어로그', status: 'Alpha', href: '/services/healthcare' },
+  { name: '글로벌커플케어', status: 'Commercial', href: '/services/marriage' },
   { name: '에듀케어로그', status: 'Pilot', href: '/services/educarelog' },
   { name: '베지케어', status: 'Beta', href: '/services/veggie' },
 ]
@@ -115,7 +115,7 @@ export default function PlatformTechnologyPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">DAL 관리 도메인 (자람이 제외)</h2>
           <p className="text-gray-600 text-sm mb-6">
-            발달장애 축(자람이)은 별도 제품·사이트(jarame.or.kr)에서 운영·검토합니다. 아래는 DAL 플랫폼에서 직접
+            발달장애 축(자람이)은 별도 제품·사이트(jarame.or.kr)에서 상용 운영합니다. 아래는 DAL 플랫폼에서 직접
             전개하는 도메인입니다.
           </p>
           <div className="overflow-x-auto rounded-xl border border-gray-200 bg-white">

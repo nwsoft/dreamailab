@@ -40,19 +40,19 @@ export default function IRPage() {
       icon: 'sprout',
       title: '발달장애',
       desc: '383만+ 타겟, 자람이 연계·등록 기관 5,700+ (MAU와 별개), B2B·행정 도입 여지',
-      metric: '초기 집중',
+      metric: '상용',
     },
     {
       icon: 'user',
       title: '시니어',
       desc: '22,000+ 등록 사업자 풀(연계 기준), 초고령사회·B2B 표준화',
-      metric: '파일럿',
+      metric: '상용베타',
     },
     {
       icon: 'hospital',
       title: '의료·헬스케어',
       desc: '개인 맞춤 AI 주치의, RWE·항암 추적을 지향',
-      metric: '개발 중',
+      metric: '알파',
     },
     {
       icon: 'graduation',

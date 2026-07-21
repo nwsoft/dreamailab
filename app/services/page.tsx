@@ -29,7 +29,7 @@ const servicesBreadcrumbJsonLd = buildBreadcrumbJsonLd([
 const services = [
   {
     name: '자람이',
-    status: 'Beta',
+    status: 'Commercial',
     mark: 'JR',
     domain: '발달장애',
     summary: '가정·학교·센터·병원에서 끊기기 쉬운 발달 관찰·치료 데이터를 하나의 흐름으로 잇는 케어 인프라',
@@ -40,7 +40,7 @@ const services = [
   },
   {
     name: '시니어앤라이프',
-    status: 'Pilot',
+    status: 'Commercial Beta',
     mark: 'SL',
     domain: '시니어·노인돌봄',
     summary: '재가·시설·병원·가족 사이에서 흩어지는 시니어 돌봄·생활·행정 정보를 하나의 흐름으로 잇는 케어 인프라',
@@ -51,7 +51,7 @@ const services = [
   },
   {
     name: '토탈케어로그',
-    status: 'In Development',
+    status: 'Alpha',
     mark: 'TC',
     domain: '의료',
     summary: '병원 밖에서 끊기는 증상·복약·생활 데이터를 다음 의료로 연결하는 헬스케어 인프라',
@@ -73,7 +73,7 @@ const services = [
   },
   {
     name: '글로벌커플케어',
-    status: 'Pilot',
+    status: 'Commercial',
     mark: 'GC',
     domain: '글로벌커플케어',
     summary: '국제결혼·다문화 가족 영역의 정보·절차·신뢰를 하나의 기준으로 연결하는 글로벌 가족 인프라',
@@ -501,8 +501,11 @@ type ServiceItem = (typeof services)[number]
 
 function ServiceSummaryCard({ service }: { service: ServiceItem }) {
   const statusStyles: Record<string, { color: string; label: string }> = {
-    Beta: { color: 'bg-blue-100 text-blue-800', label: 'Service Status: Beta' },
-    Pilot: { color: 'bg-emerald-100 text-emerald-800', label: 'Service Status: Pilot' },
+    Commercial: { color: 'bg-emerald-100 text-emerald-900', label: 'Service Status: Commercial (상용)' },
+    'Commercial Beta': { color: 'bg-teal-100 text-teal-900', label: 'Service Status: Commercial Beta (상용베타)' },
+    Beta: { color: 'bg-blue-100 text-blue-800', label: 'Service Status: Beta (베타)' },
+    Alpha: { color: 'bg-amber-100 text-amber-900', label: 'Service Status: Alpha (알파)' },
+    Pilot: { color: 'bg-violet-100 text-violet-800', label: 'Service Status: Pilot (파일럿)' },
     'In Development': { color: 'bg-gray-100 text-gray-800', label: 'Service Status: In Development' },
   }
   const statusMeta = statusStyles[service.status] ?? {

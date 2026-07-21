@@ -10,7 +10,7 @@
 | 4 | User Workflow | 사용자 입장 → 결과까지의 흐름 |
 | 5 | Technology Advantage (Short) | 기술적 장점 요약만 (심화 기술 설명 X) |
 | 6 | Business Impact | 사용자·기관·시장에 미치는 영향 |
-| 7 | Service Status | Live / Beta / Pilot / In Development 중 하나 명시 |
+| 7 | Service Status | Live / Commercial / Commercial Beta / Beta / Alpha / Pilot / In Development 중 하나 명시 |
 | 8 | Ecosystem Connection | DAL 플랫폼 및 타 서비스와의 연결 |
 | 9 | CTA | 서비스 접속, 문의, 파트너십 링크 |
 

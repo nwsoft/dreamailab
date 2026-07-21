@@ -366,7 +366,7 @@ export default function SeniorService() {
               <span className="bg-white/10 px-4 py-2 rounded-full font-medium">가족 / 기관 / 의료 / 공공 연결</span>
             </div>
             <div className="mt-8">
-              <span className="inline-block px-4 py-2 bg-emerald-100 text-emerald-800 rounded-full text-sm font-semibold">Service Status: Pilot (지속 업데이트)</span>
+              <span className="inline-block px-4 py-2 bg-teal-100 text-teal-900 rounded-full text-sm font-semibold">Service Status: Commercial Beta (상용베타)</span>
             </div>
           </div>
         </div>

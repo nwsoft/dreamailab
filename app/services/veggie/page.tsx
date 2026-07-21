@@ -402,7 +402,7 @@ export default function VeggieService() {
           <div className="text-center">
             <div className="mb-6 flex flex-wrap justify-center items-center gap-2 text-xs sm:text-sm">
               <span className="inline-flex items-center rounded-full bg-white/15 border border-white/25 px-3 py-1.5 font-semibold text-green-50">
-                Service Status: Beta
+                Service Status: Beta (베타)
               </span>
               <span className="text-green-100">{brand.name} ({brand.english})</span>
             </div>

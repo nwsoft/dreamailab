@@ -415,10 +415,10 @@ export default function JarameService() {
             </p>
             <div className="mt-6 flex flex-wrap justify-center gap-2">
               <span className="inline-flex px-3 py-1 rounded-full text-xs font-semibold bg-white/20 text-white border border-white/30">
-                Service Status: Beta Testing
+                Service Status: Commercial (상용)
               </span>
               <span className="inline-flex px-3 py-1 rounded-full text-xs font-semibold bg-white/10 text-blue-100 border border-white/20">
-                기관 베타 · 지속 업데이트
+                상용 서비스 · 지속 업데이트
               </span>
             </div>
           </div>

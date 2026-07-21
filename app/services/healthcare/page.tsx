@@ -9,12 +9,12 @@ const pageCanonical = 'https://dreamailab.com/services/healthcare'
 export const metadata: Metadata = {
   title: '헬스케어AI 플랫폼 | AI 디지털케어로그 | 토탈케어로그',
   description:
-    '토탈케어로그는 표준화된 AI 디지털케어로그를 기반으로 일상 기록→AI 분석→병원/약국/요양 연계를 지향하는 DAL 헬스케어 축입니다. 현재 Service Status: In Development이며, 항암집중 모드·정신건강 맞춤 대화 등 기능을 단계적으로 개발합니다.',
+    '토탈케어로그는 표준화된 AI 디지털케어로그를 기반으로 일상 기록→AI 분석→병원/약국/요양 연계를 지향하는 DAL 헬스케어 축입니다. 현재 Service Status: Alpha(알파)이며, 항암집중 모드·정신건강 맞춤 대화 등 기능을 단계적으로 검증합니다.',
   alternates: { canonical: pageCanonical },
   openGraph: {
     title: '토탈케어로그 | AI 디지털케어로그 · DAL 헬스케어 축',
     description:
-      '일상 기록·AI 분석·권고·의료 연계를 한 줄기로 지향. 드림에이아이랩 DAL 헬스케어 축 (In Development).',
+      '일상 기록·AI 분석·권고·의료 연계를 한 줄기로 지향. 드림에이아이랩 DAL 헬스케어 축 (Alpha).',
     url: pageCanonical,
     siteName: '드림에이아이랩',
     type: 'website',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: '토탈케어로그 | AI 디지털케어로그',
-    description: '일상 케어로그 → AI 분석 → 병원·약국 연계 지향. DAL 헬스케어 축 (In Development).',
+    description: '일상 케어로그 → AI 분석 → 병원·약국 연계 지향. DAL 헬스케어 축 (Alpha).',
   },
   robots: { index: true, follow: true },
 }
@@ -118,7 +118,7 @@ export default function HealthcareService() {
               <span className="bg-white/10 border border-white/20 text-white px-3 py-1 rounded-full">AI 디지털케어로그</span>
             </div>
             <div className="mt-6">
-              <span className="inline-block px-4 py-2 bg-gray-100 text-gray-800 rounded-full text-sm font-semibold">In Development</span>
+              <span className="inline-block px-4 py-2 bg-amber-100 text-amber-900 rounded-full text-sm font-semibold">Service Status: Alpha (알파)</span>
             </div>
           </div>
         </div>
@@ -1142,7 +1142,7 @@ export default function HealthcareService() {
       {/* 7. Service Status */}
       <section className="py-12 lg:py-16 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="inline-block px-4 py-2 bg-gray-100 text-gray-800 rounded-full text-sm font-semibold mb-4">In Development</span>
+          <span className="inline-block px-4 py-2 bg-amber-100 text-amber-900 rounded-full text-sm font-semibold mb-4">Service Status: Alpha (알파)</span>
           <h2 className="text-2xl font-bold text-gray-900 mb-2">토탈케어로그</h2>
           <p className="text-gray-600">
             토탈케어로그는 AI 디지털케어로그 응용 서비스로 실제 개발 단계에서 지속 업데이트 중입니다. 기존 공개 진입(medicai.kr)은 리뉴얼 및 도메인 변경으로 연결이 중단되었으며, 공개 일정은 확정 시 안내합니다.

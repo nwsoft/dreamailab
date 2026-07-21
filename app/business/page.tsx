@@ -45,7 +45,7 @@ export default function Business() {
       market: '발달장애 시장',
       impact:
         '공공·연계 등으로 약 5,700개 기관 정보를 확보한 B2B·행정 표준화 대상. 행정·케어 시스템과 케어로그로 가정·센터·병원 연계 도입을 지향(등록 수 ≠ 전원 일상 사용자)',
-      status: 'Beta',
+      status: 'Commercial',
       powered: 'Powered by AI디지털케어로그',
     },
     {
@@ -56,7 +56,7 @@ export default function Business() {
       market: '고령화 시장',
       impact:
         '공공·연계 등으로 약 2만 2천여 돌봄 사업자 정보를 확보한 대상 풀. 표준화 행정·검색·매칭 등 B2B 도입을 지향(등록 수 ≠ 전원 일상 사용자)',
-      status: 'Pilot',
+      status: 'Commercial Beta',
       powered: 'Powered by AI디지털케어로그',
     },
     {
@@ -67,7 +67,7 @@ export default function Business() {
       market: '개인 맞춤 의료 시장',
       impact:
         '개인 맞춤 건강관리·병원 연계를 지향. 기존 마음이AI의 심리·정신건강 상담 보조 역량은 별도 브랜드 없이 본 축으로 통합·전개합니다.',
-      status: 'In Development',
+      status: 'Alpha',
       powered: 'Powered by AI디지털케어로그',
     },
     {
@@ -87,7 +87,7 @@ export default function Business() {
       achievement: '신규',
       market: '국제결혼 시장',
       impact: '국제결혼 시장의 신뢰성과 투명성 혁신, 결혼 전후 맞춤 케어로 행복한 가정 만들기',
-      status: 'Pilot',
+      status: 'Commercial',
       powered: 'Powered by AI디지털케어로그',
     },
     {

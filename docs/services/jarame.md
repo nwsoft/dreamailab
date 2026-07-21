@@ -3,7 +3,7 @@
 - **last_reviewed:** 2026-07-07 (2026 H2 센터 배포·학교 통역 섹션 웹 반영)
 - **canonical 웹:** https://dreamailab.com/services/jarame
 - **외부 플랫폼:** https://jarame.or.kr
-- **DAL 도메인:** 발달장애 (JR) · **상태:** Beta
+- **DAL 도메인:** 발달장애 (JR) · **상태:** Commercial (상용)
 - **개발 정본:** `Works/자람이` (`PROJECT_STATUS.md`, `자람이_시스템_완전_가이드.md`)
 - **DAL 대외 스펙:** 본 MD + `app/services/jarame/page.tsx`
 
@@ -20,7 +20,7 @@
 | summary | 가정·학교·센터·병원 통합 케어 인프라 | Hero·Executive Summary와 동일 축 |
 | oneLiner | 치료·학습·행동 기록을 같은 기준으로 연결 | coreFeatures 8개 축과 일치 |
 | value | 기관 운영 효율 + 보호자 신뢰 + 장기 데이터 | 비즈니스·연구·정책 환류 서술과 일치 |
-| status | Beta | `Service Status: Beta Testing` |
+| status | Commercial | `Service Status: Commercial (상용)` |
 
 ## 홈(`app/page.tsx`) 정합
 
@@ -38,7 +38,7 @@
 | 4 | User Workflow | 가족·교사·치료사·기관 역할별 시나리오 |
 | 5 | Technology (Short) | 표준 스키마·RBAC·AI 리포트·강화학습 언급(심화는 `/technology`) |
 | 6 | Business Impact | 기관 베타·정책·연구·SaaS 확장 |
-| 7 | Service Status | Beta Testing (기관 베타·지속 업데이트) |
+| 7 | Service Status | Commercial (상용 · 지속 업데이트) |
 | 8 | Ecosystem | DAL 1번 도메인 → 에듀·헬스케어 연계 내러티브 |
 | 9 | CTA | **jarame.or.kr** (DAL contact 미사용) |
 
@@ -93,7 +93,7 @@
 | 항목 | jarame.or.kr | DAL 페이지 | 판정 |
 |------|--------------|------------|------|
 | 포지셔닝 | 발달장애 AI 디지털 케어 플랫폼 | Care Data Infrastructure, DAL 1번 | ✅ |
-| 공개 상태 | 서비스 운영 중 | Beta Testing | ✅ (베타 표기 일치) |
+| 공개 상태 | 서비스 운영 중 | Commercial | ✅ (상용 표기 일치) |
 | CTA | jarame.or.kr 자체 | jarame.or.kr 링크 | ✅ |
 | 기능 나열 | 커뮤니티·AI 상담 중심 랜딩 | 8개 coreFeatures 상세 | ⚠️ 외부는 요약, DAL이 정본 |
 
@@ -108,7 +108,7 @@
 ## 정합 체크리스트
 
 - [ ] 홈 카드 불릿 ⊂ `coreFeatures`·본문
-- [ ] `/services` 허브 summary·status(Beta) 일치
+- [ ] `/services` 허브 summary·status(Commercial) 일치
 - [ ] JSON-LD 서비스명·FAQ와 본문 일치
 - [ ] CTA가 jarame.or.kr로만 연결(DAL `/contact` 혼선 없음)
 - [ ] jarame.or.kr 기능·톤 변경 시 본 MD `last_reviewed` 갱신

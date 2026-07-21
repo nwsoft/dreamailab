@@ -3,7 +3,7 @@
 - **last_reviewed:** 2026-07-06
 - **canonical 웹:** https://dreamailab.com/services/senior
 - **외부 플랫폼:** https://seniorandlife.com
-- **DAL 도메인:** 시니어·노인돌봄 (SL) · **상태:** Pilot
+- **DAL 도메인:** 시니어·노인돌봄 (SL) · **상태:** Commercial Beta (상용베타)
 - **개발 정본:** `Works/시니어앤라이프` — [DAL_SYNC_DEVELOPMENT_PLAN.md](../../시니어앤라이프/DAL_SYNC_DEVELOPMENT_PLAN.md)
 - **DAL 대외 스펙:** 본 MD + `app/services/senior/page.tsx`
 
@@ -18,7 +18,7 @@
 | summary | 재가·시설·병원·가족 돌봄 데이터 통합 |
 | oneLiner | 활동·복약·위험 신호를 같은 기록 구조로 연결 |
 | value | 고령화 수요 + 제도권 연계 + 장기 데이터 |
-| status | Pilot |
+| status | Commercial Beta |
 
 ## 홈(`app/page.tsx`) 정합
 
@@ -35,7 +35,7 @@
 | 4 | User Workflow | 보호자·요양보호사·기관·의료·공공 역할별 Before/After |
 | 5 | Technology | 멀티모달 AI·시계열 이상 패턴·개인별 모델·DAL 4단계 구조 |
 | 6 | Business Impact | 행정 30~50% 감소 여지, 보호자 문의 감소(조건부 수치) |
-| 7 | Service Status | Pilot (지속 업데이트) |
+| 7 | Service Status | Commercial Beta (상용베타) |
 | 8 | Ecosystem | DAL 시니어 축 → 토탈케어로그 연계 |
 | 9 | CTA | 이용→seniorandlife.com / B2B·기술→DAL contact |
 
@@ -143,5 +143,5 @@
 
 - [ ] 홈 번아웃·정서 문구 ⊂ `whyUse`·히어로 톤
 - [ ] 메타 description 「실시간 분석」↔ 본문 시나리오
-- [ ] 허브 status Pilot 일치
+- [ ] 허브 status Commercial Beta 일치
 - [ ] seniorandlife.com 기능 변경 시 본 MD 갱신

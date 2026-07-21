@@ -3,7 +3,7 @@
 - **last_reviewed:** 2026-07-06
 - **canonical 웹:** https://dreamailab.com/services/healthcare
 - **외부 플랫폼:** https://totalcarelog.com
-- **DAL 도메인:** 의료 (TC) · **상태:** In Development
+- **DAL 도메인:** 의료 (TC) · **상태:** Alpha (알파)
 - **정본 코드:** `app/services/healthcare/page.tsx`
 
 > **공개 체험:** 리뉴얼·도메인 변경으로 **미정**. 기존 medicai.kr 연결 종료. JSON-LD offers에도 「준비 중」 명시.
@@ -19,7 +19,7 @@
 | summary | 병원 밖 데이터 → 다음 의료 연결 |
 | oneLiner | 문진·복약·생활기록 통합, 진료 전후 연속 관리 |
 | value | B2B2C + 병원 연계 + 실사용 데이터 |
-| status | In Development |
+| status | Alpha |
 
 ## 홈(`app/page.tsx`) 정합
 
@@ -37,7 +37,7 @@
 | 4 | User Workflow | 일반·항암 환자 시나리오, 페르소나 Pain/Gain |
 | 5 | Technology | 5단계 파이프라인, XAI, FHIR·웨어러블 |
 | 6 | Business Impact | 병원·약국·RWE·정신건강·미용·약물 안전 |
-| 7 | Service Status | In Development, medicai.kr 중단 안내 |
+| 7 | Service Status | Alpha (알파), medicai.jp 중단 안내 |
 | 8 | Ecosystem | 자람이·에듀·시니어·**베지케어** 연계 |
 | 9 | CTA | 공개 체험 비활성 + `/contact?service=healthcare&type=b2b` |
 
@@ -95,7 +95,7 @@
 | 공개 기능 | 없음 | medicai.kr 중단 명시 | ✅ |
 | 브랜드 | TotalCareLog 도메인 | 동일 alternateName | ✅ |
 
-**결론:** 외부는 스테이징·내부 접근 단계. DAL 「In Development」·「공개 체험 준비 중」과 **정합**.
+**결론:** 외부는 스테이징·내부 접근 단계. DAL 「Alpha」·「공개 체험 준비 중」과 **정합**.
 
 ## 톤·금지
 

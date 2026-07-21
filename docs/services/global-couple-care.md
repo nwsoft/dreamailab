@@ -3,7 +3,7 @@
 - **last_reviewed:** 2026-07-07
 - **canonical 웹:** https://dreamailab.com/services/marriage
 - **외부 플랫폼:** https://globalcouplecare.com
-- **DAL 도메인:** 글로벌커플케어 (GC) · **상태:** Pilot (베타·MVP ~93%)
+- **DAL 도메인:** 글로벌커플케어 (GC) · **상태:** Commercial (상용)
 - **개발 정본:** `Works/GlobalCoupleCare` (`docs/PROJECT_STATUS.md`, `docs/gcc.md`)
 - **DAL 대외 스펙:** 본 MD + `app/services/marriage/page.tsx`
 
@@ -20,7 +20,7 @@
 | summary | 정보·절차·신뢰 연결 |
 | oneLiner | 결혼 전 비대칭 완화 → 정착 데이터 |
 | value | 신뢰 거래 + 다문화·공공 연계 |
-| status | Pilot |
+| status | Commercial |
 
 **2026 상반기:** 공식 오픈 목표 (현재 MVP 베타·파일럿). 보도: `/news/78`
 
@@ -38,7 +38,7 @@
 | 4 | User Workflow | lifecycle 3단 (Pre-Match → 법무 → 정착) |
 | 5 | Technology | KYC·AI 성향 분석·표준 워크플로 (심화 X) |
 | 6 | Business Impact | bizPillars 4 · businessDesign |
-| 7 | Service Status | Pilot (베타·지속 업데이트) |
+| 7 | Service Status | Commercial (상용) |
 | 8 | Ecosystem | DAL 정착 → 토탈·에듀 연계 |
 | 9 | CTA | globalcouplecare.com + DAL contact |
 
@@ -46,7 +46,7 @@
 
 | 영역 | 개발 (GCC) | DAL 반영 |
 |------|------------|----------|
-| 프로필·매칭·에스크로·계약 | 프론트 46+ 페이지, PROJECT_STATUS ~93% | coreFeatures·status Pilot |
+| 프로필·매칭·에스크로·계약 | 프론트 46+ 페이지, PROJECT_STATUS ~93% | coreFeatures·status Commercial |
 | 교육·커뮤니티·여행·웨딩·ai-tools | `frontend/app/**` | 상세 페이지·본 MD |
 | 이벤트·채팅·정산 | `/events`, `/chat`, `settlement` | coreFeatures 반영 |
 | 문화·법률 도움 | `/culture`, `/legal-help` | lifecycle·법무 축 |
@@ -121,6 +121,6 @@ Agency SaaS · Marketplace · Consumer App · Data & Risk
 ## 정합 체크리스트
 
 - [ ] FAQ 「중개 아님」↔ IR·비즈니스
-- [ ] 허브 status Pilot
+- [ ] 허브 status Commercial
 - [ ] globalcouplecare.com 오픈·기능 변경 시 본 MD·외부 정합 재검
 - [ ] 정착 연계 ↔ educarelog·totalcarelog MD 교차 일치

@@ -133,12 +133,12 @@ export default function Home() {
 
   /** /services 허브와 동일: 핵심 6도메인 + Noah는 별도 안내 */
   const domainHubTiles = [
-    { mark: 'JR', name: '발달장애', url: '/services/jarame', status: '베타 테스트' },
-    { mark: 'SL', name: '시니어·노인돌봄', url: '/services/senior', status: '파일럿' },
-    { mark: 'TC', name: '의료', url: '/services/healthcare', status: '개발 중' },
+    { mark: 'JR', name: '발달장애', url: '/services/jarame', status: '상용' },
+    { mark: 'SL', name: '시니어·노인돌봄', url: '/services/senior', status: '상용베타' },
+    { mark: 'TC', name: '의료', url: '/services/healthcare', status: '알파' },
     { mark: 'ED', name: '교육', url: '/services/educarelog', status: '파일럿' },
-    { mark: 'GC', name: '글로벌커플케어', url: '/services/marriage', status: '파일럿' },
-    { mark: 'VG', name: '라이프스타일', url: '/services/veggie', status: '베타 테스트' },
+    { mark: 'GC', name: '글로벌커플케어', url: '/services/marriage', status: '상용' },
+    { mark: 'VG', name: '라이프스타일', url: '/services/veggie', status: '베타' },
   ]
 
   /** 도메인별 핵심 플랫폼: DAL 1번 도메인 자람이 우선 (각 요약은 해당 /services/* 페이지와 맞춤) */

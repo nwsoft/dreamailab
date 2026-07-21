@@ -71,12 +71,12 @@
 
 | 도메인 | 웹 | Status (서비스 페이지) | DAL 비즈니스 역할 |
 |--------|-----|------------------------|-------------------|
-| 자람이 | jarame | Beta | 오디션·투자 **전선** (분리 가능) |
-| 시니어앤라이프 | senior | Pilot | B2B·공공·표준화 |
-| 토탈케어로그 | healthcare | In Development | 의료·RWE·헬스케어 (공개 진입 재정비 중) |
+| 자람이 | jarame | Commercial | 오디션·투자 **전선** (분리 가능) · 상용 |
+| 시니어앤라이프 | senior | Commercial Beta | B2B·공공·표준화 · 상용베타 |
+| 토탈케어로그 | healthcare | Alpha | 의료·RWE·헬스케어 · 알파 |
 | 에듀케어로그 | educarelog | Pilot | 교육·2026 정책 |
-| 글로벌커플케어 | marriage | Pilot | B2B2C·파트너 (베타·MVP) |
-| 베지케어 | veggie | Beta | 라이프스타일·ESG |
+| 글로벌커플케어 | marriage | Commercial | B2B2C·파트너 · 상용 |
+| 베지케어 | veggie | Beta | 라이프스타일·ESG · 베타 |
 
 **DAL이 “남는” 사업:** 자람이 분리 후에도 **2~6번 + 플랫폼/API/표준화** + R&D·TIPS·VC (플랫폼사 narrative).
 
@@ -93,7 +93,7 @@
 ### 3.3 수치·표현 (대외 공통 각주)
 
 - **5,700+ 기관, 22,000+ 사업자:** 등록·연계 **풀** 규모. 전원 상용·MAU 아님 → IR·business·jarame FAQ와 **동일 각주**.
-- **Beta / Pilot / Live / In Development / Migrated:** [SERVICE_PAGE_STRUCTURE_ORDER.md](./SERVICE_PAGE_STRUCTURE_ORDER.md) — **과장 금지**.
+- **Beta / Pilot / Alpha / Commercial / Commercial Beta / Live / In Development / Migrated:** [SERVICE_PAGE_STRUCTURE_ORDER.md](./SERVICE_PAGE_STRUCTURE_ORDER.md) — **과장 금지**.
 
 ---
 
@@ -104,11 +104,11 @@
 | 엔티티 | 법인 소속 (현재) | Status | 투자 문의 라우팅 | 웹 canonical |
 |--------|------------------|--------|------------------|--------------|
 | DAL 플랫폼 | DAL | 운영 중 | `/contact?type=ir` | dreamailab.com |
-| 자람이 | DAL (제품) | Beta | IR·B2B → contact (분리 전) | /services/jarame |
-| 시니어앤라이프 | DAL | Pilot | contact + service=senior | /services/senior |
-| 토탈케어로그 | DAL | In Development | contact + service=healthcare | /services/healthcare |
+| 자람이 | DAL (제품) | Commercial | IR·B2B → contact (분리 전) | /services/jarame |
+| 시니어앤라이프 | DAL | Commercial Beta | contact + service=senior | /services/senior |
+| 토탈케어로그 | DAL | Alpha | contact + service=healthcare | /services/healthcare |
 | 에듀케어로그 | DAL | Pilot | contact + service=educarelog | /services/educarelog |
-| GCC | DAL | Pilot | contact + service=marriage | /services/marriage |
+| GCC | DAL | Commercial | contact + service=marriage | /services/marriage |
 | 베지케어 | DAL | Beta | contact + service=veggie | /services/veggie |
 | 노아AI | Noah AI Labs | Migrated | noahailabs.com | /services/finance |
 
