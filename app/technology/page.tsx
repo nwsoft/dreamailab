@@ -918,24 +918,19 @@ export default function Technology() {
               Pet AI Digital Care Log
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              AI Digital Care Log를 반려동물에 확장하는 연구입니다. 자람이의 행동 분석, 시니어의 건강
-              모니터링, 베지케어의 환경 분석을 공통 AI Core로 재사용하는 기술 가설을 담고 있습니다.
+              반려동물의 삶 전체(행동 · 감정 · 환경 · 생활 추천)를 AI가 이해하는 Life Companion
+              Intelligence 연구입니다. 병원은 필요할 때만 연결되는 선택지 중 하나이며, 의료 플랫폼이
+              아닙니다. 자람이·시니어·베지케어의 공통 AI Core를 재사용합니다.
             </p>
           </div>
           <div className="rounded-2xl overflow-hidden border border-violet-100 shadow-sm mb-8 max-w-5xl mx-auto">
-            <picture>
-              <source
-                media="(max-width: 768px)"
-                srcSet="/images/research/pet-ai-tech-stack-mobile.svg"
-              />
-              <img
-                src="/images/research/pet-ai-tech-stack.svg"
-                alt="Pet AI Technology Stack Research"
-                className="w-full h-auto"
-                loading="lazy"
-                decoding="async"
-              />
-            </picture>
+            <img
+              src="/images/research/pet-life-companion.svg"
+              alt="Pet AI Life Companion Intelligence"
+              className="w-full h-auto"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
           <div className="max-w-3xl mx-auto rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900 text-center mb-8">
             상용 서비스·출시 예정이 아닙니다. 기술 개발 초기 · 연구 개발 · 장기 비전입니다.

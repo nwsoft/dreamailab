@@ -1,0 +1,37 @@
+<svg width="1200" height="480" viewBox="0 0 1200 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="480" rx="24" fill="#EEF2FF"/>
+  <text x="600" y="40" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="22" font-weight="800" fill="#312E81">Pet AI Technology Architecture</text>
+  <text x="600" y="66" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#6366F1">Research stack - 상용 운영 스택 아님</text>
+
+  <g font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" font-weight="700">
+    <rect x="30" y="100" width="100" height="56" rx="12" fill="#4F46E5"/><text x="80" y="134" text-anchor="middle" fill="#FFF">Vision AI</text>
+    <rect x="145" y="100" width="80" height="56" rx="12" fill="#FFFFFF" stroke="#A5B4FC" stroke-width="2"/><text x="185" y="134" text-anchor="middle" fill="#3730A3">OCR</text>
+    <rect x="240" y="100" width="120" height="56" rx="12" fill="#FFFFFF" stroke="#C4B5FD" stroke-width="2"/><text x="300" y="134" text-anchor="middle" fill="#5B21B6">Behavior</text>
+    <rect x="375" y="100" width="110" height="56" rx="12" fill="#FFFFFF" stroke="#C4B5FD" stroke-width="2"/><text x="430" y="134" text-anchor="middle" fill="#5B21B6">Emotion</text>
+    <rect x="500" y="100" width="120" height="56" rx="12" fill="#FFFFFF" stroke="#A7F3D0" stroke-width="2"/><text x="560" y="134" text-anchor="middle" fill="#047857">Environment</text>
+    <rect x="635" y="100" width="130" height="56" rx="12" fill="#5B21B6"/><text x="700" y="134" text-anchor="middle" fill="#FFF">Care Log</text>
+    <rect x="780" y="100" width="100" height="56" rx="12" fill="#FFFFFF" stroke="#FDE68A" stroke-width="2"/><text x="830" y="134" text-anchor="middle" fill="#92400E">Personal</text>
+    <rect x="895" y="100" width="120" height="56" rx="12" fill="#FFFFFF" stroke="#FDE68A" stroke-width="2"/><text x="955" y="134" text-anchor="middle" fill="#92400E">Recommend</text>
+    <rect x="1030" y="90" width="140" height="40" rx="10" fill="#FFFFFF" stroke="#93C5FD" stroke-width="2"/><text x="1100" y="115" text-anchor="middle" fill="#1D4ED8">Prediction</text>
+    <rect x="1030" y="140" width="140" height="40" rx="10" fill="#FFFFFF" stroke="#FCD34D" stroke-width="2" stroke-dasharray="4 3"/><text x="1100" y="165" text-anchor="middle" fill="#B45309">Robot API</text>
+  </g>
+
+  <text x="600" y="220" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="16" font-weight="700" fill="#312E81">Learning Engine + Personal AI</text>
+
+  <rect x="80" y="250" width="320" height="160" rx="16" fill="#FFFFFF" stroke="#C4B5FD" stroke-width="2"/>
+  <text x="240" y="290" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="14" font-weight="700" fill="#5B21B6">자람이 -&gt; Behavior / Coaching</text>
+  <text x="240" y="325" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#475569">행동 분석 · 해석 · 중재</text>
+  <text x="240" y="355" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#475569">문제 행동 설명 · 교정 추천</text>
+
+  <rect x="440" y="250" width="320" height="160" rx="16" fill="#FFFFFF" stroke="#A7F3D0" stroke-width="2"/>
+  <text x="600" y="290" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="14" font-weight="700" fill="#047857">시니어 -&gt; Health Monitoring</text>
+  <text x="600" y="325" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#475569">장기 추적 · 변화 감지</text>
+  <text x="600" y="355" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#475569">필요 시 병원 리포트 (일부)</text>
+
+  <rect x="800" y="250" width="320" height="160" rx="16" fill="#FFFFFF" stroke="#FDE68A" stroke-width="2"/>
+  <text x="960" y="290" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="14" font-weight="700" fill="#B45309">베지케어 -&gt; Environment AI</text>
+  <text x="960" y="325" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#475569">온습도 · 공기 · 소음 · 날씨</text>
+  <text x="960" y="355" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#475569">산책/생활 환경 추천</text>
+
+  <text x="600" y="450" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#6366F1">동일 AI Core 재사용 - Research</text>
+</svg>

@@ -1,0 +1,47 @@
+<svg width="1200" height="520" viewBox="0 0 1200 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="520" rx="24" fill="#F5F3FF"/>
+  <text x="600" y="42" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="24" font-weight="800" fill="#4C1D95">Pet AI = Life Companion Intelligence</text>
+  <text x="600" y="70" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#7C3AED">의료 플랫폼이 아니라, 반려의 삶 전체를 이해하는 AI Brain</text>
+
+  <rect x="420" y="100" width="360" height="70" rx="16" fill="#5B21B6"/>
+  <text x="600" y="142" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">AI Digital Care Log (Pet)</text>
+
+  <g font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif">
+    <rect x="40" y="220" width="160" height="200" rx="14" fill="#FFFFFF" stroke="#C4B5FD" stroke-width="2"/>
+    <text x="120" y="260" text-anchor="middle" font-size="14" font-weight="700" fill="#5B21B6">관찰</text>
+    <text x="120" y="295" text-anchor="middle" font-size="12" fill="#475569">Vision AI</text>
+    <text x="120" y="320" text-anchor="middle" font-size="12" fill="#475569">식사/수면</text>
+    <text x="120" y="345" text-anchor="middle" font-size="12" fill="#475569">놀이/산책</text>
+
+    <rect x="220" y="220" width="160" height="200" rx="14" fill="#FFFFFF" stroke="#C4B5FD" stroke-width="2"/>
+    <text x="300" y="260" text-anchor="middle" font-size="14" font-weight="700" fill="#5B21B6">이해</text>
+    <text x="300" y="295" text-anchor="middle" font-size="12" fill="#475569">Behavior</text>
+    <text x="300" y="320" text-anchor="middle" font-size="12" fill="#475569">Emotion</text>
+    <text x="300" y="345" text-anchor="middle" font-size="12" fill="#475569">Translation</text>
+
+    <rect x="400" y="220" width="160" height="200" rx="14" fill="#FFFFFF" stroke="#C4B5FD" stroke-width="2"/>
+    <text x="480" y="260" text-anchor="middle" font-size="14" font-weight="700" fill="#5B21B6">학습</text>
+    <text x="480" y="295" text-anchor="middle" font-size="12" fill="#475569">하루~평생</text>
+    <text x="480" y="320" text-anchor="middle" font-size="12" fill="#475569">패턴 축적</text>
+    <text x="480" y="345" text-anchor="middle" font-size="12" fill="#475569">개인화</text>
+
+    <rect x="580" y="220" width="160" height="200" rx="14" fill="#FFFFFF" stroke="#A7F3D0" stroke-width="2"/>
+    <text x="660" y="260" text-anchor="middle" font-size="14" font-weight="700" fill="#047857">생활</text>
+    <text x="660" y="295" text-anchor="middle" font-size="12" fill="#475569">산책/놀이</text>
+    <text x="660" y="320" text-anchor="middle" font-size="12" fill="#475569">훈련/환경</text>
+    <text x="660" y="345" text-anchor="middle" font-size="12" fill="#475569">추천</text>
+
+    <rect x="760" y="220" width="160" height="200" rx="14" fill="#FFFFFF" stroke="#FDE68A" stroke-width="2"/>
+    <text x="840" y="260" text-anchor="middle" font-size="14" font-weight="700" fill="#B45309">커머스</text>
+    <text x="840" y="295" text-anchor="middle" font-size="12" fill="#475569">사료/장난감</text>
+    <text x="840" y="320" text-anchor="middle" font-size="12" fill="#475569">서비스</text>
+    <text x="840" y="345" text-anchor="middle" font-size="12" fill="#475569">Shopping AI</text>
+
+    <rect x="940" y="220" width="220" height="200" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2" stroke-dasharray="5 4"/>
+    <text x="1050" y="260" text-anchor="middle" font-size="14" font-weight="700" fill="#64748B">병원 (일부)</text>
+    <text x="1050" y="295" text-anchor="middle" font-size="12" fill="#64748B">필요 시만</text>
+    <text x="1050" y="320" text-anchor="middle" font-size="12" fill="#64748B">리포트 공유</text>
+    <text x="1050" y="345" text-anchor="middle" font-size="12" fill="#94A3B8">전체가 아님</text>
+  </g>
+  <text x="600" y="480" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#6D28D9">병원은 생태계의 한 기능일 뿐 - Research / Future Vision</text>
+</svg>

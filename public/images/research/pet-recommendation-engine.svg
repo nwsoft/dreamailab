@@ -1,0 +1,31 @@
+<svg width="1200" height="460" viewBox="0 0 1200 460" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="460" rx="24" fill="#FFFBEB"/>
+  <text x="600" y="40" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="22" font-weight="800" fill="#92400E">Personal Recommendation / Shopping Intelligence</text>
+  <text x="600" y="68" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#B45309">광고가 아니라, 행동을 이해한 뒤의 필요 추천</text>
+
+  <rect x="60" y="110" width="300" height="280" rx="16" fill="#FFFFFF" stroke="#FDE68A" stroke-width="2"/>
+  <text x="210" y="155" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="14" font-weight="700" fill="#B45309">신호</text>
+  <text x="210" y="200" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#475569">운동 부족</text>
+  <text x="210" y="235" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#475569">체중 증가</text>
+  <text x="210" y="270" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#475569">스트레스 증가</text>
+  <text x="210" y="320" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#92400E">Care Log 기반</text>
+
+  <text x="400" y="250" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="28" fill="#F59E0B">&gt;</text>
+
+  <rect x="450" y="110" width="300" height="280" rx="16" fill="#B45309"/>
+  <text x="600" y="170" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">AI 판단</text>
+  <text x="600" y="220" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#FEF3C7">원인 가설</text>
+  <text x="600" y="250" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#FEF3C7">필요 행동</text>
+  <text x="600" y="280" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#FEF3C7">필요 제품/서비스</text>
+
+  <text x="790" y="250" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="28" fill="#F59E0B">&gt;</text>
+
+  <rect x="840" y="110" width="300" height="280" rx="16" fill="#FFFFFF" stroke="#FDE68A" stroke-width="2"/>
+  <text x="990" y="155" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="14" font-weight="700" fill="#B45309">추천</text>
+  <text x="990" y="195" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#475569">노즈워크 장난감</text>
+  <text x="990" y="225" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#475569">사료 변경</text>
+  <text x="990" y="255" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#475569">행동 완화 용품</text>
+  <text x="990" y="285" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#475569">산책/훈련/미용</text>
+  <text x="990" y="315" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#475569">호텔/유치원/보험</text>
+  <text x="990" y="350" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="11" fill="#92400E">개인화 · 비광고형</text>
+</svg>

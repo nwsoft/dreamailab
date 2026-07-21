@@ -1,0 +1,33 @@
+<svg width="1200" height="500" viewBox="0 0 1200 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="500" rx="24" fill="#FAF5FF"/>
+  <text x="600" y="40" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="22" font-weight="800" fill="#5B21B6">Behavior Translation AI</text>
+  <text x="600" y="68" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#7C3AED">왜? 를 보호자 언어로 설명하는 엔진</text>
+
+  <rect x="40" y="110" width="340" height="320" rx="16" fill="#FFFFFF" stroke="#DDD6FE" stroke-width="2"/>
+  <text x="210" y="150" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="15" font-weight="700" fill="#5B21B6">관찰된 행동</text>
+  <text x="210" y="195" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#475569">왜 계속 짖는가</text>
+  <text x="210" y="225" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#475569">왜 숨는가 / 신발을 무는가</text>
+  <text x="210" y="255" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#475569">왜 계속 핥는가</text>
+  <text x="210" y="285" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#475569">왜 산책을 거부하는가</text>
+  <text x="210" y="315" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#475569">왜 잠이 늘었는가</text>
+  <text x="210" y="345" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#475569">왜 갑자기 공격적인가</text>
+
+  <text x="420" y="270" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="28" fill="#A78BFA">&gt;</text>
+
+  <rect x="460" y="110" width="280" height="320" rx="16" fill="#5B21B6"/>
+  <text x="600" y="170" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF">AI 종합 해석</text>
+  <text x="600" y="220" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#E9D5FF">행동 + 환경</text>
+  <text x="600" y="250" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#E9D5FF">+ 과거 로그</text>
+  <text x="600" y="280" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#E9D5FF">+ 감정 추정</text>
+  <text x="600" y="330" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#C4B5FD">자람이 Behavior 기술 확장</text>
+
+  <text x="780" y="270" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="28" fill="#A78BFA">&gt;</text>
+
+  <rect x="820" y="110" width="340" height="320" rx="16" fill="#FFFFFF" stroke="#DDD6FE" stroke-width="2"/>
+  <text x="990" y="150" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="15" font-weight="700" fill="#5B21B6">보호자 설명 + 코칭</text>
+  <text x="990" y="200" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#475569">원인 가설 설명</text>
+  <text x="990" y="230" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#475569">행동 교정 제안</text>
+  <text x="990" y="260" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#475569">놀이 / 훈련 / 보상</text>
+  <text x="990" y="290" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#475569">환경 개선 추천</text>
+  <text x="990" y="340" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#7C3AED">이해 가능한 케어 언어</text>
+</svg>

@@ -26,9 +26,9 @@ const researchProjects = [
     name: 'Pet AI Digital Care Log',
     mark: 'PA',
     stage: 'Research',
-    stages: ['Research', 'Technology Development', 'Future Vision'],
+    stages: ['Research', 'Technology Development', 'Future Vision', 'Long-term Vision'],
     summary:
-      'AI Digital Care Log 기술을 반려동물에 적용하기 위한 차세대 연구 프로젝트. 상용 서비스가 아니며, 기술 개발 초기·장기 비전 단계입니다.',
+      '의료 플랫폼이 아니라, 반려동물의 삶 전체(행동·감정·환경·생활 추천)를 AI가 지속적으로 관찰·이해·학습하는 Life Companion Intelligence 연구입니다. 병원은 필요할 때만 연결되는 선택지 중 하나이며, 상용 서비스가 아닙니다.',
     href: '/research/pet-ai',
     accent: 'violet',
   },

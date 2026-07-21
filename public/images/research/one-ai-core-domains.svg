@@ -1,19 +1,9 @@
 <svg width="1200" height="680" viewBox="0 0 1200 680" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="680" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#F8FBFF"/>
-      <stop offset="1" stop-color="#EEF2FF"/>
-    </linearGradient>
-    <linearGradient id="core" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="#1D4ED8"/>
-      <stop offset="1" stop-color="#4F46E5"/>
-    </linearGradient>
-  </defs>
-  <rect width="1200" height="680" rx="24" fill="url(#bg)"/>
-  <text x="600" y="46" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="28" font-weight="800" fill="#1E3A8A">One AI Core - Multiple Care Domains</text>
-  <text x="600" y="76" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="14" fill="#64748B">관찰 / 기록 / 분석 / 예측 / 맞춤형 관리 - 동일한 AI Core</text>
-  <rect x="340" y="100" width="520" height="64" rx="16" fill="url(#core)"/>
-  <text x="600" y="140" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF">AI Digital Care Log</text>
+  <rect width="1200" height="680" rx="24" fill="#F8FBFF"/>
+  <text x="600" y="46" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="26" font-weight="800" fill="#1E3A8A">One AI Core - Multiple Care Domains</text>
+  <text x="600" y="76" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#64748B">Universal AI Care Intelligence - 관찰 / 이해 / 학습 / 개인화 / 행동</text>
+  <rect x="340" y="100" width="520" height="64" rx="16" fill="#4F46E5"/>
+  <text x="600" y="140" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">AI Digital Care Log</text>
   <line x1="600" y1="164" x2="600" y2="200" stroke="#94A3B8" stroke-width="2"/>
   <line x1="140" y1="200" x2="1060" y2="200" stroke="#CBD5E1" stroke-width="2"/>
   <g>
@@ -28,42 +18,36 @@
     <text x="740" y="265" text-anchor="middle">Plant</text>
     <text x="1020" y="265" text-anchor="middle">Robot</text>
   </g>
-  <g font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" font-weight="600" fill="#64748B">
-    <text x="180" y="290" text-anchor="middle">사람 - 운영/Pilot</text>
-    <text x="460" y="290" text-anchor="middle">연구 - Future Vision</text>
+  <g font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#64748B">
+    <text x="180" y="290" text-anchor="middle">사람 - 현재 축</text>
+    <text x="460" y="290" text-anchor="middle">Research · Life Companion</text>
     <text x="740" y="290" text-anchor="middle">웰니스 확장</text>
-    <text x="1020" y="290" text-anchor="middle">장기 비전</text>
+    <text x="1020" y="290" text-anchor="middle">장기 Future Vision</text>
   </g>
   <g font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="14" fill="#334155">
-    <rect x="75" y="315" width="210" height="36" rx="10" fill="#EFF6FF"/>
-    <text x="180" y="338" text-anchor="middle">자람이</text>
-    <rect x="75" y="363" width="210" height="36" rx="10" fill="#EFF6FF"/>
-    <text x="180" y="386" text-anchor="middle">시니어앤라이프</text>
-    <rect x="75" y="411" width="210" height="36" rx="10" fill="#EFF6FF"/>
-    <text x="180" y="434" text-anchor="middle">토탈케어로그</text>
-    <rect x="75" y="459" width="210" height="36" rx="10" fill="#EFF6FF"/>
-    <text x="180" y="482" text-anchor="middle">에듀케어로그</text>
-    <rect x="75" y="507" width="210" height="36" rx="10" fill="#EFF6FF"/>
-    <text x="180" y="530" text-anchor="middle">글로벌커플케어</text>
+    <rect x="75" y="315" width="210" height="36" rx="10" fill="#EFF6FF"/><text x="180" y="338" text-anchor="middle">자람이</text>
+    <rect x="75" y="363" width="210" height="36" rx="10" fill="#EFF6FF"/><text x="180" y="386" text-anchor="middle">시니어앤라이프</text>
+    <rect x="75" y="411" width="210" height="36" rx="10" fill="#EFF6FF"/><text x="180" y="434" text-anchor="middle">토탈케어로그</text>
+    <rect x="75" y="459" width="210" height="36" rx="10" fill="#EFF6FF"/><text x="180" y="482" text-anchor="middle">에듀케어로그</text>
+    <rect x="75" y="507" width="210" height="36" rx="10" fill="#EFF6FF"/><text x="180" y="530" text-anchor="middle">글로벌커플케어</text>
   </g>
-  <g font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" fill="#334155">
-    <rect x="355" y="315" width="210" height="56" rx="10" fill="#F5F3FF"/>
-    <text x="460" y="340" text-anchor="middle" font-size="15" font-weight="700">Pet Care Log</text>
-    <text x="460" y="360" text-anchor="middle" font-size="12" fill="#7C3AED">Pet AI Digital Care Log</text>
-    <rect x="355" y="385" width="210" height="42" rx="10" fill="#FAF5FF" stroke="#DDD6FE" stroke-dasharray="4 3"/>
-    <text x="460" y="411" text-anchor="middle" font-size="13" fill="#6D28D9">연구 개발 단계</text>
+  <g font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif">
+    <rect x="355" y="315" width="210" height="70" rx="10" fill="#F5F3FF"/>
+    <text x="460" y="345" text-anchor="middle" font-size="14" font-weight="700" fill="#5B21B6">Pet AI Digital Care Log</text>
+    <text x="460" y="368" text-anchor="middle" font-size="11" fill="#7C3AED">삶 전체 Intelligence</text>
+    <rect x="355" y="400" width="210" height="42" rx="10" fill="#FAF5FF" stroke="#DDD6FE" stroke-dasharray="4 3"/>
+    <text x="460" y="426" text-anchor="middle" font-size="12" fill="#6D28D9">Research · 상용 아님</text>
   </g>
-  <g font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" fill="#334155">
-    <rect x="635" y="315" width="210" height="36" rx="10" fill="#ECFDF5"/>
-    <text x="740" y="338" text-anchor="middle" font-size="14">베지케어</text>
-    <text x="740" y="390" text-anchor="middle" font-size="12" fill="#047857">환경/생장 관찰 확장</text>
+  <g font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif">
+    <rect x="635" y="315" width="210" height="36" rx="10" fill="#ECFDF5"/><text x="740" y="338" text-anchor="middle" font-size="14" fill="#334155">베지케어</text>
+    <text x="740" y="390" text-anchor="middle" font-size="12" fill="#047857">Environment AI 확장</text>
   </g>
-  <g font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" fill="#334155">
+  <g font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif">
     <rect x="915" y="315" width="210" height="56" rx="10" fill="#FFFBEB"/>
-    <text x="1020" y="340" text-anchor="middle" font-size="15" font-weight="700">Robot Care</text>
-    <text x="1020" y="360" text-anchor="middle" font-size="12" fill="#B45309">AI Brain 연동</text>
+    <text x="1020" y="340" text-anchor="middle" font-size="14" font-weight="700" fill="#B45309">Robot Brain</text>
+    <text x="1020" y="360" text-anchor="middle" font-size="11" fill="#92400E">AI Digital Care Log</text>
     <rect x="915" y="385" width="210" height="42" rx="10" fill="#FFFBEB" stroke="#FDE68A" stroke-dasharray="4 3"/>
-    <text x="1020" y="411" text-anchor="middle" font-size="13" fill="#92400E">장기 Future Vision</text>
+    <text x="1020" y="411" text-anchor="middle" font-size="12" fill="#92400E">별도 Robot Vision 연구</text>
   </g>
-  <text x="600" y="650" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#94A3B8">Animal / Robot 축은 상용 서비스가 아닌 Research / Future Vision 입니다.</text>
+  <text x="600" y="650" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#94A3B8">Animal / Robot = Research / Future Vision · 병원은 Animal 축의 일부 기능</text>
 </svg>

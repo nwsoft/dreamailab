@@ -1,0 +1,28 @@
+<svg width="1200" height="320" viewBox="0 0 1200 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="320" rx="24" fill="#EEF2FF"/>
+  <text x="600" y="42" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="22" font-weight="800" fill="#312E81">Universal AI Care Roadmap</text>
+  <text x="600" y="70" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#6366F1">출시 일정이 아닌 연구 확장 방향</text>
+  <line x1="80" y1="160" x2="1120" y2="160" stroke="#C7D2FE" stroke-width="3"/>
+  <g font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif">
+    <circle cx="180" cy="160" r="16" fill="#4F46E5"/>
+    <rect x="80" y="200" width="200" height="70" rx="12" fill="#FFFFFF" stroke="#A5B4FC" stroke-width="2"/>
+    <text x="180" y="230" text-anchor="middle" font-size="13" font-weight="700" fill="#3730A3">Human</text>
+    <text x="180" y="252" text-anchor="middle" font-size="11" fill="#64748B">현재 Care Log</text>
+
+    <circle cx="460" cy="160" r="16" fill="#7C3AED"/>
+    <rect x="360" y="200" width="200" height="70" rx="12" fill="#FFFFFF" stroke="#C4B5FD" stroke-width="2"/>
+    <text x="460" y="230" text-anchor="middle" font-size="13" font-weight="700" fill="#5B21B6">Animal</text>
+    <text x="460" y="252" text-anchor="middle" font-size="11" fill="#7C3AED">Pet AI Research</text>
+
+    <circle cx="740" cy="160" r="16" fill="#059669"/>
+    <rect x="640" y="200" width="200" height="70" rx="12" fill="#FFFFFF" stroke="#A7F3D0" stroke-width="2"/>
+    <text x="740" y="230" text-anchor="middle" font-size="13" font-weight="700" fill="#047857">Plant</text>
+    <text x="740" y="252" text-anchor="middle" font-size="11" fill="#64748B">베지케어 확장</text>
+
+    <circle cx="1020" cy="160" r="16" fill="#B45309" stroke="#FDE68A" stroke-width="3" stroke-dasharray="4 3"/>
+    <rect x="920" y="200" width="200" height="70" rx="12" fill="#FFFFFF" stroke="#FDE68A" stroke-width="2" stroke-dasharray="5 4"/>
+    <text x="1020" y="230" text-anchor="middle" font-size="13" font-weight="700" fill="#B45309">Robot</text>
+    <text x="1020" y="252" text-anchor="middle" font-size="11" fill="#92400E">AI Brain Vision</text>
+  </g>
+  <text x="180" y="120" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="11" fill="#64748B">NOW</text>
+</svg>

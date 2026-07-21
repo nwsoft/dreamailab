@@ -1,0 +1,37 @@
+<svg width="1200" height="520" viewBox="0 0 1200 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="520" rx="24" fill="#F8FAFC"/>
+  <text x="600" y="40" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="22" font-weight="800" fill="#0F172A">Life Companion 시나리오</text>
+  <text x="600" y="68" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#64748B">하루 생활 · 감정 · 환경 · 추천 - 병원만이 아님</text>
+
+  <rect x="30" y="100" width="270" height="360" rx="16" fill="#FFFFFF" stroke="#C4B5FD" stroke-width="2"/>
+  <text x="165" y="145" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="15" font-weight="700" fill="#5B21B6">아침</text>
+  <text x="165" y="185" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#475569">수면 패턴 요약</text>
+  <text x="165" y="215" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#475569">식사 속도 기록</text>
+  <text x="165" y="245" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#475569">기분: 활기참</text>
+  <text x="165" y="290" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#7C3AED">추천: 짧은 산책</text>
+  <text x="165" y="320" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#7C3AED">놀이 10분</text>
+
+  <rect x="320" y="100" width="270" height="360" rx="16" fill="#FFFFFF" stroke="#A7F3D0" stroke-width="2"/>
+  <text x="455" y="145" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="15" font-weight="700" fill="#047857">낮</text>
+  <text x="455" y="185" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#475569">혼자 있는 시간</text>
+  <text x="455" y="215" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#475569">짖음 증가 감지</text>
+  <text x="455" y="245" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#475569">분리불안 신호</text>
+  <text x="455" y="290" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#047857">추천: 노즈워크</text>
+  <text x="455" y="320" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#047857">환경 소음 확인</text>
+
+  <rect x="610" y="100" width="270" height="360" rx="16" fill="#FFFFFF" stroke="#FDE68A" stroke-width="2"/>
+  <text x="745" y="145" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="15" font-weight="700" fill="#B45309">저녁</text>
+  <text x="745" y="185" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#475569">활동량 부족</text>
+  <text x="745" y="215" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#475569">산책 시간 짧음</text>
+  <text x="745" y="245" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#475569">놀이 시간 증가</text>
+  <text x="745" y="290" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#B45309">추천: 추가 산책</text>
+  <text x="745" y="320" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#B45309">장난감 추천</text>
+
+  <rect x="900" y="100" width="270" height="360" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2"/>
+  <text x="1035" y="145" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="15" font-weight="700" fill="#334155">주간 요약</text>
+  <text x="1035" y="185" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#475569">컨디션 추세</text>
+  <text x="1035" y="215" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#475569">감정 패턴</text>
+  <text x="1035" y="245" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#475569">환경 상관</text>
+  <text x="1035" y="290" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#64748B">필요 시만</text>
+  <text x="1035" y="320" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#64748B">병원 리포트</text>
+</svg>

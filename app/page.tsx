@@ -598,8 +598,8 @@ export default function Home() {
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">Pet AI Digital Care Log</h3>
                   <p className="text-gray-700">
-                    AI Digital Care Log를 반려동물에 적용하는 연구 프로젝트. 자람이·시니어·베지케어의 공통 AI
-                    Core를 Animal 도메인으로 확장하는 Future Vision입니다.
+                    반려 삶 전체(행동 · 감정 · 환경 · 생활 추천)를 AI가 이해하는 Research입니다. 병원은
+                    필요할 때만 연결되는 선택지 중 하나일 뿐, 중심이 아닙니다.
                   </p>
                   <p className="text-sm text-violet-800 mt-2 font-medium">
                     기술 개발 초기 · 연구 개발 · 장기 비전 (출시 예정 아님)

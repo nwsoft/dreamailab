@@ -372,9 +372,9 @@ export default function ServicePortfolio() {
                       </span>
                     </div>
                     <p className="text-sm text-gray-700 leading-relaxed mb-4">
-                      AI Digital Care Log를 반려동물에 확장하는 차세대 연구 프로젝트입니다. 기술 개발 초기
-                      단계이며, 출시·가입·판매를 의미하지 않습니다. Human → Animal → Plant 비전 아래 동일한
-                      AI Core를 연구합니다.
+                      반려 삶 전체(행동 · 감정 · 환경 · 생활 추천)를 AI가 이해하는 Life Companion
+                      Intelligence 연구입니다. 병원은 필요할 때만 연결되는 선택지일 뿐이며, 상용
+                      서비스·출시 예정이 아닙니다.
                     </p>
                     <div className="flex flex-wrap gap-3">
                       <Link
