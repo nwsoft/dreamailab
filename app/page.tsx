@@ -584,9 +584,9 @@ export default function Home() {
             <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-violet-100 text-violet-800 mb-3">
               Research · Future Vision
             </div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">도메인 확장 연구</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">Research 도메인 확장</h2>
             <p className="text-gray-600">
-              상용 서비스가 아닌 연구·기술 로드맵입니다. 6개 도메인 제품과 구분됩니다.
+              AI디지털케어로그 기반으로 확장을 연구 중인 Research·Future Vision 프로젝트 (6개 도메인 제품과 구분)
             </p>
           </div>
           <div className="bg-gradient-to-br from-violet-50 to-indigo-50 rounded-2xl p-8 lg:p-10 flex flex-col lg:flex-row items-center justify-between gap-8 border border-violet-100">

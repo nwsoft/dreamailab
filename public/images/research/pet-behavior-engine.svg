@@ -1,0 +1,33 @@
+<svg width="1200" height="480" viewBox="0 0 1200 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="480" rx="24" fill="#FAF5FF"/>
+  <text x="600" y="42" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="24" font-weight="800" fill="#5B21B6">Behavior Translation Engine</text>
+  <text x="600" y="70" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#7C3AED">반려 행동을 보호자 언어로 해석하는 연구 엔진</text>
+
+  <rect x="60" y="110" width="280" height="300" rx="18" fill="#FFFFFF" stroke="#DDD6FE" stroke-width="2"/>
+  <text x="200" y="150" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="16" font-weight="700" fill="#5B21B6">입력 신호</text>
+  <text x="200" y="190" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#475569">짖음 / 꼬리 / 식사</text>
+  <text x="200" y="220" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#475569">수면 / 산책 / 활동량</text>
+  <text x="200" y="250" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#475569">분리불안 / 스트레스</text>
+  <text x="200" y="280" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#475569">보행 / 이상 행동</text>
+  <text x="200" y="330" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#7C3AED">Vision AI + 로그</text>
+
+  <text x="390" y="260" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="28" fill="#A78BFA">&gt;</text>
+
+  <rect x="430" y="110" width="340" height="300" rx="18" fill="#4F46E5"/>
+  <text x="600" y="160" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">AI 해석 코어</text>
+  <text x="600" y="205" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#E0E7FF">패턴 비교 (개인 기준선)</text>
+  <text x="600" y="235" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#E0E7FF">이상 탐지 / 위험 신호</text>
+  <text x="600" y="265" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#E0E7FF">행동-원인 가설 생성</text>
+  <text x="600" y="295" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#E0E7FF">자연어 설명 생성</text>
+  <text x="600" y="350" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#C4B5FD">자람이 행동분석 기술 재사용</text>
+
+  <text x="820" y="260" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="28" fill="#A78BFA">&gt;</text>
+
+  <rect x="860" y="110" width="280" height="300" rx="18" fill="#FFFFFF" stroke="#DDD6FE" stroke-width="2"/>
+  <text x="1000" y="150" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="16" font-weight="700" fill="#5B21B6">보호자 설명</text>
+  <text x="1000" y="195" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#475569">"활동량이 평균보다 낮음"</text>
+  <text x="1000" y="225" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#475569">"식사 시각이 지연됨"</text>
+  <text x="1000" y="255" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#475569">"왼쪽 다리 절뚝임 관찰"</text>
+  <text x="1000" y="300" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#475569">추천 행동 / 병원 리포트</text>
+  <text x="1000" y="350" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#7C3AED">이해 가능한 케어 언어</text>
+</svg>

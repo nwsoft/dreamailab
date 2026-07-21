@@ -57,6 +57,9 @@ export default function ResearchHubPage() {
           <p className="text-sm text-white/70 mt-6 max-w-2xl mx-auto">
             기술 개발 초기 · 연구 개발 · 장기 비전으로 표시된 항목은 출시·운영을 의미하지 않습니다.
           </p>
+          <p className="text-xs text-white/50 mt-3 max-w-2xl mx-auto">
+            Research는 상단 메뉴가 아닌 서비스 생태계·푸터·관련 페이지에서 연결됩니다.
+          </p>
         </div>
       </section>
 

@@ -1,0 +1,37 @@
+<svg width="1200" height="420" viewBox="0 0 1200 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="420" rx="24" fill="#F8FAFC"/>
+  <text x="600" y="42" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="24" font-weight="800" fill="#0F172A">누가 무엇을 보는가</text>
+  <text x="600" y="70" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#64748B">보호자 / 병원 / 비즈니스 / 투자 - 동일한 Care Log, 다른 가치</text>
+
+  <rect x="40" y="110" width="270" height="260" rx="18" fill="#FFFFFF" stroke="#93C5FD" stroke-width="2"/>
+  <text x="175" y="150" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="16" font-weight="700" fill="#1D4ED8">보호자</text>
+  <text x="175" y="190" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#475569">자동 일지</text>
+  <text x="175" y="220" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#475569">행동 해석</text>
+  <text x="175" y="250" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#475569">맞춤 추천</text>
+  <text x="175" y="280" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#475569">이상 알림</text>
+  <text x="175" y="330" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#64748B">"반려가 괜찮은가?"</text>
+
+  <rect x="330" y="110" width="270" height="260" rx="18" fill="#FFFFFF" stroke="#A7F3D0" stroke-width="2"/>
+  <text x="465" y="150" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="16" font-weight="700" fill="#047857">동물병원</text>
+  <text x="465" y="190" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#475569">사전 Care Report</text>
+  <text x="465" y="220" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#475569">행동/식사/배변</text>
+  <text x="465" y="250" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#475569">약물/활동 요약</text>
+  <text x="465" y="280" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#475569">추세 그래프</text>
+  <text x="465" y="330" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#64748B">"진료 전 맥락"</text>
+
+  <rect x="620" y="110" width="270" height="260" rx="18" fill="#FFFFFF" stroke="#FDE68A" stroke-width="2"/>
+  <text x="755" y="150" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="16" font-weight="700" fill="#B45309">비즈니스</text>
+  <text x="755" y="190" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#475569">B2C 케어앱</text>
+  <text x="755" y="220" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#475569">병원 SaaS</text>
+  <text x="755" y="250" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#475569">디바이스/로봇 연동</text>
+  <text x="755" y="280" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#475569">데이터 API</text>
+  <text x="755" y="330" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#64748B">"확장 가능한 제품"</text>
+
+  <rect x="910" y="110" width="250" height="260" rx="18" fill="#FFFFFF" stroke="#C4B5FD" stroke-width="2"/>
+  <text x="1035" y="150" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="16" font-weight="700" fill="#5B21B6">투자 / R&amp;D</text>
+  <text x="1035" y="190" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#475569">AI Core 재사용성</text>
+  <text x="1035" y="220" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#475569">다도메인 IP</text>
+  <text x="1035" y="250" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#475569">Pet 시장 확장</text>
+  <text x="1035" y="280" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#475569">Robot Vision</text>
+  <text x="1035" y="330" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#64748B">"플랫폼 옵션성"</text>
+</svg>
