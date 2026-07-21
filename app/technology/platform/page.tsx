@@ -65,9 +65,9 @@ const pipeline = [
 const domains = [
   { name: '시니어앤라이프', status: 'Pilot', href: '/services/senior' },
   { name: '토탈케어로그', status: 'In Development', href: '/services/healthcare' },
-  { name: '글로벌커플케어', status: 'In Development', href: '/services/marriage' },
+  { name: '글로벌커플케어', status: 'Pilot', href: '/services/marriage' },
   { name: '에듀케어로그', status: 'Pilot', href: '/services/educarelog' },
-  { name: '베지케어', status: 'In Development', href: '/services/veggie' },
+  { name: '베지케어', status: 'Beta', href: '/services/veggie' },
 ]
 
 export default function PlatformTechnologyPage() {

@@ -136,7 +136,7 @@ export default function Home() {
     { mark: 'JR', name: '발달장애', url: '/services/jarame', status: '베타 테스트' },
     { mark: 'SL', name: '시니어·노인돌봄', url: '/services/senior', status: '파일럿' },
     { mark: 'TC', name: '의료', url: '/services/healthcare', status: '개발 중' },
-    { mark: 'ED', name: '교육', url: '/services/educarelog', status: '개발 중' },
+    { mark: 'ED', name: '교육', url: '/services/educarelog', status: '파일럿' },
     { mark: 'GC', name: '글로벌커플케어', url: '/services/marriage', status: '파일럿' },
     { mark: 'VG', name: '라이프스타일', url: '/services/veggie', status: '베타 테스트' },
   ]

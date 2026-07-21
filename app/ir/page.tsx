@@ -46,13 +46,13 @@ export default function IRPage() {
       icon: 'user',
       title: '시니어',
       desc: '22,000+ 등록 사업자 풀(연계 기준), 초고령사회·B2B 표준화',
-      metric: '확장 중',
+      metric: '파일럿',
     },
     {
       icon: 'hospital',
       title: '의료·헬스케어',
       desc: '개인 맞춤 AI 주치의, RWE·항암 추적을 지향',
-      metric: '확장 중',
+      metric: '개발 중',
     },
     {
       icon: 'graduation',

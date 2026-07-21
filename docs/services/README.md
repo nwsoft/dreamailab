@@ -16,6 +16,7 @@
 | 프로젝트 | 상태 | DAL 페이지 | 스펙 |
 |----------|------|------------|------|
 | Pet AI Digital Care Log | Research / Technology Development / Future Vision | [/research/pet-ai](../../app/research/pet-ai/page.tsx) | [pet-ai.md](../research/pet-ai.md) |
+| Robot Vision | Research / Future Vision | [/research/robot-vision](../../app/research/robot-vision/page.tsx) | [robot-vision.md](../research/robot-vision.md) |
 
 ## 개발 저장소 ↔ DAL 문서
 

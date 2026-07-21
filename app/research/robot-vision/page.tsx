@@ -323,7 +323,7 @@ const techReuseItems: { title: string; desc: string; icon: MarketingIconName }[]
   },
   {
     title: '행동 분석',
-    desc: '자람이·시니어앤라이프에서 운영 중인 행동 패턴 분석·이상 탐지 로직을 로봇이 관찰하는 신호에 재학습합니다.',
+    desc: '자람이(Beta)·시니어앤라이프(Pilot)에서 검증·전개 중인 행동 패턴 분석·이상 탐지 로직을 로봇이 관찰하는 신호에 재학습하는 방향을 연구합니다.',
     icon: 'eye',
   },
   {
@@ -393,7 +393,7 @@ const safetyPrinciples: { title: string; desc: string; icon: MarketingIconName }
 const roadmapSteps: { t: string; d: string; icon: MarketingIconName }[] = [
   {
     t: '1',
-    d: 'Human AI Digital Care Log — 자람이·시니어앤라이프·토탈케어로그·에듀케어로그·베지케어에서 운영·검증',
+    d: 'Human AI Digital Care Log — 자람이·시니어앤라이프·토탈케어로그·에듀케어로그·베지케어에서 베타·파일럿·개발 단계로 검증',
     icon: 'document',
   },
   {
@@ -437,7 +437,7 @@ const valueColumns: { title: string; icon: MarketingIconName; items: string[] }[
     icon: 'flask',
     items: [
       '하나의 AI Core가 사람 → 여러 서비스 도메인 → 로봇으로 확장되는 재사용성을 보여줍니다.',
-      '이미 운영 중인 여러 도메인에서 검증된 기술을 기반으로 로봇 연동 리스크를 낮춥니다.',
+      '베타·파일럿·개발 중인 여러 도메인에서 검증 중인 기술을 기반으로 로봇 연동 리스크를 낮추는 방향을 연구합니다.',
       '돌봄 · 교육 · 건강을 동시에 아우르는 도메인 횡단 로드맵을 제시합니다.',
     ],
   },
@@ -555,7 +555,7 @@ export default function RobotVisionResearchPage() {
               </div>
               <p className="text-sm text-gray-700 leading-relaxed mb-4">
                 <strong className="text-gray-900">여러 도메인을 가로지르는(cross-domain)</strong> 로봇 실행
-                구조 연구입니다. 돌봄 · 교육 · 건강 등 이미 운영 중인 서비스들의 Care Log를 공통 AI Brain
+                구조 연구입니다. 돌봄 · 교육 · 건강 등 DAL 서비스(베타·파일럿·개발 중)의 Care Log를 공통 AI Brain
                 구조로 다시 보고, 로봇이라는 물리적 실행체가 어떻게 그 판단을 행동으로 옮길 수 있는지를
                 연구합니다. Pet AI는 이 구조가 연결될 수 있는 여러 축 중 하나입니다.
               </p>
@@ -725,7 +725,7 @@ export default function RobotVisionResearchPage() {
               현재 서비스가 로봇에 연결되는 방식
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              새로운 로봇 서비스를 처음부터 만들지 않습니다. 이미 운영 · 개발 중인 서비스의 데이터와 AI Core가
+              새로운 로봇 서비스를 처음부터 만들지 않습니다. 베타·파일럿·개발 중인 서비스의 데이터와 AI Core가
               각자의 방식으로 로봇 역할에 연결됩니다.
             </p>
           </div>
@@ -895,7 +895,7 @@ export default function RobotVisionResearchPage() {
           <div className="text-center mb-10">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">DAL 기술 재사용</h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
-              로봇 전용 기술을 처음부터 만들지 않습니다. 이미 운영 중인 서비스에서 검증된 여섯 가지 기술
+              로봇 전용 기술을 처음부터 만들지 않습니다. DAL 서비스에서 검증·전개 중인 여섯 가지 기술
               축을 Robot Brain 구조에 재사용합니다.
             </p>
           </div>

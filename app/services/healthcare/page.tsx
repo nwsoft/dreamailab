@@ -9,12 +9,12 @@ const pageCanonical = 'https://dreamailab.com/services/healthcare'
 export const metadata: Metadata = {
   title: '헬스케어AI 플랫폼 | AI 디지털케어로그 | 토탈케어로그',
   description:
-    '토탈케어로그는 표준화된 AI 디지털케어로그를 기반으로 일상 기록→AI 분석→병원/약국/요양 연계를 통합 제공합니다. 항암집중 모드, 정신건강 맞춤 대화 챗봇까지 하나의 헬스케어AI 플랫폼으로 운영됩니다.',
+    '토탈케어로그는 표준화된 AI 디지털케어로그를 기반으로 일상 기록→AI 분석→병원/약국/요양 연계를 지향하는 DAL 헬스케어 축입니다. 현재 Service Status: In Development이며, 항암집중 모드·정신건강 맞춤 대화 등 기능을 단계적으로 개발합니다.',
   alternates: { canonical: pageCanonical },
   openGraph: {
     title: '토탈케어로그 | AI 디지털케어로그 · DAL 헬스케어 축',
     description:
-      '일상 기록·AI 분석·권고·의료 연계를 한 줄기로. 드림에이아이랩 DAL 플랫폼의 헬스케어AI 서비스.',
+      '일상 기록·AI 분석·권고·의료 연계를 한 줄기로 지향. 드림에이아이랩 DAL 헬스케어 축 (In Development).',
     url: pageCanonical,
     siteName: '드림에이아이랩',
     type: 'website',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: '토탈케어로그 | AI 디지털케어로그',
-    description: '일상 케어로그 → AI 분석 → 병원·약국 연계. DAL 헬스케어 축.',
+    description: '일상 케어로그 → AI 분석 → 병원·약국 연계 지향. DAL 헬스케어 축 (In Development).',
   },
   robots: { index: true, follow: true },
 }

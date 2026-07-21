@@ -75,8 +75,8 @@
 | 시니어앤라이프 | senior | Pilot | B2B·공공·표준화 |
 | 토탈케어로그 | healthcare | In Development | 의료·RWE·헬스케어 (공개 진입 재정비 중) |
 | 에듀케어로그 | educarelog | Pilot | 교육·2026 정책 |
-| 글로벌커플케어 | marriage | In Development | B2B2C·파트너 |
-| 베지케어 | veggie | In Development | 라이프스타일·ESG |
+| 글로벌커플케어 | marriage | Pilot | B2B2C·파트너 (베타·MVP) |
+| 베지케어 | veggie | Beta | 라이프스타일·ESG |
 
 **DAL이 “남는” 사업:** 자람이 분리 후에도 **2~6번 + 플랫폼/API/표준화** + R&D·TIPS·VC (플랫폼사 narrative).
 
@@ -108,8 +108,8 @@
 | 시니어앤라이프 | DAL | Pilot | contact + service=senior | /services/senior |
 | 토탈케어로그 | DAL | In Development | contact + service=healthcare | /services/healthcare |
 | 에듀케어로그 | DAL | Pilot | contact + service=educarelog | /services/educarelog |
-| GCC | DAL | In Development | contact + service=marriage | /services/marriage |
-| 베지케어 | DAL | In Development | contact + service=veggie | /services/veggie |
+| GCC | DAL | Pilot | contact + service=marriage | /services/marriage |
+| 베지케어 | DAL | Beta | contact + service=veggie | /services/veggie |
 | 노아AI | Noah AI Labs | Migrated | noahailabs.com | /services/finance |
 
 **갱신 시:** 이 표 → `app/business` 카드 → `app/ir` 문단 → 해당 `docs/services/*.md` → (해당 시) 뉴스 **신규** 기사만.

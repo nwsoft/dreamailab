@@ -121,6 +121,6 @@ Agency SaaS · Marketplace · Consumer App · Data & Risk
 ## 정합 체크리스트
 
 - [ ] FAQ 「중개 아님」↔ IR·비즈니스
-- [ ] 허브 status In Development
+- [ ] 허브 status Pilot
 - [ ] globalcouplecare.com 오픈·기능 변경 시 본 MD·외부 정합 재검
 - [ ] 정착 연계 ↔ educarelog·totalcarelog MD 교차 일치

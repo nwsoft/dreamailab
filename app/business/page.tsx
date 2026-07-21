@@ -87,7 +87,7 @@ export default function Business() {
       achievement: '신규',
       market: '국제결혼 시장',
       impact: '국제결혼 시장의 신뢰성과 투명성 혁신, 결혼 전후 맞춤 케어로 행복한 가정 만들기',
-      status: 'In Development',
+      status: 'Pilot',
       powered: 'Powered by AI디지털케어로그',
     },
     {
@@ -97,7 +97,7 @@ export default function Business() {
       achievement: '전개 중',
       market: '베지터리안 시장',
       impact: '채식주의자를 위한 AI 기반 건강관리·맛집·레시피·커뮤니티 통합 플랫폼',
-      status: 'In Development',
+      status: 'Beta',
       powered: 'Powered by AI디지털케어로그',
     },
   ]

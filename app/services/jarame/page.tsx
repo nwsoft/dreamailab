@@ -413,6 +413,14 @@ export default function JarameService() {
             <p className="text-base max-w-2xl mx-auto text-white/90 leading-relaxed break-keep">
               자람이는 의료기기·진단·처방 시스템이 아니라, 전문가 판단을 돕는 기록·분석·협업 인프라입니다.
             </p>
+            <div className="mt-6 flex flex-wrap justify-center gap-2">
+              <span className="inline-flex px-3 py-1 rounded-full text-xs font-semibold bg-white/20 text-white border border-white/30">
+                Service Status: Beta Testing
+              </span>
+              <span className="inline-flex px-3 py-1 rounded-full text-xs font-semibold bg-white/10 text-blue-100 border border-white/20">
+                기관 베타 · 지속 업데이트
+              </span>
+            </div>
           </div>
         </div>
       </section>

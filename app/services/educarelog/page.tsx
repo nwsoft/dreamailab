@@ -260,7 +260,14 @@ export default function EduCareLogService() {
       <section className="bg-gradient-to-br from-blue-600 to-indigo-700 text-white py-14 md:py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <p className="text-xs text-white/80 mb-5">개발·고도화 중 · Dream AI Lab</p>
+            <p className="text-xs text-white/80 mb-5">
+              <span className="inline-flex items-center gap-2 flex-wrap justify-center">
+                <span className="px-2.5 py-0.5 rounded-full bg-white/20 border border-white/30 font-semibold">
+                  Service Status: Pilot
+                </span>
+                <span>개발·고도화 중 · Dream AI Lab</span>
+              </span>
+            </p>
             <h1 className="font-bold leading-tight tracking-tight text-balance break-keep mb-4 max-w-4xl mx-auto">
               <span className="block text-2xl sm:text-4xl lg:text-5xl mb-2.5">
                 같은 수업을 들어도 모든 학생은 같은 속도로 이해하지 않습니다.
@@ -659,7 +666,7 @@ export default function EduCareLogService() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-4">AI 디지털케어로그 기술</h2>
           <p className="text-center text-indigo-800 text-xs font-semibold tracking-wide max-w-2xl mx-auto mb-3">
-            개발·고도화 진행 중 · AI 디지털케어로그 교육 응용
+            Service Status: Pilot · 개발·고도화 진행 중 · AI 디지털케어로그 교육 응용
           </p>
           <p className="text-center text-gray-600 text-sm max-w-2xl mx-auto mb-10">
             기술 이름이 아니라, 왜 교육에서 통과해야 하는지만 짚습니다.
