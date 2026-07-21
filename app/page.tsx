@@ -577,7 +577,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Research · Future Vision — Pet AI (상용 아님) */}
+      {/* Research · Future Vision — Pet AI & Robot Vision (상용 아님) */}
       <section className="py-12 lg:py-16 bg-white border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
@@ -589,35 +589,68 @@ export default function Home() {
               AI디지털케어로그 기반으로 확장을 연구 중인 Research·Future Vision 프로젝트 (6개 도메인 제품과 구분)
             </p>
           </div>
-          <div className="bg-gradient-to-br from-violet-50 to-indigo-50 rounded-2xl p-8 lg:p-10 flex flex-col lg:flex-row items-center justify-between gap-8 border border-violet-100">
-            <div className="flex items-center gap-6">
-              <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-violet-600 text-xl font-bold text-white">
-                PA
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div className="bg-gradient-to-br from-violet-50 to-indigo-50 rounded-2xl p-8 border border-violet-100 flex flex-col justify-between gap-6">
+              <div className="flex items-center gap-6">
+                <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-violet-600 text-xl font-bold text-white">
+                  PA
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Pet AI Digital Care Log</h3>
+                  <p className="text-gray-700">
+                    AI Digital Care Log를 반려동물에 적용하는 연구 프로젝트. 자람이·시니어·베지케어의 공통 AI
+                    Core를 Animal 도메인으로 확장하는 Future Vision입니다.
+                  </p>
+                  <p className="text-sm text-violet-800 mt-2 font-medium">
+                    기술 개발 초기 · 연구 개발 · 장기 비전 (출시 예정 아님)
+                  </p>
+                </div>
               </div>
-              <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Pet AI Digital Care Log</h3>
-                <p className="text-gray-700">
-                  AI Digital Care Log를 반려동물에 적용하는 연구 프로젝트. 자람이·시니어·베지케어의 공통 AI
-                  Core를 Animal 도메인으로 확장하며, 장기적으로 Robot Vision까지 이어지는 Future Vision입니다.
-                </p>
-                <p className="text-sm text-violet-800 mt-2 font-medium">
-                  기술 개발 초기 · 연구 개발 · 장기 비전 (출시 예정 아님)
-                </p>
+              <div className="flex gap-3 flex-shrink-0">
+                <Link
+                  href="/research/pet-ai"
+                  className="bg-violet-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-violet-800 transition-colors"
+                >
+                  연구 상세
+                </Link>
+                <Link
+                  href="/research"
+                  className="border border-violet-600 text-violet-700 px-6 py-3 rounded-lg font-semibold hover:bg-violet-50 transition-colors"
+                >
+                  Research
+                </Link>
               </div>
             </div>
-            <div className="flex gap-3 flex-shrink-0">
-              <Link
-                href="/research/pet-ai"
-                className="bg-violet-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-violet-800 transition-colors"
-              >
-                연구 상세
-              </Link>
-              <Link
-                href="/research"
-                className="border border-violet-600 text-violet-700 px-6 py-3 rounded-lg font-semibold hover:bg-violet-50 transition-colors"
-              >
-                Research
-              </Link>
+            <div className="bg-gradient-to-br from-slate-800 to-zinc-900 rounded-2xl p-8 border border-slate-700 text-white flex flex-col justify-between gap-6">
+              <div className="flex items-center gap-6">
+                <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-amber-500 text-xl font-bold text-slate-900">
+                  RV
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold mb-2">Robot Vision</h3>
+                  <p className="text-white/80">
+                    AI Digital Care Log를 로봇의 AI Brain으로 확장하는 도메인 횡단 연구. 자람이·시니어앤라이프·
+                    토탈케어로그·에듀케어로그·베지케어·Pet AI의 데이터와 AI Core를 재사용합니다.
+                  </p>
+                  <p className="text-sm text-amber-300 mt-2 font-medium">
+                    연구 개발 · 장기 비전 (상용 로봇 제품 아님)
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-3 flex-shrink-0">
+                <Link
+                  href="/research/robot-vision"
+                  className="bg-amber-500 text-slate-900 px-6 py-3 rounded-lg font-semibold hover:bg-amber-400 transition-colors"
+                >
+                  연구 상세
+                </Link>
+                <Link
+                  href="/research"
+                  className="border border-white/40 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+                >
+                  Research
+                </Link>
+              </div>
             </div>
           </div>
         </div>

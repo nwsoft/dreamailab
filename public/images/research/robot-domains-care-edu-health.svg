@@ -1,0 +1,38 @@
+<svg width="1200" height="560" viewBox="0 0 1200 560" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="560" rx="24" fill="#FFFBEB"/>
+  <text x="600" y="42" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="24" font-weight="800" fill="#92400E">돌봄 / 교육 / 건강 - 로봇 적용 축</text>
+  <text x="600" y="70" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#B45309">동일 Care Log 코어, 도메인별 로봇 역할이 달라짐</text>
+
+  <rect x="40" y="110" width="360" height="380" rx="18" fill="#FFFFFF" stroke="#34D399" stroke-width="2"/>
+  <text x="220" y="155" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="20" font-weight="800" fill="#047857">돌봄 Care</text>
+  <text x="220" y="190" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#64748B">시니어앤라이프 / Pet</text>
+  <text x="220" y="240" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="14" fill="#334155">낙상/이상 감지</text>
+  <text x="220" y="270" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="14" fill="#334155">복약/식사 리마인드</text>
+  <text x="220" y="300" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="14" fill="#334155">순찰 / 동행 보조</text>
+  <text x="220" y="330" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="14" fill="#334155">가족 알림 전달</text>
+  <text x="220" y="390" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#047857">데이터: 활력/행동/위치</text>
+  <text x="220" y="420" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#047857">판단: 위험도/우선순위</text>
+  <text x="220" y="450" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#047857">행동: 알림/접근/기록</text>
+
+  <rect x="420" y="110" width="360" height="380" rx="18" fill="#FFFFFF" stroke="#A78BFA" stroke-width="2"/>
+  <text x="600" y="155" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="20" font-weight="800" fill="#5B21B6">교육 Education</text>
+  <text x="600" y="190" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#64748B">자람이 / 에듀케어로그</text>
+  <text x="600" y="240" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="14" fill="#334155">맞춤 학습 코칭</text>
+  <text x="600" y="270" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="14" fill="#334155">집중/이탈 감지</text>
+  <text x="600" y="300" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="14" fill="#334155">루틴/퀴즈 실행</text>
+  <text x="600" y="330" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="14" fill="#334155">보호자/교사 리포트</text>
+  <text x="600" y="390" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#5B21B6">데이터: 학습반응/정서</text>
+  <text x="600" y="420" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#5B21B6">판단: 난이도/개입시점</text>
+  <text x="600" y="450" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#5B21B6">행동: 힌트/격려/기록</text>
+
+  <rect x="800" y="110" width="360" height="380" rx="18" fill="#FFFFFF" stroke="#60A5FA" stroke-width="2"/>
+  <text x="980" y="155" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="20" font-weight="800" fill="#1D4ED8">건강 Health</text>
+  <text x="980" y="190" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#64748B">토탈케어로그 / 시니어</text>
+  <text x="980" y="240" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="14" fill="#334155">증상/부작용 추적</text>
+  <text x="980" y="270" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="14" fill="#334155">측정 보조/리마인드</text>
+  <text x="980" y="300" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="14" fill="#334155">병원 전 Care Report</text>
+  <text x="980" y="330" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="14" fill="#334155">생활습관 코칭</text>
+  <text x="980" y="390" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#1D4ED8">데이터: 임상/생활로그</text>
+  <text x="980" y="420" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#1D4ED8">판단: 위험/권고</text>
+  <text x="980" y="450" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#1D4ED8">행동: 안내/전달/환류</text>
+</svg>

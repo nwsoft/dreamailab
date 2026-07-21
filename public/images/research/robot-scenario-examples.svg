@@ -1,0 +1,32 @@
+<svg width="1200" height="480" viewBox="0 0 1200 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="480" rx="24" fill="#F8FBFF"/>
+  <text x="600" y="40" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="22" font-weight="800" fill="#1E3A8A">시나리오 예시 (Research)</text>
+  <text x="600" y="68" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#64748B">실제 출시 제품이 아닌, 기술 연결을 이해하기 위한 시나리오</text>
+
+  <rect x="40" y="100" width="360" height="320" rx="16" fill="#FFFFFF" stroke="#34D399" stroke-width="2"/>
+  <text x="220" y="140" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="16" font-weight="700" fill="#047857">시니어 돌봄</text>
+  <text x="220" y="180" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#334155">1) Care Log: 야간 움직임 감소</text>
+  <text x="220" y="210" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#334155">2) Brain: 낙상 위험 상승 판단</text>
+  <text x="220" y="240" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#334155">3) Robot: 음성 확인 + 조명</text>
+  <text x="220" y="270" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#334155">4) 가족/센터 알림</text>
+  <text x="220" y="320" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#64748B">기반: 시니어앤라이프</text>
+  <text x="220" y="350" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#64748B">데이터: 활동/복약/위치</text>
+
+  <rect x="420" y="100" width="360" height="320" rx="16" fill="#FFFFFF" stroke="#A78BFA" stroke-width="2"/>
+  <text x="600" y="140" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="16" font-weight="700" fill="#5B21B6">발달/학습 보조</text>
+  <text x="600" y="180" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#334155">1) Care Log: 집중도 하락</text>
+  <text x="600" y="210" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#334155">2) Brain: 난이도 하향 권고</text>
+  <text x="600" y="240" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#334155">3) Robot: 짧은 휴식 안내</text>
+  <text x="600" y="270" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#334155">4) 교사/보호자 리포트</text>
+  <text x="600" y="320" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#64748B">기반: 자람이/에듀케어</text>
+  <text x="600" y="350" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#64748B">데이터: 학습반응/정서</text>
+
+  <rect x="800" y="100" width="360" height="320" rx="16" fill="#FFFFFF" stroke="#60A5FA" stroke-width="2"/>
+  <text x="980" y="140" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="16" font-weight="700" fill="#1D4ED8">건강 관리</text>
+  <text x="980" y="180" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#334155">1) Care Log: 부작용 패턴</text>
+  <text x="980" y="210" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#334155">2) Brain: 병원 전 요약 생성</text>
+  <text x="980" y="240" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#334155">3) Robot: 복약 리마인드</text>
+  <text x="980" y="270" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#334155">4) Care Report 전달</text>
+  <text x="980" y="320" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#64748B">기반: 토탈케어로그</text>
+  <text x="980" y="350" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#64748B">데이터: 약물/증상/활력</text>
+</svg>

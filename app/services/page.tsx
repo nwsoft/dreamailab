@@ -352,42 +352,81 @@ export default function ServicePortfolio() {
             subtitle="상용 서비스가 아닌 연구·기술 개발·장기 비전 영역입니다. 6 Core Domains과 구분됩니다."
             badge="Research · Not a Product"
           >
-            <div className="rounded-2xl border border-violet-200 bg-gradient-to-br from-violet-50 to-indigo-50 p-6 md:p-8">
-              <div className="flex flex-col md:flex-row md:items-start gap-5">
-                <div className="shrink-0 w-14 h-14 rounded-full bg-violet-600 text-white flex items-center justify-center font-bold text-lg">
-                  PA
-                </div>
-                <div className="flex-1">
-                  <div className="flex flex-wrap items-center gap-2 mb-3">
-                    <h3 className="text-xl font-bold text-gray-900">Pet AI Digital Care Log</h3>
-                    <span className="inline-flex px-2.5 py-0.5 rounded-full text-xs font-semibold bg-violet-100 text-violet-800">
-                      Research
-                    </span>
-                    <span className="inline-flex px-2.5 py-0.5 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-800">
-                      Technology Development
-                    </span>
-                    <span className="inline-flex px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-100 text-amber-800">
-                      Future Vision
-                    </span>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+              <div className="rounded-2xl border border-violet-200 bg-gradient-to-br from-violet-50 to-indigo-50 p-6 md:p-8">
+                <div className="flex flex-col md:flex-row md:items-start gap-5">
+                  <div className="shrink-0 w-14 h-14 rounded-full bg-violet-600 text-white flex items-center justify-center font-bold text-lg">
+                    PA
                   </div>
-                  <p className="text-sm text-gray-700 leading-relaxed mb-4">
-                    AI Digital Care Log를 반려동물에 확장하는 차세대 연구 프로젝트입니다. 기술 개발 초기
-                    단계이며, 출시·가입·판매를 의미하지 않습니다. Human → Animal → Plant → Robot 비전 아래
-                    동일한 AI Core를 연구합니다.
-                  </p>
-                  <div className="flex flex-wrap gap-3">
-                    <Link
-                      href="/research/pet-ai"
-                      className="inline-flex items-center justify-center rounded-lg bg-violet-700 px-4 py-2 text-sm font-semibold text-white hover:bg-violet-800"
-                    >
-                      연구 상세 보기
-                    </Link>
-                    <Link
-                      href="/research"
-                      className="inline-flex items-center justify-center rounded-lg border border-violet-300 bg-white px-4 py-2 text-sm font-semibold text-violet-800 hover:bg-violet-50"
-                    >
-                      Research 허브
-                    </Link>
+                  <div className="flex-1">
+                    <div className="flex flex-wrap items-center gap-2 mb-3">
+                      <h3 className="text-xl font-bold text-gray-900">Pet AI Digital Care Log</h3>
+                      <span className="inline-flex px-2.5 py-0.5 rounded-full text-xs font-semibold bg-violet-100 text-violet-800">
+                        Research
+                      </span>
+                      <span className="inline-flex px-2.5 py-0.5 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-800">
+                        Technology Development
+                      </span>
+                      <span className="inline-flex px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-100 text-amber-800">
+                        Future Vision
+                      </span>
+                    </div>
+                    <p className="text-sm text-gray-700 leading-relaxed mb-4">
+                      AI Digital Care Log를 반려동물에 확장하는 차세대 연구 프로젝트입니다. 기술 개발 초기
+                      단계이며, 출시·가입·판매를 의미하지 않습니다. Human → Animal → Plant 비전 아래 동일한
+                      AI Core를 연구합니다.
+                    </p>
+                    <div className="flex flex-wrap gap-3">
+                      <Link
+                        href="/research/pet-ai"
+                        className="inline-flex items-center justify-center rounded-lg bg-violet-700 px-4 py-2 text-sm font-semibold text-white hover:bg-violet-800"
+                      >
+                        연구 상세 보기
+                      </Link>
+                      <Link
+                        href="/research"
+                        className="inline-flex items-center justify-center rounded-lg border border-violet-300 bg-white px-4 py-2 text-sm font-semibold text-violet-800 hover:bg-violet-50"
+                      >
+                        Research 허브
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="rounded-2xl border border-slate-700 bg-gradient-to-br from-slate-800 to-zinc-900 text-white p-6 md:p-8">
+                <div className="flex flex-col md:flex-row md:items-start gap-5">
+                  <div className="shrink-0 w-14 h-14 rounded-full bg-amber-500 text-slate-900 flex items-center justify-center font-bold text-lg">
+                    RV
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex flex-wrap items-center gap-2 mb-3">
+                      <h3 className="text-xl font-bold text-white">Robot Vision</h3>
+                      <span className="inline-flex px-2.5 py-0.5 rounded-full text-xs font-semibold bg-white/15 text-white">
+                        Research
+                      </span>
+                      <span className="inline-flex px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-500/20 text-amber-200">
+                        Future Vision
+                      </span>
+                    </div>
+                    <p className="text-sm text-white/80 leading-relaxed mb-4">
+                      AI Digital Care Log를 로봇의 AI Brain으로 확장하는 도메인 횡단 연구입니다. 자람이·
+                      시니어앤라이프·토탈케어로그·에듀케어로그·베지케어·Pet AI의 데이터와 AI Core를 재사용하며,
+                      상용 로봇 제품이 아닙니다.
+                    </p>
+                    <div className="flex flex-wrap gap-3">
+                      <Link
+                        href="/research/robot-vision"
+                        className="inline-flex items-center justify-center rounded-lg bg-amber-500 px-4 py-2 text-sm font-semibold text-slate-900 hover:bg-amber-400"
+                      >
+                        연구 상세 보기
+                      </Link>
+                      <Link
+                        href="/research"
+                        className="inline-flex items-center justify-center rounded-lg border border-white/30 bg-white/5 px-4 py-2 text-sm font-semibold text-white hover:bg-white/10"
+                      >
+                        Research 허브
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>

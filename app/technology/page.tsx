@@ -951,6 +951,39 @@ export default function Technology() {
         </div>
       </section>
 
+      {/* Robot Vision Research */}
+      <section className="py-16 lg:py-24 bg-slate-900 text-white border-t border-slate-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/20 text-amber-200 text-xs font-semibold mb-4 border border-amber-400/30">
+              Research · Future Vision
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Robot Vision</h2>
+            <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
+              로봇은 행동하고, AI Digital Care Log는 관찰·판단·학습합니다. 자람이·시니어·토탈케어·에듀케어·베지케어의
+              데이터가 돌봄·교육·건강 로봇의 AI Brain으로 연결되는 별도 Research입니다.
+            </p>
+          </div>
+          <div className="rounded-2xl overflow-hidden border border-slate-700 shadow-sm mb-8 max-w-5xl mx-auto">
+            <img
+              src="/images/research/robot-data-flow.svg"
+              alt="사용자 데이터 - Care Log - Robot Brain 데이터 흐름"
+              className="w-full h-auto"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div className="text-center">
+            <Link
+              href="/research/robot-vision"
+              className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-amber-500 text-slate-900 font-semibold hover:bg-amber-400 transition-colors"
+            >
+              Robot Vision 연구 상세
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* 핵심 지표 */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

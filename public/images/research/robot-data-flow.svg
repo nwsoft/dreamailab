@@ -1,0 +1,51 @@
+<svg width="1200" height="520" viewBox="0 0 1200 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="520" rx="24" fill="#F8FAFC"/>
+  <text x="600" y="42" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="24" font-weight="800" fill="#0F172A">사용자 데이터 - Care Log - Robot</text>
+  <text x="600" y="70" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#64748B">동의 기반 데이터가 로봇 행동으로 이어지는 연구 구조</text>
+
+  <g font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif">
+    <rect x="40" y="120" width="200" height="280" rx="16" fill="#FFFFFF" stroke="#93C5FD" stroke-width="2"/>
+    <text x="140" y="160" text-anchor="middle" font-size="15" font-weight="700" fill="#1D4ED8">1. 사용자 데이터</text>
+    <text x="140" y="200" text-anchor="middle" font-size="12" fill="#475569">행동/학습/건강</text>
+    <text x="140" y="225" text-anchor="middle" font-size="12" fill="#475569">복약/식사/수면</text>
+    <text x="140" y="250" text-anchor="middle" font-size="12" fill="#475569">센서/카메라</text>
+    <text x="140" y="275" text-anchor="middle" font-size="12" fill="#475569">보호자 입력</text>
+    <text x="140" y="320" text-anchor="middle" font-size="12" fill="#64748B">동의 / 최소수집</text>
+    <text x="140" y="345" text-anchor="middle" font-size="12" fill="#64748B">가명/암호화</text>
+
+    <text x="270" y="260" font-size="28" fill="#94A3B8">&gt;</text>
+
+    <rect x="300" y="120" width="240" height="280" rx="16" fill="#1D4ED8"/>
+    <text x="420" y="160" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">2. AI Digital Care Log</text>
+    <text x="420" y="200" text-anchor="middle" font-size="12" fill="#DBEAFE">표준 스키마 정규화</text>
+    <text x="420" y="225" text-anchor="middle" font-size="12" fill="#DBEAFE">타임라인/에피소드</text>
+    <text x="420" y="250" text-anchor="middle" font-size="12" fill="#DBEAFE">멀티모달 분석</text>
+    <text x="420" y="275" text-anchor="middle" font-size="12" fill="#DBEAFE">위험/권고 생성</text>
+    <text x="420" y="320" text-anchor="middle" font-size="12" fill="#BFDBFE">HITL 전문가 검토</text>
+    <text x="420" y="345" text-anchor="middle" font-size="12" fill="#BFDBFE">개인화 모델</text>
+
+    <text x="570" y="260" font-size="28" fill="#94A3B8">&gt;</text>
+
+    <rect x="600" y="120" width="240" height="280" rx="16" fill="#4F46E5"/>
+    <text x="720" y="160" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">3. Robot AI Brain</text>
+    <text x="720" y="200" text-anchor="middle" font-size="12" fill="#E0E7FF">상황 이해</text>
+    <text x="720" y="225" text-anchor="middle" font-size="12" fill="#E0E7FF">행동 후보 생성</text>
+    <text x="720" y="250" text-anchor="middle" font-size="12" fill="#E0E7FF">안전 규칙 필터</text>
+    <text x="720" y="275" text-anchor="middle" font-size="12" fill="#E0E7FF">실행 우선순위</text>
+    <text x="720" y="320" text-anchor="middle" font-size="12" fill="#C4B5FD">실패/성공 기록</text>
+    <text x="720" y="345" text-anchor="middle" font-size="12" fill="#C4B5FD">환류 학습</text>
+
+    <text x="870" y="260" font-size="28" fill="#94A3B8">&gt;</text>
+
+    <rect x="900" y="120" width="260" height="280" rx="16" fill="#FFFFFF" stroke="#F59E0B" stroke-width="2"/>
+    <text x="1030" y="160" text-anchor="middle" font-size="15" font-weight="700" fill="#B45309">4. 로봇 행동</text>
+    <text x="1030" y="200" text-anchor="middle" font-size="12" fill="#475569">알림 / 안내</text>
+    <text x="1030" y="225" text-anchor="middle" font-size="12" fill="#475569">루틴 보조</text>
+    <text x="1030" y="250" text-anchor="middle" font-size="12" fill="#475569">교육 코칭</text>
+    <text x="1030" y="275" text-anchor="middle" font-size="12" fill="#475569">돌봄 순찰</text>
+    <text x="1030" y="320" text-anchor="middle" font-size="12" fill="#92400E">결과는 다시</text>
+    <text x="1030" y="345" text-anchor="middle" font-size="12" fill="#92400E">Care Log에 기록</text>
+  </g>
+  <text x="600" y="460" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#475569">핵심: 로봇은 데이터를 소유하지 않고, Care Log가 맥락을 소유한다</text>
+  <text x="600" y="490" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#94A3B8">Research - 상용 로봇 제품/판매가 아닙니다</text>
+</svg>

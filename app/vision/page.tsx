@@ -242,12 +242,18 @@ export default function Vision() {
             <strong>Animal(Pet AI)·Robot</strong> 축은 상용 서비스가 아닙니다. 기술 개발 초기 · 연구
             개발 · 장기 비전(Future Vision)으로 분류됩니다.
           </div>
-          <div className="text-center">
+          <div className="text-center flex flex-col sm:flex-row gap-3 justify-center">
             <Link
               href="/research/pet-ai"
               className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-violet-700 text-white font-semibold hover:bg-violet-800 transition-colors"
             >
               Pet AI Digital Care Log 연구 보기
+            </Link>
+            <Link
+              href="/research/robot-vision"
+              className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-slate-800 text-white font-semibold hover:bg-slate-900 transition-colors"
+            >
+              Robot Vision 연구 보기
             </Link>
           </div>
         </div>

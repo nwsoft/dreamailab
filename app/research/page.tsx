@@ -7,7 +7,7 @@ import { absoluteUrl, buildBreadcrumbJsonLd, buildPageMetadata, SITE_URL } from 
 
 const pagePath = '/research'
 const pageDescription =
-  '드림에이아이랩 Research & Future Vision. AI Digital Care Log를 사람·동물·식물·로봇으로 확장하는 연구 방향. Pet AI Digital Care Log는 상용 서비스가 아닌 기술 개발 초기 단계입니다.'
+  '드림에이아이랩 Research & Future Vision. AI Digital Care Log를 사람·동물·식물·로봇으로 확장하는 연구 방향. Pet AI Digital Care Log와 Robot Vision은 상용 서비스가 아닌 기술 개발 초기·연구 단계입니다.'
 
 export const metadata: Metadata = buildPageMetadata({
   title: 'Research & Future Vision | 드림에이아이랩',
@@ -31,6 +31,16 @@ const researchProjects = [
       'AI Digital Care Log 기술을 반려동물에 적용하기 위한 차세대 연구 프로젝트. 상용 서비스가 아니며, 기술 개발 초기·장기 비전 단계입니다.',
     href: '/research/pet-ai',
     accent: 'violet',
+  },
+  {
+    name: 'Robot Vision',
+    mark: 'RV',
+    stage: 'Research',
+    stages: ['Research', 'Future Vision'],
+    summary:
+      'AI Digital Care Log를 로봇의 AI Brain으로 확장하는 도메인 횡단 연구. 자람이·시니어앤라이프·토탈케어로그·에듀케어로그·베지케어·Pet AI의 데이터와 AI Core를 재사용하며, 상용 로봇 제품이 아닙니다.',
+    href: '/research/robot-vision',
+    accent: 'amber',
   },
 ]
 
@@ -112,7 +122,7 @@ export default function ResearchHubPage() {
               { label: 'Human', desc: '사람 · 현재 축', href: '/services' },
               { label: 'Animal', desc: '반려동물 · 연구', href: '/research/pet-ai' },
               { label: 'Plant', desc: '웰니스 · 베지케어', href: '/services/veggie' },
-              { label: 'Robot', desc: '장기 비전', href: '/research/pet-ai#robot-vision' },
+              { label: 'Robot', desc: '장기 비전', href: '/research/robot-vision' },
             ].map((d) => (
               <Link
                 key={d.label}
@@ -134,34 +144,53 @@ export default function ResearchHubPage() {
             <p className="text-gray-600">현재 공개하는 Research / Future Vision 항목입니다.</p>
           </div>
           <div className="space-y-6">
-            {researchProjects.map((p) => (
-              <Link
-                key={p.name}
-                href={p.href}
-                className="block rounded-2xl border border-violet-200 bg-white p-6 md:p-8 shadow-sm hover:shadow-md hover:border-violet-300 transition-all"
-              >
-                <div className="flex flex-col md:flex-row md:items-start gap-5">
-                  <div className="shrink-0 w-14 h-14 rounded-full bg-violet-600 text-white flex items-center justify-center font-bold text-lg">
-                    {p.mark}
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex flex-wrap items-center gap-2 mb-3">
-                      <h3 className="text-xl font-bold text-gray-900">{p.name}</h3>
-                      {p.stages.map((s) => (
-                        <span
-                          key={s}
-                          className="inline-flex px-2.5 py-0.5 rounded-full text-xs font-semibold bg-violet-100 text-violet-800"
-                        >
-                          {s}
-                        </span>
-                      ))}
+            {researchProjects.map((p) => {
+              const isAmber = p.accent === 'amber'
+              return (
+                <Link
+                  key={p.name}
+                  href={p.href}
+                  className={
+                    isAmber
+                      ? 'block rounded-2xl border border-amber-200 bg-white p-6 md:p-8 shadow-sm hover:shadow-md hover:border-amber-300 transition-all'
+                      : 'block rounded-2xl border border-violet-200 bg-white p-6 md:p-8 shadow-sm hover:shadow-md hover:border-violet-300 transition-all'
+                  }
+                >
+                  <div className="flex flex-col md:flex-row md:items-start gap-5">
+                    <div
+                      className={
+                        isAmber
+                          ? 'shrink-0 w-14 h-14 rounded-full bg-slate-800 text-white flex items-center justify-center font-bold text-lg'
+                          : 'shrink-0 w-14 h-14 rounded-full bg-violet-600 text-white flex items-center justify-center font-bold text-lg'
+                      }
+                    >
+                      {p.mark}
                     </div>
-                    <p className="text-gray-600 text-sm leading-relaxed mb-4">{p.summary}</p>
-                    <span className="text-violet-700 font-semibold text-sm">연구 상세 보기 →</span>
+                    <div className="flex-1">
+                      <div className="flex flex-wrap items-center gap-2 mb-3">
+                        <h3 className="text-xl font-bold text-gray-900">{p.name}</h3>
+                        {p.stages.map((s) => (
+                          <span
+                            key={s}
+                            className={
+                              isAmber
+                                ? 'inline-flex px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-100 text-amber-900'
+                                : 'inline-flex px-2.5 py-0.5 rounded-full text-xs font-semibold bg-violet-100 text-violet-800'
+                            }
+                          >
+                            {s}
+                          </span>
+                        ))}
+                      </div>
+                      <p className="text-gray-600 text-sm leading-relaxed mb-4">{p.summary}</p>
+                      <span className={isAmber ? 'text-amber-700 font-semibold text-sm' : 'text-violet-700 font-semibold text-sm'}>
+                        연구 상세 보기 →
+                      </span>
+                    </div>
                   </div>
-                </div>
-              </Link>
-            ))}
+                </Link>
+              )
+            })}
           </div>
         </div>
       </section>

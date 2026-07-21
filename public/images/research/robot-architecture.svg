@@ -1,0 +1,32 @@
+<svg width="1200" height="500" viewBox="0 0 1200 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="500" rx="24" fill="#0B1220"/>
+  <text x="600" y="40" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="24" font-weight="800" fill="#F8FAFC">Robot Vision Architecture</text>
+  <text x="600" y="68" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#94A3B8">Perception - Care Log Brain - Action - Feedback</text>
+
+  <rect x="50" y="110" width="250" height="300" rx="16" fill="#1E293B" stroke="#38BDF8" stroke-width="2"/>
+  <text x="175" y="150" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="16" font-weight="700" fill="#7DD3FC">Perception</text>
+  <text x="175" y="195" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#CBD5E1">Vision / Audio</text>
+  <text x="175" y="225" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#CBD5E1">Sensor / Wearable</text>
+  <text x="175" y="255" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#CBD5E1">App / Manual Log</text>
+  <text x="175" y="300" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#64748B">현장 신호 수집</text>
+
+  <rect x="340" y="110" width="520" height="300" rx="16" fill="#312E81" stroke="#A78BFA" stroke-width="2"/>
+  <text x="600" y="150" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="16" font-weight="700" fill="#DDD6FE">AI Digital Care Log = Robot Brain</text>
+  <text x="600" y="195" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#E0E7FF">Context Memory (타임라인)</text>
+  <text x="600" y="225" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#E0E7FF">Reasoning (상태/위험/목표)</text>
+  <text x="600" y="255" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#E0E7FF">Policy (안전/윤리/권한)</text>
+  <text x="600" y="285" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#E0E7FF">Planner (다음 행동 후보)</text>
+  <text x="600" y="330" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#C4B5FD">DAL 기존 기술: 분석/예측/추천/HITL</text>
+  <text x="600" y="360" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#C4B5FD">사용자 데이터는 도메인 서비스에서 축적</text>
+
+  <rect x="900" y="110" width="250" height="300" rx="16" fill="#1E293B" stroke="#FBBF24" stroke-width="2"/>
+  <text x="1025" y="150" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="16" font-weight="700" fill="#FCD34D">Action</text>
+  <text x="1025" y="195" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#CBD5E1">Speak / Guide</text>
+  <text x="1025" y="225" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#CBD5E1">Remind / Alert</text>
+  <text x="1025" y="255" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#CBD5E1">Assist / Fetch*</text>
+  <text x="1025" y="285" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#CBD5E1">Report to Human</text>
+  <text x="1025" y="330" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#64748B">*물리적 행위는</text>
+  <text x="1025" y="355" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="12" fill="#64748B">안전 정책 하에</text>
+
+  <text x="600" y="460" text-anchor="middle" font-family="Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="13" fill="#94A3B8">Feedback loop: 행동 결과 -&gt; Care Log 재기록 -&gt; 개인화 업데이트</text>
+</svg>
