@@ -72,6 +72,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/research" className="text-gray-300 hover:text-white transition-colors">
+                  Research
+                </Link>
+              </li>
+              <li>
                 <Link href="/ir" className="text-gray-300 hover:text-white transition-colors">
                   투자·IR
                 </Link>

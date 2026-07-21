@@ -67,13 +67,14 @@ export default function Vision() {
     },
     {
       year: '2027',
-      title: '글로벌 영향력',
-      description: '한국을 넘어 전 세계의 소외계층을 위한 AI 솔루션을 제공하여 글로벌 사회적 가치를 창출합니다.'
+      title: 'Pet AI Research · 글로벌 영향력',
+      description:
+        'Human AI Digital Care Log를 기반으로 Pet AI Digital Care Log 연구를 착수합니다. 동시에 한국을 넘어 소외계층을 위한 AI 솔루션으로 글로벌 사회적 가치를 확장합니다. ※ Pet AI는 상용 출시가 아닌 Research / Future Vision입니다.'
     },
     {
       year: '2030',
       title: '지속 가능한 미래',
-      description: '기술과 인간이 조화롭게 공존하는 세상을 만들어 모든 사람이 더 나은 내일을 경험할 수 있도록 합니다.'
+      description: '기술과 인간이 조화롭게 공존하는 세상을 만들어 모든 사람이 더 나은 내일을 경험할 수 있도록 합니다. 장기적으로는 동물·식물·로봇 Care Domain으로 AI Core를 확장하는 Future Vision을 이어갑니다.'
     }
   ]
 
@@ -207,6 +208,51 @@ export default function Vision() {
       </section>
 
 
+      {/* One AI Core · Multi-Domain Future Vision */}
+      <section className="py-16 lg:py-24 bg-white border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet-100 text-violet-800 text-xs font-semibold mb-4">
+              Future Vision · Research
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              One AI Core · Multiple Care Domains
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Dream AI Lab은 AI Digital Care Log를 사람 → 동물 → 식물 → 로봇으로 확장합니다.
+              모든 대상은 관찰 · 기록 · 분석 · 예측 · 맞춤형 관리라는 동일한 AI Core를 사용합니다.
+            </p>
+          </div>
+          <div className="rounded-2xl overflow-hidden border border-indigo-100 shadow-sm mb-8 max-w-5xl mx-auto">
+            <picture>
+              <source
+                media="(max-width: 768px)"
+                srcSet="/images/research/one-ai-core-domains-mobile.svg"
+              />
+              <img
+                src="/images/research/one-ai-core-domains.svg"
+                alt="One AI Core Multiple Care Domains"
+                className="w-full h-auto"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
+          </div>
+          <div className="max-w-3xl mx-auto rounded-xl border border-amber-200 bg-amber-50 p-5 text-sm text-amber-900 leading-relaxed mb-8">
+            <strong>Animal(Pet AI)·Robot</strong> 축은 상용 서비스가 아닙니다. 기술 개발 초기 · 연구
+            개발 · 장기 비전(Future Vision)으로 분류됩니다.
+          </div>
+          <div className="text-center">
+            <Link
+              href="/research/pet-ai"
+              className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-violet-700 text-white font-semibold hover:bg-violet-800 transition-colors"
+            >
+              Pet AI Digital Care Log 연구 보기
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Future Goals */}
       <section className="py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -332,9 +378,15 @@ export default function Vision() {
             >
               기술 보기
             </Link>
+            <Link
+              href="/research"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors"
+            >
+              Research 보기
+            </Link>
             <Link 
               href="/services"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors"
+              className="border-2 border-white/70 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors"
             >
               서비스 보기
             </Link>

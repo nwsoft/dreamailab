@@ -174,6 +174,31 @@ export default function PlatformTechnologyPage() {
         </div>
       </section>
 
+      <section className="py-14 bg-violet-50 border-t border-violet-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="inline-flex px-3 py-1 rounded-full bg-violet-100 text-violet-800 text-xs font-semibold mb-4">
+            Research · Future Vision
+          </div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-3">도메인 확장 연구 — Pet AI</h2>
+          <p className="text-gray-600 text-sm leading-relaxed mb-4">
+            AI Digital Care Log의 동일 파이프라인을 반려동물(Animal) 도메인으로 확장하는 연구입니다.
+            Human → Animal → Plant → Robot 비전 아래, 현재는 <strong>기술 개발 초기</strong> 단계이며
+            상용 서비스·출시 예정이 아닙니다.
+          </p>
+          <ul className="space-y-2 text-sm text-gray-700 mb-6">
+            <li>• Vision AI · Behavior Translation · Digital Care Log 누적</li>
+            <li>• 자람이·시니어앤라이프·베지케어 기술의 Pet 재사용 가설</li>
+            <li>• 장기: Robot Integration (돌봄 로봇 AI Brain)</li>
+          </ul>
+          <Link
+            href="/research/pet-ai"
+            className="inline-flex text-violet-700 font-semibold hover:underline text-sm"
+          >
+            Pet AI Digital Care Log 연구 페이지 →
+          </Link>
+        </div>
+      </section>
+
       <section className="py-14 bg-gray-50 border-t border-gray-200">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-xl font-bold text-gray-900 mb-6">관련 문서</h2>
@@ -189,6 +214,12 @@ export default function PlatformTechnologyPage() {
               className="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-gray-300 bg-white text-gray-800 font-semibold hover:bg-gray-50 transition-colors"
             >
               에듀케어로그 기술백서
+            </Link>
+            <Link
+              href="/research"
+              className="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-violet-300 bg-white text-violet-800 font-semibold hover:bg-violet-50 transition-colors"
+            >
+              Research
             </Link>
             <Link
               href="/contact?type=tech&service=platform"

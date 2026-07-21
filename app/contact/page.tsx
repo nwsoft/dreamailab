@@ -28,6 +28,7 @@ const SERVICES = [
   { value: 'educarelog', label: '에듀케어로그' },
   { value: 'marriage', label: '글로벌커플케어' },
   { value: 'veggie', label: '베지케어' },
+  { value: 'research', label: 'Research·Pet AI (연구·R&D)' },
   { value: 'other', label: '기타·복수' },
 ] as const
 

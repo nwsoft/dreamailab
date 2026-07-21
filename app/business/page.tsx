@@ -663,6 +663,11 @@ export default function Business() {
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               국제결혼·자람이·시니어·<strong className="text-gray-800">토탈케어로그</strong>를 기본 축으로,
               <strong className="text-gray-800"> 에듀케어로그와 베지케어</strong>까지 연결해 생애주기형 AI디지털케어로그 확장을 지향합니다.
+              Animal(Pet AI)·Robot 축은{' '}
+              <Link href="/research" className="text-violet-700 font-semibold hover:underline">
+                Research / Future Vision
+              </Link>
+              으로 별도 분류합니다 (상용 포트폴리오 아님).
             </p>
           </div>
           

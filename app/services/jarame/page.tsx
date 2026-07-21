@@ -2339,6 +2339,17 @@ export default function JarameService() {
                 표준 케어로그·파일럿 축적을 바탕 시범·PoC를 준비합니다.
               </p>
             </div>
+
+            <div className="mt-6 rounded-xl border border-violet-200 bg-violet-50 p-5 text-center">
+              <p className="text-sm text-violet-900 leading-relaxed mb-2">
+                <span className="font-semibold">Research · Future Vision</span> — 자람이의 행동 분석·해석·이상
+                탐지·AI 상담 기술을 반려동물(Pet) 도메인으로 확장하는 연구가 진행 중입니다. 상용 서비스가
+                아닙니다.
+              </p>
+              <Link href="/research/pet-ai" className="text-sm font-semibold text-violet-700 hover:underline">
+                Pet AI Digital Care Log 연구 보기 →
+              </Link>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">

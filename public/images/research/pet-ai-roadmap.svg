@@ -1,0 +1,49 @@
+<svg width="1200" height="360" viewBox="0 0 1200 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="roadBg" x1="0" y1="0" x2="1200" y2="360" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FBFF"/>
+      <stop offset="1" stop-color="#F1F5F9"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="360" rx="24" fill="url(#roadBg)"/>
+
+  <text x="600" y="44" text-anchor="middle" font-size="24" font-weight="800" fill="#1E3A8A">Pet AI Digital Care Log · Research Roadmap</text>
+  <text x="600" y="72" text-anchor="middle" font-size="13" fill="#64748B">œÜ |t DÌ ðl·0   )¥…Èä</text>
+
+  <line x1="100" y1="180" x2="1100" y2="180" stroke="#CBD5E1" stroke-width="3"/>
+
+  <!-- Now -->
+  <circle cx="160" cy="180" r="18" fill="#1D4ED8"/>
+  <text x="160" y="186" text-anchor="middle" font-size="11" font-weight="700" fill="white">NOW</text>
+  <rect x="60" y="220" width="200" height="90" rx="14" fill="white" stroke="#93C5FD" stroke-width="2"/>
+  <text x="160" y="252" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A8A">Human AI</text>
+  <text x="160" y="276" text-anchor="middle" font-size="12" fill="#475569">Digital Care Log</text>
+  <text x="160" y="298" text-anchor="middle" font-size="11" fill="#64748B">¬ ´·Pilot •</text>
+
+  <!-- 2027 -->
+  <circle cx="420" cy="180" r="18" fill="#4F46E5"/>
+  <text x="420" y="186" text-anchor="middle" font-size="10" font-weight="700" fill="white">27</text>
+  <rect x="320" y="100" width="200" height="56" rx="12" fill="#EEF2FF" stroke="#C4B5FD" stroke-width="2"/>
+  <text x="420" y="124" text-anchor="middle" font-size="12" font-weight="700" fill="#5B21B6">2027</text>
+  <text x="420" y="144" text-anchor="middle" font-size="11" fill="#6D28D9">Pet Research )</text>
+  <rect x="320" y="220" width="200" height="90" rx="14" fill="white" stroke="#C4B5FD" stroke-width="2"/>
+  <text x="420" y="252" text-anchor="middle" font-size="13" font-weight="700" fill="#5B21B6">Pet AI Digital</text>
+  <text x="420" y="276" text-anchor="middle" font-size="12" fill="#475569">Care Log Research</text>
+  <text x="420" y="298" text-anchor="middle" font-size="11" fill="#7C3AED">0   0</text>
+
+  <!-- Vision AI -->
+  <circle cx="680" cy="180" r="16" fill="#7C3AED"/>
+  <rect x="580" y="220" width="200" height="90" rx="14" fill="white" stroke="#DDD6FE" stroke-width="2"/>
+  <text x="680" y="252" text-anchor="middle" font-size="13" font-weight="700" fill="#5B21B6">Vision AI</text>
+  <text x="680" y="276" text-anchor="middle" font-size="12" fill="#475569">Behavior Translation</text>
+  <text x="680" y="298" text-anchor="middle" font-size="11" fill="#64748B">ðl àÄT</text>
+
+  <!-- Robot -->
+  <circle cx="940" cy="180" r="16" fill="#B45309" stroke="#FDE68A" stroke-width="3" stroke-dasharray="4 3"/>
+  <rect x="840" y="220" width="200" height="90" rx="14" fill="white" stroke="#FDE68A" stroke-width="2" stroke-dasharray="5 4"/>
+  <text x="940" y="252" text-anchor="middle" font-size="13" font-weight="700" fill="#B45309">Robot Integration</text>
+  <text x="940" y="276" text-anchor="middle" font-size="12" fill="#475569">¥0 Future Vision</text>
+  <text x="940" y="298" text-anchor="middle" font-size="11" fill="#92400E">Ì \ AI Brain</text>
+
+  <text x="1100" y="186" text-anchor="middle" font-size="18" fill="#94A3B8">’</text>
+</svg>

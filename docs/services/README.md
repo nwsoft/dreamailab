@@ -1,6 +1,6 @@
 # 서비스 문서 — DAL ↔ 개발 플랫폼 동기화
 
-**last_reviewed:** 2026-07-06
+**last_reviewed:** 2026-07-21
 
 ## 역할 분리 (SSOT)
 
@@ -9,6 +9,13 @@
 | **개발 정본** | 각 플랫폼 저장소 코드 + 아래 개발 계획 MD | 실제 구현·로드맵 |
 | **DAL 대외 스펙** | `docs/services/*.md` | IR·홈·허브와의 **용어·상태** 정합 (last_reviewed: 2026-07-06) |
 | **DAL 소개 웹** | `app/services/<slug>/page.tsx` | 투자·협력용 **요약·스토리** (개발 정본에서 파생) |
+| **Research (비상용)** | `docs/research/*.md` + `app/research/*` | Future Vision·기술 개발 초기 — **6 Core Domains에 포함하지 않음** |
+
+## Research (상용 아님)
+
+| 프로젝트 | 상태 | DAL 페이지 | 스펙 |
+|----------|------|------------|------|
+| Pet AI Digital Care Log | Research / Technology Development / Future Vision | [/research/pet-ai](../../app/research/pet-ai/page.tsx) | [pet-ai.md](../research/pet-ai.md) |
 
 ## 개발 저장소 ↔ DAL 문서
 

@@ -69,23 +69,39 @@ export default function About() {
     {
       name: '자람이 프로젝트',
       description: '발달장애·ADHD 케어 표준화를 목표로, 센터·병원·보호자·교사를 하나로 연결하는 공익 프로젝트입니다.',
-      features: ['센터 행정 SaaS 표준화', '발달장애 학습 및 치료 연구', '행동·정서·교육·약물 데이터', '보호자·센터·병원 연결']
+      features: ['센터 행정 SaaS 표준화', '발달장애 학습 및 치료 연구', '행동·정서·교육·약물 데이터', '보호자·센터·병원 연결'],
+      href: '/services/jarame' as string | undefined,
     },
     {
       name: '국제결혼 (글로벌커플케어)',
       description: '국제결혼 정보회사·기관에 표준화된 행정·매칭 시스템을 제공하고, 결혼 전후 커플과 가족을 지원하는 통합 플랫폼입니다. 사기·불법을 AI로 예방하고, 정착·육아까지 연결합니다.',
-      features: ['표준 행정/매칭 SaaS(B2B)', '사기·불법 예방 검증/가이드', '국가별 커뮤니티/정착·육아', '기관·정부 연계']
+      features: ['표준 행정/매칭 SaaS(B2B)', '사기·불법 예방 검증/가이드', '국가별 커뮤니티/정착·육아', '기관·정부 연계'],
+      href: '/services/marriage' as string | undefined,
     },
     {
       name: '시니어앤라이프',
       description: '노인 돌봄과 재활을 위한 AI 플랫폼으로, 시니어 디지털케어로그를 통해 가정·기관·의료 기록을 통합하고 위험을 조기 탐지합니다.',
-      features: ['복약/활력징후 분석', '치매/낙상 위험 예측', '가족 리포트 알림', '기관 대시보드']
+      features: ['복약/활력징후 분석', '치매/낙상 위험 예측', '가족 리포트 알림', '기관 대시보드'],
+      href: '/services/senior' as string | undefined,
     },
     {
       name: '토탈케어로그 (AI 주치의)',
       description: '맞춤형 의료 서비스·병원매칭·질병·약물 추적을 제공하며, 케어로그 빅데이터로 임상·신약 개발을 지원합니다.',
-      features: ['진료/검사/복약 연동', '부작용/상호작용 경고', '영양·운동 추천', '만성질환/항암 리포트']
-    }
+      features: ['진료/검사/복약 연동', '부작용/상호작용 경고', '영양·운동 추천', '만성질환/항암 리포트'],
+      href: '/services/healthcare' as string | undefined,
+    },
+    {
+      name: 'Pet AI Digital Care Log (Research)',
+      description:
+        'AI Digital Care Log를 반려동물에 확장하는 연구 프로젝트입니다. 상용 서비스가 아니며, 기술 개발 초기·Future Vision 단계입니다.',
+      features: [
+        'Research · Technology Development · Future Vision',
+        '자람이 Behavior Analysis → Pet 확장',
+        'Vision AI · Behavior Translation',
+        '장기 Robot Integration 비전',
+      ],
+      href: '/research/pet-ai' as string | undefined,
+    },
   ]
 
   return (
@@ -372,6 +388,14 @@ export default function About() {
                     </div>
                   ))}
                 </div>
+                {project.href && (
+                  <Link
+                    href={project.href}
+                    className="inline-block mt-5 text-sm font-semibold text-primary-600 hover:underline"
+                  >
+                    자세히 보기 →
+                  </Link>
+                )}
               </div>
             ))}
           </div>

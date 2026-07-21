@@ -524,6 +524,15 @@ export default function Technology() {
               </Link>
             ))}
           </div>
+          <div className="mt-8 max-w-3xl mx-auto rounded-xl border border-violet-200 bg-violet-50 px-5 py-4 text-center">
+            <p className="text-sm text-violet-900 mb-2">
+              <span className="font-semibold">Research · Future Vision</span> — Pet AI Digital Care Log
+              (동물 도메인 확장 연구, 상용 서비스 아님)
+            </p>
+            <Link href="/research/pet-ai" className="text-sm font-semibold text-violet-700 hover:underline">
+              연구 상세 보기 →
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -894,6 +903,50 @@ export default function Technology() {
             <p className="text-xs text-gray-500">
               ※ 예시는 확장 가능성을 보여주기 위한 것이며, 적용 시 도메인 규제·안전 기준을 준수합니다.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Pet AI Research · Technology Roadmap */}
+      <section className="py-16 lg:py-24 bg-violet-50/60 border-t border-violet-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet-100 text-violet-800 text-xs font-semibold mb-4">
+              Research · Technology Development · Future Vision
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Pet AI Digital Care Log
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              AI Digital Care Log를 반려동물에 확장하는 연구입니다. 자람이의 행동 분석, 시니어의 건강
+              모니터링, 베지케어의 환경 분석을 공통 AI Core로 재사용하는 기술 가설을 담고 있습니다.
+            </p>
+          </div>
+          <div className="rounded-2xl overflow-hidden border border-violet-100 shadow-sm mb-8 max-w-5xl mx-auto">
+            <picture>
+              <source
+                media="(max-width: 768px)"
+                srcSet="/images/research/pet-ai-tech-stack-mobile.svg"
+              />
+              <img
+                src="/images/research/pet-ai-tech-stack.svg"
+                alt="Pet AI Technology Stack Research"
+                className="w-full h-auto"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
+          </div>
+          <div className="max-w-3xl mx-auto rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900 text-center mb-8">
+            상용 서비스·출시 예정이 아닙니다. 기술 개발 초기 · 연구 개발 · 장기 비전입니다.
+          </div>
+          <div className="text-center">
+            <Link
+              href="/research/pet-ai"
+              className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-violet-700 text-white font-semibold hover:bg-violet-800 transition-colors"
+            >
+              Pet AI 연구 상세
+            </Link>
           </div>
         </div>
       </section>

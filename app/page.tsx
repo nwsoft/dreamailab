@@ -577,6 +577,52 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Research · Future Vision — Pet AI (상용 아님) */}
+      <section className="py-12 lg:py-16 bg-white border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-violet-100 text-violet-800 mb-3">
+              Research · Future Vision
+            </div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">도메인 확장 연구</h2>
+            <p className="text-gray-600">
+              상용 서비스가 아닌 연구·기술 로드맵입니다. 6개 도메인 제품과 구분됩니다.
+            </p>
+          </div>
+          <div className="bg-gradient-to-br from-violet-50 to-indigo-50 rounded-2xl p-8 lg:p-10 flex flex-col lg:flex-row items-center justify-between gap-8 border border-violet-100">
+            <div className="flex items-center gap-6">
+              <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-violet-600 text-xl font-bold text-white">
+                PA
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Pet AI Digital Care Log</h3>
+                <p className="text-gray-700">
+                  AI Digital Care Log를 반려동물에 적용하는 연구 프로젝트. 자람이·시니어·베지케어의 공통 AI
+                  Core를 Animal 도메인으로 확장하며, 장기적으로 Robot Vision까지 이어지는 Future Vision입니다.
+                </p>
+                <p className="text-sm text-violet-800 mt-2 font-medium">
+                  기술 개발 초기 · 연구 개발 · 장기 비전 (출시 예정 아님)
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-3 flex-shrink-0">
+              <Link
+                href="/research/pet-ai"
+                className="bg-violet-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-violet-800 transition-colors"
+              >
+                연구 상세
+              </Link>
+              <Link
+                href="/research"
+                className="border border-violet-600 text-violet-700 px-6 py-3 rounded-lg font-semibold hover:bg-violet-50 transition-colors"
+              >
+                Research
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 뉴스: 방문자용 안내(내부 운영 메모 성격의 문구는 사용하지 않음) */}
       <section className="py-16 lg:py-24 bg-white border-t border-gray-100">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

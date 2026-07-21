@@ -110,6 +110,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: url('/research'),
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.75,
+    },
+    {
+      url: url('/research/pet-ai'),
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.75,
+    },
+    {
       url: url('/technology/platform'),
       lastModified: new Date(),
       changeFrequency: 'monthly',

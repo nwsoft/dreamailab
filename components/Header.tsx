@@ -11,6 +11,7 @@ export default function Header() {
     { name: '회사소개', href: '/about' },
     { name: '비전', href: '/vision' },
     { name: '기술', href: '/technology' },
+    { name: 'Research', href: '/research' },
     { name: '비즈니스', href: '/business' },
     { name: '서비스', href: '/services' },
     { name: '공공', href: '/public' },
@@ -32,12 +33,12 @@ export default function Header() {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-6">
+          <div className="hidden md:flex items-center space-x-4 lg:space-x-5">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-gray-700 hover:text-primary-600 px-3 py-2 text-sm font-medium transition-colors"
+                className="text-gray-700 hover:text-primary-600 px-2 lg:px-3 py-2 text-sm font-medium transition-colors whitespace-nowrap"
               >
                 {item.name}
               </Link>
