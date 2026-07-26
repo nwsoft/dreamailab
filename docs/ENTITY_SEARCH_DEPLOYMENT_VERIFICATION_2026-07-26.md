@@ -49,9 +49,15 @@
 4. 보도자료·기고·파트너 사례는 실제 계약·출시·연구 근거가 생긴 경우에만 배포하고, 자사 뉴스·블로그와 독립 언론 보도를 구분한다.
 5. 다국어 페이지는 번역 품질과 지역별 제공 범위를 검수한 뒤 hreflang 묶음과 sitemap을 확장한다.
 
+## 2026-07-26 검색 기준선
+
+- Google 공개 검색에서 시니어앤라이프 `/nursing-homes` 목록과 Dream AI Lab `/technology/` 페이지 노출을 확인했다.
+- 자람이 검색 스니펫에는 재배포 전의 개인·가족 상세 문구가 아직 캐시되어 있었다. 현재 운영 페이지와 `llms.txt`에서는 해당 결합 문구가 제거된 상태다.
+- 브라우저의 Search Console 세션은 로그인되지 않아 URL 재수집 요청은 수행하지 않았다. 소유권 계정 로그인 후 자람이 홈·소개·연구자 관련 대표 URL을 우선 검사하고 색인 생성을 요청한다.
+- 새 연구자 프로필·뉴스·Entity 연결은 크롤러 재방문 뒤 반영되며 즉시 노출 또는 특정 AI 모델의 학습을 보장하지 않는다.
+
 ## 운영 이슈
 
 - VeggieCare GitHub Backend CI는 `a4d299b`에서 통과했다. GitHub EC2 Deploy workflow는 SSH 연결 단계가 실패해 직접 배포로 완료했으며, Actions용 SSH secret/접근 경로는 별도 복구가 필요하다.
 - Global Couple Care EC2의 기존 작업 파일은 배포 전 `pre-entity-seo-deploy-2026-07-26` stash로 보존했다.
 - 시니어앤라이프 EC2 배포 폴더는 Git checkout이 아니라 rsync 방식이며 `DEPLOYED_COMMIT`으로 `d89d3e4`를 기록했다.
-
