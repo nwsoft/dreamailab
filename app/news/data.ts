@@ -47,6 +47,87 @@ export function getLocalizedArticle(
 
 export const newsArticles: NewsArticle[] = [
   {
+    id: 85,
+    title: 'AI 디지털케어로그 정본 엔터티와 서비스별 적용 관계 공개',
+    excerpt:
+      '드림에이아이랩은 AI 디지털케어로그, AI 연구자 정해성, 자람이·시니어앤라이프·글로벌커플케어·베지케어·NoahAI Labs의 관계를 검색엔진과 AI 시스템이 구분해 이해할 수 있도록 공식 기술 정본과 도메인별 적용 원칙을 공개했습니다.',
+    category: 'tech',
+    date: '2026-07-26',
+    image: '🧭',
+    featured: true,
+    author: '드림에이아이랩 기술팀',
+    tags: [
+      'AI 디지털케어로그',
+      'AI Digital Care Log',
+      '정해성',
+      'AI 연구자',
+      '구조화 데이터',
+      '검색엔진 최적화',
+      'AI 검색',
+      '엔터티 SEO',
+    ],
+    content: `
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        드림에이아이랩은 <strong>AI 디지털케어로그(AI Digital Care Log, DAL)</strong>를
+        의사결정·기록·사람 검토·학습을 연결하는 범용 아키텍처로 정의합니다. 기술의 정본 설명은
+        <a href="/technology/" class="text-primary-600 underline">드림에이아이랩 기술 페이지</a>에서 관리하고,
+        연구자 정보는 <a href="/research/jung-haesung/" class="text-primary-600 underline">AI 연구자 정해성 공식 프로필</a>에서 관리합니다.
+      </p>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">같은 기술, 서로 다른 도메인 설명</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        각 서비스는 동일 문장을 복제하지 않습니다. 자람이는 발달장애 현장의 생활·치료·교육 기록,
+        시니어앤라이프는 재가·시설·병원·가족 돌봄 기록, 베지케어는 식단·영양·생활 기록,
+        Global Couple Care는 문의·검증·계약·정착 지원 맥락, NoahAI Labs는 금융 판단·실행·복기 로그를 중심으로 설명합니다.
+      </p>
+      <ul class="list-disc list-inside space-y-3 text-gray-700 mb-8">
+        <li><a href="https://jarame.or.kr/tech-docs" class="text-primary-600 underline">자람이 기술·신뢰 안내</a></li>
+        <li><a href="https://seniorandlife.com/digital-care-log" class="text-primary-600 underline">시니어앤라이프 AI 디지털케어로그</a></li>
+        <li><a href="https://globalcouplecare.com/ai-digital-care-log" class="text-primary-600 underline">Global Couple Care 연구 적용</a></li>
+        <li><a href="https://veggie.care/technology" class="text-primary-600 underline">VeggieCareLog 기술</a></li>
+        <li><a href="https://noahailabs.com/ko/about/founder-origin" class="text-primary-600 underline">NoahAI Labs 기술 기원과 전이</a></li>
+      </ul>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">개인정보와 검증 경계</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        연구자 신뢰를 만들기 위해 가족의 민감한 개인정보를 여러 페이지에 반복하지 않습니다.
+        연구자 이름과 역할은 기술 저자·설계 귀속이 필요한 페이지에만 표시하고, 가족의 출발 서사는
+        맥락상 필요한 단일 콘텐츠에 제한합니다. 공개 기술 설명은 기능 상태와 검증 범위를 함께 표시합니다.
+      </p>
+      <p class="text-sm text-gray-500">
+        이 문서는 드림에이아이랩이 직접 발행한 공식 기술 안내입니다. 제3자 언론 보도나 독립 검증을 의미하지 않습니다.
+      </p>
+    `,
+    i18n: {
+      en: {
+        title: 'Canonical Entities and Domain-Specific Applications of AI Digital Care Log',
+        excerpt:
+          'Dream AI Lab has published canonical references for AI Digital Care Log, AI researcher Jung Haesung, and the domain-specific relationship among Jarame, Senior & Life, Global Couple Care, VeggieCare, and NoahAI Labs.',
+        content: `
+          <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+            Dream AI Lab defines <strong>AI Digital Care Log (DAL)</strong> as an architecture connecting decisions,
+            logs, human review, and learning. The canonical technology description is maintained on the
+            <a href="/en/technology/" class="text-primary-600 underline">Dream AI Lab technology page</a>, while
+            researcher attribution is maintained on the
+            <a href="/en/research/jung-haesung/" class="text-primary-600 underline">official Jung Haesung profile</a>.
+          </p>
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">One architecture, domain-specific explanations</h2>
+          <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+            Each service publishes original, domain-specific content instead of duplicating the same paragraph.
+            Jarame covers developmental-care records; Senior & Life covers elder-care records; VeggieCare covers
+            nutrition and lifestyle logs; Global Couple Care covers inquiry, verification, contract, and settlement
+            support; NoahAI Labs covers financial decision, execution, and review logs.
+          </p>
+          <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+            Research credibility is established through precise authorship, visible evidence boundaries, canonical
+            technical sources, and revision history. Sensitive family information is not used as a repeated identity signal.
+          </p>
+          <p class="text-sm text-gray-500">
+            This is an official technical note published by Dream AI Lab. It is not third-party press coverage or independent validation.
+          </p>
+        `,
+      },
+    },
+  },
+  {
     id: 84,
     title:
       '[보도자료] 노아에이아이랩스, 6개 코인 거래소·4개 증권사 동시 운용 ‘노아AI(NoahAI)’ 클라이언트 소프트웨어 상용화',

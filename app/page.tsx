@@ -6,6 +6,12 @@ import Link from 'next/link'
 import { COMPANY_HERO_LINE, COMPANY_META_LINE } from '../lib/company-copy'
 import { IconApi, IconInvest, IconPartners, IconPublic, IconUser } from '../components/home-intent-icons'
 import { absoluteUrl, buildPageMetadata } from '../lib/seo'
+import {
+  DREAM_AI_LAB_ORGANIZATION_ID,
+  JUNG_HAESUNG_PERSON_ID,
+  JUNG_HAESUNG_URL,
+  ecosystemBrands,
+} from '../lib/entities'
 
 export const metadata: Metadata = {
   ...buildPageMetadata({
@@ -30,6 +36,7 @@ export default function Home() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
+    '@id': DREAM_AI_LAB_ORGANIZATION_ID,
     name: '드림에이아이랩',
     alternateName: 'Dream AI Lab',
     description: `${COMPANY_META_LINE}입니다.`,
@@ -37,9 +44,11 @@ export default function Home() {
     logo: absoluteUrl('/logo.png'),
     founder: {
       '@type': 'Person',
+      '@id': JUNG_HAESUNG_PERSON_ID,
       name: '정해성',
-      jobTitle: '공동창업자 & CTO',
-      description: '디지털케어로그 최초 고안자 및 개발자',
+      url: JUNG_HAESUNG_URL,
+      jobTitle: 'AI 연구자 · 공동창업자·CTO',
+      description: 'AI 디지털케어로그 설계·고안자',
       knowsAbout: [
         '디지털케어로그',
         'AI디지털케어로그',
@@ -50,13 +59,12 @@ export default function Home() {
         '정신심리치료'
       ]
     },
-    sameAs: [
-      'https://jarame.or.kr',
-      'https://seniorandlife.com',
-      'https://totalcarelog.com',
-      'https://globalcouplecare.com',
-      'https://veggie.care'
-    ],
+    brand: ecosystemBrands.map((brand) => ({
+      '@type': 'Brand',
+      name: brand.name,
+      alternateName: brand.alternateName,
+      url: brand.url,
+    })),
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'customer service',

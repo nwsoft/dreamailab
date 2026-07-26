@@ -128,6 +128,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.75,
     },
     {
+      url: url('/research/jung-haesung'),
+      lastModified: new Date('2026-07-26'),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
       url: url('/technology/platform'),
       lastModified: new Date(),
       changeFrequency: 'monthly',
@@ -180,6 +186,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.7,
+    },
+    {
+      url: url('/en/research/jung-haesung'),
+      lastModified: new Date('2026-07-26'),
+      changeFrequency: 'monthly',
+      priority: 0.75,
     },
     {
       url: url('/contact'),

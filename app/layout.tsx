@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import { dreamAiLabEntityGraph, dreamAiLabWebsiteSchema } from '../lib/entities'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -84,99 +85,13 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "드림에이아이랩",
-              "alternateName": "DAL",
-              "url": "https://dreamailab.com",
-              "logo": "https://dreamailab.com/logo.png",
-              "description": "AI 디지털케어로그로 발달장애·시니어케어·토탈케어로그를 연결해 개인맞춤 케어 표준을 만드는 드림에이아이랩(DAL).",
-              "foundingDate": "2022",
-              "address": {
-                "@type": "PostalAddress",
-                "addressCountry": "KR"
-              },
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "contactType": "customer service",
-                "email": "contact@dreamailab.com"
-              },
-              "sameAs": [
-                "https://jarame.or.kr",
-                "https://jarame.org",
-                "https://seniorandlife.com",
-                "https://hanbangai.kr",
-                "https://cancerrehabai.kr",
-                "https://noahailabs.com",
-                "https://globalcouplecare.com",
-                "https://veggie.care"
-              ],
-              "hasOfferCatalog": {
-                "@type": "OfferCatalog",
-                "name": "AI 서비스",
-                "itemListElement": [
-                  {
-                    "@type": "Offer",
-                    "itemOffered": {
-                      "@type": "Service",
-                      "name": "자람이",
-                      "description": "발달장애인을 위한 AI 디지털케어로그 플랫폼"
-                    }
-                  },
-                  {
-                    "@type": "Offer",
-                    "itemOffered": {
-                      "@type": "Service",
-                      "name": "시니어앤라이프",
-                      "description": "시니어돌봄 AI 디지털케어로그 플랫폼"
-                    }
-                  },
-                  {
-                    "@type": "Offer",
-                    "itemOffered": {
-                      "@type": "Service",
-                      "name": "토탈케어로그",
-                      "description": "개인 맞춤형 AI 주치의 토탈케어로그 플랫폼"
-                    }
-                  },
-                  {
-                    "@type": "Offer",
-                    "itemOffered": {
-                      "@type": "Service",
-                      "name": "글로벌커플케어",
-                      "description": "국제결혼 지원 AI 플랫폼"
-                    }
-                  },
-                  {
-                    "@type": "Offer",
-                    "itemOffered": {
-                      "@type": "Service",
-                      "name": "베지케어",
-                      "description": "채식 라이프스타일 AI 플랫폼"
-                    }
-                  }
-                ]
-              }
-            })
+            __html: JSON.stringify(dreamAiLabEntityGraph)
           }}
         />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "WebSite",
-              "name": "드림에이아이랩",
-              "alternateName": "Dream AI Lab",
-              "url": "https://dreamailab.com",
-              "inLanguage": ["ko-KR", "en-US"],
-              "publisher": {
-                "@type": "Organization",
-                "name": "드림에이아이랩",
-                "url": "https://dreamailab.com"
-              }
-            })
+            __html: JSON.stringify(dreamAiLabWebsiteSchema)
           }}
         />
       </head>

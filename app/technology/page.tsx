@@ -5,6 +5,12 @@ import PageClosingSection from '../../components/PageClosingSection'
 import Link from 'next/link'
 import { COMPANY_HERO_LINE } from '../../lib/company-copy'
 import { MarketingIcon, type MarketingIconName } from '../../components/MarketingIcon'
+import {
+  AI_DIGITAL_CARE_LOG_ID,
+  DREAM_AI_LAB_ORGANIZATION_ID,
+  JUNG_HAESUNG_PERSON_ID,
+  JUNG_HAESUNG_URL,
+} from '../../lib/entities'
 
 const technologyCanonical = 'https://dreamailab.com/technology'
 const technologyDescription =
@@ -41,9 +47,23 @@ const technologyJsonLd = {
   isPartOf: { '@type': 'WebSite', name: '드림에이아이랩', url: 'https://dreamailab.com' },
   about: {
     '@type': 'TechArticle',
+    '@id': AI_DIGITAL_CARE_LOG_ID,
     headline: 'AI디지털케어로그',
     description: technologyDescription,
     inLanguage: 'ko-KR',
+    author: {
+      '@type': 'Person',
+      '@id': JUNG_HAESUNG_PERSON_ID,
+      name: '정해성',
+      url: JUNG_HAESUNG_URL,
+      jobTitle: 'AI 연구자 · 공동창업자·CTO',
+    },
+    publisher: {
+      '@type': 'Organization',
+      '@id': DREAM_AI_LAB_ORGANIZATION_ID,
+      name: '드림에이아이랩',
+      url: 'https://dreamailab.com',
+    },
   },
 }
 
@@ -474,6 +494,13 @@ export default function Technology() {
           <h1 className="text-4xl md:text-5xl font-bold mb-6">AI디지털케어로그</h1>
           <p className="text-xl max-w-4xl mx-auto mb-6">
             표준 기록 → AI 분석 → 실행 연결 → 환류(학습). 하나의 데이터 파이프라인으로 서비스가 연결됩니다. {COMPANY_HERO_LINE}입니다.
+          </p>
+          <p className="mb-6 text-sm text-white/90">
+            설계·연구:{' '}
+            <Link href="/research/jung-haesung" className="font-semibold underline underline-offset-4">
+              AI 연구자 정해성
+            </Link>
+            {' '}· 공개 기술 정본과 변경 이력을 기준으로 설명합니다.
           </p>
           <div className="bg-white/10 rounded-2xl p-6 max-w-3xl mx-auto mb-8">
             <p className="text-lg font-semibold">

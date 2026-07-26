@@ -10,6 +10,8 @@
 | [EXTERNAL_READINESS_AND_CONTACT_PLAN.md](./EXTERNAL_READINESS_AND_CONTACT_PLAN.md) | 외부 방문·문의·웹 **구현 Phase** (로드맵과 연동) |
 | [CONTENT_SSOT_AND_NEWS_POLICY.md](./CONTENT_SSOT_AND_NEWS_POLICY.md) | 웹 vs 뉴스 아카이브 **톤·역할·모순 처리** |
 | [BUSINESS_SERVICES_SYNC.md](./BUSINESS_SERVICES_SYNC.md) | 홈·비즈니스·IR·서비스 페이지 **용어 동기화** |
+| [PUBLIC_ENTITY_AI_SEARCH_POLICY_2026-07.md](./PUBLIC_ENTITY_AI_SEARCH_POLICY_2026-07.md) | **법인·서비스·연구자·기술 정본**, 개인정보와 구조화 데이터 정책 |
+| [PRESS_NEWS_BLOG_DISTRIBUTION_PLAN_2026-07.md](./PRESS_NEWS_BLOG_DISTRIBUTION_PLAN_2026-07.md) | 보도자료·뉴스·블로그·검색·AI 발견성 운영 계획 |
 
 ## 서비스 스펙
 
