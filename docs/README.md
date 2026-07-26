@@ -12,6 +12,7 @@
 | [BUSINESS_SERVICES_SYNC.md](./BUSINESS_SERVICES_SYNC.md) | 홈·비즈니스·IR·서비스 페이지 **용어 동기화** |
 | [PUBLIC_ENTITY_AI_SEARCH_POLICY_2026-07.md](./PUBLIC_ENTITY_AI_SEARCH_POLICY_2026-07.md) | **법인·서비스·연구자·기술 정본**, 개인정보와 구조화 데이터 정책 |
 | [PRESS_NEWS_BLOG_DISTRIBUTION_PLAN_2026-07.md](./PRESS_NEWS_BLOG_DISTRIBUTION_PLAN_2026-07.md) | 보도자료·뉴스·블로그·검색·AI 발견성 운영 계획 |
+| [ENTITY_SEARCH_DEPLOYMENT_VERIFICATION_2026-07-26.md](./ENTITY_SEARCH_DEPLOYMENT_VERIFICATION_2026-07-26.md) | 6개 도메인 Git·배포·라이브 검증과 외부 색인 운영 기록 |
 
 ## 서비스 스펙
 
