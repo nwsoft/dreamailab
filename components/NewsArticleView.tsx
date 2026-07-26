@@ -66,6 +66,7 @@ export default function NewsArticleView({
   showLangSwitch = false,
 }: NewsArticleViewProps) {
   const t = labels[locale]
+  const isArchive = article.id <= 83
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -114,19 +115,21 @@ export default function NewsArticleView({
       <section className="py-16 lg:py-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <article className="bg-white rounded-2xl shadow-lg p-8 lg:p-12">
-            <div className="mb-8 rounded-xl border border-gray-200 bg-gray-50 p-5">
-              <p className="text-sm font-semibold text-gray-900 mb-2">{t.archiveTitle}</p>
-              <p className="text-sm text-gray-600 leading-relaxed mb-3">{t.archiveBody}</p>
-              <ul className="flex flex-wrap gap-x-4 gap-y-2 list-none p-0 m-0 text-sm">
-                {t.archiveLinks.map((link) => (
-                  <li key={link.href}>
-                    <Link href={link.href} className="text-primary-600 hover:text-primary-700 underline">
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            {isArchive && (
+              <div className="mb-8 rounded-xl border border-gray-200 bg-gray-50 p-5">
+                <p className="text-sm font-semibold text-gray-900 mb-2">{t.archiveTitle}</p>
+                <p className="text-sm text-gray-600 leading-relaxed mb-3">{t.archiveBody}</p>
+                <ul className="flex flex-wrap gap-x-4 gap-y-2 list-none p-0 m-0 text-sm">
+                  {t.archiveLinks.map((link) => (
+                    <li key={link.href}>
+                      <Link href={link.href} className="text-primary-600 hover:text-primary-700 underline">
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
             <div
               className="max-w-none text-gray-900 leading-relaxed"
               dangerouslySetInnerHTML={{ __html: article.content }}
