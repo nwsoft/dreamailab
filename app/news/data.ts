@@ -121,7 +121,7 @@ export const newsArticles: NewsArticle[] = [
 
       <figure class="mb-10">
         <img
-          src="/images/news/news-86-care-log-timeline.svg?v=1d1e32d"
+          src="/images/news/news-86-care-log-timeline.jpg?v=5cfee5e"
           alt="분절된 가정·센터·학교·병원 기록이 AI 디지털케어로그의 하나의 생애 시간축으로 연결되는 구조도"
           class="w-full rounded-xl border border-gray-100 bg-white"
           loading="lazy"
