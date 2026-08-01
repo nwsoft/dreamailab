@@ -47,6 +47,146 @@ export function getLocalizedArticle(
 
 export const newsArticles: NewsArticle[] = [
   {
+    id: 86,
+    title:
+      '[특집] 발달장애 치료는 왜 수십 년이 지나도 같은 질문을 반복하는가',
+    excerpt:
+      "AI 디지털케어로그 '자람이'가 흩어진 치료·교육·생활 기록을 하나의 생애 시간축으로 연결하고, 발달장애 치료 데이터 혁신에 도전하는 이유를 정리합니다.",
+    category: 'insight',
+    date: '2026-08-02',
+    image: '🌱',
+    featured: true,
+    author: '드림에이아이랩 미디어',
+    tags: [
+      '특집',
+      '자람이',
+      'AI 디지털케어로그',
+      '발달장애',
+      'RWD',
+      'RWE',
+      '정해성',
+      '치료 데이터',
+      '기록 연결',
+    ],
+    content: `
+      <p class="text-sm text-gray-500 mb-6">[특집 · 인사이트 · 2026-08-02]</p>
+
+      <p class="text-xl font-semibold text-gray-800 mb-4 leading-relaxed">
+        AI 디지털케어로그 &lsquo;자람이&rsquo;, 발달장애 치료 데이터 혁신에 도전하다
+      </p>
+
+      <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-4">
+        &ldquo;발달장애는 하루의 치료가 아니라 한 사람의 평생을 함께하는 여정입니다.&rdquo;
+      </p>
+
+      <figure class="mb-10">
+        <img
+          src="/images/news/news-86-jarame-care-log-journey.jpg"
+          alt="가정·센터·학교·병원의 기록이 하나의 생애 시간축으로 이어지는 자람이 AI 디지털케어로그 개념 일러스트"
+          class="w-full rounded-xl object-cover"
+          loading="eager"
+          decoding="async"
+        />
+        <figcaption class="mt-3 text-sm text-gray-500 text-center">
+          흩어진 돌봄 기록을 하나의 궤적으로 잇는 AI 디지털케어로그의 여정
+        </figcaption>
+      </figure>
+
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        우리 사회는 발달장애인을 위해 언어치료, 작업치료, 행동중재, 특수교육, 병원 진료, 복약 관리, 활동지원 등 수많은 치료와 교육, 복지 제도를 운영하고 있다. 수많은 전문가가 한 사람의 발전을 위해 헌신하지만, 정작 시간이 흐른 뒤 부모들은 다시 같은 질문을 던지게 된다.
+      </p>
+      <p class="text-lg text-gray-800 mb-8 leading-relaxed font-medium">
+        &ldquo;우리 아이에게 정말 효과가 있었던 치료는 무엇이었을까?&rdquo;
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        놀랍게도 이 질문에 객관적으로 답하기는 쉽지 않다. 치료는 끊임없이 계속되지만, 기록은 흩어지기 때문이다. 병원은 병원의 기록을, 치료센터는 치료기록을, 학교는 학교의 기록을 각각 따로 관리한다. 결국 보호자는 수년간의 치료 과정을 오직 자신의 기억에 의존해 새로운 기관에 다시 설명해야 하는 상황을 반복하게 된다.
+      </p>
+      <p class="text-lg text-gray-700 mb-10 leading-relaxed">
+        이처럼 발달장애 치료는 오랫동안 이어져 왔음에도, 치료 과정 전체를 하나의 생애 기록으로 연결하는 체계는 턱없이 부족했다. 바로 이 지점에서 AI 디지털케어로그 플랫폼 &lsquo;자람이&rsquo;가 발달장애 치료의 새로운 접근법을 제시하고 있다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">치료를 바꾸기 전에, 데이터를 먼저 연결하라</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        자람이가 해결하려는 문제는 의외로 단순하고 명확하다. 바로 &ldquo;치료를 바꾸기 전에 기록을 먼저 연결하자&rdquo;는 것이다.
+      </p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        DAL의 창업자이자 자람이 플랫폼을 직접 개발한 정해성 CTO(AI 연구자)는 이 분절된 구조를 혁신하기 위해 &lsquo;AI 디지털케어로그&rsquo;라는 개념을 최초로 고안했다.
+      </p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        기존의 발달장애 치료 환경에서는 한 치료사가 아이와 2년을 함께해도, 담당자가 바뀌면 수많은 정보가 유실되어 다시 처음부터 설명해야 했다. 병원은 센터에서 어떤 목표로 치료를 진행했는지 알기 어렵고, 학교는 가정에서 어떤 긍정적 변화가 있었는지 체감하기 어려웠다. 치료는 이어졌지만, 데이터는 단절되어 있었던 셈이다.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        정해성 CTO가 설계한 자람이는 이 구조의 근본적인 변화를 목표로 한다. 가정, 치료센터, 병원, 학교, 지역사회에서 발생하는 파편화된 기록들을 하나의 시간축으로 연결하고, 인공지능(AI)이 그 변화와 개입 반응을 분석할 수 있는 &lsquo;AI 디지털케어로그&rsquo;를 구축하는 것이 핵심이다.
+      </p>
+
+      <figure class="mb-10">
+        <img
+          src="/images/news/news-86-care-log-timeline.svg"
+          alt="분절된 가정·센터·학교·병원 기록이 AI 디지털케어로그의 하나의 생애 시간축으로 연결되는 구조도"
+          class="w-full rounded-xl border border-gray-100 bg-white"
+          loading="lazy"
+          decoding="async"
+        />
+        <figcaption class="mt-3 text-sm text-gray-500 text-center">
+          분절된 기록(Before)에서 동의·권한 기반의 생애 시간축(After)으로
+        </figcaption>
+      </figure>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">연구를 위한 데이터가 아닌, 삶에서 만들어지는 RWD</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        지금까지의 의료 연구는 대부분 제한된 연구 대상과 기간 안에서만 진행되어 왔다. 하지만 한 아이가 태어나 성인이 되기까지 20~30년 이상 치료와 교육이 이어지는 발달장애의 특성상, 그 긴 시간 동안 축적되는 실제 생활의 변화를 기존 연구 방식만으로 담아내기란 불가능에 가깝다.
+      </p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        자람이가 지향하는 바는 통제된 연구실에서만 생성되는 데이터가 아니라, 일상에서 자연스럽게 축적되는 실제사용데이터(Real World Data, RWD)이다.
+      </p>
+      <p class="text-lg text-gray-700 mb-10 leading-relaxed">
+        보호자가 남긴 일상생활 기록, 치료사가 작성한 세션 일지, 학교의 관찰 내용, 병원의 진료 정보가 철저한 동의와 권한 관리 아래 연결된다. 최근 의료계에서 RWD와 이를 분석해 도출하는 실제사용근거(RWE)의 중요성이 커지는 가운데, 장기간의 실제 데이터를 체계적으로 축적하는 자람이의 데이터 생태계는 향후 발달장애 연구와 서비스 발전에 중요한 기반이 될 전망이다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">의료데이터의 주인, 그리고 &ldquo;부모가 없는 미래&rdquo;를 위한 준비</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        AI 시대의 도래와 함께 제기되는 &ldquo;의료데이터는 누구의 것인가?&rdquo;라는 질문에 대해서도 자람이는 명확한 철학을 제시한다.
+      </p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        과거 기관 중심이었던 기록 관리에서 벗어나, 당사자와 보호자의 동의를 중심으로 데이터를 연결한다. AI는 이 범위 안에서 변화를 분석하고 리포트를 생성할 뿐, 최종 판단은 의료인과 치료사, 그리고 보호자 등 &lsquo;사람&rsquo;이 내리는 구조를 지향한다. AI가 사람을 대체하는 것이 아니라, 전문가의 판단을 든든하게 뒷받침하는 도구로 작동하는 것이다.
+      </p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        무엇보다 정해성 AI 연구자는 자람이의 장기적 비전을 설명하며 &ldquo;발달장애 지원은 부모가 살아 있는 동안만을 전제로 설계되어서는 안 된다&rdquo;고 강조해왔다.
+      </p>
+      <p class="text-lg text-gray-700 mb-10 leading-relaxed">
+        발달장애인의 삶은 부모의 삶보다 더 길어질 수 있다. 부모가 세상을 떠난 뒤, 아이가 어떤 말에 안정감을 느끼는지, 어떤 환경에서 불안을 보이는지, 어떤 교육이 도움이 되었는지를 증명할 기록은 어떻게 남길 것인가. 부모의 기억 속에만 머물다 사라질 정보들을 생애를 따라 이어지는 &lsquo;디지털케어로그&rsquo;로 남겨두는 사회, 그것이 자람이가 그리는 궁극적인 미래다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">AI를 넘어 로봇 시대까지, 발달장애 치료의 다음 단계</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        자람이의 설계는 현재의 AI 데이터 분석에서 멈추지 않는다. 장기적으로는 AI 에이전트와 돌봄 로봇 등 미래형 지원 시스템이 이 기록을 이해하고 활용할 수 있는 확장된 구조를 염두에 두고 있다. 사람을 대신하는 차가운 기계가 아니라, 오랜 시간 축적된 데이터를 바탕으로 개인의 고유한 특성과 의사소통 방식을 이해하는 &lsquo;평생의 동반자&rsquo;로서의 기술을 준비하는 것이다.
+      </p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        발달장애 치료는 여전히 발전 중이며, 누구에게 어떤 방식이 진정 장기적인 도움이 될지는 앞으로도 끊임없이 연구되어야 한다. 자람이는 그 답을 AI가 단독으로 내리겠다고 오만하게 선언하지 않는다. 다만, 삶의 기록을 연결하고 전문가의 지혜를 모아 시간이 흐를수록 더 나은 근거를 만들어 갈 수 있는 튼튼한 토대를 세우고 있다.
+      </p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        치료가 끝나도 기록은 끝나지 않는 구조. 부모가 남긴 하루의 기록과 치료사의 일지, 학교의 관찰이 수십 년의 궤적으로 이어질 때 비로소 열리는 새로운 가능성. 정해성 CTO가 세상에 내놓은 AI 디지털케어로그 &lsquo;자람이&rsquo;의 첫걸음이 발달장애 데이터 혁신의 진정한 출발점이 될 수 있을지 귀추가 주목된다.
+      </p>
+
+      <div class="bg-amber-50 border-l-4 border-amber-500 p-5 mb-8 rounded-r-lg">
+        <p class="text-amber-900 text-sm leading-relaxed">
+          <strong>중요:</strong> 자람이는 진단·처방을 대체하지 않습니다. AI는 분석·리포트로 전문가와 보호자의 판단을 돕는 도구이며, 의료·치료 결정은 전문가가 합니다.
+        </p>
+      </div>
+
+      <div class="bg-white border border-gray-200 rounded-xl p-6 mb-8">
+        <p class="font-semibold text-gray-900 mb-3">관련 콘텐츠</p>
+        <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+          <li><a href="/services/jarame" class="text-primary-600 underline">자람이 서비스 소개</a></li>
+          <li><a href="/news/80" class="text-primary-600 underline">발달장애 가족은 왜 늘 불안한가 (인사이트)</a></li>
+          <li><a href="/news/79" class="text-primary-600 underline">우리는 왜 자람이를 만드는가 (Founder Story)</a></li>
+          <li><a href="/technology/platform" class="text-primary-600 underline">AI디지털케어로그 기술 개요</a></li>
+          <li><a href="/research/jung-haesung" class="text-primary-600 underline">AI 연구자 정해성 프로필</a></li>
+        </ul>
+      </div>
+    `,
+  },
+  {
     id: 85,
     title: 'AI 디지털케어로그 정본 엔터티와 서비스별 적용 관계 공개',
     excerpt:

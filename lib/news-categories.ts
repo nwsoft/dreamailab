@@ -77,6 +77,7 @@ const META_BY_ID = Object.fromEntries(
 /** 레거시·오분류 보정: 기사 ID → 표준 카테고리 */
 export const NEWS_ARTICLE_CATEGORY_BY_ID: Record<number, NewsCategoryId> = {
   // 2026 최신
+  86: 'insight', // [특집] 발달장애 치료·자람이 데이터 혁신
   85: 'tech', // AI 디지털케어로그 정본 엔터티·도메인 적용 관계
   84: 'updates', // 노아AI v3.9.0.2 AI 커스텀·시장국면 안전성
   83: 'company', // 노아AI 통합 KPI 대시보드
