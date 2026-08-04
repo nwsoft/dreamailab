@@ -1,23 +1,74 @@
-<svg width="900" height="1320" viewBox="0 0 900 1320" xmlns="http://www.w3.org/2000/svg" fill="none">
-<rect width="900" height="1320" fill="#F8FAFC"/>
-<text x="450" y="74" text-anchor="middle" fill="#0F172A" font-size="44" font-weight="800">DAL 플랫폼 허브</text>
-<text x="450" y="116" text-anchor="middle" fill="#475569" font-size="24">하나의 AI디지털케어로그 위에 6개 도메인 확장</text>
-<rect x="190" y="170" width="520" height="92" rx="20" fill="#1D4ED8"/><text x="450" y="228" text-anchor="middle" fill="#FFFFFF" font-size="36" font-weight="700">DAL Platform</text>
-<text x="450" y="304" text-anchor="middle" fill="#64748B" font-size="42">↓</text>
-<rect x="150" y="332" width="600" height="104" rx="20" fill="#DBEAFE" stroke="#93C5FD"/><text x="450" y="397" text-anchor="middle" fill="#1E3A8A" font-size="34" font-weight="700">AI디지털케어로그</text>
-<text x="450" y="478" text-anchor="middle" fill="#64748B" font-size="42">↓</text>
-<text x="450" y="530" text-anchor="middle" fill="#334155" font-size="28" font-weight="600">핵심 6개 도메인</text>
-<g font-size="26" font-weight="700" text-anchor="middle">
-<rect x="90" y="570" width="230" height="120" rx="20" fill="#FFFFFF" stroke="#BFDBFE"/><text x="205" y="620" fill="#1E3A8A">발달장애</text><text x="205" y="660" fill="#64748B" font-size="20">JR</text>
-<rect x="335" y="570" width="230" height="120" rx="20" fill="#FFFFFF" stroke="#BFDBFE"/><text x="450" y="620" fill="#1E3A8A">시니어</text><text x="450" y="660" fill="#64748B" font-size="20">SL</text>
-<rect x="580" y="570" width="230" height="120" rx="20" fill="#FFFFFF" stroke="#BFDBFE"/><text x="695" y="620" fill="#1E3A8A">의료</text><text x="695" y="660" fill="#64748B" font-size="20">TC</text>
-<rect x="90" y="715" width="230" height="120" rx="20" fill="#FFFFFF" stroke="#BFDBFE"/><text x="205" y="765" fill="#1E3A8A">교육</text><text x="205" y="805" fill="#64748B" font-size="20">ED</text>
-<rect x="335" y="715" width="230" height="120" rx="20" fill="#FFFFFF" stroke="#BFDBFE"/><text x="450" y="765" fill="#1E3A8A">글로벌</text><text x="450" y="805" fill="#64748B" font-size="20">GC</text>
-<rect x="580" y="715" width="230" height="120" rx="20" fill="#FFFFFF" stroke="#BFDBFE"/><text x="695" y="765" fill="#1E3A8A">라이프</text><text x="695" y="805" fill="#64748B" font-size="20">VG</text>
-</g>
-<rect x="80" y="900" width="740" height="340" rx="24" fill="#FFFFFF" stroke="#E2E8F0"/>
-<text x="450" y="965" text-anchor="middle" fill="#0F172A" font-size="30" font-weight="700">모바일 요약 포인트</text>
-<text x="130" y="1030" fill="#334155" font-size="24">• 서비스 개수보다 기록 구조의 일관성이 핵심</text>
-<text x="130" y="1088" fill="#334155" font-size="24">• 같은 사람의 데이터가 도메인 간 확장 가능</text>
-<text x="130" y="1146" fill="#334155" font-size="24">• 공공·연구·사업 연계의 기반이 되는 인프라</text>
+<svg width="900" height="1480" viewBox="0 0 900 1480" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">DAL 플랫폼 허브 (모바일)</title>
+  <desc id="desc">AI디지털케어로그 코어와 6개 도메인을 세로로 정리한 모바일용 허브 다이어그램</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="900" y2="1480" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FAFC"/>
+      <stop offset="1" stop-color="#EEF2FF"/>
+    </linearGradient>
+    <linearGradient id="core" x1="80" y1="180" x2="820" y2="360" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1D4ED8"/>
+      <stop offset="1" stop-color="#4338CA"/>
+    </linearGradient>
+    <filter id="card" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#0F172A" flood-opacity="0.08"/>
+    </filter>
+    <style type="text/css"><![CDATA[
+      .t { font-family: Pretendard, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif; }
+    ]]></style>
+  </defs>
+
+  <rect width="900" height="1480" rx="28" fill="url(#bg)"/>
+
+  <text class="t" x="450" y="72" text-anchor="middle" font-size="40" font-weight="800" fill="#0F172A">하나의 코어 · 여섯 도메인</text>
+  <text class="t" x="450" y="118" text-anchor="middle" font-size="22" font-weight="600" fill="#475569">기록이 연결되고 AI가 판단·실행·학습합니다</text>
+
+  <!-- core -->
+  <g filter="url(#card)">
+    <rect x="70" y="160" width="760" height="220" rx="28" fill="url(#core)"/>
+    <text class="t" x="450" y="220" text-anchor="middle" font-size="18" font-weight="700" fill="#BFDBFE" letter-spacing="0.08em">CORE ARCHITECTURE</text>
+    <text class="t" x="450" y="270" text-anchor="middle" font-size="36" font-weight="800" fill="#FFFFFF">AI디지털케어로그</text>
+    <text class="t" x="450" y="316" text-anchor="middle" font-size="20" font-weight="600" fill="#E0E7FF">기록 연결 → 맥락 이해 → AI 판단</text>
+    <text class="t" x="450" y="348" text-anchor="middle" font-size="20" font-weight="600" fill="#E0E7FF">실행 → 결과 기록 → 학습 환류</text>
+  </g>
+
+  <text class="t" x="450" y="440" text-anchor="middle" font-size="28" font-weight="700" fill="#334155">적용 도메인</text>
+
+  <!-- domain list -->
+  <g class="t" filter="url(#card)" font-weight="700">
+    <rect x="70" y="470" width="760" height="110" rx="22" fill="#FFFFFF" stroke="#BFDBFE"/>
+    <circle cx="140" cy="525" r="28" fill="#DBEAFE"/><text x="140" y="533" text-anchor="middle" font-size="18" fill="#1D4ED8">JR</text>
+    <text x="200" y="512" font-size="28" fill="#0F172A">발달장애 · 자람이</text>
+    <text x="200" y="550" font-size="20" font-weight="600" fill="#64748B">치료·학습 기록을 시간축으로 연결</text>
+
+    <rect x="70" y="600" width="760" height="110" rx="22" fill="#FFFFFF" stroke="#BFDBFE"/>
+    <circle cx="140" cy="655" r="28" fill="#DCFCE7"/><text x="140" y="663" text-anchor="middle" font-size="18" fill="#15803D">SL</text>
+    <text x="200" y="642" font-size="28" fill="#0F172A">시니어·돌봄</text>
+    <text x="200" y="680" font-size="20" font-weight="600" fill="#64748B">시니어앤라이프 · 생활·돌봄 연속 관리</text>
+
+    <rect x="70" y="730" width="760" height="110" rx="22" fill="#FFFFFF" stroke="#BFDBFE"/>
+    <circle cx="140" cy="785" r="28" fill="#CFFAFE"/><text x="140" y="793" text-anchor="middle" font-size="18" fill="#0E7490">TC</text>
+    <text x="200" y="772" font-size="28" fill="#0F172A">의료·헬스케어</text>
+    <text x="200" y="810" font-size="20" font-weight="600" fill="#64748B">토탈케어로그 · 일상·복약·연계</text>
+
+    <rect x="70" y="860" width="760" height="110" rx="22" fill="#FFFFFF" stroke="#BFDBFE"/>
+    <circle cx="140" cy="915" r="28" fill="#EDE9FE"/><text x="140" y="923" text-anchor="middle" font-size="18" fill="#6D28D9">ED</text>
+    <text x="200" y="902" font-size="28" fill="#0F172A">교육 · 에듀케어로그</text>
+    <text x="200" y="940" font-size="20" font-weight="600" fill="#64748B">학습 상태 → 다음 행동 → 환류</text>
+
+    <rect x="70" y="990" width="760" height="110" rx="22" fill="#FFFFFF" stroke="#BFDBFE"/>
+    <circle cx="140" cy="1045" r="28" fill="#FEF3C7"/><text x="140" y="1053" text-anchor="middle" font-size="18" fill="#B45309">GC</text>
+    <text x="200" y="1032" font-size="28" fill="#0F172A">글로벌패밀리</text>
+    <text x="200" y="1070" font-size="20" font-weight="600" fill="#64748B">정착·행정·가족 라이프로그</text>
+
+    <rect x="70" y="1120" width="760" height="110" rx="22" fill="#FFFFFF" stroke="#BFDBFE"/>
+    <circle cx="140" cy="1175" r="28" fill="#DCFCE7"/><text x="140" y="1183" text-anchor="middle" font-size="18" fill="#166534">VG</text>
+    <text x="200" y="1162" font-size="28" fill="#0F172A">라이프스타일 · 베지케어</text>
+    <text x="200" y="1200" font-size="20" font-weight="600" fill="#64748B">식습관·영양 판단과 실행</text>
+  </g>
+
+  <rect x="70" y="1280" width="760" height="140" rx="24" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <text class="t" x="450" y="1335" text-anchor="middle" font-size="26" font-weight="800" fill="#0F172A">한눈에 보는 핵심</text>
+  <text class="t" x="450" y="1378" text-anchor="middle" font-size="20" font-weight="600" fill="#475569">서비스 개수보다 기록 구조의 일관성이 중요합니다</text>
+  <text class="t" x="450" y="1412" text-anchor="middle" font-size="20" font-weight="600" fill="#475569">NoahAI(금융)는 DAL과 별도 법인으로 운영됩니다</text>
 </svg>

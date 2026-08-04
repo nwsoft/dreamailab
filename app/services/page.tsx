@@ -254,8 +254,14 @@ export default function ServicePortfolio() {
             </div>
             <div className="w-full max-w-5xl mb-8 rounded-2xl overflow-hidden border border-blue-100 shadow-sm">
               <picture>
-                <source media="(max-width: 768px)" srcSet="/images/services/platform-hub-mobile.svg" />
-                <img src="/images/services/platform-hub.svg" alt="DAL 플랫폼 허브 구조 시각화" className="w-full h-auto object-contain" loading="lazy" decoding="async" />
+                <source media="(max-width: 768px)" srcSet="/images/services/platform-hub-mobile.svg?v=20260804" />
+                <img
+                  src="/images/services/platform-hub.svg?v=20260804"
+                  alt="하나의 AI디지털케어로그 코어 위에 6개 도메인이 연결된 DAL 플랫폼 허브"
+                  className="w-full h-auto object-contain"
+                  loading="lazy"
+                  decoding="async"
+                />
               </picture>
             </div>
             <div className="flex flex-wrap justify-center gap-3 mb-6">
@@ -311,8 +317,14 @@ export default function ServicePortfolio() {
               </div>
               <div className="w-full rounded-xl overflow-hidden border border-indigo-100 mb-6">
                 <picture>
-                  <source media="(max-width: 768px)" srcSet="/images/services/service-flow-mobile.svg" />
-                  <img src="/images/services/service-flow.svg" alt="서비스 연결 흐름도" className="w-full h-auto object-contain" loading="lazy" decoding="async" />
+                  <source media="(max-width: 768px)" srcSet="/images/services/service-flow-mobile.svg?v=20260804" />
+                  <img
+                    src="/images/services/service-flow.svg?v=20260804"
+                    alt="흩어진 기록이 한 사람 시간축으로 연결되고 AI 판단·실행·환류로 이어지는 서비스 연결 흐름"
+                    className="w-full h-auto object-contain"
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </picture>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -333,8 +345,14 @@ export default function ServicePortfolio() {
           >
             <div className="w-full rounded-xl overflow-hidden border border-blue-100 mb-6">
               <picture>
-                <source media="(max-width: 768px)" srcSet="/images/services/expansion-pillars-mobile.svg" />
-                <img src="/images/services/expansion-pillars.svg" alt="플랫폼 확장 4대 축" className="w-full h-auto object-contain" loading="lazy" decoding="async" />
+                <source media="(max-width: 768px)" srcSet="/images/services/expansion-pillars-mobile.svg?v=20260804" />
+                <img
+                  src="/images/services/expansion-pillars.svg?v=20260804"
+                  alt="기술 확장성·공공 정합성·RWD·RWE 환류·ESG 가치의 플랫폼 확장 4대 축"
+                  className="w-full h-auto object-contain"
+                  loading="lazy"
+                  decoding="async"
+                />
               </picture>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

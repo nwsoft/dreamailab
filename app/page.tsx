@@ -336,29 +336,40 @@ export default function Home() {
       <section className="py-12 lg:py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">하나의 플랫폼, 여러 도메인</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">하나의 코어, 여섯 도메인</h2>
             <p className="text-gray-600">
-              모든 서비스는 AI디지털케어로그 위에 올라갑니다. 아래 다이어그램은 서비스 허브와 동일한 구조를 요약합니다.
+              모든 서비스는 AI디지털케어로그 위에 올라갑니다. 기록이 연결되고 AI가 판단·실행한 뒤 결과를 다시 학습하는 구조가 같습니다.
             </p>
           </div>
           <div className="w-full max-w-5xl mx-auto mb-14 rounded-2xl overflow-hidden border border-blue-100 shadow-sm bg-white">
             <picture>
-              <source media="(max-width: 768px)" srcSet="/images/services/platform-hub-mobile.svg" />
-              <img src="/images/services/platform-hub.svg" alt="DAL 플랫폼 허브 구조" className="w-full h-auto object-contain" loading="lazy" decoding="async" />
+              <source media="(max-width: 768px)" srcSet="/images/services/platform-hub-mobile.svg?v=20260804" />
+              <img
+                src="/images/services/platform-hub.svg?v=20260804"
+                alt="하나의 AI디지털케어로그 코어 위에 발달장애·시니어·의료·교육·글로벌패밀리·라이프스타일 도메인이 연결된 DAL 플랫폼 허브"
+                className="w-full h-auto object-contain"
+                loading="lazy"
+                decoding="async"
+              />
             </picture>
           </div>
 
           <div className="text-center mb-8 max-w-3xl mx-auto">
-            <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">서비스 간 연결</h3>
+            <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">기록이 이어지는 여정</h3>
             <p className="text-gray-600 text-sm md:text-base leading-relaxed">
-              같은 사람의 기록이 도메인을 넘나들 수 있도록 연결 지향 구조를 설계합니다. 상세 연결 예시는 서비스 허브의 연결 지도를
-              참고하세요.
+              흩어진 가정·센터·병원 기록을 한 사람의 시간축으로 연결하고, AI 판단·실행·환류로 이어집니다. 상세 연결 예시는 서비스 허브를 참고하세요.
             </p>
           </div>
           <div className="w-full max-w-5xl mx-auto mb-10 rounded-2xl overflow-hidden border border-indigo-100 shadow-sm bg-white">
             <picture>
-              <source media="(max-width: 768px)" srcSet="/images/services/service-flow-mobile.svg" />
-              <img src="/images/services/service-flow.svg" alt="DAL 서비스 간 연결 흐름" className="w-full h-auto object-contain" loading="lazy" decoding="async" />
+              <source media="(max-width: 768px)" srcSet="/images/services/service-flow-mobile.svg?v=20260804" />
+              <img
+                src="/images/services/service-flow.svg?v=20260804"
+                alt="흩어진 기록이 한 사람 시간축으로 연결되고 AI 판단·실행·학습 환류로 이어지는 DAL 서비스 연결 흐름"
+                className="w-full h-auto object-contain"
+                loading="lazy"
+                decoding="async"
+              />
             </picture>
           </div>
 

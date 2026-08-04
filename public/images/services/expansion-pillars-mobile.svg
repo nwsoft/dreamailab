@@ -1,23 +1,53 @@
-<svg width="900" height="1180" viewBox="0 0 900 1180" xmlns="http://www.w3.org/2000/svg" fill="none">
-<rect width="900" height="1180" fill="#F8FAFC"/>
-<text x="450" y="72" text-anchor="middle" fill="#0F172A" font-size="42" font-weight="800">플랫폼 확장 4대 축</text>
-<text x="450" y="112" text-anchor="middle" fill="#475569" font-size="24">같은 기술 구조를 여러 시장으로 확장</text>
-<g>
-<rect x="80" y="170" width="740" height="190" rx="22" fill="#FFFFFF" stroke="#BFDBFE"/>
-<text x="120" y="225" fill="#1E3A8A" font-size="30" font-weight="700">VC 관점</text>
-<text x="120" y="270" fill="#334155" font-size="23">하나의 인프라를 여러 도메인에 반복 적용</text>
-<text x="120" y="312" fill="#334155" font-size="23">확장 비용 대비 효율이 높은 구조</text>
-<rect x="80" y="390" width="740" height="190" rx="22" fill="#FFFFFF" stroke="#BBF7D0"/>
-<text x="120" y="445" fill="#166534" font-size="30" font-weight="700">공공 관점</text>
-<text x="120" y="490" fill="#334155" font-size="23">분절된 사회 서비스 데이터 연결 기반</text>
-<text x="120" y="532" fill="#334155" font-size="23">취약계층 지원과 정책 정합성 강화</text>
-<rect x="80" y="610" width="740" height="190" rx="22" fill="#FFFFFF" stroke="#C4B5FD"/>
-<text x="120" y="665" fill="#6D28D9" font-size="30" font-weight="700">R&amp;D 관점</text>
-<text x="120" y="710" fill="#334155" font-size="23">표준화된 실사용 데이터로 실증 확장</text>
-<text x="120" y="752" fill="#334155" font-size="23">연구 결과를 현장 개선으로 환류</text>
-<rect x="80" y="830" width="740" height="190" rx="22" fill="#FFFFFF" stroke="#FDE68A"/>
-<text x="120" y="885" fill="#92400E" font-size="30" font-weight="700">ESG 관점</text>
-<text x="120" y="930" fill="#334155" font-size="23">사회적 가치와 사업 지속가능성 동시 확보</text>
-<text x="120" y="972" fill="#334155" font-size="23">돌봄·교육·건강 임팩트의 장기 측정 가능</text>
-</g>
+<svg width="900" height="1320" viewBox="0 0 900 1320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">플랫폼 확장 4대 축 (모바일)</title>
+  <desc id="desc">기술 확장성, 공공 정합성, RWD·RWE 환류, ESG 가치의 모바일용 4축 요약</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="900" y2="1320" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FAFC"/>
+      <stop offset="1" stop-color="#EEF2FF"/>
+    </linearGradient>
+    <linearGradient id="icon" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1D4ED8"/>
+      <stop offset="1" stop-color="#4F46E5"/>
+    </linearGradient>
+    <filter id="card" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#0F172A" flood-opacity="0.08"/>
+    </filter>
+    <style type="text/css"><![CDATA[
+      .t { font-family: Pretendard, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif; }
+    ]]></style>
+  </defs>
+
+  <rect width="900" height="1320" rx="28" fill="url(#bg)"/>
+  <text class="t" x="450" y="70" text-anchor="middle" font-size="38" font-weight="800" fill="#0F172A">플랫폼 확장 4대 축</text>
+  <text class="t" x="450" y="116" text-anchor="middle" font-size="22" font-weight="600" fill="#475569">같은 코어가 산업·공공·연구·가치로 확장</text>
+
+  <g class="t" filter="url(#card)">
+    <rect x="70" y="170" width="760" height="230" rx="24" fill="#FFFFFF" stroke="#BFDBFE"/>
+    <rect x="110" y="210" width="72" height="72" rx="18" fill="url(#icon)"/>
+    <text x="220" y="250" font-size="30" font-weight="800" fill="#0F172A">기술 확장성</text>
+    <text x="220" y="290" font-size="22" font-weight="600" fill="#475569">도메인만 바꿔 같은 판단·환류 구조 재사용</text>
+    <text x="110" y="350" font-size="20" font-weight="600" fill="#64748B">발달·돌봄·의료·교육·생활·금융까지</text>
+
+    <rect x="70" y="430" width="760" height="230" rx="24" fill="#FFFFFF" stroke="#BFDBFE"/>
+    <rect x="110" y="470" width="72" height="72" rx="18" fill="url(#icon)"/>
+    <text x="220" y="510" font-size="30" font-weight="800" fill="#0F172A">공공 정합성</text>
+    <text x="220" y="550" font-size="22" font-weight="600" fill="#475569">시범사업·정책 연계와 기관 데이터 표준</text>
+    <text x="110" y="610" font-size="20" font-weight="600" fill="#64748B">공공·연구·사업이 같은 기록 언어를 사용</text>
+
+    <rect x="70" y="690" width="760" height="230" rx="24" fill="#FFFFFF" stroke="#BFDBFE"/>
+    <rect x="110" y="730" width="72" height="72" rx="18" fill="url(#icon)"/>
+    <text x="220" y="770" font-size="30" font-weight="800" fill="#0F172A">RWD·RWE 환류</text>
+    <text x="220" y="810" font-size="22" font-weight="600" fill="#475569">실사용 기록과 근거가 다음 판단을 고도화</text>
+    <text x="110" y="870" font-size="20" font-weight="600" fill="#64748B">현장 데이터 → 분석 → 판단 개선</text>
+
+    <rect x="70" y="950" width="760" height="230" rx="24" fill="#FFFFFF" stroke="#BFDBFE"/>
+    <rect x="110" y="990" width="72" height="72" rx="18" fill="url(#icon)"/>
+    <text x="220" y="1030" font-size="30" font-weight="800" fill="#0F172A">ESG 가치</text>
+    <text x="220" y="1070" font-size="22" font-weight="600" fill="#475569">사회적 임팩트와 사업성이 함께 성장</text>
+    <text x="110" y="1130" font-size="20" font-weight="600" fill="#64748B">돌봄·교육·생활의 지속 가능한 인프라</text>
+  </g>
+
+  <rect x="70" y="1220" width="760" height="60" rx="16" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <text class="t" x="450" y="1258" text-anchor="middle" font-size="20" font-weight="700" fill="#334155">확장의 기준은 기능 추가가 아니라 기록·판단의 일관성</text>
 </svg>

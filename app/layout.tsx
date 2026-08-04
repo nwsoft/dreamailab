@@ -82,7 +82,6 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <head>
-        <link rel="preload" href="/og-image.png" as="image" type="image/png" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

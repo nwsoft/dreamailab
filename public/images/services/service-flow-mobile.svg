@@ -1,26 +1,90 @@
-<svg width="900" height="1260" viewBox="0 0 900 1260" xmlns="http://www.w3.org/2000/svg" fill="none">
-<rect width="900" height="1260" fill="#F8FAFC"/>
-<text x="450" y="72" text-anchor="middle" fill="#0F172A" font-size="42" font-weight="800">서비스 연결 흐름</text>
-<text x="450" y="112" text-anchor="middle" fill="#475569" font-size="24">사람의 여정은 한 서비스에서 끝나지 않습니다</text>
-<g>
-<rect x="120" y="170" width="660" height="120" rx="20" fill="#EFF6FF" stroke="#93C5FD"/>
-<text x="450" y="222" text-anchor="middle" fill="#1E3A8A" font-size="30" font-weight="700">1. 시작 도메인 기록</text>
-<text x="450" y="258" text-anchor="middle" fill="#475569" font-size="22">발달·의료·돌봄·교육 중 한 지점에서 시작</text>
-<text x="450" y="342" text-anchor="middle" fill="#64748B" font-size="38">↓</text>
-<rect x="120" y="380" width="660" height="120" rx="20" fill="#ECFEFF" stroke="#67E8F9"/>
-<text x="450" y="432" text-anchor="middle" fill="#0E7490" font-size="30" font-weight="700">2. 표준 기록 정리</text>
-<text x="450" y="468" text-anchor="middle" fill="#475569" font-size="22">같은 형식으로 상태·변화·리스크를 저장</text>
-<text x="450" y="552" text-anchor="middle" fill="#64748B" font-size="38">↓</text>
-<rect x="120" y="590" width="660" height="120" rx="20" fill="#F5F3FF" stroke="#C4B5FD"/>
-<text x="450" y="642" text-anchor="middle" fill="#5B21B6" font-size="30" font-weight="700">3. 도메인 간 연계 판단</text>
-<text x="450" y="678" text-anchor="middle" fill="#475569" font-size="22">필요 시 교육·의료·가족 지원으로 연결</text>
-<text x="450" y="762" text-anchor="middle" fill="#64748B" font-size="38">↓</text>
-<rect x="120" y="800" width="660" height="120" rx="20" fill="#FEF9C3" stroke="#FDE68A"/>
-<text x="450" y="852" text-anchor="middle" fill="#92400E" font-size="30" font-weight="700">4. 실행과 환류</text>
-<text x="450" y="888" text-anchor="middle" fill="#475569" font-size="22">다음 행동 결과가 다시 기록으로 돌아옴</text>
-</g>
-<rect x="90" y="980" width="720" height="220" rx="24" fill="#FFFFFF" stroke="#E2E8F0"/>
-<text x="450" y="1045" text-anchor="middle" fill="#0F172A" font-size="28" font-weight="700">핵심 메시지</text>
-<text x="140" y="1110" fill="#334155" font-size="23">• 단절된 서비스 이용을 하나의 여정으로 통합</text>
-<text x="140" y="1160" fill="#334155" font-size="23">• 기록이 쌓일수록 다음 연결의 정확도 향상</text>
+<svg width="900" height="1480" viewBox="0 0 900 1480" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">서비스 연결 흐름 (모바일)</title>
+  <desc id="desc">흩어진 기록이 한 사람 시간축으로 연결되고 AI 판단·실행·환류로 이어지는 모바일용 흐름도</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="900" y2="1480" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FAFC"/>
+      <stop offset="1" stop-color="#EEF2FF"/>
+    </linearGradient>
+    <linearGradient id="ai" x1="70" y1="980" x2="830" y2="1280" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1D4ED8"/>
+      <stop offset="1" stop-color="#4F46E5"/>
+    </linearGradient>
+    <filter id="card" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#0F172A" flood-opacity="0.08"/>
+    </filter>
+    <style type="text/css"><![CDATA[
+      .t { font-family: Pretendard, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif; }
+    ]]></style>
+  </defs>
+
+  <rect width="900" height="1480" rx="28" fill="url(#bg)"/>
+
+  <text class="t" x="450" y="70" text-anchor="middle" font-size="38" font-weight="800" fill="#0F172A">기록이 이어지는 여정</text>
+  <text class="t" x="450" y="116" text-anchor="middle" font-size="22" font-weight="600" fill="#475569">서비스는 달라도, 사람의 맥락은 하나입니다</text>
+
+  <!-- BEFORE -->
+  <text class="t" x="450" y="180" text-anchor="middle" font-size="20" font-weight="800" fill="#B91C1C">BEFORE · 흩어진 기록</text>
+  <g class="t" filter="url(#card)">
+    <rect x="70" y="210" width="240" height="120" rx="20" fill="#FFFFFF" stroke="#FECACA"/>
+    <text x="190" y="265" text-anchor="middle" font-size="26" font-weight="800" fill="#7F1D1D">가정</text>
+    <text x="190" y="300" text-anchor="middle" font-size="18" font-weight="600" fill="#9F1239">메모·사진</text>
+
+    <rect x="330" y="210" width="240" height="120" rx="20" fill="#FFFFFF" stroke="#FECACA"/>
+    <text x="450" y="265" text-anchor="middle" font-size="26" font-weight="800" fill="#7F1D1D">센터·학교</text>
+    <text x="450" y="300" text-anchor="middle" font-size="18" font-weight="600" fill="#9F1239">별도 문서</text>
+
+    <rect x="590" y="210" width="240" height="120" rx="20" fill="#FFFFFF" stroke="#FECACA"/>
+    <text x="710" y="265" text-anchor="middle" font-size="26" font-weight="800" fill="#7F1D1D">병원</text>
+    <text x="710" y="300" text-anchor="middle" font-size="18" font-weight="600" fill="#9F1239">진료기록</text>
+  </g>
+  <text class="t" x="450" y="370" text-anchor="middle" font-size="20" font-weight="700" fill="#94A3B8">연결되지 않음 → 맥락 단절</text>
+
+  <text class="t" x="450" y="430" text-anchor="middle" font-size="36" fill="#64748B">↓</text>
+
+  <!-- AFTER -->
+  <text class="t" x="450" y="490" text-anchor="middle" font-size="20" font-weight="800" fill="#1D4ED8">AFTER · 한 사람 시간축</text>
+  <rect x="90" y="530" width="720" height="14" rx="7" fill="#2563EB"/>
+  <g class="t" filter="url(#card)">
+    <rect x="70" y="570" width="360" height="100" rx="20" fill="#FFFFFF" stroke="#BFDBFE"/>
+    <text x="250" y="620" text-anchor="middle" font-size="24" font-weight="800" fill="#1E3A8A">자람이 · 시니어</text>
+    <text x="250" y="650" text-anchor="middle" font-size="18" font-weight="600" fill="#64748B">성장·돌봄 기록</text>
+
+    <rect x="470" y="570" width="360" height="100" rx="20" fill="#FFFFFF" stroke="#BFDBFE"/>
+    <text x="650" y="620" text-anchor="middle" font-size="24" font-weight="800" fill="#1E3A8A">토탈케어 · 에듀</text>
+    <text x="650" y="650" text-anchor="middle" font-size="18" font-weight="600" fill="#64748B">건강·학습 기록</text>
+
+    <rect x="70" y="690" width="360" height="100" rx="20" fill="#FFFFFF" stroke="#BFDBFE"/>
+    <text x="250" y="740" text-anchor="middle" font-size="24" font-weight="800" fill="#1E3A8A">GCC</text>
+    <text x="250" y="770" text-anchor="middle" font-size="18" font-weight="600" fill="#64748B">정착·가족 기록</text>
+
+    <rect x="470" y="690" width="360" height="100" rx="20" fill="#FFFFFF" stroke="#BFDBFE"/>
+    <text x="650" y="740" text-anchor="middle" font-size="24" font-weight="800" fill="#1E3A8A">베지케어</text>
+    <text x="650" y="770" text-anchor="middle" font-size="18" font-weight="600" fill="#64748B">식습관·영양</text>
+  </g>
+
+  <text class="t" x="450" y="850" text-anchor="middle" font-size="36" fill="#64748B">↓</text>
+
+  <!-- AI loop steps -->
+  <text class="t" x="450" y="910" text-anchor="middle" font-size="24" font-weight="800" fill="#0F172A">그 위에서 AI가 작동합니다</text>
+  <g class="t" filter="url(#card)">
+    <rect x="70" y="940" width="760" height="340" rx="28" fill="url(#ai)"/>
+    <text x="450" y="995" text-anchor="middle" font-size="18" font-weight="700" fill="#BFDBFE" letter-spacing="0.06em">LEARNING FEEDBACK LOOP</text>
+
+    <rect x="110" y="1025" width="320" height="90" rx="18" fill="#FFFFFF" fill-opacity="0.14"/>
+    <text x="270" y="1080" text-anchor="middle" font-size="24" font-weight="800" fill="#FFFFFF">1. 기록 연결</text>
+
+    <rect x="470" y="1025" width="320" height="90" rx="18" fill="#FFFFFF" fill-opacity="0.14"/>
+    <text x="630" y="1080" text-anchor="middle" font-size="24" font-weight="800" fill="#FFFFFF">2. 맥락 이해</text>
+
+    <rect x="110" y="1135" width="320" height="90" rx="18" fill="#FFFFFF" fill-opacity="0.14"/>
+    <text x="270" y="1190" text-anchor="middle" font-size="24" font-weight="800" fill="#FFFFFF">3. AI 판단·XAI</text>
+
+    <rect x="470" y="1135" width="320" height="90" rx="18" fill="#FFFFFF" fill-opacity="0.14"/>
+    <text x="630" y="1190" text-anchor="middle" font-size="24" font-weight="800" fill="#FFFFFF">4–6. 실행·환류</text>
+  </g>
+
+  <rect x="70" y="1320" width="760" height="110" rx="24" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <text class="t" x="450" y="1370" text-anchor="middle" font-size="24" font-weight="800" fill="#0F172A">핵심 메시지</text>
+  <text class="t" x="450" y="1408" text-anchor="middle" font-size="20" font-weight="600" fill="#475569">같은 사람의 맥락이 끊기지 않는 것이 목표입니다</text>
 </svg>
