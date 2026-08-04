@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
 import EnLandingPage from '../../../components/EnLandingPage'
+import { AI_DIGITAL_CARE_LOG_PUBLIC_EN } from '../../../lib/ai-digital-care-log-copy'
 import { absoluteUrl, buildPageMetadata } from '../../../lib/seo'
 
 export const metadata: Metadata = {
   ...buildPageMetadata({
     title: 'About Dream AI Lab',
-    description:
-      'Dream AI Lab (DAL) develops AI Digital Care Log technology for developmental disability, senior care, healthcare, and education—with social impact at the core.',
+    description: AI_DIGITAL_CARE_LOG_PUBLIC_EN,
     path: '/en/about',
     ogImageAlt: 'About Dream AI Lab',
   }),
@@ -25,19 +25,21 @@ export default function EnAboutPage() {
     <EnLandingPage
       title="About Dream AI Lab"
       subtitle="Company"
-      description="Founded in 2022, DAL is a technology company building AI Digital Care Log standards for care, health, and education—starting with Jarame for developmental disabilities."
+      description="Dream AI Lab develops and commercializes AI Digital Care Log as a universal AI data, judgment, action, and learning-feedback platform across human life."
       koPath="/about"
       sections={[
         {
           heading: 'Mission',
-          body: 'Turn “untreatable” welfare challenges into solvable problems through standardized data, multimodal AI, and cross-institution collaboration.',
+          body: 'Connect records from real life over time so AI can derive explainable judgments and next actions, learn from outcomes, and continuously improve personalized models.',
         },
         {
           heading: 'Leadership',
-          body: 'CTO Jung Haesung architected AI Digital Care Log and Noah AI; the team combines deep AI engineering with field-validated care platforms.',
+          body: 'AI researcher and CTO Jung Haesung first conceived and developed AI Digital Care Log. He first applied it to Jarame, then directly designed, developed, and commercialized NoahAI as a financial and investing infrastructure OS, and extended the architecture to Senior & Life, VeggieCare, and other real-world domains.',
         },
       ]}
       links={[
+        { label: 'Jung Haesung – Official Profile', href: '/en/research/jung-haesung' },
+        { label: 'AI Digital Care Log Technology', href: '/en/technology' },
         { label: 'Services', href: '/en/services' },
         { label: 'Contact', href: '/contact' },
       ]}

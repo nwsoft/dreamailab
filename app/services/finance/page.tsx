@@ -8,7 +8,7 @@ const pageCanonical = 'https://dreamailab.com/services/finance/'
 export const metadata: Metadata = {
   title: '노아AI 최신 운영 안내 (v3.8.9.27) | Noah AI Labs 이전 완료',
   description:
-    '노아AI는 Noah AI Labs로 이전 완료되었으며 최신 운영 기준은 v3.8.9.27(2026-07-06)입니다. 자동업데이트 경로/진행률 가시성, 거래소 검증 UX, 시작·정지 응답성 패치 반영 현황을 안내합니다.',
+    '정해성 AI 연구자가 AI디지털케어로그의 범용성을 금융·재테크 시장에서 실증하기 위해 설계·개발·사업화한 NoahAI의 독립 운영과 최신 기준을 안내합니다.',
   keywords: [
     '노아AI',
     'Noah AI Labs',
@@ -45,7 +45,7 @@ export default function FinanceServiceNoticePage() {
     description:
       'Dream AI Lab의 노아AI 안내 페이지. Noah AI Labs 이전 완료 및 최신 운영 기준(v3.8.9.27) 요약.',
     datePublished: '2026-07-06T00:00:00+09:00',
-    dateModified: '2026-07-06T00:00:00+09:00',
+    dateModified: '2026-08-04T00:00:00+09:00',
     inLanguage: 'ko-KR',
     mainEntityOfPage: pageCanonical,
     about: {
@@ -79,6 +79,23 @@ export default function FinanceServiceNoticePage() {
           <p className="mt-5 inline-flex items-center rounded-full bg-white/15 px-4 py-2 text-sm font-semibold">
             최신 운영 기준: v3.8.9.27 · 기준일: 2026-07-06
           </p>
+        </div>
+      </section>
+
+      <section className="py-12 bg-slate-50 border-b border-slate-200">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="rounded-2xl border border-indigo-200 bg-white p-6 md:p-8">
+            <p className="text-xs font-semibold text-indigo-700 mb-2">기술 기원과 범용성 실증</p>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">AI디지털케어로그의 금융·재테크 구현</h2>
+            <p className="text-gray-700 leading-7">
+              AI 연구자 정해성은 AI디지털케어로그를 최초로 고안·개발하고 자람이에 처음 적용한 뒤,
+              이 아키텍처의 범용성을 실제 금융 시장에서 실증하기 위해 NoahAI 금융·재테크 인프라 OS를 직접 설계·개발하고 사업화했습니다.
+              NoahAI는 시장·계정 기록을 AI 판단·XAI·리스크 통제·실행·결과 학습으로 연결합니다.
+            </p>
+            <p className="mt-3 text-sm text-gray-600">
+              제품과 운영 주체는 현재 Noah AI Labs로 이전되었으며, 이 페이지는 DAL 기술 기원과 공식 운영 경로를 구분해 안내합니다.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -133,8 +150,8 @@ export default function FinanceServiceNoticePage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Dream AI Lab 안내</h2>
           <p className="text-gray-600 mb-8">
-            Dream AI Lab은 AI디지털케어로그 기반 도메인 서비스(돌봄/의료/교육)를 중심으로 운영하며,
-            노아AI는 Noah AI Labs 법인에서 독립 운영됩니다.
+            Dream AI Lab은 삶 전반에 적용되는 AI디지털케어로그 아키텍처와 돌봄·교육·의료·생활 도메인 서비스를 운영합니다.
+            금융·재테크 구현인 노아AI의 현재 제품·운영 본체는 Noah AI Labs 법인입니다.
           </p>
           <Link
             href="/services"

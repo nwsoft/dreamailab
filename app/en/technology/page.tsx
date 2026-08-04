@@ -1,12 +1,17 @@
 import type { Metadata } from 'next'
 import EnLandingPage from '../../../components/EnLandingPage'
+import {
+  AI_DIGITAL_CARE_LOG_CANONICAL_EN,
+  AI_DIGITAL_CARE_LOG_FLOW_EN,
+  AI_DIGITAL_CARE_LOG_PUBLIC_EN,
+  AI_DIGITAL_CARE_LOG_REGULATED_BOUNDARY_EN,
+} from '../../../lib/ai-digital-care-log-copy'
 import { absoluteUrl, buildPageMetadata } from '../../../lib/seo'
 
 export const metadata: Metadata = {
   ...buildPageMetadata({
     title: 'Technology – AI Digital Care Log | Dream AI Lab',
-    description:
-      'AI Digital Care Log technology: standardized care records, multimodal AI, reinforcement learning, and middleware that powers Jarame, Noah AI, and the DAL service ecosystem.',
+    description: AI_DIGITAL_CARE_LOG_PUBLIC_EN,
     path: '/en/technology',
     ogImageAlt: 'Dream AI Lab Technology',
   }),
@@ -24,20 +29,29 @@ export default function EnTechnologyPage() {
   return (
     <EnLandingPage
       title="AI Digital Care Log"
-      subtitle="Core technology"
-      description="DAL's stack unifies sensitive care data with blockchain-grade protection, AI feedback loops, and cross-domain middleware—validated in finance (Noah AI) and developmental care (Jarame)."
+      subtitle="Universal AI data, judgment, and learning-feedback architecture"
+      description={AI_DIGITAL_CARE_LOG_PUBLIC_EN}
       koPath="/technology"
       sections={[
         {
           heading: 'What is AI Digital Care Log?',
-          body: 'A standard for recording, sharing, and learning from care data across institutions—enabling personalized plans instead of fragmented paper records.',
+            body: AI_DIGITAL_CARE_LOG_CANONICAL_EN,
         },
         {
-          heading: 'Noah AI engine',
-          body: 'Time-series and reinforcement-learning architecture proven on financial data, now feeding care-domain feedback and group reinforcement loops.',
+            heading: 'How it works',
+            body: AI_DIGITAL_CARE_LOG_FLOW_EN,
+          },
+          {
+            heading: 'Cross-domain implementation',
+            body: 'The same architecture has been designed and applied across developmental care through Jarame, financial and investing infrastructure through NoahAI, senior life through Senior & Life, and food, nutrition, and lifestyle through VeggieCare. Each domain advances its own data, judgment, execution, and feedback layers according to its operational maturity.',
+          },
+          {
+            heading: 'Regulated execution boundary',
+            body: AI_DIGITAL_CARE_LOG_REGULATED_BOUNDARY_EN,
         },
       ]}
       links={[
+        { label: 'Originator and Developer – Jung Haesung', href: '/en/research/jung-haesung' },
         { label: 'Technology (KO)', href: '/technology' },
         { label: 'EduCareLog', href: '/technology/educarelog' },
       ]}

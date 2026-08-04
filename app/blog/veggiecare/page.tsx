@@ -1,12 +1,13 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: '베지케어 기술블로그 | AI 영양 코파일럿 전략',
-  description: '베지케어의 AI 영양 코파일럿·알레르기 세이프 추천·1클릭 구매/구독 전략, UX 가치, KPI, 로드맵을 기술 관점에서 정리했습니다.',
+  title: '베지케어 기술블로그 | AI 영양 판단·실행·환류 전략',
+  description: 'AI디지털케어로그를 식습관·영양에 적용한 베지케어의 AI 판단, 알레르기 세이프 실행, 결과 환류와 단계별 로드맵을 정리했습니다.',
   keywords: '베지케어, 베지테리안, AI 레시피, 알레르기 세이프, 정기배송, 디지털케어로그, 기술블로그',
   openGraph: {
-    title: '베지케어 기술블로그 | AI 영양 코파일럿 전략',
-    description: 'AI 영양 코파일럿·알레르기 세이프 추천·1클릭 구매/구독 전략 정리',
+    title: '베지케어 기술블로그 | AI 영양 판단·실행·환류 전략',
+    description: 'AI 영양 판단·알레르기 세이프 실행·1클릭 구매/구독·결과 환류 전략',
     url: 'https://dreamailab.com/blog/veggiecare',
     images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
@@ -29,15 +30,15 @@ export default function VeggiecareTechBlog() {
       <header className="bg-white border-b">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-center">
           <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900">베지케어 기술블로그</h1>
-          <p className="mt-4 text-lg text-gray-600">AI 영양 코파일럿 · 알레르기 세이프 추천 · 1클릭 구매/구독</p>
+          <p className="mt-4 text-lg text-gray-600">AI 영양 판단 · 알레르기 세이프 실행 · 결과 학습·환류</p>
         </div>
       </header>
 
       <main className="py-6">
         <Section title="전략 포지셔닝">
           <ul>
-            <li><strong>핵심 컨셉</strong>: “AI 영양 코파일럿 + 알레르기 세이프 추천 + 1클릭 구매/구독”</li>
-            <li><strong>한 줄 정의</strong>: 개인의 식습관/케어로그/알레르겐을 반영한 맞춤 레시피를 AI가 제안하고, 재료는 1클릭으로 장바구니/정기배송까지 연결되는 채식 라이프 플랫폼</li>
+            <li><strong>핵심 컨셉</strong>: “AI 영양 판단 + 알레르기 세이프 실행 + 1클릭 구매/구독 + 결과 환류”</li>
+            <li><strong>한 줄 정의</strong>: 식습관·케어로그·알레르겐을 시간축으로 연결해 AI가 이유 있는 식단과 다음 행동을 제시하고, 실행 결과를 다시 개인화에 반영하는 채식 라이프 플랫폼</li>
             <li><strong>차별화 포인트(USP)</strong>:
               <ul>
                 <li>알레르기 안전 모드: 사용자 알레르겐을 포함한 레시피/상품 기본 제외</li>
@@ -83,6 +84,20 @@ export default function VeggiecareTechBlog() {
             <li>파트너 대시보드: 퍼널(노출→클릭→구매)과 상품 피드백 루프</li>
             <li>인기/트렌드 피드: 즐겨찾기/구매/조회 기반 서버 집계</li>
           </ul>
+        </Section>
+        <Section title="DAL 기술 적용과 현재 상태">
+          <p>
+            베지케어는 삶의 기록을 시간축으로 연결해 AI 판단·설명 가능한 실행·결과 학습으로 이어가는
+            AI디지털케어로그의 식습관·영양 적용 서비스입니다. 현재 핵심 경험은 Beta이며, 추천 점수화·구독 구성·
+            파트너 분석 등은 위 로드맵에 따라 단계적으로 검증합니다.
+          </p>
+          <p>
+            <Link href="/technology" className="text-primary-600 underline">AI디지털케어로그 기술 정본</Link>
+            {' · '}
+            <Link href="/services/veggie" className="text-primary-600 underline">베지케어 서비스 현황</Link>
+            {' · '}
+            <Link href="/research/jung-haesung" className="text-primary-600 underline">최초 고안·개발자 공식 프로필</Link>
+          </p>
         </Section>
       </main>
     </div>

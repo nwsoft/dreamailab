@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: '에듀케어로그(EduCareLog) – 학습 데이터 기반 개별화 교육 인프라',
     description:
-      '학생별 맞춤 학습 경로와 실행·환류를 도와 주는 교육 개인화 인프라. 드림에이아이랩 AI 디지털케어로그 교육 축.',
+      '학생별 기록을 AI 판단·맞춤 학습 경로·실행·결과 학습으로 연결하는 교육 개인화 인프라. 드림에이아이랩 AI디지털케어로그 교육 축.',
     url: 'https://dreamailab.com/services/educarelog',
     siteName: 'Dream AI Lab',
     type: 'website',
@@ -280,8 +280,8 @@ export default function EduCareLogService() {
               </span>
             </h1>
             <p className="text-base md:text-lg max-w-2xl mx-auto text-blue-100 mb-2.5 leading-relaxed break-keep">
-              드림에이아이랩 <strong className="font-semibold text-white">AI 디지털케어로그</strong>의 교육 축입니다. 공교·사교·가정을 서로
-              잇는 플랫폼이 아니라, <strong className="text-white">도입된 맥락 안에서</strong> 학생 맞춤을 돕습니다.
+              드림에이아이랩 <strong className="font-semibold text-white">AI디지털케어로그</strong>의 교육 축입니다. 공교·사교·가정을 무조건
+              합치는 플랫폼이 아니라, <strong className="text-white">도입된 맥락 안에서</strong> AI가 학생 상태를 판단하고 다음 학습 경로를 실행·환류합니다.
             </p>
             <p className="text-sm max-w-2xl mx-auto text-white/80 leading-relaxed">
               문제 정의·루프·도입 시나리오는 아래에서 이어집니다.
@@ -878,7 +878,7 @@ export default function EduCareLogService() {
               </ul>
               <p className="text-xs font-semibold text-indigo-700 mb-2">에듀케어로그</p>
               <p className="text-sm text-gray-800">
-                학습 전체 로그가 이어지고, 분석 → 실행(퀴즈·루틴·리포트) → 환류까지 같은 줄에서 돕니다.
+                학습 전체 로그가 이어지고, AI 판단 → 실행(퀴즈·루틴·리포트) → 결과 학습·환류가 같은 줄에서 작동합니다.
               </p>
             </div>
 

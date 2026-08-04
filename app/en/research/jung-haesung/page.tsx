@@ -1,6 +1,11 @@
 import type { Metadata } from 'next'
 import EnLandingPage from '../../../../components/EnLandingPage'
 import {
+  AI_DIGITAL_CARE_LOG_CANONICAL_EN,
+  AI_DIGITAL_CARE_LOG_FLOW_EN,
+  AI_DIGITAL_CARE_LOG_PUBLIC_EN,
+} from '../../../../lib/ai-digital-care-log-copy'
+import {
   AI_DIGITAL_CARE_LOG_ID,
   JUNG_HAESUNG_PERSON_ID,
   JUNG_HAESUNG_URL,
@@ -11,9 +16,9 @@ import { absoluteUrl } from '../../../../lib/seo'
 const englishUrl = absoluteUrl('/en/research/jung-haesung')
 
 export const metadata: Metadata = {
-  title: 'Jung Haesung – AI Researcher and AI Digital Care Log Architect',
+  title: 'Jung Haesung – Originator and Developer of AI Digital Care Log',
   description:
-    'Official research profile of Jung Haesung, co-founder and CTO of Dream AI Lab, with selected publications, books, and public technical references.',
+    'Official profile of Jung Haesung, the researcher who first conceived and developed AI Digital Care Log, co-founder and CTO of Dream AI Lab.',
   authors: [{ name: 'Jung Haesung', url: englishUrl }],
   alternates: {
     canonical: englishUrl,
@@ -26,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Jung Haesung – AI Researcher | Dream AI Lab',
     description:
-      'AI Digital Care Log architecture, selected publications, books, and official technical references.',
+      'Origin, cross-domain implementation, selected publications, books, and official technical references for AI Digital Care Log.',
     url: englishUrl,
     locale: 'en_US',
     type: 'profile',
@@ -50,7 +55,7 @@ export default function JungHaesungEnglishProfilePage() {
                 url: englishUrl,
                 name: 'Jung Haesung – AI Researcher',
                 inLanguage: 'en-US',
-                dateModified: '2026-08-03',
+                dateModified: '2026-08-04',
                 mainEntity: { '@id': JUNG_HAESUNG_PERSON_ID },
                 about: { '@id': AI_DIGITAL_CARE_LOG_ID },
               },
@@ -60,13 +65,21 @@ export default function JungHaesungEnglishProfilePage() {
       />
       <EnLandingPage
         title="Jung Haesung"
-        subtitle="AI Researcher · Co-founder & CTO · AI Digital Care Log Architect"
-        description="Jung Haesung researches accountable AI data architectures that connect decisions, logs, human review, and learning while preserving human responsibility."
+        subtitle="AI Researcher · Co-founder & CTO · Originator and Developer of AI Digital Care Log"
+        description={AI_DIGITAL_CARE_LOG_PUBLIC_EN}
         koPath="/research/jung-haesung"
         sections={[
           {
             heading: 'Roles',
-            body: 'Co-founder & CTO of Dream AI Lab; architect of AI Digital Care Log; design lead across Dream AI Lab services including Jarame, Senior & Life, Global Couple Care, and VeggieCare; founder of NoahAI Labs and architect of NoahAI.',
+            body: 'Jung Haesung first conceived and developed AI Digital Care Log. He designed and developed Jarame, the world’s first personalized treatment and learning platform for developmental disabilities; founded NoahAI Labs and designed, developed, and commercialized the NoahAI financial and investing infrastructure OS; and led the technology and product design of Senior & Life, Global Couple Care, VeggieCare, and other DAL services.',
+          },
+          {
+            heading: 'AI Digital Care Log',
+            body: AI_DIGITAL_CARE_LOG_CANONICAL_EN,
+          },
+          {
+            heading: 'Architecture flow',
+            body: AI_DIGITAL_CARE_LOG_FLOW_EN,
           },
           {
             heading: 'Selected publications',
@@ -78,7 +91,7 @@ export default function JungHaesungEnglishProfilePage() {
           },
           {
             heading: 'Research focus',
-            body: 'AI Digital Care Log, explainable decision support, longitudinal context, consent and auditability, and domain-specific feedback loops across care, education, lifestyle, and finance.',
+            body: 'Longitudinal context across human life, AI judgment layers, explainable AI, judgment–recommendation–action pipelines, outcome logging, learning feedback, personalization, consent, authority, and auditability across care, education, healthcare, lifestyle, and finance.',
           },
           {
             heading: 'Public attribution policy',

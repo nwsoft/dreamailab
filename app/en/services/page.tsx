@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import EnLandingPage from '../../../components/EnLandingPage'
+import { AI_DIGITAL_CARE_LOG_FLOW_EN } from '../../../lib/ai-digital-care-log-copy'
 import { absoluteUrl, buildPageMetadata } from '../../../lib/seo'
 
 export const metadata: Metadata = {
@@ -25,20 +26,20 @@ export default function EnServicesPage() {
     <EnLandingPage
       title="Service ecosystem hub"
       subtitle="Platform infrastructure"
-      description="DAL is not a list of separate apps—it is one AI Digital Care Log layer where developmental, senior, medical, education, wellness, and family domains connect and scale."
+      description="DAL applies one universal AI Digital Care Log architecture across developmental care, senior life, healthcare, education, finance, nutrition, lifestyle, and other domains."
       koPath="/services"
       sections={[
         {
-          heading: 'Jarame',
-          body: 'Developmental disability care platform linking home, school, center, and hospital data.',
+          heading: 'Shared architecture',
+          body: AI_DIGITAL_CARE_LOG_FLOW_EN,
         },
         {
-          heading: 'Senior & Life · Healthcare · EduCareLog',
-          body: 'Senior care, total care log, and individualized education—same record standard, same AI engine philosophy.',
+          heading: 'Jarame · Senior & Life · Healthcare · EduCareLog',
+          body: 'The same data, judgment, action, and learning-feedback architecture is applied to developmental care, senior life, healthcare, and individualized education, with each service clearly labeled by operating maturity.',
         },
         {
-          heading: 'Global Couple Care · VeggieCare',
-          body: 'Family settlement and lifestyle wellness extensions on the shared middleware stack.',
+          heading: 'NoahAI · VeggieCare · domain expansion',
+          body: 'NoahAI commercialized the architecture as a financial and investing infrastructure OS; VeggieCare applies it to food, nutrition, and lifestyle. Global Couple Care currently operates primarily as a community and matching service and is distinguished from direct Care Log deployment.',
         },
       ]}
       links={[

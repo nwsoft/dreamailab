@@ -4,6 +4,7 @@ import Footer from '../components/Footer'
 import PageClosingSection from '../components/PageClosingSection'
 import Link from 'next/link'
 import { COMPANY_HERO_LINE, COMPANY_META_LINE } from '../lib/company-copy'
+import { AI_DIGITAL_CARE_LOG_PUBLIC_KO } from '../lib/ai-digital-care-log-copy'
 import { IconApi, IconInvest, IconPartners, IconPublic, IconUser } from '../components/home-intent-icons'
 import { absoluteUrl, buildPageMetadata } from '../lib/seo'
 import {
@@ -48,7 +49,7 @@ export default function Home() {
       name: '정해성',
       url: JUNG_HAESUNG_URL,
       jobTitle: 'AI 연구자 · 공동창업자·CTO',
-      description: 'AI 디지털케어로그 설계·고안자',
+      description: 'AI디지털케어로그 최초 고안·개발자',
       knowsAbout: [
         '디지털케어로그',
         'AI디지털케어로그',
@@ -84,7 +85,7 @@ export default function Home() {
           itemOffered: {
             '@type': 'Service',
             name: 'AI디지털케어로그 플랫폼',
-            description: '표준화된 케어 기록을 AI가 분석하여 개인·가족·기관을 연결하는 융합 플랫폼'
+            description: AI_DIGITAL_CARE_LOG_PUBLIC_KO,
           }
         },
         {
@@ -195,15 +196,15 @@ export default function Home() {
       color: 'from-rose-500 to-pink-500',
       mark: 'TC',
       features: [
-        'AI 주치의형 코파일럿(기록·권고·진료 준비 보조)',
-        '일상 기록 → AI 분석 → 실행·연계 제안',
+        'AI 건강 판단 레이어(위험·근거·다음 행동)',
+        '일상 기록 → AI 판단·XAI → 실행 → 결과 학습',
         'FHIR 등 표준 스키마·웨어러블·자가기록 통합 지향',
-        '병원·약국·요양 연계(진료 보조 레이어)',
+        '병원·약국·요양 연계(법적 실행 권한 분리)',
         '항암 집중 관리 모드·리포트',
-        '정신건강 맞춤 대화형 챗봇·RWE·실증 연계 지향',
+        '정신건강 맞춤 대화형 챗봇·RWD/RWE 실증 연계 지향',
       ],
       innovation:
-        '디지털케어로그와 멀티모달 AI로 예방·치료·회복 전 주기를 돕고, 표준 데이터 위에서 의료진·환자·가족이 같은 그림을 보게 하는 것을 지향합니다.',
+        '디지털케어로그와 멀티모달 AI가 예방·치료·회복 전 주기의 맥락을 판단해 이유 있는 다음 행동을 제시하고, 결과를 다시 학습하는 구조를 지향합니다.',
     },
     {
       name: '글로벌커플케어',
@@ -256,7 +257,7 @@ export default function Home() {
               여러 서비스가 아니라, 하나의 데이터 플랫폼 위에 연결된 서비스 생태계입니다.
             </p>
             <div className="flex flex-wrap justify-center gap-2">
-              {['표준화', '데이터 인프라', '서비스 연결', '도메인 확장'].map((tag) => (
+              {['시간축 기록', 'AI 판단·XAI', '설명 가능한 실행', '학습·환류'].map((tag) => (
                 <span key={tag} className="px-3 py-1 rounded-full text-sm bg-white/10 border border-white/20">
                   {tag}
                 </span>
@@ -474,13 +475,13 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">AI디지털케어로그</h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">표준화된 케어 기록을 AI가 분석하여 개인·가족·기관을 연결하는 데이터 인프라입니다.</p>
+            <p className="text-gray-600 max-w-4xl mx-auto">{AI_DIGITAL_CARE_LOG_PUBLIC_KO}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            <TechCard title="표준 데이터 수집" desc="FHIR 기반의 안전하고 효율적인 데이터 환경" variant="collect" />
-            <TechCard title="정밀 AI 분석" desc="텍스트·행동·시계열 멀티모달 AI 활용" variant="ai" />
-            <TechCard title="맞춤형 실행" desc="개인별 케어 플랜·알림·리포트 제공" variant="action" />
-            <TechCard title="다기관 연동" desc="가정·센터·병원·요양기관 간 실시간 협업" variant="link" />
+            <TechCard title="시간축 기록 연결" desc="개인과 상황 중심으로 삶의 다양한 기록과 맥락 연결" variant="collect" />
+            <TechCard title="AI 판단·XAI" desc="누적 맥락을 분석해 판단하고 그 이유를 설명" variant="ai" />
+            <TechCard title="설명 가능한 실행" desc="판단·권고에서 멈추지 않고 적합한 다음 행동으로 연결" variant="action" />
+            <TechCard title="결과 학습·환류" desc="실행 결과를 다시 기록해 다음 판단과 개인화 모델 고도화" variant="link" />
           </div>
           <div className="text-center mb-8 max-w-3xl mx-auto">
             <h3 className="text-xl font-bold text-gray-900 mb-2">도메인별 핵심 플랫폼</h3>

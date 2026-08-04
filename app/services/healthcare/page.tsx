@@ -9,12 +9,12 @@ const pageCanonical = 'https://dreamailab.com/services/healthcare'
 export const metadata: Metadata = {
   title: '헬스케어AI 플랫폼 | AI 디지털케어로그 | 토탈케어로그',
   description:
-    '토탈케어로그는 표준화된 AI 디지털케어로그를 기반으로 일상 기록→AI 분석→병원/약국/요양 연계를 지향하는 DAL 헬스케어 축입니다. 현재 Service Status: Alpha(알파)이며, 항암집중 모드·정신건강 맞춤 대화 등 기능을 단계적으로 검증합니다.',
+    '토탈케어로그는 일상 기록을 시간축으로 연결해 AI 판단·XAI 권고·다음 행동·결과 학습으로 환류하는 DAL 헬스케어 축입니다. 현재 Alpha 단계로 항암집중·정신건강 등 기능을 검증합니다.',
   alternates: { canonical: pageCanonical },
   openGraph: {
     title: '토탈케어로그 | AI 디지털케어로그 · DAL 헬스케어 축',
     description:
-      '일상 기록·AI 분석·권고·의료 연계를 한 줄기로 지향. 드림에이아이랩 DAL 헬스케어 축 (Alpha).',
+      '일상 기록·AI 판단·XAI 권고·실행·결과 학습을 한 줄기로 검증하는 드림에이아이랩 헬스케어 축 (Alpha).',
     url: pageCanonical,
     siteName: '드림에이아이랩',
     type: 'website',
@@ -43,7 +43,7 @@ export default function HealthcareService() {
     {
       who: '병원·약국·케어 기관',
       pain: '내원 순간 정보 위주라 일상 경과가 비어 있고, 순응·생활 데이터가 돌아오지 않습니다.',
-      gain: '표준 요약·로그 연계로 상담·준비를 같은 표에서 시작하는 협업을 지향합니다(EMR 대체가 아닌 보조 레이어).',
+      gain: '표준 시간축과 AI 판단 근거로 일상 경과·위험·다음 행동을 같은 맥락에서 확인하는 구조를 지향합니다(Alpha).',
     },
     {
       who: '공공·연구·제약',
@@ -163,8 +163,9 @@ export default function HealthcareService() {
             <h3 className="text-sm font-semibold text-cyan-800 mb-4 text-center">DAL 철학과 맞닿는 기술 축</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               <div className="bg-cyan-50/60 rounded-2xl border border-cyan-200 p-5 text-sm text-gray-700 leading-relaxed">
-                <strong>AI 주치의형 코파일럿:</strong> 일상 케어로그를 읽고 진료 준비·복약·생활 습관 권고를 <strong>보조</strong>합니다.
-                진단·처방을 대체하지 않고, 사용자와 의료진이 같은 맥락에서 대화할 수 있게 하는 층을 지향합니다.
+                <strong>AI 판단 레이어:</strong> 일상 케어로그의 누적 맥락을 분석해 위험 신호, 복약·생활 습관 판단,
+                이유가 설명된 권고와 다음 행동을 도출하고 결과를 다시 학습하는 구조를 검증합니다.
+                의료 진단·처방은 법률과 의료전문가의 권한 체계를 따릅니다.
               </div>
               <div className="bg-cyan-50/60 rounded-2xl border border-cyan-200 p-5 text-sm text-gray-700 leading-relaxed">
                 <strong>표준·연동:</strong> FHIR·HL7 등 표준 스키마와 웨어러블·자가기록을 같은 파이프라인에서 다루어, 병원·약국·요양과
@@ -181,7 +182,8 @@ export default function HealthcareService() {
           <div className="text-center mb-10">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">올바른 의료 문화 — 정보 비대칭을 완화합니다</h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
-              과장·광고 중심의 정보 대신, <strong>근거 기반</strong> 설명과 <strong>투명한 기대치</strong>를 제공합니다. 사용자가 스스로 이해하고 결정하도록 돕습니다.
+              과장·광고 중심의 정보 대신 AI가 장기 맥락을 판단해 <strong>근거와 이유</strong>, <strong>다음 행동</strong>을 제시합니다.
+              의료 진단·처방은 의료전문가의 법적 권한을 따릅니다.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
@@ -233,7 +235,7 @@ export default function HealthcareService() {
               <p className="text-sm text-gray-700"><strong>변화 후:</strong> 케어 성과로 평가 → 신뢰 기반 매칭</p>
             </div>
           </div>
-          <p className="mt-6 text-center text-xs text-gray-500">본 서비스는 의료교육·의사결정을 돕는 정보 제공을 목표로 하며, 구체적 진단·치료는 의료전문가 판단을 따릅니다.</p>
+          <p className="mt-6 text-center text-xs text-gray-500">AI는 기록의 맥락을 분석해 판단 근거와 다음 행동을 제시합니다. 의료 진단·처방 등 법적 의료행위는 의료전문가의 권한과 책임을 따릅니다.</p>
         </div>
       </section>
 
@@ -347,7 +349,7 @@ export default function HealthcareService() {
           <div className="text-center mb-10">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">전 생애 케어 흐름 — 한눈에</h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
-              아이에서 시니어까지, 기록이 이어지고 AI가 보조하며 필요할 때 의료와 연결됩니다.
+              아이에서 시니어까지 기록이 이어지고, AI가 맥락을 판단해 이유 있는 다음 행동을 제시하며 결과를 다시 학습합니다.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-5 gap-4 text-sm">
@@ -540,42 +542,46 @@ export default function HealthcareService() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">어떻게 작동하나 — AI 디지털케어로그 파이프라인</h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
-              수집 → 표준화 → AI 분석 → 권고 → 연계, 5단계로 일상 데이터를 <strong>실사용 증거(RWE)</strong>로 전환합니다.
+              기록 연결 → 맥락 이해 → AI 분석·판단 → 설명 가능한 실행 → 결과 기록 → 학습·환류
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="bg-white rounded-xl p-6 shadow-lg text-center">
               <div className="mb-2 flex justify-center text-cyan-700"><MarketingIcon name="download" className="h-8 w-8" /></div>
-              <h3 className="font-bold text-gray-900 mb-2">1. 수집</h3>
-              <p className="text-sm text-gray-700">앱·음성·웨어러블·설문으로 자동/수동 수집</p>
+              <h3 className="font-bold text-gray-900 mb-2">1. 기록 연결</h3>
+              <p className="text-sm text-gray-700">앱·음성·웨어러블·설문 기록을 개인·상황 중심 시간축으로 연결</p>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-lg text-center">
               <div className="mb-2 flex justify-center text-cyan-700"><MarketingIcon name="settings" className="h-8 w-8" /></div>
-              <h3 className="font-bold text-gray-900 mb-2">2. 표준화</h3>
-              <p className="text-sm text-gray-700">통일된 스키마로 정규화 (의료 상호운용성)</p>
+              <h3 className="font-bold text-gray-900 mb-2">2. 맥락 이해</h3>
+              <p className="text-sm text-gray-700">표준 스키마와 장기 변화로 증상·복약·생활의 전후 맥락 구성</p>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-lg text-center">
               <div className="mb-2 flex justify-center text-cyan-700"><MarketingIcon name="brain" className="h-8 w-8" /></div>
-              <h3 className="font-bold text-gray-900 mb-2">3. AI 분석</h3>
-              <p className="text-sm text-gray-700">개인 기준치·추세·이상치·트리거 탐지</p>
+              <h3 className="font-bold text-gray-900 mb-2">3. AI 분석·판단</h3>
+              <p className="text-sm text-gray-700">개인 기준치·추세·이상치·트리거를 분석해 위험과 다음 행동 판단</p>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-lg text-center">
               <div className="mb-2 flex justify-center text-cyan-700"><MarketingIcon name="spark" className="h-8 w-8" /></div>
-              <h3 className="font-bold text-gray-900 mb-2">4. 권고</h3>
+              <h3 className="font-bold text-gray-900 mb-2">4. 설명 가능한 실행</h3>
               <p className="text-sm text-gray-700">
-                행동 가이드·복약 스케줄·식단 개선 제안을 통해, 
-                의료진과 상의할 수 있는 <strong>질문 포인트</strong>를 정리해 줍니다.
+                XAI 근거와 행동 가이드·복약 일정·식단 실행안을 제시하고 권한에 따라 연계
               </p>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-lg text-center">
               <div className="mb-2 flex justify-center text-cyan-700"><MarketingIcon name="link" className="h-8 w-8" /></div>
-              <h3 className="font-bold text-gray-900 mb-2">5. 연계</h3>
-              <p className="text-sm text-gray-700">병원/약국/요양/가족과 리포트·알림 공유</p>
+              <h3 className="font-bold text-gray-900 mb-2">5. 결과 기록</h3>
+              <p className="text-sm text-gray-700">행동·진료·복약 이후 반응과 변화를 같은 시간축에 다시 기록</p>
+            </div>
+            <div className="bg-white rounded-xl p-6 shadow-lg text-center">
+              <div className="mb-2 flex justify-center text-cyan-700"><MarketingIcon name="chart" className="h-8 w-8" /></div>
+              <h3 className="font-bold text-gray-900 mb-2">6. 학습·환류</h3>
+              <p className="text-sm text-gray-700">결과를 다음 판단과 개인화 모델에 환류하며 Alpha 단계에서 범위를 검증</p>
             </div>
           </div>
           <div className="mt-8 bg-cyan-600 text-white rounded-xl p-6 shadow-lg">
             <p className="text-center text-lg font-semibold">
-              이 파이프라인은 <strong>RWE(실사용 증거)</strong> 생성으로 이어집니다. 자세한 연구 협력과 학습 방법은 
+              실제 생활에서 축적되는 <strong>RWD</strong>와 그 분석에서 도출되는 <strong>RWE</strong>로 이어집니다. 자세한 연구 협력과 학습 방법은
               <a href="#rwe" className="underline font-bold">아래 '데이터·연구 협력(RWE)'</a>에서 확인하세요.
             </p>
           </div>
@@ -766,7 +772,7 @@ export default function HealthcareService() {
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-5">
                   <h4 className="font-bold text-white mb-2 flex items-center gap-2"><MarketingIcon name="robot" className="h-5 w-5" />개인화</h4>
                   <p className="text-sm text-white/90">
-                    동의된 범위에서 패턴을 반영한 안내는 반복 입력을 줄이고, 필요 시 전문가에게 넘길 질문을 정리하는 데 쓰입니다.
+                    동의된 범위에서 AI가 누적 패턴을 판단해 이유 있는 건강 행동과 다음 단계를 제시하고, 결과를 다시 개인화에 반영합니다.
                   </p>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-5">
@@ -838,10 +844,10 @@ export default function HealthcareService() {
               </p>
             </div>
             <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-6 shadow-lg">
-              <h3 className="font-bold text-gray-900 mb-3 text-lg flex items-center gap-2"><MarketingIcon name="dna" className="h-5 w-5 text-cyan-700" /><span>RWE 데이터 모델</span></h3>
+              <h3 className="font-bold text-gray-900 mb-3 text-lg flex items-center gap-2"><MarketingIcon name="dna" className="h-5 w-5 text-cyan-700" /><span>RWD·RWE 모델</span></h3>
               <p className="text-sm text-gray-700">
-                실사용 데이터로 질병 패턴·약물 반응·임상 질문을 다루는 데 활용할 수 있습니다. 
-                제약·연구 파트너십을 통해 <strong>동의·거버넌스 하에 재현 가능한 데이터 자산</strong>을 쌓는 방향을 지향합니다.
+                실사용데이터(RWD)로 질병 패턴·약물 반응·임상 질문을 분석하고 실제사용근거(RWE)를 도출할 수 있습니다.
+                제약·연구 파트너십을 통해 <strong>동의·거버넌스 하에 재현 가능한 데이터와 근거</strong>를 쌓는 방향을 지향합니다.
               </p>
             </div>
             <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-6 shadow-lg">
@@ -1052,12 +1058,13 @@ export default function HealthcareService() {
             </div>
             <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-6 shadow-lg">
               <h3 className="font-bold text-gray-900 mb-2">3. 강화학습</h3>
-              <p className="text-sm text-gray-700">개인 반응 피드백을 반영해 용량·시간·조합 안내를 다듬는 방향을 지향합니다(의료 결정은 전문가에게).</p>
+              <p className="text-sm text-gray-700">개인 반응 피드백을 정책에 반영해 판단·행동 가이드를 다듬는 연구 모듈입니다(Alpha 단계). 처방·조정은 의료전문가의 권한을 따릅니다.</p>
             </div>
           </div>
           <div className="mt-8 bg-indigo-600 text-white rounded-xl p-6 shadow-lg text-center">
             <p className="text-lg font-semibold">
-              <span className="text-yellow-300">지향:</span> 기록과 피드백을 바탕으로 약물·용량·타이밍을 <strong>의료진과 상의할 질문 포인트</strong>로 정리하고, 순응을 돕는 안내를 제공합니다(처방·조정은 전문가 판단).
+              <span className="text-yellow-300">Alpha 검증:</span> 기록과 피드백을 바탕으로 AI가 위험·순응·생활 맥락을 판단하고,
+              이유 있는 다음 행동을 제시합니다. 처방·용량 조정은 의료전문가의 법적 권한을 따릅니다.
             </p>
           </div>
         </div>
@@ -1066,9 +1073,10 @@ export default function HealthcareService() {
       {/* 6h. Business — 데이터·연구 협력 (RWE) */}
       <section id="rwe" className="py-16 lg:py-24 bg-gradient-to-r from-blue-700 to-cyan-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-6">데이터·연구 협력 — 실사용 증거(RWE)로 신약 개발·임상 지원</h2>
+          <h2 className="text-3xl font-bold mb-6">데이터·연구 협력 — 실사용데이터(RWD)와 실제사용근거(RWE)</h2>
           <p className="text-xl mb-4 max-w-3xl mx-auto text-blue-100">
-            <strong>AI 디지털케어로그</strong>로 축적되는 <strong>실사용데이터(RWE)</strong>는 신약 개발, 약물 효과 추적, 치매 예방·임상 등에서 새로운 통찰을 제공합니다.
+            <strong>AI디지털케어로그</strong>로 축적되는 <strong>실사용데이터(RWD)</strong>와 그 분석에서 도출되는
+            <strong> 실제사용근거(RWE)</strong>는 신약 개발, 약물 효과 추적, 치매 예방·임상 등에서 새로운 통찰을 제공합니다.
           </p>
           <p className="text-lg max-w-3xl mx-auto text-blue-100">
             병원·연구기관·제약사와의 공동 연구 및 데이터 사업이 가능한 구조로 설계되어 있습니다.

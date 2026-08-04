@@ -2,6 +2,10 @@ import {
   getCategoryName as getNewsCategoryName,
   getNewsCategoriesForFilter,
 } from '../../lib/news-categories'
+import {
+  AI_DIGITAL_CARE_LOG_PUBLIC_EN,
+  AI_DIGITAL_CARE_LOG_PUBLIC_KO,
+} from '../../lib/ai-digital-care-log-copy'
 
 export interface NewsArticleLocale {
   title: string
@@ -110,13 +114,13 @@ export const newsArticles: NewsArticle[] = [
         자람이가 해결하려는 문제는 의외로 단순하고 명확하다. 바로 &ldquo;치료를 바꾸기 전에 기록을 먼저 연결하자&rdquo;는 것이다.
       </p>
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        AI 연구자 정해성은 이 분절된 구조를 혁신하기 위해 &lsquo;AI 디지털케어로그&rsquo;라는 개념을 최초로 고안했다.
+        AI 연구자 정해성은 이 분절된 구조를 혁신하기 위해 &lsquo;AI디지털케어로그&rsquo;를 최초로 고안하고 직접 개발했다.
       </p>
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
         기존의 발달장애 치료 환경에서는 한 치료사가 아이와 2년을 함께해도, 담당자가 바뀌면 수많은 정보가 유실되어 다시 처음부터 설명해야 했다. 병원은 센터에서 어떤 목표로 치료를 진행했는지 알기 어렵고, 학교는 가정에서 어떤 긍정적 변화가 있었는지 체감하기 어려웠다. 치료는 이어졌지만, 데이터는 단절되어 있었던 셈이다.
       </p>
       <p class="text-lg text-gray-700 mb-8 leading-relaxed">
-        정해성 CTO가 설계한 자람이는 이 구조의 근본적인 변화를 목표로 한다. 가정, 치료센터, 병원, 학교, 지역사회에서 발생하는 파편화된 기록들을 하나의 시간축으로 연결하고, 인공지능(AI)이 그 변화와 개입 반응을 분석할 수 있는 &lsquo;AI 디지털케어로그&rsquo;를 구축하는 것이 핵심이다.
+        정해성 CTO가 설계·개발한 자람이는 AI디지털케어로그를 처음 적용한 세계 최초 발달장애 맞춤형 치료·학습 플랫폼이다. ${AI_DIGITAL_CARE_LOG_PUBLIC_KO} 자람이에서는 가정·치료센터·병원·학교·지역사회 기록을 아이와 상황 중심의 시간축으로 연결해 이 구조를 발달장애 치료·학습에 적용한다.
       </p>
 
       <figure class="mb-10">
@@ -148,7 +152,7 @@ export const newsArticles: NewsArticle[] = [
         AI 시대의 도래와 함께 제기되는 &ldquo;의료데이터는 누구의 것인가?&rdquo;라는 질문에 대해서도 자람이는 명확한 철학을 제시한다.
       </p>
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        과거 기관 중심이었던 기록 관리에서 벗어나, 당사자와 보호자의 동의를 중심으로 데이터를 연결한다. AI는 이 범위 안에서 변화를 분석하고 리포트를 생성할 뿐, 최종 판단은 의료인과 치료사, 그리고 보호자 등 &lsquo;사람&rsquo;이 내리는 구조를 지향한다. AI가 사람을 대체하는 것이 아니라, 전문가의 판단을 든든하게 뒷받침하는 도구로 작동하는 것이다.
+        과거 기관 중심이었던 기록 관리에서 벗어나, 당사자와 보호자의 동의와 권한을 중심으로 데이터를 연결한다. AI 판단 레이어는 이 범위 안에서 장기 맥락과 개입 반응을 분석하고, XAI로 이유를 설명하며, 적합한 판단·권고·다음 행동을 도출한다. 실행 결과는 다시 기록되어 다음 판단과 개인화 모델을 고도화한다.
       </p>
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
         무엇보다 정해성 CTO는 자람이의 장기적 비전을 설명하며 &ldquo;발달장애 지원은 부모가 살아 있는 동안만을 전제로 설계되어서는 안 된다&rdquo;고 강조해왔다.
@@ -162,7 +166,7 @@ export const newsArticles: NewsArticle[] = [
         자람이의 설계는 현재의 AI 데이터 분석에서 멈추지 않는다. 장기적으로는 AI 에이전트와 돌봄 로봇 등 미래형 지원 시스템이 이 기록을 이해하고 활용할 수 있는 확장된 구조를 염두에 두고 있다. 사람을 대신하는 차가운 기계가 아니라, 오랜 시간 축적된 데이터를 바탕으로 개인의 고유한 특성과 의사소통 방식을 이해하는 &lsquo;평생의 동반자&rsquo;로서의 기술을 준비하는 것이다.
       </p>
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        발달장애 치료는 여전히 발전 중이며, 누구에게 어떤 방식이 진정 장기적인 도움이 될지는 앞으로도 끊임없이 연구되어야 한다. 자람이는 그 답을 AI가 단독으로 내리겠다고 오만하게 선언하지 않는다. 다만, 삶의 기록을 연결하고 전문가의 지혜를 모아 시간이 흐를수록 더 나은 근거를 만들어 갈 수 있는 튼튼한 토대를 세우고 있다.
+        발달장애 치료는 여전히 발전 중이며, 누구에게 어떤 방식이 장기적인 도움이 되는지는 실제 삶의 결과로 계속 검증되어야 한다. 자람이는 이 과정을 단발성 답변이나 보고서로 끝내지 않는다. 삶의 기록과 실행 결과를 연결해 AI가 이유 있는 판단과 다음 행동을 도출하고, 그 결과를 다시 학습함으로써 시간이 흐를수록 더 나은 근거와 개인화 모델을 발전시킨다.
       </p>
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
         치료가 끝나도 기록은 끝나지 않는 구조. 부모가 남긴 하루의 기록과 치료사의 일지, 학교의 관찰이 수십 년의 궤적으로 이어질 때 비로소 열리는 새로운 가능성. 정해성 CTO가 세상에 내놓은 AI 디지털케어로그 &lsquo;자람이&rsquo;의 첫걸음이 발달장애 데이터 혁신의 진정한 출발점이 될 수 있을지 귀추가 주목된다.
@@ -170,7 +174,7 @@ export const newsArticles: NewsArticle[] = [
 
       <div class="bg-amber-50 border-l-4 border-amber-500 p-5 mb-8 rounded-r-lg">
         <p class="text-amber-900 text-sm leading-relaxed">
-          <strong>중요:</strong> 자람이는 진단·처방을 대체하지 않습니다. AI는 분석·리포트로 전문가와 보호자의 판단을 돕는 도구이며, 의료·치료 결정은 전문가가 합니다.
+          <strong>법적 실행 권한:</strong> 의료 진단·처방 등 법적 자격과 책임이 필요한 행위는 해당 법률과 의료전문가의 권한 체계를 따릅니다. 이는 자람이 AI의 데이터·판단·학습 구조가 아니라 서비스별 실행 권한의 경계입니다.
         </p>
       </div>
 
@@ -209,7 +213,7 @@ export const newsArticles: NewsArticle[] = [
     content: `
       <p class="text-lg text-gray-700 mb-8 leading-relaxed">
         드림에이아이랩은 <strong>AI 디지털케어로그(AI Digital Care Log, DAL)</strong>를
-        의사결정·기록·사람 검토·학습을 연결하는 범용 아키텍처로 정의합니다. 기술의 정본 설명은
+        다음과 같이 설명합니다. <strong>${AI_DIGITAL_CARE_LOG_PUBLIC_KO}</strong> AI 연구자 정해성이 최초로 고안·개발한 이 기술의 정본 설명은
         <a href="/technology/" class="text-primary-600 underline">드림에이아이랩 기술 페이지</a>에서 관리하고,
         연구자 정보는 <a href="/research/jung-haesung/" class="text-primary-600 underline">AI 연구자 정해성 공식 프로필</a>에서 관리합니다.
       </p>
@@ -243,8 +247,9 @@ export const newsArticles: NewsArticle[] = [
           'Dream AI Lab has published canonical references for AI Digital Care Log, AI researcher Jung Haesung, and the domain-specific relationship among Jarame, Senior & Life, Global Couple Care, VeggieCare, and NoahAI Labs.',
         content: `
           <p class="text-lg text-gray-700 mb-8 leading-relaxed">
-            Dream AI Lab defines <strong>AI Digital Care Log (DAL)</strong> as an architecture connecting decisions,
-            logs, human review, and learning. The canonical technology description is maintained on the
+            Dream AI Lab defines <strong>AI Digital Care Log (DAL)</strong> as follows:
+            <strong>${AI_DIGITAL_CARE_LOG_PUBLIC_EN}</strong> AI researcher Jung Haesung first conceived and developed
+            the architecture. Its canonical technology description is maintained on the
             <a href="/en/technology/" class="text-primary-600 underline">Dream AI Lab technology page</a>, while
             researcher attribution is maintained on the
             <a href="/en/research/jung-haesung/" class="text-primary-600 underline">official Jung Haesung profile</a>.
@@ -387,7 +392,7 @@ export const newsArticles: NewsArticle[] = [
       </p>
 
       <p class="text-lg text-gray-700 mb-8 leading-relaxed">
-        노아AI는 드림에이아이랩에서 분리된 금융 AI 서비스로, 시장·계정 데이터를 바탕으로 판단을 보조하고 위험 신호와 실행 전 통제 과정을 기록하는 금융 의사결정 인프라를 지향한다. 실제 주문과 자금 이동은 사용자의 계정과 외부 거래소·증권사 API 조건에 따라 수행되며, 노아AI가 수익을 보장하거나 자산을 직접 운용하는 구조는 아니다.
+        노아AI는 드림에이아이랩에서 분리된 금융 AI 서비스로, 시장·계정 데이터를 시간축으로 연결해 AI가 시장 국면·신호·위험을 판단하고 XAI 근거를 설명하며, 정책을 통과한 실행 결과를 다시 학습하는 금융·재테크 인프라 OS다. 실제 주문과 자금 이동의 권한·책임은 사용자 계정, 외부 거래소·증권사 API 조건과 관련 법률을 따르며, 노아AI는 수익을 보장하지 않는다.
       </p>
 
       <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">1일·7일·30일·90일 단위로 운영 상태 확인</h2>
@@ -566,7 +571,7 @@ export const newsArticles: NewsArticle[] = [
   {
     id: 81,
     title: '일상 기록이 진료 근거로… 발달장애 통합 플랫폼 자람이, AI 디지털 케어로그 실사용 검증 확대',
-    excerpt: '자람이가 발달장애인의 일상, 치료, 약물, 교육 기록을 하나로 연결하는 AI 디지털 케어로그의 실사용 검증을 확대한다. 보호자는 진료용 리포트로 병원 준비를 돕고, 의료진은 약물 반응과 생활 변화를 시계열로 확인할 수 있다.',
+    excerpt: '자람이가 발달장애인의 일상·치료·약물·교육 기록을 시간축으로 연결하고, AI 판단·XAI·다음 행동·결과 학습으로 환류하는 AI디지털케어로그의 실사용 검증을 확대한다.',
     category: 'press',
     date: '2026-07-15',
     image: '📰',
@@ -583,23 +588,23 @@ export const newsArticles: NewsArticle[] = [
       '약물 반응 추적',
       '보호자 기록',
       '치료사 기록',
-      '의사결정 지원',
+      'AI 판단 레이어',
       '디지털 헬스케어',
     ],
     content: `
       <p class="text-sm text-gray-500 mb-6">[보도자료 · 2026-07-15]</p>
 
       <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-4">
-        발달장애인의 일상, 치료, 약물 복용, 교육 기록을 하나로 연결하는 AI 기반 디지털 케어로그 플랫폼 <strong>‘자람이’</strong>가 본격적인 실사용 검증에 나선다. 드림에이아이랩은 보호자·치료사·활동지원사·치료센터를 대상으로 실제 환경에서의 사용성을 확인하고, 발달장애 분야에 최적화된 기록·분석 인프라를 고도화할 계획이라고 15일 밝혔다.
+        발달장애인의 일상, 치료, 약물 복용, 교육 기록을 하나로 연결하는 AI디지털케어로그 플랫폼 <strong>‘자람이’</strong>가 본격적인 실사용 검증에 나선다. ${AI_DIGITAL_CARE_LOG_PUBLIC_KO} 자람이는 이 범용 구조를 발달장애 치료·학습의 장기 맥락에 적용한다.
       </p>
 
       <p class="text-lg text-gray-700 mb-8 leading-relaxed">
-        자람이는 발달장애 분야에서 일상 데이터를 수집하고, 이를 개인 맞춤형 치료와 교육에 활용할 수 있는 실사용데이터(RWD, Real-World Data)로 축적하는 것을 목표로 한다. 나아가 장기적으로는 실제 현장의 기록을 임상과 교육에 연결하는 실사용근거(RWE, Real-World Evidence) 기반으로 발전시켜, 개인별 특성에 맞는 치료·교육 의사결정을 지원하는 통합 플랫폼으로 확장한다.
+        자람이는 발달장애 분야의 일상 데이터를 실사용데이터(RWD, Real-World Data)로 축적하고, 실제 현장의 실행 결과를 분석해 실사용근거(RWE, Real-World Evidence)를 도출한다. AI 판단 레이어는 이 장기 맥락에서 치료·교육 판단과 다음 행동을 XAI 근거와 함께 제시하고, 결과를 다시 개인화 모델에 환류한다.
       </p>
 
       <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">기억 대신 리포트로, 진료 준비를 바꾸다</h2>
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        자람이의 핵심은 흩어진 기록을 단순 저장하는 데 있지 않다. 보호자와 치료사가 일상에서 남긴 정보를 시계열로 정리해, 의료진이 실제 진료 현장에서 바로 참고할 수 있는 리포트로 제공하는 데 있다. 보호자는 수개월간의 변화를 기억에 의존해 설명하지 않아도 되고, 의료진은 아이의 상태 변화를 보다 객관적으로 살필 수 있다.
+        자람이의 핵심은 흩어진 기록을 단순 저장하거나 리포트로 요약하는 데 있지 않다. 보호자와 치료사가 남긴 시계열 맥락을 AI가 분석·판단하고, 변화 원인·위험 신호·다음 행동을 설명 가능한 근거와 함께 제시한다. 진료와 치료 이후의 결과도 다시 기록되어 이후 판단을 고도화한다.
       </p>
       <ul class="list-disc list-inside text-gray-700 space-y-2 mb-8 ml-2">
         <li><strong>생체·행동 데이터:</strong> 수면, 식사량, 감정 변화, 문제행동</li>
@@ -614,12 +619,12 @@ export const newsArticles: NewsArticle[] = [
         발달장애인의 약물 반응은 진료실 안의 짧은 관찰만으로는 충분히 파악하기 어렵다. 졸림, 수면 패턴 변화, 공격성이나 자해 행동의 증감, 불안과 예민도 변화, 식욕 변화 등은 가정과 센터 등 실제 생활 공간에서 먼저 관찰되는 경우가 많다. 그러나 기존에는 이런 변화가 보호자의 기억이나 단편적인 메모에 의존해 의료진이 처방을 조율하기 어려웠다.
       </p>
       <p class="text-lg text-gray-700 mb-8 leading-relaxed">
-        자람이 플랫폼은 보호자, 치료사, 활동지원사가 각기 다른 공간에서 관찰한 변화를 시간순으로 통합해, 의료진이 처방 조정과 경과 판단에 참고할 수 있도록 돕는다.
+        자람이 플랫폼은 보호자, 치료사, 활동지원사가 각기 다른 공간에서 관찰한 변화를 시간순으로 통합해 AI가 약물 반응과 위험 가능성을 판단하고 근거를 제시한다. 이 판단은 의료진의 법적 권한 아래 처방 조정과 경과 관리에 연결된다.
       </p>
 
       <div class="bg-amber-50 border-l-4 border-amber-500 p-5 mb-8 rounded-r-lg">
         <p class="text-amber-900 text-sm leading-relaxed">
-          <strong>주의:</strong> 자람이는 약물의 치료 효과를 AI가 임의로 판정하거나 의료진의 처방을 대체하는 진단 시스템이 아니다. 일상 변화를 객관적인 지표로 시각화해 의료진의 판단을 돕는 의사결정 지원 도구다.
+          <strong>법적 실행 권한:</strong> 자람이 AI는 일상 맥락과 약물 반응을 분석해 위험 판단, 근거와 다음 행동을 제시한다. 의료 진단·처방과 약물 조정은 해당 법률과 의료전문가의 권한·책임 체계를 따른다.
         </p>
       </div>
 
@@ -893,7 +898,7 @@ export const newsArticles: NewsArticle[] = [
         <p class="text-gray-700 leading-relaxed italic">
           "발달장애 가족이 시스템의 빈틈을 혼자 메우는 시대를 끝내고 싶었습니다. 자람이는 그 빈틈을 연결하는 인프라가 되기 위해 시작됐습니다."
         </p>
-        <p class="text-gray-600 text-sm mt-3">— 정해성, AI디지털케어로그 최초 고안자</p>
+        <p class="text-gray-600 text-sm mt-3">— 정해성, AI디지털케어로그 최초 고안·개발자</p>
       </div>
 
       <h2 class="text-2xl font-bold text-gray-900 mb-4">우리는 왜 포기하지 않는가</h2>
@@ -1686,7 +1691,7 @@ export const newsArticles: NewsArticle[] = [
       </p>
 
       <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">📊 아이별 타임라인 &amp; AI 분석 리포트</h2>
-      <p class="text-lg text-gray-700 mb-4 leading-relaxed">흩어진 기록은 <strong>시간순 타임라인</strong>으로 모입니다. AI는 다음을 돕습니다.</p>
+      <p class="text-lg text-gray-700 mb-4 leading-relaxed">흩어진 기록은 <strong>아이 중심 시간축</strong>으로 연결됩니다. AI는 장기 맥락을 판단해 다음 결과를 도출합니다.</p>
       <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6 ml-2">
         <li>반복 패턴 요약 (예: 수면 부족 → 학교 집중 저하 → 저녁 문제행동)</li>
         <li>약물·치료·학교 환경 변화 전후 비교</li>
@@ -1694,7 +1699,7 @@ export const newsArticles: NewsArticle[] = [
       </ul>
       <div class="bg-amber-50 border-l-4 border-amber-500 p-5 mb-8 rounded-r-lg">
         <p class="text-amber-900 text-sm leading-relaxed">
-          <strong>중요:</strong> 자람이 AI는 <strong>진단·처방·치료 결정을 대신하지 않습니다.</strong> 전문가 판단을 보조하는 요약·패턴 정리 도구입니다.
+          <strong>법적 실행 권한:</strong> 자람이 AI는 장기 맥락을 분석해 이유 있는 판단·권고·다음 행동을 제시하고 결과를 다시 학습합니다. 의료 진단·처방은 해당 법률과 의료전문가의 권한·책임 체계를 따릅니다.
         </p>
       </div>
 
@@ -1718,7 +1723,7 @@ export const newsArticles: NewsArticle[] = [
   {
     id: 73,
     title: '발달장애 치료에서 RWE가 중요한 이유: 자람이 디지털케어로그의 기술 구조',
-    excerpt: 'RWE(실제생활근거)와 RWD가 발달장애 영역에서 왜 핵심인지, 자람이가 가정·학교·센터·병원 데이터를 아이 중심 타임라인으로 연결하는 기술 구조와 AI의 역할·한계를 정해성 CTO의 설계 관점에서 설명합니다.',
+    excerpt: '발달장애 현장의 실사용데이터(RWD)와 그 분석에서 도출되는 실제사용근거(RWE), 자람이 AI의 판단·XAI·실행·학습 환류 구조를 정해성 CTO의 설계 관점에서 설명합니다.',
     category: 'tech',
     date: '2026-07-06',
     image: '🔬',
@@ -1870,24 +1875,24 @@ export const newsArticles: NewsArticle[] = [
         <li><strong>가정:</strong> 기억·설문이 아닌 구조화된 일지로 진료·상담 준비</li>
         <li><strong>학교:</strong> 센터·가정 맥락을 반영한 IEP·관찰 공유</li>
         <li><strong>센터:</strong> 학교·가정 변화와 연계한 중재 조정</li>
-        <li><strong>병원:</strong> 제한된 진료 시간 안에서 <strong>실제생활근거</strong> 기반 히스토리 파악</li>
-        <li><strong>연구·정책:</strong> 동의·비식별 전제 하 RWE 축적 가능성 (파일럿 단계)</li>
+        <li><strong>병원:</strong> 제한된 진료 시간 안에서 장기 실사용데이터(RWD)와 AI 판단 근거 확인</li>
+        <li><strong>연구·정책:</strong> 동의·비식별 전제 하 RWD 축적과 RWE 도출 가능성 (파일럿 단계)</li>
       </ul>
 
       <h2 class="text-2xl font-bold text-gray-900 mb-4">6. 정해성 CTO의 설계 철학</h2>
       <div class="bg-primary-50 border-l-4 border-primary-600 p-6 mb-8 rounded-r-lg">
         <p class="text-lg text-gray-800 leading-relaxed italic mb-4">
-          "발달장애 치료의 가장 큰 문제를 전문가 부족만으로 보지 않았다. 진짜 문제는 아이를 둘러싼 <strong>실제 생활 데이터가 연결되지 않는 구조</strong>다. 자람이는 특정 명의에게만 가능했던 깊은 관찰·맥락 분석을, 부모·학교·센터·병원이 함께 기록하는 디지털케어로그와 AI 분석으로 확장하는 것이 목표다. AI가 의사를 대신하는 게 아니라, 모든 전문가가 아이를 더 입체적으로 이해할 수 있도록 <strong>실제 생활 근거</strong>를 만드는 인프라다."
+          "발달장애 치료의 가장 큰 문제를 전문가 부족만으로 보지 않았다. 진짜 문제는 아이를 둘러싼 <strong>실제 생활 데이터가 연결되지 않는 구조</strong>다. 자람이는 부모·학교·센터·병원의 기록을 아이 중심 시간축으로 연결하고, AI가 장기 맥락을 판단해 이유와 다음 행동을 제시하며, 실행 결과를 다시 학습하는 구조다. 의료 진단·처방의 법적 권한과 AI 판단·학습 아키텍처는 구분해야 한다."
         </p>
         <p class="text-gray-600 text-sm">— 정해성 CTO, 드림에이아이랩</p>
       </div>
 
       <h2 class="text-2xl font-bold text-gray-900 mb-4">7. 정리</h2>
       <p class="text-lg text-gray-700 mb-4 leading-relaxed">
-        발달장애 치료에서 RWE가 중요한 이유는 한 문장으로 요약됩니다. <strong>아이는 검사실이 아니라 생활 속에서 자라기 때문</strong>입니다. 하루짜리 검사보다 수 주~수 개월의 생활 기록이, 한 기관의 관점보다 가정·학교·센터·병원이 함께 남긴 기록이 아이를 훨씬 정확하게 설명합니다.
+        발달장애 치료에서 RWD와 RWE가 중요한 이유는 한 문장으로 요약됩니다. <strong>아이는 검사실이 아니라 생활 속에서 자라기 때문</strong>입니다. 수 주~수 개월의 생활 기록은 RWD가 되고, 한 기관을 넘어 연결된 데이터를 분석해 도출한 결과는 더 나은 RWE로 발전합니다.
       </p>
       <p class="text-lg text-gray-700 mb-8 leading-relaxed">
-        자람이 디지털케어로그는 이 흩어진 기록을 <strong>아이 중심의 단일 타임라인</strong>으로 모으고, 동의·권한 안에서 안전하게 공유하며, AI가 요약·패턴 분석으로 전문가의 판단을 돕는 구조입니다. AI는 진단하거나 처방하지 않습니다. 대신 모든 전문가가 아이를 더 입체적으로 볼 수 있도록 <strong>실제 생활 근거(RWE)</strong>를 만드는 인프라 역할을 합니다.
+        자람이 AI디지털케어로그는 흩어진 기록을 <strong>아이 중심의 단일 타임라인</strong>으로 연결하고, AI 판단 레이어가 장기 맥락을 분석해 XAI 근거, 판단·권고와 다음 행동을 제시합니다. 실행 결과는 다시 실사용데이터(RWD)로 기록되고, 분석을 통해 실제사용근거(RWE)와 개인화 모델을 지속적으로 고도화합니다.
       </p>
 
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
@@ -1898,7 +1903,7 @@ export const newsArticles: NewsArticle[] = [
   {
     id: 72,
     title: '우리 아이의 발달장애 검사는 정말 충분한 정보를 바탕으로 이루어지고 있을까?',
-    excerpt: '몇 주 대기, 수십만~백만 원 검사비, 낯선 환경의 하루 관찰, 부모의 기억에 의존한 설문——발달장애 조기개입의 골든타임을 놓치지 않으려면 기억이 아닌 실제생활근거(RWE)가 필요합니다. 자람이는 부모·학교·센터·병원의 디지털케어로그를 연결합니다.',
+    excerpt: '발달장애 조기개입에는 기억이 아닌 장기 실사용데이터(RWD)와 그 분석에서 도출되는 실제사용근거(RWE)가 필요합니다. 자람이는 부모·학교·센터·병원의 기록을 아이 중심 시간축으로 연결합니다.',
     category: 'insight',
     date: '2026-07-06',
     image: '❓',
@@ -1908,12 +1913,12 @@ export const newsArticles: NewsArticle[] = [
     i18n: {
       en: {
         title: 'Is Your Child\'s Developmental Disability Assessment Based on Enough Real-World Information?',
-        excerpt: 'Weeks of waiting, high test costs, one day in an unfamiliar room, parent recall on forms—early intervention needs Real World Evidence (RWE), not memory alone. Jarame connects Digital Care Logs across home, school, center, and hospital.',
+        excerpt: 'Early intervention needs longitudinal Real-World Data (RWD) and Real-World Evidence (RWE) derived from it—not memory alone. Jarame connects records across home, school, center, and hospital.',
         content: `
       <p class="text-sm text-gray-500 mb-6">[Press Release · 2026-07-06]</p>
 
       <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-red-500 pl-4">
-        If your child\'s care still depends on memory and questionnaires, it may not rest on enough real-world evidence. Developmental disability care and early intervention need <strong>RWE (Real World Evidence)</strong> from daily life—not a single test day.
+        If your child\'s care still depends on memory and questionnaires, it may not rest on enough evidence. Developmental disability care and early intervention need longitudinal <strong>RWD (Real-World Data)</strong> from daily life and <strong>RWE (Real-World Evidence)</strong> derived from its analysis—not a single test day.
       </p>
 
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
@@ -1945,15 +1950,15 @@ export const newsArticles: NewsArticle[] = [
         <li>Medication, sleep, mood, and behaviors stay unlinked</li>
       </ul>
 
-      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">Jarame: shared RWE Digital Care Log</h2>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">Jarame: RWD connected, evidence and actions derived</h2>
       <p class="text-lg text-gray-700 mb-4 leading-relaxed">
-        Dream AI Lab\'s <strong>Jarame</strong> connects daily Digital Care Logs from parents, teachers, therapists, and clinicians—and helps build child-level <strong>RWE</strong> with AI pattern support.
+        Dream AI Lab\'s <strong>Jarame</strong> connects daily records from parents, teachers, therapists, and clinicians on a child-centered timeline. Its AI judgment layer analyzes that context, explains its grounds, derives judgments and next actions, and learns from outcomes.
       </p>
       <div class="bg-gray-50 border border-gray-200 rounded-lg p-5 mb-6 font-medium text-gray-800">
         Poor sleep → lower school focus → weaker therapy response → evening challenging behaviors
       </div>
       <p class="text-lg text-gray-700 mb-8 leading-relaxed">
-        <strong>Jarame does not replace doctors.</strong> It connects the child\'s life outside the clinic so professionals can understand more accurately.
+        Medical diagnosis and prescribing remain within the applicable legal and clinical authority framework. That execution boundary does not limit Jarame\'s AI data, judgment, and learning-feedback architecture.
       </p>
 
       <div class="bg-primary-50 border-l-4 border-primary-600 p-6 mb-8 rounded-r-lg">
@@ -1977,7 +1982,7 @@ export const newsArticles: NewsArticle[] = [
       <p class="text-sm text-gray-500 mb-6">[보도자료 · 2026-07-06]</p>
 
       <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-red-500 pl-4">
-        우리 아이의 치료가 기억과 설문에 의존하고 있다면, 아직 충분한 근거 위에서 이루어지고 있지 않을 수 있습니다. 발달장애 맞춤형 치료·조기개입에는 아이의 <strong>실제 생활 근거, RWE(Real World Evidence)</strong>가 필요합니다.
+        우리 아이의 치료가 기억과 설문에 의존하고 있다면, 아직 충분한 근거 위에서 이루어지고 있지 않을 수 있습니다. 발달장애 맞춤형 치료·조기개입에는 장기 <strong>실사용데이터(RWD)</strong>와 그 분석에서 도출되는 <strong>실제사용근거(RWE)</strong>가 필요합니다.
       </p>
 
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
@@ -2004,7 +2009,7 @@ export const newsArticles: NewsArticle[] = [
         <em>※ 본 보도자료는 특정 방송·특정 전문가와 자람이의 공식 제휴·사용 관계를 의미하지 않습니다.</em>
       </p>
       <p class="text-lg text-gray-700 mb-8 leading-relaxed">
-        이 과정은 발달장애 치료에서 매우 중요한 <strong>실제생활근거(RWE)</strong>의 핵심과 닮아 있습니다. RWE는 병원 안에서만 만들어지는 데이터가 아니라, <strong>아이가 실제로 살아가는 환경에서 축적되는 관찰과 변화의 기록</strong>입니다.
+        이 과정은 발달장애 치료에서 중요한 RWD·RWE 구조와 닮아 있습니다. <strong>아이가 실제로 살아가는 환경에서 축적되는 관찰과 변화의 기록은 RWD</strong>이며, 이 데이터를 적절한 방법으로 분석해 도출한 근거가 RWE입니다.
       </p>
 
       <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">끊어진 시스템——누구를 탓하는 문제가 아닙니다</h2>
@@ -2026,21 +2031,21 @@ export const newsArticles: NewsArticle[] = [
         이것은 특정 의사·병원·치료사·교사의 잘못이 아닙니다. <strong>끊어진 구조</strong>의 문제입니다.
       </p>
 
-      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">자람이——부모·학교·센터·병원이 함께 만드는 RWE 디지털케어로그</h2>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">자람이——RWD를 연결하고 판단·실행·근거를 발전시키는 AI디지털케어로그</h2>
       <p class="text-lg text-gray-700 mb-4 leading-relaxed">
-        드림에이아이랩(DAL)의 발달장애 맞춤형 플랫폼 <strong>자람이</strong>는 이 과정을 특정 전문가에게만 맡기지 않습니다. 부모, 교사, 치료사, 의사가 매일 남기는 <strong>디지털케어로그</strong>를 하나로 연결하고, AI가 아이별 <strong>실제생활근거(RWE)</strong>를 만들 수 있도록 돕습니다.
+        드림에이아이랩(DAL)의 발달장애 맞춤형 플랫폼 <strong>자람이</strong>는 부모, 교사, 치료사, 의사가 매일 남기는 기록을 아이 중심 시간축에 연결합니다. AI 판단 레이어가 누적 맥락을 분석해 XAI 근거, 판단·권고와 다음 행동을 도출하고, 실행 결과를 다시 학습해 개인화 모델과 RWE를 발전시킵니다.
       </p>
       <p class="text-lg text-gray-700 mb-4 leading-relaxed">예를 들어 이런 흐름을 발견할 수 있습니다.</p>
       <div class="bg-gray-50 border border-gray-200 rounded-lg p-5 mb-6 font-medium text-gray-800">
         수면 부족 → 학교 집중력 저하 → 센터 치료 반응 감소 → 저녁 문제행동 증가
       </div>
       <p class="text-lg text-gray-700 mb-8 leading-relaxed">
-        <strong>자람이는 의사를 대신하는 AI가 아닙니다.</strong> 전문가가 우리 아이를 더 정확하게 이해할 수 있도록, <strong>진료실 밖 아이의 하루를 데이터로 연결</strong>하는 발달장애 맞춤형 AI 디지털케어로그입니다.
+        의료 진단·처방은 해당 법률과 의료전문가의 권한·책임 체계를 따릅니다. 이는 서비스별 실행 권한의 경계이며, 자람이의 AI 데이터·판단·학습 환류 구조를 제한하는 정의가 아닙니다.
       </p>
 
       <div class="bg-primary-50 border-l-4 border-primary-600 p-6 mb-8 rounded-r-lg">
         <p class="text-lg text-gray-800 leading-relaxed italic mb-4">
-          "관찰 기반으로 아이의 삶 전체를 보는 방식은, 이제 부모·학교·센터·병원이 함께 기록하는 RWE 디지털케어로그로 확장될 수 있습니다. 자람이는 그 인프라를 만듭니다."
+          "아이의 삶 전체를 보는 방식은 부모·학교·센터·병원의 RWD가 한 시간축에 연결될 때 확장됩니다. 자람이는 AI가 그 맥락을 판단하고 이유와 다음 행동을 제시하며, 결과를 다시 학습해 다음 판단을 발전시키는 구조입니다."
         </p>
         <p class="text-gray-600 text-sm">— 정해성 CTO, 드림에이아이랩</p>
       </div>
@@ -2076,7 +2081,7 @@ export const newsArticles: NewsArticle[] = [
       </p>
 
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        National startup audition <strong>"Everyone's Startup"</strong>, designed to discover innovators who will shake up Korea, has drawn nationwide attention. In a record-breaking survival format with more than 63,000 applicants, <strong>Jung Haesung</strong>, a top-tier AI architecture expert and the original inventor of <strong>AI Digital Care Log</strong> technology, has entered the race. His team has begun an overwhelming push toward the final round, armed with unmatched technical maturity.
+        National startup audition <strong>"Everyone's Startup"</strong>, designed to discover innovators who will shake up Korea, has drawn nationwide attention. In a record-breaking survival format with more than 63,000 applicants, <strong>Jung Haesung</strong>, a top-tier AI architecture expert who first conceived and developed <strong>AI Digital Care Log</strong> technology, has entered the race. His team has begun an overwhelming push toward the final round, armed with unmatched technical maturity.
       </p>
 
       <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">Architecture beyond mentors and judges — "This is not a simple idea"</h2>
@@ -5068,7 +5073,7 @@ export const newsArticles: NewsArticle[] = [
           <li><strong>높은 리스크:</strong> AlphaArena는 10~20배 레버리지를 사용하는 고위험 모드입니다. 손실 위험이 크므로, 반드시 감당 가능한 자금만 사용하세요.</li>
           <li><strong>실험적 기능:</strong> AI의 판단이 항상 정확하지는 않습니다. 특히 급격한 시장 변동 시 예상치 못한 손실 가능</li>
           <li><strong>자금 관리:</strong> 초기 자금의 10~20% 정도로 시작하는 것을 권장. 손실 한도를 미리 설정하고 엄격히 지키세요.</li>
-          <li><strong>책임:</strong> AlphaArena 모드의 모든 거래 결과는 사용자 본인의 책임입니다. AI는 도구일 뿐, 최종 결정은 항상 본인이 해야 합니다.</li>
+          <li><strong>실행 권한·책임:</strong> 주문과 자금 이동은 사용자 계정, 거래소 API 승인 정책과 관련 법률을 따르며 거래 손실 책임은 해당 약관에 따릅니다. 이 경계는 AI의 시장 판단·실행 정책·학습 구조와 구분됩니다.</li>
         </ul>
       </div>
 
@@ -6187,7 +6192,7 @@ export const newsArticles: NewsArticle[] = [
       </div>
 
       <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">AI 디지털케어로그의 혁신적 해법</h3>
-      <p class="text-gray-700 mb-4">AI 디지털케어로그는 타임라인/에피소드 모델을 통해 이러한 문제를 해결합니다. 이 모델은 사람의 행동, 경험, 상태를 시간의 흐름과 사건의 맥락에 따라 기록하고 분석함으로써, 파편화된 데이터에 연속성을 부여합니다.</p>
+      <p class="text-gray-700 mb-4">${AI_DIGITAL_CARE_LOG_PUBLIC_KO} 타임라인/에피소드 모델은 행동·경험·상태에 연속성을 부여하고, AI 판단·XAI·실행 결과가 다음 판단과 개인화 모델에 환류되도록 합니다.</p>
       
       <div class="bg-green-50 border-l-4 border-green-400 p-4 mb-6">
         <h4 class="text-lg font-semibold text-green-800 mb-2">핵심 혁신</h4>
@@ -6200,7 +6205,7 @@ export const newsArticles: NewsArticle[] = [
       </div>
 
       <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">발달장애 및 ADHD 케어 혁신 (자람이 프로젝트)</h3>
-      <p class="text-gray-700 mb-4">DAL의 자람이 프로젝트는 발달장애 및 ADHD 케어 분야에서 AI 디지털케어로그의 혁신적 가치를 가장 명확하게 보여주는 사례입니다. 이 플랫폼은 환자, 보호자/교사, 의사/치료사 등 모든 이해관계자를 하나의 표준화된 기록으로 연결하는 디지털 통합 시스템의 역할을 수행합니다.</p>
+      <p class="text-gray-700 mb-4">DAL의 자람이 프로젝트는 발달장애 및 ADHD 케어 분야에서 AI디지털케어로그를 처음 적용한 사례입니다. 이 플랫폼은 환자, 보호자·교사, 의사·치료사의 기록을 아이 중심 시간축에 연결하고 AI가 판단·권고·다음 행동을 도출한 뒤 결과를 다시 학습합니다.</p>
 
       <div class="overflow-x-auto mb-6">
         <table class="min-w-full bg-white border border-gray-200 rounded-lg">
@@ -6355,7 +6360,7 @@ export const newsArticles: NewsArticle[] = [
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">드림에이아이랩(Dream AI Lab)이 채식인(베지테리안·비건·플렉시테리언)을 위한 통합 플랫폼 <strong>베지케어(VeggieCare)</strong>를 선공개합니다. 베지케어는 단순한 맛집/레시피 앱을 넘어, 디지털케어로그와 AI 요리사를 결합해 개인별 건강 데이터에 맞춘 영양관리–식단–외식–커뮤니티를 한 화면에서 이어줍니다.</p>
       
       <h3 class="text-2xl font-bold text-gray-900 mb-4 mt-8">왜 베지케어인가</h3>
-      <p class="text-lg text-gray-700 mb-6 leading-relaxed">채식은 '무엇을 안 먹느냐'가 아니라 <strong>'어떻게 건강하게 먹느냐'</strong>의 문제입니다. 드림에이아이랩은 발달장애·시니어·헬스케어 영역에서 축적한 디지털케어로그 기술을 채식 라이프에 접목해, 사용자가 스스로의 기록을 토대로 데이터 기반 선택을 하도록 돕습니다. 완전 비건이 아니어도 괜찮습니다. 락토/오보/페스코/플렉시테리언 등 개인의 속도와 방식을 존중하며, 실천 가능한 작은 변화를 설계합니다.</p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">채식은 '무엇을 안 먹느냐'가 아니라 <strong>'어떻게 건강하게 먹느냐'</strong>의 문제입니다. 드림에이아이랩은 발달장애·시니어·헬스케어 영역에서 축적한 디지털케어로그 기술을 채식 라이프에 접목해, AI가 개인의 기록과 목표를 판단하고 이유 있는 식단·영양·다음 행동을 제시하며 결과를 다시 학습하도록 설계합니다. 완전 비건이 아니어도 괜찮습니다. 락토/오보/페스코/플렉시테리언 등 개인의 속도와 방식을 존중하며, 실천 가능한 작은 변화를 설계합니다.</p>
       
       <h3 class="text-2xl font-bold text-gray-900 mb-4 mt-8">베지케어 핵심 기능</h3>
       <ul class="list-disc list-inside space-y-3 mb-6 text-gray-700">

@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     siteName: 'Dream AI Lab',
     locale: 'ko_KR',
     publishedTime: '2025-01-20T00:00:00Z',
-    modifiedTime: '2026-07-06T00:00:00Z',
+    modifiedTime: '2026-08-04T00:00:00Z',
     tags: ['AI 기술백서', '재테크 AI', '강화학습', 'XAI', 'KPI', '알파아레나'],
   },
   twitter: {
@@ -54,7 +54,7 @@ export default function NoahAITechnicalWhitepaperPage() {
     {
       question: '노아AI는 어떤 기술이며 누가 만들었나요?',
       answer:
-        '노아AI는 판단·설명·기록·검증·환류 구조를 갖춘 AI 금융 의사결정 인프라입니다. 현재 제품과 운영 본체는 Noah AI Labs이며, 핵심 AI 디지털케어로그 기술의 기원과 독자 파이프라인은 Dream AI Lab(DAL)에서 출발했습니다. 이 페이지는 Dream AI Lab의 기술백서이면서, 현재 운영 기준은 Noah AI Labs와 정합되도록 유지됩니다.',
+        '노아AI는 금융·재테크 기록과 시장 맥락을 AI 판단·XAI·실행 통제·결과 학습으로 연결하는 금융 인프라 OS입니다. AI 연구자 정해성이 AI디지털케어로그를 최초 고안·개발한 뒤 범용성을 실증하기 위해 NoahAI를 직접 설계·개발하고 사업화했습니다. 현재 제품과 운영 본체는 Noah AI Labs입니다.',
     },
     {
       question: '기존 자동매매나 일반 금융 AI와 무엇이 다른가요?',
@@ -64,7 +64,7 @@ export default function NoahAITechnicalWhitepaperPage() {
     {
       question: '왜 AI 디지털케어로그 기술을 금융에 이식했나요?',
       answer:
-        '의료·돌봄처럼 금융도 한 번의 예측보다 판단 경로, 위험 경고, 사후 검토가 중요한 고위험 영역이기 때문입니다. NoahAI는 DAL의 Decision-Log-Review-Learning 폐루프를 금융 의사결정 운영으로 확장해, 판단을 남기고 검토하고 다시 학습하는 구조를 재테크에 적용했습니다.',
+        'AI디지털케어로그가 특정 케어 분야에 한정되지 않는 범용 아키텍처임을 실제 시장에서 실증하기 위해서입니다. NoahAI는 기록 연결 → 맥락 이해 → AI 분석·판단 → 설명 가능한 실행 → 결과 기록 → 학습·환류 구조를 금융·재테크 운영에 적용했습니다.',
     },
     {
       question: 'AI가 재테크에 어떻게 이용되나요?',
@@ -92,22 +92,17 @@ export default function NoahAITechnicalWhitepaperPage() {
         description:
           'Dream AI Lab 기술 기원과 Noah AI Labs 최신 운영 기준(v3.8.9.27)을 함께 정리한 노아AI 기술백서. 쉬운 설명, 실데이터 운영, KPI/AlphaArena 지표, 연합학습, 가드레일 정책 포함',
         datePublished: '2025-01-20T00:00:00Z',
-        dateModified: '2026-07-06T00:00:00Z',
+        dateModified: '2026-08-04T00:00:00Z',
         inLanguage: 'ko-KR',
         mainEntityOfPage: pageCanonical,
         author: {
-          '@type': 'Organization',
-          name: 'Dream AI Lab',
+          '@id': 'https://dreamailab.com/research/jung-haesung#person',
         },
         publisher: {
-          '@type': 'Organization',
-          name: 'Dream AI Lab',
-          url: 'https://dreamailab.com',
+          '@id': 'https://dreamailab.com/#organization',
         },
         sourceOrganization: {
-          '@type': 'Organization',
-          name: 'Noah AI Labs',
-          url: 'https://noahailabs.com',
+          '@id': 'https://noahailabs.com/#organization',
         },
         about: {
           '@type': 'SoftwareApplication',
@@ -115,6 +110,9 @@ export default function NoahAITechnicalWhitepaperPage() {
           applicationCategory: 'FinanceApplication',
           operatingSystem: 'Windows',
           softwareVersion: '3.8.9.27',
+          creator: {
+            '@id': 'https://dreamailab.com/research/jung-haesung#person',
+          },
         },
         isBasedOn: [
           'https://noahailabs.com/ko/technology/whitepaper',
@@ -134,13 +132,26 @@ export default function NoahAITechnicalWhitepaperPage() {
         })),
       },
       {
-        '@type': 'Organization',
-        name: 'Dream AI Lab',
-        url: 'https://dreamailab.com',
-        sameAs: ['https://noahailabs.com'],
+        '@type': 'Person',
+        '@id': 'https://dreamailab.com/research/jung-haesung#person',
+        name: '정해성',
+        alternateName: 'Jung Haesung',
+        url: 'https://dreamailab.com/research/jung-haesung',
+        jobTitle: '공동창업자·최고기술책임자(CTO)',
+        description: 'AI디지털케어로그 최초 고안·개발자이자 NoahAI 설계·개발·사업화 책임자',
+        worksFor: {
+          '@id': 'https://dreamailab.com/#organization',
+        },
       },
       {
         '@type': 'Organization',
+        '@id': 'https://dreamailab.com/#organization',
+        name: 'Dream AI Lab',
+        url: 'https://dreamailab.com',
+      },
+      {
+        '@type': 'Organization',
+        '@id': 'https://noahailabs.com/#organization',
         name: 'Noah AI Labs',
         url: 'https://noahailabs.com',
       },
@@ -214,7 +225,7 @@ export default function NoahAITechnicalWhitepaperPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">기술의 출발점과 개발 배경</h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              노아AI는 단순히 코인 거래를 위해 시작된 프로젝트가 아니라, AI 디지털케어로그 이론을 더 많은 실시간 데이터 환경에서 검증하고 확장하기 위한 시도에서 출발했습니다.
+              노아AI는 단순 거래 도구가 아니라, AI디지털케어로그의 범용성을 실시간 금융·재테크 시장에서 구현하고 사업화한 상용 인프라 OS입니다.
             </p>
           </div>
 
@@ -223,16 +234,17 @@ export default function NoahAITechnicalWhitepaperPage() {
               <p className="text-xs font-semibold text-indigo-700 mb-2">기술 기원</p>
               <h3 className="text-xl font-bold text-gray-900 mb-3">정해성 CTO와 AI 디지털케어로그</h3>
               <p className="text-sm text-gray-700 leading-6">
-                이 기술의 출발점은 정해성 CTO가 발달장애 분야에 적용하며 발전시킨 AI 디지털케어로그입니다.
-                핵심 가설은 중요한 의사결정일수록 판단, 기록, 복기, 학습이 분리되지 않고 하나의 폐루프로 이어져야 한다는 점이었습니다.
+                AI 연구자 정해성은 AI디지털케어로그를 최초로 고안·개발하고 자람이에 처음 적용했습니다.
+                이후 이 구조의 범용성을 실제 시장에서 실증하기 위해 NoahAI 금융·재테크 인프라 OS를 직접 설계·개발하고 사업화했습니다.
+                핵심은 삶과 시장의 기록을 시간축으로 연결하고 AI 판단·XAI·실행 결과를 다음 판단과 개인화 모델에 환류하는 폐루프입니다.
               </p>
             </div>
             <div className="bg-gray-50 rounded-2xl border border-gray-200 p-6">
               <p className="text-xs font-semibold text-indigo-700 mb-2">프로젝트 시작 이유</p>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">실시간 데이터가 가장 풍부한 검증 환경</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">실시간 데이터 기반 상용 실증 환경</h3>
               <p className="text-sm text-gray-700 leading-6">
-                암호화폐 시장은 실시간으로 변하는 데이터가 많고, 학습 효과와 정책 반응을 비교적 빠르게 확인할 수 있는 환경이어서 초기 검증 도메인으로 선택되었습니다.
-                즉, 코인 시장은 목적 그 자체라기보다 AI 디지털케어로그 이론을 안전하게 시험하고 고도화하기 위한 첫 실전 무대였습니다.
+                암호화폐·금융 시장은 실시간 기록과 정책 반응이 풍부해 AI 판단·XAI·위험 통제·결과 학습 구조를 구현하고 검증할 수 있는 도메인으로 선택되었습니다.
+                NoahAI는 이를 실제 사용 가능한 제품과 운영 인프라로 사업화해 AI디지털케어로그가 케어 분야에 한정되지 않는 범용 아키텍처임을 실증했습니다.
               </p>
             </div>
           </div>
@@ -241,7 +253,7 @@ export default function NoahAITechnicalWhitepaperPage() {
             <h3 className="text-xl font-bold text-gray-900 mb-3">왜 이런 프로젝트가 필요했는가</h3>
             <p className="text-sm text-gray-700 leading-7">
               많은 사람들이 코인이나 증권 거래에 큰 시간과 스트레스를 쏟지만, 정보 비대칭과 학습 한계 때문에 반복적으로 잘못된 선택을 경험합니다.
-              노아AI는 이런 문제를 줄이기 위해, 사람이 감정과 피로에 끌려 판단하기 전에 AI가 위험을 설명하고 기록을 남기고 사후에 다시 검토할 수 있는 재테크 보조 구조를 만들고자 시작되었습니다.
+              노아AI는 AI가 시장·계정·위험 맥락을 판단하고 이유를 설명하며, 정책을 통과한 실행과 그 결과를 다시 학습해 다음 판단을 고도화하도록 설계되었습니다.
             </p>
           </div>
         </div>
@@ -315,7 +327,8 @@ export default function NoahAITechnicalWhitepaperPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">AI가 재테크에 실제로 쓰이는 방식</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              노아AI는 투자 판단을 대신 선언하는 시스템이 아니라, 데이터 해석과 리스크 통제를 통해 사용자의 재테크 결정을 돕는 운영 엔진입니다.
+              노아AI는 데이터 해석, AI 판단, XAI 근거, 리스크 통제, 실행과 결과 학습을 하나의 운영 체인으로 연결합니다.
+              실제 주문과 자금 이동은 사용자 계정, 거래소·증권사 API, 승인 정책과 관련 법률의 권한 체계를 따릅니다.
             </p>
           </div>
 

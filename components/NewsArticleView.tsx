@@ -26,6 +26,8 @@ const labels = {
     archiveBody:
       '이 글은 당시 보도·홍보 문맥을 보존한 아카이브입니다. 제품·사업·수치의 현재 기준은 아래 페이지를 참고하세요.',
     archiveLinks: [
+      { href: '/technology', label: 'AI디지털케어로그 기술 정본' },
+      { href: '/research/jung-haesung', label: '정해성 연구자 공식 프로필' },
       { href: '/services/jarame', label: '자람이 서비스' },
       { href: '/ir', label: 'IR' },
       { href: '/about', label: '회사 소개' },
@@ -46,6 +48,8 @@ const labels = {
     archiveBody:
       'This article is preserved as a press/archive snapshot. For current product, business, and metrics, see:',
     archiveLinks: [
+      { href: '/en/technology', label: 'AI Digital Care Log canonical technology' },
+      { href: '/en/research/jung-haesung', label: 'Official Jung Haesung profile' },
       { href: '/services/jarame', label: 'Jarame' },
       { href: '/ir', label: 'IR' },
       { href: '/about', label: 'About' },

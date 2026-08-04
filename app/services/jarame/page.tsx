@@ -4,6 +4,10 @@ import Footer from '../../../components/Footer'
 import Link from 'next/link'
 import { MarketingIcon, type MarketingIconName } from '../../../components/MarketingIcon'
 import { emojiToIcon } from '../../../lib/icon-system'
+import {
+  AI_DIGITAL_CARE_LOG_FLOW_KO,
+  AI_DIGITAL_CARE_LOG_REGULATED_BOUNDARY_KO,
+} from '../../../lib/ai-digital-care-log-copy'
 
 export const metadata: Metadata = {
   title: 'AI 디지털케어로그 | 발달장애 표준 기술 | 자람이 | 드림에이아이랩',
@@ -184,10 +188,10 @@ export default function JarameService() {
     "@id": "https://dreamailab.com/services/jarame",
     "url": "https://dreamailab.com/services/jarame",
     "name": "자람이 | 발달장애 AI 디지털케어로그 · Care Data Infrastructure",
-    "description": "발달장애 맞춤형 치료·학습을 위한 AI 표준 기술. 가정·학교·센터·병원 통합 기록과 XAI·패턴 분석 기반 권장안(의료·치료 결정은 전문가 판단).",
+    "description": "AI디지털케어로그를 처음 적용해 개발한 세계 최초 발달장애 맞춤형 치료·학습 플랫폼. 가정·학교·센터·병원 기록을 시간축으로 연결하고 AI 판단·XAI·실행·학습 환류로 개인별 다음 행동을 도출합니다.",
     "inLanguage": "ko-KR",
     "datePublished": "2022-01-01",
-    "dateModified": "2025-11-12",
+    "dateModified": "2026-08-04",
     "isPartOf": { "@id": "https://dreamailab.com/#website" }
   }
 
@@ -200,7 +204,7 @@ export default function JarameService() {
         "name": "자람이는 어떤 서비스인가요?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "자람이는 발달장애 아동의 가정·학교·센터·병원 기록을 하나의 표준 케어로그로 통합하고, XAI·패턴 분석으로 맞춤형 치료·학습 권장안을 제시하는 Care Data Infrastructure입니다. 표준 스키마·다기관 연계·기관 베타를 통해 조기개입·협업을 지원하며, 의료·치료 결정은 전문가 판단을 따릅니다."
+          "text": "자람이는 AI디지털케어로그를 처음 적용해 개발한 세계 최초 발달장애 맞춤형 치료·학습 플랫폼입니다. 가정·학교·센터·병원의 기록을 아이와 상황 중심의 시간축으로 연결하고, AI 판단 레이어가 맥락을 분석해 XAI 근거와 함께 치료·교육 판단, 권고와 다음 행동을 도출합니다. 실행 결과는 다시 기록되어 이후 판단과 개인화 모델의 학습·환류에 사용됩니다. 의료 진단·처방 등 법적 자격과 책임이 필요한 행위는 해당 법률과 권한 체계를 따릅니다."
         }
       },
       {
@@ -216,7 +220,7 @@ export default function JarameService() {
         "name": "ADHD 치료와 자폐증 치료 방법이 다른가요?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "네, 접근이 다릅니다. ADHD는 주의력·충동 조절에 초점을 맞추고(약물치료+행동치료), 자폐증(ASD)은 사회적 상호작용·의사소통 개선에 중점을 둡니다(ABA, 언어치료, 감각통합). 자람이 AI는 개인별 증상 패턴을 참고해 치료·교육 조합을 권장하며, 최종 결정은 전문가·보호자와 함께 합니다."
+          "text": "네, 접근이 다릅니다. ADHD는 주의력·충동 조절에 초점을 맞추고(약물치료+행동치료), 자폐증(ASD)은 사회적 상호작용·의사소통 개선에 중점을 둡니다(ABA, 언어치료, 감각통합). 자람이 AI는 개인별 장기 기록과 반응 패턴을 분석해 이유가 설명된 치료·교육 조합과 다음 행동을 제시합니다. 의료 진단·처방과 같은 법적 행위는 의료전문가의 권한과 책임 아래 이루어집니다."
         }
       },
       {
@@ -248,7 +252,7 @@ export default function JarameService() {
         "name": "특수교사나 치료사가 자람이를 어떻게 활용하나요?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "특수교사는 IEP(개별화교육계획) 작성, 학급 관리, 출석·성과 통계를 자람이에서 관리하고 AI가 학생별 맞춤 교재 초안을 지원합니다. 치료사는 세션 기록을 입력하면 AI가 추이·패턴을 요약하고 다음 중재 전략 초안을 제안합니다(전문가 검토·수정 전제)."
+          "text": "특수교사는 IEP(개별화교육계획), 학급·출석·성과 데이터를 자람이에서 연결하고, AI가 학생별 맥락을 판단해 맞춤 교재와 학습 경로를 생성하도록 활용합니다. 치료사는 세션 결과와 장기 추이를 바탕으로 AI가 도출한 다음 중재 전략과 근거를 확인하고 실행 결과를 다시 기록해 이후 판단을 고도화합니다. 공식 IEP 승인 등 법정·기관 권한은 해당 교사와 기관에 있습니다."
         }
       },
       {
@@ -256,7 +260,7 @@ export default function JarameService() {
         "name": "가정-학교-센터-병원 기록이 어떻게 연결되나요?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "부모가 가정에서 기록 → (동의·연동 시) 센터·학교·병원 담당자가 공유 범위 내 열람 → 의사·치료사·교사가 맥락을 참고해 판단. 하나의 표준 케어로그로 중복 입력을 줄이고, AI가 패턴·권장안을 제시합니다. 전 기관·전원이 동시에 실시간 연동된다는 뜻은 아닙니다."
+          "text": "부모·센터·학교·병원이 동의와 권한 범위에서 남긴 기록을 아이와 상황 중심의 시간축에 연결합니다. AI는 누적 맥락을 분석해 변화 원인, 판단 근거, 권고와 다음 행동을 도출하고, 실행 결과를 다시 학습·환류합니다. 전 기관·전원이 동시에 실시간 연동된다는 뜻은 아닙니다."
         }
       },
       {
@@ -296,7 +300,7 @@ export default function JarameService() {
         "name": "경계성지능 아동도 자람이를 사용할 수 있나요?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "경계성지능(IQ 70-85) 아동의 학습 기록·인지 발달 패턴 추적을 지원합니다. AI가 학습 속도와 강점·약점을 참고해 교육 계획 초안을 제안하며, 교사·부모와 함께 활용할 수 있습니다(전문가 판단·IEP 검토 전제)."
+          "text": "경계성지능(IQ 70-85) 아동의 학습 기록과 인지 발달 패턴을 시간축으로 연결합니다. AI가 학습 속도·강점·취약점과 이전 실행 결과를 분석해 개인별 학습 경로, 교육 계획과 다음 과제를 제시하고 결과를 다시 학습합니다. 공식 IEP의 확정은 교사와 기관의 권한을 따릅니다."
         }
       },
       {
@@ -304,7 +308,7 @@ export default function JarameService() {
         "name": "자람이의 AI 기술은 어떤 원리로 작동하나요?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "자람이는 다기관 기록을 FHIR 호환 표준 스키마로 통합하고, XAI·패턴 분석으로 권장안을 제시하는 Care Data Infrastructure입니다. 강화학습·연합학습 루프는 시뮬레이션·기관 파일럿에서 단계적으로 검증 중이며, 의료·치료 결정은 전문가 판단을 따릅니다. jarame.or.kr 데모로 케어로그·리포트 흐름을 확인할 수 있습니다."
+          "text": "자람이는 다기관 기록을 FHIR 호환 표준 스키마와 개인·상황 중심 시간축으로 연결합니다. AI 판단 레이어가 누적 맥락을 분석하고 XAI로 이유를 설명하며, 판단·권고·실행을 도출한 뒤 결과를 다시 기록해 다음 판단과 개인화 모델을 고도화합니다. 강화학습·연합학습 모듈의 적용 범위는 시뮬레이션·기관 파일럿에서 단계적으로 검증 중입니다. 의료 진단·처방 등 법적 행위는 해당 권한 체계를 따릅니다."
         }
       }
     ]
@@ -404,14 +408,15 @@ export default function JarameService() {
                 자람이는 가정·센터·학교·병원의 관찰, 치료, 학습, 생활 기록을
               </span>
               <span className="block text-xl sm:text-2xl lg:text-3xl font-semibold text-white/95 leading-snug">
-                하나의 AI디지털케어로그로 구조화해 보호자와 전문가가 같은 기준으로 아이의 변화를 이해하고 다음 지원을 이어갈 수 있도록 돕습니다.
+                하나의 AI디지털케어로그로 연결해 AI가 변화의 맥락을 판단하고, 이유 있는 치료·학습 방향과 다음 행동을 제시합니다.
               </span>
             </h1>
             <p className="text-lg md:text-xl max-w-2xl mx-auto text-blue-100 mb-2 leading-relaxed break-keep">
-              기관별 문서와 기억에 의존하던 발달지원 과정을 표준 기록, AI 요약, 패턴 분석, 리포트 환류 구조로 연결해 조기개입, 협업, 개별화 지원의 <strong className="text-white">근거를 더 명확하게</strong> 만드는 것을 목표로 합니다.
+              판단과 실행 결과는 다시 아이의 시간축에 기록되고 학습·환류되어,
+              데이터가 쌓일수록 <strong className="text-white">다음 판단과 개인화 모델을 고도화</strong>합니다.
             </p>
             <p className="text-base max-w-2xl mx-auto text-white/90 leading-relaxed break-keep">
-              자람이는 의료기기·진단·처방 시스템이 아니라, 전문가 판단을 돕는 기록·분석·협업 인프라입니다.
+              의료 진단·처방 등 법적 자격과 책임이 필요한 행위는 해당 법률과 권한 체계를 따릅니다.
             </p>
             <div className="mt-6 flex flex-wrap justify-center gap-2">
               <span className="inline-flex px-3 py-1 rounded-full text-xs font-semibold bg-white/20 text-white border border-white/30">
@@ -549,7 +554,7 @@ export default function JarameService() {
                 <strong>초안</strong>을 생성합니다. 치료사는 검토·수정 후 저장합니다.
               </p>
               <p className="text-xs text-amber-800 bg-amber-50 border border-amber-100 rounded-lg px-3 py-2">
-                AI는 치료사·의사를 대체하지 않습니다. 반복 문서 작성을 줄이는 보조 도구입니다.
+                이 기능은 치료일지·보호자 설명·가정 과제·월간 리포트를 직접 생성하고, 공식 치료기록은 담당 치료사가 확인·확정합니다.
               </p>
             </div>
           </div>
@@ -918,11 +923,11 @@ export default function JarameService() {
         </div>
       </section>
 
-      {/* AI가 교사와 치료사를 돕는 방식 — Step 기반 (작동 구조·사례와 동일 패턴) */}
+      {/* AI가 교육·치료 판단과 실행을 발전시키는 방식 */}
       <section className="py-14 bg-white border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">AI가 교사와 치료사를 돕는 방식</h2>
-          <p className="text-center text-gray-600 text-sm mb-8">기존 방식 → AI 분석 → 자동 생성 → 교육 변화</p>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">AI가 교육·치료 판단과 실행을 발전시키는 방식</h2>
+          <p className="text-center text-gray-600 text-sm mb-8">{AI_DIGITAL_CARE_LOG_FLOW_KO}</p>
           <div className="bg-gray-50/50 rounded-2xl p-8 md:p-10 border border-gray-100">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="relative">
@@ -956,12 +961,12 @@ export default function JarameService() {
               <div>
                 <div className="bg-green-50 rounded-xl p-6 border-2 border-green-200 h-full">
                   <div className="text-3xl mb-3">4️⃣</div>
-                  <h4 className="font-bold text-green-900 mb-2">STEP 4 — 교육 변화</h4>
-                  <p className="text-sm text-gray-700">교사는 행정 작업이 아니라 교육에 집중. 치료사·교사 판단을 데이터로 보완.</p>
+                  <h4 className="font-bold text-green-900 mb-2">STEP 4 — 실행·학습 환류</h4>
+                  <p className="text-sm text-gray-700">이유가 설명된 학습·중재안을 실행하고, 결과를 다시 기록해 다음 판단과 개인화를 발전시킵니다.</p>
                 </div>
               </div>
             </div>
-            <p className="mt-4 text-center text-sm text-gray-600">자람이는 전문가를 대체하지 않고, <strong>판단을 돕는 AI 도구</strong>입니다.</p>
+            <p className="mt-4 text-center text-sm text-gray-600">자람이는 기록·분석에서 멈추지 않고 <strong>판단·실행·결과 학습이 이어지는 폐루프</strong>를 작동시킵니다.</p>
           </div>
         </div>
       </section>
@@ -970,7 +975,7 @@ export default function JarameService() {
       <section className="py-14 bg-gray-50 border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">의료 현장의 현실적인 한계</h2>
-          <p className="text-center text-gray-600 text-sm mb-8">의료 현실 → 데이터 문제 → 기록 통합 → 의료 판단 지원·참고</p>
+          <p className="text-center text-gray-600 text-sm mb-8">의료 현실 → 데이터 문제 → 시간축 기록 → AI 판단·XAI → 진료 연계</p>
           <div className="bg-white rounded-2xl p-8 md:p-10 border border-gray-100 shadow-sm">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-3">
               <div className="relative">
@@ -1000,16 +1005,16 @@ export default function JarameService() {
               <div className="relative">
                 <div className="bg-primary-50 rounded-xl p-5 border-2 border-primary-200 h-full">
                   <div className="text-2xl mb-2">4️⃣</div>
-                  <h4 className="font-bold text-primary-900 mb-2 text-sm">STEP 4 — AI 케어로그 해결</h4>
-                  <p className="text-xs text-gray-700">가정·학교·센터 데이터를 통합 기록(표준 스키마).</p>
+                  <h4 className="font-bold text-primary-900 mb-2 text-sm">STEP 4 — AI 맥락 판단</h4>
+                  <p className="text-xs text-gray-700">가정·학교·센터 기록을 시간축으로 연결해 패턴·위험·개입 반응을 판단.</p>
                 </div>
                 <div className="hidden lg:block absolute top-1/2 -right-2 transform -translate-y-1/2 text-xl text-gray-300">→</div>
               </div>
               <div>
                 <div className="bg-primary-50 rounded-xl p-5 border-2 border-primary-200 h-full">
                   <div className="text-2xl mb-2">5️⃣</div>
-                  <h4 className="font-bold text-primary-900 mb-2 text-sm">STEP 5 — 의료 판단 지원·참고</h4>
-                  <p className="text-xs text-gray-700">장기 데이터(행동·약물 반응·치료 진행) 기반 진료 가능.</p>
+                  <h4 className="font-bold text-primary-900 mb-2 text-sm">STEP 5 — XAI·진료 연계</h4>
+                  <p className="text-xs text-gray-700">AI 판단의 근거와 장기 변화를 진료에 연결. 진단·처방은 의료전문가 권한.</p>
                 </div>
               </div>
             </div>
@@ -1017,11 +1022,11 @@ export default function JarameService() {
         </div>
       </section>
 
-      {/* AI 디지털케어로그가 의료 판단을 돕는 방식 — Step 기반 (다른 섹션과 동일 패턴) */}
+      {/* AI디지털케어로그가 의료 맥락 판단과 실행을 연결하는 방식 */}
       <section className="py-14 bg-white border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">AI 디지털케어로그가 의료 판단을 돕는 방식</h2>
-          <p className="text-center text-gray-600 text-sm mb-8">가정·센터·학교 데이터 → 통합 → 의료 판단 지원</p>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">AI디지털케어로그가 의료 맥락 판단과 실행을 연결하는 방식</h2>
+          <p className="text-center text-gray-600 text-sm mb-8">가정·센터·학교 기록 → 장기 맥락 → AI 판단·XAI → 의료 실행 연계</p>
           <div className="bg-gray-50/50 rounded-2xl p-8 md:p-10 border border-gray-100">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-3">
               <div className="relative">
@@ -1051,19 +1056,22 @@ export default function JarameService() {
               <div className="relative">
                 <div className="bg-primary-50 rounded-xl p-5 border-2 border-primary-200 h-full">
                   <div className="text-2xl mb-2">4️⃣</div>
-                  <h4 className="font-bold text-primary-900 mb-2 text-sm">STEP 4 — 의료 판단 지원</h4>
-                  <p className="text-xs text-gray-700">의사는 진료 시 수개월의 행동 데이터와 치료 반응을 함께 확인할 수 있습니다.</p>
+                  <h4 className="font-bold text-primary-900 mb-2 text-sm">STEP 4 — AI 판단·XAI</h4>
+                  <p className="text-xs text-gray-700">AI가 수개월의 행동·치료 반응을 분석해 위험, 변화 원인과 다음 행동을 근거와 함께 제시합니다.</p>
                 </div>
                 <div className="hidden lg:block absolute top-1/2 -right-2 transform -translate-y-1/2 text-xl text-gray-300">→</div>
               </div>
               <div>
                 <div className="bg-primary-50 rounded-xl p-5 border-2 border-primary-200 h-full">
                   <div className="text-2xl mb-2">5️⃣</div>
-                  <h4 className="font-bold text-primary-900 mb-2 text-sm">STEP 5 — 진료 방식 변화</h4>
-                  <p className="text-xs text-gray-700">단일 진료 관찰이 아니라 장기 데이터 기반 판단이 가능해집니다.</p>
+                  <h4 className="font-bold text-primary-900 mb-2 text-sm">STEP 5 — 의료 실행 연계</h4>
+                  <p className="text-xs text-gray-700">의료진은 장기 맥락과 AI 판단 근거를 진료에 연결하고, 결과는 다시 다음 판단에 환류됩니다.</p>
                 </div>
               </div>
             </div>
+            <p className="mt-5 text-center text-xs text-gray-500">
+              의료 진단·처방 등 법적 의료행위는 해당 법률과 의료전문가의 권한·책임 체계를 따릅니다.
+            </p>
           </div>
         </div>
       </section>
@@ -1472,10 +1480,13 @@ export default function JarameService() {
             <div className="max-w-4xl mx-auto space-y-4">
               <p className="text-xl text-gray-700 leading-relaxed">
                 <strong className="text-blue-600">표준 케어로그</strong>로 가정·센터·학교·병원 기록을 하나의 파이프라인에 모으고, 
-                <strong className="text-cyan-600"> AI 분석 → 기록 환류(폐루프)</strong>로 맞춤 치료·학습 권장안을 제시합니다.
+                <strong className="text-cyan-600"> AI 판단 → XAI 근거 → 실행 → 결과 학습</strong>으로 맞춤 치료·학습의 다음 행동을 도출합니다.
               </p>
               <p className="text-xl text-gray-700 leading-relaxed">
-                챗봇·콘텐츠 추천이 아니라 <strong>기록·표준화·협업 실행</strong>이 연결된 Care Data Infrastructure입니다. 맞춤 지원안은 현장 전문가 검토·확정을 전제로 하며, AI는 치료·의료 판단을 대체하지 않습니다.
+                챗봇·콘텐츠 추천이 아니라 <strong>기록·판단·실행·학습 환류</strong>가 연결된 발달장애 AI 데이터 인프라입니다.
+              </p>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                {AI_DIGITAL_CARE_LOG_REGULATED_BOUNDARY_KO}
               </p>
               
               <div className="bg-gradient-to-r from-amber-50 to-orange-50 rounded-xl p-6 border-l-4 border-amber-500 my-6">
@@ -1559,7 +1570,8 @@ export default function JarameService() {
               ))}
             </div>
             <p className="text-center text-gray-600 mt-6">
-              각 치료사의 전문 분야에 맞춘 표준화된 기록으로 <strong className="text-green-600">패턴·추이를 AI가 분석·리포트</strong>합니다. (의료·치료 결정은 전문가 판단)
+              표준화된 치료 기록을 바탕으로 <strong className="text-green-600">AI가 패턴·추이·개입 반응을 판단하고 XAI 근거와 다음 행동을 제시</strong>하며,
+              결과를 다시 학습·환류합니다. 진단·처방 등 의료 행위는 의료전문가의 법적 권한을 따릅니다.
             </p>
           </div>
 
@@ -1943,7 +1955,7 @@ export default function JarameService() {
           <div className="bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-sm mb-8">
             <h3 className="text-lg font-bold text-gray-900 mb-4">문제 설명</h3>
             <p className="text-gray-700 text-sm leading-relaxed">
-              발달장애 아동은 여러 약물을 함께 복용하는 경우가 많고, 감기나 다른 증상으로 추가 처방을 받을 때도 있습니다. 부모는 &ldquo;이 조합이 괜찮은지&rdquo;, &ldquo;언제 먹이면 좋은지&rdquo;를 스스로 판단하기 어렵습니다. 자람이는 일상 기록과 약물 데이터를 바탕으로 AI가 위험 가능성을 먼저 짚어 주고, 의료진 판단을 돕는 가이드를 제공합니다.
+              발달장애 아동은 여러 약물을 함께 복용하는 경우가 많고, 감기나 다른 증상으로 추가 처방을 받을 때도 있습니다. 부모는 &ldquo;이 조합이 괜찮은지&rdquo;, &ldquo;언제 먹이면 좋은지&rdquo;를 스스로 판단하기 어렵습니다. 자람이는 일상 기록과 약물 데이터를 바탕으로 AI가 위험 가능성을 먼저 판단하고, 그 이유와 안전한 다음 행동 가이드를 제시합니다. 처방의 변경·확정은 의료전문가의 법적 권한을 따릅니다.
             </p>
           </div>
 
@@ -2000,7 +2012,8 @@ export default function JarameService() {
           {/* 핵심 메시지 */}
           <div className="bg-white rounded-2xl p-6 md:p-8 border-2 border-blue-200 mb-8">
             <p className="text-center text-gray-800 font-medium">
-              AI는 의사를 대체하지 않습니다. 하지만 <strong>부모가 놓칠 수 있는 위험을 먼저 발견하고</strong>, 의료진의 판단을 돕습니다.
+              AI가 장기 기록에서 <strong>부모가 놓칠 수 있는 위험을 먼저 판단하고</strong>, 이유와 다음 행동을 제시합니다.
+              처방 변경·확정은 의료전문가의 법적 권한을 따릅니다.
             </p>
           </div>
 
@@ -2117,8 +2130,8 @@ export default function JarameService() {
               </div>
               <div className="bg-gray-50 rounded-xl p-4 text-center">
                 <span className="mb-2 flex justify-center text-primary-600"><MarketingIcon name="stethoscope" className="h-6 w-6" /></span>
-                <p className="text-sm font-medium text-gray-800">의료진 판단 지원</p>
-                <p className="text-xs text-gray-600 mt-1">상담 시 AI 요약을 전달해 판단 보조</p>
+                <p className="text-sm font-medium text-gray-800">의료 실행 연계</p>
+                <p className="text-xs text-gray-600 mt-1">AI 판단 근거와 요약을 진료에 연결하고 결과를 다시 기록</p>
               </div>
               <div className="bg-gray-50 rounded-xl p-4 text-center">
                 <span className="mb-2 flex justify-center text-primary-600"><MarketingIcon name="shield" className="h-6 w-6" /></span>

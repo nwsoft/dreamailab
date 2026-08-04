@@ -4,6 +4,10 @@ import Footer from '../../components/Footer'
 import PageClosingSection from '../../components/PageClosingSection'
 import Link from 'next/link'
 import { COMPANY_HERO_LINE, COMPANY_META_LINE } from '../../lib/company-copy'
+import {
+  AI_DIGITAL_CARE_LOG_PUBLIC_KO,
+  JUNG_HAESUNG_DAL_ATTRIBUTION_KO,
+} from '../../lib/ai-digital-care-log-copy'
 import { MarketingIcon } from '../../components/MarketingIcon'
 import { absoluteUrl, buildPageMetadata } from '../../lib/seo'
 
@@ -13,8 +17,7 @@ export const metadata: Metadata = {
     description: `${COMPANY_META_LINE}입니다. 자람이·시니어앤라이프 연계 기관·사업자 규모(MAU와 별개)와 표준화·파일럿 진행을 소개합니다.`,
     path: '/about',
     ogTitle: '회사소개 - AI디지털케어로그로 표준을 만드는 드림에이아이랩',
-    ogDescription:
-      'DAL은 AI디지털케어로그로 의료·돌봄·교육 데이터를 통합해 개인 맞춤 케어 표준 플랫폼을 지향합니다.',
+    ogDescription: AI_DIGITAL_CARE_LOG_PUBLIC_KO,
     ogImageAlt: '드림에이아이랩 회사소개',
   }),
   alternates: {
@@ -167,10 +170,16 @@ export default function About() {
                 DAL은 하나의 서비스 회사가 아니라 AI디지털케어로그 기반 플랫폼을 구축하고 여러 산업 도메인으로 확장하는 인프라 기업입니다.
               </p>
               <p className="text-lg text-gray-600 mb-6">
-                DAL(Dream AI Lab)은 모든 사람이 언제 어디서나 동등하게 의료·돌봄·교육 서비스를 누릴 수 있도록, 자체 개발한 AI디지털케어로그 기술을 기반으로 솔루션을 제공합니다. 가정·학교·병원·기관 데이터를 하나로 통합하고 AI가 분석하여 개인별 맞춤 치료·학습·돌봄 계획을 제안합니다.
+                {AI_DIGITAL_CARE_LOG_PUBLIC_KO}
               </p>
               <p className="text-lg text-gray-600 mb-6">
-                이 기술은 ① 발달장애 케어 ‘자람이’(상용), ② 노인 돌봄 ‘시니어앤라이프’(상용베타), ③ 건강·질병 관리 ‘토탈케어로그’(알파), ④ 사회문제 해결형 ‘글로벌커플케어’(상용)로 확장되고 있습니다. (국제결혼은 커뮤니티·매칭 중심으로 케어로그 직접 적용 없이 전개됩니다.)
+                {JUNG_HAESUNG_DAL_ATTRIBUTION_KO}
+              </p>
+              <p className="text-lg text-gray-600 mb-6">
+                연구기관 안의 R&amp;D에 머물지 않고 실제 생활과 운영에서 생성되는 RWD를 제품에 연결하고,
+                판단·실행 결과로부터 RWE를 축적하는 실학적 접근을 취합니다. 자람이(상용), 시니어앤라이프(상용베타),
+                토탈케어로그(알파), NoahAI(분리·상용화)처럼 도메인별 단계와 근거를 구분해 현장에서 실증하고 사업화합니다.
+                Global Couple Care는 현재 커뮤니티·매칭 중심으로 전개되어 케어로그 직접 적용과 구분합니다.
               </p>
               <p className="text-lg text-gray-600 mb-6">
                 우리는 공익에 가까운 돌봄·교육·의료 데이터 표준화에 집중해 신뢰를 쌓고 있습니다. 동의·규제를 전제로 한 기록은 연구·정책·현장 개선으로 환류될 수 있도록 설계하며, 공공·NGO·연구기관과의 협력으로 사회적 임팩트를 넓혀 갑니다.
@@ -233,7 +242,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Our Core Technology: AI디지털케어로그</h2>
-            <p className="text-lg text-gray-600">데이터 표준화부터 맞춤 실행까지, 하나의 표준으로 연결합니다.</p>
+            <p className="text-lg text-gray-600">시간축 기록부터 AI 판단·XAI·실행·결과 학습까지 하나의 환류 구조로 연결합니다.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="rounded-2xl p-6 shadow bg-gray-50 text-center">
@@ -305,7 +314,7 @@ export default function About() {
                 <MarketingIcon name="globe" className="h-11 w-11" />
               </div>
               <h3 className="text-xl font-bold text-gray-900">글로벌커플케어</h3>
-              <p className="text-gray-600 mt-1 mb-4">국내 최초 국제결혼 플랫폼</p>
+              <p className="text-gray-600 mt-1 mb-4">국제결혼 정보·비교·정착 지원 플랫폼</p>
               <div><Link href="/services/marriage" className="text-blue-700 font-semibold hover:underline">자세히 보기 →</Link></div>
             </div>
           </div>

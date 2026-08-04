@@ -3,6 +3,8 @@ import { newsArticles, hasEnglishTranslation } from './news/data'
 
 const baseUrl = 'https://dreamailab.com'
 
+export const dynamic = 'force-static'
+
 function url(path: string): string {
   if (path === '/' || path === '') return `${baseUrl}/`
   const normalized = path.startsWith('/') ? path : `/${path}`
@@ -51,9 +53,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: url('/services/senior'),
-      lastModified: new Date(),
+      lastModified: new Date('2026-07-27'),
       changeFrequency: 'weekly',
-      priority: 0.8,
+      priority: 0.9,
     },
     {
       url: url('/services/healthcare'),
@@ -105,9 +107,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: url('/technology'),
-      lastModified: new Date(),
+      lastModified: new Date('2026-08-04'),
       changeFrequency: 'monthly',
-      priority: 0.7,
+      priority: 0.9,
     },
     {
       url: url('/research'),
@@ -129,19 +131,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: url('/research/jung-haesung'),
-      lastModified: new Date('2026-07-26'),
+      lastModified: new Date('2026-08-04'),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
       url: url('/technology/platform'),
-      lastModified: new Date(),
+      lastModified: new Date('2026-08-04'),
       changeFrequency: 'monthly',
-      priority: 0.85,
+      priority: 0.8,
     },
     {
       url: url('/technology/educarelog'),
-      lastModified: new Date(),
+      lastModified: new Date('2026-08-04'),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
@@ -189,7 +191,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: url('/en/research/jung-haesung'),
-      lastModified: new Date('2026-07-26'),
+      lastModified: new Date('2026-08-04'),
       changeFrequency: 'monthly',
       priority: 0.75,
     },

@@ -1,3 +1,10 @@
+import {
+  AI_DIGITAL_CARE_LOG_CANONICAL_KO,
+  AI_DIGITAL_CARE_LOG_FLOW_KO,
+  JUNG_HAESUNG_DAL_ATTRIBUTION_KO,
+} from './ai-digital-care-log-copy'
+import { COMPANY_META_LINE } from './company-copy'
+
 export const DREAM_AI_LAB_URL = 'https://dreamailab.com'
 export const DREAM_AI_LAB_ORGANIZATION_ID = `${DREAM_AI_LAB_URL}/#organization`
 export const JUNG_HAESUNG_URL = `${DREAM_AI_LAB_URL}/research/jung-haesung/`
@@ -39,6 +46,7 @@ export const jungHaesungPersonSchema = {
   alternateName: 'Jung Haesung',
   url: JUNG_HAESUNG_URL,
   jobTitle: 'AI 연구자 · 공동창업자·CTO',
+  description: JUNG_HAESUNG_DAL_ATTRIBUTION_KO,
   worksFor: {
     '@type': 'Organization',
     '@id': DREAM_AI_LAB_ORGANIZATION_ID,
@@ -48,10 +56,12 @@ export const jungHaesungPersonSchema = {
   knowsAbout: [
     'AI 디지털케어로그',
     'AI Digital Care Log',
-    'Decision-Log-Review-Learning',
-    '사람 중심 AI',
-    '케어 데이터 아키텍처',
-    '금융 의사결정 로그',
+    '범용 AI 데이터·판단·학습 환류 아키텍처',
+    'AI 판단 레이어',
+    '설명 가능한 AI(XAI)',
+    '시간축 맥락 데이터',
+    '개인화 모델',
+    'RWD·RWE 현장 실증',
   ],
   subjectOf: [
     { '@type': 'WebPage', url: AI_DIGITAL_CARE_LOG_URL, name: 'AI 디지털케어로그 핵심 기술' },
@@ -67,8 +77,8 @@ export const aiDigitalCareLogSchema = {
   name: 'AI 디지털케어로그',
   alternateName: ['AI Digital Care Log', 'DAL'],
   url: AI_DIGITAL_CARE_LOG_URL,
-  description:
-    '의사결정, 기록, 검토, 학습을 연결해 사람의 최종 판단을 돕는 범용 기록·환류 아키텍처',
+  description: AI_DIGITAL_CARE_LOG_CANONICAL_KO,
+  disambiguatingDescription: AI_DIGITAL_CARE_LOG_FLOW_KO,
   creator: { '@id': JUNG_HAESUNG_PERSON_ID },
   inDefinedTermSet: {
     '@type': 'DefinedTermSet',
@@ -84,8 +94,7 @@ export const dreamAiLabOrganizationSchema = {
   alternateName: ['Dream AI Lab', 'DAL'],
   url: DREAM_AI_LAB_URL,
   logo: `${DREAM_AI_LAB_URL}/logo.png`,
-  description:
-    'AI 디지털케어로그를 연구·설계하고 돌봄·교육·생활·의사결정 영역에 적용하는 사람 중심 AI 기술 조직',
+  description: COMPANY_META_LINE,
   foundingDate: '2022',
   founder: { '@id': JUNG_HAESUNG_PERSON_ID },
   brand: ecosystemBrands.map((brand) => ({
@@ -106,9 +115,10 @@ export const dreamAiLabOrganizationSchema = {
   },
   knowsAbout: [
     { '@id': AI_DIGITAL_CARE_LOG_ID },
-    '사람 중심 AI',
-    '케어 데이터 표준화',
-    '다도메인 의사결정 로그',
+    '인간 삶 전반의 시간축 데이터',
+    'AI 판단 레이어와 설명 가능한 AI(XAI)',
+    '다도메인 판단·실행·학습 환류',
+    'RWD·RWE 현장 실증과 사업화',
   ],
 } as const
 

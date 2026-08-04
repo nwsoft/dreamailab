@@ -158,7 +158,7 @@ export default function PublicPage() {
             </div>
             <div className="bg-white rounded-xl p-6">
               <h3 className="text-lg font-bold text-gray-900 mb-3">RWE·임상 연구</h3>
-              <p className="text-gray-600">IRB 협약, 현장 근거(RWE) 데이터 기반 연구 지원.</p>
+              <p className="text-gray-600">IRB 협약, 실사용데이터(RWD)와 실제사용근거(RWE) 기반 연구 지원.</p>
             </div>
           </div>
         </div>

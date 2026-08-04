@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
 import EnLandingPage from '../../components/EnLandingPage'
+import { AI_DIGITAL_CARE_LOG_PUBLIC_EN } from '../../lib/ai-digital-care-log-copy'
 import { absoluteUrl, buildPageMetadata } from '../../lib/seo'
 
 export const metadata: Metadata = {
   ...buildPageMetadata({
     title: 'Dream AI Lab (DAL) – AI Digital Care Log Platform',
-    description:
-      'Dream AI Lab standardizes care, health, and education data with AI Digital Care Log technology—connecting developmental disability, senior care, healthcare, education, and wellness on one platform.',
+    description: AI_DIGITAL_CARE_LOG_PUBLIC_EN,
     path: '/en',
     ogImageAlt: 'Dream AI Lab',
   }),
@@ -25,12 +25,12 @@ export default function EnHomePage() {
     <EnLandingPage
       title="Dream AI Lab"
       subtitle="AI Digital Care Log · DAL"
-      description="We build one data infrastructure for care innovation—linking Jarame (developmental disabilities), senior care, healthcare, education, global couple care, and wellness."
+      description={AI_DIGITAL_CARE_LOG_PUBLIC_EN}
       koPath="/"
       sections={[
         {
           heading: 'Platform philosophy',
-          body: 'Rather than isolated apps, DAL connects domains through a shared AI Digital Care Log standard—enabling personalized care, institutional efficiency, and long-term data flywheels.',
+          body: 'AI Digital Care Log is a universal AI data, judgment, and learning-feedback architecture—not a healthcare-only record standard. It connects context across daily life, behavior, care, education, healthcare, finance, investing, consumption, and work.',
         },
         {
           heading: 'Core domains',

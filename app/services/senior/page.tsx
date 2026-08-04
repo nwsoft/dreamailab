@@ -5,12 +5,12 @@ import Link from 'next/link'
 import { SymbolIcon } from '../../../components/SymbolIcon'
 
 export const metadata: Metadata = {
-  title: '시니어앤라이프 | AI 시니어 돌봄 디지털케어로그 - 요양·재가복지 통합 플랫폼',
+  title: '시니어앤라이프 | 재가재활·재가노인복지·요양시설 안내',
   description:
-    '드림에이아이랩의 AI 디지털케어로그 기술 기반 시니어 돌봄 통합 플랫폼. 재가노인복지서비스, 요양원, 요양병원, 주야간보호, 의료보조기기, 요양보호사 구인구직을 하나로 연결하고, AI가 수면·활동·복약 패턴을 실시간 분석하여 이상 징후를 조기 감지합니다. 가족과 요양보호사가 함께 보는 개인 맞춤형 케어로 시니어 건강 관리의 새로운 표준을 제시합니다.',
+    '부모님 돌봄에 필요한 재가재활·재가노인복지서비스, 요양원·요양병원·주야간보호 시설 정보를 확인하고 시니어앤라이프의 시설 검색·장기요양 안내·돌봄 기록 연계 방향을 살펴보세요.',
   openGraph: {
-    title: '시니어앤라이프 | AI 시니어 돌봄 디지털케어로그',
-    description: 'AI 기술로 시니어 돌봄의 품질을 높이고, 가족에게 안심을 제공하는 통합 플랫폼',
+    title: '시니어앤라이프 | 재가재활·재가노인복지·요양시설 안내',
+    description: '재가재활과 재가노인복지서비스부터 요양시설 검색·장기요양 안내까지 한곳에서 확인합니다.',
     type: 'website',
     images: [
       {
@@ -23,8 +23,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: '시니어앤라이프 | AI 시니어 돌봄 디지털케어로그',
-    description: 'AI가 시니어 건강 패턴을 분석하고 이상 징후를 조기 감지하는 스마트 케어 플랫폼',
+    title: '시니어앤라이프 | 재가재활·재가노인복지·요양시설 안내',
+    description: '재가재활·재가복지와 요양시설 정보를 확인하고 부모님 돌봄 선택을 준비하세요.',
   },
   alternates: {
     canonical: 'https://dreamailab.com/services/senior',
@@ -215,13 +215,13 @@ export default function SeniorService() {
   // 섹션 10: 디지털케어로그 핵심 기능
   const carelogFeatures = [
     {
-      title: '실시간 상태 기록',
-      description: '하루의 상태를 간단히 기록하면, AI가 변화와 위험 신호를 자동 감지합니다.',
+      title: '시간축 상태 기록',
+      description: '하루의 상태를 기록해 시간축으로 연결하고, P0 AI 연동 후 변화와 위험 신호 판단으로 확장합니다.',
       icon: '✍️',
     },
     {
-      title: 'AI 분석 및 예측',
-      description: '축적된 데이터를 분석하여 건강 상태 변화를 예측하고 조기 경고를 제공합니다.',
+      title: 'AI 분석·판단 (로드맵 P0)',
+      description: 'AI·케어로그 연동 후 축적 데이터를 판단해 건강 상태 변화와 조기 경고·다음 케어 행동을 제시합니다.',
       icon: '🔮',
     },
     {
@@ -264,25 +264,25 @@ export default function SeniorService() {
       facility: '요양병원',
       icon: '🏥',
       description:
-        '간호사가 환자의 식사·투약·수면 패턴을 기록. AI가 수치 변화를 분석해 탈수 위험, 약물 부작용, 혈당 이상 등을 조기 경고. 병원 EMR과 연동해 의료진에게 자동 알림',
+        '로드맵 P0 연동 시나리오: 간호사가 환자의 식사·투약·수면 패턴을 기록하면 AI가 수치 변화를 분석해 탈수 위험, 약물 부작용, 혈당 이상 등을 조기 경고하고 병원 EMR 연동 시 의료진에게 알림',
     },
     {
       facility: '재가재활센터',
       icon: '🏠',
       description:
-        '물리치료 후 보행거리·균형 상태·통증 정도 기록. AI가 회복 속도 추세를 분석해 맞춤형 재활 목표를 자동 추천. 보호자는 앱으로 회복 진척도를 확인',
+        '로드맵 P0 연동 시나리오: 물리치료 후 보행거리·균형 상태·통증 정도를 기록하면 AI가 회복 추세를 판단해 맞춤 재활 목표와 다음 행동을 제시하고 보호자 화면에 결과를 환류',
     },
     {
       facility: '요양원',
       icon: '🏘️',
       description:
-        '생활지원사가 식사·배변·수면 상태를 간단 기록. AI가 "밤낮이 바뀌는 수면 패턴 → 치매 진행 위험" 등 위험 신호를 조기 포착. 가족에게 실시간 리포트 제공',
+        '로드맵 P0 연동 시나리오: 생활지원사가 식사·배변·수면 상태를 기록하면 AI가 수면 변화 등 위험 신호를 판단하고 가족에게 근거와 다음 케어 행동을 제시',
     },
     {
       facility: '주간보호센터',
       icon: '🌅',
       description:
-        '낮 동안 활동 참여도와 정서 상태 기록. AI가 우울감·고립 위험 지수를 계산. 사회복지사가 맞춤 활동을 설계하고, 가족과 연계해 일상 변화를 함께 관리',
+        '로드맵 P0 연동 시나리오: 낮 동안 활동 참여도와 정서 상태를 기록하면 AI가 우울감·고립 위험을 판단해 맞춤 활동과 가족 연계 행동을 제시하고 결과를 환류',
     },
   ]
 
@@ -1172,10 +1172,11 @@ export default function SeniorService() {
             기록은 끝이 아니라 <strong>분석·알림·케어 개선으로 이어지는 루프</strong>의 시작입니다.
           </p>
           <p className="text-center text-gray-600 text-sm mb-4 max-w-3xl mx-auto">
-            AI 디지털케어로그는 단순 기록 시스템이 아니라, <strong>기록 → 분석 → 판단 → 피드백</strong>이 반복되는 의사결정 인프라 기술입니다.
+            AI디지털케어로그는
+            <strong> 기록 연결 → 맥락 이해 → AI 분석·판단 → 설명 가능한 실행 → 결과 기록 → 학습·환류</strong>가 작동하는 범용 AI 데이터·판단·학습 환류 아키텍처입니다.
           </p>
           <p className="text-center text-gray-600 text-xs mb-3 max-w-3xl mx-auto">
-            기존 돌봄 기록은 보관에 가깝습니다. <strong>DAL AI 디지털케어로그</strong>는 사람의 상태·생활 데이터를 <strong>시간 흐름 속에서 이해</strong>하고, 현장 기록이 수집·분석·위험 감지·케어 계획에 반영되는 <strong>의사결정 로그 + 피드백 루프</strong>로 작동합니다. 반복될수록 케어는 더 개인 맞춤형으로 진화합니다.
+            기존 돌봄 기록은 보관에 가깝습니다. <strong>DAL AI디지털케어로그</strong>는 사람의 상태·생활 데이터를 <strong>시간 흐름 속에서 이해</strong>하고, AI가 위험·변화 원인을 판단해 이유 있는 케어 계획과 다음 행동을 도출합니다. 실행 결과는 다시 기록되어 반복될수록 다음 판단과 개인화 모델을 고도화합니다.
           </p>
           <p className="text-center text-gray-600 text-xs mb-8 max-w-3xl mx-auto">
             시니어앤라이프는 이 AI 디지털케어로그 기술을 시니어 돌봄 산업에 적용한 DAL 플랫폼 사례입니다.
@@ -1200,10 +1201,10 @@ export default function SeniorService() {
             </div>
             <div className="bg-gray-50 rounded-xl p-5 border border-gray-100">
               <div className="text-xs font-semibold text-gray-500 mb-1">3</div>
-              <h3 className="font-bold text-gray-900 mb-2 text-sm">판단 보조</h3>
+              <h3 className="font-bold text-gray-900 mb-2 text-sm">AI 판단·다음 행동</h3>
               <p className="text-xs text-gray-700">
-                AI 리포트와 위험 신호 분석을 통해 보호자, 기관, 의료진이
-                <strong> 상황을 더 빠르게 이해</strong>하도록 돕습니다.
+                AI가 장기 맥락과 위험 신호를 판단해 이유가 설명된 케어 계획과
+                <strong> 다음 행동</strong>을 도출합니다.
               </p>
             </div>
             <div className="bg-gray-50 rounded-xl p-5 border border-gray-100">
@@ -1218,7 +1219,7 @@ export default function SeniorService() {
           <div className="mt-8 bg-emerald-50/80 rounded-xl p-4 border border-emerald-100 max-w-3xl mx-auto">
             <p className="text-xs font-semibold text-emerald-800 mb-1 text-center">[결론 요약]</p>
             <p className="text-sm text-gray-800 text-center">
-              즉, DAL AI 디지털케어로그는 <strong>쌓일수록 케어가 정교해지는 의사결정 인프라</strong>이며, 시니어앤라이프는 그 시니어 산업 응용 사례입니다.
+              즉, DAL AI디지털케어로그는 <strong>쌓일수록 판단·실행·개인화가 정교해지는 데이터·학습 환류 인프라</strong>이며, 시니어앤라이프는 그 시니어 산업 응용 사례입니다.
             </p>
           </div>
         </div>
@@ -1265,7 +1266,7 @@ export default function SeniorService() {
 
           <div className="mt-8 bg-white rounded-2xl p-6 border border-emerald-100">
             <p className="text-sm text-gray-700 leading-relaxed">
-              이는 단순 디지털화가 아니라 <strong>돌봄의 표준화 + 데이터화 + AI 기반 판단 보조</strong>를 함께 이루는 전환입니다. 시니어앤라이프는 DAL AI 디지털케어로그 기술의 시니어 산업 응용 사례이며, 앞으로 복지 정책·공공 관리·의료 연계·서비스 품질 관리의 기반이 될 수 있는 구조를 지향합니다. 즉, &quot;좋은 서비스&quot;를 넘어 <strong>산업 구조 전환의 시작점</strong>으로서 자리하는 플랫폼입니다.
+              이는 단순 디지털화가 아니라 <strong>돌봄의 표준화 + 시간축 데이터 + AI 판단·실행 + 결과 학습·환류</strong>를 함께 이루는 전환입니다. 시니어앤라이프는 DAL AI디지털케어로그 기술의 시니어 산업 응용 사례이며, 앞으로 복지 정책·공공 관리·의료 연계·서비스 품질 관리의 기반이 될 수 있는 구조를 지향합니다. 즉, &quot;좋은 서비스&quot;를 넘어 <strong>산업 구조 전환의 시작점</strong>으로서 자리하는 플랫폼입니다.
             </p>
           </div>
           <div className="mt-6 bg-emerald-50/80 rounded-xl p-4 border border-emerald-100 max-w-3xl mx-auto">
@@ -1401,7 +1402,9 @@ export default function SeniorService() {
             시니어앤라이프는 단순한 서비스가 아니라, <strong>DAL AI 디지털케어로그 기술의 시니어 산업 응용 사례</strong>입니다.
           </p>
           <p className="text-center text-gray-600 text-xs mb-6 max-w-3xl mx-auto">
-            DAL 플랫폼은 발달장애, 시니어 돌봄, 헬스케어, 교육 등 다양한 영역에서 사람의 상태와 변화를 기록하고, AI 분석을 통해 더 나은 의사결정을 돕는 <strong>AI 의사결정 인프라 플랫폼</strong>을 구축하고 있습니다. 시니어앤라이프는 그 첫 번째 산업 응용 중 하나입니다.
+            DAL 플랫폼은 일상·행동·돌봄·교육·의료·금융·소비·업무의 기록을 시간축으로 연결하고,
+            AI가 맥락을 판단해 이유 있는 다음 행동을 실행·환류하는 <strong>범용 AI 데이터·판단·학습 환류 아키텍처</strong>를 운영합니다.
+            시니어앤라이프는 이 아키텍처의 시니어 산업 응용 축입니다.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">

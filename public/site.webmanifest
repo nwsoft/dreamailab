@@ -1,7 +1,7 @@
 {
   "name": "드림에이아이랩",
   "short_name": "DAL",
-  "description": "AI 디지털케어로그 표준으로 케어 혁신하는 드림에이아이랩",
+  "description": "삶의 기록을 시간축으로 연결해 AI 판단·설명 가능한 실행·결과 학습으로 이어지는 드림에이아이랩 AI디지털케어로그",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",

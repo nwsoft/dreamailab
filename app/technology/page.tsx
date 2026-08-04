@@ -3,7 +3,11 @@ import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import PageClosingSection from '../../components/PageClosingSection'
 import Link from 'next/link'
-import { COMPANY_HERO_LINE } from '../../lib/company-copy'
+import {
+  AI_DIGITAL_CARE_LOG_CANONICAL_KO,
+  AI_DIGITAL_CARE_LOG_FLOW_KO,
+  AI_DIGITAL_CARE_LOG_PUBLIC_KO,
+} from '../../lib/ai-digital-care-log-copy'
 import { MarketingIcon, type MarketingIconName } from '../../components/MarketingIcon'
 import {
   AI_DIGITAL_CARE_LOG_ID,
@@ -13,8 +17,7 @@ import {
 } from '../../lib/entities'
 
 const technologyCanonical = 'https://dreamailab.com/technology'
-const technologyDescription =
-  'AI디지털케어로그: 표준 기록 수집→AI 분석→실행→환류 파이프라인. 발달·돌봄·의료·교육·가족·웰니스 등 사람 중심 영역에 적용하는 DAL의 핵심 기술입니다.'
+const technologyDescription = AI_DIGITAL_CARE_LOG_PUBLIC_KO
 
 export const metadata: Metadata = {
   title: '핵심 기술 - AI디지털케어로그 플랫폼 구조 | 드림에이아이랩',
@@ -49,7 +52,7 @@ const technologyJsonLd = {
     '@type': 'TechArticle',
     '@id': AI_DIGITAL_CARE_LOG_ID,
     headline: 'AI디지털케어로그',
-    description: technologyDescription,
+    description: AI_DIGITAL_CARE_LOG_CANONICAL_KO,
     inLanguage: 'ko-KR',
     author: {
       '@type': 'Person',
@@ -127,10 +130,12 @@ export default function Technology() {
   ]
 
   const architecture = [
-    { n: '01', t: '수집·정규화', d: '동의·권한을 바탕으로 다양한 출처 데이터를 도메인 표준 스키마(FHIR/Ed‑Fi/xAPI/Open mHealth 등)로 정규화·가명처리' },
-    { n: '02', t: 'AI 분석·추론', d: '멀티모달 AI로 상태/리스크 추정, 상관·원인 탐색, 권고 후보 생성(추천·매칭·우선순위)' },
-    { n: '03', t: '실행·오케스트레이션', d: '전문가 검토(HITL) 후 권고·매칭·알림 실행, 워크플로우/캘린더/메시징·파트너 API 연동' },
-    { n: '04', t: '피드백·학습', d: '실행 결과·성과지표 재기록 → 개인화 업데이트·모델 재학습(연합/온라인) → A/B·모니터링으로 지속 개선' },
+    { n: '01', t: '기록 연결', d: '동의·권한을 바탕으로 삶과 현장의 기록을 개인·상황 중심 시간축과 도메인 표준 스키마로 연결' },
+    { n: '02', t: '맥락 이해', d: '행동·상태·사건의 전후 관계와 장기 변화를 함께 해석해 현재 상황의 맥락을 구성' },
+    { n: '03', t: 'AI 분석·판단', d: 'AI 판단 레이어가 패턴·위험·기회를 분석하고 적합한 판단·권고·다음 행동을 도출' },
+    { n: '04', t: '설명 가능한 실행', d: 'XAI로 판단 근거를 설명하고 권한·정책에 따라 콘텐츠·알림·워크플로·파트너 API 실행으로 연결' },
+    { n: '05', t: '결과 기록', d: '실행 이후 반응·성과·변화·예외를 같은 시간축에 다시 기록해 판단과 결과의 관계를 보존' },
+    { n: '06', t: '학습·환류', d: '결과를 다음 판단과 개인화 모델에 환류하며, 고급 학습 모듈은 서비스별 검증 단계에 따라 적용' },
   ]
 
   const layers = [
@@ -156,11 +161,11 @@ export default function Technology() {
     },
     {
       title: '케어로그 엔진(데이터 분석 코어)',
-      desc: '타임라인/에피소드 모델로 맥락을 보존하고 상관·경보·권고를 생성합니다.',
+      desc: '타임라인/에피소드 모델로 맥락을 보존하고 상관·경보·판단·다음 행동을 생성합니다.',
       points: [
         '타임라인·에피소드 기반 데이터 모델',
         '약물·행동·부작용 등 상관분석',
-        '경보·권고 생성(룰/ML 혼합)'
+        '판단·경보·권고·다음 행동 생성(룰/ML 혼합)'
       ],
       innovation: '장기 추적·재현 가능한 분석'
     },
@@ -169,8 +174,8 @@ export default function Technology() {
       desc: '멀티모달 AI로 해석·예측·추천을 수행하고 개인화합니다.',
       points: [
         '초거대 AI 엔진(LLM·Vision Transformer·멀티모달)',
-        '세부 엔진: NLP·시계열·CV·강화학습',
-        '개인화 엔진: 도메인 파인튜닝·Federated Learning·XAI'
+        '세부 엔진: NLP·시계열·CV·서비스별 검증 단계의 강화학습',
+        '개인화 엔진: 도메인 파인튜닝·XAI·선택적 연합학습'
       ],
       innovation: '범용 모델 + 도메인 특화 + 개인화 결합'
     },
@@ -179,7 +184,7 @@ export default function Technology() {
       desc: '맞춤 계획을 실행 가능한 태스크로 전개하고 협업을 오케스트레이션합니다.',
       points: [
         '맞춤 계획·콘텐츠 생성·개입 옵션 제시',
-        '전문가 검토·역할별 승인 워크플로우',
+        '서비스별 권한·정책 게이트와 규제 영역의 역할별 승인',
         '대시보드·알림·오프라인 동기화·파트너 API 연동'
       ],
       innovation: '분석→실행의 마지막 1m 연결'
@@ -189,7 +194,7 @@ export default function Technology() {
       desc: '성과를 계량화하고 개인화·모델을 지속 개선합니다.',
       points: [
         '모니터링·성과지표 자동 집계',
-        '실행 결과 재기록 → 모델 재학습(연합/온라인)',
+        '실행 결과 재기록 → 다음 판단·개인화 모델 환류',
         'A/B·모니터링 기반 고도화'
       ],
       innovation: '데이터가 쌓일수록 똑똑해지는 선순환'
@@ -357,8 +362,8 @@ export default function Technology() {
     },
     {
       step: '4',
-      title: 'AI 분석·추론',
-      desc: 'NLP·시계열·컴퓨터비전·강화학습을 결합해 패턴과 위험 신호를 탐지하고, 결과를 예측합니다.',
+      title: 'AI 분석·판단',
+      desc: 'NLP·시계열·컴퓨터비전과 서비스별 검증 모듈을 결합해 패턴·위험·기회를 판단하고 결과를 예측합니다.',
       details: [
         '패턴 탐지',
         '위험 신호',
@@ -366,35 +371,35 @@ export default function Technology() {
         '예측 모델',
         'Large‑Scale AI Engines',
         '도메인 특화 파인튜닝',
-        'Federated Learning(선택)',
+        'Federated Learning(선택·단계 검증)',
       ],
       icon: 'robot',
     },
     {
       step: '5',
-      title: '맞춤 계획·콘텐츠 생성',
-      desc: '개인 맞춤 케어 계획과 치료 개입 옵션을 생성하고 설명 가능한 근거를 제공합니다.',
-      details: ['케어 계획', '치료/교육 콘텐츠', '개입 옵션', 'XAI 근거'],
+      title: 'XAI 판단·다음 행동 생성',
+      desc: '개인 맥락에 맞는 판단·권고·다음 행동을 생성하고 XAI로 이유와 근거를 설명합니다.',
+      details: ['판단·우선순위', '치료/교육 콘텐츠', '다음 행동', 'XAI 근거'],
       icon: 'document',
     },
     {
       step: '6',
-      title: '전문가 검토·역할별 승인',
-      desc: '전문가가 검토·수정·확정하고, 관련자와 공유하여 협업합니다.',
-      details: ['전문가 검토', '역할별 태스크', '관련자 공유/코멘트'],
+      title: '권한·정책 기반 실행',
+      desc: '서비스 정책과 사용자·기관 권한에 따라 실행하며, 법적 자격이 필요한 행위에만 해당 승인 절차를 적용합니다.',
+      details: ['권한·정책 게이트', '역할별 태스크', '규제 행위 승인'],
       icon: 'handshake',
     },
     {
       step: '7',
       title: '전달·실행·알림',
-      desc: '역할별 대시보드와 알림으로 실행을 지원하며, 현장 환경을 고려해 오프라인 입력도 동기화합니다.',
+      desc: '역할별 대시보드·콘텐츠·알림·API로 다음 행동을 실행하고, 현장 결과와 오프라인 입력을 동기화합니다.',
       details: ['맞춤 대시보드', '일정/경고 알림', '오프라인 동기화'],
       icon: 'upload',
     },
     {
       step: '8',
-      title: '모니터링·피드백·지속 개선',
-      desc: '이행도와 성과지표를 자동 집계하고, 피드백과 데이터를 반영해 개인화·모델을 지속 개선합니다.',
+      title: '결과 기록·학습 환류',
+      desc: '이행도·성과·변화를 다시 기록하고 다음 판단과 개인화 모델에 환류해 지속적으로 개선합니다.',
       details: ['이행도/성과지표', '개인화 업데이트', '모델 재학습'],
       icon: 'chart',
     },
@@ -486,14 +491,14 @@ export default function Technology() {
       <Header />
 
       {/* Hero */}
-      <section className="bg-gradient-to-br from-primary-600 to-secondary-600 text-white py-20 md:py-24 shadow-inner">
+      <section id="ai-digital-care-log" className="bg-gradient-to-br from-primary-600 to-secondary-600 text-white py-20 md:py-24 shadow-inner">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-block px-4 py-1.5 rounded-full text-sm font-medium bg-white/15 text-white/95 mb-6">
             DAL 핵심 기술
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-6">AI디지털케어로그</h1>
           <p className="text-xl max-w-4xl mx-auto mb-6">
-            표준 기록 → AI 분석 → 실행 연결 → 환류(학습). 하나의 데이터 파이프라인으로 서비스가 연결됩니다. {COMPANY_HERO_LINE}입니다.
+            {AI_DIGITAL_CARE_LOG_PUBLIC_KO}
           </p>
           <p className="mb-6 text-sm text-white/90">
             설계·연구:{' '}
@@ -504,7 +509,7 @@ export default function Technology() {
           </p>
           <div className="bg-white/10 rounded-2xl p-6 max-w-3xl mx-auto mb-8">
             <p className="text-lg font-semibold">
-              &quot;분산·비표준 데이터를 표준 기록으로 정렬하고, AI가 분석해 개인 맞춤 실행으로 잇는 통합 인프라&quot;
+              {AI_DIGITAL_CARE_LOG_FLOW_KO}
             </p>
           </div>
           <Link
@@ -568,13 +573,8 @@ export default function Technology() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">AI+디지털케어로그란?</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              DAL의 <strong>AI디지털케어로그</strong>는 행동·학습·치료·반응·생활습관·임상 데이터 등 
-              <strong>다양한 시계열 기록</strong>을 표준화된 디지털 로그로 수집·연결하고,
-              이를 <strong>AI</strong>(머신러닝·강화학습·집단지능 분석)으로 해석하여 
-              <strong>개인별 맞춤형 서비스</strong>를 제공합니다. 또한 축적된 데이터를 통해 지금까지 고착화된 
-              기존 기준의 한계를 넘어, <strong>새로운 기준과 발견</strong>을 가능하게 하는 지능형 기록·분석·케어 
-              기술로서 의료·돌봄·교육·웰니스 등 다양한 분야에 적용할 수 있습니다.
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              {AI_DIGITAL_CARE_LOG_CANONICAL_KO}
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -600,8 +600,11 @@ export default function Technology() {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">왜 AI디지털케어로그인가?</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-  디지털케어로그는 의료·돌봄·교육을 넘어, 사람이 기록하거나 발생시키는 모든 행위를 데이터화하여 AI로 최적화할 수 있는 <strong>범용 플랫폼</strong>입니다. 즉, 특정 산업에 국한되지 않고 인간 활동 전반에 적용 가능한 <strong>확장성</strong>을 지닙니다. 이러한 확장성을 바탕으로, 현장 시스템 전반의 한계를 <strong>데이터 표준화와 AI</strong>로 단계적으로 개선합니다.
-</p>
+              일상·행동·습관부터 돌봄·교육·의료·금융·재테크·소비·업무까지,
+              인간의 삶에서 발생하는 기록은 서로 분리되어 있을 때보다 같은 시간축과 맥락에서 연결될 때 더 큰 의미를 갖습니다.
+              AI디지털케어로그는 이 연결 위에서 <strong>AI의 판단과 실행 결과가 다시 학습으로 돌아가는 구조</strong>를
+              이미 갖추고, 도메인별 데이터와 개인화 모델을 지속적으로 고도화합니다.
+            </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {problems.map((problem, index) => (
@@ -627,9 +630,9 @@ export default function Technology() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">아키텍처</h2>
-            <p className="text-xl text-gray-600">4단계 선순환 구조로 지속적 가치 창출</p>
+            <p className="text-xl text-gray-600">6단 학습·환류 구조로 판단과 개인화를 지속적으로 고도화</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {architecture.map((step, index) => (
               <div key={index} className="text-center bg-gradient-to-br from-primary-50 to-secondary-50 rounded-2xl p-6 shadow-lg border border-primary-100">
                 <div className="w-16 h-16 bg-gradient-to-r from-primary-600 to-secondary-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -643,8 +646,8 @@ export default function Technology() {
           <div className="mt-12 text-center">
             <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 max-w-4xl mx-auto">
               <p className="text-lg text-gray-700">
-                <strong className="text-primary-600">핵심 혁신:</strong> 각 단계가 유기적으로 연결되어 데이터가 축적될수록 개인화가 업데이트되고, 
-                연합/온라인 학습으로 모델이 정교해지며, 더 정확한 개입과 운영 최적화가 이루어집니다.
+                <strong className="text-primary-600">핵심 혁신:</strong> 각 단계가 유기적으로 연결되어 결과가 쌓일수록 다음 판단과 개인화 모델이 고도화됩니다.
+                강화학습·연합학습 등 고급 학습 모듈은 도메인과 서비스별 검증 단계에 따라 적용 범위를 구분합니다.
               </p>
             </div>
           </div>
@@ -911,8 +914,8 @@ export default function Technology() {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">의료·돌봄·교육을 넘어</h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              AI디지털케어로그의 본질은 “사람의 행위·경험·상태를 기록 → AI 분석 → 맞춤형 최적화 → 집단지능 학습”입니다.
-              따라서 특정 산업에 국한되지 않고, 다양한 분야에 범용적으로 적용할 수 있습니다.
+              AI디지털케어로그의 본질은 <strong>{AI_DIGITAL_CARE_LOG_FLOW_KO}</strong>입니다.
+              이 범용 구조는 특정 산업에 국한되지 않고 인간의 삶과 활동 전반에 적용됩니다.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

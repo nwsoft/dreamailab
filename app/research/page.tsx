@@ -64,6 +64,17 @@ export default function ResearchHubPage() {
             드림에이아이랩은 AI Digital Care Log를 사람에서 동물·식물·로봇으로 확장하는 장기 연구를
             진행합니다. 이 영역의 내용은 <strong>상용 서비스가 아닙니다</strong>.
           </p>
+          <p className="text-sm text-white/80 mt-5 max-w-3xl mx-auto">
+            연구의 공통 기반은{' '}
+            <Link href="/technology" className="underline font-medium hover:text-white">
+              AI디지털케어로그 정본 기술
+            </Link>
+            이며, 최초 고안·개발과 도메인 실증 이력은{' '}
+            <Link href="/research/jung-haesung" className="underline font-medium hover:text-white">
+              AI 연구자 정해성 공식 프로필
+            </Link>
+            에서 확인할 수 있습니다.
+          </p>
           <p className="text-sm text-white/70 mt-6 max-w-2xl mx-auto">
             기술 개발 초기 · 연구 개발 · 장기 비전으로 표시된 항목은 출시·운영을 의미하지 않습니다.
           </p>

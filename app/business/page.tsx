@@ -8,7 +8,7 @@ import { MarketingIcon, type MarketingIconName } from '../../components/Marketin
 export const metadata: Metadata = {
   title: '비즈니스·투자 - B2B 솔루션 & 파트너십 | 드림에이아이랩',
   description:
-    'DAL의 핵심기술 AI디지털케어로그 기반 B2B 솔루션, 파트너십, 투자 포인트를 확인하세요. 창업자 정해성이 고안한 디지털케어로그를 바탕으로 표준화·기관 풀·파일럿을 전개하는 포트폴리오와 사회적 임팩트를 제시합니다.',
+    'AI 연구자 정해성이 최초 고안·개발한 AI디지털케어로그를 기반으로 DAL이 자람이·시니어앤라이프·VeggieCare 등에서 실증·사업화하는 B2B 솔루션, 파트너십과 투자 포인트를 소개합니다.',
   alternates: { canonical: absoluteUrl('/business') },
   openGraph: {
     title: '비즈니스·투자 - B2B 솔루션 & 파트너십 | 드림에이아이랩',
@@ -227,7 +227,7 @@ export default function Business() {
       monetization: [
         'B2B2C 구독',
         '병원 상담 연결/리드 기반 수익',
-        '제약 PoC·RWE 데이터 협력'
+        '제약 PoC·RWD/RWE 협력'
       ],
       next: [
         'IRB 연구 진행',
@@ -806,10 +806,10 @@ export default function Business() {
               <div className="text-xs text-gray-500">예: 병원·센터 매칭/리드 수수료</div>
             </div>
 
-            {/* 데이터/라이선스 (RWE & API) */}
+            {/* 데이터/라이선스 (RWD·RWE & API) */}
             <div className="bg-gray-50 rounded-2xl p-6 border border-gray-200">
-              <h3 className="text-lg font-bold text-gray-900 mb-3">데이터/라이선스 (RWE & API)</h3>
-              <p className="text-sm text-gray-600 mb-4">RWE 데이터 협력 · API · 보험/제약 PoC · ESG 연구</p>
+              <h3 className="text-lg font-bold text-gray-900 mb-3">데이터/라이선스 (RWD·RWE & API)</h3>
+              <p className="text-sm text-gray-600 mb-4">실사용데이터(RWD)·실제사용근거(RWE) 협력 · API · 보험/제약 PoC · ESG 연구</p>
               <ul className="text-sm text-gray-700 space-y-2 mb-4">
                 <li className="flex"><span className="mr-2">•</span>FHIR/GraphQL API, 이벤트 웹훅</li>
                 <li className="flex"><span className="mr-2">•</span>IRB·가명처리·XAI 리포트</li>

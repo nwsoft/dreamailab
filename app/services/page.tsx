@@ -3,12 +3,15 @@ import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import PageClosingSection from '../../components/PageClosingSection'
 import Link from 'next/link'
+import {
+  AI_DIGITAL_CARE_LOG_FLOW_KO,
+  AI_DIGITAL_CARE_LOG_PUBLIC_KO,
+} from '../../lib/ai-digital-care-log-copy'
 import { absoluteUrl, buildBreadcrumbJsonLd, buildPageMetadata, buildWebPageJsonLd } from '../../lib/seo'
 
 export const metadata: Metadata = buildPageMetadata({
   title: '서비스 생태계 허브 - AI디지털케어로그 플랫폼 인프라 | 드림에이아이랩',
-  description:
-    'DAL은 다수의 앱을 나열하는 페이지가 아니라, 하나의 AI디지털케어로그 인프라 위에서 발달·돌봄·의료·교육·웰니스·가족 정착 도메인이 연결·확장되는 구조를 설명하는 허브입니다.',
+  description: AI_DIGITAL_CARE_LOG_PUBLIC_KO,
   path: '/services',
   ogTitle: '서비스 생태계 허브 - 드림에이아이랩',
   ogDescription: 'AI디지털케어로그 기반 6개 도메인이 어떻게 연결되고 확장되는지 한 페이지에서 확인하세요.',
@@ -18,7 +21,7 @@ export const metadata: Metadata = buildPageMetadata({
 const servicesPageUrl = absoluteUrl('/services')
 const servicesJsonLd = buildWebPageJsonLd({
   name: '서비스 생태계 허브',
-  description: 'AI 디지털케어로그 기반 6개 도메인 서비스 연결 구조',
+  description: AI_DIGITAL_CARE_LOG_PUBLIC_KO,
   url: servicesPageUrl,
 })
 const servicesBreadcrumbJsonLd = buildBreadcrumbJsonLd([
@@ -46,7 +49,7 @@ const services = [
     summary: '재가·시설·병원·가족 사이에서 흩어지는 시니어 돌봄·생활·행정 정보를 하나의 흐름으로 잇는 케어 인프라',
     url: '/services/senior',
     externalUrl: 'https://seniorandlife.com',
-    oneLiner: '활동·복약·위험 신호를 같은 기록 구조로 연결해 선제 대응을 돕습니다.',
+    oneLiner: '활동·복약·위험 신호를 같은 시간축으로 연결해 AI 판단과 선제 대응·결과 환류를 이어갑니다.',
     value: '고령화 구조적 수요 + 제도권 연계 + 장기 실사용 데이터 축적',
   },
   {
@@ -184,12 +187,12 @@ export default function ServicePortfolio() {
                 DAL은 서비스를 여러 개 운영하는 회사가 아닙니다.
               </p>
               <p className="text-lg md:text-xl font-semibold text-white leading-relaxed mt-3">
-                하나의 AI디지털케어로그로 사람의 삶 전체를 도메인별로 연결하는 플랫폼 인프라입니다.
+                {AI_DIGITAL_CARE_LOG_PUBLIC_KO}
               </p>
             </div>
             <p className="text-lg md:text-xl max-w-4xl mx-auto text-white/90 mb-4 leading-relaxed">
-              발달, 돌봄, 의료, 교육, 식습관, 가족 정착은 서로 분리된 문제가 아닙니다. DAL은 이 흐름을 하나의 기록·판단·연계 구조로
-              연결합니다.
+              일상·행동·습관부터 발달·돌봄·교육·의료·금융·재테크·식습관·소비·업무까지,
+              도메인은 달라도 같은 데이터·판단·실행·학습 환류 구조가 작동합니다.
             </p>
             <p className="text-base md:text-lg max-w-3xl mx-auto text-white/85 mb-10 leading-relaxed">
               단순한 앱·기록의 나열이 아니라, 하나의 데이터 인프라 위에서 도메인끼리 이어지도록 설계합니다.
@@ -235,10 +238,11 @@ export default function ServicePortfolio() {
           <div className="flex flex-col items-center text-center">
             <div className="text-center mb-8 max-w-3xl mx-auto space-y-4">
               <h2 className="text-3xl font-bold text-gray-900">DAL 플랫폼 확장 구조</h2>
-              <p className="text-gray-600">AI디지털케어로그 위에 6개 도메인이 올라가는 구조입니다.</p>
+              <p className="text-primary-700 font-semibold">{AI_DIGITAL_CARE_LOG_FLOW_KO}</p>
               <p className="text-gray-700 leading-relaxed">
                 DAL은 하나의 AI디지털케어로그 표준 위에 사람의 삶에서 반복되는 주요 문제 영역을 도메인화해 확장합니다. 기술은 하나지만,
-                적용되는 산업은 발달·돌봄·의료·교육·웰니스·가족 정착으로 계속 넓어지는 구조입니다.
+                적용되는 산업은 발달·돌봄·의료·교육·금융·재테크·웰니스 등으로 계속 넓어집니다.
+                NoahAI는 이 구조를 금융·재테크 인프라 OS로 직접 설계·사업화해 범용성을 실증한 뒤 Noah AI Labs로 분리 운영되고 있습니다.
               </p>
             </div>
             <div className="flex flex-col items-center mb-6">

@@ -43,7 +43,7 @@ export default function Vision() {
     },
     {
       title: '사람을 향한 기술',
-      description: 'AI는 사람을 대체하지 않습니다. 돌봄을 보조하고 삶의 질을 높이는 방향으로 사용합니다.',
+      description: 'AI가 삶의 맥락을 학습해 이유 있는 판단과 다음 행동을 제시하고, 그 결과를 다시 학습해 판단을 계속 발전시킵니다.',
       icon: 'handshake',
     },
     {

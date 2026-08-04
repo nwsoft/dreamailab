@@ -4,6 +4,11 @@ import Link from 'next/link'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 import {
+  AI_DIGITAL_CARE_LOG_FLOW_KO,
+  AI_DIGITAL_CARE_LOG_PUBLIC_KO,
+  JUNG_HAESUNG_DAL_ATTRIBUTION_KO,
+} from '../../../lib/ai-digital-care-log-copy'
+import {
   AI_DIGITAL_CARE_LOG_ID,
   JUNG_HAESUNG_PERSON_ID,
   JUNG_HAESUNG_URL,
@@ -14,7 +19,7 @@ import { absoluteUrl } from '../../../lib/seo'
 export const metadata: Metadata = {
   title: 'AI 연구자 정해성 | AI 디지털케어로그 설계·연구',
   description:
-    'AI 연구자이자 드림에이아이랩 공동창업자·CTO 정해성의 AI 디지털케어로그 설계 철학, 공개 논문·저서·기술 자료를 안내합니다.',
+    'AI디지털케어로그 최초 고안·개발자이자 드림에이아이랩 공동창업자·CTO 정해성의 연구, 현장 실증, 논문·저서와 기술 자료를 안내합니다.',
   authors: [{ name: '정해성', url: JUNG_HAESUNG_URL }],
   alternates: {
     canonical: JUNG_HAESUNG_URL,
@@ -26,7 +31,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'AI 연구자 정해성 | Dream AI Lab',
-    description: 'AI 디지털케어로그 설계 철학과 공개 논문·저서·기술 자료',
+    description: 'AI디지털케어로그 최초 고안·개발, 현장 실증과 공개 논문·저서·기술 자료',
     url: JUNG_HAESUNG_URL,
     type: 'profile',
     images: ['/og-image.png'],
@@ -78,9 +83,10 @@ const publicPdfs = [
 
 const roles = [
   '드림에이아이랩 공동창업자·CTO',
-  'AI 디지털케어로그 설계·고안',
-  '자람이 · 시니어앤라이프 · Global Couple Care · VeggieCare 등 DAL 계열 서비스 기술·제품 설계 총괄',
-  'NoahAI Labs 창업자 · NoahAI 아키텍처 설계',
+  'AI디지털케어로그 최초 고안·개발자',
+  '세계 최초 발달장애 맞춤형 치료·학습 플랫폼 자람이 설계·개발',
+  'NoahAI Labs 창업자 · NoahAI 금융·재테크 인프라 OS 설계·개발·사업화',
+  '시니어앤라이프 · Global Couple Care · VeggieCare 등 DAL 서비스 기술·제품 설계 총괄',
 ] as const
 
 const publicMaterials = [
@@ -106,7 +112,7 @@ const profilePageSchema = {
   url: JUNG_HAESUNG_URL,
   name: 'AI 연구자 정해성',
   inLanguage: 'ko-KR',
-  dateModified: '2026-08-03',
+  dateModified: '2026-08-04',
   mainEntity: { '@id': JUNG_HAESUNG_PERSON_ID },
   about: { '@id': AI_DIGITAL_CARE_LOG_ID },
 }
@@ -173,10 +179,12 @@ export default function JungHaesungProfilePage() {
           <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
             <p className="text-sm font-semibold tracking-wide text-cyan-300">AI Researcher · Architecture</p>
             <h1 className="mt-4 text-4xl font-bold sm:text-5xl">AI 연구자 정해성</h1>
-            <p className="mt-4 text-xl text-slate-200">드림에이아이랩 공동창업자·CTO · AI 디지털케어로그 설계·고안자</p>
+            <p className="mt-4 text-xl text-slate-200">드림에이아이랩 공동창업자·CTO · AI디지털케어로그 최초 고안·개발자</p>
             <p className="mt-8 max-w-3xl text-lg leading-8 text-slate-300">
-              기록이 다음 판단과 학습으로 이어지도록 Decision–Log–Review–Learning 구조를 설계하고,
-              사람의 최종 판단과 책임을 보존하는 AI 데이터 아키텍처를 연구합니다.
+              {AI_DIGITAL_CARE_LOG_PUBLIC_KO}
+            </p>
+            <p className="mt-5 max-w-3xl text-base leading-7 text-slate-400">
+              {JUNG_HAESUNG_DAL_ATTRIBUTION_KO}
             </p>
           </div>
         </section>
@@ -186,9 +194,10 @@ export default function JungHaesungProfilePage() {
             <article className="rounded-2xl border border-slate-200 bg-white p-8">
               <h2 className="text-2xl font-bold text-slate-900">연구·설계 분야</h2>
               <ul className="mt-5 space-y-3 text-slate-700">
-                <li>• AI 디지털케어로그와 장기 맥락 기록</li>
-                <li>• 설명 가능한 의사결정 보조와 사람 검토</li>
-                <li>• 케어·교육·생활·금융 도메인의 기록 환류</li>
+                <li>• 인간 삶 전반의 시간축 맥락 데이터</li>
+                <li>• AI 판단 레이어와 설명 가능한 AI(XAI)</li>
+                <li>• 판단·권고·실행 결과의 학습·환류</li>
+                <li>• 돌봄·교육·생활·의료·금융 도메인의 개인화 모델</li>
                 <li>• 동의·권한·감사로그를 포함한 데이터 거버넌스</li>
               </ul>
             </article>
@@ -200,6 +209,14 @@ export default function JungHaesungProfilePage() {
                 ))}
               </ul>
             </article>
+          </div>
+        </section>
+
+        <section className="border-t border-slate-200 bg-slate-950 py-10 text-white">
+          <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+            <p className="text-center text-lg font-semibold text-cyan-200">
+              {AI_DIGITAL_CARE_LOG_FLOW_KO}
+            </p>
           </div>
         </section>
 

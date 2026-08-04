@@ -142,18 +142,18 @@ export default function EduCareLogTechnology() {
   // 핵심 기술 차별점
   const keyInnovations = [
     {
-      title: "의료 검증 기반 교육 확장",
-      description: "특수교육·발달장애 케어에서 검증된 개인화 방법론을 일반교육으로 확장",
+      title: "현장 적용 방법론의 교육 확장",
+      description: "특수교육·발달장애 현장에서 적용·검증 중인 개인화 방법론을 일반교육 Pilot로 확장",
       technical: [
         "행동·주의 패턴 분석 기술의 학습 집중도 측정 응용",
         "개별 반응 추적 시스템의 학습 과정 모니터링 전환",
-        "케어 플랜 자동화의 학습 계획 생성 응용"
+        "케어 플랜 구조의 학습 계획 생성 응용"
       ],
       advantage: "교육학 이론만으로는 구현하기 어려운 세밀한 개인화 기술"
     },
     {
-      title: "설명 가능한 AI (XAI) 적용",
-      description: "교육 현장에서 신뢰받을 수 있는 투명한 AI 의사결정",
+      title: "설명 가능한 AI (XAI) Pilot 설계",
+      description: "교육 현장에서 이유 있는 AI 판단을 제공하기 위한 Pilot 기술 설계",
       technical: [
         "추천 근거의 교육학적 해석 제공",
         "학습자 성장 과정의 시각적 설명",
@@ -162,8 +162,8 @@ export default function EduCareLogTechnology() {
       advantage: "블랙박스 AI가 아닌 교육자와 협업하는 투명한 AI"
     },
     {
-      title: "실시간 적응형 학습",
-      description: "정적 콘텐츠가 아닌 학습자 반응에 따른 동적 조정",
+      title: "적응형 학습 (Pilot 목표)",
+      description: "정적 콘텐츠를 학습자 반응에 따라 동적으로 조정하는 Pilot 목표",
       technical: [
         "문제 풀이 과정의 실시간 분석 및 힌트 제공",
         "오답 패턴 기반 즉시 보정 문제 생성",
@@ -424,7 +424,7 @@ export default function EduCareLogTechnology() {
           <div className="text-center">
             <div className="text-6xl mb-6">🧠</div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              EduCareLog 기술백서
+              EduCareLog Pilot 기술백서
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto">
               AI 디지털케어로그를 교육 도메인에 특화 응용한 혁신 기술의 구조와 구현 방법론을 상세히 소개합니다.
@@ -432,7 +432,7 @@ export default function EduCareLogTechnology() {
             <div className="bg-white/10 rounded-2xl p-6 max-w-3xl mx-auto">
               <div className="text-lg font-semibold mb-3">핵심 기술 구조</div>
               <div className="text-white/90">
-                표준 데이터 수집 → 교육 맥락 보존 → AI 분석 → 적응형 설계 → 통합 실행
+                기록 연결 → 맥락 이해 → AI 분석·판단 → 설명 가능한 실행 → 결과 기록 → 학습·환류
               </div>
             </div>
           </div>
@@ -444,7 +444,7 @@ export default function EduCareLogTechnology() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">핵심 요약</h2>
           <ul className="list-disc pl-5 text-gray-700 space-y-2">
-            <li>표준 로그 기반 개인화: 학습·행동 로그 표준화 → AI 수준 진단 → 경로·퀴즈·루틴·리포트 자동화의 폐루프.</li>
+            <li>표준 로그 기반 개인화: 학습·행동 기록 연결 → AI 판단 → 경로·퀴즈·루틴·리포트 실행 → 결과 환류의 Pilot 폐루프.</li>
             <li>교육 표준 준수: Ed‑Fi/xAPI/QTI/LTI 및 국가 교육과정 온톨로지 매핑 지원.</li>
             <li>설명가능성(XAI): 추천 근거와 성장 경로를 교사가 이해 가능한 형태로 제공.</li>
             <li>보안·거버넌스: PIPA 준수, 최소 수집, 암호화, RBAC·감사로그 운영.</li>
@@ -460,9 +460,9 @@ export default function EduCareLogTechnology() {
               기술 개요
             </h2>
             <p className="text-lg text-gray-600 max-w-4xl mx-auto mb-8">
-              EduCareLog는 의료·돌봄 분야에서 검증된 AI 디지털케어로그 기술을 교육 도메인에 특화하여 응용한 시스템입니다. 
+              EduCareLog는 돌봄·발달장애 현장에서 적용해 온 AI 디지털케어로그 방법론을 교육 도메인에 특화해 검증하는 Pilot 시스템입니다.
               단순한 학습 관리가 아닌, <strong>개별 학습자의 인지적·정서적·행동적 패턴을 종합적으로 분석</strong>하여 
-              실시간 적응형 교육을 제공합니다.
+              이유 있는 다음 학습 행동과 결과 환류를 구현하는 것을 목표로 합니다.
             </p>
           </div>
           
