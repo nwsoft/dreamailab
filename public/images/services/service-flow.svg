@@ -1,16 +1,12 @@
-<svg width="1200" height="700" viewBox="0 0 1200 700" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">서비스 연결 흐름</title>
-  <desc id="desc">흩어진 도메인 기록이 한 사람의 시간축으로 연결되고 AI 판단·실행·학습 환류로 이어지는 구조</desc>
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">서비스 간 연결 흐름</title>
+  <desc id="desc">6개 도메인 서비스가 분리 운영되면서도 하나의 AI디지털케어로그 위에서 서로의 기록·맥락을 연결하는 구조</desc>
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="700" gradientUnits="userSpaceOnUse">
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="720" gradientUnits="userSpaceOnUse">
       <stop stop-color="#F8FAFC"/>
-      <stop offset="1" stop-color="#F1F5FF"/>
+      <stop offset="1" stop-color="#EEF2FF"/>
     </linearGradient>
-    <linearGradient id="timeline" x1="80" y1="0" x2="1120" y2="0" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#2563EB"/>
-      <stop offset="1" stop-color="#7C3AED"/>
-    </linearGradient>
-    <linearGradient id="ai" x1="360" y1="430" x2="840" y2="560" gradientUnits="userSpaceOnUse">
+    <linearGradient id="ai" x1="80" y1="560" x2="1120" y2="680" gradientUnits="userSpaceOnUse">
       <stop stop-color="#1D4ED8"/>
       <stop offset="1" stop-color="#4F46E5"/>
     </linearGradient>
@@ -22,96 +18,110 @@
     ]]></style>
   </defs>
 
-  <rect width="1200" height="700" rx="28" fill="url(#bg)"/>
+  <rect width="1200" height="720" rx="28" fill="url(#bg)"/>
 
-  <text class="t" x="600" y="52" text-anchor="middle" font-size="28" font-weight="800" fill="#0F172A">서비스는 분리되어도, 사람의 기록은 이어집니다</text>
-  <text class="t" x="600" y="84" text-anchor="middle" font-size="15" font-weight="600" fill="#475569">도메인마다 다른 서비스가 쌓은 기록을 한 사람의 시간축으로 연결하고 AI 판단·실행·환류로 이어갑니다</text>
+  <text class="t" x="600" y="48" text-anchor="middle" font-size="28" font-weight="800" fill="#0F172A">서비스 간 연결 흐름</text>
+  <text class="t" x="600" y="80" text-anchor="middle" font-size="15" font-weight="600" fill="#475569">서비스는 도메인별로 운영되지만, 같은 사람의 맥락은 하나의 AI디지털케어로그 위에서 이어집니다</text>
 
-  <!-- BEFORE: fragmented -->
-  <text class="t" x="180" y="130" text-anchor="middle" font-size="13" font-weight="800" fill="#B91C1C" letter-spacing="0.06em">BEFORE · 흩어진 기록</text>
+  <!-- 6 service cards: 2 rows x 3 -->
   <g class="t" filter="url(#soft)">
-    <rect x="60" y="148" width="140" height="64" rx="14" fill="#FFFFFF" stroke="#FECACA"/>
-    <text x="130" y="176" text-anchor="middle" font-size="15" font-weight="800" fill="#7F1D1D">가정</text>
-    <text x="130" y="196" text-anchor="middle" font-size="12" font-weight="600" fill="#9F1239">메모·사진</text>
+    <!-- top row -->
+    <rect x="80" y="120" width="280" height="120" rx="20" fill="#FFFFFF" stroke="#BFDBFE" stroke-width="2"/>
+    <circle cx="120" cy="160" r="16" fill="#FEF3C7"/>
+    <text x="120" y="165" text-anchor="middle" font-size="11" font-weight="800" fill="#B45309">GC</text>
+    <text x="220" y="158" text-anchor="middle" font-size="20" font-weight="800" fill="#0F172A">글로벌커플케어</text>
+    <text x="220" y="186" text-anchor="middle" font-size="14" font-weight="600" fill="#64748B">정착·행정·가족 라이프로그</text>
+    <text x="220" y="212" text-anchor="middle" font-size="12" font-weight="600" fill="#94A3B8">가족 · 국제정착 도메인</text>
 
-    <rect x="220" y="148" width="140" height="64" rx="14" fill="#FFFFFF" stroke="#FECACA"/>
-    <text x="290" y="176" text-anchor="middle" font-size="15" font-weight="800" fill="#7F1D1D">센터·학교</text>
-    <text x="290" y="196" text-anchor="middle" font-size="12" font-weight="600" fill="#9F1239">별도 문서</text>
+    <rect x="460" y="120" width="280" height="120" rx="20" fill="#FFFFFF" stroke="#BFDBFE" stroke-width="2"/>
+    <circle cx="500" cy="160" r="16" fill="#CFFAFE"/>
+    <text x="500" y="165" text-anchor="middle" font-size="11" font-weight="800" fill="#0E7490">TC</text>
+    <text x="600" y="158" text-anchor="middle" font-size="20" font-weight="800" fill="#0F172A">토탈케어로그</text>
+    <text x="600" y="186" text-anchor="middle" font-size="14" font-weight="600" fill="#64748B">건강·복약·생활 케어로그</text>
+    <text x="600" y="212" text-anchor="middle" font-size="12" font-weight="600" fill="#94A3B8">의료 · 헬스케어 도메인</text>
 
-    <rect x="380" y="148" width="140" height="64" rx="14" fill="#FFFFFF" stroke="#FECACA"/>
-    <text x="450" y="176" text-anchor="middle" font-size="15" font-weight="800" fill="#7F1D1D">병원</text>
-    <text x="450" y="196" text-anchor="middle" font-size="12" font-weight="600" fill="#9F1239">진료기록</text>
-  </g>
-  <text class="t" x="290" y="240" text-anchor="middle" font-size="13" font-weight="700" fill="#94A3B8">서로 연결되지 않음</text>
+    <rect x="840" y="120" width="280" height="120" rx="20" fill="#FFFFFF" stroke="#BFDBFE" stroke-width="2"/>
+    <circle cx="880" cy="160" r="16" fill="#EDE9FE"/>
+    <text x="880" y="165" text-anchor="middle" font-size="11" font-weight="800" fill="#6D28D9">ED</text>
+    <text x="980" y="158" text-anchor="middle" font-size="20" font-weight="800" fill="#0F172A">에듀케어로그</text>
+    <text x="980" y="186" text-anchor="middle" font-size="14" font-weight="600" fill="#64748B">학습 상태·다음 행동·환류</text>
+    <text x="980" y="212" text-anchor="middle" font-size="12" font-weight="600" fill="#94A3B8">교육 도메인</text>
 
-  <!-- AFTER: connected timeline -->
-  <text class="t" x="860" y="130" text-anchor="middle" font-size="13" font-weight="800" fill="#1D4ED8" letter-spacing="0.06em">AFTER · 한 사람 시간축</text>
+    <!-- bottom row -->
+    <rect x="80" y="340" width="280" height="120" rx="20" fill="#FFFFFF" stroke="#BFDBFE" stroke-width="2"/>
+    <circle cx="120" cy="380" r="16" fill="#DBEAFE"/>
+    <text x="120" y="385" text-anchor="middle" font-size="11" font-weight="800" fill="#1D4ED8">JR</text>
+    <text x="220" y="378" text-anchor="middle" font-size="20" font-weight="800" fill="#0F172A">자람이</text>
+    <text x="220" y="406" text-anchor="middle" font-size="14" font-weight="600" fill="#64748B">발달·치료·학습 기록</text>
+    <text x="220" y="432" text-anchor="middle" font-size="12" font-weight="600" fill="#94A3B8">발달장애 도메인</text>
 
-  <!-- timeline bar -->
-  <rect x="560" y="188" width="580" height="10" rx="5" fill="url(#timeline)"/>
-  <circle cx="600" cy="193" r="9" fill="#2563EB"/>
-  <circle cx="740" cy="193" r="9" fill="#4F46E5"/>
-  <circle cx="880" cy="193" r="9" fill="#7C3AED"/>
-  <circle cx="1020" cy="193" r="9" fill="#9333EA"/>
+    <rect x="460" y="340" width="280" height="120" rx="20" fill="#FFFFFF" stroke="#BFDBFE" stroke-width="2"/>
+    <circle cx="500" cy="380" r="16" fill="#DCFCE7"/>
+    <text x="500" y="385" text-anchor="middle" font-size="11" font-weight="800" fill="#15803D">SL</text>
+    <text x="600" y="378" text-anchor="middle" font-size="20" font-weight="800" fill="#0F172A">시니어앤라이프</text>
+    <text x="600" y="406" text-anchor="middle" font-size="14" font-weight="600" fill="#64748B">돌봄·생활 연속 관리</text>
+    <text x="600" y="432" text-anchor="middle" font-size="12" font-weight="600" fill="#94A3B8">시니어 도메인</text>
 
-  <g class="t" filter="url(#soft)">
-    <rect x="560" y="220" width="120" height="56" rx="12" fill="#FFFFFF" stroke="#BFDBFE"/>
-    <text x="620" y="244" text-anchor="middle" font-size="14" font-weight="800" fill="#1E3A8A">자람이</text>
-    <text x="620" y="264" text-anchor="middle" font-size="11" font-weight="600" fill="#64748B">성장 기록</text>
-
-    <rect x="700" y="220" width="120" height="56" rx="12" fill="#FFFFFF" stroke="#BFDBFE"/>
-    <text x="760" y="244" text-anchor="middle" font-size="14" font-weight="800" fill="#1E3A8A">토탈케어</text>
-    <text x="760" y="264" text-anchor="middle" font-size="11" font-weight="600" fill="#64748B">건강·복약</text>
-
-    <rect x="840" y="220" width="120" height="56" rx="12" fill="#FFFFFF" stroke="#BFDBFE"/>
-    <text x="900" y="244" text-anchor="middle" font-size="14" font-weight="800" fill="#1E3A8A">에듀케어</text>
-    <text x="900" y="264" text-anchor="middle" font-size="11" font-weight="600" fill="#64748B">학습 반응</text>
-
-    <rect x="980" y="220" width="120" height="56" rx="12" fill="#FFFFFF" stroke="#BFDBFE"/>
-    <text x="1040" y="244" text-anchor="middle" font-size="14" font-weight="800" fill="#1E3A8A">시니어·베지</text>
-    <text x="1040" y="264" text-anchor="middle" font-size="11" font-weight="600" fill="#64748B">생활·영양</text>
-  </g>
-
-  <!-- arrow from before to after -->
-  <path d="M520 180H540" stroke="#64748B" stroke-width="3" stroke-linecap="round"/>
-  <path d="M532 170L548 180L532 190" fill="#64748B"/>
-
-  <!-- 6 domain chips row -->
-  <text class="t" x="600" y="330" text-anchor="middle" font-size="15" font-weight="800" fill="#334155">도메인 서비스가 같은 구조 위에 올라갑니다</text>
-  <g class="t" filter="url(#soft)">
-    <rect x="70" y="350" width="170" height="52" rx="14" fill="#FFFFFF" stroke="#E2E8F0"/>
-    <text x="155" y="382" text-anchor="middle" font-size="15" font-weight="700" fill="#0F172A">자람이</text>
-    <rect x="255" y="350" width="170" height="52" rx="14" fill="#FFFFFF" stroke="#E2E8F0"/>
-    <text x="340" y="382" text-anchor="middle" font-size="15" font-weight="700" fill="#0F172A">시니어앤라이프</text>
-    <rect x="440" y="350" width="170" height="52" rx="14" fill="#FFFFFF" stroke="#E2E8F0"/>
-    <text x="525" y="382" text-anchor="middle" font-size="15" font-weight="700" fill="#0F172A">토탈케어로그</text>
-    <rect x="625" y="350" width="170" height="52" rx="14" fill="#FFFFFF" stroke="#E2E8F0"/>
-    <text x="710" y="382" text-anchor="middle" font-size="15" font-weight="700" fill="#0F172A">에듀케어로그</text>
-    <rect x="810" y="350" width="145" height="52" rx="14" fill="#FFFFFF" stroke="#E2E8F0"/>
-    <text x="882" y="382" text-anchor="middle" font-size="15" font-weight="700" fill="#0F172A">GCC</text>
-    <rect x="970" y="350" width="160" height="52" rx="14" fill="#FFFFFF" stroke="#E2E8F0"/>
-    <text x="1050" y="382" text-anchor="middle" font-size="15" font-weight="700" fill="#0F172A">베지케어</text>
+    <rect x="840" y="340" width="280" height="120" rx="20" fill="#FFFFFF" stroke="#BFDBFE" stroke-width="2"/>
+    <circle cx="880" cy="380" r="16" fill="#DCFCE7"/>
+    <text x="880" y="385" text-anchor="middle" font-size="11" font-weight="800" fill="#166534">VG</text>
+    <text x="980" y="378" text-anchor="middle" font-size="20" font-weight="800" fill="#0F172A">베지케어</text>
+    <text x="980" y="406" text-anchor="middle" font-size="14" font-weight="600" fill="#64748B">식습관·영양 판단·실행</text>
+    <text x="980" y="432" text-anchor="middle" font-size="12" font-weight="600" fill="#94A3B8">라이프스타일 도메인</text>
   </g>
 
-  <!-- AI loop -->
+  <!-- connection arrows (examples, not one lifecycle) -->
+  <g stroke="#6366F1" stroke-width="3.5" stroke-linecap="round" fill="#6366F1">
+    <path d="M360 180H460" stroke="#6366F1" fill="none"/>
+    <path d="M448 170L464 180L448 190"/>
+    <path d="M740 180H840" stroke="#6366F1" fill="none"/>
+    <path d="M828 170L844 180L828 190"/>
+    <path d="M980 240V340" stroke="#6366F1" fill="none"/>
+    <path d="M970 328L980 348L990 328"/>
+    <path d="M840 400H740" stroke="#6366F1" fill="none"/>
+    <path d="M752 390L736 400L752 410"/>
+    <path d="M460 400H360" stroke="#6366F1" fill="none"/>
+    <path d="M372 390L356 400L372 410"/>
+    <path d="M220 340V240" stroke="#6366F1" fill="none"/>
+    <path d="M210 252L220 232L230 252"/>
+  </g>
+
+  <g class="t" font-size="12" font-weight="700" fill="#4338CA">
+    <rect x="368" y="152" width="86" height="22" rx="11" fill="#EEF2FF"/>
+    <text x="411" y="167" text-anchor="middle">정착→의료</text>
+    <rect x="748" y="152" width="86" height="22" rx="11" fill="#EEF2FF"/>
+    <text x="791" y="167" text-anchor="middle">의료→교육</text>
+    <rect x="932" y="276" width="96" height="22" rx="11" fill="#EEF2FF"/>
+    <text x="980" y="291" text-anchor="middle">교육→생활</text>
+    <rect x="748" y="372" width="86" height="22" rx="11" fill="#EEF2FF"/>
+    <text x="791" y="387" text-anchor="middle">생활→돌봄</text>
+    <rect x="368" y="372" width="86" height="22" rx="11" fill="#EEF2FF"/>
+    <text x="411" y="387" text-anchor="middle">돌봄→발달</text>
+    <rect x="168" y="276" width="104" height="22" rx="11" fill="#EEF2FF"/>
+    <text x="220" y="291" text-anchor="middle">발달→가족</text>
+  </g>
+
+  <text class="t" x="600" y="500" text-anchor="middle" font-size="13" font-weight="600" fill="#64748B">※ 화살표는 고정 순서가 아니라, 실제 삶에서 나타날 수 있는 도메인 연결 예시입니다</text>
+
+  <!-- shared AI loop foundation -->
   <g filter="url(#soft)">
-    <rect x="120" y="440" width="960" height="140" rx="24" fill="url(#ai)"/>
-    <text class="t" x="600" y="485" text-anchor="middle" font-size="14" font-weight="700" fill="#BFDBFE" letter-spacing="0.08em">AI DIGITAL CARE LOG LOOP</text>
-    <g class="t" font-size="18" font-weight="800" fill="#FFFFFF">
-      <text x="220" y="535" text-anchor="middle">1. 기록 연결</text>
-      <text x="400" y="535" text-anchor="middle">2. 맥락 이해</text>
-      <text x="580" y="535" text-anchor="middle">3. AI 판단</text>
-      <text x="760" y="535" text-anchor="middle">4. 설명 실행</text>
-      <text x="940" y="535" text-anchor="middle">5–6. 환류</text>
+    <rect x="80" y="520" width="1040" height="100" rx="22" fill="url(#ai)"/>
+    <text class="t" x="600" y="552" text-anchor="middle" font-size="12" font-weight="700" fill="#BFDBFE" letter-spacing="0.06em">SHARED LAYER · AI디지털케어로그</text>
+    <g class="t" font-size="15" font-weight="800" fill="#FFFFFF">
+      <text x="200" y="590" text-anchor="middle">기록 연결</text>
+      <text x="380" y="590" text-anchor="middle">맥락 이해</text>
+      <text x="560" y="590" text-anchor="middle">AI 판단·XAI</text>
+      <text x="760" y="590" text-anchor="middle">설명 가능 실행</text>
+      <text x="960" y="590" text-anchor="middle">결과 학습·환류</text>
     </g>
     <g fill="#93C5FD">
-      <path d="M300 528L320 535L300 542V528Z"/>
-      <path d="M480 528L500 535L480 542V528Z"/>
-      <path d="M660 528L680 535L660 542V528Z"/>
-      <path d="M840 528L860 535L840 542V528Z"/>
+      <path d="M275 583L291 590L275 597V583Z"/>
+      <path d="M455 583L471 590L455 597V583Z"/>
+      <path d="M655 583L671 590L655 597V583Z"/>
+      <path d="M855 583L871 590L855 597V583Z"/>
     </g>
   </g>
 
-  <rect x="120" y="610" width="960" height="54" rx="14" fill="#FFFFFF" stroke="#E2E8F0"/>
-  <text class="t" x="600" y="644" text-anchor="middle" font-size="15" font-weight="700" fill="#334155">핵심: 서비스 간 이동이 아니라, 같은 사람의 맥락이 끊기지 않는 것이 목표입니다</text>
+  <rect x="140" y="646" width="920" height="44" rx="12" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <text class="t" x="600" y="674" text-anchor="middle" font-size="14" font-weight="700" fill="#334155">핵심: 서비스 이동이 목적이 아니라, 같은 사람의 맥락이 도메인을 넘어 끊기지 않는 것입니다</text>
 </svg>

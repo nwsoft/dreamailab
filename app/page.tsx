@@ -355,17 +355,17 @@ export default function Home() {
           </div>
 
           <div className="text-center mb-8 max-w-3xl mx-auto">
-            <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">기록이 이어지는 여정</h3>
+            <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">서비스 간 연결</h3>
             <p className="text-gray-600 text-sm md:text-base leading-relaxed">
-              흩어진 가정·센터·병원 기록을 한 사람의 시간축으로 연결하고, AI 판단·실행·환류로 이어집니다. 상세 연결 예시는 서비스 허브를 참고하세요.
+              도메인 서비스는 분리 운영되지만, 같은 사람의 맥락은 AI디지털케어로그 위에서 이어질 수 있습니다. 화살표는 고정 순서가 아닌 연결 예시입니다.
             </p>
           </div>
           <div className="w-full max-w-5xl mx-auto mb-10 rounded-2xl overflow-hidden border border-indigo-100 shadow-sm bg-white">
             <picture>
-              <source media="(max-width: 768px)" srcSet="/images/services/service-flow-mobile.svg?v=20260804" />
+              <source media="(max-width: 768px)" srcSet="/images/services/service-flow-mobile.svg?v=20260804b" />
               <img
-                src="/images/services/service-flow.svg?v=20260804"
-                alt="흩어진 기록이 한 사람 시간축으로 연결되고 AI 판단·실행·학습 환류로 이어지는 DAL 서비스 연결 흐름"
+                src="/images/services/service-flow.svg?v=20260804b"
+                alt="글로벌커플케어·토탈케어로그·에듀케어로그·베지케어·시니어앤라이프·자람이가 AI디지털케어로그 위에서 연결되는 서비스 간 흐름"
                 className="w-full h-auto object-contain"
                 loading="lazy"
                 decoding="async"

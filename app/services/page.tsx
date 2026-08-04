@@ -317,10 +317,10 @@ export default function ServicePortfolio() {
               </div>
               <div className="w-full rounded-xl overflow-hidden border border-indigo-100 mb-6">
                 <picture>
-                  <source media="(max-width: 768px)" srcSet="/images/services/service-flow-mobile.svg?v=20260804" />
+                  <source media="(max-width: 768px)" srcSet="/images/services/service-flow-mobile.svg?v=20260804b" />
                   <img
-                    src="/images/services/service-flow.svg?v=20260804"
-                    alt="흩어진 기록이 한 사람 시간축으로 연결되고 AI 판단·실행·환류로 이어지는 서비스 연결 흐름"
+                    src="/images/services/service-flow.svg?v=20260804b"
+                    alt="6개 도메인 서비스가 AI디지털케어로그 공유 레이어 위에서 연결되는 서비스 간 흐름"
                     className="w-full h-auto object-contain"
                     loading="lazy"
                     decoding="async"
