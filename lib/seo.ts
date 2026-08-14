@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import type { NewsArticle, NewsEntityRef } from '../app/news/data'
+import type { NewsArticle, NewsEntityRef, NewsFaqItem } from '../app/news/data'
 import { getCategoryName } from './news-categories'
 import {
   DREAM_AI_LAB_ORGANIZATION_ID,
@@ -126,6 +126,7 @@ export function buildNewsMetadata(
         'max-snippet': -1,
       },
     },
+    ...(article.tags?.length ? { keywords: article.tags } : {}),
   }
 }
 
@@ -196,6 +197,22 @@ export function buildNewsArticleJsonLd(
       ? { mentions: article.mentions.map(toJsonLdEntity) }
       : {}),
     keywords: article.tags?.join(', '),
+  }
+}
+
+export function buildFaqPageJsonLd(faq: NewsFaqItem[]) {
+  if (!faq.length) return null
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faq.map((item) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.answer,
+      },
+    })),
   }
 }
 

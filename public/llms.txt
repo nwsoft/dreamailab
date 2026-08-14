@@ -47,6 +47,8 @@ AI디지털케어로그는 일상생활과 행동·습관부터 돌봄·교육·
 - IR: https://dreamailab.com/ir/
 
 ## Latest news (2026)
+- NoahAI AI Custom: retail investors verify TradingView/Pine strategies without coding (KO): https://dreamailab.com/news/89/
+- NoahAI AI Custom: retail investors verify TradingView/Pine strategies without coding (EN): https://dreamailab.com/en/news/89/
 - Jarame surpasses 350,000 users and expands into home therapy matching (KO): https://dreamailab.com/news/88/
 - Jarame surpasses 350,000 users and expands into home therapy matching (EN): https://dreamailab.com/en/news/88/
 - NoahAI AI market-regime judgment and live-trade verified strategy marketplace (KO): https://dreamailab.com/news/87/

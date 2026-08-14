@@ -9,6 +9,7 @@ import {
 import {
   absoluteUrl,
   buildBreadcrumbJsonLd,
+  buildFaqPageJsonLd,
   buildNewsArticleJsonLd,
   buildNewsMetadata,
 } from '../../../../lib/seo'
@@ -63,6 +64,7 @@ export default async function EnNewsDetail({ params }: Props) {
     { name: 'News', url: absoluteUrl('/news') },
     { name: article.title, url: pageUrl },
   ])
+  const faqJsonLd = article.faq?.length ? buildFaqPageJsonLd(article.faq) : null
 
   return (
     <>
@@ -74,6 +76,12 @@ export default async function EnNewsDetail({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
+      {faqJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+      )}
       <NewsArticleView article={article} locale="en" showLangSwitch />
     </>
   )

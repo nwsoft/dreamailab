@@ -11,6 +11,12 @@ export interface NewsArticleLocale {
   title: string
   excerpt: string
   content: string
+  faq?: NewsFaqItem[]
+}
+
+export interface NewsFaqItem {
+  question: string
+  answer: string
 }
 
 export interface NewsEntityRef {
@@ -43,6 +49,7 @@ export interface NewsArticle {
   /** JSON-LD about — 자람이 / NoahAI Labs 등 엔티티 구분 */
   about?: NewsEntityRef[]
   mentions?: NewsEntityRef[]
+  faq?: NewsFaqItem[]
   /** 영문 등 추가 언어 (해당 locale 전용 페이지·hreflang·JSON-LD에 사용) */
   i18n?: {
     en?: NewsArticleLocale
@@ -63,12 +70,448 @@ export function getLocalizedArticle(
       title: article.i18n.en.title,
       excerpt: article.i18n.en.excerpt,
       content: article.i18n.en.content,
+      faq: article.i18n.en.faq ?? article.faq,
     }
   }
   return article
 }
 
 export const newsArticles: NewsArticle[] = [
+  {
+    id: 89,
+    title:
+      '노아AI AI 커스텀이란? 개인 투자자가 TradingView·Pine 전략을 코딩 없이 검증하고 운용하는 기술',
+    excerpt:
+      '노아AI AI 커스텀은 책·Pine Script·TradingView 전략·영상을 실행 규칙으로 바꾸고, 시장국면이 맞지 않으면 멈추며 가드레일로 위험을 제한합니다. 수익 보장이 아니라 개인 투자자의 전략 운영 계층입니다.',
+    category: 'tech',
+    date: '2026-08-14',
+    image: '🧠',
+    featured: true,
+    author: 'Noah AI Labs',
+    authorUrl: 'https://noahailabs.com/',
+    ogImage: '/images/news/news-89-noahai-ai-custom-og.jpg',
+    ogImageAlt:
+      'NoahAI Labs AI 커스텀 개념도: 책·Pine·영상을 승인된 전략 규칙으로 바꾸고 시장국면과 가드레일로 실행을 제한하는 운영 계층',
+    ogImageAltEn:
+      'Conceptual NoahAI Labs AI Custom diagram: books, Pine, and video become approved strategy rules, then regime fit and guardrails limit execution',
+    about: [
+      {
+        type: 'Organization',
+        id: 'https://noahailabs.com/#organization',
+        name: 'Noah AI Labs',
+        alternateName: ['노아에이아이랩스', 'NoahAI Labs', '노아AI Labs'],
+        url: 'https://noahailabs.com/',
+        description:
+          '금융 AI 서비스 노아AI를 독립 운영하는 법인. 드림에이아이랩과 별도 조직이다.',
+        sameAs: ['https://dreamailab.com/services/finance/'],
+      },
+      {
+        type: 'SoftwareApplication',
+        id: 'https://noahailabs.com/#noahai',
+        name: '노아AI',
+        alternateName: ['NoahAI', 'Noah AI', 'AI 커스텀'],
+        url: 'https://noahailabs.com/ko/blog/research/ai-custom-financial-automation',
+        description:
+          '사용자의 투자 지식을 검증 가능한 실행 규칙으로 바꾸고 시장국면·가드레일 안에서 운용하는 AI 전략 운영 계층',
+      },
+    ],
+    mentions: [
+      {
+        type: 'DefinedTerm',
+        name: 'AI 커스텀',
+        alternateName: ['AI Custom', 'NoahAI AI Custom'],
+        url: 'https://noahailabs.com/ko/blog/research/ai-custom-financial-automation',
+        description:
+          '책·Pine·TradingView 전략·영상을 원문 근거가 있는 규칙으로 구조화하고 승인·검증·국면 운용·가드레일을 연결하는 기술',
+      },
+      {
+        type: 'Organization',
+        id: 'https://dreamailab.com/#organization',
+        name: '드림에이아이랩',
+        alternateName: ['Dream AI Lab', 'DAL'],
+        url: 'https://dreamailab.com/',
+        description: '본 기술 해설의 아카이브 발행 매체. 제품 정본은 Noah AI Labs.',
+      },
+    ],
+    tags: [
+      '노아AI',
+      'AI 커스텀',
+      'NoahAI',
+      '노아에이아이랩스',
+      'TradingView 자동매매',
+      'Pine Script',
+      '개인 투자자 자동매매',
+      '시장국면',
+      '백테스트 과최적화',
+      '가드레일',
+      '투자 전략 AI',
+      'XAI',
+    ],
+    faq: [
+      {
+        question: '노아AI AI 커스텀이란 무엇인가요?',
+        answer:
+          '노아AI AI 커스텀은 개인 투자자가 책, Pine Script, TradingView 전략 설명, PDF, 영상, 대화를 원문 근거가 있는 실행 규칙으로 바꾸고, 사용자 승인·시장국면 적합성·가드레일을 거쳐 운용하는 전략 운영 계층입니다. AI가 대신 투자해 수익을 보장하는 기능이 아닙니다.',
+      },
+      {
+        question: '트레이딩뷰 자동매매(웹훅)와 무엇이 다른가요?',
+        answer:
+          '일반적인 트레이딩뷰 자동매매는 차트 신호를 웹훅으로 받아 거래소에 주문을 넣는 연결에 가깝습니다. 노아AI AI 커스텀은 전략 자료에서 조건·손절·익절·적용 국면을 추출하고, 빠진 조건은 추측하지 않으며, 승인·검증·국면 이탈 시 정지·가드레일까지 하나의 운영 흐름으로 관리합니다. TradingView 차트나 Pine 생태계를 대체한다고 주장하지 않습니다.',
+      },
+      {
+        question: 'Pine Script를 몰라도 사용할 수 있나요?',
+        answer:
+          '사용자는 코드를 처음부터 작성하지 않아도 됩니다. 열람 권한이 있는 Pine 원문, 공개 TradingView 설명, 책·PDF, 메모, 영상을 제공하면 규칙으로 구조화합니다. 다만 누락·충돌 조건은 임의로 채우지 않고 사용자에게 다시 물으며, 로그인으로 보호된 스크립트는 우회하지 않습니다.',
+      },
+      {
+        question: '시장이 바뀌면 전략을 자동으로 바꾸거나 멈추나요?',
+        answer:
+          '승인된 전략이 동시에 주문하는 구조가 아닙니다. 현재 시장국면과 전략의 적용 범위가 맞는 것만 신규 진입 후보가 됩니다. 국면이 맞지 않으면 기본 노아AI 판단에 위임하거나 커스텀 신규 진입을 일시정지할 수 있고, 고변동·한도 위반이면 가드레일이 우선합니다.',
+      },
+      {
+        question: 'TradingView를 대체하나요?',
+        answer:
+          '대체하지 않습니다. TradingView는 차트, Pine 작성, 백테스트, 커뮤니티에 강하고, 노아AI는 그 전략 지식을 설명 가능한 규칙과 승인·검증·위험 통제로 연결하는 운영 계층에 집중합니다.',
+      },
+      {
+        question: '수익을 보장하나요?',
+        answer:
+          '보장하지 않습니다. 백테스트와 실거래는 다르고, 시장국면 판단이나 가드레일이 미래 수익을 약속하지 않습니다. 실제 주문·체결·손익은 사용자 계정과 외부 거래소·증권사 API, 관련 법률을 따릅니다.',
+      },
+    ],
+    i18n: {
+      en: {
+        title:
+          'What is NoahAI AI Custom? How retail investors verify and run TradingView and Pine strategies without coding',
+        excerpt:
+          'NoahAI AI Custom turns books, Pine Script, TradingView strategies, and video into executable rules, pauses when the market regime does not fit, and limits risk with guardrails. It is a strategy operating layer, not a return guarantee.',
+        faq: [
+          {
+            question: 'What is NoahAI AI Custom?',
+            answer:
+              'NoahAI AI Custom is a strategy operating layer that turns a retail investor’s books, Pine Script, TradingView descriptions, PDFs, video, and conversation into source-grounded executable rules, then runs them only after user approval, regime fit, and guardrails. It does not mean AI invests for you or guarantees profit.',
+          },
+          {
+            question: 'How is it different from TradingView webhook automation?',
+            answer:
+              'Typical TradingView automation forwards chart alerts to an exchange. NoahAI AI Custom extracts conditions, stops, targets, and applicable regimes from strategy material, asks instead of guessing missing conditions, and manages approval, verification, pause-on-regime-mismatch, and guardrails as one operating flow. It does not claim to replace TradingView charts or Pine.',
+          },
+          {
+            question: 'Can I use it without knowing Pine Script?',
+            answer:
+              'You do not have to write code from scratch. If you provide Pine you are allowed to read, a public TradingView description, a book or PDF, notes, or video, the system structures it into rules. Missing or conflicting conditions are asked back, and protected scripts are not bypassed.',
+          },
+          {
+            question: 'Does it switch or pause strategies when the market changes?',
+            answer:
+              'Approved strategies do not all fire at once. Only strategies whose declared regime matches the current market become new-entry candidates. On mismatch, NoahAI can fall back to the default path or pause custom entries. Guardrails still take precedence in high-volatility or limit-breach cases.',
+          },
+          {
+            question: 'Does it replace TradingView?',
+            answer:
+              'No. TradingView remains strong in charts, Pine authoring, backtesting, and community. NoahAI focuses on connecting that strategy knowledge to explainable rules, approval, verification, and risk control.',
+          },
+          {
+            question: 'Does it guarantee returns?',
+            answer:
+              'No. Backtests are not live trades, and regime judgment or guardrails do not promise future profit. Orders, fills, and P&L follow the user’s account, external exchange or broker APIs, and applicable law.',
+          },
+        ],
+        content: `
+      <p class="text-sm text-gray-500 mb-6">[Technology · 2026-08-14]</p>
+
+      <p class="text-xl font-semibold text-gray-800 mb-4 leading-relaxed">
+        The hard problem is not making a strategy. It is knowing whether that strategy is still valid in today&rsquo;s market.
+      </p>
+      <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-4">
+        <strong>NoahAI AI Custom</strong> is a strategy operating layer. It turns a person&rsquo;s investing knowledge into reviewable rules, uses the strategy only when the market regime fits, and limits execution with guardrails. It is not &ldquo;AI invests for you.&rdquo;
+      </p>
+
+      <figure class="mb-10">
+        <img
+          src="/images/news/news-89-noahai-ai-custom-og.jpg"
+          alt="Conceptual NoahAI Labs AI Custom diagram: books, Pine, and video become approved strategy rules, then regime fit and guardrails limit execution"
+          class="w-full rounded-xl object-cover"
+          width="1200"
+          height="630"
+          loading="eager"
+          decoding="async"
+        />
+        <figcaption class="mt-3 text-sm text-gray-500 text-center">
+          Knowledge becomes rules, then approval, regime fit, and a guardrail. Conceptual illustration, not a live performance screen.
+        </figcaption>
+      </figure>
+
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        Retail investors already have ideas &mdash; in books, YouTube, TradingView, Pine Script, and notes. What they usually lack is the operating stack that professional system traders take for granted: turning an idea into explicit rules, deciding when to use or stop it, refusing unsafe orders, and keeping a record of why.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        That is why AI Custom is often described as a dream technology for individuals. The dream is not guaranteed profit. It is access to a <strong>create &rarr; verify &rarr; approve &rarr; run or hold &rarr; review</strong> loop without having to become a developer, server operator, and risk officer at the same time.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">Why retail automation keeps breaking</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        A strategy that looks strong in a backtest can fail as soon as the market changes. Uptrend logic bleeds in a range. A range strategy fails in a shock. Copying a high-return Pine script does not answer the real question: <strong>should this strategy be on right now?</strong>
+      </p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        Typical TradingView automation is a webhook bridge: an alert leaves the chart and an external bot places an order. That is useful, and it is also incomplete. It does not by itself extract missing stop conditions, refuse a regime mismatch, keep versions, or explain why an order was blocked.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        Overfitting makes this worse. If conditions are tuned on history whose outcome is already known, past returns can look excellent and still not repeat. AI Custom is designed to treat backtests as research evidence, not as a license to trade everywhere.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">What NoahAI AI Custom is</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        In one sentence: NoahAI AI Custom lets anyone turn their investing knowledge into a strategy with AI, then verify, run, and improve it by market regime. Noah AI Labs describes the user path as learn &rarr; build &rarr; verify &rarr; execute &rarr; improve &rarr; share.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        Existing bots usually ask the user to pick a company-made strategy. AI Custom asks the user to become a <strong>strategy author and verification participant</strong>. The engine&rsquo;s job is not to trade more. It is to decide more precisely <strong>what not to trade</strong>.
+      </p>
+
+      <figure class="mb-10">
+        <img
+          src="/images/news/news-89-noahai-ai-custom-loop.jpg"
+          alt="NoahAI AI Custom operating loop: learn, build, verify, approve, run or hold, then review and roll back"
+          class="w-full rounded-xl object-cover border border-gray-100"
+          width="1200"
+          height="630"
+          loading="lazy"
+          decoding="async"
+        />
+        <figcaption class="mt-3 text-sm text-gray-500 text-center">
+          The operating loop. Sharing and a paid marketplace remain later stages with rights, billing, and legal controls.
+        </figcaption>
+      </figure>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">From Pine, books, and video to rules &mdash; without silent guessing</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        Users can provide Pine Script they are allowed to read, public TradingView strategy text, PDFs, OCR, video, and conversation. The system extracts entry, exit, stop, target, regime, and position rules with source evidence.
+      </p>
+      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-8 ml-2">
+        <li>If a condition is missing or conflicts, it asks the user instead of filling it in.</li>
+        <li>Protected TradingView scripts are not bypassed.</li>
+        <li>The current core is a <strong>declarative strategy layer</strong> whose values can be edited and checked, not an arbitrary code sandbox.</li>
+        <li>Partial take-profit, trailing stops, and TradingView webhook sandboxes are follow-on work, not the present public core.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">When the market changes, strategies are selected or paused</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        If several strategies are approved, they do not all order at once. Only those matching the current asset, venue, and declared regime become new-entry candidates. They still have to pass entry conditions and common guardrails.
+      </p>
+      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-8 ml-2">
+        <li><strong>Regime match:</strong> evaluate the approved strategy as a new-entry candidate</li>
+        <li><strong>Regime mismatch:</strong> delegate to default NoahAI or pause custom entries</li>
+        <li><strong>No declared regime:</strong> do not auto-apply to every market; keep the user in a confirm state</li>
+        <li><strong>High volatility or limit breach:</strong> parent guardrails win</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Guardrails and approval, not unsupervised autonomy</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        AI Custom is an extension layer on NoahAI&rsquo;s execution engine, not a standalone unsupervised bot. Strategy numbers in the advanced path are not silently overwritten by default AI values. If a stop distance would make size unsafe, size is reduced first; if it is still unsafe, the order is blocked and the requested value, allowed value, and reason are shown.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        Conversational order placement, start/stop of trading, and API-key storage are outside the current automatic execution scope. Risk-expanding changes require confirmation again immediately before apply and save.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">What is public now, and what is not</h2>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        The public install is centered on multimodal input, safe declarative strategies, versions, approval, automatic checks, apply, and common guardrails. Later layers include a mentor, richer source-to-rule tracing, walk-forward and paper forward tests, and a strategy hub. Live sharing, downloads, and a paid marketplace open only after rights, billing, settlement, refunds, disputes, and legal controls are in place. Product details live on
+        <a href="https://noahailabs.com/en/blog/research/ai-custom-financial-automation" class="text-primary-600 underline">Noah AI Labs&rsquo; AI Custom canonical page</a>.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">FAQ</h2>
+      <div class="space-y-6 mb-10">
+        <div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">What is NoahAI AI Custom?</h3>
+          <p class="text-gray-700 leading-relaxed">A strategy operating layer that turns investing knowledge into source-grounded rules and runs them only after approval, regime fit, and guardrails. It does not guarantee profit.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">How is it different from TradingView webhook automation?</h3>
+          <p class="text-gray-700 leading-relaxed">Webhooks forward alerts. AI Custom extracts rules, asks about missing conditions, and manages approval, pause-on-mismatch, and risk control. It does not replace TradingView.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Can I use it without Pine Script?</h3>
+          <p class="text-gray-700 leading-relaxed">You can start from allowed Pine, public strategy text, PDFs, notes, or video. Protected scripts are not bypassed, and missing conditions are not silently filled.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Does it guarantee returns?</h3>
+          <p class="text-gray-700 leading-relaxed">No. Regime judgment and live-trade records do not promise future results. Orders follow the user&rsquo;s account and external APIs.</p>
+        </div>
+      </div>
+
+      <div class="bg-amber-50 border-l-4 border-amber-500 p-5 mb-8 rounded-r-lg">
+        <p class="text-amber-900 text-sm leading-relaxed">
+          <strong>Investment notice:</strong> This article explains an operating architecture. It is not investment advice, discretionary management, or a return guarantee. Actual orders, fills, and P&amp;L follow the user account, exchange or broker APIs, and law.
+        </p>
+      </div>
+
+      <div class="bg-white border border-gray-200 rounded-xl p-6 mb-8">
+        <p class="font-semibold text-gray-900 mb-3">Canonical and related</p>
+        <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+          <li><a href="https://noahailabs.com/en/blog/research/ai-custom-financial-automation" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">Noah AI Labs AI Custom (canonical)</a></li>
+          <li><a href="/news/87" class="text-primary-600 underline">Market-regime judgment and live-trade verified strategy marketplace</a></li>
+          <li><a href="/news/84" class="text-primary-600 underline">v3.9.0.2 TradingView/Pine automation update</a></li>
+          <li><a href="/services/finance" class="text-primary-600 underline">Dream AI Lab NoahAI migration notice</a></li>
+        </ul>
+      </div>
+
+      <p class="text-gray-600 text-sm border-t border-gray-200 pt-6 leading-relaxed">
+        ※ NoahAI is independently operated by Noah AI Labs. This Dream AI Lab technology note archives that explanation. It is not third-party validation.
+      </p>
+        `,
+      },
+    },
+    content: `
+      <p class="text-sm text-gray-500 mb-6">[기술 블로그 · 2026-08-14]</p>
+
+      <p class="text-xl font-semibold text-gray-800 mb-4 leading-relaxed">
+        개인 투자자에게 어려운 문제는 좋은 전략을 찾는 일이 아니다. 그 전략이 <strong>지금 시장에서도 유효한지</strong>를 판단하고, 아닐 때 멈추는 일이다.
+      </p>
+      <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-4">
+        <strong>노아AI AI 커스텀</strong>은 사람의 투자 지식을 검토 가능한 실행 규칙으로 바꾸고, 시장국면이 맞을 때만 쓰며, 가드레일로 실행을 제한하는 전략 운영 계층이다. &ldquo;AI가 대신 투자한다&rdquo;는 뜻이 아니다.
+      </p>
+
+      <figure class="mb-10">
+        <img
+          src="/images/news/news-89-noahai-ai-custom-og.jpg"
+          alt="NoahAI Labs AI 커스텀 개념도: 책·Pine·영상을 승인된 전략 규칙으로 바꾸고 시장국면과 가드레일로 실행을 제한하는 운영 계층"
+          class="w-full rounded-xl object-cover"
+          width="1200"
+          height="630"
+          loading="eager"
+          decoding="async"
+        />
+        <figcaption class="mt-3 text-sm text-gray-500 text-center">
+          지식 &rarr; 규칙 &rarr; 승인 &rarr; 국면 적합 &rarr; 가드레일. 개념 일러스트이며 실제 운용 성과 화면이 아닙니다.
+        </figcaption>
+      </figure>
+
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        개인 투자자에게는 이미 아이디어가 있다. 투자 책, 유튜브, 트레이딩뷰(TradingView), Pine Script, 메모장에 적어 둔 조건이 그것이다. 부족한 것은 대개 전략 자체가 아니라, 기관 시스템 트레이더가 당연하게 갖추는 <strong>운영 스택</strong>이다. 아이디어를 명시적 규칙으로 바꾸고, 언제 켜고 끌지를 정하고, 위험한 주문을 거절하고, 왜 그랬는지를 남기는 일 말이다.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        그래서 AI 커스텀이 개인에게 &lsquo;꿈의 기술&rsquo;로 읽힌다. 그 꿈은 수익 보장이 아니다. 개발자이자 서버 운영자이자 리스크 담당자가 되지 않고도 <strong>만들기 &rarr; 검증하기 &rarr; 승인하기 &rarr; 실행하거나 멈추기 &rarr; 복기하기</strong>를 한 흐름으로 붙이는 일에 가깝다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">개인 투자자의 자동매매가 반복해서 깨지는 이유</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        백테스트에서 좋아 보이던 전략은 시장이 바뀌는 순간 깨질 수 있다. 상승장 논리는 횡보장에서 피를 보고, 횡보 전략은 급변에 무너진다. 수익률 높은 Pine을 복사해도 진짜 질문은 남는다. <strong>지금 이 전략을 켜도 되는가?</strong>
+      </p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        흔한 트레이딩뷰 자동매매는 웹훅 연결에 가깝다. 차트 알람이 나가고, 외부 봇이 주문을 넣는다. 유용하지만 그것만으로는 부족하다. 빠진 손절 조건을 찾아내지 못하고, 국면이 바뀌어도 같은 신호를 계속 보낼 수 있으며, 버전도 차단 사유도 남기지 않는 경우가 많다.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        과최적화는 이 문제를 키운다. 이미 결과를 아는 과거 데이터에 조건을 맞추면 과거 수익률은 좋아 보여도 미래에는 반복되지 않을 수 있다. AI 커스텀은 백테스트를 연구 근거로 다루고, 모든 시장에 자동 적용하는 허가증으로 다루지 않도록 설계된다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">노아AI AI 커스텀이란</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        한 문장으로 말하면 이렇다. 노아AI AI 커스텀은 누구나 자신의 투자 지식을 AI와 함께 전략으로 만들고, 시장국면에 맞춰 검증·실행·개선하는 <strong>AI 전략 운영체제</strong>다. Noah AI Labs는 사용자 경험을 배우기 &rarr; 만들기 &rarr; 검증하기 &rarr; 실행하기 &rarr; 개선하기 &rarr; 공유하기로 설명한다.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        기존 자동매매는 회사가 만든 전략을 고르는 구조에 가깝다. AI 커스텀은 사용자를 <strong>전략 제작자이자 검증 참여자</strong>로 둔다. 엔진의 일은 더 많이 거래하는 것이 아니라, <strong>무엇을 거래하지 말아야 하는지</strong>를 더 정밀히 결정하는 쪽에 가깝다.
+      </p>
+
+      <figure class="mb-10">
+        <img
+          src="/images/news/news-89-noahai-ai-custom-loop.jpg"
+          alt="노아AI AI 커스텀 운영 루프: 배우기, 만들기, 검증, 승인, 실행 또는 정지, 복기·롤백"
+          class="w-full rounded-xl object-cover border border-gray-100"
+          width="1200"
+          height="630"
+          loading="lazy"
+          decoding="async"
+        />
+        <figcaption class="mt-3 text-sm text-gray-500 text-center">
+          전략 운영 루프. 공유와 유료 마켓은 권리·결제·법무 체계를 갖춘 뒤의 후속 단계다.
+        </figcaption>
+      </figure>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Pine Script를 몰라도, 책과 영상에서 규칙까지</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        사용자는 코드를 처음부터 짜지 않아도 된다. 열람 권한이 있는 Pine 원문, 공개 TradingView 전략 설명, PDF, OCR, 영상, 대화를 제공하면 진입·청산·손절·익절·시장국면·포지션 규칙을 원문 근거와 함께 추출한다.
+      </p>
+      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-8 ml-2">
+        <li>조건이 없거나 충돌하면 추측해서 채우지 않고 사용자에게 다시 묻는다.</li>
+        <li>로그인·구독으로 보호된 TradingView 스크립트는 우회하지 않는다.</li>
+        <li>현재 본체는 임의 코드 실행기가 아니라, 값을 고치고 검증할 수 있는 <strong>선언형 전략 계층</strong>이다.</li>
+        <li>부분익절, 추적손절, TradingView webhook 샌드박스는 후속이며 지금 공개 코어가 아니다.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">트레이딩뷰 자동매매와 무엇이 다른가</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        TradingView는 차트, Pine 작성, 백테스트, 커뮤니티에서 강하다. 노아AI는 그 전략 지식을 <strong>설명 가능한 규칙, 사용자 승인, 실행 검증, 버전 롤백</strong>으로 연결하는 운영 계층에 집중한다. 차트 복제품이나 Pine 전체 상위호환을 주장하지 않는다.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        TradingView 공식 안내도 Pine 전략이 거래소에 직접 주문을 넣는 구조가 아니며, 외부 도구가 웹훅 알림을 해석할 수 있다고 설명한다. 그래서 노아AI의 자리는 차트 대체가 아니라 <strong>전략 지식의 검증·실행·감독</strong>이다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">시장국면이 바뀌면 전략을 고르거나 멈춘다</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        여러 전략을 승인해도 동시에 주문하지 않는다. 현재 자산·거래소·감지 국면과 전략의 적용 국면이 맞는 것만 신규 진입 후보가 되고, 진입조건과 공통 가드레일을 다시 통과해야 한다.
+      </p>
+      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-8 ml-2">
+        <li><strong>국면 일치:</strong> 승인 전략을 신규 진입 후보로 평가</li>
+        <li><strong>국면 이탈:</strong> 기본 노아AI 판단에 위임하거나 커스텀 신규 진입 일시정지</li>
+        <li><strong>적용 국면 근거 없음:</strong> 모든 시장에 자동 적용하지 않고 사용자 확인 상태 유지</li>
+        <li><strong>고변동·한도 위반:</strong> 상위 가드레일 우선</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">가드레일과 승인 게이트</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        AI 커스텀은 독립 무인 봇이 아니라 기존 노아AI 실행 엔진을 확장하는 안전 증설 레이어다. 고급 경로의 전략 수치를 기본 AI 값으로 몰래 바꾸지 않는다. 손절거리를 유지한 채 수량을 줄이고, 그래도 안전하지 않으면 주문을 차단해 요청값·허용값·이유를 보여준다.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        대화형 주문, 거래 시작·중지, API 키 저장은 현재 자동 실행 범위가 아니다. 위험 확대형 변경은 적용 직전과 저장 직전에 다시 확인한다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">지금 공개된 범위</h2>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        현재 공개 설치본의 중심은 멀티모달 입력, 안전 선언형 전략, 버전, 승인, 자동검증, 적용, 공통 가드레일이다. AI 멘토, 더 깊은 원문&rarr;규칙 추적, 워크포워드·PAPER 전진검증, 전략 허브는 이후 계층이다. 실제 공유·다운로드·유료 마켓은 권리·결제·정산·환불·분쟁·법무 체계를 갖춘 뒤에 연다. 제품 정본은
+        <a href="https://noahailabs.com/ko/blog/research/ai-custom-financial-automation" class="text-primary-600 underline">Noah AI Labs AI 커스텀 기술 해설</a>이다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">자주 묻는 질문</h2>
+      <div class="space-y-6 mb-10">
+        <div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">노아AI AI 커스텀이란 무엇인가요?</h3>
+          <p class="text-gray-700 leading-relaxed">책·Pine·TradingView 전략·영상을 원문 근거가 있는 실행 규칙으로 바꾸고, 승인·시장국면·가드레일을 거쳐 운용하는 전략 운영 계층입니다. 수익을 보장하지 않습니다.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">트레이딩뷰 자동매매와 무엇이 다른가요?</h3>
+          <p class="text-gray-700 leading-relaxed">웹훅은 알람을 전달합니다. AI 커스텀은 규칙을 추출하고, 빠진 조건을 물으며, 국면 불일치 시 정지와 위험 통제까지 운영합니다. TradingView를 대체하지 않습니다.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Pine Script를 몰라도 쓸 수 있나요?</h3>
+          <p class="text-gray-700 leading-relaxed">열람 가능한 Pine, 공개 전략 설명, PDF, 메모, 영상으로 시작할 수 있습니다. 보호된 스크립트는 우회하지 않고, 빠진 조건은 임의로 채우지 않습니다.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">수익을 보장하나요?</h3>
+          <p class="text-gray-700 leading-relaxed">보장하지 않습니다. 시장국면 판단과 실거래 이력이 미래 수익을 약속하지 않으며, 주문·손익은 사용자 계정과 외부 API를 따릅니다.</p>
+        </div>
+      </div>
+
+      <div class="bg-amber-50 border-l-4 border-amber-500 p-5 mb-8 rounded-r-lg">
+        <p class="text-amber-900 text-sm leading-relaxed">
+          <strong>투자 유의사항:</strong> 이 글은 운영 아키텍처를 설명합니다. 투자 자문, 일임 운용, 수익 보장이 아닙니다. 실제 주문·체결·손익은 사용자 계정과 외부 거래소·증권사 API, 관련 법률을 따릅니다.
+        </p>
+      </div>
+
+      <div class="bg-white border border-gray-200 rounded-xl p-6 mb-8">
+        <p class="font-semibold text-gray-900 mb-3">정본과 관련 글</p>
+        <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+          <li><a href="https://noahailabs.com/ko/blog/research/ai-custom-financial-automation" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">Noah AI Labs AI 커스텀 기술 해설 (정본)</a></li>
+          <li><a href="/news/87" class="text-primary-600 underline">AI 시장국면 판단과 실거래 검증 전략마켓</a></li>
+          <li><a href="/news/84" class="text-primary-600 underline">v3.9.0.2 TradingView·Pine 전략 자동화 업데이트</a></li>
+          <li><a href="/services/finance" class="text-primary-600 underline">드림에이아이랩의 노아AI 이전 안내</a></li>
+        </ul>
+      </div>
+
+      <p class="text-gray-600 text-sm border-t border-gray-200 pt-6 leading-relaxed">
+        ※ NoahAI는 Noah AI Labs에서 독립 운영됩니다. 본 글은 그 기술 설명을 드림에이아이랩 뉴스센터에 아카이브한 기술 블로그이며, 제3자 검증이나 투자 권유가 아닙니다.
+      </p>
+    `,
+  },
   {
     id: 88,
     title:
