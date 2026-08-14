@@ -1,5 +1,10 @@
 import type { Metadata } from 'next'
-import type { NewsArticle } from '../app/news/data'
+import type { NewsArticle, NewsEntityRef } from '../app/news/data'
+import { getCategoryName } from './news-categories'
+import {
+  DREAM_AI_LAB_ORGANIZATION_ID,
+  DREAM_AI_LAB_URL,
+} from './entities'
 
 export const SITE_URL = 'https://dreamailab.com'
 export const SITE_NAME = '드림에이아이랩'
@@ -33,6 +38,36 @@ export const defaultOpenGraph = {
 export const defaultTwitter = {
   card: 'summary_large_image' as const,
   images: [DEFAULT_OG_IMAGE],
+}
+
+function newsOgImageMeta(article: NewsArticle, locale: 'ko' | 'en') {
+  if (!article.ogImage) return defaultOpenGraph.images
+  const alt =
+    locale === 'en' && article.ogImageAltEn
+      ? article.ogImageAltEn
+      : article.ogImageAlt ?? article.title
+  return [
+    {
+      url: absoluteUrl(article.ogImage),
+      width: 1200,
+      height: 630,
+      alt,
+    },
+  ]
+}
+
+function toJsonLdEntity(entity: NewsEntityRef) {
+  return {
+    '@type': entity.type,
+    ...(entity.id ? { '@id': entity.id } : {}),
+    name: entity.name,
+    ...(entity.alternateName?.length
+      ? { alternateName: entity.alternateName }
+      : {}),
+    url: entity.url,
+    ...(entity.description ? { description: entity.description } : {}),
+    ...(entity.sameAs?.length ? { sameAs: entity.sameAs } : {}),
+  }
 }
 
 export function buildNewsMetadata(
@@ -73,12 +108,13 @@ export function buildNewsMetadata(
       type: 'article',
       publishedTime: article.date,
       authors: article.author ? [article.author] : [siteLabel],
-      images: defaultOpenGraph.images,
+      images: newsOgImageMeta(article, locale),
     },
     twitter: {
       ...defaultTwitter,
       title: localized.title,
       description: localized.excerpt,
+      images: newsOgImageMeta(article, locale).map((img) => img.url),
     },
     robots: {
       index: true,
@@ -107,6 +143,8 @@ export function buildNewsArticleJsonLd(
       : { title: article.title, excerpt: article.excerpt }
 
   const authorName = article.author ?? (locale === 'en' ? SITE_NAME_EN : SITE_NAME)
+  const ogImages = newsOgImageMeta(article, locale)
+  const imageUrl = ogImages[0]?.url ?? DEFAULT_OG_IMAGE
 
   return {
     '@context': 'https://schema.org',
@@ -116,23 +154,47 @@ export function buildNewsArticleJsonLd(
     datePublished: article.date,
     dateModified: article.date,
     inLanguage: locale === 'en' ? 'en-US' : 'ko-KR',
+    articleSection: getCategoryName(article.category),
     author: {
       '@type': 'Organization',
       name: authorName,
+      ...(article.authorUrl ? { url: article.authorUrl } : {}),
     },
     publisher: {
       '@type': 'Organization',
+      '@id': DREAM_AI_LAB_ORGANIZATION_ID,
       name: SITE_NAME,
+      url: DREAM_AI_LAB_URL,
       logo: {
         '@type': 'ImageObject',
         url: `${SITE_URL}/logo.png`,
       },
     },
-    image: [DEFAULT_OG_IMAGE],
+    isPartOf: {
+      '@type': 'WebSite',
+      '@id': `${DREAM_AI_LAB_URL}/#website`,
+      name: SITE_NAME,
+      url: DREAM_AI_LAB_URL,
+      publisher: { '@id': DREAM_AI_LAB_ORGANIZATION_ID },
+    },
+    image: [
+      {
+        '@type': 'ImageObject',
+        url: imageUrl,
+        width: 1200,
+        height: 630,
+      },
+    ],
     mainEntityOfPage: {
       '@type': 'WebPage',
       '@id': pageUrl,
     },
+    ...(article.about?.length
+      ? { about: article.about.map(toJsonLdEntity) }
+      : {}),
+    ...(article.mentions?.length
+      ? { mentions: article.mentions.map(toJsonLdEntity) }
+      : {}),
     keywords: article.tags?.join(', '),
   }
 }

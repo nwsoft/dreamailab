@@ -13,6 +13,16 @@ export interface NewsArticleLocale {
   content: string
 }
 
+export interface NewsEntityRef {
+  type: 'Organization' | 'SoftwareApplication' | 'DefinedTerm'
+  name: string
+  alternateName?: string[]
+  url: string
+  id?: string
+  description?: string
+  sameAs?: string[]
+}
+
 export interface NewsArticle {
   id: number
   title: string
@@ -23,7 +33,16 @@ export interface NewsArticle {
   image: string
   featured: boolean
   author?: string
+  /** 작성 조직 공식 URL — JSON-LD author.url */
+  authorUrl?: string
   tags?: string[]
+  /** 기사 전용 OG·소셜 이미지 (public 경로) */
+  ogImage?: string
+  ogImageAlt?: string
+  ogImageAltEn?: string
+  /** JSON-LD about — 자람이 / NoahAI Labs 등 엔티티 구분 */
+  about?: NewsEntityRef[]
+  mentions?: NewsEntityRef[]
   /** 영문 등 추가 언어 (해당 locale 전용 페이지·hreflang·JSON-LD에 사용) */
   i18n?: {
     en?: NewsArticleLocale
@@ -50,6 +69,589 @@ export function getLocalizedArticle(
 }
 
 export const newsArticles: NewsArticle[] = [
+  {
+    id: 88,
+    title:
+      '발달장애 플랫폼 ‘자람이’ 이용자 35만 돌파…홈티 시장까지 서비스 확대',
+    excerpt:
+      '자람이가 누적 이용자 35만 명을 돌파한 가운데, 프리랜서 치료사와 가정을 직접 연결하는 홈티 매칭을 확대합니다. 홈티 치료기록도 AI 디지털케어로그에 통합합니다.',
+    category: 'press',
+    date: '2026-08-14',
+    image: '🏠',
+    featured: true,
+    author: '자람이팀',
+    authorUrl: 'https://jarame.or.kr/',
+    ogImage: '/images/news/news-88-jarame-home-therapy-og.jpg',
+    ogImageAlt:
+      '자람이 홈티: 가정 방문치료 기록이 AI 디지털케어로그로 센터·학교와 아이 중심 연결되는 개념 일러스트',
+    ogImageAltEn:
+      'Conceptual illustration of Jarame home therapy records connecting home, center, and school on a child-centered AI Digital Care Log',
+    about: [
+      {
+        type: 'Organization',
+        id: 'https://jarame.or.kr/#organization',
+        name: '자람이',
+        alternateName: ['Jarame'],
+        url: 'https://jarame.or.kr/',
+        description:
+          '발달장애인의 생활·치료·교육 기록을 연결하는 AI 디지털케어로그 적용 서비스',
+        sameAs: ['https://dreamailab.com/services/jarame/'],
+      },
+      {
+        type: 'SoftwareApplication',
+        name: '자람이',
+        alternateName: ['Jarame'],
+        url: 'https://jarame.or.kr/',
+        description: '발달장애 보호자·치료사·센터를 위한 AI 디지털케어로그 플랫폼',
+      },
+    ],
+    mentions: [
+      {
+        type: 'DefinedTerm',
+        id: 'https://dreamailab.com/technology/#ai-digital-care-log',
+        name: 'AI 디지털케어로그',
+        alternateName: ['AI Digital Care Log'],
+        url: 'https://dreamailab.com/technology/',
+      },
+      {
+        type: 'Organization',
+        id: 'https://dreamailab.com/#organization',
+        name: '드림에이아이랩',
+        alternateName: ['Dream AI Lab', 'DAL'],
+        url: 'https://dreamailab.com/',
+      },
+    ],
+    tags: [
+      '자람이',
+      '홈티',
+      '홈티 매칭',
+      '발달장애',
+      'AI 디지털케어로그',
+      '프리랜서 치료사',
+      '보호자',
+      '방문치료',
+      '치료기록',
+      '드림에이아이랩',
+    ],
+    i18n: {
+      en: {
+        title:
+          'Jarame surpasses 350,000 users and expands into home therapy matching',
+        excerpt:
+          'Jarame is expanding from center-based care into home therapy, connecting freelance therapists with families and folding session records into the AI Digital Care Log.',
+        content: `
+      <p class="text-sm text-gray-500 mb-6">[Press Release · 2026-08-14]</p>
+
+      <p class="text-xl font-semibold text-gray-800 mb-4 leading-relaxed">
+        Guardian adoption grows, and freelance therapists connect directly with families
+      </p>
+      <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-4">
+        Home-therapy records join the <strong>AI Digital Care Log</strong>. Families and therapists can use the platform even without a center affiliation.
+      </p>
+
+      <figure class="mb-10">
+        <img
+          src="/images/news/news-88-jarame-home-therapy-og.jpg"
+          alt="Conceptual illustration of Jarame home therapy records connecting home, center, and school on a child-centered AI Digital Care Log"
+          class="w-full rounded-xl object-cover"
+          width="1200"
+          height="630"
+          loading="eager"
+          decoding="async"
+        />
+        <figcaption class="mt-3 text-sm text-gray-500 text-center">
+          Home therapy, center, and school records continue on one child-centered care log. Conceptual illustration, not a product screenshot.
+        </figcaption>
+      </figure>
+
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        Dream AI Lab&rsquo;s developmental-disability AI platform <strong>Jarame</strong> has surpassed 350,000 users and is expanding into home therapy &mdash; visits by freelance therapists, often called &ldquo;home-ti&rdquo; in Korea. The plan is to extend treatment-data management beyond centers into homes and independent therapists.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        Jarame is designed so people with developmental disabilities, guardians, therapists, and centers can record and share a child&rsquo;s long-term change and treatment process. Its core technology is the AI Digital Care Log, which continuously accumulates information from daily life and therapy.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">Guardian use is widening the base</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        According to Jarame, guardian use has grown quickly and total users have passed 350,000. Building on that base, the company will expand matching that connects home therapists with families, following its center-based services.
+      </p>
+      <p class="text-sm text-gray-500 mb-8 leading-relaxed">
+        The 350,000 figure is a cumulative platform-user count announced by Jarame. It is not the same as daily active users (DAU) or full commercial rollout at every institution. Current product status is on the <a href="/services/jarame" class="text-primary-600 underline">Jarame service page</a>.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Why home therapy has been hard to manage</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        Home therapy is a visit model in which therapists in speech, cognition, play, occupational therapy, and related fields provide sessions at home. It is used by families who find travel difficult, whose schedules do not match a center, or who want a specific therapist. Finding a therapist, checking trustworthiness, coordinating schedules, and managing records often happen separately, which makes systematic care difficult.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        Freelance therapists who are not employed by a center often cannot use that center&rsquo;s systems. After a family and therapist connect, the resulting treatment information is also easily cut off from other institutions.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Matching plus the care log, not brokerage alone</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        Jarame differentiates home-therapy matching by combining it with the existing AI Digital Care Log, rather than offering a simple therapist-brokerage service.
+      </p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        When a guardian connects with a therapist through Jarame, goals, activities, and the child&rsquo;s responses and changes during home sessions can be recorded over time. Freelance therapists can use Jarame&rsquo;s record system even without belonging to a separate center.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        As a result, if a child combines center therapy and home therapy, or changes therapists, prior records can be managed as one continuous dataset centered on the child.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">From institution-centered to child-centered records</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        Developmental-disability platforms have often been built around centers. Jarame lets guardians and therapists use the platform directly, so households not affiliated with a specific center can still be in scope.
+      </p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        Families who receive only home therapy can use the AI Digital Care Log. Families who use both a center and home therapy can connect each set of records around the child.
+      </p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        This speaks to a long-standing problem in the field: information breaks. Children often move through several therapists and institutions as they grow, but records sit in different places, so guardians must re-explain prior context to the next therapist or clinician.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        Jarame&rsquo;s design is to shift scattered institution records onto a child-centered timeline. Center notes, home observations, and home-therapy records connect into one long-term care log so records continue even when the place of care changes.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">What accumulated data can support</h2>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        As data accumulates over a long period, the company says AI can be used not only to store individual notes but to help see period-by-period change, repeating behaviors, and differences before and after intervention. Sharing remains within consent and role-based access. Jarame does not replace diagnosis, prescription, or treatment.
+      </p>
+
+      <div class="bg-primary-50 border-l-4 border-primary-600 p-6 mb-8 rounded-r-lg">
+        <p class="text-lg text-gray-800 leading-relaxed mb-4">
+          A Jarame representative said, &ldquo;Developmental-disability care does not happen only inside a center. It continues in the many places a child lives &mdash; home, hospital, and therapy rooms. Until now, treatment information broke each time the place changed, and home therapy was one of the largest gaps.&rdquo;
+        </p>
+        <p class="text-lg text-gray-800 leading-relaxed">
+          The representative added, &ldquo;What Jarame is building is not one institution&rsquo;s internal system, but a structure in which long-term treatment and life records continue around one person. If freelance therapists and families can use Jarame directly, people who do not use a center can still manage records inside the same digital care-log system.&rdquo;
+        </p>
+      </div>
+
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        Industry observers say Jarame&rsquo;s move into home therapy can mean more than adding a matching feature. If the guardian base and therapist network grow together, search, matching, sessions, records, and long-term management can connect on one platform. Jarame plans to keep linking centers, guardians, and therapists around the AI Digital Care Log so a person&rsquo;s long-term change is not cut off when the place or institution of care changes.
+      </p>
+
+      <div class="bg-amber-50 border-l-4 border-amber-500 p-5 mb-8 rounded-r-lg">
+        <p class="text-amber-900 text-sm leading-relaxed">
+          <strong>Service boundary:</strong> Jarame does not replace medical diagnosis, prescription, classes, or therapy. Record sharing follows each institution&rsquo;s policy and the user&rsquo;s consent and permission range. Home-therapy matching aims at profile and qualification review and session-to-care-log linkage; availability depends on beta and institution settings. Session contracts and clinical responsibility remain between the guardian and the therapist.
+        </p>
+      </div>
+
+      <div class="bg-white border border-gray-200 rounded-xl p-6 mb-8">
+        <p class="font-semibold text-gray-900 mb-3">Related links</p>
+        <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+          <li><a href="https://jarame.or.kr" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">Jarame platform</a></li>
+          <li><a href="/services/jarame" class="text-primary-600 underline">Jarame service overview</a></li>
+          <li><a href="/news/86" class="text-primary-600 underline">Why developmental-disability care still repeats the same questions</a></li>
+          <li><a href="/news/82" class="text-primary-600 underline">Jarame center onboarding</a></li>
+          <li><a href="/news/77" class="text-primary-600 underline">Free plans for centers and guardians</a></li>
+          <li><a href="/news/74" class="text-primary-600 underline">Child-centered care timeline update</a></li>
+        </ul>
+      </div>
+
+      <p class="text-gray-600 text-sm border-t border-gray-200 pt-6 leading-relaxed">
+        ※ This article is a Dream AI Lab press archive of a Jarame product announcement. For current product, business, and metrics, see the service page and IR. It is not third-party validation.
+      </p>
+        `,
+      },
+    },
+    content: `
+      <p class="text-sm text-gray-500 mb-6">[보도자료 · 2026-08-14]</p>
+
+      <p class="text-xl font-semibold text-gray-800 mb-4 leading-relaxed">
+        보호자 이용 확산 속 프리랜서 치료사-가정 직접 연결
+      </p>
+      <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-4">
+        홈티 치료기록도 <strong>AI 디지털케어로그</strong>에 통합한다. 센터를 이용하지 않아도 보호자와 치료사 중심으로 플랫폼을 사용할 수 있다.
+      </p>
+
+      <figure class="mb-10">
+        <img
+          src="/images/news/news-88-jarame-home-therapy-og.jpg"
+          alt="자람이 홈티: 가정 방문치료 기록이 AI 디지털케어로그로 센터·학교와 아이 중심 연결되는 개념 일러스트"
+          class="w-full rounded-xl object-cover"
+          width="1200"
+          height="630"
+          loading="eager"
+          decoding="async"
+        />
+        <figcaption class="mt-3 text-sm text-gray-500 text-center">
+          홈티·센터·학교 기록이 아이 중심 케어로그로 이어지는 개념 일러스트. 제품 화면 캡처가 아닙니다.
+        </figcaption>
+      </figure>
+
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        드림에이아이랩의 발달장애 AI 플랫폼 <strong>자람이</strong>가 이용자 35만 명을 돌파한 가운데, 서비스 영역을 프리랜서 치료사의 방문치료, 이른바 &lsquo;홈티&rsquo; 시장까지 확대한다. 센터를 중심으로 이뤄지던 발달장애 치료 데이터 관리를 가정과 프리랜서 치료사 영역까지 확장한다는 계획이다.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        자람이는 발달장애인과 보호자, 치료사, 센터 등 치료·돌봄 관계자들이 아이의 장기적인 변화와 치료과정을 기록하고 공유할 수 있도록 설계된 플랫폼이다. 일상과 치료 과정에서 발생하는 정보를 지속적으로 축적하는 AI 디지털케어로그를 핵심 기술로 활용한다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">보호자 이용이 넓힌 기반</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        자람이 측에 따르면 최근 보호자들의 플랫폼 이용이 빠르게 확대되면서 전체 이용자가 35만 명을 넘어섰다. 회사는 이러한 이용자 기반을 바탕으로 센터 기반 서비스에 이어 홈티 치료사와 가정을 연결하는 매칭 서비스를 본격적으로 확대할 방침이다.
+      </p>
+      <p class="text-sm text-gray-500 mb-8 leading-relaxed">
+        35만 명은 자람이가 밝힌 플랫폼 누적 이용자 기준이다. 일일 활성 이용자(DAU)나 전 기관 전면 상용 전환을 의미하지 않으며, 현재 제품·사업 기준은 <a href="/services/jarame" class="text-primary-600 underline">자람이 서비스 페이지</a>와 IR을 따른다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">홈티가 관리하기 어려웠던 이유</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        홈티는 언어·인지·놀이·작업 등 다양한 영역의 치료사가 가정을 직접 방문해 서비스를 제공하는 형태다. 이동이 어렵거나 센터 일정과 맞지 않는 가정, 특정 치료사를 원하는 보호자 등을 중심으로 활용되고 있지만, 치료사 탐색과 신뢰도 확인, 일정 조율, 치료기록 관리 등이 개별적으로 이뤄지는 경우가 많아 체계적인 관리가 어렵다는 지적이 있었다.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        특히 치료사가 센터에 소속되지 않은 프리랜서일 경우 센터의 전산시스템이나 기록관리 인프라를 이용하기 어렵고, 치료사와 가정의 연결 이후 발생하는 치료정보 역시 다른 기관과 단절되기 쉽다는 문제가 있었다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">중개를 넘어 케어로그와 결합</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        자람이는 홈티 매칭을 단순한 치료사 중개 서비스가 아닌, 기존 AI 디지털케어로그와 결합하는 방식으로 차별화한다.
+      </p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        보호자가 자람이를 통해 치료사와 연결되면 홈티 과정에서 발생하는 치료 목표와 활동, 아이의 반응 및 변화 등을 지속적으로 기록할 수 있다. 프리랜서 치료사 역시 별도의 센터에 소속되지 않아도 자람이의 기록체계를 이용할 수 있도록 한다.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        이에 따라 아이가 센터치료와 홈티를 병행하거나 치료사를 변경하더라도, 기존 치료기록을 하나의 연속된 데이터로 관리할 수 있는 구조가 만들어진다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">기관 중심에서 아이 중심으로</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        기존에는 발달장애 치료 플랫폼이 센터 등 기관을 중심으로 구축되는 경우가 많았다. 자람이는 보호자와 치료사가 직접 플랫폼을 사용할 수 있도록 함으로써, 특정 센터에 소속되지 않은 가정까지 서비스 범위를 확대할 수 있다.
+      </p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        센터를 이용하지 않고 홈티만 받는 가정도 자람이의 AI 디지털케어로그를 사용할 수 있으며, 센터와 홈티를 함께 이용하는 경우에도 각각의 치료기록을 아이를 중심으로 연결할 수 있다.
+      </p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        이는 발달장애 치료 현장에서 오랫동안 지적돼온 &lsquo;정보 단절&rsquo; 문제와도 관련된다. 발달장애 아동은 성장 과정에서 여러 치료사와 기관을 거치는 경우가 많지만, 각각의 기록이 서로 다른 곳에 저장되면서 새로운 치료사나 의료진에게 이전 상황을 설명하는 역할을 보호자가 맡아야 하는 경우가 적지 않았다.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        자람이는 기관별로 흩어진 기록을 &lsquo;아이 중심&rsquo;으로 전환한다는 구상이다. 센터에서 발생한 치료기록뿐 아니라 가정에서 관찰된 변화와 홈티 치료기록 등을 하나의 장기적인 케어로그로 연결해, 치료 장소가 달라져도 기록이 이어지도록 한다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">장기간 데이터가 쌓이면</h2>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        장기간 데이터가 축적될 경우 AI를 활용해 개별 기록을 단순히 저장하는 수준을 넘어, 시기별 변화와 반복되는 행동, 치료 전후의 차이 등을 파악하는 데 활용할 수 있다는 것이 회사 측 설명이다. 기록 공유는 동의와 역할별 권한 범위 안에서 이뤄지며, 자람이는 진단·처방·치료를 대체하지 않는다.
+      </p>
+
+      <div class="bg-primary-50 border-l-4 border-primary-600 p-6 mb-8 rounded-r-lg">
+        <p class="text-lg text-gray-800 leading-relaxed mb-4">
+          자람이 관계자는 &ldquo;발달장애 치료는 특정 센터 안에서만 이루어지는 것이 아니라 가정과 병원, 치료실 등 아이가 생활하는 여러 공간에서 계속 이어진다&rdquo;며 &ldquo;그동안 장소가 바뀔 때마다 치료정보가 함께 끊기는 문제가 있었고, 홈티 역시 이러한 데이터 단절이 큰 영역 중 하나였다&rdquo;고 설명했다.
+        </p>
+        <p class="text-lg text-gray-800 leading-relaxed">
+          이어 &ldquo;자람이가 만들려는 것은 특정 기관의 전산시스템이 아니라 한 사람을 중심으로 장기간의 치료와 생활기록이 이어지는 구조&rdquo;라며 &ldquo;프리랜서 치료사와 가정이 직접 자람이를 사용할 수 있게 되면 센터를 이용하지 않는 발달장애인도 동일한 디지털케어로그 체계 안에서 기록을 관리할 수 있다&rdquo;고 말했다.
+        </p>
+      </div>
+
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        업계에서는 자람이의 홈티 진출이 단순한 신규 매칭 서비스 추가 이상의 의미를 가질 수 있을 것으로 보고 있다. 보호자 이용자 기반과 치료사 네트워크가 함께 확대될 경우 &lsquo;치료사 탐색-매칭-치료-기록-장기관리&rsquo;가 하나의 플랫폼에서 연결되는 구조가 만들어질 수 있기 때문이다. 자람이는 향후 홈티를 포함해 센터와 보호자, 치료사 등 발달장애인을 둘러싼 다양한 치료·돌봄 주체를 AI 디지털케어로그를 중심으로 연결하고, 발달장애인의 장기적인 변화가 치료 장소나 기관 변경으로 인해 단절되지 않는 데이터 환경을 구축한다는 계획이다.
+      </p>
+
+      <div class="bg-amber-50 border-l-4 border-amber-500 p-5 mb-8 rounded-r-lg">
+        <p class="text-amber-900 text-sm leading-relaxed">
+          <strong>서비스 경계:</strong> 자람이는 의료 진단·처방·수업·치료를 대체하지 않는다. 기록 공유는 기관 도입 정책과 이용자 동의·권한 범위에 따라 운영된다. 홈티 매칭은 프로필·자격 검증과 세션-케어로그 연동을 지향하며, 실제 제공 범위는 베타·기관 설정에 따른다. 회기 계약과 임상 책임은 보호자와 치료사 간에 있다.
+        </p>
+      </div>
+
+      <div class="bg-white border border-gray-200 rounded-xl p-6 mb-8">
+        <p class="font-semibold text-gray-900 mb-3">관련 콘텐츠</p>
+        <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+          <li><a href="https://jarame.or.kr" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">자람이 플랫폼</a></li>
+          <li><a href="/services/jarame" class="text-primary-600 underline">자람이 서비스 소개</a></li>
+          <li><a href="/news/86" class="text-primary-600 underline">발달장애 치료는 왜 같은 질문을 반복하는가 (특집)</a></li>
+          <li><a href="/news/82" class="text-primary-600 underline">자람이 발달센터 도입 과정</a></li>
+          <li><a href="/news/77" class="text-primary-600 underline">발달센터·보호자 무료 요금제</a></li>
+          <li><a href="/news/74" class="text-primary-600 underline">아이 중심 케어 타임라인 업데이트</a></li>
+        </ul>
+      </div>
+
+      <p class="text-gray-600 text-sm border-t border-gray-200 pt-6 leading-relaxed">
+        ※ 본 글은 자람이 제품 발표를 드림에이아이랩 뉴스센터에 보도자료로 아카이브한 것입니다. 제품·사업·수치의 현재 기준은 서비스 페이지와 IR을 따르며, 제3자 검증을 의미하지 않습니다.
+      </p>
+    `,
+  },
+  {
+    id: 87,
+    title:
+      '노아AI, AI 시장국면 판단 기능 공개…‘실거래 검증’ 전략마켓 구축',
+    excerpt:
+      'Noah AI Labs가 AI 시장국면 판단과 블록체인 기반 실거래 이력 검증을 결합한 전략마켓을 공개합니다. 백테스트 수익률을 넘어, 어떤 시장에서 실제로 작동했는지를 추적합니다.',
+    category: 'press',
+    date: '2026-08-14',
+    image: '📈',
+    featured: true,
+    author: 'Noah AI Labs',
+    authorUrl: 'https://noahailabs.com/',
+    ogImage: '/images/news/news-87-noahai-strategy-market-og.jpg',
+    ogImageAlt:
+      'NoahAI Labs 개념 일러스트: AI 시장국면 판단, 실거래 검증 전략마켓, 가드레일. 표시된 화면은 실제 운용 성과가 아님',
+    ogImageAltEn:
+      'Conceptual NoahAI Labs illustration of market-regime judgment, a live-trade verified strategy marketplace, and guardrails. On-screen figures are not live performance.',
+    about: [
+      {
+        type: 'Organization',
+        id: 'https://noahailabs.com/#organization',
+        name: 'Noah AI Labs',
+        alternateName: ['노아에이아이랩스', 'NoahAI Labs', '노아AI Labs'],
+        url: 'https://noahailabs.com/',
+        description:
+          '금융 AI 서비스 노아AI를 독립 운영하는 법인. 드림에이아이랩과 별도 조직이다.',
+        sameAs: ['https://dreamailab.com/services/finance/'],
+      },
+      {
+        type: 'SoftwareApplication',
+        id: 'https://noahailabs.com/#noahai',
+        name: '노아AI',
+        alternateName: ['NoahAI', 'Noah AI'],
+        url: 'https://noahailabs.com/',
+        description:
+          'AI 시장국면 판단과 실거래 검증 전략마켓을 결합한 금융·재테크 AI 플랫폼',
+      },
+    ],
+    mentions: [
+      {
+        type: 'Organization',
+        id: 'https://dreamailab.com/#organization',
+        name: '드림에이아이랩',
+        alternateName: ['Dream AI Lab', 'DAL'],
+        url: 'https://dreamailab.com/',
+        description: '본 보도자료 아카이브 발행 매체. 노아AI 운영 주체는 Noah AI Labs.',
+      },
+    ],
+    tags: [
+      '노아AI',
+      'NoahAI',
+      'NoahAI Labs',
+      '전략마켓',
+      '시장국면',
+      '실거래 검증',
+      '블록체인',
+      '가드레일',
+      '백테스트',
+      'AI 투자',
+      '자동매매',
+    ],
+    i18n: {
+      en: {
+        title:
+          'NoahAI unveils AI market-regime judgment and a live-trade verified strategy marketplace',
+        excerpt:
+          'Noah AI Labs is introducing AI market-regime judgment together with a strategy marketplace that separates backtests from blockchain-verifiable live trading records.',
+        content: `
+      <p class="text-sm text-gray-500 mb-6">[Press Release · 2026-08-14]</p>
+
+      <p class="text-xl font-semibold text-gray-800 mb-4 leading-relaxed">
+        User-shared strategies, automation, and blockchain-backed live-trade history
+      </p>
+      <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-4">
+        Beyond backtest scores, NoahAI tracks <strong>where a strategy actually worked</strong> &mdash; and combines AI regime judgment with guardrails so strategies can respond when markets change.
+      </p>
+
+      <figure class="mb-10">
+        <img
+          src="/images/news/news-87-noahai-strategy-market-og.jpg"
+          alt="Conceptual NoahAI Labs illustration of market-regime judgment, a live-trade verified strategy marketplace, and guardrails. On-screen figures are not live performance."
+          class="w-full rounded-xl object-cover"
+          width="1200"
+          height="630"
+          loading="eager"
+          decoding="async"
+        />
+        <figcaption class="mt-3 text-sm text-gray-500 text-center">
+          Conceptual UI of regime judgment, live-trade verification, and guardrails. Figures on screen are not live performance or a return guarantee.
+        </figcaption>
+      </figure>
+
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        AI investing platform <strong>NoahAI</strong>, operated by <strong>Noah AI Labs</strong>, is unveiling a function that uses artificial intelligence to judge the current market regime and analyze whether an investment strategy fits that environment. It is also building a <strong>strategy marketplace</strong> where users can create and share strategies and verify live operating results.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        NoahAI places the core of this release not on simple strategy automation, but on <strong>connecting market regimes with strategies</strong>. The same strategy can perform very differently in uptrends, downtrends, sideways markets, and high-volatility periods. The company aims to use AI to address this long-standing limit of algorithmic investing.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">Separating backtests from live operating records</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        The strategy marketplace NoahAI is preparing distinguishes backtest results, which most strategy-sharing platforms rely on, from records generated after a strategy is actually used in live markets.
+      </p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        A backtest checks performance on historical market data. It is useful for research, but repeatedly optimizing conditions on data whose outcomes are already known can produce <strong>overfitting</strong>: the same results may not appear in future markets. Selecting a favorable period or adjusting conditions can also create a strategy that looks highly profitable only on past data.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        To complement this, NoahAI plans to accumulate operating records that occur after a strategy is used in live markets, and to raise the verifiability of those records with blockchain technology.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">A live history by market regime</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        In the marketplace, users will look beyond &ldquo;what was the backtest return?&rdquo; They will be able to see when the strategy was actually operated, what the market regime was at the time, and what win rate and profit-and-loss characteristics appeared in live trades.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        For example, a strategy that looks strong overall may be strong in an uptrend and weak in a sideways market. Those characteristics would be separated through live operating data. Each strategy would, in effect, build a <strong>live history by market regime</strong>.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">AI regime judgment plus guardrails</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        NoahAI combines this with AI market-regime judgment. The goal is for AI to continuously analyze market data such as trend, volatility, volume, and risk, judge the current environment, and compare it with a strategy&rsquo;s existing operating data to assess fit in the present market.
+      </p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        This addresses a problem retail investors repeatedly encounter in automated trading. Even after finding a strategy with strong past results and automating it, performance can deteriorate sharply when the market environment changes. The core issue of automated investing has been not only the strategy itself, but <strong>when to use it and when to stop</strong>.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        NoahAI also applies its own guardrail system. Trades are not executed solely because AI judged them. Execution is restricted when risk rises or pre-set conditions are breached.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">A user-built strategy ecosystem</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        Experienced users can publish their own strategies to the marketplace. Others can choose a strategy after reviewing not only backtests but live operating history and regime-level records. Selected strategies are planned to connect to NoahAI&rsquo;s automation infrastructure.
+      </p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        Global investing platforms such as TradingView have built ecosystems for sharing user-made indicators and strategies. NoahAI&rsquo;s design is to combine that model with <strong>live-trade verification</strong> and <strong>AI market-regime judgment</strong>.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        As users grow, strategy count grows. As live operation continues, data accumulates on how each strategy performed in different regimes. NoahAI plans to develop this into a data flywheel that feeds back into regime analysis and strategy evaluation.
+      </p>
+
+      <div class="bg-primary-50 border-l-4 border-primary-600 p-6 mb-8 rounded-r-lg">
+        <p class="text-lg text-gray-800 leading-relaxed mb-4">
+          A NoahAI representative said, &ldquo;One of the hardest problems in investing is not making a good strategy, but judging whether that strategy is still valid in today&rsquo;s market. A structure that shows when and in what environment a strategy actually worked, rather than a high return on past data, is what we see as essential to raising trust in a strategy ecosystem.&rdquo;
+        </p>
+        <p class="text-lg text-gray-800 leading-relaxed">
+          The representative added, &ldquo;When AI regime judgment, guardrails, and live operating data come together, individual investors can approach a strategy operating environment that used to be available mainly in professional system trading.&rdquo;
+        </p>
+      </div>
+
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        NoahAI plans to expand the marketplace so that strategy creation and sharing, live operation, performance records, regime-level evaluation, AI judgment, and automation circulate on a single platform.
+      </p>
+
+      <div class="bg-amber-50 border-l-4 border-amber-500 p-5 mb-8 rounded-r-lg">
+        <p class="text-amber-900 text-sm leading-relaxed">
+          <strong>Investment notice:</strong> Market-regime judgment and live-trade history do not guarantee future returns. Markets keep changing. The purpose of this technology is not to promise profit, but to provide a basis for understanding a strategy&rsquo;s actual operating conditions more objectively and managing risk. Actual orders, settlement, and P&amp;L follow the user&rsquo;s account, external exchange or broker APIs, and applicable law. NoahAI does not provide investment advice, discretionary management, or guaranteed returns.
+        </p>
+      </div>
+
+      <div class="bg-white border border-gray-200 rounded-xl p-6 mb-8">
+        <p class="font-semibold text-gray-900 mb-3">Related links</p>
+        <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+          <li><a href="https://noahailabs.com/en" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">Noah AI Labs</a></li>
+          <li><a href="/news/84" class="text-primary-600 underline">NoahAI v3.9.0.2: TradingView/Pine automation and regime-aware safety</a></li>
+          <li><a href="/news/83" class="text-primary-600 underline">NoahAI integrated KPI dashboard</a></li>
+          <li><a href="/services/finance" class="text-primary-600 underline">Dream AI Lab NoahAI migration notice</a></li>
+          <li><a href="/blog/noahai-technical-whitepaper" class="text-primary-600 underline">NoahAI technical baseline</a></li>
+        </ul>
+      </div>
+
+      <p class="text-gray-600 text-sm border-t border-gray-200 pt-6 leading-relaxed">
+        ※ NoahAI is independently operated by Noah AI Labs. This article is a Dream AI Lab press archive of a Noah AI Labs product announcement. It is not third-party validation, a buy/sell recommendation, or a guarantee of investment performance.
+      </p>
+        `,
+      },
+    },
+    content: `
+      <p class="text-sm text-gray-500 mb-6">[보도자료 · 2026-08-14]</p>
+
+      <p class="text-xl font-semibold text-gray-800 mb-4 leading-relaxed">
+        사용자 전략 공유·자동화 지원…블록체인으로 실거래 이력 검증
+      </p>
+      <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-4">
+        백테스트 중심 전략 평가를 넘어 &lsquo;어떤 시장에서 실제 작동했는가&rsquo;를 추적하고, AI 시장국면 판단과 가드레일을 결합해 전략이 시장 변화에 대응하도록 설계한다.
+      </p>
+
+      <figure class="mb-10">
+        <img
+          src="/images/news/news-87-noahai-strategy-market-og.jpg"
+          alt="NoahAI Labs 개념 일러스트: AI 시장국면 판단, 실거래 검증 전략마켓, 가드레일. 표시된 화면은 실제 운용 성과가 아님"
+          class="w-full rounded-xl object-cover"
+          width="1200"
+          height="630"
+          loading="eager"
+          decoding="async"
+        />
+        <figcaption class="mt-3 text-sm text-gray-500 text-center">
+          시장국면 판단·실거래 검증·가드레일의 개념 화면. 표시된 수치는 실제 운용 성과나 수익 보장이 아닙니다.
+        </figcaption>
+      </figure>
+
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        AI 투자 플랫폼 <strong>노아AI</strong>를 운영하는 <strong>Noah AI Labs</strong>가 인공지능(AI)을 활용해 현재 시장의 국면을 판단하고, 이에 따라 투자전략의 적합성을 분석하는 기능을 공개한다. 사용자들이 직접 투자전략을 제작·공유하고 실제 운용 결과를 검증할 수 있는 &lsquo;전략마켓&rsquo;도 함께 구축한다.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        노아AI는 이번 기능의 핵심을 단순한 투자전략 자동화가 아닌 <strong>&lsquo;시장국면과 전략의 연결&rsquo;</strong>에 두고 있다. 동일한 전략이라도 상승장과 하락장, 횡보장, 고변동성 구간 등 시장환경에 따라 성과가 크게 달라질 수 있다는 기존 알고리즘 투자의 한계를 AI로 보완하겠다는 것이다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">백테스트와 실거래 이력을 구분한다</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        특히 노아AI가 준비 중인 전략마켓은 기존 전략 공유 플랫폼에서 일반적으로 활용되는 백테스트 결과와 실제 운용 기록을 구분한다.
+      </p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        백테스트는 과거 시장 데이터를 이용해 전략의 성과를 검증하는 방식이다. 전략 연구에는 유용하지만, 이미 결과를 알고 있는 과거 데이터에 조건을 반복적으로 최적화할 경우 실제 미래 시장에서는 같은 결과가 나오지 않는 <strong>&lsquo;과최적화&rsquo;</strong> 문제가 발생할 수 있다. 특정 기간을 선택하거나 조건을 조정하는 방식에 따라 과거 데이터상 높은 수익률을 나타내는 전략을 만드는 것도 가능하다.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        노아AI는 이를 보완하기 위해 전략이 실제 시장에서 사용된 이후 발생하는 운용 기록을 별도로 축적하고, 블록체인 기술을 활용해 해당 기록의 검증 가능성을 높이는 구조를 도입할 계획이다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">시장국면별 실전 이력을 남긴다</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        이에 따라 전략마켓에서는 단순히 &lsquo;백테스트 수익률이 얼마인가&rsquo;를 보는 것을 넘어, 해당 전략이 실제로 언제 운용됐는지, 당시 시장이 어떤 국면이었는지, 실제 거래에서 어느 정도의 승률과 손익 특성을 보였는지 등을 확인하는 방향으로 서비스가 설계된다.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        예를 들어 한 전략이 전체적으로 높은 성과를 보이더라도 상승 추세에서는 강하고 횡보장에서는 약했다면, 이러한 특성을 실제 운용 데이터를 통해 구분하는 방식이다. 전략마다 일종의 <strong>&lsquo;시장국면별 실전 이력&rsquo;</strong>이 만들어지는 셈이다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">AI 시장국면 판단과 가드레일</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        노아AI는 여기에 AI 시장국면 판단 기능을 결합한다. AI가 추세와 변동성, 거래량, 위험도 등 시장 데이터를 지속적으로 분석해 현재 시장환경을 판단하고, 전략의 기존 운용 데이터와 비교해 현재 시장에서의 적합성을 판단하도록 하는 것이 목표다.
+      </p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        이는 개인투자자들이 자동매매에서 반복적으로 경험해온 문제와 관련이 있다. 과거 높은 성과를 기록한 전략을 찾아 자동화하더라도, 시장환경이 변하면 성과가 급격히 악화될 수 있기 때문이다. 결국 전략 자체뿐 아니라 <strong>&lsquo;언제 해당 전략을 사용하고 언제 중단할 것인가&rsquo;</strong>가 자동화 투자의 핵심 문제로 남아 있었다.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        노아AI는 이 과정에 자체 가드레일 시스템도 적용한다. AI의 판단만으로 거래를 무조건 실행하는 것이 아니라, 위험도가 높아지거나 사전에 설정된 조건을 벗어날 경우 실행을 제한하는 방식이다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">사용자 참여형 전략 생태계</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        투자 경험이 많은 사용자가 자신만의 전략을 제작해 전략마켓에 공개하면, 다른 사용자는 백테스트 결과뿐 아니라 실제 운용 이력과 시장국면별 기록을 확인한 뒤 전략을 선택할 수 있다. 선택한 전략은 노아AI의 자동화 인프라와 연결할 수 있도록 할 계획이다.
+      </p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        기존 TradingView 등 글로벌 투자 플랫폼이 사용자 제작 지표와 전략을 공유하는 생태계를 구축했다면, 노아AI는 여기에 &lsquo;실거래 검증&rsquo;과 &lsquo;AI 시장국면 판단&rsquo;을 결합한 전략 생태계를 구축하겠다는 구상이다.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        사용자가 늘어나면 전략 수도 증가하고, 실제 운용이 이어질수록 각각의 전략이 서로 다른 시장국면에서 어떤 결과를 냈는지에 대한 데이터도 축적된다. 노아AI는 이 데이터를 다시 시장국면 분석과 전략 평가에 활용하는 데이터 플라이휠 구조로 발전시킬 계획이다.
+      </p>
+
+      <div class="bg-primary-50 border-l-4 border-primary-600 p-6 mb-8 rounded-r-lg">
+        <p class="text-lg text-gray-800 leading-relaxed mb-4">
+          노아AI 관계자는 &ldquo;투자전략에서 가장 어려운 문제 중 하나는 좋은 전략을 만드는 것보다 그 전략이 지금 시장에서도 유효한지를 판단하는 것&rdquo;이라며 &ldquo;과거 데이터에서 높은 수익률을 보여주는 전략보다 실제 시장에서 언제, 어떤 환경에서 작동했는지를 확인할 수 있는 구조가 전략 생태계의 신뢰도를 높이는 데 중요하다고 보고 있다&rdquo;고 말했다.
+        </p>
+        <p class="text-lg text-gray-800 leading-relaxed">
+          이어 &ldquo;AI 시장국면 판단과 가드레일, 실제 운용 데이터가 결합되면 개인투자자도 과거에는 전문적인 시스템 트레이딩 영역에서나 가능했던 수준의 전략 운용 환경에 접근할 수 있을 것&rdquo;이라고 설명했다.
+        </p>
+      </div>
+
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        노아AI는 향후 전략 생성과 공유, 실제 운용, 성과 기록, 시장국면별 평가, AI 판단 및 자동화가 하나의 플랫폼에서 순환하는 구조로 전략마켓을 확대한다는 계획이다.
+      </p>
+
+      <div class="bg-amber-50 border-l-4 border-amber-500 p-5 mb-8 rounded-r-lg">
+        <p class="text-amber-900 text-sm leading-relaxed">
+          <strong>투자 유의사항:</strong> 시장국면 판단이나 실거래 이력이 미래 수익을 보장하는 것은 아니다. 시장환경은 지속적으로 변화하는 만큼, 이번 기술의 목적 역시 수익을 보장하는 것이 아니라 전략의 실제 작동 조건을 보다 객관적으로 파악하고 위험을 관리할 수 있는 기반을 제공하는 데 있다. 실제 주문·체결·손익은 사용자 계정과 외부 거래소·증권사 API, 관련 법률을 따르며, 노아AI는 투자 자문·일임 운용·수익 보장을 하지 않는다.
+        </p>
+      </div>
+
+      <div class="bg-white border border-gray-200 rounded-xl p-6 mb-8">
+        <p class="font-semibold text-gray-900 mb-3">관련 콘텐츠</p>
+        <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+          <li><a href="https://noahailabs.com/ko" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">Noah AI Labs 공식 사이트</a></li>
+          <li><a href="/news/84" class="text-primary-600 underline">노아AI v3.9.0.2, TradingView·Pine 전략 자동화와 시장국면별 안전 운용</a></li>
+          <li><a href="/news/83" class="text-primary-600 underline">노아AI 통합 KPI 대시보드 공개</a></li>
+          <li><a href="/services/finance" class="text-primary-600 underline">드림에이아이랩의 노아AI 이전 안내</a></li>
+          <li><a href="/blog/noahai-technical-whitepaper" class="text-primary-600 underline">노아AI 기술 기준 요약</a></li>
+        </ul>
+      </div>
+
+      <p class="text-gray-600 text-sm border-t border-gray-200 pt-6 leading-relaxed">
+        ※ NoahAI는 Noah AI Labs에서 독립 운영되는 금융 AI 서비스입니다. 본 글은 Noah AI Labs의 제품 발표를 드림에이아이랩 뉴스센터에 보도자료로 아카이브한 것이며, 제3자 검증이나 특정 금융상품의 매수·매도 추천, 투자 성과 보장을 의미하지 않습니다.
+      </p>
+    `,
+  },
   {
     id: 86,
     title:

@@ -12,6 +12,40 @@ export const JUNG_HAESUNG_PERSON_ID = `${JUNG_HAESUNG_URL}#person`
 export const AI_DIGITAL_CARE_LOG_URL = `${DREAM_AI_LAB_URL}/technology/`
 export const AI_DIGITAL_CARE_LOG_ID = `${AI_DIGITAL_CARE_LOG_URL}#ai-digital-care-log`
 
+export const JARAME_URL = 'https://jarame.or.kr/'
+export const JARAME_ORGANIZATION_ID = `${JARAME_URL}#organization`
+export const NOAH_AI_LABS_URL = 'https://noahailabs.com/'
+export const NOAH_AI_LABS_ORGANIZATION_ID = `${NOAH_AI_LABS_URL}#organization`
+export const NOAH_AI_PRODUCT_ID = `${NOAH_AI_LABS_URL}#noahai`
+
+export const jarameOrganizationSchema = {
+  '@type': 'Organization',
+  '@id': JARAME_ORGANIZATION_ID,
+  name: '자람이',
+  alternateName: ['Jarame'],
+  url: JARAME_URL,
+  description:
+    '발달장애인의 생활·치료·교육 기록을 연결하는 AI 디지털케어로그 적용 서비스',
+  parentOrganization: {
+    '@type': 'Organization',
+    '@id': DREAM_AI_LAB_ORGANIZATION_ID,
+    name: '드림에이아이랩',
+    url: DREAM_AI_LAB_URL,
+  },
+  sameAs: ['https://dreamailab.com/services/jarame/'],
+} as const
+
+export const noahAiLabsOrganizationSchema = {
+  '@type': 'Organization',
+  '@id': NOAH_AI_LABS_ORGANIZATION_ID,
+  name: 'Noah AI Labs',
+  alternateName: ['노아에이아이랩스', 'NoahAI Labs', '노아AI Labs'],
+  url: NOAH_AI_LABS_URL,
+  description:
+    '금융 AI 서비스 노아AI를 독립 운영하는 법인. 드림에이아이랩과 별도 조직이다.',
+  sameAs: ['https://dreamailab.com/services/finance/'],
+} as const
+
 export const ecosystemBrands = [
   {
     name: '자람이',

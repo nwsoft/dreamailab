@@ -114,9 +114,19 @@ export default function News() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {featuredArticles.slice(0, 3).map((article) => (
                 <article key={article.id} className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                  <div className="h-48 bg-gradient-to-br from-primary-100 to-secondary-100 flex items-center justify-center">
-                    <NewsCategoryIcon category={article.category} />
-                  </div>
+                  {article.ogImage ? (
+                    <img
+                      src={article.ogImage}
+                      alt={article.ogImageAlt ?? article.title}
+                      className="h-48 w-full object-cover"
+                      width={1200}
+                      height={630}
+                    />
+                  ) : (
+                    <div className="h-48 bg-gradient-to-br from-primary-100 to-secondary-100 flex items-center justify-center">
+                      <NewsCategoryIcon category={article.category} />
+                    </div>
+                  )}
                   <div className="p-6">
                     <div className="flex items-center mb-3">
                       <span className="bg-primary-100 text-primary-800 px-3 py-1 rounded-full text-sm font-medium">
@@ -191,9 +201,19 @@ export default function News() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {currentArticles.map((article) => (
                     <article key={article.id} className="bg-gray-50 rounded-xl overflow-hidden hover:shadow-lg transition-shadow">
-                      <div className="h-48 bg-gradient-to-br from-primary-100 to-secondary-100 flex items-center justify-center">
-                        <NewsCategoryIcon category={article.category} className="h-14 w-14 text-primary-600" />
-                      </div>
+                      {article.ogImage ? (
+                        <img
+                          src={article.ogImage}
+                          alt={article.ogImageAlt ?? article.title}
+                          className="h-48 w-full object-cover"
+                          width={1200}
+                          height={630}
+                        />
+                      ) : (
+                        <div className="h-48 bg-gradient-to-br from-primary-100 to-secondary-100 flex items-center justify-center">
+                          <NewsCategoryIcon category={article.category} className="h-14 w-14 text-primary-600" />
+                        </div>
+                      )}
                       <div className="p-6">
                         <div className="flex items-center mb-3">
                           <span className="bg-white text-gray-700 px-2 py-1 rounded text-xs font-medium border">
@@ -238,7 +258,7 @@ export default function News() {
                         const pages = []
                         const maxVisiblePages = 5
                         let startPage = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2))
-                        let endPage = Math.min(totalPages, startPage + maxVisiblePages - 1)
+                        const endPage = Math.min(totalPages, startPage + maxVisiblePages - 1)
                         
                         if (endPage - startPage + 1 < maxVisiblePages) {
                           startPage = Math.max(1, endPage - maxVisiblePages + 1)
@@ -352,4 +372,4 @@ export default function News() {
       </div>
     </>
   )
-} 
+}

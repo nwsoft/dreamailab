@@ -22,13 +22,14 @@ export async function generateStaticParams() {
 }
 
 interface Props {
-  params: {
+  params: Promise<{
     id: string
-  }
+  }>
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const article = newsArticles.find((a) => a.id === parseInt(params.id))
+  const { id } = await params
+  const article = newsArticles.find((a) => a.id === parseInt(id))
 
   if (!article || !hasEnglishTranslation(article)) {
     return {
@@ -46,8 +47,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   })
 }
 
-export default function EnNewsDetail({ params }: Props) {
-  const raw = newsArticles.find((a) => a.id === parseInt(params.id))
+export default async function EnNewsDetail({ params }: Props) {
+  const { id } = await params
+  const raw = newsArticles.find((a) => a.id === parseInt(id))
 
   if (!raw || !hasEnglishTranslation(raw)) {
     notFound()
