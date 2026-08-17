@@ -500,12 +500,11 @@ export default function PetAiResearchPage() {
               Universal AI Care Intelligence Platform
             </div>
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
-              One AI Core, Human → Animal → Plant → Robot
+              공통 학습 원리, 도메인별 재설계
             </h2>
             <p className="text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Dream AI Lab은 하나의 AI Core를 사람 → 동물 → 식물 → 로봇으로 확장합니다. 모든 대상은 관찰 ·
-              기록 · 이해 · 학습 · 맞춤형 판단이라는 동일한 구조를 사용합니다. 반려동물(Animal)은 이 확장의
-              하나의 축입니다.
+              관찰 · 기록 · 이해 · 학습 · 맞춤형 판단이라는 공통 질문을 사람·동물·식물·로봇의 서로 다른
+              환경과 책임 기준에 맞게 다시 설계합니다. 반려동물은 현재 제품과 구분해 검증하는 연구 축입니다.
             </p>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3 mb-10 text-sm font-semibold">
@@ -530,7 +529,7 @@ export default function PetAiResearchPage() {
               <source media="(max-width: 768px)" srcSet="/images/research/one-ai-core-domains-mobile.svg" />
               <img
                 src="/images/research/one-ai-core-domains.svg"
-                alt="One AI Core Multiple Care Domains — Human Animal Plant Robot"
+                alt="공통 학습 원리를 사람 동물 식물 로봇 도메인별로 다시 설계하는 연구 방향"
                 className="w-full h-auto"
                 loading="lazy"
                 decoding="async"
