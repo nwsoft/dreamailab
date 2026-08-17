@@ -78,6 +78,228 @@ export function getLocalizedArticle(
 
 export const newsArticles: NewsArticle[] = [
   {
+    id: 93,
+    title:
+      '노아AI, 출시 한 달 만에 ‘34억 건’ 실전 데이터 폭발… 금융 AI 패러다임 바꾼다',
+    excerpt:
+      '노아에이아이랩스가 노아AI 상용 배포 30일 KPI를 공개했다. 처리 이벤트 34억 4,543만 건, 성공률 99.9914%, MAU 2만 1,000명, AI 추론 16억 건·학습 16억 건, 월 체결 1억 1,537만 USDT다.',
+    category: 'press',
+    date: '2026-08-17',
+    image: '📈',
+    featured: true,
+    author: '노아에이아이랩스',
+    authorUrl: 'https://noahailabs.com/',
+    ogImage: '/images/news/news-93-noahai-30day-kpi-og.jpg',
+    ogImageAlt:
+      '노아AI 상용 운영: 시장 관찰에서 추론·체결·재학습으로 이어지는 금융 AI 운영 현장',
+    ogImageAltEn:
+      'NoahAI live operations: market observation, inference, execution and re-learning',
+    about: [
+      {
+        type: 'Organization',
+        id: 'https://noahailabs.com/#organization',
+        name: '노아에이아이랩스',
+        alternateName: ['Noah AI Labs', 'NoahAI Labs'],
+        url: 'https://noahailabs.com/',
+        description: '금융 AI 서비스 노아AI를 운영하는 법인',
+        sameAs: ['https://dreamailab.com/services/finance/'],
+      },
+      {
+        type: 'SoftwareApplication',
+        name: '노아AI',
+        alternateName: ['Noah AI', 'NoahAI'],
+        url: 'https://noahailabs.com/',
+        description:
+          '시장 관찰·AI 추론·거래 실행·결과 재학습을 잇는 글로벌 금융 AI 분석·투자 솔루션',
+      },
+    ],
+    tags: [
+      '노아AI',
+      'Noah AI',
+      '노아에이아이랩스',
+      '금융 AI',
+      '실전 데이터',
+      'MAU',
+      'DAU',
+      'USDT',
+      '업비트',
+      '바이낸스',
+      'AI 추론',
+      '자율 판단',
+    ],
+    faq: [
+      {
+        question: '노아AI가 한 달 동안 처리한 이벤트는 몇 건인가?',
+        answer:
+          '상용 배포 후 최근 30일간 전체 서비스 이벤트는 34억 4,543만 건이다. 성공 기록은 34억 4,513만 건, 실패는 29만 5천 건이다.',
+      },
+      {
+        question: '시스템 처리 성공률은?',
+        answer:
+          '전체 시스템 처리 성공률은 99.9914%다. 실제 주문 성공률은 89.38%로, 단순 API 요청이 아닌 실제 시장 주문 체결 완료 기준이다.',
+      },
+      {
+        question: '노아AI MAU와 DAU는?',
+        answer:
+          '최근 30일 이용자(MAU)는 2만 1,000명, 일일 활성 이용자(DAU)는 5,000명을 넘었다. 7일 리텐션은 53.33%다.',
+      },
+      {
+        question: 'AI 추론·학습과 실체결 규모는?',
+        answer:
+          '한 달간 AI 추론 완료 16억 3,565만 건, 학습 데이터 기록 16억 4,868만 건이다. 30일 실체결 거래량은 1억 1,537만 6,000 USDT다.',
+      },
+      {
+        question: '노아AI는 가격 예측 앱인가?',
+        answer:
+          '아니다. 시장 데이터 관찰 → AI 추론 → 거래 실행 → 포지션 관리 → 청산 → 결과 재학습으로 이어지는 판단·학습 OS를 상용 환경에서 돌리는 구조다.',
+      },
+    ],
+    i18n: {
+      en: {
+        title:
+          'NoahAI hits 3.44 billion live events in its first month, shifting the financial-AI paradigm',
+        excerpt:
+          'Noah AI Labs released 30-day live KPIs for NoahAI: 3.445 billion events, 99.9914% processing success, 21,000 MAU, 1.64 billion inferences and 1.65 billion learning records, and 115.38 million USDT in filled volume.',
+        faq: [
+          {
+            question: 'How many events did NoahAI process in a month?',
+            answer:
+              'In the 30 days after commercial launch it processed 3.44543 billion service events. 3.44513 billion were recorded successfully; 295,000 failed.',
+          },
+          {
+            question: 'What is the success rate?',
+            answer:
+              'System processing success is 99.9914%. Actual order-fill success is 89.38%, counted on completed market fills, not mere API requests.',
+          },
+          {
+            question: 'What are MAU and DAU?',
+            answer:
+              'MAU is 21,000 and DAU has passed 5,000. Seven-day retention is 53.33%.',
+          },
+          {
+            question: 'How large are inference, learning, and fills?',
+            answer:
+              'Completed AI inferences: 1.63565 billion. Learning-record events: 1.64868 billion. 30-day filled volume: 115.376 million USDT.',
+          },
+          {
+            question: 'Is NoahAI a price-prediction app?',
+            answer:
+              'No. It runs observe → infer → execute → manage → close → re-learn as a judgment and learning OS in live markets.',
+          },
+        ],
+        content: `
+      <p class="text-sm text-gray-500 mb-6">[Exclusive · IT/Finance Trend · 2026-08-17]</p>
+      <p class="text-xl font-semibold text-gray-800 mb-4 leading-relaxed">
+        Noah AI Labs releases 30-day live KPIs for NoahAI
+      </p>
+      <ul class="list-disc list-inside text-lg text-gray-800 mb-8 space-y-2 leading-relaxed">
+        <li>More than 3.44 billion market events processed in production, with 99.9914% system success</li>
+        <li>21,000 MAU, 1.64 billion AI inferences and 1.65 billion learning records</li>
+        <li>Monthly filled volume of 115.38 million USDT &mdash; beyond price prediction, toward an autonomous judgment and learning OS</li>
+      </ul>
+      <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-4">
+        As AI reshapes global markets, a financial AI platform that closes the loop from judgment to execution, results, and re-learning has posted standout numbers one month after commercial launch.
+      </p>
+      <figure class="mb-10">
+        <img src="/images/news/news-93-noahai-30day-kpi-og.jpg" alt="NoahAI live operations: market observation, inference, execution and re-learning" class="w-full rounded-xl object-cover" width="1200" height="630" loading="eager" decoding="async" />
+        <figcaption class="mt-3 text-sm text-gray-500 text-center">NoahAI in live markets: observe, infer, execute, learn</figcaption>
+      </figure>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        Noah AI Labs disclosed 30-day operating KPIs for its global financial AI analysis and investing solution, <strong>NoahAI</strong>. The headline is not only user growth, but the scale of AI judgment and learning data built on actual-market activity.
+      </p>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">99.99% stability and live learning at billion-event scale</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        In the 30 days after commercial launch NoahAI processed <strong>3,445.43 million</strong> service events. Successfully recorded events: 3,445.13 million. Failures: 295,000. System processing success: <strong>99.9914%</strong>.
+      </p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        Completed AI inferences: <strong>1,635.65 million</strong>. Learning-record events: <strong>1,648.68 million</strong>.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        Where many financial AIs stop at chart-trained one-shot price calls, NoahAI runs observe &rarr; infer &rarr; execute &rarr; manage positions &rarr; close &rarr; re-learn in large-scale production. Over time the pile is not just market ticks, but data of what the AI actually did in the market.
+      </p>
+      <figure class="mb-10">
+        <img src="/images/news/news-93-noahai-learn-loop.jpg" alt="NoahAI loop: market data, inference, execution, position management, close, re-learning" class="w-full rounded-xl object-cover" width="1200" height="630" loading="lazy" decoding="async" />
+        <figcaption class="mt-3 text-sm text-gray-500 text-center">The live loop from market data to re-learning</figcaption>
+      </figure>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">2.47-second response, 115 million USDT filled</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        Precision held under load. Average AI response time: about 2.47 seconds (2,469.71 ms). Average position hold: 6.66 minutes (median 4.64 minutes).
+      </p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        30-day filled volume: <strong>115,376,000 USDT</strong> (about 2.81 billion won). Actual order-fill success: <strong>89.38%</strong>, on completed market fills, not API requests alone. Exchange mix: Upbit 22.00%, Binance 21.95%, Bybit 16.23%, Bitget 15.41%.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        NoahAI excluded 559.18 million pre-order learning and staging events from trading results. Only actual fill amounts count as performance.
+      </p>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">21,000 MAU, 53% seven-day retention</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        30-day users (MAU): <strong>21,000</strong>. Daily active users (DAU) have passed <strong>5,000</strong>. Seven-day retention: <strong>53.33%</strong>. Average trading events per user exceeded 500,000.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        Financial AI is shifting from who predicts better to who acts more in live markets and keeps learning. One month in, NoahAI has 3.44 billion live records. The industry is watching the next release of detailed investing results, including cumulative return and MDD.
+      </p>
+        `,
+      },
+    },
+    content: `
+      <p class="text-sm text-gray-500 mb-6">[단독 · IT/금융 트렌드 · 2026-08-17]</p>
+      <p class="text-xl font-semibold text-gray-800 mb-4 leading-relaxed">
+        노아에이아이랩스, &lsquo;노아AI&rsquo; 상용 배포 30일 실운영 성과 공개
+      </p>
+      <ul class="list-disc list-inside text-lg text-gray-800 mb-8 space-y-2 leading-relaxed">
+        <li>34억 4천만 건 넘는 시장 이벤트 상용 처리&hellip; 시스템 안정성 성공률 99.9914% 달성</li>
+        <li>MAU 2만 1,000명 달성&hellip; AI 추론 16억 건&middot;학습 16억 건 고밀도 실전 경험 축적</li>
+        <li>월 체결 거래량 1억 1,500만 USDT 경신&hellip; &ldquo;단순 가격 예측 넘어 자율 판단&middot;학습 OS 구축&rdquo;</li>
+      </ul>
+      <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-4">
+        인공지능(AI)이 글로벌 금융 시장의 판도를 바꾸고 있는 가운데, 단순 가격 예측을 넘어 실제 시장에서 &lsquo;판단-실행-결과-재학습&rsquo;으로 이어지는 선순환 구조를 완벽히 입증한 금융 AI 플랫폼이 상용화 한 달 만에 압도적인 성과를 내며 주목받고 있다.
+      </p>
+      <figure class="mb-10">
+        <img src="/images/news/news-93-noahai-30day-kpi-og.jpg" alt="노아AI 상용 운영: 시장 관찰에서 추론·체결·재학습으로 이어지는 금융 AI 운영 현장" class="w-full rounded-xl object-cover" width="1200" height="630" loading="eager" decoding="async" />
+        <figcaption class="mt-3 text-sm text-gray-500 text-center">노아AI, 실제 시장에서 판단&middot;실행&middot;재학습을 돌리는 상용 운영</figcaption>
+      </figure>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        노아에이아이랩스는 자사의 글로벌 금융 AI 분석&middot;투자 솔루션 &lsquo;노아AI(Noah AI)&rsquo;의 상용 서비스 출시 후 최근 30일간의 실운영 주요성과지표(KPI)를 공개했다. 이번 발표에서 눈여겨볼 핵심은 대규모 이용자 유입과 함께 실제 시장(Actual-Market) 데이터를 기반으로 한 독보적인 AI 판단 및 학습 데이터의 축적 규모다.
+      </p>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">99.99% 안정성과 32억 건의 학습 데이터&hellip; &ldquo;실전 경험이 성능 만든다&rdquo;</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        공개된 KPI에 따르면 상용 배포 후 최근 30일간 노아AI가 처리한 전체 서비스 이벤트는 총 34억 4,543만 건에 달한다. 이 중 성공적으로 기록된 이벤트는 34억 4,513만 건(실패 29만 5천 건)으로, 거대한 트래픽 속에서도 전체 시스템 처리 성공률 99.9914%라는 압도적인 인프라 안정성을 증명했다.
+      </p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        가장 눈에 띄는 대목은 AI의 실전 경험 자산화다. 최근 한 달간 집계된 AI 추론 완료 횟수는 16억 3,565만 건, 학습 데이터 기록 이벤트는 16억 4,868만 건에 이른다.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        기존 금융 AI가 과거 차트를 학습해 단발성 가격을 예측하는 방식에 머물렀다면, 노아AI는 &lsquo;시장 데이터 관찰 &rarr; AI 추론 &rarr; 거래 실행 &rarr; 포지션 관리 &rarr; 청산 &rarr; 결과 재학습&rsquo;으로 이어지는 완전 자동화 순환 구조를 대규모 상용 환경에서 실현했다. 시간이 지날수록 단순 시장 데이터가 아닌 &lsquo;AI가 시장에서 직접 행동한 실전 경험 데이터&rsquo;가 폭발적으로 축적되는 구조다.
+      </p>
+      <figure class="mb-10">
+        <img src="/images/news/news-93-noahai-learn-loop.jpg" alt="노아AI 순환: 시장 데이터 관찰, AI 추론, 거래 실행, 포지션 관리, 청산, 결과 재학습" class="w-full rounded-xl object-cover" width="1200" height="630" loading="lazy" decoding="async" />
+        <figcaption class="mt-3 text-sm text-gray-500 text-center">시장 관찰에서 재학습까지, 노아AI의 자동화 순환</figcaption>
+      </figure>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">초단위 민첩성과 1.15억 USDT 실체결&hellip; 대규모 스케일에서도 완벽 작동</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        대규모 유저가 몰린 실제 운용 환경에서도 정교한 실행력과 민첩함은 유지됐다. 노아AI의 AI 평균 응답시간은 약 2.47초(2,469.71ms)를 유지했으며, 평균 포지션 보유시간은 6.66분(중앙값 4.64분)으로 시장의 초단위 변동성에 유연하게 대응했다.
+      </p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        30일 실체결 거래량: 1억 1,537만 6,000 USDT (원화 약 28억 1,000만 원)<br />
+        실제 주문 성공률: 89.38% (단순 API 요청이 아닌 실제 시장 주문 체결 완료 기준)<br />
+        글로벌 거래소 데이터 분산: 업비트(22.00%), 바이낸스(21.95%), 바이비트(16.23%), 비트겟(15.41%) 등
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        특히 노아AI는 국내외 주요 거래소에서 발생한 5억 5,918만 건의 단순 학습 및 주문 이전 단계 이벤트를 실제 거래 실적에서 철저히 제외했다. 허수를 뺀 &lsquo;실제 체결 금액&rsquo;만을 실적으로 반영하는 엄격한 KPI 검증 기준을 적용해 신뢰도를 높였다.
+      </p>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">MAU 2.1만 명&middot;7일 리텐션 53%&hellip; 금융 AI 시장의 패러다임 전환</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        노아AI의 최근 30일 이용자(MAU)는 2만 1,000명, 일일 활성 이용자(DAU)는 5,000명을 넘어섰다. 특히 7일 리텐션(재방문율)이 53.33%를 기록하며 높은 유저 충성도를 입증했다. 유저당 평균 거래 이벤트 역시 50만 건 이상을 기록하는 등 플랫폼 내부의 데이터 처리 밀도가 최고 수준에 달했다.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        금융 AI의 성패는 이제 &ldquo;누가 더 잘 예측하는가&rdquo;에서 &ldquo;누가 실제 시장에서 더 많이 행동하고 지속해서 학습하는가&rdquo;로 완전히 옮겨가고 있다.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        상용화 한 달 만에 34억 건의 실전 빅데이터를 확보하며 압도적인 기술적 격차를 벌린 노아AI가 향후 공개할 세부 투자 성과(누적 수익률, MDD 등)에 글로벌 금융 투자 업계의 관심이 집중되고 있다.
+      </p>
+    `,
+  },
+  {
     id: 92,
     title:
       '시니어앤라이프, 재가돌봄 점유율 70% 돌파… “돌봄 IT 시장 사실상 독주”',

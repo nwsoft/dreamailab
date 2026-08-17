@@ -47,6 +47,8 @@ AI디지털케어로그는 일상생활과 행동·습관부터 돌봄·교육·
 - IR: https://dreamailab.com/ir/
 
 ## Latest news (2026)
+- NoahAI 30-day live ops: 3.44 billion events, 99.9914% success (KO): https://dreamailab.com/news/93/
+- NoahAI 30-day live ops: 3.44 billion events, 99.9914% success (EN): https://dreamailab.com/en/news/93/
 - Senior & Life exceeds 70% home-care share: de facto lead in care IT (KO): https://dreamailab.com/news/92/
 - Senior & Life exceeds 70% home-care share: de facto lead in care IT (EN): https://dreamailab.com/en/news/92/
 - Jarame prepares FDA pathway with 100k RWD and a single therapeutic module (KO): https://dreamailab.com/news/91/
