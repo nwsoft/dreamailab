@@ -8,7 +8,7 @@ const companyNavigation = [
   { name: '철학·비전', href: '/vision', meta: '왜, 어디로 가는가' },
   { name: '기술', href: '/technology', meta: '어떻게 만드는가' },
   { name: '비즈니스', href: '/business', meta: '어떻게 가치가 되는가' },
-  { name: 'Research', href: '/research', meta: '장기 기술 연구' },
+  { name: '연구', href: '/research', meta: '장기 기술 연구' },
 ]
 
 const serviceNavigation = [
@@ -56,12 +56,16 @@ export default function Header() {
           </Link>
 
           <div className="hidden items-center gap-1 lg:flex">
-            <Link href="/" className="px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:text-primary-600">홈</Link>
-            <DesktopDropdown label="회사" href="/about" items={companyNavigation} />
+            <Link href="/" className="px-2 py-2 text-sm font-medium text-gray-700 transition-colors hover:text-primary-600">홈</Link>
+            {companyNavigation.map((item) => (
+              <Link key={item.href} href={item.href} className="whitespace-nowrap px-2 py-2 text-sm font-medium text-gray-700 transition-colors hover:text-primary-600">
+                {item.name}
+              </Link>
+            ))}
             <DesktopDropdown label="서비스" href="/services" items={serviceNavigation} wide />
-            <Link href="/public" className="px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:text-primary-600">공공</Link>
-            <Link href="/ir" className="px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:text-primary-600">IR</Link>
-            <Link href="/news" className="px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:text-primary-600">뉴스</Link>
+            <Link href="/public" className="px-2 py-2 text-sm font-medium text-gray-700 transition-colors hover:text-primary-600">공공</Link>
+            <Link href="/ir" className="px-2 py-2 text-sm font-medium text-gray-700 transition-colors hover:text-primary-600">IR</Link>
+            <Link href="/news" className="px-2 py-2 text-sm font-medium text-gray-700 transition-colors hover:text-primary-600">뉴스</Link>
             <Link href="/contact" className="ml-1 rounded-lg bg-primary-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-primary-700">문의하기</Link>
           </div>
 
