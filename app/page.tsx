@@ -276,31 +276,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Company narrative — 신규 프로젝트보다 회사의 철학과 방향을 먼저 설명 */}
-      <section className="company-section-muted">
-        <div className="company-container grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-          <div>
-            <p className="text-sm font-bold uppercase tracking-wider text-primary-700">Why Dream AI Lab</p>
-            <h2 className="company-section-title mt-3">AI 시대에도 사람에게 남아 있는 복잡성을 줄입니다</h2>
-            <p className="company-section-lead">기록은 흩어지고, 중요한 판단은 반복되며, 새로운 소프트웨어를 만드는 일은 여전히 일부 전문가에게만 열려 있습니다. DAL은 이 복잡성을 사용자가 배우게 하지 않고 시스템 안으로 흡수합니다.</p>
-            <div className="mt-7 flex flex-wrap gap-3">
-              <Link href="/about#philosophy" className="rounded-xl bg-primary-600 px-5 py-3 text-sm font-bold text-white hover:bg-primary-700">회사 철학 보기</Link>
-              <Link href="/vision" className="rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-bold text-slate-700 hover:bg-slate-50">AI 시대의 비전</Link>
-            </div>
-          </div>
-          <div className="grid gap-4 sm:grid-cols-2">
-            {[
-              ['삶과 현장의 연결', 'AI Digital Care Log로 시간축 기록·맥락·실행·결과를 연결합니다.'],
-              ['기술 장벽의 제거', 'DAL Vibe Architect로 사람의 의도를 운영 가능한 소프트웨어로 번역합니다.'],
-              ['특수 분야에서 시작', '발달·돌봄·교육·다문화처럼 복잡한 현장에서 먼저 검증합니다.'],
-              ['결과로 학습', '사용과 운영의 결과를 다음 판단과 제품 개선에 환류합니다.'],
-            ].map(([title, body]) => (
-              <div key={title} className="company-card"><h3 className="font-black text-slate-950">{title}</h3><p className="mt-2 text-sm leading-relaxed text-slate-600">{body}</p></div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Intent Routing - 목적별 분기 */}
       <section className="py-12 lg:py-16 bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -511,6 +486,31 @@ export default function Home() {
               <div className="text-sm text-gray-600 mt-1">통합 플랫폼</div>
               <div className="text-xs text-gray-500">AI디지털케어로그</div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Company narrative — 문제와 플랫폼 구조를 본 뒤 회사 철학으로 연결 */}
+      <section className="company-section-muted">
+        <div className="company-container grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+          <div>
+            <p className="text-sm font-bold uppercase tracking-wider text-primary-700">Why Dream AI Lab</p>
+            <h2 className="company-section-title mt-3">AI 시대에도 사람에게 남아 있는 복잡성을 줄입니다</h2>
+            <p className="company-section-lead">기록은 흩어지고, 중요한 판단은 반복되며, 새로운 소프트웨어를 만드는 일은 여전히 일부 전문가에게만 열려 있습니다. DAL은 이 복잡성을 사용자가 배우게 하지 않고 시스템 안으로 흡수합니다.</p>
+            <div className="mt-7 flex flex-wrap gap-3">
+              <Link href="/about#philosophy" className="rounded-xl bg-primary-600 px-5 py-3 text-sm font-bold text-white hover:bg-primary-700">회사 철학 보기</Link>
+              <Link href="/vision" className="rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-bold text-slate-700 hover:bg-slate-50">AI 시대의 비전</Link>
+            </div>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {[
+              ['삶과 현장의 연결', 'AI Digital Care Log로 시간축 기록·맥락·실행·결과를 연결합니다.'],
+              ['기술 장벽의 제거', 'DAL Vibe Architect로 사람의 의도를 운영 가능한 소프트웨어로 번역합니다.'],
+              ['특수 분야에서 시작', '발달·돌봄·교육·다문화처럼 복잡한 현장에서 먼저 검증합니다.'],
+              ['결과로 학습', '사용과 운영의 결과를 다음 판단과 제품 개선에 환류합니다.'],
+            ].map(([title, body]) => (
+              <div key={title} className="company-card"><h3 className="font-black text-slate-950">{title}</h3><p className="mt-2 text-sm leading-relaxed text-slate-600">{body}</p></div>
+            ))}
           </div>
         </div>
       </section>
