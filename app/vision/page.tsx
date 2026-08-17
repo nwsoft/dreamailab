@@ -1,405 +1,152 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
-import Link from 'next/link'
+import CompanyPageHero from '../../components/CompanyPageHero'
+import CompanyNarrativeNav from '../../components/CompanyNarrativeNav'
+import PageClosingSection from '../../components/PageClosingSection'
 import { MarketingIcon, type MarketingIconName } from '../../components/MarketingIcon'
-
-const visionCanonical = 'https://dreamailab.com/vision'
-const visionDescription =
-  '데이터 표준화로 누구나 동등한 의료·돌봄·교육에 접근하도록 하고, 기술이 사람을 향하는 미래를 만듭니다.'
+import { buildPageMetadata } from '../../lib/seo'
 
 export const metadata: Metadata = {
-  title: '비전 - 드림에이아이랩',
-  description: visionDescription,
-  alternates: { canonical: visionCanonical },
-  openGraph: {
-    title: '비전 - 드림에이아이랩',
-    description: visionDescription,
-    url: visionCanonical,
-    siteName: '드림에이아이랩',
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: '드림에이아이랩 비전' }],
-    locale: 'ko_KR',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: '비전 - 드림에이아이랩',
-    description: visionDescription,
-    images: ['/og-image.png'],
-  },
+  ...buildPageMetadata({
+    title: '철학·비전 | AI 시대에 사람이 더 자유로워지는 기술 - 드림에이아이랩',
+    description: 'AI가 더 강해지는 시대에 드림에이아이랩이 만들고자 하는 회사, 사람 중심 기술 철학, 현재 사업과 소프트웨어 창작·Pet AI·Robot Vision으로 이어지는 장기 비전을 소개합니다.',
+    path: '/vision',
+    ogTitle: 'Dream AI Lab Vision — AI가 더 강해질수록 기술은 사람에게 더 가까워져야 합니다',
+    ogDescription: '삶의 단절을 연결하고 기술의 복잡성을 시스템 안으로 흡수하는 드림에이아이랩의 미션과 미래 방향.',
+    ogImageAlt: '드림에이아이랩 사람 중심 AI 철학과 미래 비전',
+  }),
+  keywords: ['드림에이아이랩 비전', 'AI 철학', '사람 중심 AI', 'AI 시대', 'AI Digital Care Log', '소프트웨어 창작', 'Pet AI', 'Robot Vision'],
 }
 
-export default function Vision() {
-  const visionPoints: { title: string; description: string; icon: MarketingIconName }[] = [
-    {
-      title: '동등한 기회',
-      description: '부·지역·환경의 차이를 넘어 누구나 필수 서비스에 접근할 수 있도록 합니다.',
-      icon: 'scale',
-    },
-    {
-      title: '데이터 표준화',
-      description: '가정·학교·병원·기관의 기록을 하나의 표준으로 통합해 신뢰를 만듭니다.',
-      icon: 'chart',
-    },
-    {
-      title: '사람을 향한 기술',
-      description: 'AI가 삶의 맥락을 학습해 이유 있는 판단과 다음 행동을 제시하고, 그 결과를 다시 학습해 판단을 계속 발전시킵니다.',
-      icon: 'handshake',
-    },
-    {
-      title: '지속 가능한 임팩트',
-      description: '현장의 기록이 연구와 정책 개선으로 이어지고, 다시 현장에 환류되는 선순환을 만듭니다.',
-      icon: 'trend',
-    },
-  ]
+const values: Array<{ title: string; description: string; practice: string; icon: MarketingIconName }> = [
+  { title: '인간의 존엄과 선택', description: 'AI는 사람을 대신해 통제하는 존재가 아니라 더 잘 이해하고 선택하도록 돕는 기반이어야 합니다.', practice: '동의·설명·철회·사람의 최종 판단을 제품 구조에 남깁니다.', icon: 'heart' },
+  { title: '포용과 접근성', description: '기술을 가장 필요로 하는 사람이 기술의 복잡성 때문에 다시 배제되어서는 안 됩니다.', practice: '쉬운 언어, 다양한 입력 방식, 접근성 검증을 처음부터 설계합니다.', icon: 'accessibility' },
+  { title: '연결과 연속성', description: '한 번의 예측보다 삶과 업무의 시간축을 이어 이해하는 것이 더 중요합니다.', practice: '기관과 단계가 바뀌어도 맥락과 결과가 이어지는 데이터 구조를 만듭니다.', icon: 'link' },
+  { title: '증거와 책임', description: 'AI의 가능성은 실제 현장에서 안전성과 유용성이 검증될 때 비로소 가치가 됩니다.', practice: '단계적 실증, 감사 가능한 변경, 결과 지표로 확장 여부를 결정합니다.', icon: 'shield' },
+]
 
+const horizons = [
+  { label: 'NOW · 실제 산업', title: '사람의 삶과 현장을 연결하는 제품', description: '자람이·시니어앤라이프·글로벌커플케어·토탈케어로그·에듀케어로그·베지케어를 통해 돌봄, 교육, 가족, 건강과 생활의 실제 문제를 해결합니다.', href: '/services' },
+  { label: 'NEXT · 창작의 민주화', title: '아이디어를 운영 가능한 소프트웨어로', description: 'DAL Vibe Architect는 비개발자와 장애인을 포함한 더 많은 사람이 자신의 현장 문제를 안전한 소프트웨어로 구현하도록 돕는 신규 바이브코딩 프로젝트입니다.', href: '/services/vibe-architect' },
+  { label: 'HORIZON · 지능형 상호작용', title: '사람을 넘어 동물과 로봇의 맥락 이해로', description: 'Pet AI와 Robot Vision은 관찰·행동·환경·반응을 연결하는 공통 원리를 확장하는 장기 연구입니다. 현재 상용 서비스와 명확히 구분합니다.', href: '/research' },
+]
 
-  const goals = [
-    {
-      year: '2025',
-      title: '사회적 포용성 확대',
-      description: '더 많은 소외계층과 취약계층이 우리의 AI 서비스를 통해 삶의 질을 향상시킬 수 있도록 서비스를 확장합니다.'
-    },
-    {
-      year: '2026',
-      title: '기술적 혁신 · 소프트웨어 창작 접근성',
-      description: 'DAL Vibe Architect 설계를 시작해 비개발자와 장애인도 자신의 현장 문제를 한국 운영환경에 맞는 소프트웨어로 구현할 수 있는 기반을 개발합니다.'
-    },
-    {
-      year: '2027',
-      title: 'Pet AI Research · 글로벌 영향력',
-      description:
-        'Human AI Digital Care Log를 기반으로 Pet AI Digital Care Log 연구를 착수합니다. 동시에 한국을 넘어 소외계층을 위한 AI 솔루션으로 글로벌 사회적 가치를 확장합니다. ※ Pet AI는 상용 출시가 아닌 Research / Future Vision입니다.'
-    },
-    {
-      year: '2030',
-      title: '지속 가능한 미래',
-      description: '기술과 인간이 조화롭게 공존하는 세상을 만들어 모든 사람이 더 나은 내일을 경험할 수 있도록 합니다. 장기적으로는 동물·식물·로봇 Care Domain으로 AI Core를 확장하는 Future Vision을 이어갑니다.'
-    }
-  ]
+const commitments = [
+  ['사람이 이해할 수 있는 AI', '결과와 근거, 한계와 책임 주체를 함께 설명합니다.'],
+  ['현장에서 살아남는 시스템', '데모보다 실제 업무·운영·복구·유지보수까지 설계합니다.'],
+  ['권리를 지키는 데이터', '소유·동의·접근권한·보존기간을 기술보다 먼저 정의합니다.'],
+  ['특수 분야에서 시작하는 혁신', '복잡한 현장에서 검증한 구조를 더 넓은 산업으로 확장합니다.'],
+  ['결과로 학습하는 회사', '사용량만이 아니라 실제 변화와 실패를 다음 제품 결정에 반영합니다.'],
+]
 
+export default function VisionPage() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="company-page">
       <Header />
-      
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary-600 to-secondary-600 text-white py-20 md:py-24 shadow-inner">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              비전
-            </h1>
-            <p className="text-xl max-w-3xl mx-auto">
-              데이터 표준화로 누구나 동등한 의료·돌봄·교육에 접근하는 세상. 
-              기술은 사람을 향하고, 기록은 신뢰가 됩니다.
-            </p>
-          </div>
+      <CompanyPageHero
+        eyebrow="Philosophy · Mission · Future"
+        title="AI가 더 강해질수록, 기술은 사람에게 더 가까워져야 합니다"
+        description={<p>드림에이아이랩은 AI가 사람에게 더 많은 공부와 판단을 요구하는 미래가 아니라, 기술의 복잡성을 스스로 흡수해 사람의 가능성과 선택을 넓히는 미래를 만듭니다.</p>}
+        badges={['Human dignity', 'Inclusive by design', 'Connected context', 'Evidence & responsibility']}
+        actions={[{ label: '미션과 비전', href: '#mission' }, { label: '미래 방향 보기', href: '#horizon', variant: 'secondary' }]}
+      />
+      <CompanyNarrativeNav current="/vision" />
+
+      <section className="company-section" id="mission">
+        <div className="company-container grid gap-6 lg:grid-cols-2">
+          <article className="rounded-3xl border border-blue-200 bg-blue-50 p-7 sm:p-10">
+            <p className="text-sm font-bold uppercase tracking-wider text-primary-700">Mission · 오늘 우리가 하는 일</p>
+            <h2 className="mt-4 text-2xl font-black leading-snug text-slate-950 sm:text-3xl">삶과 현장의 단절을 연결하고, 복잡성을 시스템 안으로 흡수합니다</h2>
+            <p className="mt-5 leading-relaxed text-slate-700">흩어진 기록을 맥락으로, 맥락을 설명 가능한 판단으로, 판단을 다음 행동과 결과로 연결합니다. 동시에 기술을 모르는 사람도 자신의 문제를 소프트웨어로 해결할 수 있는 제작 구조를 만듭니다.</p>
+          </article>
+          <article className="rounded-3xl bg-slate-950 p-7 text-white sm:p-10">
+            <p className="text-sm font-bold uppercase tracking-wider text-cyan-300">Vision · 우리가 만들 미래</p>
+            <h2 className="mt-4 text-2xl font-black leading-snug sm:text-3xl">누구나 자신의 삶과 현장을 이해하는 AI를 갖고, 아이디어를 실제 변화로 만들 수 있는 시대</h2>
+            <p className="mt-5 leading-relaxed text-slate-300">서비스를 사용하는 사람과 만드는 사람 모두가 기술의 장벽에서 자유로워지는 것이 DAL이 바라보는 AI 시대입니다.</p>
+          </article>
         </div>
       </section>
 
-      {/* Mission Statement */}
-      <section className="pt-16 pb-10 lg:pt-20 lg:pb-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              우리의 미션
-            </h2>
-            <div className="bg-gradient-to-r from-primary-600 to-secondary-600 rounded-2xl p-8 lg:p-12 text-white">
-              <p className="text-2xl md:text-3xl font-bold mb-6">
-                "기술의 힘으로 사회적 문제를 해결하고, 삶의 질을 향상시키는 것"
-              </p>
-              <p className="text-lg text-gray-100 max-w-4xl mx-auto">
-                우리는 단순히 기술적 진보를 넘어, 실제로 사람들의 삶에 긍정적인 영향을 미치고자 합니다. 
-                취약계층과 소외계층의 삶을 개선하고자 하는 깊은 관심에서 시작된 우리의 여정은, 
-                모든 사람이 기술적 장벽 없이 혜택을 누릴 수 있는 세상을 꿈꿉니다.
-              </p>
-            </div>
+      <section className="company-section-muted">
+        <div className="company-container">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="text-sm font-bold uppercase tracking-wider text-primary-700">Values in action</p>
+            <h2 className="company-section-title mt-3">가치는 제품 의사결정으로 증명합니다</h2>
+            <p className="company-section-lead">추상적인 단어를 나열하지 않고, 각 가치가 설계와 운영에서 무엇을 바꾸는지 명확히 합니다.</p>
           </div>
-        </div>
-      </section>
-
-      {/* 비전 기둥 — 데이터·철학 요약 (홈/서비스 허브와 톤 맞춤) */}
-      <section className="py-14 lg:py-16 bg-white border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {visionPoints.map((v) => (
-              <div
-                key={v.title}
-                className="rounded-xl border border-gray-100 bg-gray-50/80 p-6 text-center shadow-sm hover:shadow-md transition-shadow"
-              >
-                <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary-100 text-primary-700">
-                  <MarketingIcon name={v.icon} className="h-7 w-7" />
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">{v.title}</h3>
-                <p className="text-sm text-gray-600 leading-relaxed">{v.description}</p>
-              </div>
+          <div className="mt-10 grid gap-5 md:grid-cols-2">
+            {values.map((value) => (
+              <article key={value.title} className="company-card">
+                <MarketingIcon name={value.icon} className="h-8 w-8 text-primary-700" />
+                <h3 className="mt-5 text-xl font-black text-slate-950">{value.title}</h3>
+                <p className="mt-3 leading-relaxed text-slate-600">{value.description}</p>
+                <p className="mt-5 rounded-xl bg-slate-50 px-4 py-3 text-sm font-semibold leading-relaxed text-slate-700">실행 기준 · {value.practice}</p>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Vision (Founder Statement) */}
-      <section className="pt-6 lg:pt-8 bg-gradient-to-br from-gray-50 to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              우리의 비전
-            </h2>
-            <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              지속 가능한 미래와 혁신을 통한 변화를 추구합니다
-            </p>
+      <section className="company-section" id="horizon">
+        <div className="company-container">
+          <div className="max-w-3xl">
+            <p className="text-sm font-bold uppercase tracking-wider text-primary-700">The company we are building</p>
+            <h2 className="company-section-title mt-3">AI 시대에 드림에이아이랩이 확장하는 세 개의 지평</h2>
+            <p className="company-section-lead">현재 사업, 다음 제작 방식, 장기 연구를 한 문장에 섞지 않고 시간과 검증 단계에 따라 구분합니다.</p>
           </div>
-
-          <div className="max-w-6xl mx-auto">
-            <div className="bg-white rounded-3xl p-10 md:p-12 shadow-xl border border-gray-100">
-              <div className="text-center mb-8">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <MarketingIcon name="sparkle" className="h-8 w-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                  가능성을 믿는 모든 이들에게
-                </h3>
-                <p className="text-gray-600">
-                  기술로 세상을 바꾸는 우리의 약속
-                </p>
-              </div>
-              
-              <blockquote className="relative">
-                <div className="absolute -top-4 -left-4 text-6xl text-blue-200 opacity-60">"</div>
-                <div className="relative z-10">
-                  <p className="text-lg md:text-xl lg:text-2xl leading-relaxed text-gray-800 mb-8 font-medium">
-                    우리는 세상에 불가능은 없다고 믿습니다.
-                  </p>
-
-                  <p className="text-lg md:text-xl leading-relaxed text-gray-700 mb-6">
-                    기술은 한계를 넘어서는 도구이며, 도전은 새로운 가능성을 현실로 바꾸는 힘입니다. 
-                    지금까지의 모든 기술은 누군가의 용기 있는 시도에서 비롯되었고, 
-                    드림에이아이랩은 그 정신을 이어 오늘 필요한 미래를 지금 여기에서 만들어 가겠습니다.
-                  </p>
-
-                  <p className="text-lg md:text-xl leading-relaxed text-gray-700 mb-6">
-                    특히 <strong className="text-blue-600">발달장애, 노인질환·치매, 의료·항암 등 사회적 난제</strong>에 
-                    우리의 역량을 집중하여, <strong className="text-cyan-600">데이터로 이해하고 AI로 돕는 방식</strong>으로 
-                    사회 전반의 문제 해결에 기여하겠습니다.
-                  </p>
-
-                  <p className="text-lg md:text-xl leading-relaxed text-gray-700">
-                    <strong className="text-gray-900">누구나, 어디서나, 동등한 기회를 누리는 세상</strong> — 
-                    그 미래를 앞당기겠습니다.
-                  </p>
-                </div>
-                <div className="absolute -bottom-4 -right-4 text-6xl text-cyan-200 opacity-60">"</div>
-              </blockquote>
-              
-              <div className="mt-10 pt-8 border-t border-gray-200">
-                <div className="flex items-center justify-center space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold text-lg">DAL</span>
-                  </div>
-                  <div className="text-center">
-                    <p className="text-lg font-semibold text-gray-900">드림에이아이랩</p>
-                    <p className="text-sm text-gray-600">공동창업자 일동</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-      {/* One AI Core · Multi-Domain Future Vision */}
-      <section className="py-16 lg:py-24 bg-white border-t border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet-100 text-violet-800 text-xs font-semibold mb-4">
-              Future Vision · Research
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              One AI Core · Multiple Care Domains
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Dream AI Lab은 AI Digital Care Log를 사람 → 동물 → 식물 → 로봇으로 확장합니다.
-              모든 대상은 관찰 · 기록 · 분석 · 예측 · 맞춤형 관리라는 동일한 AI Core를 사용합니다.
-            </p>
-          </div>
-          <div className="rounded-2xl overflow-hidden border border-indigo-100 shadow-sm mb-8 max-w-5xl mx-auto">
-            <picture>
-              <source
-                media="(max-width: 768px)"
-                srcSet="/images/research/one-ai-core-domains-mobile.svg"
-              />
-              <img
-                src="/images/research/one-ai-core-domains.svg"
-                alt="One AI Core Multiple Care Domains"
-                className="w-full h-auto"
-                loading="lazy"
-                decoding="async"
-              />
-            </picture>
-          </div>
-          <div className="max-w-3xl mx-auto rounded-xl border border-amber-200 bg-amber-50 p-5 text-sm text-amber-900 leading-relaxed mb-8">
-            <strong>Animal(Pet AI)·Robot</strong> 축은 상용 서비스가 아닙니다. 기술 개발 초기 · 연구
-            개발 · 장기 비전(Future Vision)으로 분류됩니다.
-          </div>
-          <div className="text-center flex flex-col sm:flex-row gap-3 justify-center">
-            <Link
-              href="/research/pet-ai"
-              className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-violet-700 text-white font-semibold hover:bg-violet-800 transition-colors"
-            >
-              Pet AI Digital Care Log 연구 보기
-            </Link>
-            <Link
-              href="/research/robot-vision"
-              className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-slate-800 text-white font-semibold hover:bg-slate-900 transition-colors"
-            >
-              Robot Vision 연구 보기
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Future Goals */}
-      <section className="py-16 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              미래를 위한 우리의 약속
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              2030년까지 달성하고자 하는 우리의 구체적인 목표들입니다.
-            </p>
-          </div>
-
-          <div className="space-y-8">
-            {goals.map((goal, index) => (
-              <div key={index} className="bg-gradient-to-r from-primary-50 to-secondary-50 rounded-2xl p-8 border border-gray-100">
-                <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
-                  <div className="flex-shrink-0">
-                    <div className="w-16 h-16 bg-gradient-to-r from-primary-600 to-secondary-600 rounded-full flex items-center justify-center">
-                      <span className="text-white font-bold text-lg">{goal.year}</span>
-                    </div>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">{goal.title}</h3>
-                    <p className="text-gray-600">{goal.description}</p>
-                  </div>
-                </div>
-              </div>
+          <div className="mt-10 grid gap-5 lg:grid-cols-3">
+            {horizons.map((item) => (
+              <Link key={item.label} href={item.href} className="company-card group transition hover:-translate-y-1 hover:border-primary-200 hover:shadow-md">
+                <p className="text-xs font-black uppercase tracking-wider text-primary-700">{item.label}</p>
+                <h3 className="mt-4 text-xl font-black text-slate-950 group-hover:text-primary-700">{item.title}</h3>
+                <p className="mt-4 text-sm leading-relaxed text-slate-600">{item.description}</p>
+                <span className="mt-6 inline-flex text-sm font-bold text-primary-700">자세히 보기 →</span>
+              </Link>
             ))}
           </div>
         </div>
       </section>
 
-
-      {/* Values Section */}
-      <section className="py-16 lg:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              핵심 가치
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              우리가 추구하는 핵심 가치들이 미션과 비전을 실현하는 기반이 됩니다.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="text-center border border-gray-100 shadow-md hover:shadow-lg rounded-xl p-8">
-              <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4 text-primary-600">
-                <MarketingIcon name="target" className="h-8 w-8" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">사회적 가치</h3>
-              <p className="text-gray-600">
-                기술을 통해 사회적 문제를 해결하고 모든 사람의 삶의 질을 향상시킵니다.
-              </p>
+      <section className="company-section-muted">
+        <div className="company-container">
+          <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
+            <div>
+              <p className="text-sm font-bold uppercase tracking-wider text-primary-700">A common intelligence loop</p>
+              <h2 className="company-section-title mt-3">갑작스러운 도메인 확장이 아니라, 하나의 학습 원리를 단계적으로 확장합니다</h2>
+              <p className="company-section-lead">사람·동물·로봇을 같은 제품으로 묶는다는 뜻이 아닙니다. 서로 다른 대상에서도 관찰 → 기록 → 맥락 이해 → 판단 → 상호작용 → 결과 학습이라는 공통 연구 질문이 반복된다는 의미입니다.</p>
+              <p className="mt-5 text-sm leading-relaxed text-slate-500">현재 수익 사업과 장기 연구는 별도 단계와 책임 기준으로 운영합니다. 이 도식은 제품 출시 선언이 아니라 기술 연구의 연결 방향입니다.</p>
             </div>
-
-            <div className="text-center border border-gray-100 shadow-md hover:shadow-lg rounded-xl p-8">
-              <div className="w-16 h-16 bg-secondary-100 rounded-full flex items-center justify-center mx-auto mb-4 text-secondary-600">
-                <MarketingIcon name="microscope" className="h-8 w-8" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">혁신</h3>
-              <p className="text-gray-600">
-                최신 AI 기술을 활용하여 혁신적인 사회적 문제 해결 솔루션을 개발합니다.
-              </p>
-            </div>
-
-            <div className="text-center border border-gray-100 shadow-md hover:shadow-lg rounded-xl p-8">
-              <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4 text-primary-600">
-                <MarketingIcon name="handshake" className="h-8 w-8" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">포용성</h3>
-              <p className="text-gray-600">
-                모든 사람이 기술적 장벽 없이 혜택을 누릴 수 있는 포용적인 솔루션을 제공합니다.
-              </p>
-            </div>
-
-            <div className="text-center border border-gray-100 shadow-md hover:shadow-lg rounded-xl p-8">
-              <div className="w-16 h-16 bg-secondary-100 rounded-full flex items-center justify-center mx-auto mb-4 text-secondary-600">
-                <MarketingIcon name="globe" className="h-8 w-8" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">지속가능성</h3>
-              <p className="text-gray-600">
-                지속 가능한 미래를 위해 기술과 인간이 조화롭게 공존하는 세상을 만듭니다.
-              </p>
-            </div>
-
-            <div className="text-center border border-gray-100 shadow-md hover:shadow-lg rounded-xl p-8">
-              <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4 text-primary-600">
-                <MarketingIcon name="trend" className="h-8 w-8" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">지속적 성장</h3>
-              <p className="text-gray-600">
-                사회적 가치 창출을 위해 끊임없이 노력하며 지속적으로 개선합니다.
-              </p>
-            </div>
-
-            <div className="text-center border border-gray-100 shadow-md hover:shadow-lg rounded-xl p-8">
-              <div className="w-16 h-16 bg-secondary-100 rounded-full flex items-center justify-center mx-auto mb-4 text-secondary-600">
-                <MarketingIcon name="lightbulb" className="h-8 w-8" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">창의성</h3>
-              <p className="text-gray-600">
-                창의적인 사고를 통해 새로운 가능성을 발견하고 사회적 문제를 해결합니다.
-              </p>
+            <div className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
+              <picture>
+                <source media="(max-width: 768px)" srcSet="/images/research/one-ai-core-domains-mobile.svg" />
+                <img src="/images/research/one-ai-core-domains.svg" alt="관찰과 기록, 판단과 학습 원리를 사람·동물·로봇 연구로 단계적으로 확장하는 드림에이아이랩 비전" className="h-auto w-full" loading="lazy" decoding="async" />
+              </picture>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 lg:py-24 bg-gradient-to-r from-primary-600 to-secondary-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-6">
-            비전을 함께 실현할 파트너를 찾습니다
-          </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto text-gray-100">
-            우리의 기술과 서비스는 별도 페이지에서 자세히 확인하실 수 있습니다.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/technology"
-              className="bg-white text-primary-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-            >
-              기술 보기
-            </Link>
-            <Link
-              href="/research"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors"
-            >
-              Research 보기
-            </Link>
-            <Link 
-              href="/services"
-              className="border-2 border-white/70 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors"
-            >
-              서비스 보기
-            </Link>
+      <section className="company-section">
+        <div className="company-container grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
+          <div>
+            <p className="text-sm font-bold uppercase tracking-wider text-primary-700">Our commitments</p>
+            <h2 className="company-section-title mt-3">미래를 만드는 동안 지킬 약속</h2>
+            <p className="company-section-lead">날짜만 있는 목표보다 어떤 기준을 포기하지 않을지를 분명히 합니다.</p>
           </div>
+          <ol className="space-y-3">
+            {commitments.map(([title, description], index) => (
+              <li key={title} className="company-card flex gap-4">
+                <span className="font-black text-primary-700">{String(index + 1).padStart(2, '0')}</span>
+                <div><h3 className="font-black text-slate-950">{title}</h3><p className="mt-2 text-sm leading-relaxed text-slate-600">{description}</p></div>
+              </li>
+            ))}
+          </ol>
         </div>
       </section>
 
+      <PageClosingSection title="비전은 기술과 제품에서 구체화됩니다" description="AI Digital Care Log의 구조와 현재 서비스 포트폴리오에서 철학이 실제로 어떻게 구현되는지 확인해 보세요." primary={{ label: '핵심 기술 보기', href: '/technology' }} secondary={[{ label: '서비스 보기', href: '/services' }]} />
       <Footer />
     </div>
   )

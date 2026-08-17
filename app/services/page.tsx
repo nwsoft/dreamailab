@@ -3,6 +3,7 @@ import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import PageClosingSection from '../../components/PageClosingSection'
 import CompanyPageHero from '../../components/CompanyPageHero'
+import CompanyNarrativeNav from '../../components/CompanyNarrativeNav'
 import Link from 'next/link'
 import {
   AI_DIGITAL_CARE_LOG_FLOW_KO,
@@ -223,6 +224,7 @@ export default function ServicePortfolio() {
         }
         badges={['AI Digital Care Log', `${totalServices}개 핵심 도메인`, '신규 바이브코딩 프로젝트']}
       />
+      <CompanyNarrativeNav current="/services" />
 
       {/* Why multi domain */}
       <section className="py-16 bg-white border-b border-gray-100">
@@ -237,46 +239,6 @@ export default function ServicePortfolio() {
               DAL의 서비스 생태계는 이 분리된 문제들을 하나의 AI디지털케어로그 구조로 다시 연결하기 위한 도메인 확장입니다. 같은 사람의
               연속 데이터를 인프라 관점에서 통합합니다.
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Core 6개 도메인과 분리된 2026 신규 소프트웨어 창작 프로젝트 */}
-      <section className="border-y border-slate-200 bg-slate-50 py-16">
-        <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:px-8">
-          <div>
-            <div className="flex flex-wrap gap-2">
-              <span className="rounded-full bg-primary-700 px-3 py-1 text-xs font-black text-white">NEW VIBE-CODING PROJECT</span>
-              <span className="rounded-full border border-slate-300 bg-white px-3 py-1 text-xs font-semibold text-slate-600">{newSoftwareProject.status}</span>
-            </div>
-            <p className="mt-5 text-sm font-bold uppercase tracking-[0.16em] text-primary-700">{newSoftwareProject.name}</p>
-            <h2 className="mt-2 text-3xl font-black text-slate-950 sm:text-4xl">아이디어를 실제 운영 가능한 소프트웨어로</h2>
-            <p className="mt-5 text-lg leading-relaxed text-slate-700">{newSoftwareProject.description}입니다.</p>
-            <p className="mt-4 leading-relaxed text-slate-600">
-              기존 6개 케어·라이프 도메인에 억지로 포함하지 않습니다. 여러 산업을 실제 제품으로 재구체화해 온 DAL의 구조적 전이 방식을
-              소프트웨어 제작 자체에 적용하는 신규 바이브코딩·AI 앱 빌더 프로젝트입니다.
-            </p>
-            <div className="mt-7 flex flex-wrap gap-3">
-              <Link href={newSoftwareProject.url} className="rounded-xl bg-primary-700 px-6 py-3 font-bold text-white hover:bg-primary-800">
-                프로젝트 설계 보기
-              </Link>
-              <Link href="/contact?service=vibe-architect&type=partnership" className="rounded-xl border border-slate-300 bg-white px-6 py-3 font-bold text-slate-800 hover:bg-slate-100">
-                공동설계·파일럿 문의
-              </Link>
-            </div>
-          </div>
-          <div className="grid gap-3 sm:grid-cols-2">
-            {[
-              ['의도 이해', '기술용어 대신 사업·현장 질문'],
-              ['아키텍처 설계', '역할·데이터·권한·운영 구조'],
-              ['변경 안전성', '영향 분석·회귀검증·복구'],
-              ['한국·접근성', '국내 운영요건·장애인 공동설계'],
-            ].map(([title, body]) => (
-              <div key={title} className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-                <h3 className="font-bold text-slate-950">{title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-slate-600">{body}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -346,6 +308,29 @@ export default function ServicePortfolio() {
                 <ServiceSummaryCard key={service.name} service={service} />
               ))}
             </div>
+          </Section>
+
+          <Section
+            title="소프트웨어 창작 서비스"
+            subtitle="DAL Vibe Architect도 별도 최상위 메뉴가 아니라 서비스 포트폴리오 안에서 다룹니다. 케어 도메인과 목적은 다르지만, 사용자의 의도를 구조화하고 운영 결과를 학습한다는 DAL의 기술 철학을 공유합니다."
+            badge="New Project · Vibe-coding"
+          >
+            <Link href={newSoftwareProject.url} className="company-card group grid gap-7 transition hover:border-primary-200 hover:shadow-md lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+              <div>
+                <div className="flex flex-wrap gap-2"><span className="rounded-full bg-primary-700 px-3 py-1 text-xs font-black text-white">DAL VIBE ARCHITECT</span><span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-bold text-slate-600">{newSoftwareProject.status}</span></div>
+                <h3 className="mt-5 text-2xl font-black text-slate-950 group-hover:text-primary-700">아이디어를 실제 운영 가능한 소프트웨어로</h3>
+                <p className="mt-4 leading-relaxed text-slate-600">{newSoftwareProject.description}입니다.</p>
+                <span className="mt-6 inline-flex font-bold text-primary-700">프로젝트 설계 보기 →</span>
+              </div>
+              <div className="grid gap-3 sm:grid-cols-2">
+                {[
+                  ['의도 이해', '기술용어 대신 사업·현장 질문'],
+                  ['아키텍처 설계', '역할·데이터·권한·운영 구조'],
+                  ['변경 안전성', '영향 분석·회귀검증·복구'],
+                  ['한국·접근성', '국내 운영요건·장애인 공동설계'],
+                ].map(([title, body]) => <div key={title} className="rounded-xl bg-slate-50 p-4"><h4 className="font-bold text-slate-950">{title}</h4><p className="mt-2 text-sm text-slate-600">{body}</p></div>)}
+              </div>
+            </Link>
           </Section>
 
           {/* connection map */}

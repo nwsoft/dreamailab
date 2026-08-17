@@ -6,6 +6,8 @@ import {
   newsArticles,
   formatDate,
   getCategoryName,
+  getLocalizedArticle,
+  hasEnglishTranslation,
   type NewsArticle,
 } from '../app/news/data'
 
@@ -71,6 +73,9 @@ export default function NewsArticleView({
 }: NewsArticleViewProps) {
   const t = labels[locale]
   const isArchive = article.id <= 83
+  const relatedArticles = newsArticles
+    .filter((candidate) => locale === 'ko' || hasEnglishTranslation(candidate))
+    .map((candidate) => (locale === 'en' ? getLocalizedArticle(candidate, 'en') : candidate))
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -165,7 +170,7 @@ export default function NewsArticleView({
             {t.related}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {newsArticles
+            {relatedArticles
               .filter((relatedArticle) => {
                 if (relatedArticle.id === article.id) return false
                 const hasCommonTag = article.tags?.some((tag) =>

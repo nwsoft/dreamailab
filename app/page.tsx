@@ -276,40 +276,26 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 2026 신규 프로젝트 — 기존 6개 Care Domain과 분리된 소프트웨어 창작 인프라 */}
-      <section className="border-b border-cyan-100 bg-slate-950 py-12 text-white lg:py-16">
-        <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:px-8">
+      {/* Company narrative — 신규 프로젝트보다 회사의 철학과 방향을 먼저 설명 */}
+      <section className="company-section-muted">
+        <div className="company-container grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
-            <div className="flex flex-wrap gap-2">
-              <span className="rounded-full bg-cyan-300 px-3 py-1 text-xs font-black text-slate-950">NEW PROJECT</span>
-              <span className="rounded-full border border-white/20 px-3 py-1 text-xs font-semibold text-slate-200">설계 공개 · 개발 준비</span>
-            </div>
-            <p className="mt-5 text-sm font-bold uppercase tracking-[0.16em] text-cyan-300">DAL Vibe Architect</p>
-            <h2 className="mt-2 text-3xl font-black leading-tight sm:text-4xl">코딩을 몰라도 아이디어를<br className="hidden sm:block" /> 운영 가능한 소프트웨어로</h2>
-            <p className="mt-5 max-w-3xl text-lg leading-relaxed text-slate-300">
-              기존 바이브코딩의 Prompt → Code 틀을 넘어, 비개발자의 의도를 요구사항·아키텍처·보안·접근성·테스트·배포·운영·학습으로 번역합니다.
-              한국의 실제 운영환경과 장애인 창작자를 처음부터 포함하는 AI Software Creation Platform을 설계합니다.
-            </p>
+            <p className="text-sm font-bold uppercase tracking-wider text-primary-700">Why Dream AI Lab</p>
+            <h2 className="company-section-title mt-3">AI 시대에도 사람에게 남아 있는 복잡성을 줄입니다</h2>
+            <p className="company-section-lead">기록은 흩어지고, 중요한 판단은 반복되며, 새로운 소프트웨어를 만드는 일은 여전히 일부 전문가에게만 열려 있습니다. DAL은 이 복잡성을 사용자가 배우게 하지 않고 시스템 안으로 흡수합니다.</p>
             <div className="mt-7 flex flex-wrap gap-3">
-              <Link href="/services/vibe-architect" className="rounded-xl bg-cyan-300 px-6 py-3 font-bold text-slate-950 hover:bg-cyan-200">
-                신규 프로젝트 보기
-              </Link>
-              <Link href="/contact?service=vibe-architect&type=partnership" className="rounded-xl border border-white/30 px-6 py-3 font-bold text-white hover:bg-white/10">
-                공동설계·파일럿 문의
-              </Link>
+              <Link href="/about#philosophy" className="rounded-xl bg-primary-600 px-5 py-3 text-sm font-bold text-white hover:bg-primary-700">회사 철학 보기</Link>
+              <Link href="/vision" className="rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-bold text-slate-700 hover:bg-slate-50">AI 시대의 비전</Link>
             </div>
           </div>
-          <div className="grid gap-3 sm:grid-cols-2">
+          <div className="grid gap-4 sm:grid-cols-2">
             {[
-              ['Intent', '아이디어와 현장 목적 이해'],
-              ['Knowledge', '프로젝트 구조·결정·이력 연결'],
-              ['Guardian', '변경 영향·보안·회귀·복구 추적'],
-              ['Outcomes', '배포·운영 결과를 다음 설계에 환류'],
+              ['삶과 현장의 연결', 'AI Digital Care Log로 시간축 기록·맥락·실행·결과를 연결합니다.'],
+              ['기술 장벽의 제거', 'DAL Vibe Architect로 사람의 의도를 운영 가능한 소프트웨어로 번역합니다.'],
+              ['특수 분야에서 시작', '발달·돌봄·교육·다문화처럼 복잡한 현장에서 먼저 검증합니다.'],
+              ['결과로 학습', '사용과 운영의 결과를 다음 판단과 제품 개선에 환류합니다.'],
             ].map(([title, body]) => (
-              <div key={title} className="rounded-2xl border border-white/10 bg-white/[0.06] p-5">
-                <p className="font-bold text-cyan-200">{title}</p>
-                <p className="mt-2 text-sm leading-relaxed text-slate-300">{body}</p>
-              </div>
+              <div key={title} className="company-card"><h3 className="font-black text-slate-950">{title}</h3><p className="mt-2 text-sm leading-relaxed text-slate-600">{body}</p></div>
             ))}
           </div>
         </div>

@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import CompanyPageHero from '../../components/CompanyPageHero'
+import CompanyNarrativeNav from '../../components/CompanyNarrativeNav'
 import PageClosingSection from '../../components/PageClosingSection'
 import { MarketingIcon, type MarketingIconName } from '../../components/MarketingIcon'
 import { buildPageMetadata } from '../../lib/seo'
@@ -39,6 +40,7 @@ export default function PublicPage() {
     <div className="company-page">
       <Header />
       <CompanyPageHero eyebrow="Government · Municipality · Public Institution" title="공공의 문제를 현장 데이터와 AI로 연결합니다" description={<p>드림에이아이랩은 하나의 기술을 일괄 적용하지 않습니다. 정책 목적과 현장 업무를 먼저 이해하고, 각 서비스에서 축적한 도메인 구조를 작은 실증부터 단계적으로 적용합니다.</p>} badges={['공공·지자체', 'Pilot & PoC', 'RWD·RWE', '접근성', '데이터 거버넌스']} actions={[{ label: '협력 분야 보기', href: '#programs' }, { label: '공공 협력 문의', href: '/contact?type=b2b&service=platform', variant: 'secondary' }]} />
+      <CompanyNarrativeNav current="/public" />
 
       <section id="programs" className="company-section">
         <div className="company-container">

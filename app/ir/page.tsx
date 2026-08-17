@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import CompanyPageHero from '../../components/CompanyPageHero'
+import CompanyNarrativeNav from '../../components/CompanyNarrativeNav'
 import PageClosingSection from '../../components/PageClosingSection'
 import { MarketingIcon, type MarketingIconName } from '../../components/MarketingIcon'
 import { buildPageMetadata } from '../../lib/seo'
@@ -61,6 +62,7 @@ export default function IRPage() {
     <div className="company-page">
       <Header />
       <CompanyPageHero eyebrow="Investor Relations · Business Partnership" title="하나의 AI 아키텍처를 여러 산업의 제품과 데이터로 확장합니다" description={<p>드림에이아이랩은 AI Digital Care Log를 핵심 기술로 두고, 특수 분야의 실제 업무에서 제품·데이터·사업모델을 함께 검증하는 다도메인 AI 데이터 인프라 기업입니다.</p>} badges={['6 Core Services', 'New Vibe-coding Project', 'RWD·RWE', 'B2B·B2G·API']} actions={[{ label: '투자 논리 보기', href: '#thesis' }, { label: '투자·사업 문의', href: '/contact?type=ir&service=platform', variant: 'secondary' }]} />
+      <CompanyNarrativeNav current="/ir" />
 
       <section id="thesis" className="company-section">
         <div className="company-container">

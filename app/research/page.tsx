@@ -3,15 +3,16 @@ import Link from 'next/link'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import CompanyPageHero from '../../components/CompanyPageHero'
+import CompanyNarrativeNav from '../../components/CompanyNarrativeNav'
 import { MarketingIcon } from '../../components/MarketingIcon'
 import { absoluteUrl, buildBreadcrumbJsonLd, buildPageMetadata, SITE_URL } from '../../lib/seo'
 
 const pagePath = '/research'
 const pageDescription =
-  '드림에이아이랩 Research & Future Vision. AI Digital Care Log를 사람·동물·식물·로봇으로 확장하는 연구 방향. Pet AI Digital Care Log와 Robot Vision은 상용 서비스가 아닌 기술 개발 초기·연구 단계입니다.'
+  '드림에이아이랩의 미래 연구 방향. 현재 사람과 현장을 연결하는 AI에서 출발해 Pet AI와 Robot Vision으로 맥락 이해와 상호작용 연구를 확장합니다.'
 
 export const metadata: Metadata = buildPageMetadata({
-  title: 'Research & Future Vision | 드림에이아이랩',
+  title: '미래 연구 | Pet AI와 Robot Vision 연구 방향 - 드림에이아이랩',
   description: pageDescription,
   path: pagePath,
   ogTitle: 'Research & Future Vision — Dream AI Lab',
@@ -55,15 +56,15 @@ export default function ResearchHubPage() {
       <Header />
 
       <CompanyPageHero
-        eyebrow="Research · Future Vision · Technology Roadmap"
-        title="Research & Future Vision"
+        eyebrow="Research · What comes next"
+        title="현재 제품의 다음을 연구합니다"
         description={
           <p>
-            드림에이아이랩은 AI Digital Care Log를 사람에서 동물·식물·로봇으로 확장하는 장기 연구를
-            진행합니다. 현재 공개된 Pet AI와 Robot Vision은 연구·기술 로드맵입니다.
+            드림에이아이랩은 사람과 현장의 맥락을 이해하는 기술에서 출발해, 반려동물의 삶과 로봇의
+            관찰·상호작용을 이해하는 AI를 탐색합니다. 미래 연구는 현재 서비스와 구분해 검증합니다.
           </p>
         }
-        badges={['Research', 'Technology Development', 'Future Vision']}
+        badges={['Current products first', 'Pet AI research', 'Robot Vision horizon']}
         status={
           <p>
             연구의 공통 기반은{' '}
@@ -78,6 +79,7 @@ export default function ResearchHubPage() {
           </p>
         }
       />
+      <CompanyNarrativeNav current="/research" />
 
       <section className="border-b border-slate-200 bg-slate-50 py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -100,43 +102,24 @@ export default function ResearchHubPage() {
         </div>
       </section>
 
-      <section className="py-14 bg-white">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">One AI Core</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              관찰 · 기록 · 분석 · 예측 · 맞춤형 관리 — 동일한 AI Core를 여러 Care Domain으로 확장합니다.
-            </p>
+      <section className="company-section">
+        <div className="company-container">
+          <div className="max-w-3xl">
+            <p className="text-sm font-bold uppercase tracking-wider text-primary-700">Research horizons</p>
+            <h2 className="company-section-title mt-3">갑작스러운 확장이 아니라, 현재의 학습을 다음 연구로 연결합니다</h2>
+            <p className="company-section-lead">모든 영역을 하나의 제품으로 묶는다는 뜻이 아닙니다. 관찰·시간축·맥락·행동·결과라는 공통 연구 질문을 각 대상의 권리와 환경에 맞게 새로 검증합니다.</p>
           </div>
-          <div className="rounded-2xl overflow-hidden border border-indigo-100 shadow-sm mb-8">
-            <picture>
-              <source
-                media="(max-width: 768px)"
-                srcSet="/images/research/one-ai-core-domains-mobile.svg"
-              />
-              <img
-                src="/images/research/one-ai-core-domains.svg"
-                alt="One AI Core Multiple Care Domains — Human Animal Plant Robot"
-                className="w-full h-auto object-contain"
-                loading="lazy"
-                decoding="async"
-              />
-            </picture>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center text-sm">
+          <div className="mt-10 grid gap-5 lg:grid-cols-3">
             {[
-              { label: 'Human', desc: '사람 · 현재 축', href: '/services' },
-              { label: 'Animal', desc: '반려동물 · 연구', href: '/research/pet-ai' },
-              { label: 'Plant', desc: '웰니스 · 베지케어', href: '/services/veggie' },
-              { label: 'Robot', desc: '장기 비전', href: '/research/robot-vision' },
-            ].map((d) => (
-              <Link
-                key={d.label}
-                href={d.href}
-                className="rounded-xl border border-gray-200 bg-gray-50 p-4 hover:border-indigo-200 hover:bg-indigo-50/50 transition-colors"
-              >
-                <div className="font-bold text-gray-900 mb-1">{d.label}</div>
-                <div className="text-gray-600 text-xs">{d.desc}</div>
+              { step: 'NOW · Products', title: '사람과 현장의 연결', description: '돌봄·교육·건강·가족·웰니스 서비스에서 AI Digital Care Log의 실제 운영성과 안전성을 먼저 검증합니다.', href: '/services' },
+              { step: 'NEXT · Research', title: 'Pet AI', description: '반려동물의 행동·감정·환경·생활 맥락을 지속적으로 이해하는 Life Companion Intelligence를 연구합니다.', href: '/research/pet-ai' },
+              { step: 'HORIZON · Research', title: 'Robot Vision', description: '로봇이 장면을 보는 데서 나아가 사람·환경·시간의 맥락을 이해하고 안전하게 상호작용하는 방향을 탐색합니다.', href: '/research/robot-vision' },
+            ].map((item) => (
+              <Link key={item.step} href={item.href} className="company-card group transition hover:border-primary-200 hover:bg-blue-50">
+                <p className="text-xs font-black uppercase tracking-wider text-primary-700">{item.step}</p>
+                <h3 className="mt-4 text-xl font-black text-slate-950 group-hover:text-primary-700">{item.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-slate-600">{item.description}</p>
+                <span className="mt-6 inline-flex text-sm font-bold text-primary-700">자세히 보기 →</span>
               </Link>
             ))}
           </div>
