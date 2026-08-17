@@ -79,7 +79,7 @@ const pipeline = [
 ]
 
 const domains = [
-  { name: '시니어앤라이프', status: 'Commercial Beta', href: '/services/senior' },
+  { name: '시니어앤라이프', status: 'Pilot', href: '/services/senior' },
   { name: '토탈케어로그', status: 'Alpha', href: '/services/healthcare' },
   { name: '글로벌커플케어', status: 'Commercial', href: '/services/marriage' },
   { name: '에듀케어로그', status: 'Pilot', href: '/services/educarelog' },

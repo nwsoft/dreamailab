@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   ...buildPageMetadata({
     title: 'Services – Dream AI Lab Platform Hub',
     description:
-      'Explore how Dream AI Lab connects six care domains on one AI Digital Care Log infrastructure: Jarame, Senior & Life, healthcare, education, global couple care, and VeggieCare.',
+      'Explore six AI Digital Care Log domains and DAL Vibe Architect, a new Korea-ready AI software creation project.',
     path: '/en/services',
     ogImageAlt: 'Dream AI Lab Services',
   }),
@@ -41,10 +41,15 @@ export default function EnServicesPage() {
           heading: 'NoahAI · VeggieCare · domain expansion',
           body: 'NoahAI commercialized the architecture as a financial and investing infrastructure OS; VeggieCare applies it to food, nutrition, and lifestyle. Global Couple Care currently operates primarily as a community and matching service and is distinguished from direct Care Log deployment.',
         },
+        {
+          heading: 'New platform project · DAL Vibe Architect',
+          body: 'Separate from the six care and life domains, DAL Vibe Architect applies architecture-to-execution thinking to software creation itself. The goal is to translate non-developers’ intent into requirements, architecture, safety, accessibility, testing, deployment and operations for Korean workflows. Status: architecture published and co-design preparation; no public builder yet.',
+        },
       ]}
       links={[
         { label: 'Full service hub (KO)', href: '/services' },
         { label: 'Jarame', href: '/services/jarame' },
+        { label: 'DAL Vibe Architect', href: '/en/services/vibe-architect' },
       ]}
     />
   )

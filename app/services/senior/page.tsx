@@ -90,13 +90,13 @@ export default function SeniorService() {
   // 섹션 4: 왜 사용해야 할까요
   const whyUse = [
     {
-      title: '케어 품질 향상으로 시니어 건강 개선',
-      description: 'AI 기반 패턴 분석과 위험 예측으로, 더 빠르고 정확한 대응이 가능합니다.',
+      title: '케어 품질 향상 (P0 이후 목표)',
+      description: '케어로그 연동 후 AI 기반 패턴 분석과 위험 신호 판단으로 대응을 보조하는 것을 목표로 합니다.',
       icon: '💚',
     },
     {
       title: '가족의 마음 편함과 안심',
-      description: '멀리 떨어져 있어도, 앱으로 매일의 상태를 확인하고 이상 징후 시 즉시 알림을 받을 수 있습니다.',
+      description: 'P0 보호자 화면 연동 후, 동의된 일상 기록과 검토가 필요한 이상 신호를 확인하는 구조를 목표로 합니다.',
       icon: '🛡️',
     },
     {
@@ -107,7 +107,7 @@ export default function SeniorService() {
     {
       title: '돌봄을 돕는 사람도 함께 돌봅니다',
       description:
-        '요양보호사·가족의 반복 업무와 정서적 부담을 줄이기 위해 기록 자동화, 동일 정보 기반 리포트·알림, AI 케어 가이드를 제공합니다. 번아웃 예방·심리 지원은 케어로그·가이드·(동의된) 전문 연계로 단계적으로 넓혀 가는 방향을 지향합니다.',
+        '요양보호사·가족의 반복 업무와 정서적 부담을 줄이기 위해 기록 자동화, 동일 정보 기반 리포트·알림, AI 케어 가이드를 단계적으로 설계합니다. 번아웃 예방·심리 지원도 로드맵입니다.',
       icon: '🤲',
     },
     {
@@ -175,9 +175,9 @@ export default function SeniorService() {
       icon: '📱',
       effects: [
         'DAL AI 독자 기술 적용',
-        '실시간 건강 상태 모니터링',
-        '가족과 요양보호사 간 소통 강화',
-        '데이터 기반 맞춤 케어 계획',
+        '상태 기록·보호자 공유 (로드맵 P0)',
+        '가족과 요양보호사 간 소통 구조 (P0)',
+        '데이터 기반 맞춤 케어 계획 (단계적)',
       ],
     },
     {
@@ -197,7 +197,7 @@ export default function SeniorService() {
         '요양보호사 및 전문간병인 구인구직',
         '재가서비스 1인 사업자 지원',
         '요양원·요양병원·주야간보호센터 전문인력 연계',
-        'AI 기반 효율적인 매칭 시스템',
+        '등록·지원·AI 매칭 UI (준비 중)',
       ],
     },
   ]
@@ -227,11 +227,11 @@ export default function SeniorService() {
     {
       title: '가족 공유',
       description:
-        '가족은 앱으로 오늘 있었던 일을 실시간 확인하고 메시지·통화 등으로 바로 소통할 수 있습니다.',
+        'P0 연동 후 가족이 동의된 오늘의 기록을 확인하고 현장과 같은 정보를 바탕으로 소통하는 구조를 목표로 합니다.',
       icon: '👨‍👩‍👧‍👦',
     },
     {
-      title: '의료진 연동',
+      title: '의료진 연동 (단계적)',
       description:
         '필요 시 의료진과 데이터를 공유하여 더 정확한 진단과 맞춤 치료 계획에 활용할 수 있습니다.',
       icon: '⚕️',
@@ -247,8 +247,8 @@ export default function SeniorService() {
       icon: '📡',
     },
     {
-      title: '즉시 알림',
-      description: '위험 신호 감지 시 가족·의료진에 즉시 알림 전달',
+      title: '위험 신호 알림 (P0 이후)',
+      description: '연동과 검증 후 검토가 필요한 위험 신호를 가족·현장·의료진에게 권한 범위 안에서 알리는 구조를 목표로 합니다.',
       icon: '🔔',
     },
     {
@@ -357,7 +357,7 @@ export default function SeniorService() {
               </span>
             </h1>
             <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto text-green-100 leading-relaxed break-keep">
-              시설 검색·구인구직·장기요양 안내는 운영 중이며,
+              시설 검색·장기요양 안내는 운영 중이며, 구인구직·상담·리뷰는 단계적으로 연결하고,
               AI 디지털케어로그·행정 SaaS·심화 AI 분석은 단계적으로 연결하는 구조입니다.
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm">
@@ -366,7 +366,7 @@ export default function SeniorService() {
               <span className="bg-white/10 px-4 py-2 rounded-full font-medium">가족 / 기관 / 의료 / 공공 연결</span>
             </div>
             <div className="mt-8">
-              <span className="inline-block px-4 py-2 bg-teal-100 text-teal-900 rounded-full text-sm font-semibold">Service Status: Commercial Beta (상용베타)</span>
+              <span className="inline-block px-4 py-2 bg-violet-100 text-violet-900 rounded-full text-sm font-semibold">Service Status: Pilot (파일럿)</span>
             </div>
           </div>
         </div>
@@ -389,8 +389,8 @@ export default function SeniorService() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-100">
-                <tr><td className="px-4 py-3 text-emerald-700 font-medium">✅ 운영</td><td className="px-4 py-3 text-gray-700">시설 검색·상세, 구인구직, 장기요양 계산기</td></tr>
-                <tr><td className="px-4 py-3 text-amber-700 font-medium">🔄 단계적</td><td className="px-4 py-3 text-gray-700">상담·견학 예약, 리뷰, AI 챗봇(규칙 기반)</td></tr>
+                <tr><td className="px-4 py-3 text-emerald-700 font-medium">✅ 운영</td><td className="px-4 py-3 text-gray-700">시설 검색·상세, 장기요양 참고 계산기, 시설·제도 안내(규칙 기반)</td></tr>
+                <tr><td className="px-4 py-3 text-amber-700 font-medium">🔄 단계적</td><td className="px-4 py-3 text-gray-700">구인구직 등록·지원·매칭, 상담·견학 예약, 리뷰</td></tr>
                 <tr><td className="px-4 py-3 text-blue-700 font-medium">📄 로드맵 P0</td><td className="px-4 py-3 text-gray-700">AI 디지털케어로그 API·보호자 마이페이지 연동</td></tr>
                 <tr><td className="px-4 py-3 text-blue-700 font-medium">📄 로드맵 P1</td><td className="px-4 py-3 text-gray-700">행정 SaaS — 방문·근태·급여·보고</td></tr>
               </tbody>
@@ -665,7 +665,7 @@ export default function SeniorService() {
               <img src="/images/services/senior-platform-flow.svg" alt="시니어앤라이프 플랫폼 6단계 흐름 구조도" className="w-full h-auto object-contain" loading="lazy" decoding="async" />
             </div>
             <p className="mt-6 text-center text-sm text-gray-600 leading-relaxed">
-              DAL <strong>AI 디지털케어로그</strong> 기반 서비스로, 표준 기록·다기관 연계·실시간 환류를 지원합니다.
+              DAL <strong>AI 디지털케어로그</strong> 기반 Pilot로, 표준 기록·다기관 연계·결과 환류를 P0/P1 로드맵에 따라 단계적으로 지향합니다.
             </p>
             <p className="mt-4 text-center text-sm font-semibold text-emerald-800 max-w-2xl mx-auto leading-relaxed">
               이 6가지 기능은 각각의 기능이 아니라 <strong>하나의 흐름으로 연결된 시스템</strong>입니다.
@@ -786,7 +786,7 @@ export default function SeniorService() {
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs md:text-sm text-gray-700">
                 <div><h4 className="font-semibold text-gray-900 mb-1">현재 문제</h4><p>낮 시간 활동 기록이 보호자에게 충분히 공유되지 않고, 프로그램 참여도와 상태 변화를 구조적으로 보여주기 어렵습니다.</p></div>
-                <div><h4 className="font-semibold text-gray-900 mb-1">시니어앤라이프에서</h4><p>출석, 식사, 활동, 컨디션을 기록하고 보호자와 실시간 공유합니다.</p></div>
+                <div><h4 className="font-semibold text-gray-900 mb-1">P0 연동 후 목표</h4><p>출석, 식사, 활동, 컨디션을 기록하고 동의 범위 안에서 보호자와 공유합니다.</p></div>
                 <div><h4 className="font-semibold text-gray-900 mb-1">도입 후 변화</h4><p>출석·식사·활동·컨디션이 기록·공유·분석되어 보호자 신뢰와 프로그램 운영 개선에 도움이 됩니다.</p></div>
               </div>
             </div>
@@ -898,7 +898,7 @@ export default function SeniorService() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-1">시니어앤라이프에서</h4>
-                  <p>앱에서 식사, 복약, 활동, 수면, 혈압, 기분, 특이사항을 시간 순으로 확인하고, AI가 활동량 감소·수면 변화·낙상 위험·복약 지연 등을 감지하면 알림을 받습니다.</p>
+                  <p>P0 연동 후 앱에서 식사, 복약, 활동, 수면, 혈압, 기분, 특이사항을 시간 순으로 확인하고, 검증된 규칙·AI가 변화 신호를 제시하는 구조를 목표로 합니다.</p>
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-1">도입 후 변화</h4>
@@ -957,11 +957,11 @@ export default function SeniorService() {
               <div className="bg-emerald-50/70 rounded-xl p-4 border border-emerald-100 mt-4">
                 <p className="text-xs font-semibold text-amber-900 mb-2 text-center">도입 효과 (기관 운영 관점)</p>
                 <ul className="text-sm text-gray-800 space-y-2">
-                  <li className="flex gap-2"><span className="text-amber-600 shrink-0">•</span><span><strong>행정 업무 시간 30~50% 감소</strong></span></li>
-                  <li className="flex gap-2"><span className="text-amber-600 shrink-0">•</span><span><strong>보호자 문의 최대 70% 감소</strong></span></li>
-                  <li className="flex gap-2"><span className="text-amber-600 shrink-0">•</span><span>운영 효율은 도입 직후부터 체감됩니다</span></li>
+                  <li className="flex gap-2"><span className="text-amber-600 shrink-0">•</span><span>행정 중복 입력 감소 가능성을 Pilot에서 측정</span></li>
+                  <li className="flex gap-2"><span className="text-amber-600 shrink-0">•</span><span>보호자 문의 감소 가능성을 P0 기록 공유 후 측정</span></li>
+                  <li className="flex gap-2"><span className="text-amber-600 shrink-0">•</span><span>정량 효과는 기관 UAT 전 공개 성과로 표시하지 않음</span></li>
                 </ul>
-                <p className="text-xs text-gray-500 mt-2 text-center">* 수치는 기관·운영 조건에 따라 달라질 수 있습니다.</p>
+                <p className="text-xs text-gray-500 mt-2 text-center">* 위 항목은 검증할 가설이며 확정 성과가 아닙니다.</p>
               </div>
             </div>
 

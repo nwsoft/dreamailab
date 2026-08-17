@@ -36,12 +36,17 @@ export default function EnHomePage() {
           heading: 'Core domains',
           body: 'Jarame · Senior & Life · Total Care Log · Global Couple Care · EduCareLog · VeggieCare—each extends the same middleware and AI engine philosophy.',
         },
+        {
+          heading: 'New: DAL Vibe Architect',
+          body: 'A newly announced AI Software Architect project for turning non-developers’ intent into secure, accessible and operable software for Korean workflows. It is at architecture and co-design stage, not yet a launched builder.',
+        },
       ]}
       links={[
         { label: 'Services', href: '/en/services' },
         { label: 'Technology', href: '/en/technology' },
         { label: 'About', href: '/en/about' },
-        { label: 'Latest news', href: '/en/news/77' },
+        { label: 'Latest news', href: '/en/news/94' },
+        { label: 'Vibe Architect', href: '/en/services/vibe-architect' },
       ]}
     />
   )

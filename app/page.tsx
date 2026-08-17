@@ -101,7 +101,7 @@ export default function Home() {
           itemOffered: {
             '@type': 'Service',
             name: '시니어앤라이프',
-            description: '시니어 돌봄을 위한 AI디지털케어로그 기반 예방/모니터링 플랫폼'
+            description: '시설 검색·장기요양 안내를 운영하며 AI디지털케어로그·행정 SaaS를 단계적으로 연결하는 시니어 돌봄 Pilot'
           }
         },
         {
@@ -128,6 +128,14 @@ export default function Home() {
             description: '채식 라이프스타일 AI 플랫폼 - 영양관리·식단·외식·커뮤니티 통합'
           }
         },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'DAL Vibe Architect',
+            description: '비개발자의 의도를 한국 운영환경과 접근성 기준에 맞는 실제 소프트웨어로 번역하는 AI Software Architect 신규 프로젝트'
+          }
+        },
       ]
     }
   }
@@ -137,13 +145,13 @@ export default function Home() {
     { value: '5,700+', label: '자람이 등록 기관' },
     { value: '22,000+', label: '시니어앤라이프 등록 사업자' },
     { value: '6', label: '핵심 도메인' },
-    { value: '1', label: '통합 플랫폼' },
+    { value: '1', label: '신규 AI 소프트웨어 창작 프로젝트' },
   ]
 
   /** /services 허브와 동일: 핵심 6도메인 + Noah는 별도 안내 */
   const domainHubTiles = [
     { mark: 'JR', name: '발달장애', url: '/services/jarame', status: '상용' },
-    { mark: 'SL', name: '시니어·노인돌봄', url: '/services/senior', status: '상용베타' },
+    { mark: 'SL', name: '시니어·노인돌봄', url: '/services/senior', status: '파일럿' },
     { mark: 'TC', name: '의료', url: '/services/healthcare', status: '알파' },
     { mark: 'ED', name: '교육', url: '/services/educarelog', status: '파일럿' },
     { mark: 'GC', name: '글로벌커플케어', url: '/services/marriage', status: '상용' },
@@ -172,13 +180,14 @@ export default function Home() {
     },
     {
       name: '시니어앤라이프',
-      desc: '시설 검색·구인구직·장기요양 안내는 운영 중이며, AI 디지털케어로그·행정 SaaS·심화 AI 분석은 단계적으로 연결하는 시니어 돌봄 플랫폼입니다. 돌봄 종사자 정서·번아웃 지원은 같은 철학 아래 확장합니다.',
+      desc: '시설 검색·장기요양 안내는 운영 중이며, 구인구직·AI 디지털케어로그·행정 SaaS·심화 AI 분석은 단계적으로 연결하는 Pilot 시니어 돌봄 플랫폼입니다. 돌봄 종사자 정서·번아웃 지원은 같은 철학 아래 확장합니다.',
       url: '/services/senior',
       externalUrl: 'https://seniorandlife.com',
       color: 'from-green-500 to-emerald-500',
       mark: 'SL',
       features: [
-        '시설 검색·비교·구인구직·장기요양 계산기 (운영)',
+        '시설 검색·비교·장기요양 계산기 (운영)',
+        '구인구직 등록·지원·매칭 (준비 중)',
         '상담·견학·리뷰 (단계적 오픈)',
         'AI 디지털케어로그·가족 공유 (로드맵 P0)',
         '행정 SaaS — 방문·근태·급여·보고 (로드맵 P1)',
@@ -263,6 +272,45 @@ export default function Home() {
                 </span>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 2026 신규 프로젝트 — 기존 6개 Care Domain과 분리된 소프트웨어 창작 인프라 */}
+      <section className="border-b border-cyan-100 bg-slate-950 py-12 text-white lg:py-16">
+        <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:px-8">
+          <div>
+            <div className="flex flex-wrap gap-2">
+              <span className="rounded-full bg-cyan-300 px-3 py-1 text-xs font-black text-slate-950">NEW PROJECT</span>
+              <span className="rounded-full border border-white/20 px-3 py-1 text-xs font-semibold text-slate-200">설계 공개 · 개발 준비</span>
+            </div>
+            <p className="mt-5 text-sm font-bold uppercase tracking-[0.16em] text-cyan-300">DAL Vibe Architect</p>
+            <h2 className="mt-2 text-3xl font-black leading-tight sm:text-4xl">코딩을 몰라도 아이디어를<br className="hidden sm:block" /> 운영 가능한 소프트웨어로</h2>
+            <p className="mt-5 max-w-3xl text-lg leading-relaxed text-slate-300">
+              Cursor를 복제하는 코드 편집기가 아닙니다. 비개발자의 의도를 요구사항·아키텍처·보안·접근성·테스트·배포·유지보수로 번역하고,
+              한국의 실제 운영환경과 장애인 창작자를 처음부터 포함하는 AI Software Architect를 설계합니다.
+            </p>
+            <div className="mt-7 flex flex-wrap gap-3">
+              <Link href="/services/vibe-architect" className="rounded-xl bg-cyan-300 px-6 py-3 font-bold text-slate-950 hover:bg-cyan-200">
+                신규 프로젝트 보기
+              </Link>
+              <Link href="/contact?service=vibe-architect&type=partnership" className="rounded-xl border border-white/30 px-6 py-3 font-bold text-white hover:bg-white/10">
+                공동설계·파일럿 문의
+              </Link>
+            </div>
+          </div>
+          <div className="grid gap-3 sm:grid-cols-2">
+            {[
+              ['Intent', '아이디어와 현장 목적 이해'],
+              ['Architect', '제품·시스템·권한 설계'],
+              ['Guardian', '변경 영향·보안·회귀 추적'],
+              ['Operations', '배포·관측·유지보수 환류'],
+            ].map(([title, body]) => (
+              <div key={title} className="rounded-2xl border border-white/10 bg-white/[0.06] p-5">
+                <p className="font-bold text-cyan-200">{title}</p>
+                <p className="mt-2 text-sm leading-relaxed text-slate-300">{body}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

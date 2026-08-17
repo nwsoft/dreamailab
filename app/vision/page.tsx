@@ -62,8 +62,8 @@ export default function Vision() {
     },
     {
       year: '2026',
-      title: '기술적 혁신',
-      description: '최신 AI 기술을 활용하여 더욱 정교하고 효과적인 사회적 문제 해결 솔루션을 개발합니다.'
+      title: '기술적 혁신 · 소프트웨어 창작 접근성',
+      description: 'DAL Vibe Architect 설계를 시작해 비개발자와 장애인도 자신의 현장 문제를 한국 운영환경에 맞는 소프트웨어로 구현할 수 있는 기반을 개발합니다.'
     },
     {
       year: '2027',
@@ -403,4 +403,4 @@ export default function Vision() {
       <Footer />
     </div>
   )
-} 
+}

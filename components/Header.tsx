@@ -13,6 +13,7 @@ export default function Header() {
     { name: '기술', href: '/technology' },
     { name: '비즈니스', href: '/business' },
     { name: '서비스', href: '/services' },
+    { name: '바이브코딩', href: '/services/vibe-architect' },
     { name: '공공', href: '/public' },
     { name: 'IR', href: '/ir' },
     { name: '뉴스', href: '/news' },
@@ -32,7 +33,7 @@ export default function Header() {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-6">
+          <div className="hidden xl:flex items-center space-x-5">
             {navigation.map((item) => (
               <Link
                 key={item.name}
@@ -51,7 +52,7 @@ export default function Header() {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden flex items-center">
+          <div className="xl:hidden flex items-center">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-primary-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500"
@@ -72,7 +73,7 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden">
+          <div className="xl:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
               {navigation.map((item) => (
                 <Link
@@ -90,4 +91,4 @@ export default function Header() {
       </nav>
     </header>
   )
-} 
+}

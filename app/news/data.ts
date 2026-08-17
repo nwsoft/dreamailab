@@ -78,6 +78,188 @@ export function getLocalizedArticle(
 
 export const newsArticles: NewsArticle[] = [
   {
+    id: 94,
+    title: '드림에이아이랩, 한국형 바이브코딩 넘어선 ‘AI Software Architect’ 신규 프로젝트 착수',
+    excerpt:
+      '비개발자의 아이디어를 요구사항·아키텍처·보안·접근성·테스트·배포·운영으로 번역하는 DAL Vibe Architect 설계를 공개했다. 한국 운영환경과 장애인 창작자를 처음부터 포함하는 소프트웨어 창작 인프라를 지향한다.',
+    category: 'company',
+    date: '2026-08-17',
+    image: '⌁',
+    featured: true,
+    author: '드림에이아이랩',
+    authorUrl: 'https://dreamailab.com/',
+    about: [
+      {
+        type: 'Organization',
+        id: 'https://dreamailab.com/#organization',
+        name: '드림에이아이랩',
+        alternateName: ['Dream AI Lab', 'DAL'],
+        url: 'https://dreamailab.com/',
+        description: 'AI디지털케어로그 기반 플랫폼·데이터 인프라 기업',
+      },
+      {
+        type: 'SoftwareApplication',
+        name: 'DAL Vibe Architect',
+        alternateName: ['DAL AI Software Architect', 'DAL 바이브 아키텍트'],
+        url: 'https://dreamailab.com/services/vibe-architect/',
+        description: '한국형 AI 소프트웨어 아키텍트 신규 프로젝트. 2026년 8월 기준 설계 공개·개발 준비 단계',
+      },
+    ],
+    mentions: [
+      {
+        type: 'DefinedTerm',
+        name: 'AI Software Architect',
+        alternateName: ['Architecture-to-Execution AI'],
+        url: 'https://dreamailab.com/services/vibe-architect/',
+        description: '사람의 의도를 요구사항·시스템 구조·검증·운영으로 번역하는 AI 소프트웨어 창작 구조',
+      },
+    ],
+    tags: [
+      '바이브코딩',
+      'AI Software Architect',
+      'DAL Vibe Architect',
+      '한국형 AI',
+      '소프트웨어 창작 플랫폼',
+      'Architecture Guardian',
+      '비개발자',
+      '장애인 접근성',
+      'WCAG 2.2',
+      '한국 SaaS',
+    ],
+    faq: [
+      {
+        question: 'DAL Vibe Architect는 Cursor 같은 AI 코드 편집기인가?',
+        answer:
+          '아니다. 개발자용 편집기 경쟁보다 비개발자의 의도를 제품 요구사항, 시스템 아키텍처, 보안, 접근성, 테스트, 배포, 운영으로 번역하는 Software Creation Platform을 목표로 한다.',
+      },
+      {
+        question: '현재 사용할 수 있는 서비스인가?',
+        answer:
+          '아니다. 2026년 8월 17일 기준 신규 프로젝트의 방향과 아키텍처를 공개한 단계다. 공개 빌더, 요금제, 확정 출시일은 없다.',
+      },
+      {
+        question: '한국형의 핵심은 무엇인가?',
+        answer:
+          '한국어 UI를 넘어 국내 인증·결제·메시징·개인정보·사업자·관리자 운영과 산업별 현장 흐름을 아키텍처 단계에서 다루는 것이다.',
+      },
+      {
+        question: '장애인 접근성은 어떻게 반영하나?',
+        answer:
+          '제작 도구의 키보드·스크린리더·음성·확대·대체입력 지원, 쉬운 말과 단계형 흐름, 생성 결과의 WCAG 기반 검증, 장애 당사자 공동설계를 제품 게이트에 포함할 계획이다.',
+      },
+    ],
+    content: `
+      <p class="text-sm text-gray-500 mb-6">[회사 뉴스 · 신규 프로젝트 · 2026-08-17]</p>
+      <p class="text-xl font-semibold text-gray-800 mb-4 leading-relaxed">
+        코드 생성 경쟁 대신 비개발자의 의도를 실제 운영 구조로 번역
+      </p>
+      <ul class="list-disc list-inside text-lg text-gray-800 mb-8 space-y-2 leading-relaxed">
+        <li>Intent AI &rarr; Product Architect &rarr; System Architect &rarr; Safety &rarr; Build &rarr; QA &rarr; Operations</li>
+        <li>한국 인증&middot;결제&middot;메시징&middot;개인정보&middot;관리자 운영을 처음부터 설계</li>
+        <li>장애인이 만드는 과정과 생성된 서비스의 접근성을 함께 검증</li>
+      </ul>
+      <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-4">
+        드림에이아이랩이 바이브코딩 시장에서 코드 편집기의 복제가 아닌 &lsquo;AI Software Architect&rsquo;라는 새로운 제품 범주를 제안했다. 사람은 사업과 현장에 답하고, 시스템이 기술 복잡성을 흡수하는 구조다.
+      </p>
+
+      <div class="rounded-2xl bg-slate-950 p-8 mb-10 text-white">
+        <p class="text-sm font-semibold text-cyan-300 mb-3">DAL Vibe Architect · Working name</p>
+        <p class="text-2xl md:text-3xl font-bold leading-relaxed mb-4">코딩을 쉽게 만드는 AI가 아니라,<br/>코딩을 몰라도 운영 가능한 소프트웨어를 만드는 AI</p>
+        <p class="text-slate-300 leading-relaxed">2026년 8월 기준 설계 공개&middot;개발 준비 단계. 공개 빌더&middot;요금제&middot;확정 출시일 없음.</p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">코드를 몰라서가 아니라, 무엇을 확인해야 하는지 몰라서 실패한다</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        사용자가 &ldquo;예약 홈페이지를 만들어 달라&rdquo;고 요청하면 AI는 코드를 만들 수 있다. 그러나 실제 서비스에는 사용자 역할, 인증, 데이터 스키마, 예약 중복, 개인정보, 결제, 오류 처리, 관리자 권한, 로그, 백업, 배포와 복구가 함께 숨어 있다.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        비개발자의 핵심 장벽은 코드를 쓰지 못하는 것보다 필요한 질문을 모르고, 결과가 안전한지 판단하기 어렵다는 점이다. DAL은 &ldquo;초보자가 AI에게 코딩을 잘 시키는 법&rdquo; 대신 &ldquo;왜 초보자가 개발 전 과정을 알아야 서비스를 만들 수 있는가&rdquo;로 문제를 다시 정의했다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">7개 계층이 의도부터 운영 결과까지 연결</h2>
+      <div class="grid md:grid-cols-2 gap-4 mb-8">
+        <div class="bg-cyan-50 p-5 rounded-xl"><h3 class="font-bold text-cyan-950 mb-2">Intent &middot; Product Architect</h3><p class="text-gray-700">아이디어, 사용자, 역할, 업무 흐름, 성공 기준을 기술용어가 아닌 사업 질문으로 구체화한다.</p></div>
+        <div class="bg-indigo-50 p-5 rounded-xl"><h3 class="font-bold text-indigo-950 mb-2">System &middot; Safety Architect</h3><p class="text-gray-700">데이터, 권한, API, 보안, 개인정보, 접근성, 운영 책임을 하나의 승인된 설계로 만든다.</p></div>
+        <div class="bg-violet-50 p-5 rounded-xl"><h3 class="font-bold text-violet-950 mb-2">Build &middot; QA &middot; Deploy</h3><p class="text-gray-700">개발 에이전트가 설계에 따라 구현하고, 테스트&middot;회귀검증&middot;배포&middot;복구 준비를 통과한다.</p></div>
+        <div class="bg-emerald-50 p-5 rounded-xl"><h3 class="font-bold text-emerald-950 mb-2">Operations &middot; Maintenance</h3><p class="text-gray-700">실사용 오류와 운영 결과를 다음 아키텍처 선택에 환류하는 폐쇄루프를 지향한다.</p></div>
+      </div>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        예를 들어 사용자가 &ldquo;회원가입에 전화번호 하나를 추가해 달라&rdquo;고 요청해도 시스템 내부에서는 User Schema &rarr; Migration &rarr; Validation &rarr; API &rarr; UI &rarr; Privacy &rarr; Test 영향을 추적한다. 이 계층을 DAL은 <strong>Architecture Guardian</strong>으로 정의했다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">빠르게 통합되는 글로벌 시장, DAL은 다른 병목을 선택</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        AI 코딩 시장은 코드 생성에서 리뷰&middot;협업&middot;모델 인프라로 빠르게 확장되고 있다. Cursor는 2025년 12월 Graphite 인수 계약을 발표하며 코드 작성과 리뷰의 경계를 좁히겠다고 밝혔고, 2026년 4월에는 SpaceX와 모델 학습 파트너십을 발표했다.
+      </p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        이는 전문 개발자용 시장의 성숙과 통합을 보여준다. DAL은 같은 편집기 경쟁에 들어가기보다 한국 현장의 운영요건과 비개발자의 판단, 변경 안전성, 접근성이라는 다른 병목에 집중한다.
+      </p>
+      <p class="text-sm text-gray-600 mb-8 leading-relaxed">
+        시장 근거: <a href="https://cursor.com/blog/graphite" target="_blank" rel="noopener noreferrer" class="text-primary-700 underline">Cursor &middot; Graphite 발표</a> &middot;
+        <a href="https://cursor.com/blog/spacex-model-training" target="_blank" rel="noopener noreferrer" class="text-primary-700 underline">Cursor &middot; SpaceX 모델 학습 파트너십</a>
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">한국형은 한국어 UI가 아니라 운영 아키텍처</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        학원&middot;센터&middot;소상공인&middot;협회&middot;공공조직이 실제 서비스를 운영하려면 한국형 주소와 휴대전화 흐름, 국내 로그인&middot;결제&middot;메시징, 영수증&middot;정산, 개인정보 동의와 철회, 관리자 업무와 고객지원이 필요하다.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        DAL은 이 요소를 나중에 붙이는 연동 목록이 아니라 요구사항과 데이터 모델 단계에서 제안하는 산업별 블루프린트로 설계한다. 실제 출시 전에는 각 분야 최신 법령과 전문가 검토를 별도 게이트로 둔다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">장애인을 위한 기능을 더하는 것이 아니라, 배제하지 않는 제작 구조</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        생성형 AI 코딩 도구가 시각장애 개발자의 기존 접근성 장벽을 악화하거나 새로운 장벽을 만들 수 있다는 연구가 보고됐다. 저코드&middot;노코드 도구도 시각적 조작에 크게 의존하면 창작 참여 자체를 막을 수 있다.
+      </p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        DAL은 키보드&middot;스크린리더&middot;음성&middot;확대&middot;스위치 입력을 고려한 제작 도구, 쉬운 말과 단계형 의사결정, 생성 결과의 WCAG 기반 검사, 장애 당사자 공동설계를 제품 게이트로 계획한다. 자동 검사만으로 접근성 적합을 선언하지 않는다.
+      </p>
+      <p class="text-sm text-gray-600 mb-8 leading-relaxed">
+        연구&middot;표준: <a href="https://www.microsoft.com/en-us/research/publication/the-impact-of-generative-ai-coding-assistants-on-developers-who-are-visually-impaired/" target="_blank" rel="noopener noreferrer" class="text-primary-700 underline">Microsoft Research &middot; 시각장애 개발자 연구</a> &middot;
+        <a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank" rel="noopener noreferrer" class="text-primary-700 underline">W3C &middot; WCAG 2.2</a>
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">정해성 CTO의 구조적 전이를 소프트웨어 제작에 적용</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        드림에이아이랩은 정해성 CTO의 기존 설계 패턴을 현실 문제 &rarr; 구조 발견 &rarr; 추상화 &rarr; 범용 아키텍처 &rarr; 산업별 재구체화 &rarr; 제품 &rarr; 결과 학습의 반복으로 설명한다. 자람이, 시니어앤라이프, Global Couple Care와 분리 운영된 NoahAI에서 서로 다른 도메인을 제품 구조로 내려온 방식을 개발도구 자체에 적용한다는 것이다.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        이는 회사가 공개한 설계 철학과 제품 이력에 근거한 설명이다. 개인의 세계적 수준, 시장 지배력, 새로운 패러다임의 성립 여부는 향후 제품 성과와 외부 연구&middot;지표를 통한 독립적 검증이 필요하다.
+      </p>
+
+      <div class="bg-amber-50 border border-amber-200 rounded-2xl p-6 mb-8">
+        <h2 class="text-xl font-bold text-amber-950 mb-3">현재 상태를 명확히 구분합니다</h2>
+        <p class="text-gray-800 leading-relaxed"><strong>현재:</strong> 프로젝트 방향&middot;아키텍처 공개, 공동설계&middot;파일럿 파트너 탐색.</p>
+        <p class="text-gray-800 leading-relaxed mt-2"><strong>아직 아님:</strong> 공개 빌더, 상용 출시, 요금제, 법률&middot;접근성 준수 성과, 확정 출시일.</p>
+        <p class="text-gray-800 leading-relaxed mt-2"><strong>명칭:</strong> DAL Vibe Architect는 프로젝트명으로 변경될 수 있음.</p>
+      </div>
+      <p class="text-lg text-gray-700 leading-relaxed">
+        프로젝트 설계와 공동설계 문의는 <a href="/services/vibe-architect" class="font-semibold text-primary-700 underline">DAL Vibe Architect 상세 페이지</a>에서 확인할 수 있다.
+      </p>
+    `,
+    i18n: {
+      en: {
+        title: 'Dream AI Lab starts DAL Vibe Architect, a Korea-ready AI Software Architect project',
+        excerpt:
+          'The new project aims to translate non-developers’ intent into requirements, architecture, security, accessibility, testing, deployment and operations—with Korean workflows and disabled creators included from the start.',
+        content: `
+          <p class="text-sm text-gray-500 mb-6">[Company news · New project · 17 August 2026]</p>
+          <p class="text-xl font-semibold text-gray-800 mb-6 leading-relaxed">Beyond code generation: translating human intent into operable software</p>
+          <p class="text-lg text-gray-700 mb-6 leading-relaxed">Dream AI Lab has published the direction and architecture of DAL Vibe Architect, a new AI Software Architect project. Rather than competing head-on as another developer code editor, it is designed to help non-developers make business decisions while the system handles requirements, data, permissions, security, accessibility, tests, deployment and maintenance.</p>
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">A seven-layer architecture</h2>
+          <p class="text-lg text-gray-700 mb-6 leading-relaxed">Intent AI &rarr; Product Architect AI &rarr; System Architect AI &rarr; Safety and Compliance AI &rarr; Build Agents &rarr; QA and Deploy Agents &rarr; Operations and Maintenance Loop.</p>
+          <p class="text-lg text-gray-700 mb-6 leading-relaxed">An Architecture Guardian is intended to track the full impact of even a small request across schemas, migrations, validation, APIs, interfaces, privacy and regression tests.</p>
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">Built for Korean operations and disability inclusion</h2>
+          <p class="text-lg text-gray-700 mb-6 leading-relaxed">The project treats Korean identity, login, payment, messaging, privacy, administration and industry workflows as architecture requirements, not localization add-ons. It also puts accessibility in both layers: the creation tool itself and the products it generates.</p>
+          <p class="text-lg text-gray-700 mb-6 leading-relaxed">Keyboard, screen reader, voice, magnification and alternative-input support, plain-language staged decisions, WCAG-based output gates and co-design with disabled people are planned. Automated checks alone will not be presented as proof of accessibility.</p>
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">Current status</h2>
+          <p class="text-lg text-gray-700 mb-6 leading-relaxed">As of 17 August 2026 this is a newly announced project at architecture and co-design stage. There is no public builder, pricing or confirmed launch date. DAL Vibe Architect is a working name.</p>
+          <p class="text-lg text-gray-700 leading-relaxed">See the <a href="/en/services/vibe-architect" class="font-semibold text-primary-700 underline">project overview</a> for the full scope.</p>
+        `,
+      },
+    },
+  },
+  {
     id: 93,
     title:
       '노아AI, 출시 한 달 만에 ‘34억 건’ 실전 데이터 폭발… 금융 AI 패러다임 바꾼다',
@@ -302,9 +484,9 @@ export const newsArticles: NewsArticle[] = [
   {
     id: 92,
     title:
-      '시니어앤라이프, 재가돌봄 점유율 70% 돌파… “돌봄 IT 시장 사실상 독주”',
+      '시니어앤라이프, 재가돌봄 등록·연계 지표 공개… 요양원·요양병원 확장 계획',
     excerpt:
-      '전국 재가기관 1만 곳·주간보호 1,200곳 확보, 이용자 80만 명으로 시장 선점. 6개월간 시니어 일상 데이터 890만 건을 처리하고, 요양원·요양병원으로 영역을 확장해 생애 통합 돌봄 OS를 목표로 한다.',
+      '시니어앤라이프가 재가기관 1만 곳·주간보호 1,200곳 등 자체 등록·연계 지표를 공개했다. 이는 활성 도입·이용자 수와 구분되며, 현재 서비스는 시설 검색·장기요양 안내를 운영하는 Pilot이다.',
     category: 'press',
     date: '2026-08-17',
     image: '🏡',
@@ -373,12 +555,12 @@ export const newsArticles: NewsArticle[] = [
       {
         question: '시니어앤라이프 재가돌봄 점유율은 얼마인가?',
         answer:
-          '시니어앤라이프가 공개한 지표 기준, 전국 재가장기요양기관 약 1만 3,000~1만 4,000곳 가운데 재가기관 1만 곳을 확보해 재가 분야 점유율 약 70%다.',
+          '회사가 공개한 등록·연계 풀 1만 곳을 전국 기관 수와 단순 비교하면 약 70%에 해당한다. 이는 유료 도입률·활성 사용률·독립 검증 시장점유율을 뜻하지 않는다.',
       },
       {
         question: '주간보호 점유율과 이용자 수는?',
         answer:
-          '주간보호기관 1,200곳을 확보했으며, 전국 주야간보호센터 약 3,200곳 대비 점유율은 35%를 넘는다. 서비스 제공자와 보호자를 포함한 이용자는 80만 명이다.',
+          '회사 공개 자료는 주간보호기관 1,200곳과 제공자·보호자 등 80만 명을 제시한다. 현재 공개 서비스의 실제 활성 사용자·유료 도입과는 구분해 해석해야 한다.',
       },
       {
         question: '890만 건 데이터는 무엇인가?',
@@ -399,19 +581,19 @@ export const newsArticles: NewsArticle[] = [
     i18n: {
       en: {
         title:
-          'Senior & Life exceeds 70% home-care share: “de facto lead in care IT”',
+          'Senior & Life reports home-care registration reach and plans expansion into nursing facilities',
         excerpt:
-          'The platform now covers 10,000 home-care sites and 1,200 day-care centers, with 800,000 users. That is about 70% of Korea’s home long-term care agencies and more than 35% of day-care centers. Next is a life-course care OS spanning nursing homes and hospitals.',
+          'Senior & Life reported a self-published registration and linkage pool of 10,000 home-care sites and 1,200 day-care centers. These figures are not the same as active deployments or independently verified market share; the current product is a Pilot.',
         faq: [
           {
             question: 'What is Senior & Life’s home-care market share?',
             answer:
-              'With 10,000 home-care sites against about 13,000–14,000 home long-term care agencies nationwide, Senior & Life puts home-care share at about 70%.',
+              'The company’s registration and linkage pool of 10,000 sites is roughly 70% of the cited nationwide denominator. It is not an independently verified active-deployment or paid-market share.',
           },
           {
             question: 'What about day care and users?',
             answer:
-              'It has 1,200 day-care centers, more than 35% of about 3,200 nationwide, and 800,000 users including providers and families.',
+              'The company reported 1,200 day-care centers and a pool of 800,000 providers and family members. Current active users and paid deployments should be evaluated separately.',
           },
           {
             question: 'What are the 8.9 million records?',
@@ -431,6 +613,7 @@ export const newsArticles: NewsArticle[] = [
         ],
         content: `
       <p class="text-sm text-gray-500 mb-6">[Feature / IT·Bio · 2026-08-17]</p>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-5 mb-8 text-gray-800 leading-relaxed"><strong>Editorial status note:</strong> The figures below are self-reported registration, linkage and data-pool metrics. They are not independently verified active-deployment share. The current product is a Pilot: facility search and long-term-care guidance are live, while Care Log and administrative SaaS remain phased roadmap items.</div>
       <p class="text-xl font-semibold text-gray-800 mb-4 leading-relaxed">
         10,000 home-care sites and 1,200 day-care centers, with 800,000 users
       </p>
@@ -439,7 +622,7 @@ export const newsArticles: NewsArticle[] = [
         <li>Beyond home care and day care into nursing homes and hospitals: a life-course care OS</li>
       </ul>
       <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-4">
-        Senior &amp; Life is widening its lead in Korea&rsquo;s senior-care IT market. The integrated platform now covers more than 70% of home-care agencies and has solidified its No. 1 position in care-data infrastructure.
+        Senior &amp; Life has published registration and linkage metrics for the home-care market and outlined a phased expansion toward nursing homes and long-term hospitals.
       </p>
       <figure class="mb-10">
         <img src="/images/news/news-92-senior-expansion-og.jpg" alt="Senior &amp; Life connecting home care, day care, nursing homes and hospitals" class="w-full rounded-xl object-cover" width="1200" height="630" loading="eager" decoding="async" />
@@ -449,11 +632,11 @@ export const newsArticles: NewsArticle[] = [
         KPI released on 17 August show 10,000 home-care sites and 1,200 day-care centers on the platform. Users, including providers and families, have reached 800,000.
       </p>
       <p class="text-lg text-gray-700 mb-8 leading-relaxed">
-        Against about 13,000&ndash;14,000 home long-term care agencies and about 3,200 day-care centers nationwide, home-care share is about 70% and day-care share exceeds 35%. The gap with later entrants has widened enough that the market is described as effectively dominated.
+        Comparing the company&rsquo;s pool with the cited national denominators yields about 70% for home care and more than 35% for day care. These are reach ratios based on self-published registration and linkage data, not independently verified active-use or paid-deployment market share.
       </p>
       <h2 class="text-2xl font-bold text-gray-900 mb-4">A data gap others cannot close: 8.9 million records in six months</h2>
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        The lead is not only the number of sites. It is the scale and continuity of life data from the field.
+        The company says the longer-term opportunity lies in the scale and continuity of life data from the field, subject to consent, data quality and active-use verification.
       </p>
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
         In the past six months the platform collected and quality-processed 8.9 million senior activity records, about 49,000 high-quality records a day.
@@ -462,7 +645,7 @@ export const newsArticles: NewsArticle[] = [
         Medication, meals, sleep, activity, cognitive status, and fall risk are recorded across daily life. More sites bring more data, which improves AI analysis, which raises service value, which brings new sites. That exclusive data flywheel is now running.
       </p>
       <p class="text-lg text-gray-700 mb-8 leading-relaxed">
-        An IT industry source said 800,000 users and 8.9 million real-time records are a barrier that is hard to close in a short time, and that Senior &amp; Life has moved beyond a work-management program to become the standard operating system of Korean senior care.
+        The company presents 800,000 linked people and 8.9 million records as a potential data advantage. Independent verification of active users, record provenance and operating outcomes remains necessary.
       </p>
       <h2 class="text-2xl font-bold text-gray-900 mb-4">AI Digital Care Log: expanding into nursing homes and hospitals</h2>
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
@@ -490,6 +673,7 @@ export const newsArticles: NewsArticle[] = [
     },
     content: `
       <p class="text-sm text-gray-500 mb-6">[기획/IT·바이오 · 2026-08-17]</p>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-5 mb-8 text-gray-800 leading-relaxed"><strong>편집자 상태 고지:</strong> 아래 수치는 회사가 공개한 등록·연계·데이터 풀 지표이며, 독립 검증된 활성 도입 시장점유율이 아닙니다. 현재 제품은 Pilot로 시설 검색·장기요양 안내를 운영하고, 케어로그·행정 SaaS는 단계적 로드맵입니다.</div>
       <p class="text-xl font-semibold text-gray-800 mb-4 leading-relaxed">
         전국 재가기관 1만 곳&middot;주간보호 1,200곳 확보&hellip; 이용자 80만 명으로 시장 선점
       </p>
@@ -498,17 +682,17 @@ export const newsArticles: NewsArticle[] = [
         <li>재가&middot;주간보호 넘어 요양원&middot;요양병원으로 영역 확장&hellip; &ldquo;생애 통합 돌봄 OS 목표&rdquo;</li>
       </ul>
       <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-4">
-        대한민국 시니어 돌봄 IT 시장에서 초격차를 확대하며 독주 체제를 구축한 플랫폼이 주목받고 있다. 통합 시니어 돌봄 플랫폼 &lsquo;시니어앤라이프&rsquo;가 전국 재가돌봄 기관의 70% 이상을 확보하며, 돌봄 데이터 인프라 시장에서 부동의 1위 지위를 한층 공고히 했다.
+        통합 시니어 돌봄 플랫폼 &lsquo;시니어앤라이프&rsquo;가 재가돌봄 등록·연계 풀과 데이터 처리 관련 자체 지표를 공개하고, 요양원·요양병원으로의 단계적 확장 계획을 밝혔다.
       </p>
       <figure class="mb-10">
         <img src="/images/news/news-92-senior-expansion-og.jpg" alt="재가돌봄·주간보호에서 요양원·요양병원까지 이어지는 시니어앤라이프 돌봄 현장" class="w-full rounded-xl object-cover" width="1200" height="630" loading="eager" decoding="async" />
         <figcaption class="mt-3 text-sm text-gray-500 text-center">재가&middot;주간보호에서 요양원&middot;요양병원으로 영역을 넓히는 시니어앤라이프</figcaption>
       </figure>
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        17일 시니어앤라이프가 공개한 주요 경영 지표(KPI)에 따르면, 플랫폼을 도입한 재가돌봄 관련 기관은 1만 곳, 주간보호기관은 1,200곳을 돌파했다. 서비스 제공자와 보호자를 포함한 전체 이용자 수만 80만 명에 이른다.
+        17일 시니어앤라이프가 공개한 자체 지표에 따르면, 등록·연계 풀은 재가돌봄 관련 기관 1만 곳, 주간보호기관 1,200곳이며 서비스 제공자와 보호자를 포함한 대상 풀은 80만 명이다. 이는 전원 활성 사용자나 동일 제품 스택의 유료 도입을 의미하지 않는다.
       </p>
       <p class="text-lg text-gray-700 mb-8 leading-relaxed">
-        현재 전국 재가장기요양기관(약 1만 3,000~1만 4,000여 곳)과 주야간보호센터(약 3,200여 곳)의 전체 규모를 고려할 때, 재가 분야 시장 점유율은 약 70%, 주간보호 분야 점유율은 35%를 넘어서는 압도적 수치다. 후발 주자들과의 격차를 현격히 벌리며 시장을 사실상 석권했다는 평가가 나오는 이유다.
+        현재 전국 재가장기요양기관(약 1만 3,000~1만 4,000여 곳)과 주야간보호센터(약 3,200여 곳)의 전체 규모에 단순 대비하면 각각 약 70%, 35%에 해당한다. 다만 이는 회사가 공개한 등록·연계 기준 도달 비율이며, 독립 검증된 활성 사용·유료 도입 시장점유율과는 구분된다.
       </p>
       <h2 class="text-2xl font-bold text-gray-900 mb-4">따라올 수 없는 &lsquo;데이터 초격차&rsquo;&hellip; 6개월간 890만 건 실시간 정제</h2>
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
@@ -521,7 +705,7 @@ export const newsArticles: NewsArticle[] = [
         복약, 식사, 수면, 활동량, 인지 상태, 낙상 위험 등 시니어의 일상 전반이 기록되면서, 시니어앤라이프는 &lsquo;이용 기관 확대 &rarr; 데이터 축적 &rarr; AI 분석 고도화 &rarr; 서비스 가치 상승 &rarr; 신규 유입&rsquo;으로 이어지는 독점적 데이터 플라이휠(Data Flywheel)을 가동하고 있다.
       </p>
       <p class="text-lg text-gray-700 mb-8 leading-relaxed">
-        IT 업계 관계자는 &ldquo;시니어 돌봄 시장에서 이용자 80만 명과 890만 건의 실시간 데이터는 단기간에 추격하기 어려운 거대한 진입장벽&rdquo;이라며 &ldquo;단순 업무 관리 프로그램을 넘어 국내 시니어 돌봄의 표준 운영체제(OS)로 자리매김했다&rdquo;고 분석했다.
+        시니어앤라이프는 80만 명의 연계 대상과 890만 건의 기록을 장기 데이터 기반의 가능성으로 제시했다. 실제 활성 사용자, 데이터 출처·동의·품질, 운영 성과는 향후 파일럿과 외부 검증에서 별도로 확인해야 한다.
       </p>
       <h2 class="text-2xl font-bold text-gray-900 mb-4">단절된 돌봄 체계 잇는 &lsquo;AI 디지털 케어로그&rsquo;&hellip; 요양원&middot;요양병원으로 영토 확장</h2>
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">

@@ -11,10 +11,10 @@ import { absoluteUrl, buildBreadcrumbJsonLd, buildPageMetadata, buildWebPageJson
 
 export const metadata: Metadata = buildPageMetadata({
   title: '서비스 생태계 허브 - AI디지털케어로그 플랫폼 인프라 | 드림에이아이랩',
-  description: AI_DIGITAL_CARE_LOG_PUBLIC_KO,
+  description: `${AI_DIGITAL_CARE_LOG_PUBLIC_KO} 6개 핵심 도메인과 한국형 AI 소프트웨어 아키텍트 신규 프로젝트를 확인하세요.`,
   path: '/services',
   ogTitle: '서비스 생태계 허브 - 드림에이아이랩',
-  ogDescription: 'AI디지털케어로그 기반 6개 도메인이 어떻게 연결되고 확장되는지 한 페이지에서 확인하세요.',
+  ogDescription: 'AI디지털케어로그 기반 6개 도메인과 신규 DAL Vibe Architect 프로젝트를 한 페이지에서 확인하세요.',
   ogImageAlt: '드림에이아이랩 서비스 포트폴리오',
 })
 
@@ -43,7 +43,7 @@ const services = [
   },
   {
     name: '시니어앤라이프',
-    status: 'Commercial Beta',
+    status: 'Pilot',
     mark: 'SL',
     domain: '시니어·노인돌봄',
     summary: '재가·시설·병원·가족 사이에서 흩어지는 시니어 돌봄·생활·행정 정보를 하나의 흐름으로 잇는 케어 인프라',
@@ -133,6 +133,14 @@ const noahNotice = {
   externalUrl: 'https://noahailabs.com',
 }
 
+const newSoftwareProject = {
+  name: 'DAL Vibe Architect',
+  url: '/services/vibe-architect',
+  status: '설계 공개 · 개발 준비',
+  description:
+    '비개발자의 아이디어를 요구사항·아키텍처·보안·접근성·테스트·배포·운영으로 번역하는 한국형 AI Software Architect 신규 프로젝트',
+}
+
 export default function ServicePortfolio() {
   const totalServices = services.length
 
@@ -151,6 +159,19 @@ export default function ServicePortfolio() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Service',
+            name: newSoftwareProject.name,
+            url: absoluteUrl(newSoftwareProject.url),
+            description: newSoftwareProject.description,
+            provider: { '@id': 'https://dreamailab.com/#organization' },
+          }),
+        }}
       />
       <script
         type="application/ld+json"
@@ -228,6 +249,46 @@ export default function ServicePortfolio() {
               DAL의 서비스 생태계는 이 분리된 문제들을 하나의 AI디지털케어로그 구조로 다시 연결하기 위한 도메인 확장입니다. 같은 사람의
               연속 데이터를 인프라 관점에서 통합합니다.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Core 6개 도메인과 분리된 2026 신규 소프트웨어 창작 프로젝트 */}
+      <section className="border-y border-cyan-300/20 bg-slate-950 py-16 text-white">
+        <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:px-8">
+          <div>
+            <div className="flex flex-wrap gap-2">
+              <span className="rounded-full bg-cyan-300 px-3 py-1 text-xs font-black text-slate-950">NEW PLATFORM PROJECT</span>
+              <span className="rounded-full border border-white/20 px-3 py-1 text-xs font-semibold text-slate-200">{newSoftwareProject.status}</span>
+            </div>
+            <p className="mt-5 text-sm font-bold uppercase tracking-[0.16em] text-cyan-300">{newSoftwareProject.name}</p>
+            <h2 className="mt-2 text-3xl font-black sm:text-4xl">아이디어를 실제 운영 가능한 소프트웨어로</h2>
+            <p className="mt-5 text-lg leading-relaxed text-slate-300">{newSoftwareProject.description}입니다.</p>
+            <p className="mt-4 leading-relaxed text-slate-400">
+              기존 6개 케어·라이프 도메인에 억지로 포함하지 않습니다. 여러 산업을 실제 제품으로 재구체화해 온 DAL의 구조적 전이 방식을
+              소프트웨어 제작 자체에 적용하는 새로운 플랫폼 축입니다.
+            </p>
+            <div className="mt-7 flex flex-wrap gap-3">
+              <Link href={newSoftwareProject.url} className="rounded-xl bg-cyan-300 px-6 py-3 font-bold text-slate-950 hover:bg-cyan-200">
+                프로젝트 설계 보기
+              </Link>
+              <Link href="/contact?service=vibe-architect&type=partnership" className="rounded-xl border border-white/30 px-6 py-3 font-bold hover:bg-white/10">
+                공동설계·파일럿 문의
+              </Link>
+            </div>
+          </div>
+          <div className="grid gap-3 sm:grid-cols-2">
+            {[
+              ['의도 이해', '기술용어 대신 사업·현장 질문'],
+              ['아키텍처 설계', '역할·데이터·권한·운영 구조'],
+              ['변경 안전성', '영향 분석·회귀검증·복구'],
+              ['한국·접근성', '국내 운영요건·장애인 공동설계'],
+            ].map(([title, body]) => (
+              <div key={title} className="rounded-2xl border border-white/10 bg-white/[0.06] p-5">
+                <h3 className="font-bold text-cyan-100">{title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-slate-300">{body}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -524,7 +585,6 @@ type ServiceItem = (typeof services)[number]
 function ServiceSummaryCard({ service }: { service: ServiceItem }) {
   const statusStyles: Record<string, { color: string; label: string }> = {
     Commercial: { color: 'bg-emerald-100 text-emerald-900', label: 'Service Status: Commercial (상용)' },
-    'Commercial Beta': { color: 'bg-teal-100 text-teal-900', label: 'Service Status: Commercial Beta (상용베타)' },
     Beta: { color: 'bg-blue-100 text-blue-800', label: 'Service Status: Beta (베타)' },
     Alpha: { color: 'bg-amber-100 text-amber-900', label: 'Service Status: Alpha (알파)' },
     Pilot: { color: 'bg-violet-100 text-violet-800', label: 'Service Status: Pilot (파일럿)' },

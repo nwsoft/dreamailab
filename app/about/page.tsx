@@ -65,6 +65,11 @@ export default function About() {
       year: '2025',
       title: 'AI디지털케어로그 발표',
       description: 'DAL 주요서비스에 탑재, 통합 플랫폼 완성'
+    },
+    {
+      year: '2026',
+      title: 'DAL Vibe Architect 신규 프로젝트',
+      description: '한국형 운영환경·비개발자·장애인 접근성을 위한 AI Software Architect 설계 공개'
     }
   ]
 
@@ -105,6 +110,18 @@ export default function About() {
         '장기 Robot Integration 비전',
       ],
       href: '/research/pet-ai' as string | undefined,
+    },
+    {
+      name: 'DAL Vibe Architect (New Project)',
+      description:
+        '비개발자의 의도를 요구사항·시스템 구조·보안·접근성·테스트·배포·운영으로 번역하는 한국형 AI Software Architect 프로젝트입니다. 2026년 8월 기준 설계 공개·개발 준비 단계입니다.',
+      features: [
+        'Intent AI → Product/System Architect AI',
+        'Architecture Guardian · 회귀검증·복구',
+        '한국 인증·결제·메시징·운영 블루프린트',
+        '장애 당사자 공동설계·접근성 게이트',
+      ],
+      href: '/services/vibe-architect' as string | undefined,
     },
   ]
 
@@ -177,9 +194,14 @@ export default function About() {
               </p>
               <p className="text-lg text-gray-600 mb-6">
                 연구기관 안의 R&amp;D에 머물지 않고 실제 생활과 운영에서 생성되는 RWD를 제품에 연결하고,
-                판단·실행 결과로부터 RWE를 축적하는 실학적 접근을 취합니다. 자람이(상용), 시니어앤라이프(상용베타),
+                판단·실행 결과로부터 RWE를 축적하는 실학적 접근을 취합니다. 자람이(상용), 시니어앤라이프(Pilot),
                 토탈케어로그(알파), NoahAI(분리·상용화)처럼 도메인별 단계와 근거를 구분해 현장에서 실증하고 사업화합니다.
                 Global Couple Care는 현재 커뮤니티·매칭 중심으로 전개되어 케어로그 직접 적용과 구분합니다.
+              </p>
+              <p className="text-lg text-gray-600 mb-6">
+                이 설계 방식은 특정 산업 기능을 반복하는 것이 아니라, 현실 문제의 공통 구조를 발견해 범용 아키텍처로 추상화하고 다시
+                산업별 제품으로 재구체화하는 흐름입니다. 2026년 시작한 DAL Vibe Architect는 이 구조적 전이를 소프트웨어 제작 자체에
+                적용합니다. 공개된 이력에 근거한 회사의 설계 철학 설명이며, 개인의 세계적 수준이나 시장 지배력에 대한 독립적 평가는 별도 검증 대상입니다.
               </p>
               <p className="text-lg text-gray-600 mb-6">
                 우리는 공익에 가까운 돌봄·교육·의료 데이터 표준화에 집중해 신뢰를 쌓고 있습니다. 동의·규제를 전제로 한 기록은 연구·정책·현장 개선으로 환류될 수 있도록 설계하며, 공공·NGO·연구기관과의 협력으로 사회적 임팩트를 넓혀 갑니다.
@@ -199,6 +221,13 @@ export default function About() {
                     <strong>Noah AI Labs</strong> — 노아AI는 이미 분리 운영 (
                     <Link href="/services/finance" className="text-primary-600 underline">
                       이전 안내
+                    </Link>
+                    )
+                  </li>
+                  <li>
+                    <strong>DAL Vibe Architect</strong> — 한국형 AI Software Architect 신규 프로젝트 (
+                    <Link href="/services/vibe-architect" className="text-primary-600 underline">
+                      설계 공개
                     </Link>
                     )
                   </li>

@@ -46,7 +46,7 @@ export default function IRPage() {
       icon: 'user',
       title: '시니어',
       desc: '22,000+ 등록 사업자 풀(연계 기준), 초고령사회·B2B 표준화',
-      metric: '상용베타',
+      metric: '파일럿',
     },
     {
       icon: 'hospital',
@@ -59,6 +59,12 @@ export default function IRPage() {
       title: '교육',
       desc: '개별화교육 전환, 2026 정책 대응·파일럿 확대',
       metric: '파일럿',
+    },
+    {
+      icon: 'blocks',
+      title: 'AI 소프트웨어 창작',
+      desc: '한국 운영환경·비개발자·장애인 접근성에 특화한 DAL Vibe Architect 신규 프로젝트',
+      metric: '설계 공개',
     },
   ]
 
@@ -94,6 +100,7 @@ export default function IRPage() {
           <p className="text-lg text-gray-700 mb-8 max-w-4xl">
             {COMPANY_META_LINE}입니다. 하나의 AI디지털케어로그 위에 핵심 6개 도메인을 연결하며,
             초기에 집중해 온 4대 축(발달·시니어·국제결혼·라이프스타일)을 전개 중입니다. 노아AI(금융)는 별도 법인 Noah AI Labs로 기술이전되어 분리 운영 중입니다.
+            2026년에는 6개 핵심 도메인과 별도로, 비개발자의 의도를 운영 가능한 소프트웨어로 번역하는 DAL Vibe Architect 신규 프로젝트를 시작했습니다.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="bg-primary-50 rounded-xl p-5 text-center">

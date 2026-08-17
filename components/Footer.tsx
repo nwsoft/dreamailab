@@ -93,6 +93,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/services/vibe-architect" className="text-cyan-300 hover:text-white transition-colors">
+                  DAL Vibe Architect <span className="text-xs text-cyan-400">NEW</span>
+                </Link>
+              </li>
+              <li>
                 <Link href="/public" className="text-gray-300 hover:text-white transition-colors">
                   공공 협력
                 </Link>
@@ -116,6 +121,9 @@ export default function Footer() {
               </Link>
               <Link href="/services" className="text-gray-400 hover:text-white text-sm transition-colors">
                 서비스
+              </Link>
+              <Link href="/services/vibe-architect" className="text-gray-400 hover:text-white text-sm transition-colors">
+                바이브코딩 프로젝트
               </Link>
             </div>
           </div>

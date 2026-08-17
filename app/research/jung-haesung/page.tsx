@@ -87,6 +87,7 @@ const roles = [
   '세계 최초 발달장애 맞춤형 치료·학습 플랫폼 자람이 설계·개발',
   'NoahAI Labs 창업자 · NoahAI 금융·재테크 인프라 OS 설계·개발·사업화',
   '시니어앤라이프 · Global Couple Care · VeggieCare 등 DAL 서비스 기술·제품 설계 총괄',
+  'DAL Vibe Architect AI Software Architect 신규 프로젝트 설계 총괄',
 ] as const
 
 const publicMaterials = [
@@ -112,7 +113,7 @@ const profilePageSchema = {
   url: JUNG_HAESUNG_URL,
   name: 'AI 연구자 정해성',
   inLanguage: 'ko-KR',
-  dateModified: '2026-08-04',
+  dateModified: '2026-08-17',
   mainEntity: { '@id': JUNG_HAESUNG_PERSON_ID },
   about: { '@id': AI_DIGITAL_CARE_LOG_ID },
 }

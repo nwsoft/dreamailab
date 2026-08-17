@@ -46,6 +46,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: url('/services/vibe-architect'),
+      lastModified: new Date('2026-08-17'),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: url('/en/services/vibe-architect'),
+      lastModified: new Date('2026-08-17'),
+      changeFrequency: 'weekly',
+      priority: 0.75,
+    },
+    {
       url: url('/services/jarame'),
       lastModified: new Date(),
       changeFrequency: 'weekly',

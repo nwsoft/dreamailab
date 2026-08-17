@@ -56,7 +56,7 @@ export default function Business() {
       market: '고령화 시장',
       impact:
         '공공·연계 등으로 약 2만 2천여 돌봄 사업자 정보를 확보한 대상 풀. 표준화 행정·검색·매칭 등 B2B 도입을 지향(등록 수 ≠ 전원 일상 사용자)',
-      status: 'Commercial Beta',
+      status: 'Pilot',
       powered: 'Powered by AI디지털케어로그',
     },
     {
@@ -871,6 +871,40 @@ export default function Business() {
         </div>
       </section>
 
+      {/* 6개 케어 도메인과 분리된 신규 소프트웨어 창작 사업 축 */}
+      <section className="border-y border-cyan-300/20 bg-slate-950 py-14 text-white lg:py-20">
+        <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[1fr_0.9fr] lg:items-center lg:px-8">
+          <div>
+            <span className="rounded-full bg-cyan-300 px-3 py-1 text-xs font-black text-slate-950">NEW PROJECT · 2026</span>
+            <h2 className="mt-5 text-3xl font-black">DAL Vibe Architect</h2>
+            <p className="mt-4 text-lg leading-relaxed text-slate-300">
+              비개발자의 아이디어를 요구사항·아키텍처·보안·접근성·테스트·배포·운영으로 번역하는 한국형 AI Software Architect 프로젝트입니다.
+              개발자 도구의 코드 생성 경쟁이 아니라, 돌봄·교육·소상공인·공공 같은 현장의 실제 업무를 안전한 소프트웨어로 만드는 시장을 엽니다.
+            </p>
+            <p className="mt-3 text-sm leading-relaxed text-slate-400">
+              현재는 설계 공개·공동설계 파트너 탐색 단계이며, 상용 제품·요금·출시일은 확정되지 않았습니다.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <Link href="/services/vibe-architect" className="rounded-xl bg-cyan-300 px-6 py-3 font-bold text-slate-950 hover:bg-cyan-200">사업·제품 설계 보기</Link>
+              <Link href="/contact?service=vibe-architect&type=partnership" className="rounded-xl border border-white/30 px-6 py-3 font-bold hover:bg-white/10">공동설계 문의</Link>
+            </div>
+          </div>
+          <div className="grid gap-3 sm:grid-cols-2">
+            {[
+              ['초기 시장', '돌봄·교육·장애인 접근성·소상공인 운영'],
+              ['제품 구조', '산업별 블루프린트 + Architecture Guardian'],
+              ['수익 가설', '구독·사용량·산업 템플릿·기관 도입'],
+              ['검증 게이트', '공동설계 → 프로토타입 → Pilot → 측정 베타'],
+            ].map(([title, body]) => (
+              <div key={title} className="rounded-2xl border border-white/10 bg-white/[0.06] p-5">
+                <h3 className="font-bold text-cyan-100">{title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-slate-300">{body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Investment Highlights */}
       <section className="py-14 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -918,4 +952,4 @@ export default function Business() {
       <Footer />
     </div>
   )
-} 
+}
