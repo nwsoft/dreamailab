@@ -1,12 +1,14 @@
 name = "dreamailab"
 compatibility_date = "2024-01-01"
+main = "worker.ts"
 
 # 정적 사이트 (Next.js export → out/)
 [assets]
 directory = "./out"
+binding = "ASSETS"
 
 [env.production]
 name = "dreamailab-production"
 
 [env.staging]
-name = "dreamailab-staging" 
+name = "dreamailab-staging"
