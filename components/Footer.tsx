@@ -5,7 +5,7 @@ const companyLinks = [
   ['철학·비전', '/vision'],
   ['기술', '/technology'],
   ['비즈니스', '/business'],
-  ['Research', '/research'],
+  ['연구', '/research'],
 ]
 
 const serviceLinks = [
@@ -38,8 +38,8 @@ export default function Footer() {
               <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-r from-primary-600 to-secondary-600"><span className="text-xs font-black">DAL</span></div>
               <span className="ml-3 text-xl font-black">드림에이아이랩</span>
             </Link>
-            <p className="mt-5 max-w-md leading-relaxed text-slate-300">사람의 삶과 현장의 복잡성을 연결되고 학습하는 AI 시스템으로 바꾸는 기술 기업입니다.</p>
-            <p className="mt-4 max-w-md text-sm leading-relaxed text-slate-400">복잡성은 시스템이 흡수하고, 사람은 더 나은 선택과 삶에 집중하도록.</p>
+            <p className="mt-5 max-w-md leading-relaxed text-slate-300">기술의 힘으로 사회적 문제를 해결하고, 모든 사람이 더 나은 삶의 기회를 누리도록 돕는 사람 중심 AI 기술 기업입니다.</p>
+            <p className="mt-4 max-w-md text-sm leading-relaxed text-slate-400">누구나, 어디서나, 동등한 기회를 누리는 세상을 향합니다.</p>
             <Link href="/about#philosophy" className="mt-6 inline-flex text-sm font-bold text-cyan-300 hover:text-cyan-200">회사 철학 보기 →</Link>
           </div>
 
@@ -50,7 +50,7 @@ export default function Footer() {
 
         <div className="mt-10 flex flex-col gap-3 border-t border-slate-800 pt-7 text-sm text-slate-400 md:flex-row md:items-center md:justify-between">
           <p>© {currentYear} Dream AI Lab. All rights reserved.</p>
-          <p>AI Digital Care Log · Architecture to Execution · Evidence before Scale</p>
+          <p>Technology for People · Equal Opportunity · Sustainable Impact</p>
         </div>
       </div>
     </footer>

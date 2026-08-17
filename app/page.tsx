@@ -16,10 +16,10 @@ import {
 
 export const metadata: Metadata = {
   ...buildPageMetadata({
-    title: '드림에이아이랩 | AI디지털케어로그 기반 플랫폼 - DAL',
+    title: '드림에이아이랩 | 사회적 문제를 해결하는 사람 중심 AI 기술 기업',
     description: `${COMPANY_META_LINE}입니다.`,
     path: '/',
-    ogTitle: '드림에이아이랩 | AI디지털케어로그 플랫폼 - DAL',
+    ogTitle: '드림에이아이랩 | 누구나 동등한 기회를 누리는 세상을 만드는 AI 기업',
     ogDescription: `${COMPANY_META_LINE}입니다.`,
     ogImageAlt: '드림에이아이랩',
   }),
@@ -250,23 +250,23 @@ export default function Home() {
       */}
       <Header />
 
-      {/* HERO - 플랫폼 선언 */}
+      {/* HERO - 회사의 존재 이유와 창업 철학 */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary-700 via-primary-800 to-secondary-700" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20 text-white">
           <div className="text-center">
             <div className="inline-block px-4 py-1.5 rounded-full text-sm font-medium bg-white/15 text-white/95 mb-6">
-              DAL Platform
+              Dream AI Lab · Technology for people
             </div>
             <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-6 leading-tight">
-              AI디지털케어로그 기반 플랫폼
+              누구나, 어디서나,<br className="hidden sm:block" /> 동등한 기회를 누리는 세상
             </h1>
             <p className="text-xl md:text-2xl font-semibold text-white/95 mb-4">{COMPANY_HERO_LINE}</p>
             <p className="text-lg text-white/90 max-w-3xl mx-auto leading-relaxed mb-6">
-              여러 서비스가 아니라, 하나의 데이터 플랫폼 위에 연결된 서비스 생태계입니다.
+              취약계층과 소외된 현장의 삶을 개선하려는 관심에서 시작해, 발달장애·돌봄·의료·교육처럼 가장 복잡하고 도움이 필요한 문제를 데이터로 이해하고 AI로 돕습니다.
             </p>
             <div className="flex flex-wrap justify-center gap-2">
-              {['시간축 기록', 'AI 판단·XAI', '설명 가능한 실행', '학습·환류'].map((tag) => (
+              {['사회적 문제 해결', '사람을 향한 기술', '동등한 기회', '현장 중심 혁신'].map((tag) => (
                 <span key={tag} className="px-3 py-1 rounded-full text-sm bg-white/10 border border-white/20">
                   {tag}
                 </span>
@@ -495,19 +495,19 @@ export default function Home() {
         <div className="company-container grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
             <p className="text-sm font-bold uppercase tracking-wider text-primary-700">Why Dream AI Lab</p>
-            <h2 className="company-section-title mt-3">AI 시대에도 사람에게 남아 있는 복잡성을 줄입니다</h2>
-            <p className="company-section-lead">기록은 흩어지고, 중요한 판단은 반복되며, 새로운 소프트웨어를 만드는 일은 여전히 일부 전문가에게만 열려 있습니다. DAL은 이 복잡성을 사용자가 배우게 하지 않고 시스템 안으로 흡수합니다.</p>
+            <h2 className="company-section-title mt-3">취약계층과 소외된 현장의 삶을 개선하려는 관심에서 시작했습니다</h2>
+            <p className="company-section-lead">자람이 공익 프로젝트와 수화 번역 AI, 발달장애·ADHD 연구에서 출발한 드림에이아이랩은 기술적 진보 자체보다 기술이 실제 사람의 삶에 만드는 긍정적인 변화를 먼저 봅니다.</p>
             <div className="mt-7 flex flex-wrap gap-3">
               <Link href="/about#philosophy" className="rounded-xl bg-primary-600 px-5 py-3 text-sm font-bold text-white hover:bg-primary-700">회사 철학 보기</Link>
-              <Link href="/vision" className="rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-bold text-slate-700 hover:bg-slate-50">AI 시대의 비전</Link>
+              <Link href="/vision" className="rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-bold text-slate-700 hover:bg-slate-50">미션과 비전</Link>
             </div>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
             {[
-              ['삶과 현장의 연결', 'AI Digital Care Log로 시간축 기록·맥락·실행·결과를 연결합니다.'],
-              ['기술 장벽의 제거', 'DAL Vibe Architect로 사람의 의도를 운영 가능한 소프트웨어로 번역합니다.'],
-              ['특수 분야에서 시작', '발달·돌봄·교육·다문화처럼 복잡한 현장에서 먼저 검증합니다.'],
-              ['결과로 학습', '사용과 운영의 결과를 다음 판단과 제품 개선에 환류합니다.'],
+              ['모두를 위한 기술', '기술을 가장 필요로 하는 사람이 기술의 장벽 때문에 다시 배제되지 않도록 합니다.'],
+              ['사회적 포용성', '발달장애·노인·환자·가족 등 삶의 현장에서 소외되기 쉬운 사람의 문제부터 해결합니다.'],
+              ['평등한 기회', '부·지역·환경의 차이를 넘어 누구나 필수적인 돌봄·의료·교육에 접근하는 미래를 지향합니다.'],
+              ['지속 가능한 혁신', '현장의 기록과 결과가 연구·정책·서비스 개선으로 돌아오는 선순환을 만듭니다.'],
             ].map(([title, body]) => (
               <div key={title} className="company-card"><h3 className="font-black text-slate-950">{title}</h3><p className="mt-2 text-sm leading-relaxed text-slate-600">{body}</p></div>
             ))}
