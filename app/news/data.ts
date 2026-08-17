@@ -79,15 +79,18 @@ export function getLocalizedArticle(
 export const newsArticles: NewsArticle[] = [
   {
     id: 94,
-    title: '드림에이아이랩, 한국형 바이브코딩 넘어선 ‘AI Software Architect’ 신규 프로젝트 착수',
+    title: '드림에이아이랩, 신규 바이브코딩 프로젝트 ‘DAL Vibe Architect’ 마스터 비전 공개',
     excerpt:
       '비개발자의 아이디어를 요구사항·아키텍처·보안·접근성·테스트·배포·운영으로 번역하는 DAL Vibe Architect 설계를 공개했다. 한국 운영환경과 장애인 창작자를 처음부터 포함하는 소프트웨어 창작 인프라를 지향한다.',
     category: 'company',
     date: '2026-08-17',
-    image: '⌁',
+    image: '/images/news/news-94-dal-vibe-architect-og.jpg',
     featured: true,
     author: '드림에이아이랩',
     authorUrl: 'https://dreamailab.com/',
+    ogImage: '/images/news/news-94-dal-vibe-architect-og.jpg',
+    ogImageAlt: 'DAL Vibe Architect — 사람의 의도를 아키텍처·구현·검증·운영으로 연결하는 신규 바이브코딩 프로젝트',
+    ogImageAltEn: 'DAL Vibe Architect — a new vibe-coding project connecting human intent to architecture, build, verification and operations',
     about: [
       {
         type: 'Organization',
@@ -116,6 +119,7 @@ export const newsArticles: NewsArticle[] = [
     ],
     tags: [
       '바이브코딩',
+      'AI 앱 빌더',
       'AI Software Architect',
       'DAL Vibe Architect',
       '한국형 AI',
@@ -128,9 +132,9 @@ export const newsArticles: NewsArticle[] = [
     ],
     faq: [
       {
-        question: 'DAL Vibe Architect는 Cursor 같은 AI 코드 편집기인가?',
+        question: 'DAL Vibe Architect는 기존 바이브코딩·AI 코딩 도구와 무엇이 다른가?',
         answer:
-          '아니다. 개발자용 편집기 경쟁보다 비개발자의 의도를 제품 요구사항, 시스템 아키텍처, 보안, 접근성, 테스트, 배포, 운영으로 번역하는 Software Creation Platform을 목표로 한다.',
+          '대표적인 Prompt → Code 흐름보다 앞과 뒤를 함께 다룬다. 비개발자의 의도를 제품 요구사항, 시스템 아키텍처, 보안, 접근성, 테스트, 배포, 운영과 결과 학습으로 연결하는 Software Creation Platform을 목표로 한다.',
       },
       {
         question: '현재 사용할 수 있는 서비스인가?',
@@ -150,6 +154,10 @@ export const newsArticles: NewsArticle[] = [
     ],
     content: `
       <p class="text-sm text-gray-500 mb-6">[회사 뉴스 · 신규 프로젝트 · 2026-08-17]</p>
+      <figure class="mb-10 overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
+        <img src="/images/news/news-94-dal-vibe-architect-og.jpg" alt="사람의 의도가 AI 아키텍처와 구현·검증을 거쳐 운영과 학습으로 연결되는 DAL Vibe Architect 구조" width="1200" height="630" class="h-auto w-full" loading="eager" />
+        <figcaption class="px-5 py-3 text-sm text-slate-500">DAL Vibe Architect 신규 프로젝트 — Intent → Architecture → Build &amp; Verify → Operate</figcaption>
+      </figure>
       <p class="text-xl font-semibold text-gray-800 mb-4 leading-relaxed">
         코드 생성 경쟁 대신 비개발자의 의도를 실제 운영 구조로 번역
       </p>
@@ -159,13 +167,13 @@ export const newsArticles: NewsArticle[] = [
         <li>장애인이 만드는 과정과 생성된 서비스의 접근성을 함께 검증</li>
       </ul>
       <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-4">
-        드림에이아이랩이 바이브코딩 시장에서 코드 편집기의 복제가 아닌 &lsquo;AI Software Architect&rsquo;라는 새로운 제품 범주를 제안했다. 사람은 사업과 현장에 답하고, 시스템이 기술 복잡성을 흡수하는 구조다.
+        드림에이아이랩이 비개발자의 의도를 실제 운영 구조로 연결하는 신규 바이브코딩&middot;AI 앱 빌더 프로젝트 &lsquo;DAL Vibe Architect&rsquo;의 마스터 비전을 공개했다. 사람은 목적과 사업적 결정을 맡고, 시스템이 소프트웨어 생명주기의 기술 복잡성을 흡수하는 구조다.
       </p>
 
-      <div class="rounded-2xl bg-slate-950 p-8 mb-10 text-white">
-        <p class="text-sm font-semibold text-cyan-300 mb-3">DAL Vibe Architect · Working name</p>
+      <div class="rounded-2xl border border-blue-200 bg-blue-50 p-8 mb-10">
+        <p class="text-sm font-semibold text-primary-700 mb-3">DAL Vibe Architect · Working name</p>
         <p class="text-2xl md:text-3xl font-bold leading-relaxed mb-4">코딩을 쉽게 만드는 AI가 아니라,<br/>코딩을 몰라도 운영 가능한 소프트웨어를 만드는 AI</p>
-        <p class="text-slate-300 leading-relaxed">2026년 8월 기준 설계 공개&middot;개발 준비 단계. 공개 빌더&middot;요금제&middot;확정 출시일 없음.</p>
+        <p class="text-slate-600 leading-relaxed">2026년 8월 기준 설계 공개&middot;개발 준비 단계. 공개 빌더&middot;요금제&middot;확정 출시일 없음.</p>
       </div>
 
       <h2 class="text-2xl font-bold text-gray-900 mb-4">코드를 몰라서가 아니라, 무엇을 확인해야 하는지 몰라서 실패한다</h2>
@@ -187,16 +195,20 @@ export const newsArticles: NewsArticle[] = [
         예를 들어 사용자가 &ldquo;회원가입에 전화번호 하나를 추가해 달라&rdquo;고 요청해도 시스템 내부에서는 User Schema &rarr; Migration &rarr; Validation &rarr; API &rarr; UI &rarr; Privacy &rarr; Test 영향을 추적한다. 이 계층을 DAL은 <strong>Architecture Guardian</strong>으로 정의했다.
       </p>
 
-      <h2 class="text-2xl font-bold text-gray-900 mb-4">빠르게 통합되는 글로벌 시장, DAL은 다른 병목을 선택</h2>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">독립 기술 플랫폼으로 발전시키는 세 가지 핵심 후보</h2>
+      <div class="grid md:grid-cols-3 gap-4 mb-8">
+        <div class="bg-rose-50 p-5 rounded-xl"><h3 class="font-bold text-rose-950 mb-2">Architecture Guardian</h3><p class="text-gray-700">승인된 아키텍처를 기준으로 변경 전후의 전체 영향, 회귀, 승인과 복구 증거를 추적한다.</p></div>
+        <div class="bg-cyan-50 p-5 rounded-xl"><h3 class="font-bold text-cyan-950 mb-2">Project Knowledge Graph</h3><p class="text-gray-700">요구사항, 구성요소, 의존성, 의사결정, 테스트, 오류와 배포 이력을 프로젝트 관계망으로 보존한다.</p></div>
+        <div class="bg-emerald-50 p-5 rounded-xl"><h3 class="font-bold text-emerald-950 mb-2">Software Engineering Outcome Dataset</h3><p class="text-gray-700">어떤 구조가 실제 운영에서 실패·수정·생존했는지를 권리와 개인정보를 보호하며 학습하는 데이터 기반을 지향한다.</p></div>
+      </div>
+      <p class="text-sm text-gray-600 mb-8 leading-relaxed">세 항목은 2026년 8월 현재 구현 완료 기능이 아니라 우선 검증할 기술 후보다.</p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">다양해지는 바이브코딩 시장에서 다른 병목을 선택</h2>
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        AI 코딩 시장은 코드 생성에서 리뷰&middot;협업&middot;모델 인프라로 빠르게 확장되고 있다. Cursor는 2025년 12월 Graphite 인수 계약을 발표하며 코드 작성과 리뷰의 경계를 좁히겠다고 밝혔고, 2026년 4월에는 SpaceX와 모델 학습 파트너십을 발표했다.
+        바이브코딩 시장에는 AI 코드 에디터, 자연어 기반 풀스택 앱 빌더, 에이전트형 개발도구, 노코드&middot;로우코드가 함께 존재한다. 코드 생성뿐 아니라 요구사항 계획, 데이터, 배포와 운영까지 지원 범위가 넓어지는 중이다.
       </p>
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        이는 전문 개발자용 시장의 성숙과 통합을 보여준다. DAL은 같은 편집기 경쟁에 들어가기보다 한국 현장의 운영요건과 비개발자의 판단, 변경 안전성, 접근성이라는 다른 병목에 집중한다.
-      </p>
-      <p class="text-sm text-gray-600 mb-8 leading-relaxed">
-        시장 근거: <a href="https://cursor.com/blog/graphite" target="_blank" rel="noopener noreferrer" class="text-primary-700 underline">Cursor &middot; Graphite 발표</a> &middot;
-        <a href="https://cursor.com/blog/spacex-model-training" target="_blank" rel="noopener noreferrer" class="text-primary-700 underline">Cursor &middot; SpaceX 모델 학습 파트너십</a>
+        DAL은 특정 제품을 기준점으로 삼거나 같은 편집기 경쟁에 들어가기보다 한국 현장의 운영요건, 사용자의 판단 부담, 변경 안전성, 접근성, 운영 결과 학습이라는 다른 병목에 집중한다.
       </p>
 
       <h2 class="text-2xl font-bold text-gray-900 mb-4">한국형은 한국어 UI가 아니라 운영 아키텍처</h2>
@@ -227,9 +239,19 @@ export const newsArticles: NewsArticle[] = [
         이는 회사가 공개한 설계 철학과 제품 이력에 근거한 설명이다. 개인의 세계적 수준, 시장 지배력, 새로운 패러다임의 성립 여부는 향후 제품 성과와 외부 연구&middot;지표를 통한 독립적 검증이 필요하다.
       </p>
 
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Master Vision v1.0 이후의 제품 정의 순서</h2>
+      <ol class="list-decimal list-inside text-lg text-gray-700 mb-8 space-y-2 leading-relaxed">
+        <li>실제 경쟁제품과 현재 바이브코딩의 실패지점 분석</li>
+        <li>MVP 화면과 사용자 흐름 정의</li>
+        <li>Agent&middot;Orchestrator&middot;Architecture Guardian 기술 아키텍처</li>
+        <li>사용 모델과 개발 스택 결정</li>
+        <li>3개월 개발 로드맵 수립</li>
+        <li>데이터 플라이휠과 사업모델 설계</li>
+      </ol>
+
       <div class="bg-amber-50 border border-amber-200 rounded-2xl p-6 mb-8">
         <h2 class="text-xl font-bold text-amber-950 mb-3">현재 상태를 명확히 구분합니다</h2>
-        <p class="text-gray-800 leading-relaxed"><strong>현재:</strong> 프로젝트 방향&middot;아키텍처 공개, 공동설계&middot;파일럿 파트너 탐색.</p>
+        <p class="text-gray-800 leading-relaxed"><strong>현재:</strong> Master Vision v1.0과 프로젝트 아키텍처 공개, 공동설계&middot;파일럿 파트너 탐색.</p>
         <p class="text-gray-800 leading-relaxed mt-2"><strong>아직 아님:</strong> 공개 빌더, 상용 출시, 요금제, 법률&middot;접근성 준수 성과, 확정 출시일.</p>
         <p class="text-gray-800 leading-relaxed mt-2"><strong>명칭:</strong> DAL Vibe Architect는 프로젝트명으로 변경될 수 있음.</p>
       </div>
@@ -239,19 +261,23 @@ export const newsArticles: NewsArticle[] = [
     `,
     i18n: {
       en: {
-        title: 'Dream AI Lab starts DAL Vibe Architect, a Korea-ready AI Software Architect project',
+        title: 'Dream AI Lab publishes the master vision for DAL Vibe Architect, a new vibe-coding project',
         excerpt:
           'The new project aims to translate non-developers’ intent into requirements, architecture, security, accessibility, testing, deployment and operations—with Korean workflows and disabled creators included from the start.',
         content: `
           <p class="text-sm text-gray-500 mb-6">[Company news · New project · 17 August 2026]</p>
           <p class="text-xl font-semibold text-gray-800 mb-6 leading-relaxed">Beyond code generation: translating human intent into operable software</p>
-          <p class="text-lg text-gray-700 mb-6 leading-relaxed">Dream AI Lab has published the direction and architecture of DAL Vibe Architect, a new AI Software Architect project. Rather than competing head-on as another developer code editor, it is designed to help non-developers make business decisions while the system handles requirements, data, permissions, security, accessibility, tests, deployment and maintenance.</p>
+          <p class="text-lg text-gray-700 mb-6 leading-relaxed">Dream AI Lab has published Master Vision v1.0 and the architecture of DAL Vibe Architect. Instead of defining itself against one editor, the project addresses the wider prompt-to-code frame used across AI coding, agentic development, no-code and low-code tools. It is designed to help people make product decisions while the system handles requirements, data, permissions, security, accessibility, tests, deployment, operations and learning.</p>
           <h2 class="text-2xl font-bold text-gray-900 mb-4">A seven-layer architecture</h2>
           <p class="text-lg text-gray-700 mb-6 leading-relaxed">Intent AI &rarr; Product Architect AI &rarr; System Architect AI &rarr; Safety and Compliance AI &rarr; Build Agents &rarr; QA and Deploy Agents &rarr; Operations and Maintenance Loop.</p>
           <p class="text-lg text-gray-700 mb-6 leading-relaxed">An Architecture Guardian is intended to track the full impact of even a small request across schemas, migrations, validation, APIs, interfaces, privacy and regression tests.</p>
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">Three platform-intelligence candidates</h2>
+          <p class="text-lg text-gray-700 mb-6 leading-relaxed">Architecture Guardian, Project Knowledge Graph and a Software Engineering Outcome Dataset are the priority technical hypotheses: protect changes, preserve project reasoning, and learn which architectures survive real operations. They are not presented as completed features.</p>
           <h2 class="text-2xl font-bold text-gray-900 mb-4">Built for Korean operations and disability inclusion</h2>
           <p class="text-lg text-gray-700 mb-6 leading-relaxed">The project treats Korean identity, login, payment, messaging, privacy, administration and industry workflows as architecture requirements, not localization add-ons. It also puts accessibility in both layers: the creation tool itself and the products it generates.</p>
           <p class="text-lg text-gray-700 mb-6 leading-relaxed">Keyboard, screen reader, voice, magnification and alternative-input support, plain-language staged decisions, WCAG-based output gates and co-design with disabled people are planned. Automated checks alone will not be presented as proof of accessibility.</p>
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">The next product-definition sequence</h2>
+          <p class="text-lg text-gray-700 mb-6 leading-relaxed">The next work proceeds in order: market and failure-point analysis; MVP screens and user flows; Agent, Orchestrator and Architecture Guardian architecture; model and stack selection; a three-month roadmap; then the data flywheel and business model.</p>
           <h2 class="text-2xl font-bold text-gray-900 mb-4">Current status</h2>
           <p class="text-lg text-gray-700 mb-6 leading-relaxed">As of 17 August 2026 this is a newly announced project at architecture and co-design stage. There is no public builder, pricing or confirmed launch date. DAL Vibe Architect is a working name.</p>
           <p class="text-lg text-gray-700 leading-relaxed">See the <a href="/en/services/vibe-architect" class="font-semibold text-primary-700 underline">project overview</a> for the full scope.</p>
@@ -673,7 +699,6 @@ export const newsArticles: NewsArticle[] = [
     },
     content: `
       <p class="text-sm text-gray-500 mb-6">[기획/IT·바이오 · 2026-08-17]</p>
-      <div class="bg-amber-50 border border-amber-200 rounded-xl p-5 mb-8 text-gray-800 leading-relaxed"><strong>편집자 상태 고지:</strong> 아래 수치는 회사가 공개한 등록·연계·데이터 풀 지표이며, 독립 검증된 활성 도입 시장점유율이 아닙니다. 현재 제품은 Pilot로 시설 검색·장기요양 안내를 운영하고, 케어로그·행정 SaaS는 단계적 로드맵입니다.</div>
       <p class="text-xl font-semibold text-gray-800 mb-4 leading-relaxed">
         전국 재가기관 1만 곳&middot;주간보호 1,200곳 확보&hellip; 이용자 80만 명으로 시장 선점
       </p>

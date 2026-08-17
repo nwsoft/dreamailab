@@ -1,175 +1,78 @@
 import type { Metadata } from 'next'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
+import CompanyPageHero from '../../components/CompanyPageHero'
 import PageClosingSection from '../../components/PageClosingSection'
-import Link from 'next/link'
-import { COMPANY_META_LINE } from '../../lib/company-copy'
 import { MarketingIcon, type MarketingIconName } from '../../components/MarketingIcon'
-
-const publicCanonical = 'https://dreamailab.com/public'
-const publicDescription =
-  'DAL AI디지털케어로그 플랫폼의 정책 정합성, 데이터 표준, 개인정보 보호 구조. 시범사업·공공 협력 문의.'
+import { buildPageMetadata } from '../../lib/seo'
 
 export const metadata: Metadata = {
-  title: '공공 협력 - 정부·지자체·공공기관 | 드림에이아이랩',
-  description: publicDescription,
-  alternates: { canonical: publicCanonical },
-  openGraph: {
-    title: '공공 협력 - 정부·지자체·공공기관 | 드림에이아이랩',
-    description: 'DAL 플랫폼의 정책 정합성 및 사회적 가치. 시범사업 적용 가능 영역.',
-    url: publicCanonical,
-    siteName: '드림에이아이랩',
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: '드림에이아이랩 공공 협력' }],
-    locale: 'ko_KR',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: '공공 협력 - 정부·지자체·공공기관 | 드림에이아이랩',
-    description: publicDescription,
-    images: ['/og-image.png'],
-  },
+  ...buildPageMetadata({
+    title: '공공 협력 | 돌봄·교육·다문화·헬스케어 AI 실증 | 드림에이아이랩',
+    description: '자람이, 시니어앤라이프, 글로벌커플케어, 토탈케어로그, 에듀케어로그, 베지케어와 접근성 중심 바이브코딩 기술을 활용한 공공·지자체·연구기관 협력 영역을 소개합니다.',
+    path: '/public',
+    ogTitle: 'Dream AI Lab 공공 협력 — 현장 문제를 데이터와 AI 실증으로 연결합니다',
+    ogImageAlt: '드림에이아이랩 공공 협력 분야와 실증 절차',
+  }),
+  keywords: ['공공 AI', '지자체 시범사업', '발달장애', '장기요양', '다문화 가족', '개별화교육', 'RWD', 'RWE', '접근성', '드림에이아이랩'],
 }
 
+const programs: Array<{ title: string; service: string; description: string; icon: MarketingIconName }> = [
+  { title: '발달장애 지원', service: '자람이', description: '가정·학교·센터·병원 간 관찰·치료·교육 기록 연결과 지역 자원 탐색, 현장 행정의 표준화를 지원합니다.', icon: 'sprout' },
+  { title: '시니어·장기요양', service: '시니어앤라이프', description: '시설 검색·장기요양 안내에서 돌봄 기록, 가족 소통, 기관 행정 연결로 이어지는 단계적 실증을 설계합니다.', icon: 'user' },
+  { title: '다문화 가족·정착', service: '글로벌커플케어', description: '국제결혼 정보 비대칭, 안전한 절차, 정착·생활·육아 정보와 지역 지원체계 연결을 다룹니다.', icon: 'globe' },
+  { title: '건강·실사용근거', service: '토탈케어로그', description: '병원 밖 증상·복약·생활 기록을 동의 기반으로 연결하고 RWD·RWE 연구 협력 가능성을 검증합니다.', icon: 'hospital' },
+  { title: '개별화교육', service: '에듀케어로그', description: '학생의 학습·행동·반응을 시간축으로 기록해 교사·보호자·기관의 다음 교육 결정을 지원합니다.', icon: 'graduation' },
+  { title: '식생활·웰니스', service: '베지케어', description: '영양·식습관·지역 상권·환경 행동을 연결하는 시민 건강 및 ESG 프로그램을 설계할 수 있습니다.', icon: 'leaf' },
+  { title: '접근 가능한 디지털 서비스', service: 'DAL Vibe Architect', description: '비개발자와 장애 당사자가 공공 서비스를 공동설계하고 접근성·보안·운영요건을 함께 검증하는 제작 환경을 연구합니다.', icon: 'accessibility' },
+]
+
+const collaborationSteps = [
+  ['01', '문제·대상 정의', '정책 목적, 현장 사용자, 담당 기관과 현재 업무 흐름을 함께 정의합니다.'],
+  ['02', '데이터·책임 설계', '수집 최소화, 동의, 역할, 보유기간, 책임 주체와 성과지표를 먼저 정합니다.'],
+  ['03', '작은 실증', '좁은 지역·기관·과업에서 사용성, 접근성, 운영 가능성과 실패지점을 검증합니다.'],
+  ['04', '근거 기반 확장', '측정된 결과와 현장 피드백을 기준으로 연계 범위와 제도 적용을 확대합니다.'],
+]
+
 export default function PublicPage() {
-  const policyAreas: { icon: MarketingIconName; title: string; desc: string }[] = [
-    { icon: 'sprout', title: '발달장애', desc: '2026년 국가 시범사업 추진. 발달장애 케어 표준화, IRB/RWE 연구' },
-    { icon: 'user', title: '고령화·돌봄', desc: '장기요양보험·재가돌봄 정책과 연계. 시니어 케어 표준화' },
-    { icon: 'hospital', title: '디지털 헬스케어', desc: '초고령사회 대응, AI 의료 정책과 정합성' },
-    { icon: 'graduation', title: '개별화교육', desc: '2026 개별화교육 전환 대응, 교육 데이터 표준화' },
-  ]
-
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="company-page">
       <Header />
+      <CompanyPageHero eyebrow="Government · Municipality · Public Institution" title="공공의 문제를 현장 데이터와 AI로 연결합니다" description={<p>드림에이아이랩은 하나의 기술을 일괄 적용하지 않습니다. 정책 목적과 현장 업무를 먼저 이해하고, 각 서비스에서 축적한 도메인 구조를 작은 실증부터 단계적으로 적용합니다.</p>} badges={['공공·지자체', 'Pilot & PoC', 'RWD·RWE', '접근성', '데이터 거버넌스']} actions={[{ label: '협력 분야 보기', href: '#programs' }, { label: '공공 협력 문의', href: '/contact?type=b2b&service=platform', variant: 'secondary' }]} />
 
-      {/* Hero */}
-      <section className="bg-gradient-to-br from-primary-600 to-secondary-600 text-white py-20 md:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-block px-4 py-1.5 rounded-full text-sm font-medium bg-white/15 text-white/95 mb-6">
-            정부·지자체·공공기관
-          </div>
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">공공 협력</h1>
-          <p className="text-xl max-w-3xl mx-auto">
-            DAL AI디지털케어로그 플랫폼은 정부 정책 방향과 정합성을 지향하며,
-            시범·실증 사업 논의에 필요한 표준·보안·동의 구조를 갖추고 있습니다.
-          </p>
-        </div>
-      </section>
-
-      {/* 1. DAL 플랫폼 개요 */}
-      <section className="py-16 lg:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">DAL 플랫폼 개요</h2>
-          <p className="text-lg text-gray-700 mb-6 max-w-4xl">
-            {COMPANY_META_LINE}입니다.
-            AI디지털케어로그로 공공·기관 협력과 시범사업에 대응합니다.
-            시범·실증 사업 논의에 적합한 구조를 지향하며, 지자체·공공기관 협력과 데이터 기반 정책 지원을 함께 염두에 둔 플랫폼입니다.
-          </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
-            <div className="bg-gray-50 rounded-xl p-4 text-center">
-              <div className="text-2xl font-bold text-primary-700">5,700+</div>
-              <div className="text-sm text-gray-600">등록 기관</div>
-              <div className="text-[11px] text-gray-400 mt-0.5">자람이(연계·등록)</div>
-            </div>
-            <div className="bg-gray-50 rounded-xl p-4 text-center">
-              <div className="text-2xl font-bold text-primary-700">22,000+</div>
-              <div className="text-sm text-gray-600">등록 사업자</div>
-              <div className="text-[11px] text-gray-400 mt-0.5">시니어앤라이프(연계·등록)</div>
-            </div>
-            <div className="bg-gray-50 rounded-xl p-4 text-center">
-              <div className="text-2xl font-bold text-primary-700">6</div>
-              <div className="text-sm text-gray-600">핵심 도메인</div>
-            </div>
-            <div className="bg-gray-50 rounded-xl p-4 text-center">
-              <div className="text-2xl font-bold text-primary-700">표준·시범</div>
-              <div className="text-sm text-gray-600">정책 정합·파일럿</div>
-            </div>
-          </div>
-          <p className="text-sm text-gray-500 mt-6 max-w-3xl">
-            5,700+·22,000+는 공공·연계 등으로 플랫폼에 등록된 기관·사업자 규모이며, 전원의 일상적 제품 사용을 뜻하지 않습니다.
-          </p>
-        </div>
-      </section>
-
-      {/* 2. 정책 정합성 및 사회적 가치 */}
-      <section className="py-16 lg:py-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">정책 정합성 및 사회적 가치</h2>
-          <p className="text-lg text-gray-700 mb-8 max-w-4xl">
-            DAL 플랫폼은 초고령사회 진입, 발달장애 국가 정책 강화, 디지털 헬스케어 확대, AI 정부 정책, 교육 개별화 정책 등 
-            국내 정책 방향과 일치합니다.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {policyAreas.map((area, i) => (
-              <div key={i} className="bg-white rounded-xl p-6 shadow-sm">
-                <div className="mb-3 flex text-primary-600">
-                  <MarketingIcon name={area.icon} className="h-9 w-9" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{area.title}</h3>
-                <p className="text-gray-600">{area.desc}</p>
-              </div>
-            ))}
+      <section id="programs" className="company-section">
+        <div className="company-container">
+          <div className="mx-auto max-w-3xl text-center"><p className="text-sm font-bold uppercase tracking-wider text-primary-700">Public collaboration portfolio</p><h2 className="company-section-title mt-3">현재 사업과 연결되는 공공 협력 영역</h2><p className="company-section-lead">돌봄 한 분야에 한정하지 않고 교육·다문화·건강·식생활·디지털 접근성까지 현재 포트폴리오 전체를 공공 협력 관점에서 제시합니다.</p></div>
+          <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+            {programs.map((program) => <article key={program.title} className="company-card"><div className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-50 text-primary-700"><MarketingIcon name={program.icon} className="h-6 w-6" /></div><p className="mt-5 text-xs font-bold text-primary-700">{program.service}</p><h3 className="mt-1 text-xl font-black text-slate-950">{program.title}</h3><p className="mt-3 text-sm leading-relaxed text-slate-600">{program.description}</p></article>)}
           </div>
         </div>
       </section>
 
-      {/* 3. 데이터 표준 및 개인정보 보호 */}
-      <section className="py-16 lg:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">데이터 표준 및 개인정보 보호 구조</h2>
-          <ul className="space-y-4 text-lg text-gray-700 max-w-4xl">
-            <li className="flex items-start gap-3">
-              <span className="text-green-500">✓</span>
-              FHIR/HL7 등 국제 표준 스키마 적용
-            </li>
-            <li className="flex items-start gap-3">
-              <span className="text-green-500">✓</span>
-              동의 관리(Consent)·역할 기반 권한(RBAC)·감사로그
-            </li>
-            <li className="flex items-start gap-3">
-              <span className="text-green-500">✓</span>
-              가명처리·비식별화·암호화
-            </li>
-            <li className="flex items-start gap-3">
-              <span className="text-green-500">✓</span>
-              개인정보보호법·GDPR 준수
-            </li>
-          </ul>
+      <section className="company-section-muted">
+        <div className="company-container">
+          <div className="mx-auto max-w-3xl text-center"><p className="text-sm font-bold uppercase tracking-wider text-primary-700">From policy to evidence</p><h2 className="company-section-title mt-3">협력은 제안서보다 검증 구조에서 시작합니다</h2></div>
+          <ol className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">{collaborationSteps.map(([step, title, description]) => <li key={step} className="company-card"><span className="text-sm font-black text-primary-700">{step}</span><h3 className="mt-3 text-lg font-black text-slate-950">{title}</h3><p className="mt-3 text-sm leading-relaxed text-slate-600">{description}</p></li>)}</ol>
         </div>
       </section>
 
-      {/* 4. 실증 및 시범사업 적용 영역 */}
-      <section className="py-16 lg:py-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">실증 및 시범사업 적용 가능 영역</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-white rounded-xl p-6">
-              <h3 className="text-lg font-bold text-gray-900 mb-3">발달장애 시범사업</h3>
-              <p className="text-gray-600">2026년 정부 국가 시범사업 추진. 연계·등록으로 확보한 약 5,700개 기관 풀을 바탕으로 시범·확산을 논의합니다.</p>
-            </div>
-            <div className="bg-white rounded-xl p-6">
-              <h3 className="text-lg font-bold text-gray-900 mb-3">고령화·돌봄 디지털화</h3>
-              <p className="text-gray-600">지자체·요양기관 연계 시범, 장기요양보험 정책 정합.</p>
-            </div>
-            <div className="bg-white rounded-xl p-6">
-              <h3 className="text-lg font-bold text-gray-900 mb-3">개별화교육</h3>
-              <p className="text-gray-600">2026 개별화교육 전환 대응, 특수학급 등 파일럿·교육청 협력을 확대하는 단계입니다.</p>
-            </div>
-            <div className="bg-white rounded-xl p-6">
-              <h3 className="text-lg font-bold text-gray-900 mb-3">RWE·임상 연구</h3>
-              <p className="text-gray-600">IRB 협약, 실사용데이터(RWD)와 실제사용근거(RWE) 기반 연구 지원.</p>
-            </div>
+      <section className="company-section">
+        <div className="company-container grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+          <div><p className="text-sm font-bold uppercase tracking-wider text-primary-700">Trust baseline</p><h2 className="company-section-title mt-3">공공 적용 전에 확인할 공통 원칙</h2><p className="company-section-lead">특정 표준이나 법률 준수를 검토 없이 선포하지 않고, 대상 사업의 실제 데이터와 책임 구조에 맞춰 검증합니다.</p></div>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {[
+              ['동의와 선택권', '누가 무엇에 동의했고 언제 철회할 수 있는지 기록합니다.'],
+              ['역할과 최소권한', '기관·전문가·보호자·당사자의 열람·수정 범위를 구분합니다.'],
+              ['데이터 최소화', '목적에 필요한 정보와 보유기간을 먼저 제한합니다.'],
+              ['접근성과 쉬운 사용', '키보드·스크린리더·쉬운 말과 실제 과업 테스트를 포함합니다.'],
+              ['감사 가능한 변경', '정책·모델·권한·데이터 변경의 근거와 결과를 남깁니다.'],
+              ['전문가 검토', '법률·의료·복지·교육 등 분야별 검토를 별도 게이트로 둡니다.'],
+            ].map(([title, text]) => <div key={title} className="rounded-2xl border border-slate-200 bg-slate-50 p-5"><h3 className="font-black text-slate-950">{title}</h3><p className="mt-2 text-sm leading-relaxed text-slate-600">{text}</p></div>)}
           </div>
         </div>
       </section>
 
-      <PageClosingSection
-        title="공공·기관 협력"
-        description="정부·지자체·공공기관 담당자분의 협력·시범 문의를 받습니다."
-        primary={{ label: '협력 문의', href: '/contact?type=b2b&service=platform' }}
-      />
-
+      <PageClosingSection title="지역과 기관의 실제 문제부터 함께 정의합니다" description="시범사업, 공동연구, 데이터 표준화, 접근 가능한 공공 서비스 제작 협력을 제안해 주세요." primary={{ label: '공공·기관 협력 문의', href: '/contact?type=b2b&service=platform' }} secondary={[{ label: '서비스 포트폴리오', href: '/services' }]} />
       <Footer />
     </div>
   )

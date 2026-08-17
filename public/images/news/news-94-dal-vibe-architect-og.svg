@@ -1,0 +1,59 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="80" y1="40" x2="1120" y2="590" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1D4ED8"/>
+      <stop offset="0.55" stop-color="#1765B0"/>
+      <stop offset="1" stop-color="#159F8C"/>
+    </linearGradient>
+    <linearGradient id="flow" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#DBEAFE"/>
+      <stop offset="1" stop-color="#D1FAE5"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" rx="32" fill="url(#bg)"/>
+  <circle cx="1080" cy="80" r="210" fill="white" fill-opacity="0.05"/>
+  <circle cx="105" cy="610" r="260" fill="white" fill-opacity="0.04"/>
+
+  <g transform="translate(72 64)">
+    <circle cx="28" cy="28" r="28" fill="white"/>
+    <path d="M28 12V44M12 28H44M17 17L39 39M39 17L17 39" stroke="#1D4ED8" stroke-width="2.4" stroke-linecap="round" opacity="0.65"/>
+    <circle cx="28" cy="28" r="6" fill="#159F8C"/>
+    <text x="72" y="35" fill="white" font-family="Arial, Pretendard, sans-serif" font-size="27" font-weight="700">DREAM AI LAB</text>
+  </g>
+
+  <text x="72" y="174" fill="#BFDBFE" font-family="Arial, Pretendard, sans-serif" font-size="24" font-weight="700" letter-spacing="3">NEW VIBE-CODING PROJECT · 2026</text>
+  <text x="72" y="250" fill="white" font-family="Arial, Pretendard, sans-serif" font-size="57" font-weight="800">DAL Vibe Architect</text>
+  <text x="72" y="310" fill="white" font-family="Arial, Pretendard, sans-serif" font-size="32" font-weight="700">아이디어를 운영 가능한 소프트웨어로</text>
+  <text x="72" y="355" fill="#E0F2FE" font-family="Arial, Pretendard, sans-serif" font-size="22">바이브코딩 · AI 앱 빌더 · 한국 운영환경 · 접근성 우선</text>
+
+  <g transform="translate(72 420)">
+    <rect width="1056" height="128" rx="24" fill="white" fill-opacity="0.12" stroke="white" stroke-opacity="0.24"/>
+    <g transform="translate(24 24)">
+      <rect width="164" height="80" rx="16" fill="url(#flow)"/>
+      <text x="82" y="35" text-anchor="middle" fill="#0F172A" font-family="Arial, Pretendard, sans-serif" font-size="16" font-weight="800">HUMAN INTENT</text>
+      <text x="82" y="58" text-anchor="middle" fill="#475569" font-family="Arial, Pretendard, sans-serif" font-size="13">목적·현장·결정</text>
+    </g>
+    <path d="M212 64H252" stroke="white" stroke-width="3" stroke-linecap="round"/>
+    <path d="M245 56L253 64L245 72" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <g transform="translate(268 24)">
+      <rect width="220" height="80" rx="16" fill="white" fill-opacity="0.95"/>
+      <text x="110" y="35" text-anchor="middle" fill="#0F172A" font-family="Arial, Pretendard, sans-serif" font-size="16" font-weight="800">AI ARCHITECTURE</text>
+      <text x="110" y="58" text-anchor="middle" fill="#475569" font-family="Arial, Pretendard, sans-serif" font-size="13">요구·데이터·권한·보안</text>
+    </g>
+    <path d="M512 64H552" stroke="white" stroke-width="3" stroke-linecap="round"/>
+    <path d="M545 56L553 64L545 72" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <g transform="translate(568 24)">
+      <rect width="210" height="80" rx="16" fill="white" fill-opacity="0.95"/>
+      <text x="105" y="35" text-anchor="middle" fill="#0F172A" font-family="Arial, Pretendard, sans-serif" font-size="16" font-weight="800">BUILD &amp; VERIFY</text>
+      <text x="105" y="58" text-anchor="middle" fill="#475569" font-family="Arial, Pretendard, sans-serif" font-size="13">구현·테스트·배포</text>
+    </g>
+    <path d="M802 64H842" stroke="white" stroke-width="3" stroke-linecap="round"/>
+    <path d="M835 56L843 64L835 72" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <g transform="translate(858 24)">
+      <rect width="174" height="80" rx="16" fill="url(#flow)"/>
+      <text x="87" y="35" text-anchor="middle" fill="#0F172A" font-family="Arial, Pretendard, sans-serif" font-size="16" font-weight="800">OPERATE</text>
+      <text x="87" y="58" text-anchor="middle" fill="#475569" font-family="Arial, Pretendard, sans-serif" font-size="13">운영·결과·학습</text>
+    </g>
+  </g>
+  <text x="72" y="596" fill="white" fill-opacity="0.82" font-family="Arial, Pretendard, sans-serif" font-size="17">dreamailab.com/services/vibe-architect</text>
+</svg>

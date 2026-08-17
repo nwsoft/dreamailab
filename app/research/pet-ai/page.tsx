@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
+import CompanyPageHero from '../../../components/CompanyPageHero'
 import { MarketingIcon, type MarketingIconName } from '../../../components/MarketingIcon'
 import { absoluteUrl, buildBreadcrumbJsonLd, buildPageMetadata, SITE_URL } from '../../../lib/seo'
 
@@ -363,7 +364,7 @@ const valueColumns: { title: string; icon: MarketingIconName; items: string[] }[
 
 export default function PetAiResearchPage() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="company-page">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
@@ -372,75 +373,61 @@ export default function PetAiResearchPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
       <Header />
 
-      {/* 1. Hero */}
-      <section className="bg-gradient-to-br from-violet-900 via-indigo-800 to-slate-800 text-white py-16 md:py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-sm font-medium text-violet-200 mb-4 tracking-wide">
-            Research · Technology Development · Future Vision · Long-term Vision
-          </p>
-          <h1 className="text-3xl md:text-5xl font-bold mb-4">반려동물을 AI가 평생 이해하는 플랫폼</h1>
-          <p className="text-lg md:text-xl text-white/90 mb-6 max-w-3xl mx-auto leading-relaxed">
+      <CompanyPageHero
+        eyebrow="Dream AI Lab Research"
+        title="Pet AI Digital Care Log"
+        description={
+          <p>
             Pet AI Digital Care Log는 반려동물의 행동 · 감정 · 환경 · 생활 전체를 관찰하고 이해하는 AI Brain
             연구입니다. 병원은 그 중 하나의 선택지일 뿐, 중심이 아닙니다.
           </p>
-          <div className="flex flex-wrap justify-center gap-2 mb-8">
-            {stages.map((s) => (
-              <span
-                key={s.label}
-                className="inline-flex px-3 py-1 rounded-full text-xs font-semibold bg-white/15 text-white"
-              >
-                {s.label}
-              </span>
-            ))}
-          </div>
-          <div className="rounded-xl bg-amber-500/20 border border-amber-300/40 px-5 py-4 max-w-2xl mx-auto text-left">
-            <p className="text-sm text-amber-50 leading-relaxed">
-              <strong className="text-white">상용 서비스가 아닙니다.</strong> 자람이의 반려동물 버전도 아니고,
-              동물병원 중심 의료 플랫폼도 아닙니다. 현재는 연구 · 기술 개발 초기 · 장기 비전 단계이며, 아래
-              내용은 자람이 · 시니어앤라이프 · 베지케어의 검증된 AI Core를 반려동물의 삶 전체로 확장하는 연구
-              방향을 설명합니다.
-            </p>
-          </div>
-        </div>
-      </section>
+        }
+        badges={stages.map((stage) => stage.label)}
+        status={
+          <p>
+            현재는 동물병원 중심 의료 서비스가 아니라, AI Digital Care Log를 반려동물의 삶 전체로 확장하는
+            연구·기술 개발 단계입니다.
+          </p>
+        }
+      />
 
       {/* 2. Philosophy banner */}
-      <section id="philosophy" className="scroll-mt-28 py-14 bg-slate-900 text-white border-b border-slate-800">
+      <section id="philosophy" className="scroll-mt-28 border-b border-slate-200 bg-slate-50 py-14">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <h2 className="text-2xl md:text-3xl font-bold mb-3">의료 플랫폼이 아닙니다</h2>
-            <p className="text-white/75 max-w-2xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-950 mb-3">의료 플랫폼이 아닙니다</h2>
+            <p className="text-slate-600 max-w-2xl mx-auto">
               병원은 삶의 일부일 뿐입니다. 이 연구가 무엇이 아니고, 무엇인지를 먼저 분명히 합니다.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="rounded-2xl border border-red-400/30 bg-red-500/10 p-6 md:p-7">
+            <div className="rounded-2xl border border-red-200 bg-white p-6 shadow-sm md:p-7">
               <div className="flex items-center gap-3 mb-4">
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-red-400/20 text-red-300">
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-red-50 text-red-600">
                   <MarketingIcon name="alert" className="h-5 w-5" />
                 </div>
-                <h3 className="font-bold text-red-200">이것이 아닙니다</h3>
+                <h3 className="font-bold text-red-700">이것이 아닙니다</h3>
               </div>
-              <ul className="space-y-2.5 text-sm text-white/85">
+              <ul className="space-y-2.5 text-sm text-slate-700">
                 {notStatements.map((item) => (
                   <li key={item} className="flex gap-2">
-                    <span className="text-red-300 shrink-0">✕</span>
+                    <span className="text-red-500 shrink-0">✕</span>
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="rounded-2xl border border-emerald-400/30 bg-emerald-500/10 p-6 md:p-7">
+            <div className="rounded-2xl border border-emerald-200 bg-white p-6 shadow-sm md:p-7">
               <div className="flex items-center gap-3 mb-4">
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-400/20 text-emerald-300">
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-50 text-emerald-600">
                   <MarketingIcon name="sparkle" className="h-5 w-5" />
                 </div>
-                <h3 className="font-bold text-emerald-200">이것입니다</h3>
+                <h3 className="font-bold text-emerald-700">이것입니다</h3>
               </div>
-              <ul className="space-y-2.5 text-sm text-white/85">
+              <ul className="space-y-2.5 text-sm text-slate-700">
                 {isStatements.map((item) => (
                   <li key={item} className="flex gap-2">
-                    <span className="text-emerald-300 shrink-0">✓</span>
+                    <span className="text-emerald-600 shrink-0">✓</span>
                     <span>{item}</span>
                   </li>
                 ))}

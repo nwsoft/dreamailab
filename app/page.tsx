@@ -287,8 +287,8 @@ export default function Home() {
             <p className="mt-5 text-sm font-bold uppercase tracking-[0.16em] text-cyan-300">DAL Vibe Architect</p>
             <h2 className="mt-2 text-3xl font-black leading-tight sm:text-4xl">코딩을 몰라도 아이디어를<br className="hidden sm:block" /> 운영 가능한 소프트웨어로</h2>
             <p className="mt-5 max-w-3xl text-lg leading-relaxed text-slate-300">
-              Cursor를 복제하는 코드 편집기가 아닙니다. 비개발자의 의도를 요구사항·아키텍처·보안·접근성·테스트·배포·유지보수로 번역하고,
-              한국의 실제 운영환경과 장애인 창작자를 처음부터 포함하는 AI Software Architect를 설계합니다.
+              기존 바이브코딩의 Prompt → Code 틀을 넘어, 비개발자의 의도를 요구사항·아키텍처·보안·접근성·테스트·배포·운영·학습으로 번역합니다.
+              한국의 실제 운영환경과 장애인 창작자를 처음부터 포함하는 AI Software Creation Platform을 설계합니다.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <Link href="/services/vibe-architect" className="rounded-xl bg-cyan-300 px-6 py-3 font-bold text-slate-950 hover:bg-cyan-200">
@@ -302,9 +302,9 @@ export default function Home() {
           <div className="grid gap-3 sm:grid-cols-2">
             {[
               ['Intent', '아이디어와 현장 목적 이해'],
-              ['Architect', '제품·시스템·권한 설계'],
-              ['Guardian', '변경 영향·보안·회귀 추적'],
-              ['Operations', '배포·관측·유지보수 환류'],
+              ['Knowledge', '프로젝트 구조·결정·이력 연결'],
+              ['Guardian', '변경 영향·보안·회귀·복구 추적'],
+              ['Outcomes', '배포·운영 결과를 다음 설계에 환류'],
             ].map(([title, body]) => (
               <div key={title} className="rounded-2xl border border-white/10 bg-white/[0.06] p-5">
                 <p className="font-bold text-cyan-200">{title}</p>

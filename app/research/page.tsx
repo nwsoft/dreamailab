@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
+import CompanyPageHero from '../../components/CompanyPageHero'
 import { MarketingIcon } from '../../components/MarketingIcon'
 import { absoluteUrl, buildBreadcrumbJsonLd, buildPageMetadata, SITE_URL } from '../../lib/seo'
 
@@ -46,54 +47,48 @@ const researchProjects = [
 
 export default function ResearchHubPage() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="company-page">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
       />
       <Header />
 
-      <section className="bg-gradient-to-br from-slate-800 to-indigo-800 text-white py-16 md:py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-medium bg-white/15 text-white/95 mb-6">
-            <MarketingIcon name="flask" className="h-4 w-4" />
-            Research · Future Vision · Technology Roadmap
-          </div>
-          <h1 className="text-3xl md:text-5xl font-bold mb-6">Research & Future Vision</h1>
-          <p className="text-lg text-white/90 leading-relaxed max-w-3xl mx-auto">
+      <CompanyPageHero
+        eyebrow="Research · Future Vision · Technology Roadmap"
+        title="Research & Future Vision"
+        description={
+          <p>
             드림에이아이랩은 AI Digital Care Log를 사람에서 동물·식물·로봇으로 확장하는 장기 연구를
-            진행합니다. 이 영역의 내용은 <strong>상용 서비스가 아닙니다</strong>.
+            진행합니다. 현재 공개된 Pet AI와 Robot Vision은 연구·기술 로드맵입니다.
           </p>
-          <p className="text-sm text-white/80 mt-5 max-w-3xl mx-auto">
+        }
+        badges={['Research', 'Technology Development', 'Future Vision']}
+        status={
+          <p>
             연구의 공통 기반은{' '}
-            <Link href="/technology" className="underline font-medium hover:text-white">
+            <Link href="/technology" className="font-semibold underline underline-offset-4">
               AI디지털케어로그 정본 기술
             </Link>
             이며, 최초 고안·개발과 도메인 실증 이력은{' '}
-            <Link href="/research/jung-haesung" className="underline font-medium hover:text-white">
+            <Link href="/research/jung-haesung" className="font-semibold underline underline-offset-4">
               AI 연구자 정해성 공식 프로필
             </Link>
             에서 확인할 수 있습니다.
           </p>
-          <p className="text-sm text-white/70 mt-6 max-w-2xl mx-auto">
-            기술 개발 초기 · 연구 개발 · 장기 비전으로 표시된 항목은 출시·운영을 의미하지 않습니다.
-          </p>
-          <p className="text-xs text-white/50 mt-3 max-w-2xl mx-auto">
-            Research는 상단 메뉴가 아닌 서비스 생태계·푸터·관련 페이지에서 연결됩니다.
-          </p>
-        </div>
-      </section>
+        }
+      />
 
-      <section className="py-12 bg-amber-50 border-b border-amber-100">
+      <section className="border-b border-slate-200 bg-slate-50 py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex gap-4 items-start">
-            <div className="shrink-0 w-10 h-10 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-blue-100 text-primary-700">
               <MarketingIcon name="alert" className="h-5 w-5" />
             </div>
             <div>
-              <h2 className="text-lg font-bold text-amber-900 mb-2">Research vs Products</h2>
-              <p className="text-sm text-amber-800 leading-relaxed">
-                <Link href="/services" className="underline font-medium hover:text-amber-950">
+              <h2 className="mb-2 text-lg font-bold text-slate-950">Research vs Products</h2>
+              <p className="text-sm leading-relaxed text-slate-600">
+                <Link href="/services" className="font-medium text-primary-700 underline underline-offset-4">
                   서비스(Products)
                 </Link>
                 는 현재 운영·Pilot·개발 중인 도메인 플랫폼입니다.{' '}

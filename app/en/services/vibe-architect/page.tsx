@@ -29,8 +29,12 @@ export default function EnVibeArchitectPage() {
       koPath="/services/vibe-architect"
       sections={[
         {
-          heading: 'A different category from an AI code editor',
-          body: 'The goal is not to win a code-completion contest. It is to help a non-developer make sound product decisions while the system absorbs technical complexity and keeps an auditable architecture from intent through maintenance.',
+          heading: 'Beyond the prompt-to-code frame',
+          body: 'AI code editors, agentic development tools, no-code and low-code builders all reduce parts of the creation barrier. DAL focuses on the larger gap: turning intent into an auditable architecture and managing it through verification, deployment, operations and learning.',
+        },
+        {
+          heading: 'Three platform-intelligence candidates',
+          body: 'Architecture Guardian, Project Knowledge Graph and a Software Engineering Outcome Dataset are the three priority technical hypotheses. They are intended to protect change, preserve project reasoning and learn which architectures survive real operations; they are not presented as completed features.',
         },
         {
           heading: 'Korea-ready operations',
@@ -41,8 +45,12 @@ export default function EnVibeArchitectPage() {
           body: 'The builder itself should work with keyboard, screen readers, voice, magnification and alternative input. Generated products should pass accessibility gates and real task testing with disabled people, not automation alone.',
         },
         {
+          heading: 'Master Vision v1.0 and the next six steps',
+          body: 'Before feature development, the project will move through: market and failure-point analysis, MVP screens and user flows, Agent/Orchestrator/Architecture Guardian architecture, model and stack selection, a three-month roadmap, then the data flywheel and business model.',
+        },
+        {
           heading: 'Current status',
-          body: 'As of 17 August 2026 this is a newly announced project at architecture and co-design stage. There is no public builder, pricing or confirmed launch date. DAL Vibe Architect is a working name.',
+          body: 'As of 17 August 2026 Master Vision v1.0 is the product baseline and the project remains at architecture and co-design stage. There is no public builder, pricing or confirmed launch date. DAL Vibe Architect is a working name.',
         },
       ]}
       links={[

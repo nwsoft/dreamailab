@@ -12,6 +12,27 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+:root {
+  --dal-primary: #0f5eb8;
+  --dal-secondary: #159f8c;
+  --dal-ink: #0f172a;
+  --dal-muted: #475569;
+  --dal-border: #e2e8f0;
+  --dal-surface: #ffffff;
+  --dal-surface-muted: #f8fafc;
+}
+
+html {
+  color-scheme: light;
+  background: var(--dal-surface);
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--dal-ink);
+  background: var(--dal-surface);
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -21,12 +42,80 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+@layer components {
+  .company-page {
+    @apply min-h-screen bg-white text-slate-900;
   }
-  body {
-    color: white;
-    background: black;
+
+  .company-hero {
+    @apply border-b border-blue-500/20 bg-gradient-to-br from-primary-700 via-blue-700 to-secondary-600 text-white;
   }
-} 
+
+  .company-hero__inner {
+    @apply mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20;
+  }
+
+  .company-hero__content {
+    @apply mx-auto max-w-4xl text-center;
+  }
+
+  .company-eyebrow {
+    @apply text-sm font-bold uppercase tracking-[0.14em] text-blue-100;
+  }
+
+  .company-title {
+    @apply mt-4 text-3xl font-black leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl;
+  }
+
+  .company-lead {
+    @apply mx-auto mt-6 max-w-3xl text-base leading-relaxed text-white/90 sm:text-lg;
+  }
+
+  .company-badges {
+    @apply mt-7 flex flex-wrap justify-center gap-2;
+  }
+
+  .company-badge {
+    @apply inline-flex rounded-full border border-white/25 bg-white/10 px-3 py-1.5 text-xs font-semibold text-white;
+  }
+
+  .company-status-note {
+    @apply mx-auto mt-7 max-w-3xl rounded-xl border border-white/25 bg-white/10 px-5 py-4 text-left text-sm leading-relaxed text-white/90 sm:text-center;
+  }
+
+  .company-actions {
+    @apply mt-8 flex flex-wrap justify-center gap-3;
+  }
+
+  .company-action-primary {
+    @apply rounded-xl bg-white px-6 py-3 font-bold text-primary-700 shadow-sm transition hover:bg-blue-50;
+  }
+
+  .company-action-secondary {
+    @apply rounded-xl border border-white/35 bg-white/5 px-6 py-3 font-bold text-white transition hover:bg-white/15;
+  }
+
+  .company-section {
+    @apply border-b border-slate-100 bg-white py-14 lg:py-20;
+  }
+
+  .company-section-muted {
+    @apply border-b border-slate-200 bg-slate-50 py-14 lg:py-20;
+  }
+
+  .company-container {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .company-section-title {
+    @apply text-2xl font-black tracking-tight text-slate-950 sm:text-3xl;
+  }
+
+  .company-section-lead {
+    @apply mt-4 text-base leading-relaxed text-slate-600 sm:text-lg;
+  }
+
+  .company-card {
+    @apply rounded-2xl border border-slate-200 bg-white p-6 shadow-sm;
+  }
+}

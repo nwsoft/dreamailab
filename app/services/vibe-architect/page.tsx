@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
+import CompanyPageHero from '../../../components/CompanyPageHero'
 import PageClosingSection from '../../../components/PageClosingSection'
 import {
   absoluteUrl,
@@ -50,6 +50,33 @@ const guardianImpacts = [
   'API·인증·권한·개인정보 영향',
   '접근성·보안·회귀 가능성',
   '변경 후 자동·수동 검증 범위',
+] as const
+
+const platformIntelligence = [
+  {
+    name: 'Architecture Guardian',
+    role: '변경 안전성',
+    body: '요구사항과 승인된 아키텍처를 기준으로 DB·API·권한·보안·접근성·회귀·복구 영향을 변경 전후에 추적합니다.',
+  },
+  {
+    name: 'Project Knowledge Graph',
+    role: '프로젝트 맥락',
+    body: '제품 목적부터 요구사항·구성요소·의존성·의사결정·테스트·오류·배포 이력까지 프로젝트 자체의 관계와 이유를 보존합니다.',
+  },
+  {
+    name: 'Software Engineering Outcome Dataset',
+    role: '운영 결과 학습',
+    body: '어떤 의도에 어떤 구조를 선택했고 실제 운영에서 무엇이 실패·수정·생존했는지를 권리와 개인정보를 보호하며 학습하는 데이터 기반을 지향합니다.',
+  },
+] as const
+
+const nextDesignSteps = [
+  ['01', '경쟁제품·실패지점 분석', 'AI 코드 에디터, 에이전트형 개발도구, 노코드·로우코드와 앱 빌더를 같은 평가축으로 비교'],
+  ['02', 'MVP 화면·사용자 흐름', '첫 사용자와 산업, 성공 과업, 승인·실패·복구 흐름을 화면 단위로 정의'],
+  ['03', '핵심 기술 아키텍처', 'Agent·Orchestrator·Architecture Guardian·Project Knowledge Graph의 상태와 책임 경계 설계'],
+  ['04', '모델·개발 스택', '역할별 모델, 평가, 비용·지연시간, 샌드박스, 저장·배포·관측 구조 결정'],
+  ['05', '3개월 개발 로드맵', '주차별 산출물, 성공지표, 중단 기준, 파일럿 범위와 책임 정의'],
+  ['06', '데이터·사업모델', 'Outcome Dataset의 권리·격리·동의, 과금단위, 산업별 진입과 장기 플라이휠 설계'],
 ] as const
 
 const koreanOperations = [
@@ -107,9 +134,9 @@ const roadmap = [
 
 const faqs = [
   {
-    question: 'Cursor와 같은 AI 코드 편집기인가요?',
+    question: '기존 바이브코딩·AI 코딩 도구와 무엇이 다른가요?',
     answer:
-      '아닙니다. 개발자의 코드 작성 속도를 높이는 편집기 경쟁보다, 비개발자의 의도를 요구사항·아키텍처·보안·테스트·배포·운영으로 번역하는 Software Creation Platform을 목표로 합니다.',
+      '기존 도구의 대표적 흐름인 Prompt → Code보다 앞과 뒤를 함께 다룹니다. 비개발자의 의도를 요구사항·아키텍처·보안·테스트·배포·운영·학습으로 연결하는 Software Creation Platform을 목표로 합니다.',
   },
   {
     question: '지금 바로 사용할 수 있나요?',
@@ -170,7 +197,7 @@ export default function VibeArchitectPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-slate-950">
+    <div className="company-page">
       <Header />
       {schemas.map((schema, index) => (
         <script
@@ -181,116 +208,86 @@ export default function VibeArchitectPage() {
       ))}
 
       <main>
-        <section className="relative overflow-hidden border-b border-cyan-400/20 bg-slate-950 text-white">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(34,211,238,0.18),transparent_38%),radial-gradient(circle_at_80%_30%,rgba(99,102,241,0.22),transparent_36%)]" />
-          <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
-            <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-              <div>
-                <div className="mb-6 flex flex-wrap gap-2">
-                  <span className="rounded-full border border-cyan-300/30 bg-cyan-300/10 px-4 py-1.5 text-sm font-semibold text-cyan-200">
-                    New Project · 2026
-                  </span>
-                  <span className="rounded-full border border-white/20 bg-white/5 px-4 py-1.5 text-sm text-slate-200">
-                    설계 공개 · 개발 준비
-                  </span>
-                </div>
-                <p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-cyan-300">{projectName}</p>
-                <h1 className="text-4xl font-black leading-tight tracking-tight sm:text-5xl lg:text-6xl">
-                  코딩을 쉽게 만드는 AI가 아니라,
-                  <span className="mt-2 block bg-gradient-to-r from-cyan-300 to-indigo-300 bg-clip-text text-transparent">
-                    운영 가능한 소프트웨어를 만드는 AI
-                  </span>
-                </h1>
-                <p className="mt-7 max-w-3xl text-lg leading-relaxed text-slate-200 sm:text-xl">
-                  사용자는 아이디어와 현장에 답합니다. AI는 요구사항·데이터·권한·보안·접근성·테스트·배포·운영을
-                  하나의 아키텍처로 번역합니다. 한국의 실제 운영환경과 비개발자, 장애인 창작자를 처음부터 포함하는
-                  <strong className="text-white"> AI Software Architect</strong>를 지향합니다.
-                </p>
-                <div className="mt-8 flex flex-wrap gap-3">
-                  <a href="#architecture" className="rounded-xl bg-cyan-300 px-6 py-3 font-bold text-slate-950 hover:bg-cyan-200">
-                    설계 구조 보기
-                  </a>
-                  <Link href="/contact?service=vibe-architect&type=partnership" className="rounded-xl border border-white/30 px-6 py-3 font-bold text-white hover:bg-white/10">
-                    공동설계·파일럿 문의
-                  </Link>
-                </div>
-              </div>
-
-              <div className="rounded-3xl border border-white/15 bg-white/[0.07] p-6 shadow-2xl backdrop-blur sm:p-8">
-                <p className="text-sm font-semibold text-cyan-200">사용자가 말하는 것</p>
-                <div className="mt-3 rounded-2xl bg-white p-5 text-lg font-bold leading-relaxed text-slate-900">
-                  “대전에 있는 언어치료센터 예약 플랫폼을 만들고 싶어요.”
-                </div>
-                <div className="my-5 flex items-center gap-3 text-sm text-slate-300">
-                  <span className="h-px flex-1 bg-white/15" />
-                  AI가 코딩 전에 묻는 질문
-                  <span className="h-px flex-1 bg-white/15" />
-                </div>
-                <div className="space-y-3">
-                  {[
-                    '센터가 시간을 직접 열까요, 고객이 원하는 시간을 요청할까요?',
-                    '보호자와 치료사의 공개 범위는 어디까지여야 할까요?',
-                    '예약 변경·중복·노쇼는 어떤 운영 규칙으로 처리할까요?',
-                  ].map((question, index) => (
-                    <div key={question} className="flex gap-3 rounded-xl border border-white/10 bg-slate-900/60 p-4 text-sm leading-relaxed text-slate-100">
-                      <span className="font-bold text-cyan-300">{index + 1}</span>
-                      <span>{question}</span>
-                    </div>
-                  ))}
-                </div>
-                <p className="mt-5 text-xs leading-relaxed text-slate-400">
-                  사용자는 사업적 결정을 하고, 시스템이 이를 스키마·API·권한·테스트·운영 규칙으로 변환하는 방식입니다.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+        <CompanyPageHero
+          eyebrow={`${projectName} · New Project 2026`}
+          title={
+            <>
+              아이디어를 운영 가능한
+              <span className="block">소프트웨어로 만드는 AI</span>
+            </>
+          }
+          description={
+            <p>
+              드림에이아이랩이 설계하는 신규 바이브코딩·AI 앱 빌더 프로젝트입니다. 사용자의 의도를
+              요구사항·아키텍처·보안·접근성·테스트·배포·운영으로 연결해, 개발의 복잡성을 시스템 내부에서
+              처리하는 것을 목표로 합니다.
+            </p>
+          }
+          badges={['바이브코딩', 'AI 앱 빌더', '한국 운영환경', '접근성 우선']}
+          status={
+            <p>
+              현재 단계는 <strong>마스터 비전과 기술 구조 공개·개발 준비</strong>입니다. 공개 빌더와 출시
+              일정은 아직 확정되지 않았습니다.
+            </p>
+          }
+          actions={[
+            { label: '설계 구조 보기', href: '#architecture' },
+            {
+              label: '공동설계·파일럿 문의',
+              href: '/contact?service=vibe-architect&type=partnership',
+              variant: 'secondary',
+            },
+          ]}
+        />
 
         <section className="bg-white py-16 lg:py-20">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-4xl text-center">
-              <p className="text-sm font-bold uppercase tracking-wider text-indigo-700">Different category</p>
-              <h2 className="mt-3 text-3xl font-black text-slate-950 sm:text-4xl">Cursor의 복제가 아닌, 다른 문제 정의</h2>
+              <p className="text-sm font-bold uppercase tracking-wider text-primary-700">Category &amp; Positioning</p>
+              <h2 className="mt-3 text-3xl font-black text-slate-950 sm:text-4xl">바이브코딩 시장 안에서, 다른 문제를 풉니다</h2>
               <p className="mt-5 text-lg leading-relaxed text-slate-600">
-                전문 개발자를 위한 AI 편집기 시장은 빠르게 통합되고 있습니다. Cursor는 2025년 Graphite 인수 계약을 발표했고,
-                2026년에는 SpaceX와 모델 학습 파트너십을 발표했습니다. DAL은 코드 생성 성능 정면대결보다
-                <strong className="text-slate-900"> “왜 비개발자가 개발 전 과정을 알아야 실제 서비스를 만들 수 있는가”</strong>를 풉니다.
+                AI 코드 에디터, 에이전트형 개발도구, 노코드·로우코드와 앱 빌더는 저마다 코드 생성과 제작 속도를 높이고 있습니다.
+                DAL 역시 바이브코딩·AI 앱 빌더 범주에 속합니다. 다만 특정 도구의 복제나 코드 생성 성능 정면대결보다
+                <strong className="text-slate-900"> “왜 사용자가 개발 전 과정을 알아야 실제 서비스를 만들 수 있는가”</strong>를 풉니다.
               </p>
             </div>
             <div className="mt-10 grid gap-5 md:grid-cols-2">
               <div className="rounded-2xl border border-slate-200 bg-slate-50 p-7">
-                <p className="text-sm font-semibold text-slate-500">일반적인 AI 코딩 도구</p>
+                <p className="text-sm font-semibold text-slate-500">현재 시장의 공통 초점</p>
                 <p className="mt-3 text-2xl font-black text-slate-900">사람 → Prompt → AI → Code</p>
                 <p className="mt-4 leading-relaxed text-slate-600">코드가 빨리 나오지만, 숨은 요구사항과 운영 위험을 사용자가 알아차려야 할 수 있습니다.</p>
               </div>
-              <div className="rounded-2xl border border-cyan-200 bg-cyan-50 p-7">
-                <p className="text-sm font-semibold text-cyan-800">DAL이 설계하는 범주</p>
-                <p className="mt-3 text-2xl font-black text-slate-950">의도 → 아키텍처 → 검증 → 운영</p>
-                <p className="mt-4 leading-relaxed text-slate-700">코드를 보여주는 것보다, 서비스가 왜 그렇게 설계되고 안전하게 바뀌는지를 관리합니다.</p>
+              <div className="rounded-2xl border border-blue-200 bg-blue-50 p-7">
+                <p className="text-sm font-semibold text-primary-700">DAL의 차별화 초점</p>
+                <p className="mt-3 text-2xl font-black text-slate-950">의도 → 아키텍처 → 운영 → 학습</p>
+                <p className="mt-4 leading-relaxed text-slate-700">코드를 보여주는 것보다, 서비스가 왜 그렇게 설계되고 검증·배포·운영·개선되는지를 관리합니다.</p>
               </div>
             </div>
-            <div className="mt-7 flex flex-wrap justify-center gap-4 text-sm">
-              <a className="font-semibold text-indigo-700 underline underline-offset-4" href="https://cursor.com/blog/graphite" target="_blank" rel="noopener noreferrer">Cursor · Graphite 발표</a>
-              <a className="font-semibold text-indigo-700 underline underline-offset-4" href="https://cursor.com/blog/spacex-model-training" target="_blank" rel="noopener noreferrer">Cursor · SpaceX 파트너십</a>
+            <div className="mt-8 rounded-2xl border border-slate-200 bg-slate-50 p-6 text-left">
+              <p className="text-sm font-bold text-primary-700">예시: 언어치료센터 예약 서비스</p>
+              <p className="mt-2 leading-relaxed text-slate-700">
+                사용자는 센터의 예약 방식·보호자 공개 범위·노쇼 처리처럼 현장의 결정을 설명합니다. 시스템은 이를
+                데이터 구조·권한·검증·운영 규칙으로 변환합니다.
+              </p>
             </div>
           </div>
         </section>
 
-        <section id="architecture" className="border-y border-white/10 bg-slate-900 py-16 text-white lg:py-24">
+        <section id="architecture" className="border-y border-slate-200 bg-slate-50 py-16 lg:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
-              <p className="text-sm font-bold uppercase tracking-wider text-cyan-300">Architecture to execution</p>
-              <h2 className="mt-3 text-3xl font-black sm:text-4xl">의도를 운영까지 연결하는 7개 계층</h2>
-              <p className="mt-4 text-lg leading-relaxed text-slate-300">
+              <p className="text-sm font-bold uppercase tracking-wider text-primary-700">Architecture to execution</p>
+              <h2 className="mt-3 text-3xl font-black text-slate-950 sm:text-4xl">의도를 운영까지 연결하는 7개 계층</h2>
+              <p className="mt-4 text-lg leading-relaxed text-slate-600">
                 코드를 곧바로 만들기 전에 목적과 책임 경계를 설계하고, 배포 뒤 결과까지 같은 루프 안에서 관리합니다.
               </p>
             </div>
             <ol className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
               {architecture.map((item, index) => (
-                <li key={item.name} className={`relative rounded-2xl border p-6 ${index === architecture.length - 1 ? 'border-cyan-300/40 bg-cyan-300/10 xl:col-span-2' : 'border-white/10 bg-white/[0.04]'}`}>
-                  <span className="text-xs font-black tracking-widest text-cyan-300">{item.step}</span>
-                  <h3 className="mt-3 text-lg font-bold">{item.name}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-slate-300">{item.desc}</p>
+                <li key={item.name} className={`relative rounded-2xl border bg-white p-6 shadow-sm ${index === architecture.length - 1 ? 'border-secondary-300 xl:col-span-2' : 'border-slate-200'}`}>
+                  <span className="text-xs font-black tracking-widest text-primary-700">{item.step}</span>
+                  <h3 className="mt-3 text-lg font-bold text-slate-950">{item.name}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-600">{item.desc}</p>
                 </li>
               ))}
             </ol>
@@ -317,16 +314,37 @@ export default function VibeArchitectPage() {
           </div>
         </section>
 
-        <section className="bg-amber-50 py-16 lg:py-24">
+        <section className="border-y border-slate-200 bg-slate-50 py-16 lg:py-24">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-4xl text-center">
+              <p className="text-sm font-bold uppercase tracking-wider text-primary-700">Platform intelligence candidates</p>
+              <h2 className="mt-3 text-3xl font-black text-slate-950 sm:text-4xl">단순 바이브코딩 도구를 넘어서는 세 가지 기술축</h2>
+              <p className="mt-4 text-lg leading-relaxed text-slate-700">
+                세 이름은 구현 완료 기능이 아니라, 독립적인 기술 플랫폼으로 발전하기 위해 우선 검증할 핵심 후보입니다.
+              </p>
+            </div>
+            <div className="mt-10 grid gap-5 lg:grid-cols-3">
+              {platformIntelligence.map((item) => (
+                <article key={item.name} className="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm">
+                  <p className="text-xs font-black uppercase tracking-wider text-primary-700">{item.role}</p>
+                  <h3 className="mt-3 text-xl font-black text-slate-950">{item.name}</h3>
+                  <p className="mt-4 leading-relaxed text-slate-600">{item.body}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-white py-16 lg:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-3xl text-center">
-              <p className="text-sm font-bold uppercase tracking-wider text-amber-800">Built for Korea</p>
+              <p className="text-sm font-bold uppercase tracking-wider text-primary-700">Built for Korea</p>
               <h2 className="mt-3 text-3xl font-black text-slate-950 sm:text-4xl">한국어 번역이 아니라, 한국에서 운영되는 방법</h2>
               <p className="mt-4 text-lg leading-relaxed text-slate-700">연동 이름을 나열하는 데서 끝나지 않고, 실제 사업 흐름과 책임을 아키텍처에 포함합니다.</p>
             </div>
             <div className="mt-10 grid gap-5 md:grid-cols-2">
               {koreanOperations.map((item) => (
-                <div key={item.title} className="rounded-2xl border border-amber-200 bg-white p-7 shadow-sm">
+                <div key={item.title} className="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm">
                   <h3 className="text-xl font-bold text-slate-950">{item.title}</h3>
                   <p className="mt-3 leading-relaxed text-slate-600">{item.body}</p>
                 </div>
@@ -335,26 +353,26 @@ export default function VibeArchitectPage() {
           </div>
         </section>
 
-        <section className="bg-indigo-950 py-16 text-white lg:py-24">
+        <section className="border-y border-slate-200 bg-slate-50 py-16 lg:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
               <div>
-                <p className="text-sm font-bold uppercase tracking-wider text-cyan-300">Disability inclusion by design</p>
-                <h2 className="mt-3 text-3xl font-black sm:text-4xl">장애인을 위한 별도 옵션이 아니라, 처음부터 포함하는 제작 환경</h2>
-                <p className="mt-5 text-lg leading-relaxed text-indigo-100">
+                <p className="text-sm font-bold uppercase tracking-wider text-primary-700">Disability inclusion by design</p>
+                <h2 className="mt-3 text-3xl font-black text-slate-950 sm:text-4xl">장애인을 위한 별도 옵션이 아니라, 처음부터 포함하는 제작 환경</h2>
+                <p className="mt-5 text-lg leading-relaxed text-slate-600">
                   생성형 AI 코딩 도구가 시각장애 개발자의 기존 장벽을 키우거나 새로운 장벽을 만들 수 있다는 연구가 있습니다.
                   DAL은 제작 도구와 생성 결과, 두 층의 접근성을 함께 다룹니다.
                 </p>
                 <div className="mt-6 space-y-2 text-sm">
-                  <a href="https://www.microsoft.com/en-us/research/publication/the-impact-of-generative-ai-coding-assistants-on-developers-who-are-visually-impaired/" target="_blank" rel="noopener noreferrer" className="block font-semibold text-cyan-200 underline underline-offset-4">Microsoft Research · 시각장애 개발자와 AI 코딩 도구 연구</a>
-                  <a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank" rel="noopener noreferrer" className="block font-semibold text-cyan-200 underline underline-offset-4">W3C · WCAG 2.2 국제 접근성 표준</a>
+                  <a href="https://www.microsoft.com/en-us/research/publication/the-impact-of-generative-ai-coding-assistants-on-developers-who-are-visually-impaired/" target="_blank" rel="noopener noreferrer" className="block font-semibold text-primary-700 underline underline-offset-4">Microsoft Research · 시각장애 개발자와 AI 코딩 도구 연구</a>
+                  <a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank" rel="noopener noreferrer" className="block font-semibold text-primary-700 underline underline-offset-4">W3C · WCAG 2.2 국제 접근성 표준</a>
                 </div>
               </div>
               <div className="grid gap-4 sm:grid-cols-2">
                 {inclusionPrinciples.map((item) => (
-                  <div key={item.title} className="rounded-2xl border border-white/15 bg-white/[0.07] p-6">
-                    <h3 className="font-bold text-cyan-100">{item.title}</h3>
-                    <p className="mt-3 text-sm leading-relaxed text-indigo-100">{item.body}</p>
+                  <div key={item.title} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <h3 className="font-bold text-slate-950">{item.title}</h3>
+                    <p className="mt-3 text-sm leading-relaxed text-slate-600">{item.body}</p>
                   </div>
                 ))}
               </div>
@@ -398,12 +416,32 @@ export default function VibeArchitectPage() {
 
         <section className="border-y border-slate-200 bg-slate-50 py-16">
           <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+            <div className="mb-10">
+              <p className="text-sm font-bold uppercase tracking-wider text-indigo-700">Master Vision v1.0 → Product definition</p>
+              <h2 className="mt-3 text-3xl font-black text-slate-950">기능 개발 전에 내려갈 다음 6단계</h2>
+              <p className="mt-4 leading-relaxed text-slate-600">
+                1차 마스터 비전을 기준선으로 고정했습니다. 바로 기능을 늘리기보다 시장의 실패지점과 첫 사용자 흐름을 먼저 확정한 뒤 기술과 사업 설계로 내려갑니다.
+              </p>
+              <ol className="mt-7 grid gap-3 sm:grid-cols-2">
+                {nextDesignSteps.map(([step, title, body]) => (
+                  <li key={step} className="rounded-2xl border border-slate-200 bg-white p-5">
+                    <div className="flex items-start gap-4">
+                      <span className="text-sm font-black text-indigo-700">{step}</span>
+                      <div>
+                        <h3 className="font-bold text-slate-950">{title}</h3>
+                        <p className="mt-1 text-sm leading-relaxed text-slate-600">{body}</p>
+                      </div>
+                    </div>
+                  </li>
+                ))}
+              </ol>
+            </div>
             <div className="rounded-3xl border border-amber-200 bg-amber-50 p-7 sm:p-9">
               <div className="flex flex-wrap items-center gap-3">
                 <span className="rounded-full bg-amber-200 px-3 py-1 text-xs font-bold text-amber-950">CURRENT STATUS</span>
                 <span className="text-sm font-semibold text-amber-900">2026-08-17 기준</span>
               </div>
-              <h2 className="mt-4 text-2xl font-black text-slate-950">신규 프로젝트 · 방향 및 아키텍처 공개 단계</h2>
+              <h2 className="mt-4 text-2xl font-black text-slate-950">신규 프로젝트 · Master Vision v1.0 및 아키텍처 공개 단계</h2>
               <p className="mt-3 leading-relaxed text-slate-700">
                 현재 공개 빌더, 유료 요금제, 확정 출시일은 없습니다. <strong>DAL Vibe Architect는 프로젝트명</strong>이며 변경될 수 있습니다.
                 이 페이지는 현재 설계 원칙과 공동설계 범위를 설명하며, 기능 제공·법률 적합성·접근성 준수 성과를 미리 주장하지 않습니다.

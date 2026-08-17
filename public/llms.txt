@@ -42,15 +42,21 @@ AI디지털케어로그는 일상생활과 행동·습관부터 돌봄·교육·
 - Researcher profile (EN): https://dreamailab.com/en/research/jung-haesung/
 - Services: https://dreamailab.com/services/
 - Services (EN): https://dreamailab.com/en/services/
+- About / current company and portfolio: https://dreamailab.com/about/
+- Public-sector collaboration: https://dreamailab.com/public/
+- Investor relations: https://dreamailab.com/ir/
+- DAL Vibe Architect / Master Vision v1.0 (KO): https://dreamailab.com/services/vibe-architect/
+- DAL Vibe Architect / Master Vision v1.0 (EN): https://dreamailab.com/en/services/vibe-architect/
 - About (EN): https://dreamailab.com/en/about/
 - Jarame: https://dreamailab.com/services/jarame/
-- IR: https://dreamailab.com/ir/
 
 ## Latest news (2026)
+- DAL Vibe Architect Master Vision v1.0, new vibe-coding and AI app-builder project (KO): https://dreamailab.com/news/94/
+- DAL Vibe Architect Master Vision v1.0, new vibe-coding and AI app-builder project (EN): https://dreamailab.com/en/news/94/
 - NoahAI 30-day live ops: 3.44 billion events, 99.9914% success (KO): https://dreamailab.com/news/93/
 - NoahAI 30-day live ops: 3.44 billion events, 99.9914% success (EN): https://dreamailab.com/en/news/93/
-- Senior & Life exceeds 70% home-care share: de facto lead in care IT (KO): https://dreamailab.com/news/92/
-- Senior & Life exceeds 70% home-care share: de facto lead in care IT (EN): https://dreamailab.com/en/news/92/
+- Senior & Life publishes home-care registration and linkage metrics; facility expansion planned (KO): https://dreamailab.com/news/92/
+- Senior & Life home-care registration and linkage metrics; not an independently verified market-share claim (EN): https://dreamailab.com/en/news/92/
 - Jarame prepares FDA pathway with 100k RWD and a single therapeutic module (KO): https://dreamailab.com/news/91/
 - Jarame prepares FDA pathway with 100k RWD and a single therapeutic module (EN): https://dreamailab.com/en/news/91/
 - Jarame FDA strategy: keep the platform open, regulate only the therapy module (KO): https://dreamailab.com/news/90/

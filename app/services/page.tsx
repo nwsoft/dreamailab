@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import PageClosingSection from '../../components/PageClosingSection'
+import CompanyPageHero from '../../components/CompanyPageHero'
 import Link from 'next/link'
 import {
   AI_DIGITAL_CARE_LOG_FLOW_KO,
@@ -138,13 +139,14 @@ const newSoftwareProject = {
   url: '/services/vibe-architect',
   status: '설계 공개 · 개발 준비',
   description:
-    '비개발자의 아이디어를 요구사항·아키텍처·보안·접근성·테스트·배포·운영으로 번역하는 한국형 AI Software Architect 신규 프로젝트',
+    '기존 바이브코딩의 코드 생성 중심 틀을 넘어, 비개발자의 의도를 아키텍처·검증·운영·결과 학습으로 연결하는 한국형 AI Software Creation Platform 프로젝트',
 }
 
 export default function ServicePortfolio() {
   const totalServices = services.length
 
-  const itemList = services.map((s, i) => ({
+  const itemList = [
+    ...services.map((s, i) => ({
     '@type': 'ListItem',
     position: i + 1,
     item: {
@@ -152,7 +154,17 @@ export default function ServicePortfolio() {
       name: s.name,
       url: s.url && s.url !== '#' ? s.url : undefined,
     },
-  }))
+    })),
+    {
+      '@type': 'ListItem',
+      position: services.length + 1,
+      item: {
+        '@type': 'Service',
+        name: newSoftwareProject.name,
+        url: newSoftwareProject.url,
+      },
+    },
+  ]
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -191,50 +203,26 @@ export default function ServicePortfolio() {
 
       <Header />
 
-      {/* Hero */}
-      <section className="bg-gradient-to-br from-primary-600 to-secondary-600 text-white py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="inline-block px-4 py-1.5 rounded-full text-sm font-medium bg-white/15 text-white/95 mb-6">
-              DAL Platform Hub
-            </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+      <CompanyPageHero
+        eyebrow="Dream AI Lab · Technology & Portfolio"
+        title={
+          <>
               하나의 AI디지털케어로그로
               <br />
               삶의 여러 문제를 연결합니다
-            </h1>
-            <div className="max-w-3xl mx-auto mb-8 rounded-2xl border border-white/25 bg-white/10 px-6 py-5 text-left sm:text-center">
-              <p className="text-lg md:text-xl font-semibold text-white leading-relaxed">
-                DAL은 서비스를 여러 개 운영하는 회사가 아닙니다.
-              </p>
-              <p className="text-lg md:text-xl font-semibold text-white leading-relaxed mt-3">
-                {AI_DIGITAL_CARE_LOG_PUBLIC_KO}
-              </p>
-            </div>
-            <p className="text-lg md:text-xl max-w-4xl mx-auto text-white/90 mb-4 leading-relaxed">
+          </>
+        }
+        description={
+          <div className="space-y-3">
+            <p className="font-semibold">{AI_DIGITAL_CARE_LOG_PUBLIC_KO}</p>
+            <p>
               일상·행동·습관부터 발달·돌봄·교육·의료·금융·재테크·식습관·소비·업무까지,
               도메인은 달라도 같은 데이터·판단·실행·학습 환류 구조가 작동합니다.
             </p>
-            <p className="text-base md:text-lg max-w-3xl mx-auto text-white/85 mb-10 leading-relaxed">
-              단순한 앱·기록의 나열이 아니라, 하나의 데이터 인프라 위에서 도메인끼리 이어지도록 설계합니다.
-            </p>
-            <div className="flex flex-wrap justify-center gap-6 text-center">
-              <div className="bg-white/20 rounded-lg p-4 border border-white/30">
-                <div className="text-2xl font-bold">1</div>
-                <div className="text-sm text-white/80">통합 플랫폼</div>
-              </div>
-              <div className="bg-white/20 rounded-lg p-4 border border-white/30">
-                <div className="text-2xl font-bold">{totalServices}</div>
-                <div className="text-sm text-white/80">핵심 도메인</div>
-              </div>
-              <div className="bg-white/20 rounded-lg p-4 border border-white/30">
-                <div className="text-2xl font-bold">∞</div>
-                <div className="text-sm text-white/80">확장 가능성</div>
-              </div>
-            </div>
           </div>
-        </div>
-      </section>
+        }
+        badges={['AI Digital Care Log', `${totalServices}개 핵심 도메인`, '신규 바이브코딩 프로젝트']}
+      />
 
       {/* Why multi domain */}
       <section className="py-16 bg-white border-b border-gray-100">
@@ -254,25 +242,25 @@ export default function ServicePortfolio() {
       </section>
 
       {/* Core 6개 도메인과 분리된 2026 신규 소프트웨어 창작 프로젝트 */}
-      <section className="border-y border-cyan-300/20 bg-slate-950 py-16 text-white">
+      <section className="border-y border-slate-200 bg-slate-50 py-16">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:px-8">
           <div>
             <div className="flex flex-wrap gap-2">
-              <span className="rounded-full bg-cyan-300 px-3 py-1 text-xs font-black text-slate-950">NEW PLATFORM PROJECT</span>
-              <span className="rounded-full border border-white/20 px-3 py-1 text-xs font-semibold text-slate-200">{newSoftwareProject.status}</span>
+              <span className="rounded-full bg-primary-700 px-3 py-1 text-xs font-black text-white">NEW VIBE-CODING PROJECT</span>
+              <span className="rounded-full border border-slate-300 bg-white px-3 py-1 text-xs font-semibold text-slate-600">{newSoftwareProject.status}</span>
             </div>
-            <p className="mt-5 text-sm font-bold uppercase tracking-[0.16em] text-cyan-300">{newSoftwareProject.name}</p>
-            <h2 className="mt-2 text-3xl font-black sm:text-4xl">아이디어를 실제 운영 가능한 소프트웨어로</h2>
-            <p className="mt-5 text-lg leading-relaxed text-slate-300">{newSoftwareProject.description}입니다.</p>
-            <p className="mt-4 leading-relaxed text-slate-400">
+            <p className="mt-5 text-sm font-bold uppercase tracking-[0.16em] text-primary-700">{newSoftwareProject.name}</p>
+            <h2 className="mt-2 text-3xl font-black text-slate-950 sm:text-4xl">아이디어를 실제 운영 가능한 소프트웨어로</h2>
+            <p className="mt-5 text-lg leading-relaxed text-slate-700">{newSoftwareProject.description}입니다.</p>
+            <p className="mt-4 leading-relaxed text-slate-600">
               기존 6개 케어·라이프 도메인에 억지로 포함하지 않습니다. 여러 산업을 실제 제품으로 재구체화해 온 DAL의 구조적 전이 방식을
-              소프트웨어 제작 자체에 적용하는 새로운 플랫폼 축입니다.
+              소프트웨어 제작 자체에 적용하는 신규 바이브코딩·AI 앱 빌더 프로젝트입니다.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
-              <Link href={newSoftwareProject.url} className="rounded-xl bg-cyan-300 px-6 py-3 font-bold text-slate-950 hover:bg-cyan-200">
+              <Link href={newSoftwareProject.url} className="rounded-xl bg-primary-700 px-6 py-3 font-bold text-white hover:bg-primary-800">
                 프로젝트 설계 보기
               </Link>
-              <Link href="/contact?service=vibe-architect&type=partnership" className="rounded-xl border border-white/30 px-6 py-3 font-bold hover:bg-white/10">
+              <Link href="/contact?service=vibe-architect&type=partnership" className="rounded-xl border border-slate-300 bg-white px-6 py-3 font-bold text-slate-800 hover:bg-slate-100">
                 공동설계·파일럿 문의
               </Link>
             </div>
@@ -284,9 +272,9 @@ export default function ServicePortfolio() {
               ['변경 안전성', '영향 분석·회귀검증·복구'],
               ['한국·접근성', '국내 운영요건·장애인 공동설계'],
             ].map(([title, body]) => (
-              <div key={title} className="rounded-2xl border border-white/10 bg-white/[0.06] p-5">
-                <h3 className="font-bold text-cyan-100">{title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-slate-300">{body}</p>
+              <div key={title} className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+                <h3 className="font-bold text-slate-950">{title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-slate-600">{body}</p>
               </div>
             ))}
           </div>

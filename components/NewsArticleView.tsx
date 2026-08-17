@@ -181,9 +181,20 @@ export default function NewsArticleView({
                   key={relatedArticle.id}
                   className="bg-gray-50 rounded-xl overflow-hidden hover:shadow-lg transition-shadow"
                 >
-                  <div className="h-48 bg-gradient-to-br from-primary-100 to-secondary-100 flex items-center justify-center">
-                    <NewsCategoryIcon category={relatedArticle.category} />
-                  </div>
+                  {relatedArticle.ogImage ? (
+                    <img
+                      src={relatedArticle.ogImage}
+                      alt={relatedArticle.ogImageAlt ?? relatedArticle.title}
+                      className="h-48 w-full object-cover"
+                      width={1200}
+                      height={630}
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div className="h-48 bg-gradient-to-br from-primary-100 to-secondary-100 flex items-center justify-center">
+                      <NewsCategoryIcon category={relatedArticle.category} />
+                    </div>
+                  )}
                   <div className="p-6">
                     <div className="flex items-center mb-3">
                       <span className="bg-white text-gray-700 px-2 py-1 rounded text-xs font-medium border">

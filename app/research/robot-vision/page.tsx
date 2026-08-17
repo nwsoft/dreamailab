@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
+import CompanyPageHero from '../../../components/CompanyPageHero'
 import { MarketingIcon, type MarketingIconName } from '../../../components/MarketingIcon'
 import { absoluteUrl, buildBreadcrumbJsonLd, buildPageMetadata, SITE_URL } from '../../../lib/seo'
 
@@ -445,7 +446,7 @@ const valueColumns: { title: string; icon: MarketingIconName; items: string[] }[
 
 export default function RobotVisionResearchPage() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="company-page">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
@@ -454,38 +455,22 @@ export default function RobotVisionResearchPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
       <Header />
 
-      {/* 1. Hero */}
-      <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-zinc-900 text-white py-16 md:py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-sm font-medium text-amber-300 mb-4 tracking-wide">Research · Future Vision</p>
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <MarketingIcon name="robot" className="h-9 w-9 text-amber-300" />
-            <h1 className="text-3xl md:text-5xl font-bold">Robot Vision</h1>
-          </div>
-          <p className="text-lg md:text-xl text-white/90 mb-6 max-w-3xl mx-auto leading-relaxed">
+      <CompanyPageHero
+        eyebrow="Dream AI Lab Research"
+        title="Robot Vision"
+        description={
+          <p>
             AI Digital Care Log를 로봇의 AI Brain으로 확장하는 도메인 횡단 연구 프로젝트
           </p>
-          <div className="flex flex-wrap justify-center gap-2 mb-8">
-            {stages.map((s) => (
-              <span
-                key={s.label}
-                className="inline-flex px-3 py-1 rounded-full text-xs font-semibold bg-white/15 text-white"
-              >
-                {s.label}
-              </span>
-            ))}
-          </div>
-          <div className="rounded-xl bg-amber-500/15 border border-amber-300/30 px-5 py-4 max-w-2xl mx-auto text-left">
-            <p className="text-sm text-amber-50 leading-relaxed">
-              <strong className="text-white">상용 로봇 제품이 아닙니다.</strong> 출시 일정 · 가입 · 판매를
-              의미하지 않습니다. Robot Vision은 로봇을 만드는 프로젝트가 아니라, 로봇이{' '}
-              <strong className="text-white">무엇을 근거로 행동할지</strong>를 결정하는 AI Brain 구조를
-              연구하는 프로젝트입니다. 아래 내용은 자람이 · 시니어앤라이프 · 토탈케어로그 · 에듀케어로그 ·
-              베지케어에서 이미 검증한 AI Core를 기반으로 한 연구 방향입니다.
-            </p>
-          </div>
-        </div>
-      </section>
+        }
+        badges={stages.map((stage) => stage.label)}
+        status={
+          <p>
+            현재는 상용 로봇 제품이 아니라, 로봇이 <strong>무엇을 근거로 행동할지</strong> 결정하는 AI Brain
+            구조를 연구하는 단계입니다.
+          </p>
+        }
+      />
 
       {/* 2. TOC pills */}
       <section className="py-5 bg-white border-b border-gray-100 sticky top-16 z-30">
