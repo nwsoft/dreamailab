@@ -80,9 +80,9 @@ export const newsArticles: NewsArticle[] = [
   {
     id: 92,
     title:
-      '시니어앤라이프, 이용자 80만 명 돌파…요양원·요양병원으로 서비스 확대',
+      '시니어앤라이프, 재가돌봄 점유율 70%…요양원·요양병원으로 생애 돌봄 확대',
     excerpt:
-      '재가돌봄 1만 곳·주간보호 1,200곳을 확보한 시니어앤라이프가 요양원·요양병원으로 영역을 넓힙니다. 6개월 890만 건은 품질 처리된 활동 이벤트이며, 고유 시니어 수나 DAU가 아닙니다.',
+      '회사가 인용한 전국 재가장기요양기관 약 1.3~1.4만 곳 대비 도입 1만 곳으로 재가 점유율 약 70%, 주간보호는 1,200곳·약 35%로 산출합니다. 80만 명과 890만 건은 DAU·고유 시니어 수가 아닙니다.',
     category: 'press',
     date: '2026-08-17',
     image: '🏡',
@@ -134,17 +134,30 @@ export const newsArticles: NewsArticle[] = [
       '시니어앤라이프',
       'Senior & Life',
       '재가돌봄',
+      '재가돌봄 점유율',
       '주간보호',
       '요양원',
       '요양병원',
+      '시장 점유율',
       'AI 디지털케어로그',
       'RWD',
       '초고령사회',
       '돌봄 데이터',
       '데이터 플라이휠',
+      '생애 돌봄 OS',
       '드림에이아이랩',
     ],
     faq: [
+      {
+        question: '재가돌봄 점유율 70%는 공식 통계인가요?',
+        answer:
+          '아닙니다. 시니어앤라이프가 도입 재가기관 1만 곳을, 회사가 인용한 전국 재가장기요양기관 약 1만 3,000~1만 4,000곳과 나눠 약 70%로 산출한 수치입니다. 제3자가 감사한 시장점유율이 아니며, 도입이 전원 일상 사용(DAU)을 뜻하지 않습니다.',
+      },
+      {
+        question: '주간보호 점유율 35%는 어떻게 나오나요?',
+        answer:
+          '도입 주간보호 1,200곳을 회사가 인용한 전국 주야간보호센터 약 3,200곳과 나눈 값입니다. 약 37.5%로, 회사는 35%를 넘는다고 설명합니다. 재가 70%와 같은 방식으로, 기관 수 기준이지 이용 어르신 수 기준이 아닙니다.',
+      },
       {
         question: '이용자 80만 명은 매일 쓰는 사람 수인가요?',
         answer:
@@ -153,7 +166,7 @@ export const newsArticles: NewsArticle[] = [
       {
         question: '요양원과 요양병원에는 이미 전면 도입됐나요?',
         answer:
-          '아닙니다. 이번 발표의 중심은 재가돌봄·주간보호 현장 확대이며, 요양원·요양병원은 그 기반 위에서 본격화하는 다음 단계입니다. 현재 제공 범위는 기관 설정과 상용베타 단계에 따라 다를 수 있습니다.',
+          '아닙니다. 이번 발표의 중심은 재가·주간보호 점유율이며, 요양원·요양병원은 그 기반 위에서 본격화하는 다음 단계입니다. 현재 제공 범위는 기관 설정과 상용베타 단계에 따라 다를 수 있습니다.',
       },
       {
         question: '6개월 890만 건이면 어르신 890만 명인가요?',
@@ -163,7 +176,7 @@ export const newsArticles: NewsArticle[] = [
       {
         question: '홈페이지의 등록 사업자 22,000+와 다른 숫자인가요?',
         answer:
-          '다른 기준입니다. 22,000+는 공공·연계 등으로 등록된 사업자 풀이고, 이번 1만 곳·1,200곳은 재가돌봄·주간보호 도입 기관으로 회사가 구분한 수치입니다. 둘 다 DAU가 아닙니다.',
+          '다른 기준입니다. 22,000+는 공공·연계 등으로 등록된 사업자 풀이고, 이번 1만 곳·1,200곳은 재가돌봄·주간보호 도입 기관입니다. 점유율 분모로 쓴 전국 기관 수와도 다릅니다. 모두 DAU가 아닙니다.',
       },
       {
         question: '시니어앤라이프가 진단이나 처방을 대신하나요?',
@@ -174,10 +187,20 @@ export const newsArticles: NewsArticle[] = [
     i18n: {
       en: {
         title:
-          'Senior & Life surpasses 800,000 users and expands into nursing homes and hospitals',
+          'Senior & Life cites about 70% home-care coverage and expands into nursing homes',
         excerpt:
-          'With 10,000 home-care sites and 1,200 day-care centers, Senior & Life will expand into nursing homes and hospitals. 8.9 million six-month events are quality-processed activity records, not unique seniors or DAU.',
+          'Against a company-cited national stock of about 13,000–14,000 home long-term care agencies, Senior & Life counts 10,000 introduced sites, or about 70%. Day care is 1,200 of about 3,200, over 35%. 800,000 users and 8.9 million events are not DAU or unique seniors.',
         faq: [
+          {
+            question: 'Is the 70% home-care share official market statistics?',
+            answer:
+              'No. Senior & Life divided 10,000 introduced home-care sites by a company-cited national stock of about 13,000–14,000 home long-term care agencies. It is not a third-party audited market share, and introduction is not DAU.',
+          },
+          {
+            question: 'How is the 35% day-care share calculated?',
+            answer:
+              '1,200 introduced day-care sites divided by a company-cited national stock of about 3,200 day-care centers, or about 37.5%. The company describes this as more than 35%. It is a site-count share, not a share of seniors served.',
+          },
           {
             question: 'Are 800,000 users daily active users?',
             answer:
@@ -186,7 +209,7 @@ export const newsArticles: NewsArticle[] = [
           {
             question: 'Are nursing homes and hospitals already fully live?',
             answer:
-              'No. The current base is home care and day care. Nursing homes and hospitals are the next expansion. Availability still depends on institution settings and commercial-beta status.',
+              'No. The current claim is home-care and day-care coverage. Nursing homes and hospitals are the next expansion. Availability still depends on institution settings and commercial-beta status.',
           },
           {
             question: 'Do 8.9 million events mean 8.9 million seniors?',
@@ -196,7 +219,7 @@ export const newsArticles: NewsArticle[] = [
           {
             question: 'Is this the same as the 22,000+ registered businesses on the homepage?',
             answer:
-              'No. The 22,000+ figure is a registration and linkage pool. The 10,000 and 1,200 figures are company-stated introduced home-care and day-care institutions. Neither is DAU.',
+              'No. The 22,000+ figure is a registration and linkage pool. The 10,000 and 1,200 figures are introduced home-care and day-care institutions. The national denominators used for share are a third count. None of these is DAU.',
           },
           {
             question: 'Does Senior & Life replace diagnosis or prescribing?',
@@ -207,42 +230,78 @@ export const newsArticles: NewsArticle[] = [
         content: `
       <p class="text-sm text-gray-500 mb-6">[Press Release · 2026-08-17]</p>
       <p class="text-xl font-semibold text-gray-800 mb-4 leading-relaxed">
-        Home care and day care first. Then nursing homes and hospitals, on one person-centered care log.
+        About 70% of home-care sites by the company&rsquo;s count. Then nursing homes and hospitals, on one person-centered care log.
       </p>
       <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-4">
-        Dream AI Lab&rsquo;s senior care platform <strong>Senior &amp; Life</strong> says it now covers about 10,000 home-care sites and 1,200 day-care centers, with about 800,000 platform users including providers and families. On that base it will expand into nursing homes and long-term hospitals so one person&rsquo;s later-life records can continue when the setting changes.
+        Dream AI Lab&rsquo;s senior care platform <strong>Senior &amp; Life</strong> says it has introduced about <strong>10,000 home-care sites</strong> and <strong>1,200 day-care centers</strong>, with about <strong>800,000</strong> platform users including providers and families. Using a company-cited national stock of about 13,000&ndash;14,000 home long-term care agencies and about 3,200 day-care centers, it calculates roughly <strong>70%</strong> home-care coverage and more than <strong>35%</strong> day-care coverage. On that base it will expand into nursing homes and long-term hospitals. The stated goal is a later-life care OS that keeps one person&rsquo;s records when the setting changes.
       </p>
       <figure class="mb-10">
         <img src="/images/news/news-92-senior-expansion-og.jpg" alt="Conceptual Senior &amp; Life illustration: home care, day care, nursing home and hospital connected around one person" class="w-full rounded-xl object-cover" width="1200" height="630" loading="eager" decoding="async" />
-        <figcaption class="mt-3 text-sm text-gray-500 text-center">Records follow the person, not the building. Conceptual illustration, not a live dashboard or performance chart.</figcaption>
+        <figcaption class="mt-3 text-sm text-gray-500 text-center">Records follow the person, not the building. Conceptual illustration, not a live dashboard, share chart, or performance proof.</figcaption>
       </figure>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">How the 70% and 35% figures are made</h2>
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        In Korea, later-life care often moves in stages. <strong>Home care</strong> visits the house. <strong>Day care</strong> supports daytime activity and gives families a pause. A <strong>nursing home</strong> provides residential care. A <strong>nursing hospital</strong> adds medical treatment. Families know the problem: each move can reset the story. The next team asks the same questions, and yesterday&rsquo;s meals, sleep, falls, and medicines sit in another binder.
+        Share here is <strong>introduced institutions divided by a national stock the company cites</strong>. It is not a share of seniors, care hours, or daily active users. Introduction is not the same as every site running the full care log every day.
       </p>
+      <div class="overflow-x-auto mb-6">
+        <table class="min-w-full text-sm text-left border border-gray-200 rounded-lg overflow-hidden">
+          <thead class="bg-gray-50 text-gray-700">
+            <tr>
+              <th class="px-4 py-3 font-semibold">Setting</th>
+              <th class="px-4 py-3 font-semibold">Company-stated introduced</th>
+              <th class="px-4 py-3 font-semibold">National stock the company cites</th>
+              <th class="px-4 py-3 font-semibold">Company-calculated share</th>
+            </tr>
+          </thead>
+          <tbody class="text-gray-700">
+            <tr class="border-t border-gray-200">
+              <td class="px-4 py-3">Home long-term care</td>
+              <td class="px-4 py-3">10,000 sites</td>
+              <td class="px-4 py-3">about 13,000&ndash;14,000</td>
+              <td class="px-4 py-3">about 70%</td>
+            </tr>
+            <tr class="border-t border-gray-200 bg-gray-50/60">
+              <td class="px-4 py-3">Day care</td>
+              <td class="px-4 py-3">1,200 sites</td>
+              <td class="px-4 py-3">about 3,200</td>
+              <td class="px-4 py-3">more than 35% (about 37.5%)</td>
+            </tr>
+            <tr class="border-t border-gray-200">
+              <td class="px-4 py-3">Platform users</td>
+              <td class="px-4 py-3">800,000, including providers and families</td>
+              <td class="px-4 py-3">&mdash;</td>
+              <td class="px-4 py-3">not DAU</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
       <p class="text-sm text-gray-500 mb-8 leading-relaxed">
-        The 800,000, 10,000, and 1,200 figures are company-stated as of 17 August 2026. They are not daily active users. They are also not the same as the homepage&rsquo;s 22,000+ registered-business pool, which counts public and linkage registrations. Current product scope remains commercial beta and varies by institution. See the <a href="/services/senior" class="text-primary-600 underline">Senior &amp; Life service page</a> and <a href="https://seniorandlife.com/" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">seniorandlife.com</a>.
+        These counts and denominators are company-stated as of 17 August 2026. This article does not independently audit the national stock. They are also not the homepage&rsquo;s 22,000+ registered-business pool, which counts public and linkage registrations. Current product scope remains commercial beta and varies by institution. See the <a href="/services/senior" class="text-primary-600 underline">Senior &amp; Life service page</a> and <a href="https://seniorandlife.com/" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">seniorandlife.com</a>.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        In Korea, later-life care often moves in stages. <strong>Home care</strong> visits the house. <strong>Day care</strong> supports daytime activity and gives families a pause. A <strong>nursing home</strong> provides residential care. A <strong>nursing hospital</strong> adds medical treatment. Families know the problem: each move can reset the story. The next team asks the same questions, and yesterday&rsquo;s meals, sleep, falls, and medicines sit in another binder.
       </p>
       <h2 class="text-2xl font-bold text-gray-900 mb-4">What the 8.9 million events are &mdash; and are not</h2>
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        Senior &amp; Life says the more important number is life data from real care, not clicks. Over the past six months it processed about <strong>8.9 million</strong> senior activity records after quality filtering, or about 49,000 events a day on average. The company says the set includes medication, meals, sleep, activity, cognitive status notes, and fall-risk observations &mdash; not app opens.
+        Senior &amp; Life says the harder-to-copy asset is life data from real care, not clicks. Over the past six months it processed about <strong>8.9 million</strong> senior activity records after quality filtering, or about 49,000 events a day on average. The company says the set includes medication, meals, sleep, activity, cognitive status notes, and fall-risk observations &mdash; not app opens. &ldquo;Real-time&rdquo; here means ongoing daily processing, not a claim that every alert is live for every site.
       </p>
       <p class="text-lg text-gray-700 mb-8 leading-relaxed">
-        Volume is a starting point. Duplicate and noisy events are removed so long-term trends can be read. Even then, 8.9 million events are not 8.9 million independent people. Total events, unique seniors, completed care sessions, complete assessments, and long-follow-up subjects must be counted separately. That is the same evidence boundary used in Dream AI Lab&rsquo;s other real-world-data notes: a large count is not yet research-grade RWD, and RWD is not yet RWE.
+        Volume is a starting point. Duplicate and noisy events are removed so long-term trends can be read. Even then, 8.9 million events are not 8.9 million independent people. Total events, unique seniors, completed care sessions, complete assessments, and long-follow-up subjects must be counted separately. A large count is not yet research-grade RWD, and RWD is not yet RWE.
+      </p>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">A data flywheel, not a finished monopoly</h2>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        The company describes a flywheel: more sites and users, more daily records, cleaner longitudinal analysis, then more value for families and staff, then the next site. It also calls 800,000 users and 8.9 million processed events a hard near-term barrier, and says the aim is a later-life care OS rather than a facility admin tool. That loop only holds if identity, consent, source, timestamp, and edit history stay trustworthy. More events without lineage do not automatically make better care, and site-count share is not the same as an independently verified No. 1 ranking.
       </p>
       <h2 class="text-2xl font-bold text-gray-900 mb-4">Continuity when the care setting changes</h2>
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        The <strong>AI Digital Care Log</strong> is designed so records stay centered on one person if they move from home care to day care, then to a nursing home or hospital. The goal is not a facility admin screen. It is a timeline that can show how meals, sleep, medicines, and activity changed over months, with consent and role-based access.
+        The <strong>AI Digital Care Log</strong> is designed so records stay centered on one person if they move from home care to day care, then to a nursing home or hospital. The goal is not a facility admin screen. It is a timeline that can show how meals, sleep, medicines, and activity changed over months &mdash; and, the company says, over years &mdash; with consent and role-based access.
       </p>
       <figure class="mb-10">
         <img src="/images/news/news-92-senior-care-continuity.jpg" alt="Conceptual diagram of one senior&rsquo;s records continuing across home care, day care, nursing home and hospital" class="w-full rounded-xl object-cover" width="1200" height="630" loading="lazy" decoding="async" />
         <figcaption class="mt-3 text-sm text-gray-500 text-center">Four settings, one person-centered log after quality filtering. Conceptual architecture, not a claim that every facility is already fully connected.</figcaption>
       </figure>
       <p class="text-lg text-gray-700 mb-8 leading-relaxed">
-        Families would then see more than &ldquo;ate today.&rdquo; The company says longer views become possible: three-month meal trends, sleep and activity together, pattern changes after medication, and earlier notice of fall-risk signs. Those outputs depend on data completeness, institution settings, and consent. Senior &amp; Life does not diagnose, prescribe, or replace professional care.
-      </p>
-      <h2 class="text-2xl font-bold text-gray-900 mb-4">A data flywheel, explained simply</h2>
-      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
-        The company describes a flywheel. More sites and users produce more daily records. Cleaner longitudinal records can improve analysis. Better analysis can help families and staff, which can bring the next site. That loop only holds if identity, consent, source, timestamp, and edit history stay trustworthy. More events without lineage do not automatically make better care.
+        Families would then see more than &ldquo;ate today.&rdquo; The company says longer views become possible: three-month meal trends, sleep and fall-risk together, pattern changes after medication, and earlier notice of unusual signs. Those outputs depend on data completeness, institution settings, and consent. Senior &amp; Life does not diagnose, prescribe, or replace professional care.
       </p>
       <h2 class="text-2xl font-bold text-gray-900 mb-4">Next: nursing homes, hospitals, RWD research, robots later</h2>
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
@@ -250,12 +309,12 @@ export const newsArticles: NewsArticle[] = [
       </p>
       <div class="bg-primary-50 border-l-4 border-primary-600 p-6 mb-8 rounded-r-lg">
         <p class="text-lg text-gray-800 leading-relaxed">
-          A Senior &amp; Life representative said, &ldquo;What we aim for is not software that only manages one facility. It is infrastructure that connects every care record of one person&rsquo;s later years without a break. On an 800,000-user base and 8.9 million processed events from home care and day care, we will keep working on digital transformation of Korea&rsquo;s senior-care industry.&rdquo;
+          A Senior &amp; Life representative said, &ldquo;What we aim for is not simple management software used in one facility. It is later-life care data infrastructure that connects one person&rsquo;s whole senior years. On the No. 1 capacity we have shown in home care and day care, we will link nursing homes and hospitals quickly and complete digital transformation of Korea&rsquo;s senior-care industry.&rdquo;
         </p>
       </div>
       <div class="bg-amber-50 border-l-4 border-amber-500 p-5 mb-8 rounded-r-lg">
         <p class="text-amber-900 text-sm leading-relaxed">
-          <strong>Evidence boundary:</strong> User counts, site counts, and event volume are company materials as of this announcement. They are not DAU, not unique-senior N, and not independently audited clinical results. Senior &amp; Life does not replace diagnosis, prescription, or care. Record sharing follows consent, permissions, and applicable law. This article is not a medical-device clearance.
+          <strong>Evidence boundary:</strong> Site counts, national denominators, share percentages, user counts, and event volume are company materials as of this announcement. They are not DAU, not unique-senior N, not independently audited market share, and not clinical results. &ldquo;No. 1,&rdquo; &ldquo;OS,&rdquo; and &ldquo;national infrastructure&rdquo; are company aims or self-descriptions, not third-party rankings. Senior &amp; Life does not replace diagnosis, prescription, or care. Record sharing follows consent, permissions, and applicable law.
         </p>
       </div>
       <div class="bg-white border border-gray-200 rounded-xl p-6 mb-8">
@@ -276,42 +335,78 @@ export const newsArticles: NewsArticle[] = [
     content: `
       <p class="text-sm text-gray-500 mb-6">[보도자료 · 2026-08-17]</p>
       <p class="text-xl font-semibold text-gray-800 mb-4 leading-relaxed">
-        재가돌봄·주간보호에서 검증한 기록을, 요양원·요양병원까지 한 사람 중심으로 잇는다.
+        회사 기준으로 재가 약 70%. 그다음 요양원·요양병원까지, 한 사람 중심 케어로그로 잇는다.
       </p>
       <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-4">
-        시니어 통합 돌봄 플랫폼 <strong>시니어앤라이프</strong>가 재가돌봄 1만 곳, 주간보호 1,200곳, 제공자·보호자를 포함한 이용자 약 80만 명을 공개했습니다. 이 기반 위에서 요양원과 요양병원으로 영역을 넓혀, 돌봄 장소가 바뀌어도 기록이 끊기지 않는 네트워크를 만들겠다는 발표입니다.
+        시니어 통합 돌봄 플랫폼 <strong>시니어앤라이프</strong>가 재가돌봄 <strong>1만 곳</strong>, 주간보호 <strong>1,200곳</strong>, 제공자·보호자를 포함한 이용자 약 <strong>80만 명</strong>을 공개했습니다. 회사가 인용한 전국 재가장기요양기관 약 1만 3,000~1만 4,000곳, 주야간보호센터 약 3,200곳을 분모로 두면 재가 점유율은 약 <strong>70%</strong>, 주간보호는 <strong>35%를 넘는</strong> 수준입니다. 이 기반 위에서 요양원·요양병원으로 영역을 넓혀, 장소가 바뀌어도 기록이 끊기지 않는 <strong>생애 돌봄 OS</strong>를 만들겠다는 발표입니다.
       </p>
       <figure class="mb-10">
         <img src="/images/news/news-92-senior-expansion-og.jpg" alt="시니어앤라이프 확대 개념도: 재가·주간보호·요양원·요양병원이 한 사람 중심 돌봄 기록으로 이어지는 장면" class="w-full rounded-xl object-cover" width="1200" height="630" loading="eager" decoding="async" />
-        <figcaption class="mt-3 text-sm text-gray-500 text-center">건물이 아니라 사람을 따라가는 기록. 개념 일러스트이며 실시간 대시보드나 성과 차트가 아닙니다.</figcaption>
+        <figcaption class="mt-3 text-sm text-gray-500 text-center">건물이 아니라 사람을 따라가는 기록. 개념 일러스트이며 실시간 대시보드나 점유율 증명 차트가 아닙니다.</figcaption>
       </figure>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">70%와 35%는 어떻게 나온 숫자인가</h2>
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        한국의 노년 돌봄은 보통 단계적으로 이동합니다. <strong>재가돌봄</strong>은 집으로 찾아갑니다. <strong>주간보호</strong>는 낮 동안 활동과 가족의 휴식을 돕습니다. <strong>요양원</strong>은 거주형 돌봄을, <strong>요양병원</strong>은 의료 치료를 더합니다. 가족이 반복해서 겪는 문제는 이 이동마다 이야기가 리셋된다는 점입니다. 다음 현장은 같은 질문을 다시 하고, 어제까지의 식사·수면·낙상·복약은 다른 파일에 남습니다.
+        여기서 점유율은 <strong>도입 기관 수 &divide; 회사가 인용한 전국 기관 수</strong>입니다. 이용 어르신 수, 돌봄 시간, 일간 활성 이용자(DAU) 비중이 아닙니다. 도입은 모든 기관이 매일 케어로그 전체를 쓰고 있다는 뜻도 아닙니다.
       </p>
+      <div class="overflow-x-auto mb-6">
+        <table class="min-w-full text-sm text-left border border-gray-200 rounded-lg overflow-hidden">
+          <thead class="bg-gray-50 text-gray-700">
+            <tr>
+              <th class="px-4 py-3 font-semibold">구분</th>
+              <th class="px-4 py-3 font-semibold">회사 발표 도입</th>
+              <th class="px-4 py-3 font-semibold">회사가 인용한 전국 규모</th>
+              <th class="px-4 py-3 font-semibold">회사 산출 점유율</th>
+            </tr>
+          </thead>
+          <tbody class="text-gray-700">
+            <tr class="border-t border-gray-200">
+              <td class="px-4 py-3">재가장기요양</td>
+              <td class="px-4 py-3">1만 곳</td>
+              <td class="px-4 py-3">약 1.3만~1.4만 곳</td>
+              <td class="px-4 py-3">약 70%</td>
+            </tr>
+            <tr class="border-t border-gray-200 bg-gray-50/60">
+              <td class="px-4 py-3">주야간보호</td>
+              <td class="px-4 py-3">1,200곳</td>
+              <td class="px-4 py-3">약 3,200곳</td>
+              <td class="px-4 py-3">35% 초과 (약 37.5%)</td>
+            </tr>
+            <tr class="border-t border-gray-200">
+              <td class="px-4 py-3">플랫폼 이용자</td>
+              <td class="px-4 py-3">80만 명 (제공자·보호자 포함)</td>
+              <td class="px-4 py-3">&mdash;</td>
+              <td class="px-4 py-3">DAU 아님</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
       <p class="text-sm text-gray-500 mb-8 leading-relaxed">
-        80만 명, 재가 1만 곳, 주간보호 1,200곳은 2026년 8월 17일 기준 시니어앤라이프 측 공개 수치입니다. 일간 활성 이용자(DAU)가 아닙니다. 드림에이아이랩 홈의 등록 사업자 22,000+와도 기준이 다릅니다. 22,000+는 공공·연계 등록 풀이고, 이번 숫자는 회사가 도입 기관으로 구분한 재가·주간보호 규모입니다. 현재 제공 범위는 상용베타와 기관 설정에 따라 다를 수 있습니다. 제품 기준은 <a href="/services/senior" class="text-primary-600 underline">시니어앤라이프 서비스 페이지</a>와 <a href="https://seniorandlife.com/" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">seniorandlife.com</a>을 따릅니다.
+        위 분자·분모는 2026년 8월 17일 기준 시니어앤라이프 측 자료입니다. 본 기사가 전국 기관 수를 따로 감사한 것은 아닙니다. 드림에이아이랩 홈의 등록 사업자 22,000+와도 기준이 다릅니다. 22,000+는 공공·연계 등록 풀입니다. 현재 제공 범위는 상용베타와 기관 설정에 따라 다를 수 있습니다. 제품 기준은 <a href="/services/senior" class="text-primary-600 underline">시니어앤라이프 서비스 페이지</a>와 <a href="https://seniorandlife.com/" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">seniorandlife.com</a>을 따릅니다.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        한국의 노년 돌봄은 보통 단계적으로 이동합니다. <strong>재가돌봄</strong>은 집으로 찾아갑니다. <strong>주간보호</strong>는 낮 동안 활동과 가족의 휴식을 돕습니다. <strong>요양원</strong>은 거주형 돌봄을, <strong>요양병원</strong>은 의료 치료를 더합니다. 가족이 반복해서 겪는 문제는 이 이동마다 이야기가 리셋된다는 점입니다. 다음 현장은 같은 질문을 다시 하고, 어제까지의 식사·수면·낙상·복약은 다른 파일에 남습니다.
       </p>
       <h2 class="text-2xl font-bold text-gray-900 mb-4">890만 건이 의미하는 것, 의미하지 않는 것</h2>
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        시니어앤라이프가 이번 발표에서 더 강조한 지표는 클릭 수가 아니라 현장에서 나온 <strong>라이프 데이터</strong>입니다. 최근 6개월간 품질 처리(중복·노이즈 제거 후 구조화)를 거친 시니어 활동 데이터는 약 <strong>890만 건</strong>, 하루 평균 약 4만 9,000건입니다. 회사는 복약, 식사, 수면, 활동량, 인지 상태 기록, 낙상 위험 관찰처럼 일상과 맞닿은 정보라고 설명합니다.
+        시니어앤라이프가 점유율 다음으로 강조한 지표는 클릭 수가 아니라 현장에서 나온 <strong>라이프 데이터</strong>입니다. 최근 6개월간 품질 처리(중복·노이즈 제거 후 구조화)를 거친 시니어 활동 데이터는 약 <strong>890만 건</strong>, 하루 평균 약 4만 9,000건입니다. 회사는 복약, 식사, 수면, 활동량, 인지 상태 기록, 낙상 위험 관찰처럼 일상과 맞닿은 정보라고 설명합니다. 여기서 &lsquo;실시간&rsquo;은 매일 처리가 이어진다는 뜻이지, 모든 기관에 모든 알림이 즉시 뜬다는 뜻이 아닙니다.
       </p>
       <p class="text-lg text-gray-700 mb-8 leading-relaxed">
-        데이터가 많다는 사실은 출발점입니다. 890만 건은 890만 명의 어르신이 아닙니다. 총 이벤트, 고유 시니어, 실제 돌봄 세션, 평가가 채워진 대상자, 장기 추적 대상자는 따로 세어야 합니다. 드림에이아이랩이 다른 실사용데이터 설명에서 반복하는 경계와 같습니다. 큰 건수는 아직 연구 수준 RWD가 아니고, RWD는 곧바로 실사용근거(RWE)가 되지 않습니다.
+        데이터가 많다는 사실은 출발점입니다. 890만 건은 890만 명의 어르신이 아닙니다. 총 이벤트, 고유 시니어, 실제 돌봄 세션, 평가가 채워진 대상자, 장기 추적 대상자는 따로 세어야 합니다. 큰 건수는 아직 연구 수준 RWD가 아니고, RWD는 곧바로 실사용근거(RWE)가 되지 않습니다.
+      </p>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">데이터 플라이휠, &lsquo;독주&rsquo;와 구분해 읽기</h2>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        회사는 기관·이용자가 늘수록 일상 기록이 쌓이고, 정제된 종단 기록이 분석을 도우며, 더 나은 정보가 보호자와 현장으로 돌아가 다음 도입을 이끄는 순환을 데이터 플라이휠로 부릅니다. 80만 명과 890만 건을 단기간에 따라오기 어려운 진입장벽으로 설명하고, 시설 관리 프로그램을 넘어 생애 돌봄 OS를 목표로 합니다. 이 고리가 성립하려면 누구의 기록인지, 언제 누구의 동의로 생겼는지, 출처와 수정 이력이 신뢰할 수 있어야 합니다. 계보 없는 이벤트 증가는 더 나은 돌봄을 자동으로 만들지 않으며, 기관 수 점유율은 제3자가 검증한 1위 순위와 같지 않습니다.
       </p>
       <h2 class="text-2xl font-bold text-gray-900 mb-4">장소가 바뀌어도 한 사람의 기록이 이어지게</h2>
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        <strong>AI 디지털케어로그</strong>는 재가에서 주간보호, 다시 요양원·요양병원으로 옮겨도 한 사람을 중심으로 기록이 쌓이도록 설계됐습니다. 목표가 특정 시설의 관리 화면만은 아닙니다. 동의와 권한 범위 안에서 식사·수면·복약·활동이 몇 달에 걸쳐 어떻게 변했는지를 같은 시간축으로 보는 구조입니다.
+        <strong>AI 디지털케어로그</strong>는 재가에서 주간보호, 다시 요양원·요양병원으로 옮겨도 한 사람을 중심으로 기록이 쌓이도록 설계됐습니다. 목표가 특정 시설의 관리 화면만은 아닙니다. 동의와 권한 범위 안에서 식사·수면·복약·활동이 몇 달, 회사가 말하는 대로라면 수년에 걸쳐 어떻게 변했는지를 같은 시간축으로 보는 구조입니다.
       </p>
       <figure class="mb-10">
         <img src="/images/news/news-92-senior-care-continuity.jpg" alt="재가·주간보호·요양원·요양병원을 한 사람 중심 기록으로 잇는 시니어앤라이프 개념도" class="w-full rounded-xl object-cover" width="1200" height="630" loading="lazy" decoding="async" />
         <figcaption class="mt-3 text-sm text-gray-500 text-center">네 개의 돌봄 환경, 품질 처리 후의 한 사람 중심 로그. 모든 시설이 이미 완전 연결된 상태가 아니라 지향 구조를 그린 개념도입니다.</figcaption>
       </figure>
       <p class="text-lg text-gray-700 mb-8 leading-relaxed">
-        보호자가 보게 되는 것도 &lsquo;오늘 식사 여부&rsquo;만이 아닙니다. 회사는 3개월 식사량 추이, 수면과 활동량의 함께 보기, 복약 후 패턴 변화, 낙상 위험 징후의 이른 확인이 가능해진다고 설명합니다. 실제 화면은 데이터 완전성, 기관 설정, 동의 범위에 따라 달라집니다. 시니어앤라이프는 진단·처방·돌봄을 대체하지 않습니다.
-      </p>
-      <h2 class="text-2xl font-bold text-gray-900 mb-4">데이터 플라이휠을 쉽게 말하면</h2>
-      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
-        회사는 이 순환을 데이터 플라이휠로 부릅니다. 기관과 이용자가 늘수록 일상 기록이 쌓이고, 정제된 종단 기록이 분석을 돕고, 더 나은 정보가 보호자와 현장으로 돌아가 다음 도입을 이끕니다. 이 고리가 성립하려면 누구의 기록인지, 언제 누구의 동의로 생겼는지, 출처와 수정 이력이 신뢰할 수 있어야 합니다. 계보 없는 이벤트 증가는 더 나은 돌봄을 자동으로 만들지 않습니다.
+        보호자가 보게 되는 것도 &lsquo;오늘 식사 여부&rsquo;만이 아닙니다. 회사는 3개월 식사량 추이, 수면과 낙상 위험의 함께 보기, 복약 후 패턴 변화, 이상 징후의 이른 확인이 가능해진다고 설명합니다. 실제 화면은 데이터 완전성, 기관 설정, 동의 범위에 따라 달라집니다. 시니어앤라이프는 진단·처방·돌봄을 대체하지 않습니다.
       </p>
       <h2 class="text-2xl font-bold text-gray-900 mb-4">다음 단계: 요양원·요양병원, 연구용 RWD, 로봇은 이후</h2>
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
@@ -319,12 +414,12 @@ export const newsArticles: NewsArticle[] = [
       </p>
       <div class="bg-primary-50 border-l-4 border-primary-600 p-6 mb-8 rounded-r-lg">
         <p class="text-lg text-gray-800 leading-relaxed">
-          시니어앤라이프 관계자는 &ldquo;우리가 지향하는 것은 단지 특정 시설을 관리하는 소프트웨어가 아니라, 한 사람의 노년기에 발생하는 모든 돌봄 기록을 끊김 없이 연결하는 인프라&rdquo;라며, &ldquo;재가·주간보호에서 검증된 80만 이용자 기반과 890만 건의 데이터 역량을 바탕으로 국내 시니어 돌봄 산업의 디지털 전환을 이어가겠다&rdquo;고 밝혔습니다.
+          시니어앤라이프 관계자는 &ldquo;우리가 지향하는 것은 특정 시설에서 사용하는 단순 관리 소프트웨어가 아닌, 한 사람의 노년기 전체를 데이터로 잇는 생애 돌봄 데이터 인프라&rdquo;라며, &ldquo;재가와 주간보호 시장에서 입증한 압도적 1위 역량을 바탕으로 요양원과 요양병원까지 조속히 연계해 대한민국 시니어 돌봄의 디지털 전환을 완성하겠다&rdquo;고 밝혔습니다.
         </p>
       </div>
       <div class="bg-amber-50 border-l-4 border-amber-500 p-5 mb-8 rounded-r-lg">
         <p class="text-amber-900 text-sm leading-relaxed">
-          <strong>근거 경계:</strong> 이용자 수, 도입 기관 수, 이벤트 건수는 이번 발표 기준 회사 측 자료입니다. DAU가 아니고, 고유 시니어 수도 아니며, 독립 검증된 임상 결과가 아닙니다. 시니어앤라이프는 진단·처방·돌봄을 대체하지 않습니다. 기록 공유는 동의·권한·관련 법령을 따릅니다. 본 글은 의료기기 허가 발표가 아닙니다.
+          <strong>근거 경계:</strong> 도입 기관 수, 전국 분모, 점유율, 이용자 수, 이벤트 건수는 이번 발표 기준 회사 측 자료입니다. DAU가 아니고, 고유 시니어 수도 아니며, 제3자가 감사한 시장점유율이나 임상 결과가 아닙니다. &lsquo;1위&rsquo; &lsquo;OS&rsquo; &lsquo;국가급 인프라&rsquo;는 회사의 목표·자기 설명이지 공인 순위가 아닙니다. 시니어앤라이프는 진단·처방·돌봄을 대체하지 않습니다. 기록 공유는 동의·권한·관련 법령을 따릅니다.
         </p>
       </div>
       <div class="bg-white border border-gray-200 rounded-xl p-6 mb-8">
