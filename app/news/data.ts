@@ -78,6 +78,270 @@ export function getLocalizedArticle(
 
 export const newsArticles: NewsArticle[] = [
   {
+    id: 92,
+    title:
+      '시니어앤라이프, 이용자 80만 명 돌파…요양원·요양병원으로 서비스 확대',
+    excerpt:
+      '재가돌봄 1만 곳·주간보호 1,200곳을 확보한 시니어앤라이프가 요양원·요양병원으로 영역을 넓힙니다. 6개월 890만 건은 품질 처리된 활동 이벤트이며, 고유 시니어 수나 DAU가 아닙니다.',
+    category: 'press',
+    date: '2026-08-17',
+    image: '🏡',
+    featured: true,
+    author: '시니어앤라이프팀',
+    authorUrl: 'https://seniorandlife.com/',
+    ogImage: '/images/news/news-92-senior-expansion-og.jpg',
+    ogImageAlt:
+      '시니어앤라이프 확대 개념도: 재가·주간보호·요양원·요양병원이 한 사람 중심 돌봄 기록으로 이어지는 장면',
+    ogImageAltEn:
+      'Conceptual Senior & Life illustration: home care, day care, nursing home and hospital connected around one person',
+    about: [
+      {
+        type: 'Organization',
+        id: 'https://seniorandlife.com/#organization',
+        name: '시니어앤라이프',
+        alternateName: ['Senior & Life', 'SeniorandLife'],
+        url: 'https://seniorandlife.com/',
+        description:
+          '재가·주간보호·요양원·요양병원과 가족을 연결하는 시니어 통합 돌봄 플랫폼',
+        sameAs: ['https://dreamailab.com/services/senior/'],
+      },
+      {
+        type: 'SoftwareApplication',
+        name: '시니어앤라이프',
+        alternateName: ['Senior & Life'],
+        url: 'https://seniorandlife.com/',
+        description:
+          '시니어 돌봄 시설 탐색과 AI 디지털케어로그 기반 돌봄 기록 연결 서비스. 진단·처방을 대체하지 않는다.',
+      },
+    ],
+    mentions: [
+      {
+        type: 'DefinedTerm',
+        id: 'https://dreamailab.com/technology/#ai-digital-care-log',
+        name: 'AI 디지털케어로그',
+        alternateName: ['AI Digital Care Log', 'RWD'],
+        url: 'https://dreamailab.com/technology/',
+      },
+      {
+        type: 'Organization',
+        id: 'https://dreamailab.com/#organization',
+        name: '드림에이아이랩',
+        alternateName: ['Dream AI Lab', 'DAL'],
+        url: 'https://dreamailab.com/',
+      },
+    ],
+    tags: [
+      '시니어앤라이프',
+      'Senior & Life',
+      '재가돌봄',
+      '주간보호',
+      '요양원',
+      '요양병원',
+      'AI 디지털케어로그',
+      'RWD',
+      '초고령사회',
+      '돌봄 데이터',
+      '데이터 플라이휠',
+      '드림에이아이랩',
+    ],
+    faq: [
+      {
+        question: '이용자 80만 명은 매일 쓰는 사람 수인가요?',
+        answer:
+          '아닙니다. 시니어앤라이프가 공개한 누적 플랫폼 이용자 규모로, 서비스 제공자와 보호자 등을 포함합니다. 일간 활성 이용자(DAU)나 전원 상용 도입을 뜻하지 않습니다.',
+      },
+      {
+        question: '요양원과 요양병원에는 이미 전면 도입됐나요?',
+        answer:
+          '아닙니다. 이번 발표의 중심은 재가돌봄·주간보호 현장 확대이며, 요양원·요양병원은 그 기반 위에서 본격화하는 다음 단계입니다. 현재 제공 범위는 기관 설정과 상용베타 단계에 따라 다를 수 있습니다.',
+      },
+      {
+        question: '6개월 890만 건이면 어르신 890만 명인가요?',
+        answer:
+          '아닙니다. 복약·식사·수면·활동량 등 품질 처리를 거친 활동 이벤트 건수입니다. 총 이벤트, 고유 시니어, 실제 돌봄 세션, 장기 추적 대상자는 따로 세어야 합니다.',
+      },
+      {
+        question: '홈페이지의 등록 사업자 22,000+와 다른 숫자인가요?',
+        answer:
+          '다른 기준입니다. 22,000+는 공공·연계 등으로 등록된 사업자 풀이고, 이번 1만 곳·1,200곳은 재가돌봄·주간보호 도입 기관으로 회사가 구분한 수치입니다. 둘 다 DAU가 아닙니다.',
+      },
+      {
+        question: '시니어앤라이프가 진단이나 처방을 대신하나요?',
+        answer:
+          '그렇지 않습니다. 돌봄 기록과 추세 확인을 돕는 플랫폼이며, 의료 판단은 의료진과 돌봄 전문가에게 있습니다. 기록 공유는 동의와 권한 범위를 따릅니다.',
+      },
+    ],
+    i18n: {
+      en: {
+        title:
+          'Senior & Life surpasses 800,000 users and expands into nursing homes and hospitals',
+        excerpt:
+          'With 10,000 home-care sites and 1,200 day-care centers, Senior & Life will expand into nursing homes and hospitals. 8.9 million six-month events are quality-processed activity records, not unique seniors or DAU.',
+        faq: [
+          {
+            question: 'Are 800,000 users daily active users?',
+            answer:
+              'No. Senior & Life disclosed a cumulative platform-user figure that includes care providers and family members. It is not DAU, and it does not mean every listed site is in full commercial use.',
+          },
+          {
+            question: 'Are nursing homes and hospitals already fully live?',
+            answer:
+              'No. The current base is home care and day care. Nursing homes and hospitals are the next expansion. Availability still depends on institution settings and commercial-beta status.',
+          },
+          {
+            question: 'Do 8.9 million events mean 8.9 million seniors?',
+            answer:
+              'No. They are quality-processed activity events such as medication, meals, sleep, and movement. Total events, unique seniors, completed care sessions, and long-follow-up subjects must be counted separately.',
+          },
+          {
+            question: 'Is this the same as the 22,000+ registered businesses on the homepage?',
+            answer:
+              'No. The 22,000+ figure is a registration and linkage pool. The 10,000 and 1,200 figures are company-stated introduced home-care and day-care institutions. Neither is DAU.',
+          },
+          {
+            question: 'Does Senior & Life replace diagnosis or prescribing?',
+            answer:
+              'No. It helps connect care records and trends. Clinical decisions stay with clinicians and care professionals. Sharing follows consent and role-based access.',
+          },
+        ],
+        content: `
+      <p class="text-sm text-gray-500 mb-6">[Press Release · 2026-08-17]</p>
+      <p class="text-xl font-semibold text-gray-800 mb-4 leading-relaxed">
+        Home care and day care first. Then nursing homes and hospitals, on one person-centered care log.
+      </p>
+      <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-4">
+        Dream AI Lab&rsquo;s senior care platform <strong>Senior &amp; Life</strong> says it now covers about 10,000 home-care sites and 1,200 day-care centers, with about 800,000 platform users including providers and families. On that base it will expand into nursing homes and long-term hospitals so one person&rsquo;s later-life records can continue when the setting changes.
+      </p>
+      <figure class="mb-10">
+        <img src="/images/news/news-92-senior-expansion-og.jpg" alt="Conceptual Senior &amp; Life illustration: home care, day care, nursing home and hospital connected around one person" class="w-full rounded-xl object-cover" width="1200" height="630" loading="eager" decoding="async" />
+        <figcaption class="mt-3 text-sm text-gray-500 text-center">Records follow the person, not the building. Conceptual illustration, not a live dashboard or performance chart.</figcaption>
+      </figure>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        In Korea, later-life care often moves in stages. <strong>Home care</strong> visits the house. <strong>Day care</strong> supports daytime activity and gives families a pause. A <strong>nursing home</strong> provides residential care. A <strong>nursing hospital</strong> adds medical treatment. Families know the problem: each move can reset the story. The next team asks the same questions, and yesterday&rsquo;s meals, sleep, falls, and medicines sit in another binder.
+      </p>
+      <p class="text-sm text-gray-500 mb-8 leading-relaxed">
+        The 800,000, 10,000, and 1,200 figures are company-stated as of 17 August 2026. They are not daily active users. They are also not the same as the homepage&rsquo;s 22,000+ registered-business pool, which counts public and linkage registrations. Current product scope remains commercial beta and varies by institution. See the <a href="/services/senior" class="text-primary-600 underline">Senior &amp; Life service page</a> and <a href="https://seniorandlife.com/" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">seniorandlife.com</a>.
+      </p>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">What the 8.9 million events are &mdash; and are not</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        Senior &amp; Life says the more important number is life data from real care, not clicks. Over the past six months it processed about <strong>8.9 million</strong> senior activity records after quality filtering, or about 49,000 events a day on average. The company says the set includes medication, meals, sleep, activity, cognitive status notes, and fall-risk observations &mdash; not app opens.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        Volume is a starting point. Duplicate and noisy events are removed so long-term trends can be read. Even then, 8.9 million events are not 8.9 million independent people. Total events, unique seniors, completed care sessions, complete assessments, and long-follow-up subjects must be counted separately. That is the same evidence boundary used in Dream AI Lab&rsquo;s other real-world-data notes: a large count is not yet research-grade RWD, and RWD is not yet RWE.
+      </p>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Continuity when the care setting changes</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        The <strong>AI Digital Care Log</strong> is designed so records stay centered on one person if they move from home care to day care, then to a nursing home or hospital. The goal is not a facility admin screen. It is a timeline that can show how meals, sleep, medicines, and activity changed over months, with consent and role-based access.
+      </p>
+      <figure class="mb-10">
+        <img src="/images/news/news-92-senior-care-continuity.jpg" alt="Conceptual diagram of one senior&rsquo;s records continuing across home care, day care, nursing home and hospital" class="w-full rounded-xl object-cover" width="1200" height="630" loading="lazy" decoding="async" />
+        <figcaption class="mt-3 text-sm text-gray-500 text-center">Four settings, one person-centered log after quality filtering. Conceptual architecture, not a claim that every facility is already fully connected.</figcaption>
+      </figure>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        Families would then see more than &ldquo;ate today.&rdquo; The company says longer views become possible: three-month meal trends, sleep and activity together, pattern changes after medication, and earlier notice of fall-risk signs. Those outputs depend on data completeness, institution settings, and consent. Senior &amp; Life does not diagnose, prescribe, or replace professional care.
+      </p>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">A data flywheel, explained simply</h2>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        The company describes a flywheel. More sites and users produce more daily records. Cleaner longitudinal records can improve analysis. Better analysis can help families and staff, which can bring the next site. That loop only holds if identity, consent, source, timestamp, and edit history stay trustworthy. More events without lineage do not automatically make better care.
+      </p>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Next: nursing homes, hospitals, RWD research, robots later</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        Expansion into nursing homes and hospitals is the stated next step, not a claim that those settings are already nationwide. Under privacy and security rules, accumulated records may later support personalized care support, anomaly detection, and real-world-data research. Care robots that need a person&rsquo;s habits and history are a longer-term infrastructure role, not a product launch. Related research is on the <a href="/research/robot-vision" class="text-primary-600 underline">Robot Vision</a> page.
+      </p>
+      <div class="bg-primary-50 border-l-4 border-primary-600 p-6 mb-8 rounded-r-lg">
+        <p class="text-lg text-gray-800 leading-relaxed">
+          A Senior &amp; Life representative said, &ldquo;What we aim for is not software that only manages one facility. It is infrastructure that connects every care record of one person&rsquo;s later years without a break. On an 800,000-user base and 8.9 million processed events from home care and day care, we will keep working on digital transformation of Korea&rsquo;s senior-care industry.&rdquo;
+        </p>
+      </div>
+      <div class="bg-amber-50 border-l-4 border-amber-500 p-5 mb-8 rounded-r-lg">
+        <p class="text-amber-900 text-sm leading-relaxed">
+          <strong>Evidence boundary:</strong> User counts, site counts, and event volume are company materials as of this announcement. They are not DAU, not unique-senior N, and not independently audited clinical results. Senior &amp; Life does not replace diagnosis, prescription, or care. Record sharing follows consent, permissions, and applicable law. This article is not a medical-device clearance.
+        </p>
+      </div>
+      <div class="bg-white border border-gray-200 rounded-xl p-6 mb-8">
+        <p class="font-semibold text-gray-900 mb-3">Related</p>
+        <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+          <li><a href="https://seniorandlife.com/" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">seniorandlife.com</a></li>
+          <li><a href="/services/senior" class="text-primary-600 underline">Senior &amp; Life service overview</a></li>
+          <li><a href="/technology" class="text-primary-600 underline">AI Digital Care Log</a></li>
+          <li><a href="/news/88" class="text-primary-600 underline">Jarame user growth and home-therapy expansion</a></li>
+        </ul>
+      </div>
+      <p class="text-gray-600 text-sm border-t border-gray-200 pt-6 leading-relaxed">
+        ※ This is a Dream AI Lab news-center archive of a Senior &amp; Life announcement. Product and metric SSOT remain the service site and IR. It is not third-party validation.
+      </p>
+        `,
+      },
+    },
+    content: `
+      <p class="text-sm text-gray-500 mb-6">[보도자료 · 2026-08-17]</p>
+      <p class="text-xl font-semibold text-gray-800 mb-4 leading-relaxed">
+        재가돌봄·주간보호에서 검증한 기록을, 요양원·요양병원까지 한 사람 중심으로 잇는다.
+      </p>
+      <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-4">
+        시니어 통합 돌봄 플랫폼 <strong>시니어앤라이프</strong>가 재가돌봄 1만 곳, 주간보호 1,200곳, 제공자·보호자를 포함한 이용자 약 80만 명을 공개했습니다. 이 기반 위에서 요양원과 요양병원으로 영역을 넓혀, 돌봄 장소가 바뀌어도 기록이 끊기지 않는 네트워크를 만들겠다는 발표입니다.
+      </p>
+      <figure class="mb-10">
+        <img src="/images/news/news-92-senior-expansion-og.jpg" alt="시니어앤라이프 확대 개념도: 재가·주간보호·요양원·요양병원이 한 사람 중심 돌봄 기록으로 이어지는 장면" class="w-full rounded-xl object-cover" width="1200" height="630" loading="eager" decoding="async" />
+        <figcaption class="mt-3 text-sm text-gray-500 text-center">건물이 아니라 사람을 따라가는 기록. 개념 일러스트이며 실시간 대시보드나 성과 차트가 아닙니다.</figcaption>
+      </figure>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        한국의 노년 돌봄은 보통 단계적으로 이동합니다. <strong>재가돌봄</strong>은 집으로 찾아갑니다. <strong>주간보호</strong>는 낮 동안 활동과 가족의 휴식을 돕습니다. <strong>요양원</strong>은 거주형 돌봄을, <strong>요양병원</strong>은 의료 치료를 더합니다. 가족이 반복해서 겪는 문제는 이 이동마다 이야기가 리셋된다는 점입니다. 다음 현장은 같은 질문을 다시 하고, 어제까지의 식사·수면·낙상·복약은 다른 파일에 남습니다.
+      </p>
+      <p class="text-sm text-gray-500 mb-8 leading-relaxed">
+        80만 명, 재가 1만 곳, 주간보호 1,200곳은 2026년 8월 17일 기준 시니어앤라이프 측 공개 수치입니다. 일간 활성 이용자(DAU)가 아닙니다. 드림에이아이랩 홈의 등록 사업자 22,000+와도 기준이 다릅니다. 22,000+는 공공·연계 등록 풀이고, 이번 숫자는 회사가 도입 기관으로 구분한 재가·주간보호 규모입니다. 현재 제공 범위는 상용베타와 기관 설정에 따라 다를 수 있습니다. 제품 기준은 <a href="/services/senior" class="text-primary-600 underline">시니어앤라이프 서비스 페이지</a>와 <a href="https://seniorandlife.com/" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">seniorandlife.com</a>을 따릅니다.
+      </p>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">890만 건이 의미하는 것, 의미하지 않는 것</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        시니어앤라이프가 이번 발표에서 더 강조한 지표는 클릭 수가 아니라 현장에서 나온 <strong>라이프 데이터</strong>입니다. 최근 6개월간 품질 처리(중복·노이즈 제거 후 구조화)를 거친 시니어 활동 데이터는 약 <strong>890만 건</strong>, 하루 평균 약 4만 9,000건입니다. 회사는 복약, 식사, 수면, 활동량, 인지 상태 기록, 낙상 위험 관찰처럼 일상과 맞닿은 정보라고 설명합니다.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        데이터가 많다는 사실은 출발점입니다. 890만 건은 890만 명의 어르신이 아닙니다. 총 이벤트, 고유 시니어, 실제 돌봄 세션, 평가가 채워진 대상자, 장기 추적 대상자는 따로 세어야 합니다. 드림에이아이랩이 다른 실사용데이터 설명에서 반복하는 경계와 같습니다. 큰 건수는 아직 연구 수준 RWD가 아니고, RWD는 곧바로 실사용근거(RWE)가 되지 않습니다.
+      </p>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">장소가 바뀌어도 한 사람의 기록이 이어지게</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        <strong>AI 디지털케어로그</strong>는 재가에서 주간보호, 다시 요양원·요양병원으로 옮겨도 한 사람을 중심으로 기록이 쌓이도록 설계됐습니다. 목표가 특정 시설의 관리 화면만은 아닙니다. 동의와 권한 범위 안에서 식사·수면·복약·활동이 몇 달에 걸쳐 어떻게 변했는지를 같은 시간축으로 보는 구조입니다.
+      </p>
+      <figure class="mb-10">
+        <img src="/images/news/news-92-senior-care-continuity.jpg" alt="재가·주간보호·요양원·요양병원을 한 사람 중심 기록으로 잇는 시니어앤라이프 개념도" class="w-full rounded-xl object-cover" width="1200" height="630" loading="lazy" decoding="async" />
+        <figcaption class="mt-3 text-sm text-gray-500 text-center">네 개의 돌봄 환경, 품질 처리 후의 한 사람 중심 로그. 모든 시설이 이미 완전 연결된 상태가 아니라 지향 구조를 그린 개념도입니다.</figcaption>
+      </figure>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        보호자가 보게 되는 것도 &lsquo;오늘 식사 여부&rsquo;만이 아닙니다. 회사는 3개월 식사량 추이, 수면과 활동량의 함께 보기, 복약 후 패턴 변화, 낙상 위험 징후의 이른 확인이 가능해진다고 설명합니다. 실제 화면은 데이터 완전성, 기관 설정, 동의 범위에 따라 달라집니다. 시니어앤라이프는 진단·처방·돌봄을 대체하지 않습니다.
+      </p>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">데이터 플라이휠을 쉽게 말하면</h2>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        회사는 이 순환을 데이터 플라이휠로 부릅니다. 기관과 이용자가 늘수록 일상 기록이 쌓이고, 정제된 종단 기록이 분석을 돕고, 더 나은 정보가 보호자와 현장으로 돌아가 다음 도입을 이끕니다. 이 고리가 성립하려면 누구의 기록인지, 언제 누구의 동의로 생겼는지, 출처와 수정 이력이 신뢰할 수 있어야 합니다. 계보 없는 이벤트 증가는 더 나은 돌봄을 자동으로 만들지 않습니다.
+      </p>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">다음 단계: 요양원·요양병원, 연구용 RWD, 로봇은 이후</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        요양원·요양병원 확대는 발표된 다음 단계이지, 이미 전국 전면 도입을 뜻하지 않습니다. 개인정보·보안 법규를 지키는 선에서 축적 데이터는 이후 맞춤 돌봄 지원, 이상 징후 탐지, 리얼월드 데이터(RWD) 연구에 쓰일 수 있습니다. 돌봄 로봇이 평소 습관과 이력을 이해하고 움직이려면 그 기반 데이터가 필요하다는 것은 장기 인프라 역할이지, 로봇 제품 출시 발표가 아닙니다. 관련 연구는 <a href="/research/robot-vision" class="text-primary-600 underline">Robot Vision</a> 페이지를 참고하면 됩니다.
+      </p>
+      <div class="bg-primary-50 border-l-4 border-primary-600 p-6 mb-8 rounded-r-lg">
+        <p class="text-lg text-gray-800 leading-relaxed">
+          시니어앤라이프 관계자는 &ldquo;우리가 지향하는 것은 단지 특정 시설을 관리하는 소프트웨어가 아니라, 한 사람의 노년기에 발생하는 모든 돌봄 기록을 끊김 없이 연결하는 인프라&rdquo;라며, &ldquo;재가·주간보호에서 검증된 80만 이용자 기반과 890만 건의 데이터 역량을 바탕으로 국내 시니어 돌봄 산업의 디지털 전환을 이어가겠다&rdquo;고 밝혔습니다.
+        </p>
+      </div>
+      <div class="bg-amber-50 border-l-4 border-amber-500 p-5 mb-8 rounded-r-lg">
+        <p class="text-amber-900 text-sm leading-relaxed">
+          <strong>근거 경계:</strong> 이용자 수, 도입 기관 수, 이벤트 건수는 이번 발표 기준 회사 측 자료입니다. DAU가 아니고, 고유 시니어 수도 아니며, 독립 검증된 임상 결과가 아닙니다. 시니어앤라이프는 진단·처방·돌봄을 대체하지 않습니다. 기록 공유는 동의·권한·관련 법령을 따릅니다. 본 글은 의료기기 허가 발표가 아닙니다.
+        </p>
+      </div>
+      <div class="bg-white border border-gray-200 rounded-xl p-6 mb-8">
+        <p class="font-semibold text-gray-900 mb-3">관련 콘텐츠</p>
+        <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+          <li><a href="https://seniorandlife.com/" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">시니어앤라이프 플랫폼</a></li>
+          <li><a href="/services/senior" class="text-primary-600 underline">시니어앤라이프 서비스 소개</a></li>
+          <li><a href="/technology" class="text-primary-600 underline">AI 디지털케어로그</a></li>
+          <li><a href="/news/88" class="text-primary-600 underline">자람이 이용자 확대·홈티 (같은 케어로그 구조)</a></li>
+        </ul>
+      </div>
+      <p class="text-gray-600 text-sm border-t border-gray-200 pt-6 leading-relaxed">
+        ※ 본 글은 시니어앤라이프 발표를 드림에이아이랩 뉴스센터에 보도자료로 아카이브한 것입니다. 제품·수치의 현재 기준은 서비스 사이트와 IR을 따르며, 제3자 검증을 의미하지 않습니다.
+      </p>
+    `,
+  },
+  {
     id: 91,
     title:
       '발달장애 플랫폼 ‘자람이’, FDA 진입 준비 본격화…10만 명 RWD로 디지털치료제 도전',

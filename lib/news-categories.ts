@@ -77,6 +77,7 @@ const META_BY_ID = Object.fromEntries(
 /** 레거시·오분류 보정: 기사 ID → 표준 카테고리 */
 export const NEWS_ARTICLE_CATEGORY_BY_ID: Record<number, NewsCategoryId> = {
   // 2026 최신
+  92: 'press', // 시니어앤라이프 80만·요양원·요양병원 확대
   91: 'press', // 자람이 FDA 진입 준비·10만 RWD
   90: 'tech', // 자람이 FDA 분리 전략·치료 모듈만 규제
   89: 'tech', // 노아AI AI 커스텀·개인 투자자 전략 운영 계층
