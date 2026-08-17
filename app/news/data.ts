@@ -80,9 +80,9 @@ export const newsArticles: NewsArticle[] = [
   {
     id: 92,
     title:
-      '시니어앤라이프, 재가돌봄 점유율 70% 돌파…요양원·요양병원으로 영역 확대',
+      '시니어앤라이프, 재가돌봄 점유율 70% 돌파… “돌봄 IT 시장 사실상 독주”',
     excerpt:
-      '전국 재가기관 1만 곳·주간보호 1,200곳, 이용자 80만 명을 확보했다. 전국 재가장기요양기관 규모 대비 재가 점유율은 약 70%, 주간보호는 35%를 넘는다. 요양원·요양병원으로 생애 통합 돌봄을 확장한다.',
+      '전국 재가기관 1만 곳·주간보호 1,200곳 확보, 이용자 80만 명으로 시장 선점. 6개월간 시니어 일상 데이터 890만 건을 처리하고, 요양원·요양병원으로 영역을 확장해 생애 통합 돌봄 OS를 목표로 한다.',
     category: 'press',
     date: '2026-08-17',
     image: '🏡',
@@ -208,117 +208,121 @@ export const newsArticles: NewsArticle[] = [
           },
         ],
         content: `
-      <p class="text-sm text-gray-500 mb-6">[Press Release · 2026-08-17]</p>
+      <p class="text-sm text-gray-500 mb-6">[Feature / IT·Bio · 2026-08-17]</p>
       <p class="text-xl font-semibold text-gray-800 mb-4 leading-relaxed">
-        10,000 home-care sites, 1,200 day-care centers, 800,000 users &mdash; and a push into nursing homes and hospitals.
+        10,000 home-care sites and 1,200 day-care centers, with 800,000 users
       </p>
+      <ul class="list-disc list-inside text-lg text-gray-800 mb-8 space-y-2 leading-relaxed">
+        <li>8.9 million senior daily-life records processed in six months, building a data infrastructure</li>
+        <li>Beyond home care and day care into nursing homes and hospitals: a life-course care OS</li>
+      </ul>
       <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-4">
-        Integrated senior-care platform <strong>Senior &amp; Life</strong> has taken more than 70% of Korea&rsquo;s home-care agencies and is widening its lead in care-data infrastructure. The next step is nursing homes and long-term hospitals, toward a life-course care OS.
+        Senior &amp; Life is widening its lead in Korea&rsquo;s senior-care IT market. The integrated platform now covers more than 70% of home-care agencies and has solidified its No. 1 position in care-data infrastructure.
       </p>
       <figure class="mb-10">
         <img src="/images/news/news-92-senior-expansion-og.jpg" alt="Senior &amp; Life connecting home care, day care, nursing homes and hospitals" class="w-full rounded-xl object-cover" width="1200" height="630" loading="eager" decoding="async" />
-        <figcaption class="mt-3 text-sm text-gray-500 text-center">From home care to nursing homes and hospitals: Senior &amp; Life&rsquo;s care network</figcaption>
+        <figcaption class="mt-3 text-sm text-gray-500 text-center">Senior &amp; Life expanding from home care and day care into nursing homes and hospitals</figcaption>
       </figure>
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        KPI released on 17 August show <strong>10,000 home-care sites</strong> and <strong>1,200 day-care centers</strong> on the platform. Users, including providers and families, have reached <strong>800,000</strong>.
+        KPI released on 17 August show 10,000 home-care sites and 1,200 day-care centers on the platform. Users, including providers and families, have reached 800,000.
       </p>
       <p class="text-lg text-gray-700 mb-8 leading-relaxed">
-        Against about 13,000&ndash;14,000 home long-term care agencies and about 3,200 day-care centers nationwide, that is about <strong>70% of home care</strong> and more than <strong>35% of day care</strong>. The gap with later entrants has widened enough that the home-care IT market is now described as effectively led by one platform.
+        Against about 13,000&ndash;14,000 home long-term care agencies and about 3,200 day-care centers nationwide, home-care share is about 70% and day-care share exceeds 35%. The gap with later entrants has widened enough that the market is described as effectively dominated.
       </p>
-      <h2 class="text-2xl font-bold text-gray-900 mb-4">8.9 million daily-life records in six months</h2>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">A data gap others cannot close: 8.9 million records in six months</h2>
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        The lead is not only the number of sites. It is the scale and continuity of life data from the field. In the past six months Senior &amp; Life collected and quality-processed about <strong>8.9 million</strong> senior activity records &mdash; about 49,000 a day.
+        The lead is not only the number of sites. It is the scale and continuity of life data from the field.
       </p>
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        The set covers medication, meals, sleep, activity, cognitive status, and fall risk. As more agencies join, more daily data accumulate, AI analysis improves, service value rises, and new sites follow. That loop is the data flywheel now running on the platform.
+        In the past six months the platform collected and quality-processed 8.9 million senior activity records, about 49,000 high-quality records a day.
+      </p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        Medication, meals, sleep, activity, cognitive status, and fall risk are recorded across daily life. More sites bring more data, which improves AI analysis, which raises service value, which brings new sites. That exclusive data flywheel is now running.
       </p>
       <p class="text-lg text-gray-700 mb-8 leading-relaxed">
         An IT industry source said 800,000 users and 8.9 million real-time records are a barrier that is hard to close in a short time, and that Senior &amp; Life has moved beyond a work-management program to become the standard operating system of Korean senior care.
       </p>
-      <h2 class="text-2xl font-bold text-gray-900 mb-4">AI Digital Care Log, then nursing homes and hospitals</h2>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">AI Digital Care Log: expanding into nursing homes and hospitals</h2>
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        On that share, Senior &amp; Life is expanding into nursing homes and long-term hospitals. Until now, records often broke when a person moved from home care to day care, then to a nursing home or hospital. The <strong>AI Digital Care Log</strong> is built so years of change stay connected around one person even when the setting changes.
+        On that share, Senior &amp; Life is expanding into nursing homes and long-term hospitals.
+      </p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        Records have often broken when a person moved from home care to day care, then to a nursing home or hospital. The AI Digital Care Log is built so years of change stay connected around one person even when the setting changes.
       </p>
       <figure class="mb-10">
         <img src="/images/news/news-92-senior-care-continuity.jpg" alt="One person&rsquo;s care records continuing across home care, day care, nursing home and hospital" class="w-full rounded-xl object-cover" width="1200" height="630" loading="lazy" decoding="async" />
-        <figcaption class="mt-3 text-sm text-gray-500 text-center">Care records that stay with the person from home to hospital</figcaption>
+        <figcaption class="mt-3 text-sm text-gray-500 text-center">The AI Digital Care Log keeps one person&rsquo;s records when the care setting changes</figcaption>
       </figure>
       <p class="text-lg text-gray-700 mb-8 leading-relaxed">
-        Families and staff then see more than a daily log. Three-month meal trends, the link between sleep trouble and fall risk, and other long-term patterns become visible. Super-aged Korea will bring care robots and AI care, but those systems need a person&rsquo;s habits and health history. The 8.9 million records already gathered from the home-care stage are expected to carry into AI healthcare and real-world data (RWD).
+        Families and staff then see more than a daily log: three-month meal trends, the link between sleep trouble and fall risk, and other long-term patterns analyzed by AI.
       </p>
-      <div class="bg-primary-50 border-l-4 border-primary-600 p-6 mb-8 rounded-r-lg">
-        <p class="text-lg text-gray-800 leading-relaxed">
-          A Senior &amp; Life representative said, &ldquo;What we aim for is not simple management software used in one facility. It is later-life care data infrastructure that connects one person&rsquo;s whole senior years. On the No. 1 capacity we have shown in home care and day care, we will link nursing homes and hospitals quickly and complete digital transformation of Korea&rsquo;s senior-care industry.&rdquo;
-        </p>
-      </div>
-      <div class="bg-white border border-gray-200 rounded-xl p-6 mb-8">
-        <p class="font-semibold text-gray-900 mb-3">Related</p>
-        <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
-          <li><a href="https://seniorandlife.com/" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">seniorandlife.com</a></li>
-          <li><a href="/services/senior" class="text-primary-600 underline">Senior &amp; Life</a></li>
-        </ul>
-      </div>
-      <p class="text-gray-600 text-sm border-t border-gray-200 pt-6 leading-relaxed">
-        ※ This article archives a Senior &amp; Life press release on the Dream AI Lab news center.
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">&ldquo;Not facility software &mdash; national infrastructure for later life&rdquo;</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        As Korea becomes a super-aged society, care robots and AI care are arriving quickly, but the core is data that reflects a senior&rsquo;s habits and health history. The 8.9 million records already gathered from the home-care stage are expected to carry into AI healthcare and real-world data (RWD).
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        A Senior &amp; Life representative said, &ldquo;What we aim for is not simple management software used in one facility. It is later-life care data infrastructure that connects one person&rsquo;s whole senior years. On the No. 1 capacity we have shown in home care and day care, we will link nursing homes and hospitals quickly and complete digital transformation of Korea&rsquo;s senior-care industry.&rdquo;
       </p>
         `,
       },
     },
     content: `
-      <p class="text-sm text-gray-500 mb-6">[보도자료 · 2026-08-17]</p>
+      <p class="text-sm text-gray-500 mb-6">[기획/IT·바이오 · 2026-08-17]</p>
       <p class="text-xl font-semibold text-gray-800 mb-4 leading-relaxed">
-        전국 재가기관 1만 곳·주간보호 1,200곳 확보&hellip; 이용자 80만 명으로 시장 선점
+        전국 재가기관 1만 곳&middot;주간보호 1,200곳 확보&hellip; 이용자 80만 명으로 시장 선점
       </p>
+      <ul class="list-disc list-inside text-lg text-gray-800 mb-8 space-y-2 leading-relaxed">
+        <li>6개월간 시니어 일상 데이터 890만 건 처리&hellip; 독보적 &lsquo;데이터 인프라&rsquo; 구축</li>
+        <li>재가&middot;주간보호 넘어 요양원&middot;요양병원으로 영역 확장&hellip; &ldquo;생애 통합 돌봄 OS 목표&rdquo;</li>
+      </ul>
       <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-4">
-        통합 시니어 돌봄 플랫폼 <strong>시니어앤라이프</strong>가 전국 재가돌봄 기관의 70% 이상을 확보하며, 돌봄 데이터 인프라 시장에서 선두를 한층 공고히 했다. 재가&middot;주간보호를 넘어 요양원&middot;요양병원으로 영역을 넓혀 생애 통합 돌봄 OS를 목표로 한다.
+        대한민국 시니어 돌봄 IT 시장에서 초격차를 확대하며 독주 체제를 구축한 플랫폼이 주목받고 있다. 통합 시니어 돌봄 플랫폼 &lsquo;시니어앤라이프&rsquo;가 전국 재가돌봄 기관의 70% 이상을 확보하며, 돌봄 데이터 인프라 시장에서 부동의 1위 지위를 한층 공고히 했다.
       </p>
       <figure class="mb-10">
         <img src="/images/news/news-92-senior-expansion-og.jpg" alt="재가돌봄·주간보호에서 요양원·요양병원까지 이어지는 시니어앤라이프 돌봄 현장" class="w-full rounded-xl object-cover" width="1200" height="630" loading="eager" decoding="async" />
-        <figcaption class="mt-3 text-sm text-gray-500 text-center">재가에서 요양원&middot;요양병원까지 이어지는 시니어앤라이프 돌봄 네트워크</figcaption>
+        <figcaption class="mt-3 text-sm text-gray-500 text-center">재가&middot;주간보호에서 요양원&middot;요양병원으로 영역을 넓히는 시니어앤라이프</figcaption>
       </figure>
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        17일 시니어앤라이프가 공개한 주요 경영 지표(KPI)에 따르면, 플랫폼을 도입한 재가돌봄 관련 기관은 <strong>1만 곳</strong>, 주간보호기관은 <strong>1,200곳</strong>을 돌파했다. 서비스 제공자와 보호자를 포함한 전체 이용자 수는 <strong>80만 명</strong>에 이른다.
+        17일 시니어앤라이프가 공개한 주요 경영 지표(KPI)에 따르면, 플랫폼을 도입한 재가돌봄 관련 기관은 1만 곳, 주간보호기관은 1,200곳을 돌파했다. 서비스 제공자와 보호자를 포함한 전체 이용자 수만 80만 명에 이른다.
       </p>
       <p class="text-lg text-gray-700 mb-8 leading-relaxed">
-        전국 재가장기요양기관(약 1만 3,000~1만 4,000여 곳)과 주야간보호센터(약 3,200여 곳) 규모를 고려하면, 재가 분야 시장 점유율은 약 <strong>70%</strong>, 주간보호 분야 점유율은 <strong>35%</strong>를 넘는다. 후발 주자와의 격차를 벌리며 재가 돌봄 IT 시장을 사실상 선도하고 있다는 평가가 나오는 이유다.
+        현재 전국 재가장기요양기관(약 1만 3,000~1만 4,000여 곳)과 주야간보호센터(약 3,200여 곳)의 전체 규모를 고려할 때, 재가 분야 시장 점유율은 약 70%, 주간보호 분야 점유율은 35%를 넘어서는 압도적 수치다. 후발 주자들과의 격차를 현격히 벌리며 시장을 사실상 석권했다는 평가가 나오는 이유다.
       </p>
-      <h2 class="text-2xl font-bold text-gray-900 mb-4">6개월간 890만 건 데이터 처리&hellip; 데이터 인프라가 핵심</h2>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">따라올 수 없는 &lsquo;데이터 초격차&rsquo;&hellip; 6개월간 890만 건 실시간 정제</h2>
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        시니어앤라이프가 선두를 굳힌 경쟁력은 가입 기관 수에 그치지 않는다. 현장에서 생성되는 라이프 데이터의 규모와 연속성에 있다. 최근 6개월간 플랫폼에서 수집&middot;품질 처리를 거친 시니어 활동 데이터는 <strong>890만 건</strong>에 달한다. 하루 평균 약 4만 9,000건이 정제&middot;구조화되는 셈이다.
+        시니어앤라이프가 시장에서 압도적인 선두 자리를 굳힌 핵심 경쟁력은 단순 가입 기관 수에 그치지 않고, 현장에서 생성되는 &lsquo;라이프 데이터의 규모와 연속성&rsquo;에 있다.
       </p>
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        수집 데이터는 복약, 식사, 수면, 활동량, 인지 상태, 낙상 위험 등 시니어의 일상 전반이다. 이용 기관이 늘수록 실제 일상 데이터가 쌓이고, AI 분석이 고도화되면 보호자와 돌봄 제공자에게 더 정밀한 정보가 돌아가 신규 유입으로 이어진다. 이른바 데이터 플라이휠이 가동되는 구조다.
+        최근 6개월간 플랫폼에서 수집 및 품질 처리 과정을 거친 시니어 활동 데이터는 890만 건에 달한다. 하루 평균 약 4만 9,000건의 고품질 데이터가 정제&middot;구조화되고 있는 셈이다.
+      </p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        복약, 식사, 수면, 활동량, 인지 상태, 낙상 위험 등 시니어의 일상 전반이 기록되면서, 시니어앤라이프는 &lsquo;이용 기관 확대 &rarr; 데이터 축적 &rarr; AI 분석 고도화 &rarr; 서비스 가치 상승 &rarr; 신규 유입&rsquo;으로 이어지는 독점적 데이터 플라이휠(Data Flywheel)을 가동하고 있다.
       </p>
       <p class="text-lg text-gray-700 mb-8 leading-relaxed">
-        IT 업계 관계자는 &ldquo;시니어 돌봄 시장에서 이용자 80만 명과 890만 건의 실시간 데이터는 단기간에 추격하기 어려운 진입장벽&rdquo;이라며 &ldquo;단순 업무 관리 프로그램을 넘어 국내 시니어 돌봄의 표준 운영체제(OS)로 자리매김했다&rdquo;고 분석했다.
+        IT 업계 관계자는 &ldquo;시니어 돌봄 시장에서 이용자 80만 명과 890만 건의 실시간 데이터는 단기간에 추격하기 어려운 거대한 진입장벽&rdquo;이라며 &ldquo;단순 업무 관리 프로그램을 넘어 국내 시니어 돌봄의 표준 운영체제(OS)로 자리매김했다&rdquo;고 분석했다.
       </p>
-      <h2 class="text-2xl font-bold text-gray-900 mb-4">단절된 돌봄을 잇는 AI 디지털케어로그&hellip; 요양원&middot;요양병원으로 확장</h2>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">단절된 돌봄 체계 잇는 &lsquo;AI 디지털 케어로그&rsquo;&hellip; 요양원&middot;요양병원으로 영토 확장</h2>
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        시니어앤라이프는 이 점유율을 바탕으로 요양원과 요양병원 등 전문 의료&middot;요양 시설로 서비스를 본격 확장한다. 그간 어르신이 재가에서 주간보호센터, 요양원이나 요양병원으로 옮길 때마다 기존 돌봄 기록이 단절되는 한계가 지적돼 왔다. <strong>AI 디지털케어로그</strong>는 돌봄 환경이 바뀌더라도 한 사람을 중심으로 수년간의 상태 변화를 연결&middot;추적할 수 있도록 설계됐다.
+        시니어앤라이프는 이러한 독보적 점유율을 바탕으로, 요양원과 요양병원 등 전문 의료&middot;요양 시설로 서비스 영역을 본격 확장한다.
+      </p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        그간 시니어 돌봄 현장에서는 어르신이 가정(재가)에서 주간보호센터, 요양원이나 요양병원으로 이주&middot;입원할 때마다 기존 돌봄 기록이 단절되는 구조적 한계가 지적되어 왔다. 시니어앤라이프가 구축한 &lsquo;AI 디지털 케어로그(AI Digital Care Log)&rsquo;는 돌봄 환경이 바뀌더라도 한 사람을 중심으로 수년 간의 상태 변화를 지속적으로 연결&middot;추적할 수 있도록 설계됐다.
       </p>
       <figure class="mb-10">
         <img src="/images/news/news-92-senior-care-continuity.jpg" alt="한 사람의 돌봄 기록이 재가·주간보호·요양원·요양병원으로 이어지는 모습" class="w-full rounded-xl object-cover" width="1200" height="630" loading="lazy" decoding="async" />
-        <figcaption class="mt-3 text-sm text-gray-500 text-center">가정에서 병원까지, 한 사람의 돌봄 기록이 이어지는 구조</figcaption>
+        <figcaption class="mt-3 text-sm text-gray-500 text-center">돌봄 환경이 바뀌어도 한 사람을 중심으로 이어지는 AI 디지털 케어로그</figcaption>
       </figure>
       <p class="text-lg text-gray-700 mb-8 leading-relaxed">
-        보호자와 의료&middot;돌봄 종사자는 당일 일지를 넘어 최근 3개월 식사량 변화, 수면 장애와 낙상 위험의 상관관계 등 장기 패턴을 파악할 수 있게 된다. 초고령사회에 돌봄 로봇과 AI 케어가 도입돼도, 핵심은 시니어의 평소 생활 습관과 건강 이력이다. 재가 단계에서 선점한 890만 건 데이터는 이후 AI 헬스케어와 리얼월드 데이터(RWD) 시장에서도 파급력을 가질 전망이다.
+        이를 통해 보호자와 의료&middot;돌봄 종사자는 단순한 일일 기록을 넘어 &ldquo;최근 3개월간 식사량 변화 추이&rdquo;, &ldquo;수면 장애와 낙상 위험 간 상관관계&rdquo; 등 AI가 분석한 장기적 이상 징후와 변화 패턴을 정밀하게 파악할 수 있게 된다.
       </p>
-      <div class="bg-primary-50 border-l-4 border-primary-600 p-6 mb-8 rounded-r-lg">
-        <p class="text-lg text-gray-800 leading-relaxed">
-          시니어앤라이프 관계자는 &ldquo;우리가 지향하는 것은 특정 시설에서 사용하는 단순 관리 소프트웨어가 아닌, 한 사람의 노년기 전체를 데이터로 잇는 생애 돌봄 데이터 인프라&rdquo;라며, &ldquo;재가와 주간보호 시장에서 입증한 압도적 1위 역량을 바탕으로 요양원과 요양병원까지 조속히 연계해 대한민국 시니어 돌봄의 디지털 전환(DX)을 완성하겠다&rdquo;고 밝혔다.
-        </p>
-      </div>
-      <div class="bg-white border border-gray-200 rounded-xl p-6 mb-8">
-        <p class="font-semibold text-gray-900 mb-3">관련 링크</p>
-        <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
-          <li><a href="https://seniorandlife.com/" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">시니어앤라이프</a></li>
-          <li><a href="/services/senior" class="text-primary-600 underline">서비스 소개</a></li>
-        </ul>
-      </div>
-      <p class="text-gray-600 text-sm border-t border-gray-200 pt-6 leading-relaxed">
-        ※ 본 글은 시니어앤라이프 보도자료를 드림에이아이랩 뉴스센터에 게재한 것입니다.
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">&ldquo;시설 관리 소프트웨어 넘어, 노년 전체를 연결하는 국가급 인프라로&rdquo;</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        초고령사회 진입에 따라 돌봄 로봇과 AI 케어 등 첨단 기술이 빠르게 도입되고 있지만, 핵심은 시니어의 평소 생활 습관과 건강 이력을 정확히 반영한 데이터다. 시니어앤라이프가 재가 단계부터 선점한 890만 건의 데이터가 향후 AI 헬스케어 및 RWD(실제임상데이터) 시장에서도 강한 파급력을 가져올 것으로 전망되는 배경이다.
       </p>
-    `,
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        시니어앤라이프 관계자는 &ldquo;우리가 지향하는 것은 특정 시설에서 사용하는 단순 관리 소프트웨어가 아닌, 한 사람의 노년기 전체를 데이터로 잇는 &lsquo;생애 돌봄 데이터 인프라&rsquo;&rdquo;라며 &ldquo;재가와 주간보호 시장에서 입증한 압도적 1위 역량을 바탕으로 요양원과 요양병원까지 조속히 연계해 대한민국 시니어 돌봄의 디지털 전환(DX)을 완성하겠다&rdquo;고 밝혔다.
+      </p>
+        `,
   },
   {
     id: 91,

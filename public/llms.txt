@@ -47,8 +47,8 @@ AI디지털케어로그는 일상생활과 행동·습관부터 돌봄·교육·
 - IR: https://dreamailab.com/ir/
 
 ## Latest news (2026)
-- Senior & Life exceeds 70% home-care share and expands into nursing homes (KO): https://dreamailab.com/news/92/
-- Senior & Life exceeds 70% home-care share and expands into nursing homes (EN): https://dreamailab.com/en/news/92/
+- Senior & Life exceeds 70% home-care share: de facto lead in care IT (KO): https://dreamailab.com/news/92/
+- Senior & Life exceeds 70% home-care share: de facto lead in care IT (EN): https://dreamailab.com/en/news/92/
 - Jarame prepares FDA pathway with 100k RWD and a single therapeutic module (KO): https://dreamailab.com/news/91/
 - Jarame prepares FDA pathway with 100k RWD and a single therapeutic module (EN): https://dreamailab.com/en/news/91/
 - Jarame FDA strategy: keep the platform open, regulate only the therapy module (KO): https://dreamailab.com/news/90/
