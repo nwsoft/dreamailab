@@ -1,0 +1,7 @@
+# 마음이AI는 토탈케어로그(헬스케어) 축으로 통합
+/services/maeume    /services/healthcare/    301
+/services/maeume/   /services/healthcare/    301
+
+# 과거 의료 서비스 URL은 토탈케어로그(헬스케어) 축으로 통합
+/services/health    /services/healthcare/    301
+/services/health/   /services/healthcare/    301
