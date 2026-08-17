@@ -47,6 +47,10 @@ AI디지털케어로그는 일상생활과 행동·습관부터 돌봄·교육·
 - IR: https://dreamailab.com/ir/
 
 ## Latest news (2026)
+- Jarame prepares FDA pathway with 100k RWD and a single therapeutic module (KO): https://dreamailab.com/news/91/
+- Jarame prepares FDA pathway with 100k RWD and a single therapeutic module (EN): https://dreamailab.com/en/news/91/
+- Jarame FDA strategy: keep the platform open, regulate only the therapy module (KO): https://dreamailab.com/news/90/
+- Jarame FDA strategy: keep the platform open, regulate only the therapy module (EN): https://dreamailab.com/en/news/90/
 - NoahAI AI Custom: retail investors verify TradingView/Pine strategies without coding (KO): https://dreamailab.com/news/89/
 - NoahAI AI Custom: retail investors verify TradingView/Pine strategies without coding (EN): https://dreamailab.com/en/news/89/
 - Jarame surpasses 350,000 users and expands into home therapy matching (KO): https://dreamailab.com/news/88/

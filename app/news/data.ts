@@ -78,6 +78,449 @@ export function getLocalizedArticle(
 
 export const newsArticles: NewsArticle[] = [
   {
+    id: 91,
+    title:
+      '발달장애 플랫폼 ‘자람이’, FDA 진입 준비 본격화…10만 명 RWD로 디지털치료제 도전',
+    excerpt:
+      '자람이가 플랫폼 전체가 아니라 단일 치료 모듈을 분리해 미국 FDA 의료기기 허가를 준비합니다. 약 10만 명 RWD는 출발점이며, FDA가 인정한 임상 결과는 아닙니다.',
+    category: 'press',
+    date: '2026-08-17',
+    image: '🏛️',
+    featured: true,
+    author: '자람이팀',
+    authorUrl: 'https://jarame.or.kr/',
+    ogImage: '/images/news/news-91-jarame-fda-rwd-og.jpg',
+    ogImageAlt:
+      '자람이 FDA 준비 개념도: 가정·센터 기록이 RWE 근거 계층을 거쳐 단일 치료 모듈 Therapeutic-01로 모이는 구조',
+    ogImageAltEn:
+      'Conceptual Jarame FDA diagram: home and clinic records become evidence, then a single sealed therapeutic module',
+    about: [
+      {
+        type: 'Organization',
+        id: 'https://jarame.or.kr/#organization',
+        name: '자람이',
+        alternateName: ['Jarame'],
+        url: 'https://jarame.or.kr/',
+        description:
+          '발달장애인의 생활·치료·교육 기록을 연결하는 AI 디지털케어로그 적용 서비스',
+        sameAs: ['https://dreamailab.com/services/jarame/'],
+      },
+      {
+        type: 'SoftwareApplication',
+        name: '자람이',
+        alternateName: ['Jarame', 'Jarame Therapeutic'],
+        url: 'https://jarame.or.kr/',
+        description: '발달장애 플랫폼. FDA 준비 대상은 전체 앱이 아니라 분리된 치료 모듈이다.',
+      },
+    ],
+    mentions: [
+      {
+        type: 'DefinedTerm',
+        id: 'https://dreamailab.com/technology/#ai-digital-care-log',
+        name: 'AI 디지털케어로그',
+        alternateName: ['AI Digital Care Log', 'RWD', 'RWE'],
+        url: 'https://dreamailab.com/technology/',
+      },
+    ],
+    tags: [
+      '자람이',
+      'FDA',
+      '디지털치료제',
+      'DTx',
+      'RWD',
+      'RWE',
+      'AI 디지털케어로그',
+      'De Novo',
+      'Q-Submission',
+      '발달장애',
+      '의료기기 소프트웨어',
+      'Jarame Therapeutic',
+    ],
+    faq: [
+      {
+        question: '자람이가 지금 FDA 허가를 받은 것인가요?',
+        answer:
+          '아닙니다. 미국 FDA 의료기기 허가를 목표로 규제 대응을 준비하는 단계입니다. 회사 측 RWD·개선 신호는 아직 FDA가 치료효과로 인정한 임상 결과가 아닙니다.',
+      },
+      {
+        question: '플랫폼 전체를 의료기기로 신청하나요?',
+        answer:
+          '아닙니다. 센터 검색, 홈티 매칭, 일정, 소통 같은 비의료 기능은 플랫폼에 남기고, 치료결과에 직접 관여하는 기능만 가칭 Jarame Therapeutic-01로 분리해 신청하는 전략입니다.',
+      },
+      {
+        question: '10만 명 데이터면 FDA 근거가 되나요?',
+        answer:
+          '데이터 규모는 출발점입니다. FDA 제출에서는 진단 확인, 기준시점, 실제 중재 노출, 추적기간, 평가도구, 병행치료, 결측치, 대조군을 기준으로 분석 가능한 대상군을 다시 확정해야 합니다.',
+      },
+    ],
+    i18n: {
+      en: {
+        title:
+          'Jarame prepares an FDA pathway: 100,000-person RWD and a separated digital therapeutic module',
+        excerpt:
+          'Jarame will not file its whole platform as a medical device. It plans to isolate one therapeutic module for a U.S. FDA pathway. About 100,000 people of real-world data is a starting point, not an FDA-validated clinical result.',
+        faq: [
+          {
+            question: 'Has Jarame received FDA clearance or approval?',
+            answer:
+              'No. It is preparing a U.S. FDA medical-device pathway. Company-stated RWD and improvement signals are not yet FDA-recognized clinical effectiveness results.',
+          },
+          {
+            question: 'Will the entire platform be filed as a device?',
+            answer:
+              'No. Non-device functions such as center search, home-therapy matching, scheduling, and communication stay on the platform. Functions that directly affect treatment outcomes are planned to be isolated as a working-name module, Jarame Therapeutic-01.',
+          },
+          {
+            question: 'Is 100,000 users enough for FDA evidence?',
+            answer:
+              'Volume is a starting point. An FDA file must re-define an analyzable cohort by confirmed diagnosis, baseline, actual intervention exposure, follow-up, instruments, concomitant therapy, missingness, and comparators.',
+          },
+        ],
+        content: `
+      <p class="text-sm text-gray-500 mb-6">[Press Release · 2026-08-17]</p>
+      <p class="text-xl font-semibold text-gray-800 mb-4 leading-relaxed">
+        Refine real-world data through the AI Digital Care Log. Separate one treatment module. Then pursue a U.S. device pathway.
+      </p>
+      <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-4">
+        Dream AI Lab&rsquo;s developmental-disability platform <strong>Jarame</strong> is preparing for U.S. FDA medical-device review. The plan is not to file the whole platform at once, but to isolate clinically intended functions as an independent digital-therapeutic module and enter in stages.
+      </p>
+      <figure class="mb-10">
+        <img src="/images/news/news-91-jarame-fda-rwd-og.jpg" alt="Conceptual Jarame FDA diagram: home and clinic records become evidence, then a single sealed therapeutic module" class="w-full rounded-xl object-cover" width="1200" height="630" loading="eager" decoding="async" />
+        <figcaption class="mt-3 text-sm text-gray-500 text-center">Longitudinal records become evidence; one module is the first device candidate. Conceptual illustration, not an FDA certificate.</figcaption>
+      </figure>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        Jarame says about <strong>100,000 people</strong> of developmental-disability real-world data have accumulated through the AI Digital Care Log. It also says improvement signals in the <strong>30&ndash;65%</strong> range were observed on some treatment or function measures, depending on cohort and measurement conditions.
+      </p>
+      <p class="text-sm text-gray-500 mb-8 leading-relaxed">
+        These figures are company-stated. They are not FDA-recognized clinical effectiveness. For a submission, analyzable subjects must be re-defined by diagnosis confirmation, baseline, actual intervention exposure, follow-up, instruments, concomitant therapy, missingness, and comparators&mdash;not by total users.
+      </p>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Why event counts are not clinical N</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        Jarame says data-processing methods used at Noah AI Labs&mdash;on the order of about <strong>3.6 million events in a month</strong>&mdash;were applied to the AI Digital Care Log. Collected events are de-duplicated and normalized into person-level longitudinal records. For FDA use, the company plans a regulatory lineage that can trace source events, origin, decision rules, algorithm version, and edit history&mdash;not only the cleaned count.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        Even millions of events are not millions of independent clinical samples. Total events, unique persons, completed therapy sessions, completed assessments, and long-follow-up subjects must be counted separately. Volume is a start. Lineage, completeness, bias control, and causal analysis must be joined before data can become RWE FDA can use.
+      </p>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">RWE can support device decisions&mdash;if relevant and reliable</h2>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        FDA&rsquo;s December 2025 final guidance on real-world evidence for medical devices states that RWD may inform regulatory decisions when it is sufficiently relevant and reliable. Jarame&rsquo;s large RWD could later support trial design, external controls, subgroup analysis, long-term safety, and post-market performance&mdash;after those quality tests, not because the count is large. (U.S. Food and Drug Administration)
+      </p>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">First device: a working-name single module</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        The intended file is expected to be separated as working-name <strong>Jarame Therapeutic-01</strong>. The first product would not cover all developmental disability. It would freeze one age band, diagnostic condition, treatment goal, and clinical endpoint. Candidates include social communication, functional requesting, challenging behavior, or daily-living function&mdash;whichever currently has the strongest completeness and clinical validity.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        Center search, home-therapy matching, scheduling, guardian&ndash;therapist communication, and general education stay on the existing platform. Patient-specific content selection, difficulty, intervention order, and next-step proposals that directly affect clinical outcomes move into separate device software. The architecture of that split is explained in <a href="/news/90" class="text-primary-600 underline">Jarame&rsquo;s FDA separation strategy</a>.
+      </p>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Q-Submission first, pathway later</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        Before a formal file, Jarame plans FDA Q-Submission to discuss intended use, patients, endpoints, how far existing RWE can go, and what additional trial is needed. If no suitable predicate is found, a De Novo path is more likely for a novel low-to-moderate-risk device, but the final path must be set after predicate search and FDA discussion. (U.S. Food and Drug Administration)
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        Preparation covers more than clinical effect: software lifecycle, risk management, verification and validation, usability, cybersecurity, change control, complaints, CAPA, and post-market surveillance. FDA&rsquo;s QMSR, effective 2 February 2026, incorporates ISO 13485:2016 by reference, so a quality system must cover development and operations. (U.S. Food and Drug Administration)
+      </p>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">A platform of modules, not one frozen app</h2>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        The strategy is to keep the AI Digital Care Log as developmental-disability RWD/RWE infrastructure and add indication-specific therapeutic modules on top. If the first module is authorized, later modules could cover communication, behavior, daily living, and sleep, with long-term effect and safety checked from actual use after market.
+      </p>
+      <div class="bg-amber-50 border-l-4 border-amber-500 p-5 mb-8 rounded-r-lg">
+        <p class="text-amber-900 text-sm leading-relaxed">
+          <strong>Evidence boundary:</strong> User counts, event volume, and improvement ranges are company materials today. They must be converted to regulatory-grade evidence through protocol registration, independent statistics, and FDA review. Jarame does not replace diagnosis, prescription, or therapy. This is not an FDA clearance or approval announcement.
+        </p>
+      </div>
+      <div class="bg-white border border-gray-200 rounded-xl p-6 mb-8">
+        <p class="font-semibold text-gray-900 mb-3">Related</p>
+        <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+          <li><a href="/news/90" class="text-primary-600 underline">Keep the platform open, regulate only the therapy module</a></li>
+          <li><a href="/services/jarame" class="text-primary-600 underline">Jarame service</a></li>
+          <li><a href="https://jarame.or.kr" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">jarame.or.kr</a></li>
+          <li><a href="/news/88" class="text-primary-600 underline">Home-therapy expansion</a></li>
+        </ul>
+      </div>
+        `,
+      },
+    },
+    content: `
+      <p class="text-sm text-gray-500 mb-6">[보도자료 · 2026-08-17]</p>
+      <p class="text-xl font-semibold text-gray-800 mb-4 leading-relaxed">
+        AI디지털케어로그로 실사용 데이터를 정제하고, 단일 치료 모듈만 분리해 미국 의료기기 허가 절차를 추진한다.
+      </p>
+      <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-4">
+        발달장애 치료·교육 통합 플랫폼 <strong>자람이</strong>가 미국 식품의약국(FDA) 의료기기 허가를 목표로 규제 대응에 나선다. 플랫폼 전체를 한꺼번에 의료기기로 신청하지 않고, 임상적 치료 목적을 가진 기능을 독립 디지털치료제 모듈로 분리해 단계적으로 진입한다는 전략이다.
+      </p>
+      <figure class="mb-10">
+        <img src="/images/news/news-91-jarame-fda-rwd-og.jpg" alt="자람이 FDA 준비 개념도: 가정·센터 기록이 RWE 근거 계층을 거쳐 단일 치료 모듈 Therapeutic-01로 모이는 구조" class="w-full rounded-xl object-cover" width="1200" height="630" loading="eager" decoding="async" />
+        <figcaption class="mt-3 text-sm text-gray-500 text-center">종단 기록이 근거가 되고, 하나의 모듈이 첫 허가 후보가 된다. 개념 일러스트이며 FDA 인증 표시가 아닙니다.</figcaption>
+      </figure>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        자람이 측에 따르면 현재 약 <strong>10만 명</strong> 규모의 발달장애 관련 실사용데이터(RWD)가 AI디지털케어로그를 통해 축적돼 있다. 회사는 일부 치료·기능 지표에서 대상군과 측정 조건에 따라 <strong>30~65%</strong> 범위의 개선 신호가 관찰됐다고 설명했다.
+      </p>
+      <p class="text-sm text-gray-500 mb-8 leading-relaxed">
+        이 수치는 자람이 측 자료다. FDA가 치료효과로 인정한 임상 결과가 아니다. 제출 단계에서는 전체 사용자 수가 아니라 진단 확인, 기준시점, 실제 중재 노출, 추적기간, 평가도구, 병행치료, 결측치, 대조군을 기준으로 분석 가능한 대상군을 다시 확정해야 한다.
+      </p>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">이벤트 건수는 임상 표본 수가 아니다</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        자람이는 Noah AI Labs에서 한 달 약 <strong>360만 건</strong> 규모의 운영 이벤트를 처리해 온 기술을 AI디지털케어로그에 적용했다고 밝혔다. 수집 데이터는 중복 판정과 정규화를 거쳐 환자별 종단 기록으로 구성된다. FDA 제출을 위해서는 정리된 건수뿐 아니라 원본 이벤트, 출처, 판정 규칙, 알고리즘 버전, 수정 이력까지 추적하는 규제용 데이터 계보를 구축할 계획이다.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        한 달 360만 건이 발생해도 이를 360만 개의 독립 임상표본으로 볼 수는 없다. 총 이벤트, 고유 환자, 실제 치료 세션, 평가가 완성된 대상자, 장기 추적 대상자를 구분해야 한다. 데이터가 많다는 사실은 출발점이다. 계보와 완전성, 편향 통제, 인과 분석이 결합돼야 FDA가 쓸 수 있는 실사용근거(RWE)가 된다.
+      </p>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">관련성과 신뢰성이 있을 때 RWE를 쓸 수 있다</h2>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        FDA는 2025년 12월 의료기기 RWE 최종 가이던스에서, 실사용데이터가 충분한 관련성과 신뢰성을 갖춘 경우 규제 의사결정에 활용될 수 있다고 밝혔다. 자람이가 확보한 대규모 RWD는 이후 임상시험 설계, 외부 대조군, 하위집단 분석, 장기 안전성, 시판 후 성능 평가에 쓰일 가능성이 있다. 건수가 많아서가 아니라, 그 품질 시험을 통과한 뒤의 이야기다. (U.S. Food and Drug Administration)
+      </p>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">첫 허가 대상은 가칭 단일 모듈</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        FDA 허가 대상은 가칭 <strong>Jarame Therapeutic-01</strong>로 분리될 전망이다. 첫 제품은 발달장애 전체를 포괄하지 않고, 특정 연령·진단 조건·치료 목표·평가변수를 가진 단일 적응증으로 좁히는 방안이 검토된다. 사회적 의사소통, 기능적 요청표현, 문제행동, 일상생활 기능 가운데 현재 데이터의 완전성과 임상적 타당성이 가장 높은 영역을 우선 고르는 방식이다.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        센터 검색, 홈티 매칭, 일정, 보호자·치료사 소통, 일반 교육 콘텐츠는 기존 플랫폼에 남는다. 환자별 치료 콘텐츠 선택, 난이도 조정, 중재 순서, 반응에 따른 다음 치료 제안처럼 임상 결과에 직접 영향을 주는 기능은 별도 의료기기 소프트웨어로 관리한다. 이 분리의 이유는 <a href="/news/90" class="text-primary-600 underline">자람이 FDA 전략의 핵심은 &lsquo;분리&rsquo;</a>에서 설명한다.
+      </p>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">정식 신청 전 Q-Submission</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        자람이는 정식 신청에 앞서 FDA Q-Submission으로 사용목적, 대상 환자, 평가변수, 기존 RWE 활용 범위, 추가 임상시험 설계를 사전 협의할 계획이다. 적절한 선행 의료기기가 없으면 새로운 저·중위험 제품의 De Novo 경로가 유력하지만, 최종 경로는 선행제품 조사와 FDA 협의로 확정해야 한다. (U.S. Food and Drug Administration)
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        준비 과정은 임상효과만이 아니다. 소프트웨어 개발 생명주기, 위험관리, Verification과 Validation, 사용성, 사이버보안, 변경관리, 불만처리, CAPA, 시판 후 감시까지 함께 구축한다. 2026년 2월 2일 발효된 FDA QMSR은 ISO 13485:2016을 참조 편입하므로, 개발과 운영 전 과정에 품질경영시스템을 적용해야 한다. (U.S. Food and Drug Administration)
+      </p>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">하나의 앱이 아니라 모듈을 쌓는 구조</h2>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        자람이의 FDA 전략은 단일 앱 허가에 그치지 않는다. AI디지털케어로그를 발달장애 RWD·RWE 기반시설로 유지하고, 그 위에 적응증별 디지털치료 모듈을 하나씩 올리는 구조다. 첫 모듈이 허가되면 이후 의사소통, 행동, 일상생활, 수면 등으로 확장하고, 시판 후에도 실제 사용 데이터로 장기 효과와 안전을 검증할 수 있다.
+      </p>
+      <div class="bg-amber-50 border-l-4 border-amber-500 p-5 mb-8 rounded-r-lg">
+        <p class="text-amber-900 text-sm leading-relaxed">
+          <strong>근거 경계:</strong> 이용자 수, 데이터 생산량, 개선 수치는 현재 회사 측 자료다. 연구 프로토콜 등록, 독립 통계검증, FDA 심사를 통해 규제 수준 근거로 전환해야 한다. 자람이는 진단·처방·치료를 대체하지 않으며, 본 글은 FDA 허가·인증 발표가 아니다.
+        </p>
+      </div>
+      <div class="bg-white border border-gray-200 rounded-xl p-6 mb-8">
+        <p class="font-semibold text-gray-900 mb-3">관련 콘텐츠</p>
+        <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+          <li><a href="/news/90" class="text-primary-600 underline">플랫폼은 열고 치료 모듈만 규제한다 (기술)</a></li>
+          <li><a href="/services/jarame" class="text-primary-600 underline">자람이 서비스</a></li>
+          <li><a href="https://jarame.or.kr" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">자람이 플랫폼</a></li>
+          <li><a href="/news/88" class="text-primary-600 underline">홈티 시장 확대</a></li>
+        </ul>
+      </div>
+      <p class="text-gray-600 text-sm border-t border-gray-200 pt-6 leading-relaxed">
+        ※ 본 글은 자람이 FDA 준비 계획을 드림에이아이랩 뉴스센터에 보도자료로 아카이브한 것입니다. 제품·수치의 현재 기준은 서비스 페이지와 IR을 따르며, 제3자 검증이나 FDA 결정을 의미하지 않습니다.
+      </p>
+    `,
+  },
+  {
+    id: 90,
+    title:
+      '플랫폼은 열고 치료 모듈만 규제한다…자람이 FDA 전략의 핵심은 ‘분리’',
+    excerpt:
+      '자람이는 플랫폼 전체를 의료기기로 만들지 않습니다. 치료결과에 직접 관여하는 기능만 분리해 FDA를 준비하고, AI디지털케어로그는 원천기록·RWE·치료엔진으로 계층화합니다.',
+    category: 'tech',
+    date: '2026-08-17',
+    image: '🧩',
+    featured: true,
+    author: '드림에이아이랩 기술팀',
+    authorUrl: 'https://dreamailab.com/services/jarame/',
+    ogImage: '/images/news/news-90-jarame-fda-separation-og.jpg',
+    ogImageAlt:
+      '자람이 FDA 분리 전략: 열린 플랫폼과 봉인된 치료 모듈이 경계벽으로 나뉜 개념도',
+    ogImageAltEn:
+      'Jarame FDA separation: an open care platform and a sealed therapeutic module divided by a clear boundary',
+    about: [
+      {
+        type: 'Organization',
+        id: 'https://jarame.or.kr/#organization',
+        name: '자람이',
+        alternateName: ['Jarame'],
+        url: 'https://jarame.or.kr/',
+        sameAs: ['https://dreamailab.com/services/jarame/'],
+      },
+      {
+        type: 'DefinedTerm',
+        id: 'https://dreamailab.com/technology/#ai-digital-care-log',
+        name: 'AI 디지털케어로그',
+        alternateName: ['AI Digital Care Log'],
+        url: 'https://dreamailab.com/technology/',
+      },
+    ],
+    mentions: [
+      {
+        type: 'SoftwareApplication',
+        name: 'Jarame Therapeutic',
+        url: 'https://jarame.or.kr/',
+        description: '치료결과에 직접 관여하는 기능을 모은 FDA 제출 후보 모듈',
+      },
+    ],
+    tags: [
+      '자람이',
+      'FDA',
+      'Multiple Function Device',
+      '의료기기 소프트웨어',
+      'SaMD',
+      '모듈화',
+      'PCCP',
+      'QMSR',
+      'AI 디지털케어로그',
+      'RWE',
+      '디지털치료제',
+      '기능 분리',
+    ],
+    faq: [
+      {
+        question: '왜 자람이 전체를 FDA 제품으로 신청하지 않나요?',
+        answer:
+          '자람이에는 기록, 매칭, 상담, 교육, 분석, 치료 추천이 함께 있습니다. 전부를 한 제품으로 내면 행정 기능의 작은 변경까지 의료기기 변경평가에 걸리고, 임상·사용성 검증 범위가 지나치게 커집니다.',
+      },
+      {
+        question: '여섯 개 계층은 무엇인가요?',
+        answer:
+          'Jarame Platform, AI Digital Care Log Core, Evidence, Jarame Clinical, Jarame Therapeutic, Quality & Safety입니다. FDA의 직접 대상은 다섯 번째 치료 모듈입니다.',
+      },
+      {
+        question: '메뉴만 나누면 분리가 되나요?',
+        answer:
+          '부족합니다. 제출 모듈은 소스코드, 데이터베이스, API, 권한, 배포, 형상관리, 알고리즘 버전, 감사로그까지 경계가 명확해야 합니다.',
+      },
+    ],
+    i18n: {
+      en: {
+        title:
+          'Keep the platform open, regulate only the therapy module: Jarame’s FDA strategy is separation',
+        excerpt:
+          'Jarame will not medical-device the whole platform. It isolates functions that directly affect treatment outcomes, and layers the AI Digital Care Log into source records, RWE, and a treatment engine.',
+        faq: [
+          {
+            question: 'Why not file the entire Jarame product?',
+            answer:
+              'Jarame combines records, matching, counseling, education, analysis, and treatment recommendations. Filing everything as one device would pull minor admin changes into device change control and explode the scope of trials and usability testing.',
+          },
+          {
+            question: 'What are the six layers?',
+            answer:
+              'Jarame Platform, AI Digital Care Log Core, Evidence, Jarame Clinical, Jarame Therapeutic, and Quality & Safety. The direct FDA subject is the fifth layer, the therapeutic module.',
+          },
+          {
+            question: 'Is renaming menus enough?',
+            answer:
+              'No. The filed module needs clear boundaries in source, database, APIs, permissions, deployment, configuration, algorithm version, and audit logs.',
+          },
+        ],
+        content: `
+      <p class="text-sm text-gray-500 mb-6">[Technology · 2026-08-17]</p>
+      <p class="text-xl font-semibold text-gray-800 mb-4 leading-relaxed">
+        Layer the AI Digital Care Log into source records, RWE, and a treatment engine. After authorization, expand by indication.
+      </p>
+      <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-4">
+        The core of Jarame&rsquo;s FDA preparation is not &ldquo;make the whole platform a device.&rdquo; It is <strong>independence of the treatment function</strong>. Matching, records, and education stay. Only functions that directly affect patient outcomes become separate device software.
+      </p>
+      <figure class="mb-10">
+        <img src="/images/news/news-90-jarame-fda-separation-og.jpg" alt="Jarame FDA separation: an open care platform and a sealed therapeutic module divided by a clear boundary" class="w-full rounded-xl object-cover" width="1200" height="630" loading="eager" decoding="async" />
+        <figcaption class="mt-3 text-sm text-gray-500 text-center">The platform stays open. The therapy module is bounded. Conceptual illustration.</figcaption>
+      </figure>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        Jarame is not a single digital-therapy app. It holds treatment records, guardian observation, therapist ratings, center operations, home-therapy matching, counseling, education, person-level analysis, treatment recommendations, and long-term collection. Filing all of that as one FDA product would let a small admin change touch device change evaluation, and would explode the user types and environments that trials and usability studies must cover.
+      </p>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Why FDA talks about multiple-function products</h2>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        When device and non-device functions live in one product, FDA may treat it as a Multiple Function Device Product. Even a non-device function can fall into safety and effectiveness review if it affects the device function&rsquo;s input data, code, memory, performance, or cybersecurity. FDA evaluates data dependence, shared resources, and risk propagation, and may expect modularization. (U.S. Food and Drug Administration)
+      </p>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Six layers</h2>
+      <figure class="mb-8">
+        <img src="/images/news/news-90-jarame-fda-six-layers.jpg" alt="Six Jarame FDA layers from open platform to sealed therapeutic module and quality and safety" class="w-full rounded-xl object-cover border border-gray-100" width="1200" height="630" loading="lazy" decoding="async" />
+        <figcaption class="mt-3 text-sm text-gray-500 text-center">The fifth layer is the first authorization candidate. Conceptual diagram.</figcaption>
+      </figure>
+      <ol class="list-decimal list-inside text-gray-700 space-y-4 mb-8 ml-2">
+        <li><strong>Jarame Platform:</strong> membership, center search, home-therapy matching, schedule, payment, counseling, communication, general education. Non-device services that do not diagnose or choose a person&rsquo;s treatment.</li>
+        <li><strong>AI Digital Care Log Core:</strong> source data from guardians, therapists, centers, and hospitals, plus identifiers, consent, access, origin, time, and change history. It proves when, by whom, and on which system version a record was made, rather than judging treatment effect by itself.</li>
+        <li><strong>AI Digital Care Log Evidence:</strong> turns source data into researchable RWD and then into RWE that can answer a regulatory question. Inclusion, baseline, exposure, concomitant therapy, missingness, follow-up, comparators, and endpoints live here.</li>
+        <li><strong>Jarame Clinical:</strong> shows clinicians change, risk signals, missing data, possible interventions, and grounds. The algorithm must show which information and criteria it used, and how uncertain it is&mdash;not a bare conclusion.</li>
+        <li><strong>Jarame Therapeutic:</strong> the direct FDA subject. Content choice, order, difficulty, frequency, and next intervention that engage outcomes. The first file should freeze one age, diagnosis, goal, and endpoint&mdash;not all developmental disability.</li>
+        <li><strong>Jarame Quality &amp; Safety:</strong> complaints, malfunctions, adverse events, CAPA, model drift, cybersecurity, and post-market safety and performance. Real-time collection can serve pre-market trials and post-market surveillance.</li>
+      </ol>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Separation must be technical, not cosmetic</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        Renaming menus is not enough. The filed module needs clear boundaries in source, database, APIs, permissions, deployment, configuration management, algorithm version, and audit logs. A platform fault must not change therapeutic calculation or output. If the two sides share data, the share range and error controls belong in risk-management documents.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        Model updates change too. The first authorized product would freeze the approved model, preprocessing, and protocol as the regulatory baseline. New data would be trained in a separate research environment, then released only after independent validation and risk review. FDA&rsquo;s Predetermined Change Control Plan (PCCP) lets a sponsor pre-define what performance to improve, with which data, and how to verify impact&mdash;important for a system that learns from use. (U.S. Food and Drug Administration)
+      </p>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Software documents become a traceability chain</h2>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        Requirements, design, risk controls, code, verification, validation, and clinical evidence must connect. FDA premarket software documentation typically covers description, risk management, requirements, architecture, testing, version history, and unresolved anomalies. (U.S. Food and Drug Administration)
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        The gain is clear. The platform can still ship quickly. The AI Digital Care Log stays a shared RWD/RWE base across conditions. The authorized module stays strict for that indication, then the family can grow to communication, behavior, daily living, and sleep. The competitive edge is not one therapy app. It is connecting state before treatment, the intervention, everyday response, and long-term outcome&mdash;and feeding that back into improvement and post-market watch. See also the <a href="/news/91" class="text-primary-600 underline">FDA entry preparation notice</a>.
+      </p>
+      <div class="bg-amber-50 border-l-4 border-amber-500 p-5 mb-8 rounded-r-lg">
+        <p class="text-amber-900 text-sm leading-relaxed">
+          <strong>Status:</strong> This is a preparation architecture, not FDA clearance or approval. Company-stated data volumes and improvement ranges are not regulatory-grade evidence until protocol, independent analysis, and review convert them.
+        </p>
+      </div>
+        `,
+      },
+    },
+    content: `
+      <p class="text-sm text-gray-500 mb-6">[기술 블로그 · 2026-08-17]</p>
+      <p class="text-xl font-semibold text-gray-800 mb-4 leading-relaxed">
+        AI디지털케어로그를 원천기록·RWE·치료엔진으로 계층화하고, 허가 이후 적응증별로 확장한다.
+      </p>
+      <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-4">
+        자람이가 FDA 진입을 준비하며 고른 핵심은 &lsquo;플랫폼 전체의 의료기기화&rsquo;가 아니라 <strong>치료 기능의 독립</strong>이다. 보호자·치료사·센터·병원·홈티를 잇는 기능은 유지하고, 치료결과에 직접 영향을 주는 기능만 별도 의료기기 소프트웨어로 분리한다.
+      </p>
+      <figure class="mb-10">
+        <img src="/images/news/news-90-jarame-fda-separation-og.jpg" alt="자람이 FDA 분리 전략: 열린 플랫폼과 봉인된 치료 모듈이 경계벽으로 나뉜 개념도" class="w-full rounded-xl object-cover" width="1200" height="630" loading="eager" decoding="async" />
+        <figcaption class="mt-3 text-sm text-gray-500 text-center">플랫폼은 열고, 치료 모듈은 경계를 둔다. 개념 일러스트.</figcaption>
+      </figure>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        이 구조가 필요한 이유는 자람이가 단순한 디지털치료 앱이 아니기 때문이다. 치료기록, 보호자 관찰, 치료사 평가, 센터 운영, 홈티 매칭, 상담, 교육, 환자별 분석, 치료 추천, 장기 데이터 수집이 한자리에 있다. 이를 모두 하나의 FDA 제품으로 내면 행정 기능의 사소한 변경까지 의료기기 변경평가에 걸릴 수 있고, 사용자 유형과 사용환경이 너무 넓어져 임상시험과 사용성 검증 범위도 급격히 커진다.
+      </p>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">한 제품 안의 의료·비의료 기능</h2>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        FDA는 의료기기 기능과 비의료 기능이 한 제품에 함께 있으면 이를 Multiple Function Device Product로 다룰 수 있다. 비의료 기능이라도 의료기기 기능의 입력데이터, 코드, 메모리, 성능, 사이버보안에 영향을 주면 안전성·유효성 심사 범위에 포함될 수 있다. FDA는 기능 간 데이터 의존성, 공유 자원, 위험 전파를 보고 모듈화와 분리를 안내한다. (U.S. Food and Drug Administration)
+      </p>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">여섯 개 계층으로 나눈다</h2>
+      <figure class="mb-8">
+        <img src="/images/news/news-90-jarame-fda-six-layers.jpg" alt="자람이 FDA 여섯 계층: 플랫폼, 케어로그 코어, 근거, 임상 지원, 치료 모듈, 품질·안전" class="w-full rounded-xl object-cover border border-gray-100" width="1200" height="630" loading="lazy" decoding="async" />
+        <figcaption class="mt-3 text-sm text-gray-500 text-center">다섯 번째 계층이 첫 허가 후보다. 개념도.</figcaption>
+      </figure>
+      <ol class="list-decimal list-inside text-gray-700 space-y-4 mb-8 ml-2">
+        <li><strong>Jarame Platform:</strong> 회원관리, 센터 검색, 홈티 매칭, 일정, 결제, 상담, 소통, 일반 교육. 질환을 진단하거나 환자별 치료방법을 결정하지 않는 비의료 서비스.</li>
+        <li><strong>AI Digital Care Log Core:</strong> 보호자·치료사·센터·병원 원천 데이터와 식별자, 동의, 권한, 출처, 작성시점, 변경이력. 치료효과를 직접 판단하기보다 언제, 누가, 어떤 버전에서 만들었는지를 증명한다.</li>
+        <li><strong>AI Digital Care Log Evidence:</strong> 원천 데이터를 연구 가능한 RWD로 정제하고, 규제 질문에 답할 RWE로 바꾼다. 포함·제외, baseline, 노출량, 병행치료, 결측, 추적, 비교군, 임상평가변수를 관리한다.</li>
+        <li><strong>Jarame Clinical:</strong> 치료 전후 변화, 위험 신호, 데이터 부족, 중재 선택지와 근거를 전문가에게 보여준다. 결론만 내지 않고, 어떤 정보와 기준을 썼는지, 불확실성이 얼마인지를 확인할 수 있어야 한다.</li>
+        <li><strong>Jarame Therapeutic:</strong> FDA 허가의 직접 대상. 환자별 콘텐츠 선택, 순서, 난이도·빈도, 반응에 따른 다음 중재. 첫 허가는 발달장애 전체가 아니라 하나의 연령·진단·목표·평가변수를 가진 단일 제품으로 동결한다.</li>
+        <li><strong>Jarame Quality &amp; Safety:</strong> 불만, 오작동, 부작용, CAPA, 모델 드리프트, 사이버보안, 시판 후 안전·성능. 실시간 수집은 허가 전 임상뿐 아니라 허가 이후 장기 평가에도 쓰일 수 있다.</li>
+      </ol>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        자람이 측은 약 10만 명 규모 RWD와 일부 지표에서 30~65% 범위의 개선 신호를 확보했다고 밝힌다. 그러나 FDA 제출에서 중요한 것은 절대량이 아니라, 각 결과가 어떤 대상군·평가도구·기간·치료조건에서 나왔는지를 재현할 수 있는지다. 한 달 360만 건 이벤트가 있어도 이를 360만 개의 독립 임상표본으로 볼 수는 없다. 자세한 수치 해석은 <a href="/news/91" class="text-primary-600 underline">FDA 진입 준비 보도</a>를 따른다.
+      </p>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">분리는 메뉴 이름이 아니라 기술 경계다</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        기능 분리는 메뉴만 달리하는 방식으로는 부족하다. 제출 모듈은 소스코드, 데이터베이스, API, 사용자 권한, 배포, 형상관리, 알고리즘 버전, 감사로그까지 경계가 명확해야 한다. 비의료 플랫폼에 오류가 나도 치료 모듈의 계산과 출력이 영향을 받지 않아야 한다. 데이터를 공유한다면 공유 범위와 오류 통제를 위험관리 문서에 담아야 한다.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        AI 업데이트 방식도 달라진다. 첫 허가 제품은 승인 당시 모델, 전처리, 치료 프로토콜을 규제 기준 버전으로 고정하고, 새 데이터는 별도 연구환경에서 학습한 뒤 독립 검증과 위험평가를 거쳐 배포하는 구조가 유력하다. FDA는 AI 의료기기의 계획된 변경을 사전에 정의하는 PCCP를 운영한다. 어떤 성능을 개선할지, 어떤 데이터로 바꿀지, 변경 후 검증을 어떻게 할지를 미리 제시할 수 있다. 실제 사용데이터로 발전하는 자람이 같은 시스템에 중요한 제도 기반이다. (U.S. Food and Drug Administration)
+      </p>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">문서도 추적성 사슬이 된다</h2>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        요구사항, 설계, 위험통제, 코드, Verification, Validation, 임상근거가 하나의 추적성 체계로 연결돼야 한다. FDA는 의료기기 소프트웨어 사전시장 제출에서 소프트웨어 설명, 위험관리, 요구사항, 아키텍처, 시험결과, 버전이력, 미해결 이상현상 문서를 요구한다. (U.S. Food and Drug Administration)
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        이 전략의 이점은 분명하다. 플랫폼은 허가와 관계없이 서비스를 개선할 수 있고, AI디지털케어로그는 여러 질환에 쓸 공통 RWD·RWE 기반으로 남는다. 허가받은 치료 모듈은 해당 적응증에만 엄격히 통제하면서, 이후 사회적 의사소통, 문제행동, 일상생활, 수면으로 제품군을 확장할 수 있다. 자람이의 FDA 경쟁력은 하나의 치료 앱이 아니라, 치료 이전 상태·실제 중재·일상의 반응·장기 결과를 잇고 이를 다시 개선과 시판 후 감시로 되돌리는 구조에 있다.
+      </p>
+      <div class="bg-amber-50 border-l-4 border-amber-500 p-5 mb-8 rounded-r-lg">
+        <p class="text-amber-900 text-sm leading-relaxed">
+          <strong>상태:</strong> 준비 중인 아키텍처 설명이며 FDA 허가·인증 발표가 아니다. 회사 측 데이터 규모와 개선 범위는 프로토콜·독립 분석·심사를 거치기 전까지 규제 수준 근거가 아니다. 자람이는 진단·처방·치료를 대체하지 않는다.
+        </p>
+      </div>
+      <div class="bg-white border border-gray-200 rounded-xl p-6 mb-8">
+        <p class="font-semibold text-gray-900 mb-3">관련 콘텐츠</p>
+        <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+          <li><a href="/news/91" class="text-primary-600 underline">FDA 진입 준비 본격화 (보도자료)</a></li>
+          <li><a href="/technology" class="text-primary-600 underline">AI디지털케어로그 기술 정본</a></li>
+          <li><a href="/services/jarame" class="text-primary-600 underline">자람이 서비스</a></li>
+        </ul>
+      </div>
+    `,
+  },
+  {
     id: 89,
     title:
       '노아AI AI 커스텀이란? 개인 투자자가 TradingView·Pine 전략을 코딩 없이 검증하고 운용하는 기술',

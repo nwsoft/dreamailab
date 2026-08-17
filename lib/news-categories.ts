@@ -77,6 +77,8 @@ const META_BY_ID = Object.fromEntries(
 /** 레거시·오분류 보정: 기사 ID → 표준 카테고리 */
 export const NEWS_ARTICLE_CATEGORY_BY_ID: Record<number, NewsCategoryId> = {
   // 2026 최신
+  91: 'press', // 자람이 FDA 진입 준비·10만 RWD
+  90: 'tech', // 자람이 FDA 분리 전략·치료 모듈만 규제
   89: 'tech', // 노아AI AI 커스텀·개인 투자자 전략 운영 계층
   88: 'press', // 자람이 이용자 35만·홈티 시장 확대
   87: 'press', // 노아AI 시장국면 판단·실거래 검증 전략마켓
