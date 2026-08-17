@@ -177,7 +177,7 @@ export const newsArticles: NewsArticle[] = [
     i18n: {
       en: {
         title:
-          'Senior & Life exceeds 70% home-care share and expands into nursing homes and hospitals',
+          'Senior & Life exceeds 70% home-care share: “de facto lead in care IT”',
         excerpt:
           'The platform now covers 10,000 home-care sites and 1,200 day-care centers, with 800,000 users. That is about 70% of Korea’s home long-term care agencies and more than 35% of day-care centers. Next is a life-course care OS spanning nursing homes and hospitals.',
         faq: [
