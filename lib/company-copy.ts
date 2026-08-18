@@ -8,7 +8,7 @@ export const COMPANY_TAGLINE =
 
 /** 히어로·짧은 부제 */
 export const COMPANY_HERO_LINE =
-  '기술의 힘으로 사회적 문제를 해결하고, 사람들의 삶의 질을 높입니다'
+  '드림에이아이랩은 사람과 현장의 기록을 연결하고, AI의 이해와 판단을 실제 행동과 더 나은 결과로 이어지는 시스템을 만듭니다'
 
 /** 메타 description용 (한 문장) */
 export const COMPANY_META_LINE =

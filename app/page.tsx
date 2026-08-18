@@ -259,14 +259,14 @@ export default function Home() {
               Dream AI Lab · Technology for people
             </div>
             <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-6 leading-tight">
-              누구나, 어디서나,<br className="hidden sm:block" /> 동등한 기회를 누리는 세상
+              삶의 맥락을 이해하는 AI,<br className="hidden sm:block" /> 더 나은 가능성을 현실로
             </h1>
             <p className="text-xl md:text-2xl font-semibold text-white/95 mb-4">{COMPANY_HERO_LINE}</p>
             <p className="text-lg text-white/90 max-w-3xl mx-auto leading-relaxed mb-6">
-              취약계층과 소외된 현장의 삶을 개선하려는 관심에서 시작해, 발달장애·돌봄·의료·교육처럼 가장 복잡하고 도움이 필요한 문제를 데이터로 이해하고 AI로 돕습니다.
+              발달장애·돌봄·의료·교육처럼 가장 복잡하고 도움이 필요한 문제에서 시작했지만, 우리의 목표는 특정 분야를 넘어 누구나 자신에게 필요한 기술과 기회를 누리는 미래입니다.
             </p>
             <div className="flex flex-wrap justify-center gap-2">
-              {['사회적 문제 해결', '사람을 향한 기술', '동등한 기회', '현장 중심 혁신'].map((tag) => (
+              {['삶의 맥락', 'AI 판단·실행', '실제 변화', '모두를 위한 기술'].map((tag) => (
                 <span key={tag} className="px-3 py-1 rounded-full text-sm bg-white/10 border border-white/20">
                   {tag}
                 </span>
