@@ -631,6 +631,55 @@ export default function Home() {
         </div>
       </section>
 
+      {/* 신규 소프트웨어 창작 프로젝트 — 6개 핵심 도메인과 구분 */}
+      <section className="py-12 lg:py-16 bg-white border-t border-slate-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-primary-100 text-primary-800 mb-3">
+              New Project · Vibe-coding
+            </div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">신규 소프트웨어 창작 프로젝트</h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">
+              케어·라이프스타일 도메인과는 구분되지만, 사람의 의도를 이해하고 복잡성을 시스템 안으로 흡수한다는 DAL의 기술 철학을 공유합니다.
+            </p>
+          </div>
+          <Link
+            href="/services/vibe-architect"
+            aria-label="DAL Vibe Architect 신규 프로젝트 상세 보기"
+            className="group grid gap-8 rounded-2xl border border-primary-100 bg-gradient-to-br from-blue-50 via-white to-indigo-50 p-8 transition-all hover:border-primary-300 hover:shadow-xl lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:p-10"
+          >
+            <div className="flex items-start gap-5 sm:gap-6">
+              <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-primary-700 text-xl font-bold tracking-wide text-white">
+                VA
+              </div>
+              <div>
+                <div className="flex flex-wrap items-center gap-2 mb-3">
+                  <h3 className="text-2xl font-bold text-gray-900 group-hover:text-primary-700">DAL Vibe Architect</h3>
+                  <span className="rounded-full bg-white px-3 py-1 text-xs font-bold text-primary-700 ring-1 ring-primary-200">
+                    설계 공개 · 개발 준비
+                  </span>
+                </div>
+                <p className="text-gray-700 leading-relaxed">
+                  단순히 코드를 생성하는 도구가 아니라, 비개발자의 아이디어를 한국의 운영환경과 접근성 기준에 맞는 실제 소프트웨어로 설계·검증·배포하도록 돕는 AI Software Architect 프로젝트입니다.
+                </p>
+              </div>
+            </div>
+            <div>
+              <div className="grid grid-cols-2 gap-3">
+                {['의도 → 아키텍처', '한국 운영환경', '접근성 기본값', '보안·QA·배포'].map((item) => (
+                  <span key={item} className="rounded-xl bg-white/90 px-4 py-3 text-center text-sm font-semibold text-slate-700 ring-1 ring-slate-200">
+                    {item}
+                  </span>
+                ))}
+              </div>
+              <span className="mt-5 inline-flex font-bold text-primary-700 group-hover:text-primary-800">
+                프로젝트 설계 보기 →
+              </span>
+            </div>
+          </Link>
+        </div>
+      </section>
+
       {/* Research · Future Vision — Pet AI & Robot Vision (상용 아님) */}
       <section className="py-12 lg:py-16 bg-white border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
