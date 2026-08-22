@@ -4,10 +4,12 @@ import { absoluteUrl, buildPageMetadata } from '../../../../lib/seo'
 
 export const metadata: Metadata = {
   ...buildPageMetadata({
-    title: 'DAL Vibe Architect – Korea-ready AI Software Architect Project',
+    title: 'DAL Vibe Architect | AI Software Creation Without a Learning Curve',
     description:
-      'A new Dream AI Lab project designed to turn non-developers’ intent into accessible, secure, testable and operable software for the Korean market.',
+      'Describe what you want in everyday language. DAL turns intent into architecture, software, verification, deployment and operations without requiring users to learn prompts or development tools.',
     path: '/en/services/vibe-architect',
+    ogTitle: 'Tell us what you want to build. DAL handles the complexity.',
+    ogDescription: 'A Korea-ready AI software creation service designed around human intent, safe defaults, accessible decisions and the full operating lifecycle.',
     ogImageAlt: 'DAL Vibe Architect software creation architecture',
   }),
   alternates: {
@@ -24,39 +26,43 @@ export default function EnVibeArchitectPage() {
   return (
     <EnLandingPage
       title="DAL Vibe Architect"
-      subtitle="New project · Architecture published · Not yet launched"
-      description="An AI Software Architect that translates human intent into requirements, architecture, security, accessibility, tests, deployment and operations—built for Korean workflows and for people usually excluded by developer-first tools."
+      subtitle="AI Software Creation Service · In development and preparing limited pilots"
+      description="Do not learn prompt formulas, development tools, databases, servers or deployment. Explain the problem in everyday language and DAL translates your intent into a service that can be designed, built, verified, deployed and operated."
       koPath="/services/vibe-architect"
       sections={[
         {
-          heading: 'Beyond the prompt-to-code frame',
-          body: 'AI code editors, agentic development tools, no-code and low-code builders all reduce parts of the creation barrier. DAL focuses on the larger gap: turning intent into an auditable architecture and managing it through verification, deployment, operations and learning.',
+          heading: 'If people must learn AI to use AI, the barrier has not disappeared',
+          body: 'DAL does not teach non-developers to speak like developers. Users describe their goal and workplace in ordinary language; the system prepares safe defaults and asks only the business decisions that materially change the result.',
         },
         {
-          heading: 'Three platform-intelligence candidates',
-          body: 'Architecture Guardian, Project Knowledge Graph and a Software Engineering Outcome Dataset are the three priority technical hypotheses. They are intended to protect change, preserve project reasoning and learn which architectures survive real operations; they are not presented as completed features.',
+          heading: 'From a one-line idea to a working service',
+          body: 'DAL connects intent discovery, product and system design, a clickable preview, implementation, security and accessibility checks, user approval, deployment, monitoring and ongoing change in one service. Users see understandable decisions and results instead of a chain of developer tools.',
+        },
+        {
+          heading: 'DAL carries the hidden complexity',
+          body: 'Technology selection, data models, authentication and permissions, privacy, testing, recovery, deployment and observability are handled inside the system by default. Code, Git, infrastructure and advanced policies are exposed only when a user explicitly wants them.',
+        },
+        {
+          heading: 'Architecture Guardian and project intelligence',
+          body: 'Architecture Guardian tracks the impact of every creation and change. A Project Knowledge Graph preserves requirements, dependencies and decisions, while an outcome data foundation is intended to learn what actually works in operation with appropriate rights and privacy controls.',
         },
         {
           heading: 'Korea-ready operations',
-          body: 'Korean identity and consent flows, local login, payment and messaging patterns, administrator operations, privacy controls and industry-specific workflows belong in the architecture—not as afterthoughts.',
+          body: 'This is more than a Korean-language interface. Local identity and consent flows, login, payment, messaging, administrator operations, privacy controls and industry-specific workflows belong in the architecture so users do not have to research and configure them alone.',
         },
         {
           heading: 'Disability inclusion by design',
-          body: 'The builder itself should work with keyboard, screen readers, voice, magnification and alternative input. Generated products should pass accessibility gates and real task testing with disabled people, not automation alone.',
+          body: 'Requiring people to learn a complicated interface can itself become an access barrier. The creation service should work with keyboard, screen readers, voice, magnification and alternative input, while generated products must pass accessibility gates and real task testing with disabled people.',
         },
         {
-          heading: 'Master Vision v1.0 and the next six steps',
-          body: 'Before feature development, the project will move through: market and failure-point analysis, MVP screens and user flows, Agent/Orchestrator/Architecture Guardian architecture, model and stack selection, a three-month roadmap, then the data flywheel and business model.',
-        },
-        {
-          heading: 'Current status',
-          body: 'As of 17 August 2026 Master Vision v1.0 is the product baseline and the project remains at architecture and co-design stage. There is no public builder, pricing or confirmed launch date. DAL Vibe Architect is a working name.',
+          heading: 'Service availability',
+          body: 'Public self-service signup and pricing are still being prepared. DAL is first validating the complete path from conversation to design, generation, verification, deployment and operations through co-design and limited real-world pilots before widening access.',
         },
       ]}
       links={[
-        { label: 'Full project page (KO)', href: '/services/vibe-architect' },
+        { label: 'Full service experience (KO)', href: '/services/vibe-architect' },
         { label: 'Service hub', href: '/en/services' },
-        { label: 'Contact', href: '/contact?service=vibe-architect&type=partnership' },
+        { label: 'Pilot inquiry', href: '/contact?service=vibe-architect&type=partnership' },
       ]}
     />
   )
