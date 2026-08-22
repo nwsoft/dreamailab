@@ -13,15 +13,15 @@ import {
 const projectName = 'DAL Vibe Architect'
 const canonicalPath = '/services/vibe-architect'
 const description =
-  '한 줄 아이디어를 쉬운 질문과 답변으로 구체화하고, 한국의 운영환경과 접근성 기준에 맞는 실제 소프트웨어로 설계·검증·배포하도록 돕는 AI Software Architect 신규 프로젝트입니다.'
+  '프롬프트 작성법이나 개발 도구를 배우지 않아도, 만들고 싶은 것을 말하면 AI가 의도를 이해해 설계·구현·검증·배포·운영까지 연결하는 한국형 AI 소프트웨어 제작 서비스입니다.'
 
 export const metadata: Metadata = {
   ...buildPageMetadata({
-    title: `${projectName} | 한국형 AI 소프트웨어 아키텍트 신규 프로젝트`,
+    title: `${projectName} | 배울 필요 없는 AI 소프트웨어 제작 서비스`,
     description,
     path: canonicalPath,
-    ogTitle: '코딩이 아니라, 운영 가능한 소프트웨어를 만듭니다',
-    ogDescription: '비개발자와 장애인도 아이디어를 안전한 실제 서비스로 구현하도록 돕는 드림에이아이랩의 신규 프로젝트',
+    ogTitle: '만들고 싶은 것만 말하세요. 나머지는 AI가 설계합니다',
+    ogDescription: '설정과 개발의 복잡성을 사용자에게 넘기지 않고 아이디어를 실제 운영 가능한 소프트웨어로 연결하는 DAL Vibe Architect',
     ogImageAlt: 'DAL Vibe Architect AI 소프트웨어 설계 흐름',
   }),
   alternates: {
@@ -34,13 +34,68 @@ export const metadata: Metadata = {
 }
 
 const architecture = [
-  { step: '01', name: 'Intent AI', desc: '아이디어·업무·사용자·성공 기준을 이해' },
-  { step: '02', name: 'Product Architect AI', desc: '역할·흐름·정책·운영 요구사항 설계' },
-  { step: '03', name: 'System Architect AI', desc: '데이터·권한·API·인프라 구조 설계' },
-  { step: '04', name: 'Safety & Compliance AI', desc: '보안·개인정보·접근성·한국 운영요건 점검' },
-  { step: '05', name: 'Build Agents', desc: '설계에 따라 UI·서버·데이터·연동 구현' },
-  { step: '06', name: 'QA & Deploy Agents', desc: '테스트·회귀검증·배포·복구 준비' },
-  { step: '07', name: 'Operations Loop', desc: '관측·유지보수·실사용 결과를 다음 개선에 환류' },
+  { step: '01', name: '말하기', desc: '만들고 싶은 것과 해결하려는 문제를 평소 말로 설명', engine: 'Intent AI' },
+  { step: '02', name: '필요한 것만 확인', desc: '결과가 달라지는 사업·현장 결정만 한 번에 하나씩 질문', engine: 'Guided Decision' },
+  { step: '03', name: '알아서 설계', desc: '화면·역할·데이터·권한·운영 규칙과 예외상황 자동 구성', engine: 'Product & System Architect' },
+  { step: '04', name: '미리보기', desc: '코드 대신 실제로 눌러볼 수 있는 서비스 화면과 흐름 제공', engine: 'Build Agents' },
+  { step: '05', name: '자동 검증', desc: '보안·개인정보·접근성·오류·변경 영향을 시스템이 검사', engine: 'Architecture Guardian' },
+  { step: '06', name: '확인 후 배포', desc: '사용자가 결과를 확인하면 도메인과 운영환경에 안전하게 배포', engine: 'QA & Deploy' },
+  { step: '07', name: '운영·개선', desc: '오류·성능·사용 결과를 관찰하고 검증된 수정으로 계속 관리', engine: 'Operations Loop' },
+] as const
+
+const noLearningPromises = [
+  {
+    title: '프롬프트를 배우지 않습니다',
+    body: '명령문 공식이나 개발자처럼 질문하는 방법을 익힐 필요가 없습니다. 평소 말로 목적과 현장을 설명하면 됩니다.',
+  },
+  {
+    title: '기술을 선택하지 않습니다',
+    body: '프레임워크·DB·API·클라우드·모델을 먼저 고르게 하지 않습니다. 서비스 목적과 운영조건에 맞춰 시스템이 기본안을 만듭니다.',
+  },
+  {
+    title: '설정을 떠안지 않습니다',
+    body: '수십 개 옵션과 관리자 설정을 처음부터 노출하지 않습니다. 꼭 필요한 외부 계약·본인 확인·승인만 이유와 함께 요청합니다.',
+  },
+  {
+    title: '완료 여부를 판단하지 않습니다',
+    body: 'AI의 “완료했습니다”를 믿으라고 하지 않습니다. 빌드·테스트·보안·접근성·회귀검증 결과로 완료 여부를 보여줍니다.',
+  },
+] as const
+
+const hiddenByDefault = [
+  ['기술 스택', '서비스 특성·비용·확장성에 맞춰 구성'],
+  ['데이터 구조', '사용자·업무·보유기간에 맞춰 모델링'],
+  ['인증과 권한', '역할별로 볼 수 있는 정보와 행동을 분리'],
+  ['보안·개인정보', '최소수집·암호화·동의·감사·삭제 기준 반영'],
+  ['테스트·복구', '정상·실패·예외·회귀 시나리오와 되돌리기 준비'],
+  ['배포·관측', '환경 분리·도메인·로그·알림·백업·상태 확인'],
+] as const
+
+const serviceCapabilities = [
+  {
+    title: '아이디어 대화',
+    body: '사용자의 말에서 목적·대상·업무·성공 기준을 이해하고, 모호한 부분만 쉬운 선택 질문으로 확인합니다.',
+  },
+  {
+    title: '제품 자동설계',
+    body: '사용자 역할, 화면, 업무 흐름, 운영자 기능, 예외상황과 포함·제외 범위를 읽을 수 있는 설계로 제시합니다.',
+  },
+  {
+    title: '전체 서비스 생성',
+    body: '화면만 그리는 데서 끝나지 않고 프론트엔드·서버·DB·API·인증·관리자·외부연동을 하나의 구조로 만듭니다.',
+  },
+  {
+    title: 'Architecture Guardian',
+    body: '모든 생성과 변경 전에 영향 범위를 확인하고, 구현 뒤 승인된 설계와 다시 비교해 다른 기능이 깨지는 것을 막습니다.',
+  },
+  {
+    title: '검증된 미리보기',
+    body: '빌드·기능·권한·보안·접근성·모바일·회귀검사를 통과한 결과를 실제처럼 눌러보고 승인할 수 있게 합니다.',
+  },
+  {
+    title: '배포와 지속관리',
+    body: '배포 이후에도 오류·성능·외부서비스 상태를 관찰하고, 수정 제안·검증·안전 패치·복구까지 같은 흐름에서 관리합니다.',
+  },
 ] as const
 
 const speechCenterQuestions = [
@@ -120,7 +175,7 @@ const platformIntelligence = [
   {
     name: 'Architecture Guardian',
     role: '변경 안전성',
-    body: '요구사항과 승인된 아키텍처를 기준으로 DB·API·권한·보안·접근성·회귀·복구 영향을 변경 전후에 추적합니다.',
+    body: '요구사항과 승인된 설계를 기준으로 DB·API·권한·보안·접근성·회귀·복구 영향을 모든 생성과 변경 전후에 추적합니다.',
   },
   {
     name: 'Project Knowledge Graph',
@@ -132,15 +187,6 @@ const platformIntelligence = [
     role: '운영 결과 학습',
     body: '어떤 의도에 어떤 구조를 선택했고 실제 운영에서 무엇이 실패·수정·생존했는지를 권리와 개인정보를 보호하며 학습하는 데이터 기반을 지향합니다.',
   },
-] as const
-
-const nextDesignSteps = [
-  ['01', '경쟁제품·실패지점 분석', 'AI 코드 에디터, 에이전트형 개발도구, 노코드·로우코드와 앱 빌더를 같은 평가축으로 비교'],
-  ['02', 'MVP 화면·사용자 흐름', '첫 사용자와 산업, 성공 과업, 승인·실패·복구 흐름을 화면 단위로 정의'],
-  ['03', '핵심 기술 아키텍처', 'Agent·Orchestrator·Architecture Guardian·Project Knowledge Graph의 상태와 책임 경계 설계'],
-  ['04', '모델·개발 스택', '역할별 모델, 평가, 비용·지연시간, 샌드박스, 저장·배포·관측 구조 결정'],
-  ['05', '3개월 개발 로드맵', '주차별 산출물, 성공지표, 중단 기준, 파일럿 범위와 책임 정의'],
-  ['06', '데이터·사업모델', 'Outcome Dataset의 권리·격리·동의, 과금단위, 산업별 진입과 장기 플라이휠 설계'],
 ] as const
 
 const koreanOperations = [
@@ -181,19 +227,13 @@ const inclusionPrinciples = [
   },
 ] as const
 
-const targetProjects = [
-  ['돌봄·재활·교육 현장', '예약·기록·동의·보호자 공유·기관 운영이 필요한 서비스'],
-  ['장애인 창작자·당사자 조직', '보조기술·의사소통·생활지원 아이디어를 당사자가 직접 구체화'],
-  ['소상공인·전문가', '한국형 결제·예약·회원·관리자까지 갖춘 운영 도구'],
-  ['공공·비영리·협회', '접근성·개인정보·권한·감사 가능성을 포함한 업무 서비스'],
-] as const
-
-const roadmap = [
-  ['Gate 1', '문제 발견·공동설계', '비개발자·장애 당사자·현장 운영자 인터뷰와 과업 정의'],
-  ['Gate 2', '아키텍처 프로토타입', 'Intent → Product → System Architect와 Architecture Guardian 검증'],
-  ['Gate 3', '한국 운영 기반', '인증·동의·결제·메시징·관리자·접근성 블루프린트 구축'],
-  ['Gate 4', '산업별 파일럿', '돌봄·교육 등 좁은 분야에서 실제 운영·복구·유지보수 검증'],
-  ['Gate 5', '측정 가능한 베타', '완료율·오류·접근성·운영 안정성 지표를 공개 범위에 맞춰 검증'],
+const serviceUseCases = [
+  ['예약·상담 서비스', '센터·학원·병원·전문가의 일정, 신청, 변경, 취소, 알림과 관리자 운영'],
+  ['회원·고객 업무', '가입, 권한, 문의, 문서, 알림, 통계와 반복되는 내부 업무를 하나의 서비스로 연결'],
+  ['판매·신청 서비스', '상품·프로그램·행사·입점·결제·정산이 필요한 한국형 운영 흐름'],
+  ['돌봄·교육·재활', '기록·동의·보호자 공유·기관 역할처럼 민감하고 복잡한 현장에 맞춘 서비스'],
+  ['장애인 창작자·당사자 조직', '보조기술·의사소통·생활지원 아이디어를 당사자의 언어로 직접 구체화'],
+  ['공공·비영리·협회', '접근성·개인정보·권한·감사 가능성을 기본으로 갖춘 신청·운영 서비스'],
 ] as const
 
 const faqs = [
@@ -205,7 +245,12 @@ const faqs = [
   {
     question: '지금 바로 사용할 수 있나요?',
     answer:
-      '아직 아닙니다. 2026년 8월 17일 기준 방향과 설계를 공개한 신규 프로젝트이며, 공개 빌더·요금제·출시일은 확정되지 않았습니다.',
+      '현재 공개 가입형 서비스는 준비 중입니다. 우선 비개발자·현장 운영자와 실제 과제를 공동설계하고 제한된 파일럿에서 생성·검증·배포·운영 전 과정을 확인한 뒤 공개 범위를 넓힐 계획입니다.',
+  },
+  {
+    question: '사용하려면 프롬프트나 개발 방법을 배워야 하나요?',
+    answer:
+      '배우지 않아도 되는 경험이 제품의 출발점입니다. 사용자는 만들고 싶은 것과 현장을 평소 말로 설명하면 됩니다. 기술 선택과 설정은 기본적으로 시스템이 처리하고, 결과가 달라지는 사업적 결정이나 외부 계약·본인 확인·최종 승인만 쉬운 말로 요청합니다.',
   },
   {
     question: '한국형이라는 것은 한국어 UI라는 뜻인가요?',
@@ -225,14 +270,14 @@ const faqs = [
   {
     question: '정말 한 줄만 입력하면 서비스가 바로 배포되나요?',
     answer:
-      '한 줄은 시작점입니다. DAL은 기술용어 대신 사업과 현장에 관한 쉬운 질문을 이어가고, 답변을 요구사항·권한·데이터·화면·운영 규칙으로 번역하는 경험을 목표로 합니다. 미리보기·테스트·사용자 승인과 필요한 계약·자격·법률 검토를 통과한 뒤에만 운영 배포로 넘어가도록 설계합니다.',
+      '한 줄은 시작점이지만 사용자가 개발을 배워야 한다는 뜻은 아닙니다. 시스템이 안전한 기본안을 만들고, 서비스 결과가 달라지는 최소한의 질문만 쉬운 선택지로 확인합니다. 미리보기·자동검증·사용자 승인과 필요한 계약·자격·법률 검토를 통과한 뒤 운영 배포로 넘어갑니다.',
   },
 ] as const
 
 export default function VibeArchitectPage() {
   const pageUrl = absoluteUrl(canonicalPath)
   const schemas = [
-    buildWebPageJsonLd({ name: `${projectName} 신규 프로젝트`, description, url: pageUrl }),
+    buildWebPageJsonLd({ name: `${projectName} AI 소프트웨어 제작 서비스`, description, url: pageUrl }),
     buildBreadcrumbJsonLd([
       { name: '홈', url: absoluteUrl('/') },
       { name: '서비스', url: absoluteUrl('/services') },
@@ -246,7 +291,7 @@ export default function VibeArchitectPage() {
       alternateName: ['DAL AI Software Architect', 'DAL 바이브 아키텍트'],
       description,
       url: pageUrl,
-      serviceType: 'AI software architecture and creation platform project',
+      serviceType: 'AI software architecture, creation, deployment, and operations service',
       areaServed: { '@type': 'Country', name: '대한민국' },
       provider: { '@id': 'https://dreamailab.com/#organization' },
       audience: [
@@ -278,69 +323,107 @@ export default function VibeArchitectPage() {
 
       <main>
         <CompanyPageHero
-          eyebrow={`${projectName} · New Project 2026`}
+          eyebrow={`${projectName} · AI Software Creation Service`}
           title={
             <>
-              아이디어를 운영 가능한
-              <span className="block">소프트웨어로 만드는 AI</span>
+              <span className="block sm:inline">배우지 않아도,</span>{' '}
+              <span className="block sm:inline">설정하지 않아도</span>
+              <span className="block">말하면 서비스가 됩니다</span>
             </>
           }
           description={
             <p>
-              드림에이아이랩이 설계하는 신규 바이브코딩·AI 앱 빌더 프로젝트입니다. 사용자의 의도를
-              요구사항·아키텍처·보안·접근성·테스트·배포·운영으로 연결해, 개발의 복잡성을 시스템 내부에서
-              처리하는 것을 목표로 합니다.
+              프롬프트 작성법, 개발 도구, 데이터베이스, 서버와 배포를 배우지 마세요. 만들고 싶은 것과 해결하려는
+              문제를 평소 말로 설명하면 DAL이 의도를 이해해 설계·구현·검증·배포·운영까지 연결합니다.
             </p>
           }
-          badges={['바이브코딩', 'AI 앱 빌더', '한국 운영환경', '접근성 우선']}
+          badges={['프롬프트 학습 없음', '설정 최소화', '검증·배포·운영', '한국형·접근성 우선']}
           status={
             <p>
-              현재 단계는 <strong>마스터 비전과 기술 구조 공개·개발 준비</strong>입니다. 공개 빌더와 출시
-              일정은 아직 확정되지 않았습니다.
+              현재 <strong>서비스 개발 및 제한 파일럿 준비 단계</strong>입니다. 공개 가입은 아직 열리지 않았으며,
+              실제 현장 과제를 함께 검증할 공동설계 파트너를 찾고 있습니다.
             </p>
           }
           actions={[
-            { label: '한 줄 요청부터 배포까지', href: '#scenario' },
+            { label: '서비스 이용 흐름', href: '#experience' },
             {
-              label: '공동설계·파일럿 문의',
+              label: '파일럿 참여 문의',
               href: '/contact?service=vibe-architect&type=partnership',
               variant: 'secondary',
             },
           ]}
         />
 
-        <section className="bg-white py-16 lg:py-20">
+        <section id="experience" className="scroll-mt-20 bg-white py-16 lg:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-4xl text-center">
-              <p className="text-sm font-bold uppercase tracking-wider text-primary-700">Category &amp; Positioning</p>
-              <h2 className="mt-3 text-3xl font-black text-slate-950 sm:text-4xl">바이브코딩 시장 안에서, 다른 문제를 풉니다</h2>
+              <p className="text-sm font-bold uppercase tracking-wider text-primary-700">Zero-learning experience</p>
+              <h2 className="mt-3 text-3xl font-black text-slate-950 sm:text-4xl">AI를 쓰기 위해 AI를 다시 배워야 한다면, 장벽은 사라진 것이 아닙니다</h2>
               <p className="mt-5 text-lg leading-relaxed text-slate-600">
-                AI 코드 에디터, 에이전트형 개발도구, 노코드·로우코드와 앱 빌더는 저마다 코드 생성과 제작 속도를 높이고 있습니다.
-                DAL 역시 바이브코딩·AI 앱 빌더 범주에 속합니다. 다만 특정 도구의 복제나 코드 생성 성능 정면대결보다
-                <strong className="text-slate-900"> “왜 사용자가 개발 전 과정을 알아야 실제 서비스를 만들 수 있는가”</strong>를 풉니다.
+                스마트폰 시대의 많은 서비스가 메뉴·인증·설정을 익숙한 사람에게 맞추면서 누군가에게는 새로운 장벽이 되었습니다.
+                AI 시대에 프롬프트 공식과 개발 절차를 다시 배우게 해서는 안 됩니다. DAL은 사용법을 가르치는 대신
+                <strong className="text-slate-900"> 사용자를 이해하고 복잡성을 시스템 안으로 가져갑니다.</strong>
               </p>
             </div>
-            <div className="mt-10 grid gap-5 md:grid-cols-2">
-              <div className="rounded-2xl border border-slate-200 bg-slate-50 p-7">
-                <p className="text-sm font-semibold text-slate-500">현재 시장의 공통 초점</p>
-                <p className="mt-3 text-2xl font-black text-slate-900">사람 → Prompt → AI → Code</p>
-                <p className="mt-4 leading-relaxed text-slate-600">코드가 빨리 나오지만, 숨은 요구사항과 운영 위험을 사용자가 알아차려야 할 수 있습니다.</p>
-              </div>
-              <div className="rounded-2xl border border-blue-200 bg-blue-50 p-7">
-                <p className="text-sm font-semibold text-primary-700">DAL의 차별화 초점</p>
-                <p className="mt-3 text-2xl font-black text-slate-950">의도 → 아키텍처 → 운영 → 학습</p>
-                <p className="mt-4 leading-relaxed text-slate-700">코드를 보여주는 것보다, 서비스가 왜 그렇게 설계되고 검증·배포·운영·개선되는지를 관리합니다.</p>
+            <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+              {noLearningPromises.map((item) => (
+                <article key={item.title} className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+                  <h3 className="text-lg font-black text-slate-950">{item.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-slate-600">{item.body}</p>
+                </article>
+              ))}
+            </div>
+
+            <div className="mt-12 overflow-hidden rounded-3xl border border-slate-200 bg-slate-950 shadow-xl">
+              <div className="grid lg:grid-cols-[0.8fr_1.2fr]">
+                <div className="p-7 text-white sm:p-9">
+                  <p className="text-xs font-black uppercase tracking-widest text-cyan-300">사용자에게 보이는 것은 세 가지뿐</p>
+                  <ol className="mt-6 space-y-5">
+                    {[
+                      ['01', '말하기', '“무엇을 만들고 싶다”고 평소 말로 설명합니다.'],
+                      ['02', '확인하기', '실제로 눌러볼 수 있는 결과와 중요한 선택만 확인합니다.'],
+                      ['03', '사용하기', '승인된 서비스를 배포하고 운영 상태를 한곳에서 봅니다.'],
+                    ].map(([step, title, body]) => (
+                      <li key={step} className="flex gap-4">
+                        <span className="text-sm font-black text-cyan-300">{step}</span>
+                        <div><h3 className="font-black">{title}</h3><p className="mt-1 text-sm leading-relaxed text-slate-300">{body}</p></div>
+                      </li>
+                    ))}
+                  </ol>
+                </div>
+                <div className="border-t border-slate-700 bg-white p-7 sm:p-9 lg:border-l lg:border-t-0">
+                  <p className="text-xs font-black uppercase tracking-widest text-primary-700">나머지는 DAL이 기본으로 처리</p>
+                  <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                    {hiddenByDefault.map(([title, body]) => (
+                      <div key={title} className="rounded-xl border border-slate-200 bg-slate-50 p-4">
+                        <h3 className="font-black text-slate-950">{title}</h3>
+                        <p className="mt-2 text-sm leading-relaxed text-slate-600">{body}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="mt-8 rounded-2xl border border-slate-200 bg-slate-50 p-6 text-left">
-              <p className="text-sm font-bold text-primary-700">예시: 언어치료센터 예약 서비스</p>
-              <p className="mt-2 leading-relaxed text-slate-700">
-                “대전에 있는 언어치료센터 예약 서비스를 만들고 싶어요.”라는 한 문장에서 시작합니다. 사용자는 개발용어가
-                아니라 센터 운영에 관한 질문에 답하고, 시스템은 이를 데이터 구조·권한·검증·운영 규칙으로 변환합니다.
-              </p>
-              <a href="#scenario" className="mt-4 inline-flex font-bold text-primary-700 underline decoration-primary-300 underline-offset-4">
-                전체 질문·설계·배포 시나리오 보기 →
-              </a>
+
+            <div className="mt-16">
+              <div className="mx-auto max-w-3xl text-center">
+                <p className="text-sm font-bold uppercase tracking-wider text-primary-700">What the service provides</p>
+                <h2 className="mt-3 text-3xl font-black text-slate-950">아이디어 입력부터 운영까지 한곳에서</h2>
+              </div>
+              <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+                {serviceCapabilities.map((item, index) => (
+                  <article key={item.title} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <span className="text-xs font-black tracking-widest text-primary-700">{String(index + 1).padStart(2, '0')}</span>
+                    <h3 className="mt-3 text-xl font-black text-slate-950">{item.title}</h3>
+                    <p className="mt-3 text-sm leading-relaxed text-slate-600">{item.body}</p>
+                  </article>
+                ))}
+              </div>
+              <div className="mt-8 text-center">
+                <a href="#scenario" className="inline-flex rounded-xl bg-primary-700 px-6 py-3 font-bold text-white transition hover:bg-primary-800">
+                  언어치료센터 예시로 전체 과정 보기 →
+                </a>
+              </div>
             </div>
           </div>
         </section>
@@ -352,7 +435,8 @@ export default function VibeArchitectPage() {
               <h2 className="mt-3 text-3xl font-black text-slate-950 sm:text-4xl">한 줄의 아이디어가 실제 서비스가 되는 과정</h2>
               <p className="mt-5 text-lg leading-relaxed text-slate-700">
                 아래는 <strong className="text-slate-950">언어치료센터 예약 서비스</strong>를 가정한 설명용 시나리오입니다.
-                DAL은 바로 코드를 쏟아내기보다, 사용자가 놓치기 쉬운 결정을 쉬운 질문으로 확인하고 승인된 답을 설계와 구현으로 연결합니다.
+                질문은 개발 지식을 시험하거나 설정을 떠넘기는 절차가 아닙니다. DAL이 안전한 기본안을 먼저 만들고,
+                서비스 결과가 달라지는 현장 결정만 쉬운 말로 확인합니다. 사용자는 언제든 “잘 모르겠어요”라고 답하고 추천안을 선택할 수 있습니다.
               </p>
             </div>
 
@@ -369,12 +453,12 @@ export default function VibeArchitectPage() {
               <div className="border-t border-slate-700 bg-slate-900 p-7 sm:p-9 lg:border-l lg:border-t-0">
                 <p className="text-xs font-black uppercase tracking-widest text-emerald-300">DAL의 첫 응답</p>
                 <p className="mt-5 text-lg font-bold leading-relaxed text-white">
-                  좋습니다. 코딩을 시작하기 전에 실제 센터에서 예약이 어떻게 운영되는지 몇 가지만 여쭤볼게요.
+                  좋습니다. 필요한 기술과 기본 구조는 제가 정할게요. 예약 결과가 달라지는 내용만 한 번씩 여쭤보겠습니다.
                 </p>
                 <ul className="mt-5 space-y-3 text-sm text-slate-300">
-                  <li className="flex gap-3"><span className="font-black text-emerald-300">01</span><span>기술용어 대신 한 번에 하나씩 질문합니다.</span></li>
-                  <li className="flex gap-3"><span className="font-black text-emerald-300">02</span><span>답변이 바뀌면 어떤 화면과 규칙이 달라지는지 설명합니다.</span></li>
-                  <li className="flex gap-3"><span className="font-black text-emerald-300">03</span><span>확정된 내용과 보류된 내용을 구분해 사용자의 승인을 받습니다.</span></li>
+                  <li className="flex gap-3"><span className="font-black text-emerald-300">01</span><span>일반적인 선택은 안전한 추천안으로 먼저 채웁니다.</span></li>
+                  <li className="flex gap-3"><span className="font-black text-emerald-300">02</span><span>결과가 달라지는 내용만 현장의 언어로 묻습니다.</span></li>
+                  <li className="flex gap-3"><span className="font-black text-emerald-300">03</span><span>모르는 질문은 추천안을 설명하고 대신 결정할 수 있습니다.</span></li>
                 </ul>
               </div>
             </div>
@@ -487,10 +571,11 @@ export default function VibeArchitectPage() {
         <section id="architecture" className="border-y border-slate-200 bg-slate-50 py-16 lg:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
-              <p className="text-sm font-bold uppercase tracking-wider text-primary-700">Architecture to execution</p>
-              <h2 className="mt-3 text-3xl font-black text-slate-950 sm:text-4xl">의도를 운영까지 연결하는 7개 계층</h2>
+              <p className="text-sm font-bold uppercase tracking-wider text-primary-700">One service, whole lifecycle</p>
+              <h2 className="mt-3 text-3xl font-black text-slate-950 sm:text-4xl">말한 순간부터 운영까지, 한곳에서 끝납니다</h2>
               <p className="mt-4 text-lg leading-relaxed text-slate-600">
-                코드를 곧바로 만들기 전에 목적과 책임 경계를 설계하고, 배포 뒤 결과까지 같은 루프 안에서 관리합니다.
+                사용자는 단계마다 새로운 도구를 배우거나 계정을 옮겨 다니지 않습니다. DAL이 필요한 순서를 내부에서 연결하고,
+                사용자는 이해할 수 있는 결과를 확인하고 승인합니다.
               </p>
             </div>
             <ol className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
@@ -499,6 +584,7 @@ export default function VibeArchitectPage() {
                   <span className="text-xs font-black tracking-widest text-primary-700">{item.step}</span>
                   <h3 className="mt-3 text-lg font-bold text-slate-950">{item.name}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-slate-600">{item.desc}</p>
+                  <p className="mt-4 text-xs font-semibold text-slate-400">DAL 내부 · {item.engine}</p>
                 </li>
               ))}
             </ol>
@@ -509,10 +595,10 @@ export default function VibeArchitectPage() {
           <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
             <div>
               <p className="text-sm font-bold uppercase tracking-wider text-rose-700">Architecture Guardian</p>
-              <h2 className="mt-3 text-3xl font-black text-slate-950">“전화번호 하나 추가” 뒤의 전체 영향을 봅니다</h2>
+              <h2 className="mt-3 text-3xl font-black text-slate-950">“전화번호 하나 추가해 주세요”라고만 말하면 됩니다</h2>
               <p className="mt-5 text-lg leading-relaxed text-slate-600">
-                초보자가 변경 범위를 몰라도 시스템은 스키마 → 마이그레이션 → 검증 → API → UI → 개인정보 → 테스트의 연결을 추적해야 합니다.
-                변경 전 영향 분석, 변경 후 회귀검증, 승인과 복구를 하나의 작업으로 묶는 것이 핵심입니다.
+                사용자가 스키마·API·개인정보 영향까지 알아야 할 이유는 없습니다. DAL은 요청 뒤에 연결된 데이터 변경, 화면, 권한,
+                보안과 테스트 범위를 대신 추적하고 변경 전 확인부터 검증·승인·복구까지 하나의 작업으로 묶습니다.
               </p>
             </div>
             <div className="grid gap-3 sm:grid-cols-2">
@@ -528,10 +614,10 @@ export default function VibeArchitectPage() {
         <section className="border-y border-slate-200 bg-slate-50 py-16 lg:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-4xl text-center">
-              <p className="text-sm font-bold uppercase tracking-wider text-primary-700">Platform intelligence candidates</p>
-              <h2 className="mt-3 text-3xl font-black text-slate-950 sm:text-4xl">단순 바이브코딩 도구를 넘어서는 세 가지 기술축</h2>
+              <p className="text-sm font-bold uppercase tracking-wider text-primary-700">Service intelligence</p>
+              <h2 className="mt-3 text-3xl font-black text-slate-950 sm:text-4xl">서비스를 지탱하는 세 가지 지능</h2>
               <p className="mt-4 text-lg leading-relaxed text-slate-700">
-                세 이름은 구현 완료 기능이 아니라, 독립적인 기술 플랫폼으로 발전하기 위해 우선 검증할 핵심 후보입니다.
+                사용자에게 기술 설정으로 보이지 않지만, 의도를 잃지 않고 안전하게 만들고 운영하기 위해 개발·파일럿에서 우선 검증하는 핵심 기반입니다.
               </p>
             </div>
             <div className="mt-10 grid gap-5 lg:grid-cols-3">
@@ -550,8 +636,8 @@ export default function VibeArchitectPage() {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-3xl text-center">
               <p className="text-sm font-bold uppercase tracking-wider text-primary-700">Built for Korea</p>
-              <h2 className="mt-3 text-3xl font-black text-slate-950 sm:text-4xl">한국어 번역이 아니라, 한국에서 운영되는 방법</h2>
-              <p className="mt-4 text-lg leading-relaxed text-slate-700">연동 이름을 나열하는 데서 끝나지 않고, 실제 사업 흐름과 책임을 아키텍처에 포함합니다.</p>
+              <h2 className="mt-3 text-3xl font-black text-slate-950 sm:text-4xl">한국어 UI가 아니라, 한국에서 바로 운영되는 구조</h2>
+              <p className="mt-4 text-lg leading-relaxed text-slate-700">사용자가 국내 운영 방식을 따로 조사해 설정하지 않도록, 실제 사업 흐름과 책임을 설계 단계부터 포함합니다.</p>
             </div>
             <div className="mt-10 grid gap-5 md:grid-cols-2">
               {koreanOperations.map((item) => (
@@ -571,8 +657,8 @@ export default function VibeArchitectPage() {
                 <p className="text-sm font-bold uppercase tracking-wider text-primary-700">Disability inclusion by design</p>
                 <h2 className="mt-3 text-3xl font-black text-slate-950 sm:text-4xl">장애인을 위한 별도 옵션이 아니라, 처음부터 포함하는 제작 환경</h2>
                 <p className="mt-5 text-lg leading-relaxed text-slate-600">
-                  생성형 AI 코딩 도구가 시각장애 개발자의 기존 장벽을 키우거나 새로운 장벽을 만들 수 있다는 연구가 있습니다.
-                  DAL은 제작 도구와 생성 결과, 두 층의 접근성을 함께 다룹니다.
+                  새로운 기술을 배우고 복잡한 화면에 적응하라고 요구하는 것 자체가 또 다른 접근 장벽이 될 수 있습니다.
+                  DAL은 제작 도구와 생성 결과 모두에서 쉬운 언어, 보조기술 호환, 최소한의 조작과 실제 당사자 검증을 함께 다룹니다.
                 </p>
                 <div className="mt-6 space-y-2 text-sm">
                   <a href="https://www.microsoft.com/en-us/research/publication/the-impact-of-generative-ai-coding-assistants-on-developers-who-are-visually-impaired/" target="_blank" rel="noopener noreferrer" className="block font-semibold text-primary-700 underline underline-offset-4">Microsoft Research · 시각장애 개발자와 AI 코딩 도구 연구</a>
@@ -593,33 +679,43 @@ export default function VibeArchitectPage() {
 
         <section className="bg-white py-16 lg:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="grid gap-12 lg:grid-cols-2">
-              <div>
-                <p className="text-sm font-bold uppercase tracking-wider text-indigo-700">Start narrow</p>
-                <h2 className="mt-3 text-3xl font-black text-slate-950">범용 도구를 표방하되, 특수 현장부터 증명합니다</h2>
-                <div className="mt-7 space-y-4">
-                  {targetProjects.map(([title, body]) => (
-                    <div key={title} className="rounded-2xl border border-slate-200 p-5">
-                      <h3 className="font-bold text-slate-950">{title}</h3>
-                      <p className="mt-1 text-sm leading-relaxed text-slate-600">{body}</p>
+            <div className="mx-auto max-w-4xl text-center">
+              <p className="text-sm font-bold uppercase tracking-wider text-indigo-700">What you can create</p>
+              <h2 className="mt-3 text-3xl font-black text-slate-950 sm:text-4xl">이런 서비스를 말로 시작할 수 있습니다</h2>
+              <p className="mt-4 text-lg leading-relaxed text-slate-700">
+                개발 용어가 아니라 해결하려는 현장 문제를 들려주세요. 복잡성이 큰 분야일수록 DAL이 대신 설계해야 할 이유가 분명해집니다.
+              </p>
+            </div>
+            <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+              {serviceUseCases.map(([title, body]) => (
+                <article key={title} className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+                  <h3 className="text-lg font-black text-slate-950">{title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-slate-600">{body}</p>
+                </article>
+              ))}
+            </div>
+
+            <div className="mt-14 rounded-3xl bg-slate-950 p-7 text-white sm:p-10">
+              <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+                <div>
+                  <p className="text-sm font-bold uppercase tracking-wider text-cyan-300">Progressive disclosure</p>
+                  <h3 className="mt-3 text-2xl font-black sm:text-3xl">기본은 알아서, 필요한 사람에게만 더 보여줍니다</h3>
+                  <p className="mt-4 leading-relaxed text-slate-300">
+                    초보자에게 전문가 화면을 강요하지 않고, 전문가에게 통제권을 막지도 않습니다. 처음에는 가장 쉬운 흐름으로 시작하고 원하는 경우에만 세부 정보를 엽니다.
+                  </p>
+                </div>
+                <div className="grid gap-3 sm:grid-cols-3">
+                  {[
+                    ['기본 경험', '말하기 · 쉬운 질문 · 미리보기만으로 진행'],
+                    ['확인할 때', '결정 요약 · 변경 영향 · 검증 결과를 읽기 쉽게 공개'],
+                    ['원할 때만', '코드 · Git · 인프라 · 고급 정책을 선택적으로 개방'],
+                  ].map(([title, body]) => (
+                    <div key={title} className="rounded-2xl border border-white/15 bg-white/5 p-5">
+                      <h4 className="font-black text-white">{title}</h4>
+                      <p className="mt-2 text-sm leading-relaxed text-slate-300">{body}</p>
                     </div>
                   ))}
                 </div>
-              </div>
-              <div>
-                <p className="text-sm font-bold uppercase tracking-wider text-indigo-700">Delivery gates</p>
-                <h2 className="mt-3 text-3xl font-black text-slate-950">출시 선언보다 먼저 통과할 검증 단계</h2>
-                <ol className="mt-7 space-y-3">
-                  {roadmap.map(([gate, title, body]) => (
-                    <li key={gate} className="grid grid-cols-[72px_1fr] gap-4 rounded-2xl bg-slate-50 p-5">
-                      <span className="text-sm font-black text-indigo-700">{gate}</span>
-                      <div>
-                        <h3 className="font-bold text-slate-950">{title}</h3>
-                        <p className="mt-1 text-sm leading-relaxed text-slate-600">{body}</p>
-                      </div>
-                    </li>
-                  ))}
-                </ol>
               </div>
             </div>
           </div>
@@ -627,35 +723,35 @@ export default function VibeArchitectPage() {
 
         <section className="border-y border-slate-200 bg-slate-50 py-16">
           <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-            <div className="mb-10">
-              <p className="text-sm font-bold uppercase tracking-wider text-indigo-700">Master Vision v1.0 → Product definition</p>
-              <h2 className="mt-3 text-3xl font-black text-slate-950">기능 개발 전에 내려갈 다음 6단계</h2>
-              <p className="mt-4 leading-relaxed text-slate-600">
-                1차 마스터 비전을 기준선으로 고정했습니다. 바로 기능을 늘리기보다 시장의 실패지점과 첫 사용자 흐름을 먼저 확정한 뒤 기술과 사업 설계로 내려갑니다.
+            <div className="text-center">
+              <p className="text-sm font-bold uppercase tracking-wider text-indigo-700">Service availability</p>
+              <h2 className="mt-3 text-3xl font-black text-slate-950">공개 전, 실제 현장에서 끝까지 검증합니다</h2>
+              <p className="mt-4 text-lg leading-relaxed text-slate-600">
+                기능 목록만 보여주는 데서 멈추지 않고, 한 사람의 아이디어가 실제 배포와 운영까지 이어지는지를 현장 파트너와 확인합니다.
               </p>
-              <ol className="mt-7 grid gap-3 sm:grid-cols-2">
-                {nextDesignSteps.map(([step, title, body]) => (
-                  <li key={step} className="rounded-2xl border border-slate-200 bg-white p-5">
-                    <div className="flex items-start gap-4">
-                      <span className="text-sm font-black text-indigo-700">{step}</span>
-                      <div>
-                        <h3 className="font-bold text-slate-950">{title}</h3>
-                        <p className="mt-1 text-sm leading-relaxed text-slate-600">{body}</p>
-                      </div>
-                    </div>
-                  </li>
-                ))}
-              </ol>
             </div>
-            <div className="rounded-3xl border border-amber-200 bg-amber-50 p-7 sm:p-9">
+            <ol className="mt-9 grid gap-4 md:grid-cols-3">
+              {[
+                ['01', '과제 제안', '만들고 싶은 서비스, 사용 대상, 현재의 불편을 평소 말로 들려주세요.'],
+                ['02', '공동설계', 'DAL이 쉬운 질문과 기본안을 제시하고 실제 업무에 맞는 범위를 함께 확인합니다.'],
+                ['03', '제한 파일럿', '미리보기·검증·배포·운영 전 과정을 실제 과제로 확인한 뒤 공개 범위를 넓힙니다.'],
+              ].map(([step, title, body]) => (
+                <li key={step} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                  <span className="text-xs font-black tracking-widest text-indigo-700">{step}</span>
+                  <h3 className="mt-3 text-lg font-black text-slate-950">{title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-slate-600">{body}</p>
+                </li>
+              ))}
+            </ol>
+            <div className="mt-8 rounded-3xl border border-amber-200 bg-amber-50 p-7 sm:p-9">
               <div className="flex flex-wrap items-center gap-3">
-                <span className="rounded-full bg-amber-200 px-3 py-1 text-xs font-bold text-amber-950">CURRENT STATUS</span>
-                <span className="text-sm font-semibold text-amber-900">2026-08-17 기준</span>
+                <span className="rounded-full bg-amber-200 px-3 py-1 text-xs font-bold text-amber-950">SERVICE DEVELOPMENT</span>
+                <span className="text-sm font-semibold text-amber-900">공개 가입 준비 중 · 공동설계 및 제한 파일럿 단계</span>
               </div>
-              <h2 className="mt-4 text-2xl font-black text-slate-950">신규 프로젝트 · Master Vision v1.0 및 아키텍처 공개 단계</h2>
+              <h3 className="mt-4 text-2xl font-black text-slate-950">이 페이지는 DAL이 만들고 있는 실제 서비스의 범위와 이용 경험을 설명합니다</h3>
               <p className="mt-3 leading-relaxed text-slate-700">
-                현재 공개 빌더, 유료 요금제, 확정 출시일은 없습니다. <strong>DAL Vibe Architect는 프로젝트명</strong>이며 변경될 수 있습니다.
-                이 페이지는 현재 설계 원칙과 공동설계 범위를 설명하며, 기능 제공·법률 적합성·접근성 준수 성과를 미리 주장하지 않습니다.
+                현재 공개 가입형 빌더, 요금제와 확정 출시일은 준비 중입니다. 공동설계와 제한 파일럿에서는 생성·검증·배포·운영의 전체 흐름을 실제 과제로 검증하고,
+                분야별 법률·자격·외부 계약과 최종 운영 승인이 필요한 단계는 생략하지 않습니다.
               </p>
             </div>
           </div>
@@ -677,9 +773,9 @@ export default function VibeArchitectPage() {
       </main>
 
       <PageClosingSection
-        title="현장에서 먼저 풀어야 할 문제가 있나요?"
-        description="돌봄·교육·장애인 접근성·소상공인 운영 분야의 공동설계 파트너와 실제 과제를 찾고 있습니다."
-        primary={{ label: '공동설계·파일럿 문의', href: '/contact?service=vibe-architect&type=partnership' }}
+        title="배우지 않고 만들고 싶은 서비스가 있나요?"
+        description="아이디어와 현장의 불편을 평소 말로 들려주세요. DAL이 필요한 질문과 설계안을 준비해 공동설계·파일럿 가능성을 함께 확인합니다."
+        primary={{ label: '파일럿 참여 문의', href: '/contact?service=vibe-architect&type=partnership' }}
         secondary={[{ label: '서비스 생태계 보기', href: '/services' }]}
       />
       <Footer />
