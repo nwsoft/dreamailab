@@ -13,7 +13,7 @@ import {
 const projectName = 'DAL Vibe Architect'
 const canonicalPath = '/services/vibe-architect'
 const description =
-  '코딩을 몰라도 아이디어를 한국의 운영환경과 접근성 기준에 맞는 실제 소프트웨어로 설계·검증·배포할 수 있도록 돕는 AI Software Architect 신규 프로젝트입니다.'
+  '한 줄 아이디어를 쉬운 질문과 답변으로 구체화하고, 한국의 운영환경과 접근성 기준에 맞는 실제 소프트웨어로 설계·검증·배포하도록 돕는 AI Software Architect 신규 프로젝트입니다.'
 
 export const metadata: Metadata = {
   ...buildPageMetadata({
@@ -41,6 +41,70 @@ const architecture = [
   { step: '05', name: 'Build Agents', desc: '설계에 따라 UI·서버·데이터·연동 구현' },
   { step: '06', name: 'QA & Deploy Agents', desc: '테스트·회귀검증·배포·복구 준비' },
   { step: '07', name: 'Operations Loop', desc: '관측·유지보수·실사용 결과를 다음 개선에 환류' },
+] as const
+
+const speechCenterQuestions = [
+  {
+    step: '01',
+    topic: '예약 방식',
+    question: '센터가 예약 가능한 시간을 먼저 공개할까요, 보호자가 희망 시간을 요청할까요?',
+    answer: '치료사별 가능한 시간을 센터가 등록하고, 보호자가 빈 시간을 바로 예약하게 해주세요.',
+    translation: '치료사 일정·예약 가능 시간·예약 상태를 분리하고, 같은 시간의 중복 예약을 막는 규칙으로 바꿉니다.',
+  },
+  {
+    step: '02',
+    topic: '사용자와 권한',
+    question: '보호자·치료사·센터 관리자는 각각 무엇을 보고 바꿀 수 있어야 하나요?',
+    answer: '보호자는 자기 아이 예약만, 치료사는 자기 일정만, 원장은 센터 전체 일정과 운영 현황을 보게 해주세요.',
+    translation: '보호자·치료사·관리자 역할과 화면, 조회 범위, 수정 권한을 RBAC 정책으로 설계합니다.',
+  },
+  {
+    step: '03',
+    topic: '개인정보 범위',
+    question: '첫 버전에서 치료 기록이나 진단 정보도 저장해야 하나요?',
+    answer: '아니요. 먼저 아동 이름·보호자 연락처·예약 정보만 다루고 치료 기록은 제외해 주세요.',
+    translation: '최소수집 원칙, 보호자 동의, 보유·삭제 기준을 정의하고 치료·진단 데이터는 MVP 범위 밖으로 고정합니다.',
+  },
+  {
+    step: '04',
+    topic: '취소와 현장 운영',
+    question: '취소·노쇼·휴진·일정 변경은 어떤 규칙으로 처리할까요?',
+    answer: '24시간 전까지 직접 취소하고, 그 이후에는 센터가 승인해 주세요. 휴진과 변경은 보호자에게 알려주세요.',
+    translation: '취소 마감시간, 관리자 예외처리, 휴진 차단, 변경 이력과 알림 발송 조건을 운영 규칙으로 만듭니다.',
+  },
+  {
+    step: '05',
+    topic: '한국형 접점',
+    question: '로그인·알림·결제·관리자 업무는 첫 버전에서 어디까지 필요할까요?',
+    answer: '보호자는 휴대전화로 간편하게 확인하고 예약 알림을 받아야 해요. 결제는 제외하고 관리자는 목록을 내려받게 해주세요.',
+    translation: '휴대전화 인증, 문자·알림톡 연동 경계, 관리자 내보내기를 포함하고 결제는 후속 버전으로 분리합니다.',
+  },
+  {
+    step: '06',
+    topic: '성공 기준과 접근성',
+    question: '누구에게 가장 쉬워야 하고, 완성 여부는 무엇으로 판단할까요?',
+    answer: '보호자가 모바일에서 2분 안에 예약을 끝내고, 키보드나 스크린리더로도 전 과정을 이용할 수 있어야 해요.',
+    translation: '모바일 우선 예약 흐름, 과업 완료시간, 키보드 조작, 초점 이동, 이름·역할·상태와 오류 안내를 검증 기준으로 바꿉니다.',
+  },
+] as const
+
+const speechCenterBlueprint = [
+  ['사용자·권한', '보호자 · 치료사 · 센터 관리자 역할과 데이터 접근 범위'],
+  ['핵심 데이터', '센터 · 치료사 · 아동 · 보호자 · 가능시간 · 예약 · 동의 · 알림 · 변경이력'],
+  ['주요 화면', '센터 검색 · 치료사/시간 선택 · 예약 확인 · 내 예약 · 치료사 일정 · 관리자 운영'],
+  ['운영 규칙', '중복예약 방지 · 취소 마감 · 휴진 · 관리자 예외처리 · 알림 실패 재처리'],
+  ['안전·접근성', '최소수집 · 보호자 동의 · 권한검사 · 감사로그 · 키보드/스크린리더 검증'],
+  ['이번 버전 제외', '치료·진단 기록 · 온라인 결제 · 의료적 판단은 승인된 MVP 범위에 포함하지 않음'],
+] as const
+
+const speechCenterDelivery = [
+  ['01', '의도 요약·승인', '대화 결과를 한 장의 제품 요구사항으로 정리합니다. 사용자가 빠진 내용과 잘못 이해한 내용을 먼저 고칩니다.'],
+  ['02', '화면·업무 흐름 설계', '보호자 예약, 치료사 일정, 관리자 운영 흐름을 화면 단위로 보여주고 선택을 받습니다.'],
+  ['03', '시스템·안전 설계', '데이터 모델, API, 인증·권한, 개인정보, 알림, 백업·복구 구조와 위험을 함께 제시합니다.'],
+  ['04', '에이전트 구현', '승인된 설계를 기준으로 UI·서버·DB·연동 코드를 만들고 격리된 미리보기 환경에 올립니다.'],
+  ['05', 'Guardian 검증', '중복예약·권한 우회·알림 실패·모바일·접근성·회귀 테스트를 실행하고 실패 항목을 수정합니다.'],
+  ['06', '사용자 인수 확인', '실제 업무 시나리오로 센터 운영자가 확인합니다. 중요한 변경과 남은 위험은 사람이 승인합니다.'],
+  ['07', '배포·운영 루프', '도메인·운영환경을 연결해 배포하고 상태·오류·백업·복구를 관측하며 실제 결과를 다음 개선에 반영합니다.'],
 ] as const
 
 const guardianImpacts = [
@@ -158,6 +222,11 @@ const faqs = [
     answer:
       '무조건적인 안전을 약속하지 않습니다. Architecture Guardian, 자동 테스트, 변경 영향 분석, 배포 전 승인, 복구 경로와 분야별 전문가 검토를 통해 위험을 낮추는 구조를 설계합니다.',
   },
+  {
+    question: '정말 한 줄만 입력하면 서비스가 바로 배포되나요?',
+    answer:
+      '한 줄은 시작점입니다. DAL은 기술용어 대신 사업과 현장에 관한 쉬운 질문을 이어가고, 답변을 요구사항·권한·데이터·화면·운영 규칙으로 번역하는 경험을 목표로 합니다. 미리보기·테스트·사용자 승인과 필요한 계약·자격·법률 검토를 통과한 뒤에만 운영 배포로 넘어가도록 설계합니다.',
+  },
 ] as const
 
 export default function VibeArchitectPage() {
@@ -231,7 +300,7 @@ export default function VibeArchitectPage() {
             </p>
           }
           actions={[
-            { label: '설계 구조 보기', href: '#architecture' },
+            { label: '한 줄 요청부터 배포까지', href: '#scenario' },
             {
               label: '공동설계·파일럿 문의',
               href: '/contact?service=vibe-architect&type=partnership',
@@ -266,9 +335,151 @@ export default function VibeArchitectPage() {
             <div className="mt-8 rounded-2xl border border-slate-200 bg-slate-50 p-6 text-left">
               <p className="text-sm font-bold text-primary-700">예시: 언어치료센터 예약 서비스</p>
               <p className="mt-2 leading-relaxed text-slate-700">
-                사용자는 센터의 예약 방식·보호자 공개 범위·노쇼 처리처럼 현장의 결정을 설명합니다. 시스템은 이를
-                데이터 구조·권한·검증·운영 규칙으로 변환합니다.
+                “대전에 있는 언어치료센터 예약 서비스를 만들고 싶어요.”라는 한 문장에서 시작합니다. 사용자는 개발용어가
+                아니라 센터 운영에 관한 질문에 답하고, 시스템은 이를 데이터 구조·권한·검증·운영 규칙으로 변환합니다.
               </p>
+              <a href="#scenario" className="mt-4 inline-flex font-bold text-primary-700 underline decoration-primary-300 underline-offset-4">
+                전체 질문·설계·배포 시나리오 보기 →
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section id="scenario" className="scroll-mt-20 border-y border-blue-200 bg-blue-50/60 py-16 lg:py-24">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-4xl text-center">
+              <p className="text-sm font-bold uppercase tracking-wider text-primary-700">One line → Questions → Working service</p>
+              <h2 className="mt-3 text-3xl font-black text-slate-950 sm:text-4xl">한 줄의 아이디어가 실제 서비스가 되는 과정</h2>
+              <p className="mt-5 text-lg leading-relaxed text-slate-700">
+                아래는 <strong className="text-slate-950">언어치료센터 예약 서비스</strong>를 가정한 설명용 시나리오입니다.
+                DAL은 바로 코드를 쏟아내기보다, 사용자가 놓치기 쉬운 결정을 쉬운 질문으로 확인하고 승인된 답을 설계와 구현으로 연결합니다.
+              </p>
+            </div>
+
+            <div className="mt-10 grid overflow-hidden rounded-3xl border border-slate-800 bg-slate-950 shadow-xl lg:grid-cols-[1.05fr_0.95fr]">
+              <div className="p-7 sm:p-9">
+                <p className="text-xs font-black uppercase tracking-widest text-cyan-300">사용자의 첫 입력</p>
+                <blockquote className="mt-5 text-2xl font-black leading-relaxed text-white sm:text-3xl">
+                  “대전에 있는 언어치료센터 예약 서비스를 만들고 싶어요.”
+                </blockquote>
+                <p className="mt-5 text-sm leading-relaxed text-slate-300">
+                  사용자는 React, DB, API, 인증 같은 기술을 결정하지 않아도 됩니다. 먼저 알고 있는 현장과 사업의 모습을 설명합니다.
+                </p>
+              </div>
+              <div className="border-t border-slate-700 bg-slate-900 p-7 sm:p-9 lg:border-l lg:border-t-0">
+                <p className="text-xs font-black uppercase tracking-widest text-emerald-300">DAL의 첫 응답</p>
+                <p className="mt-5 text-lg font-bold leading-relaxed text-white">
+                  좋습니다. 코딩을 시작하기 전에 실제 센터에서 예약이 어떻게 운영되는지 몇 가지만 여쭤볼게요.
+                </p>
+                <ul className="mt-5 space-y-3 text-sm text-slate-300">
+                  <li className="flex gap-3"><span className="font-black text-emerald-300">01</span><span>기술용어 대신 한 번에 하나씩 질문합니다.</span></li>
+                  <li className="flex gap-3"><span className="font-black text-emerald-300">02</span><span>답변이 바뀌면 어떤 화면과 규칙이 달라지는지 설명합니다.</span></li>
+                  <li className="flex gap-3"><span className="font-black text-emerald-300">03</span><span>확정된 내용과 보류된 내용을 구분해 사용자의 승인을 받습니다.</span></li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="mt-14">
+              <div className="max-w-3xl">
+                <p className="text-sm font-bold uppercase tracking-wider text-primary-700">Step 1 · Guided conversation</p>
+                <h3 className="mt-2 text-2xl font-black text-slate-950 sm:text-3xl">AI가 묻고, 사용자는 현장의 언어로 답합니다</h3>
+                <p className="mt-3 leading-relaxed text-slate-600">각 답변은 화면 문구가 아니라 실제 시스템의 구조와 검증 기준으로 번역됩니다.</p>
+              </div>
+              <ol className="mt-8 space-y-5">
+                {speechCenterQuestions.map((item) => (
+                  <li key={item.step} className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+                    <div className="grid lg:grid-cols-[110px_1fr_1fr]">
+                      <div className="border-b border-slate-200 bg-slate-50 p-5 lg:border-b-0 lg:border-r">
+                        <span className="text-sm font-black text-primary-700">{item.step}</span>
+                        <p className="mt-2 text-sm font-bold text-slate-900">{item.topic}</p>
+                      </div>
+                      <div className="p-5 sm:p-6">
+                        <p className="text-xs font-black uppercase tracking-wider text-primary-700">DAL 질문</p>
+                        <p className="mt-2 font-bold leading-relaxed text-slate-950">{item.question}</p>
+                        <div className="mt-4 rounded-xl bg-blue-50 p-4">
+                          <p className="text-xs font-black text-blue-700">사용자 답변</p>
+                          <p className="mt-2 text-sm leading-relaxed text-slate-700">“{item.answer}”</p>
+                        </div>
+                      </div>
+                      <div className="border-t border-slate-200 bg-emerald-50/60 p-5 sm:p-6 lg:border-l lg:border-t-0">
+                        <p className="text-xs font-black uppercase tracking-wider text-emerald-700">시스템 내부 번역</p>
+                        <p className="mt-3 text-sm leading-relaxed text-slate-700">{item.translation}</p>
+                      </div>
+                    </div>
+                  </li>
+                ))}
+              </ol>
+            </div>
+
+            <div className="mt-16 rounded-3xl border border-slate-200 bg-white p-7 shadow-sm sm:p-9">
+              <div className="max-w-3xl">
+                <p className="text-sm font-bold uppercase tracking-wider text-indigo-700">Step 2 · Approved blueprint</p>
+                <h3 className="mt-2 text-2xl font-black text-slate-950 sm:text-3xl">대화가 끝나면, 만들기 전에 이 설계부터 확인합니다</h3>
+                <p className="mt-3 leading-relaxed text-slate-600">
+                  AI가 추측한 내용을 숨기지 않습니다. 포함할 범위와 제외할 범위, 권한과 운영 규칙을 사용자가 읽을 수 있는 말로 정리합니다.
+                </p>
+              </div>
+              <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+                {speechCenterBlueprint.map(([title, body], index) => (
+                  <div key={title} className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+                    <div className="flex items-center gap-3">
+                      <span className="flex h-8 w-8 items-center justify-center rounded-full bg-indigo-100 text-xs font-black text-indigo-700">
+                        {String(index + 1).padStart(2, '0')}
+                      </span>
+                      <h4 className="font-black text-slate-950">{title}</h4>
+                    </div>
+                    <p className="mt-3 text-sm leading-relaxed text-slate-600">{body}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-6 rounded-2xl border border-amber-200 bg-amber-50 p-5 text-sm leading-relaxed text-amber-950">
+                <strong>사용자 승인 지점:</strong> “이 설계로 미리보기를 만들어 주세요”라고 승인하기 전에는 구현 범위를 확정하지 않습니다.
+                틀린 가정은 여기서 수정하고, 결제나 치료 기록처럼 보류한 기능은 임의로 추가하지 않습니다.
+              </div>
+            </div>
+
+            <div className="mt-16">
+              <div className="max-w-3xl">
+                <p className="text-sm font-bold uppercase tracking-wider text-primary-700">Step 3 · Architecture to deployment</p>
+                <h3 className="mt-2 text-2xl font-black text-slate-950 sm:text-3xl">승인된 설계를 구현하고, 검증한 뒤, 운영으로 연결합니다</h3>
+              </div>
+              <ol className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+                {speechCenterDelivery.map(([step, title, body], index) => (
+                  <li key={step} className={`rounded-2xl border bg-white p-6 shadow-sm ${index === speechCenterDelivery.length - 1 ? 'border-emerald-300 md:col-span-2 xl:col-span-2' : 'border-slate-200'}`}>
+                    <span className="text-xs font-black tracking-widest text-primary-700">{step}</span>
+                    <h4 className="mt-3 text-lg font-black text-slate-950">{title}</h4>
+                    <p className="mt-3 text-sm leading-relaxed text-slate-600">{body}</p>
+                  </li>
+                ))}
+              </ol>
+            </div>
+
+            <div className="mt-10 grid gap-5 lg:grid-cols-2">
+              <div className="rounded-2xl border border-primary-200 bg-white p-7">
+                <p className="text-xs font-black uppercase tracking-wider text-primary-700">사용자가 보는 결과</p>
+                <h3 className="mt-3 text-xl font-black text-slate-950">예약 가능한 실제 서비스</h3>
+                <ul className="mt-4 space-y-2 text-sm leading-relaxed text-slate-700">
+                  <li>보호자용 모바일 예약·변경·취소 화면</li>
+                  <li>치료사용 일정 확인과 휴진 설정</li>
+                  <li>센터 관리자용 예약·사용자·운영 현황</li>
+                  <li>접근 가능한 오류 안내와 예약 알림</li>
+                </ul>
+              </div>
+              <div className="rounded-2xl border border-slate-700 bg-slate-950 p-7 text-white">
+                <p className="text-xs font-black uppercase tracking-wider text-cyan-300">시스템이 대신 관리하는 복잡성</p>
+                <h3 className="mt-3 text-xl font-black">코드 밖의 운영 기반</h3>
+                <ul className="mt-4 space-y-2 text-sm leading-relaxed text-slate-300">
+                  <li>DB·API·인증·권한과 개인정보 처리 경계</li>
+                  <li>중복예약·알림실패·예외처리와 감사로그</li>
+                  <li>자동 테스트·접근성 검사·보안 점검</li>
+                  <li>환경 분리·배포·관측·백업·복구 계획</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="mt-8 rounded-2xl border border-amber-300 bg-amber-50 p-6 text-sm leading-relaxed text-slate-700">
+              <strong className="text-slate-950">중요:</strong> 이 사례는 DAL Vibe Architect가 지향하는 사용자 경험을 설명한 설계 시나리오이며,
+              현재 사용할 수 있는 공개 빌더의 실행 화면이 아닙니다. 실제 배포에서는 도메인·외부 서비스 계약·자격이 필요한 업무·개인정보와 법률 검토·운영 책임자의 최종 승인을 생략하지 않습니다.
             </div>
           </div>
         </section>
