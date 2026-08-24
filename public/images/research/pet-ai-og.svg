@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#2e1065"/><stop offset="1" stop-color="#111827"/></linearGradient></defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1040" cy="90" r="330" fill="#a78bfa" opacity=".12"/><circle cx="920" cy="610" r="270" fill="#ec4899" opacity=".08"/>
+  <g transform="translate(825 120)" fill="none" stroke="#ddd6fe" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M81 154c-40-45-56-88-27-111 23-18 55 1 70 35 15-34 47-53 70-35 29 23 13 66-27 111"/>
+    <path d="M70 152c-18 26-26 58-18 87 12 44 46 74 72 74s60-30 72-74c8-29 0-61-18-87"/>
+    <circle cx="94" cy="195" r="7" fill="#c4b5fd" stroke="none"/><circle cx="154" cy="195" r="7" fill="#c4b5fd" stroke="none"/>
+    <path d="M112 224h24M124 224v18"/>
+    <circle cx="124" cy="178" r="118" stroke="#a78bfa" opacity=".35" stroke-width="2"/>
+  </g>
+  <text x="78" y="96" fill="#c4b5fd" font-family="Arial,sans-serif" font-size="22" font-weight="700" letter-spacing="3">DREAM AI LAB · RESEARCH</text>
+  <text x="78" y="184" fill="white" font-family="Arial,sans-serif" font-size="64" font-weight="800">Pet AI Digital Care Log</text>
+  <text x="78" y="246" fill="#ddd6fe" font-family="Arial,sans-serif" font-size="31" font-weight="600">Personalized Life Companion Intelligence</text>
+  <g font-family="Arial,sans-serif" font-size="21" font-weight="700">
+    <rect x="78" y="322" width="190" height="50" rx="25" fill="#5b21b6"/><text x="112" y="354" fill="#ede9fe">Animal RWD</text>
+    <rect x="282" y="322" width="240" height="50" rx="25" fill="#4c1d95"/><text x="315" y="354" fill="#ede9fe">Individual baseline</text>
+    <rect x="536" y="322" width="220" height="50" rx="25" fill="#831843"/><text x="571" y="354" fill="#fce7f3">Welfare first</text>
+  </g>
+  <text x="78" y="492" fill="#e2e8f0" font-family="Arial,sans-serif" font-size="27">Observe → Ask → Understand → Support → Review → Personalize</text>
+  <text x="78" y="558" fill="#8b8ca4" font-family="Arial,sans-serif" font-size="20">dreamailab.com/research/pet-ai</text>
+</svg>

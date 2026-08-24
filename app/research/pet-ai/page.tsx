@@ -3,1236 +3,145 @@ import Link from 'next/link'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 import CompanyPageHero from '../../../components/CompanyPageHero'
+import CompanyNarrativeNav from '../../../components/CompanyNarrativeNav'
+import ResearchLifeIntelligence from '../../../components/ResearchLifeIntelligence'
 import { MarketingIcon, type MarketingIconName } from '../../../components/MarketingIcon'
 import { absoluteUrl, buildBreadcrumbJsonLd, buildPageMetadata, SITE_URL } from '../../../lib/seo'
 
 const pagePath = '/research/pet-ai'
-const pageDescription =
-  'Pet AI Digital Care Log — 반려동물의 삶 전체(행동·감정·환경·생활)를 AI가 지속적으로 관찰·이해·학습하고 맞춤 판단을 내리는 Life Companion Intelligence 연구. 병원은 AI가 필요하다고 판단할 때만 연결되는 선택지 중 하나이며, 의료 플랫폼이 아닙니다. Research · Technology Development · Future Vision · Long-term Vision 단계이며 상용 서비스가 아닙니다.'
+const pageDescription = 'Pet AI Digital Care Log는 반려동물의 행동·생활·환경을 시간축 RWD로 연결하고, 개체별 기준선과 실제 결과를 학습해 보호자의 이해와 돌봄을 돕는 초개인화 Life Companion Intelligence 연구입니다.'
 
 export const metadata: Metadata = buildPageMetadata({
-  title: 'Pet AI Digital Care Log | Life Companion Intelligence | 드림에이아이랩',
+  title: 'Pet AI Digital Care Log | 반려동물 초개인화 Life Companion AI 연구 - 드림에이아이랩',
   description: pageDescription,
   path: pagePath,
-  ogTitle: 'Pet AI Digital Care Log — Life Companion Intelligence (Dream AI Lab)',
+  ogTitle: 'Pet AI Digital Care Log — Life Companion Intelligence',
+  ogImage: '/images/research/pet-ai-og.png',
+  ogImageAlt: 'Pet AI Digital Care Log — 반려동물의 하루와 평생을 이해하는 AI 연구',
   type: 'article',
 })
 
 const breadcrumbLd = buildBreadcrumbJsonLd([
   { name: '홈', url: `${SITE_URL}/` },
-  { name: 'Research', url: absoluteUrl('/research') },
+  { name: '미래 연구', url: absoluteUrl('/research') },
   { name: 'Pet AI Digital Care Log', url: absoluteUrl(pagePath) },
 ])
 
 const techLd = {
-  '@context': 'https://schema.org',
-  '@type': 'TechArticle',
-  headline: 'Pet AI Digital Care Log — Life Companion Intelligence Research',
-  description: pageDescription,
-  author: { '@type': 'Organization', name: 'Dream AI Lab' },
-  publisher: { '@type': 'Organization', name: 'Dream AI Lab', url: SITE_URL },
-  inLanguage: 'ko-KR',
-  dateModified: '2026-07-21',
-  about: {
-    '@type': 'Thing',
-    name: 'Pet AI Digital Care Log',
-    description:
-      '반려동물의 삶 전체를 관찰·이해·학습·개인화하는 AI Brain 연구 프로젝트 (의료 플랫폼·상용 서비스 아님)',
-  },
+  '@context': 'https://schema.org', '@type': 'TechArticle',
+  headline: 'Pet AI Digital Care Log — Personalized Life Companion Intelligence', description: pageDescription,
+  author: { '@type': 'Organization', name: 'Dream AI Lab' }, publisher: { '@type': 'Organization', name: 'Dream AI Lab', url: SITE_URL },
+  mainEntityOfPage: absoluteUrl(pagePath), inLanguage: 'ko-KR', datePublished: '2026-07-21', dateModified: '2026-08-24',
+  keywords: ['Pet AI', 'Digital Care Log', '반려동물 AI', '펫테크', 'RWD', '초개인화', 'Life Companion Intelligence'],
 }
 
-const faqItems: { q: string; a: string }[] = [
-  {
-    q: '동물병원 진료 앱인가요?',
-    a: '아닙니다. Pet AI Digital Care Log는 의료 플랫폼이 아니라, 반려동물의 하루 전체 — 행동 · 감정 · 환경 · 생활 습관을 AI가 지속적으로 관찰하고 이해하는 Life Companion Intelligence 연구입니다. 병원은 AI가 필요하다고 판단할 때만 연결되는 여러 선택지 중 하나일 뿐, 이 연구의 중심이 아닙니다.',
-  },
-  {
-    q: '이미 출시된 상용 서비스인가요?',
-    a: '아닙니다. Research · Technology Development · Future Vision · Long-term Vision 단계입니다. 가입 · 구매 · 출시 일정을 의미하지 않으며, 이 페이지는 연구 방향을 설명하기 위한 자료입니다.',
-  },
-  {
-    q: '자람이의 반려동물 버전인가요?',
-    a: '아닙니다. 자람이의 행동 분석 기술을 일부 재사용하지만, Pet AI Digital Care Log는 사람 → 동물 → 식물 → 로봇으로 확장되는 Universal AI Care Intelligence Platform의 한 축입니다. 특정 서비스를 다른 대상에 옮겨 붙인 것이 아니라, 반려동물의 생애 전체를 이해하는 별도의 AI Brain 연구입니다.',
-  },
-  {
-    q: '로봇이 반려동물을 돌봐주나요?',
-    a: '이 페이지의 범위가 아닙니다. 로봇 연동은 자람이 · 시니어앤라이프 · 토탈케어로그 · 에듀케어로그 · 베지케어 · Pet AI를 함께 아우르는 별도의 도메인 횡단 연구인 Robot Vision에서 다룹니다. 이 페이지는 로봇 없이도 성립하는 관찰 · 이해 · 추천 AI Brain 자체를 설명합니다.',
-  },
-  {
-    q: '병원 리포트 · 진료 연계는 전혀 없나요?',
-    a: '있습니다. 다만 병원은 전체 삶 중 AI가 이상 신호를 판단했을 때만 연결되는 작은 한 기능입니다. 평상시에는 행동 · 감정 · 환경 · 생활 추천이 중심이며, 병원 연동은 "필요 시에만" 작동하는 선택적 경로로 설계 방향을 검토합니다.',
-  },
-  {
-    q: '투자 · 비즈니스 제휴는 어떻게 논의하나요?',
-    a: 'R&D · 기술 협력 관점의 문의를 받고 있습니다. 페이지 하단 문의 채널을 통해 연구 단계, 재사용 가능한 기술 자산, Human → Animal → Plant → Robot 확장 로드맵을 함께 설명드립니다.',
-  },
+const faqItems = [
+  { q: 'Pet AI Digital Care Log는 동물병원 앱인가요?', a: '아닙니다. 반려동물의 일상 행동·생활·환경을 이해하고 보호자의 돌봄을 돕는 Life Companion Intelligence 연구입니다. 건강 이상 가능성이 있을 때 수의사 상담을 준비하는 경로는 포함할 수 있지만 진단·처방을 대신하지 않습니다.' },
+  { q: '이미 출시된 서비스인가요?', a: '아닙니다. 현재는 Research · Technology Development 단계이며 가입·판매·출시 일정을 의미하지 않습니다. 이 페이지는 연구 질문, 경험 구조, 검증 기준과 안전 원칙을 공개합니다.' },
+  { q: 'AI가 반려동물의 감정을 확정하나요?', a: '아닙니다. 영상·행동·환경 신호로 불안이나 스트레스 가능성 같은 가설과 신뢰도를 제시할 수 있지만 감정을 단정하지 않습니다. 보호자의 관찰과 필요 시 수의학적 평가로 확인합니다.' },
+  { q: '어떻게 개체별로 개인화하나요?', a: '품종 평균만 적용하지 않고 각 반려동물의 수면·식사·활동·행동·환경에 대한 평소 기준선을 먼저 만듭니다. 제안 이후 실제 반응을 기록해 다음 안내의 적합도를 조정합니다.' },
+  { q: '카메라 영상을 계속 저장하나요?', a: '연구·PoC 설계에서 목적별 동의, 최소 수집, 원본 보관 최소화, 보관기간, 철회와 삭제를 먼저 정합니다. 가능한 경우 기기 내 처리와 사건 중심 특징값을 우선 검토합니다.' },
+  { q: '로봇 연동도 포함하나요?', a: 'Pet AI는 로봇 없이도 성립하는 AI Brain 연구입니다. 급식·놀이·관찰 같은 물리적 행동 연동은 별도 Robot Vision에서 행동 권한과 안전 검증을 통과한 뒤 검토합니다.' },
+]
+const faqLd = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqItems.map((item) => ({ '@type': 'Question', name: item.q, acceptedAnswer: { '@type': 'Answer', text: item.a } })) }
+
+const capabilities: { title: string; body: string; icon: MarketingIconName }[] = [
+  { title: '나만의 기준선', body: '품종·나이 평균과 함께 이 아이의 평소 수면·식사·활동·행동 패턴을 만듭니다.', icon: 'user' },
+  { title: '일상의 번역', body: '짖음·숨기·핥기·산책 거부 같은 변화를 환경과 과거 기록 속에서 해석합니다.', icon: 'chat' },
+  { title: '필요한 다음 도움', body: '놀이·산책·휴식·환경 조정·전문가 상담 중 지금 확인할 선택지를 제시합니다.', icon: 'target' },
+  { title: '결과로 개인화', body: '보호자가 무엇을 선택했고 실제 반응이 어땠는지 기록해 다음 판단을 조정합니다.', icon: 'refresh' },
 ]
 
-const faqLd = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: faqItems.map((item) => ({
-    '@type': 'Question',
-    name: item.q,
-    acceptedAnswer: { '@type': 'Answer', text: item.a },
-  })),
-}
-
-const stages: { label: string; desc: string }[] = [
-  { label: 'Research', desc: '연구 과제 정의 · 가설 검증' },
-  { label: 'Technology Development', desc: '기존 AI Core 재학습 · 기술 개발 초기' },
-  { label: 'Future Vision', desc: '장기 방향 · 병원 연계 등 선택적 확장' },
-  { label: 'Long-term Vision', desc: 'Human → Animal → Plant → Robot 전체 확장' },
+const storySteps = [
+  { time: '07:30', title: '평소와 다른 아침', signal: '사료를 절반만 먹고 활동량이 개인 기준선보다 낮습니다.', question: '최근 수면, 실내 온도, 전날 산책과 다른 행동이 있었나요?', support: '보호자가 “밤에 두 번 깼다”고 확인하고 사건을 기록합니다.' },
+  { time: '12:10', title: '맥락을 다시 확인', signal: '오전 내내 휴식이 길지만 구토·호흡 이상 신호는 관찰되지 않았습니다.', question: '간식·놀이 반응과 특정 부위 핥기 여부를 확인할까요?', support: 'AI는 진단하지 않고 확인 순서와 기록 항목을 제시합니다.' },
+  { time: '18:30', title: '낮은 강도의 도움', signal: '날씨와 컨디션을 고려해 짧은 산책과 조용한 놀이를 후보로 제시합니다.', question: '보호자가 선택한 뒤 반응을 30분 후 기록할까요?', support: '산책 뒤 식사와 활동이 회복됐는지 다음 판단의 결과 데이터로 남깁니다.' },
+  { time: '다음 날', title: '복기와 기준선 업데이트', signal: '회복되면 일시 변화로 기록하고, 지속되거나 위험 신호가 추가되면 상담을 권합니다.', question: '수의사에게 보여줄 시간축 요약을 만들까요?', support: '보호자가 확인한 사실과 AI 가설을 구분한 리포트를 준비합니다.' },
 ]
 
-const tocSections: { id: string; label: string }[] = [
-  { id: 'philosophy', label: '철학' },
-  { id: 'care-log', label: '새로운 정의' },
-  { id: 'platform-vision', label: 'Platform Vision' },
-  { id: 'life-companion', label: 'Life Companion' },
-  { id: 'tech-architecture', label: '기술 아키텍처' },
-  { id: 'behavior-translation', label: '행동 번역' },
-  { id: 'life-management', label: '생활 관리 AI' },
-  { id: 'vision-ai', label: 'Vision AI' },
-  { id: 'emotion-ai', label: 'Emotion AI' },
-  { id: 'behavior-coaching', label: '행동 코칭' },
-  { id: 'environment-ai', label: 'Environment AI' },
-  { id: 'recommendation', label: '추천 엔진' },
-  { id: 'shopping-ai', label: 'Shopping Intelligence' },
-  { id: 'daily-report', label: 'AI 데일리 리포트' },
-  { id: 'digital-life', label: '디지털 라이프' },
-  { id: 'hospital', label: '병원 (일부)' },
-  { id: 'robot-vision', label: 'Robot Vision' },
-  { id: 'tech-reuse', label: '기술 재사용' },
-  { id: 'roadmap', label: '로드맵' },
-  { id: 'value', label: '가치 제안' },
-  { id: 'faq', label: 'FAQ' },
+const signalExamples = [
+  ['짖음 증가', '외부 자극·무료함·불편감·불안 가능성', '시간대, 소리, 보호자 부재, 활동량'],
+  ['숨기·접촉 회피', '스트레스·통증·환경 변화 가능성', '자세, 이동, 식사, 최근 사건'],
+  ['반복 핥기', '습관·피부 불편·긴장 완화 행동 가능성', '부위, 빈도, 피부 상태, 상황'],
+  ['산책 거부', '피로·날씨·두려움·신체 불편 가능성', '기온, 노면, 보행, 최근 활동'],
+  ['수면 증가', '계절·연령·활동 감소·컨디션 변화 가능성', '개인 기준선, 식사, 배변, 반응성'],
+  ['공격 반응', '공포·통증·자원 보호·과자극 가능성', '직전 상황, 거리, 대상, 회복 시간'],
 ]
 
-const notStatements: string[] = [
-  '동물병원 진료 · 예약 앱이 아닙니다',
-  '자람이를 반려동물에 옮겨 붙인 버전이 아닙니다',
-  '지금 판매 · 가입 가능한 상용 서비스가 아닙니다',
-  '병원 진료가 중심이 되는 헬스케어 플랫폼이 아닙니다',
+const gates = [
+  ['G1 · 데이터 품질', '관찰 기준, 라벨 근거, 기기 편향, 누락과 보호자 수정 이력을 확인합니다.'],
+  ['G2 · 행동 가설', '정답 감정 라벨 대신 여러 원인 후보와 신뢰도, 추가 확인 질문을 평가합니다.'],
+  ['G3 · 도움의 결과', '제안 수용률만이 아니라 동물의 스트레스·생활 변화·보호자 부담을 함께 봅니다.'],
+  ['G4 · 안전 전환', '위험 신호, 반복 악화, 불확실성 증가 때 사람·수의사에게 연결되는지 확인합니다.'],
 ]
 
-const isStatements: string[] = [
-  '반려동물의 하루 전체를 이해하는 AI Brain 연구입니다',
-  '행동 · 감정 · 환경 · 생활을 관찰 · 해석 · 추천하는 Life Companion Intelligence입니다',
-  '병원은 AI가 필요하다고 판단할 때만 연결되는 선택지 중 하나일 뿐입니다',
-  'Human → Animal → Plant → Robot으로 확장되는 Universal AI Care Intelligence Platform입니다',
-]
-
-const platformDomains: { label: string; desc: string; href: string }[] = [
-  { label: 'Human', desc: '사람 · 현재 AI Digital Care Log', href: '/services' },
-  { label: 'Animal', desc: '반려동물 · 이 페이지의 연구', href: '/research/pet-ai' },
-  { label: 'Plant', desc: '식물 · 웰니스 · 베지케어', href: '/services/veggie' },
-  { label: 'Robot', desc: '로봇 · 장기 비전', href: '/research/robot-vision' },
-]
-
-const lifeCompanionLoop: { n: number; title: string; body: string; icon: MarketingIconName }[] = [
-  {
-    n: 1,
-    title: '관찰 (Vision AI)',
-    body: '카메라와 보호자 입력으로 식사 · 수면 · 놀이 · 산책 같은 일상 신호를 지속적으로 모읍니다.',
-    icon: 'eye',
-  },
-  {
-    n: 2,
-    title: '이해 (Behavior · Emotion Translation)',
-    body: '모인 신호를 행동 · 감정 언어로 번역해 "왜 그런 행동을 했는지" 보호자가 이해할 수 있게 만듭니다.',
-    icon: 'brain',
-  },
-  {
-    n: 3,
-    title: '학습 (하루 ~ 평생 패턴 축적)',
-    body: '하루 단위 관찰이 평생 단위 패턴으로 쌓이며, 반려동물 개체마다 다른 기준선을 개인화합니다.',
-    icon: 'refresh',
-  },
-  {
-    n: 4,
-    title: '생활 추천 (산책 · 놀이 · 훈련 · 환경)',
-    body: '누적된 이해를 바탕으로 오늘 필요한 산책 · 놀이 · 훈련 · 환경 조정을 제안합니다.',
-    icon: 'target',
-  },
-  {
-    n: 5,
-    title: '추천 · 커머스 (Shopping AI)',
-    body: '생활 추천이 필요하면 사료 · 장난감 · 서비스로 자연스럽게 이어지는 비광고형 추천을 검토합니다.',
-    icon: 'heart',
-  },
-  {
-    n: 6,
-    title: '병원 (필요 시에만, 일부)',
-    body: 'AI가 이상 신호를 판단했을 때만 리포트를 공유하는 선택 경로입니다. 전체 루프의 일부일 뿐입니다.',
-    icon: 'stethoscope',
-  },
-]
-
-const techArchitectureLayers: string[] = [
-  'Vision AI',
-  'OCR',
-  'Behavior',
-  'Emotion',
-  'Environment',
-  'Care Log',
-  'Personal',
-  'Recommend',
-  'Prediction',
-  'Robot API',
-]
-
-const techReuseFromServices: { from: string; to: string; desc: string; icon: MarketingIconName }[] = [
-  {
-    from: '자람이',
-    to: 'Behavior / Coaching',
-    desc: '행동 분석 · 해석 · 중재 기술을 반려동물의 문제 행동 설명 · 교정 추천에 재적용합니다.',
-    icon: 'eye',
-  },
-  {
-    from: '시니어앤라이프',
-    to: 'Health Monitoring',
-    desc: '장기 추적 · 변화 감지 로직을 재사용해 필요할 때만 병원 리포트(일부)를 생성합니다.',
-    icon: 'trend',
-  },
-  {
-    from: '베지케어',
-    to: 'Environment AI',
-    desc: '온습도 · 공기 · 소음 · 날씨 분석 구조를 재사용해 산책 · 생활 환경을 추천합니다.',
-    icon: 'leaf',
-  },
-]
-
-const behaviorSignals: { signal: string; question: string; interpretation: string }[] = [
-  {
-    signal: '짖음',
-    question: '왜 계속 짖는가',
-    interpretation: '분리불안 · 외부 자극 · 경계 신호일 수 있어 환경과 과거 로그를 함께 살펴봅니다.',
-  },
-  {
-    signal: '숨기',
-    question: '왜 숨는가',
-    interpretation: '불안 · 스트레스 · 통증 회피 신호일 가능성을 함께 고려합니다.',
-  },
-  {
-    signal: '신발 물기',
-    question: '왜 신발을 무는가',
-    interpretation: '무료함 · 분리불안 · 스트레스 해소 행동일 수 있습니다.',
-  },
-  {
-    signal: '핥기',
-    question: '왜 계속 핥는가',
-    interpretation: '불안 완화 습관이거나 특정 부위의 불편함을 나타낼 수 있습니다.',
-  },
-  {
-    signal: '산책 거부',
-    question: '왜 산책을 거부하는가',
-    interpretation: '체력 저하 · 환경 변화 · 컨디션 변화의 신호일 수 있습니다.',
-  },
-  {
-    signal: '잠 증가',
-    question: '왜 잠이 늘었는가',
-    interpretation: '활동량 감소 · 컨디션 변화 · 계절 변화와 함께 해석합니다.',
-  },
-  {
-    signal: '공격성',
-    question: '왜 갑자기 공격적인가',
-    interpretation: '통증 · 스트레스 · 환경 변화 등 복합 신호로 원인 가설을 세웁니다.',
-  },
-]
-
-const lifeManagementMetrics: { title: string; desc: string; icon: MarketingIconName }[] = [
-  { title: '운동량', desc: '하루 활동량을 평소 기준선과 비교해 부족 · 과잉 여부를 판단합니다.', icon: 'bolt' },
-  { title: '기분', desc: '행동 패턴에서 기분 변화의 경향을 추정합니다.', icon: 'sparkle' },
-  { title: '스트레스', desc: '반복 행동 · 활동 변화로 스트레스 누적 여부를 추정합니다.', icon: 'alert' },
-]
-
-const lifeManagementActions: string[] = ['산책 추천', '놀이 추천', '휴식 추천', '환경 조정 추천', '활동 추천']
-
-const visionAiObservations: { label: string; icon: MarketingIconName }[] = [
-  { label: '식사', icon: 'bolt' },
-  { label: '물', icon: 'refresh' },
-  { label: '놀이', icon: 'sparkle' },
-  { label: '수면', icon: 'clock' },
-  { label: '배변', icon: 'document' },
-  { label: '움직임', icon: 'trend' },
-  { label: '산책', icon: 'pin' },
-  { label: '행동 변화', icon: 'alert' },
-]
-
-const emotionStates: { label: string; desc: string }[] = [
-  { label: '행복', desc: '편안하고 긍정적인 활동 패턴이 관찰될 때' },
-  { label: '흥분', desc: '급격한 움직임 증가와 반응성이 함께 나타날 때' },
-  { label: '불안', desc: '경계 행동과 위축된 자세가 함께 관찰될 때' },
-  { label: '스트레스', desc: '반복 행동 · 식욕 변화가 함께 나타날 때' },
-  { label: '외로움', desc: '혼자 있는 시간과 특정 행동 증가가 겹칠 때' },
-  { label: '분리불안', desc: '보호자 부재 시간에 짖음 · 파괴 행동이 집중될 때' },
-  { label: '우울', desc: '활동량 저하가 장기간 지속될 때' },
-  { label: '활동성', desc: '전반적인 움직임 총량과 리듬을 나타내는 기준 지표' },
-]
-
-const behaviorCoachingMethods: { title: string; desc: string; icon: MarketingIconName }[] = [
-  { title: '보상 (Reward)', desc: '원하는 행동이 관찰되면 보상 타이밍을 제안하는 방향을 연구합니다.', icon: 'trophy' },
-  { title: '놀이 (Play)', desc: '스트레스 · 무료함 신호에는 놀이 개입을 우선 추천합니다.', icon: 'sparkle' },
-  { title: '훈련 (Training)', desc: '반복되는 문제 행동에는 단계적 훈련 루틴을 제안하는 방향을 검토합니다.', icon: 'target' },
-  { title: '환경 개선 (Environment)', desc: '행동의 원인이 환경일 때는 공간 · 소음 · 배치 개선을 먼저 제안합니다.', icon: 'home' },
-  { title: '습관 형성 (Habits)', desc: '일관된 루틴이 행동 안정에 기여하도록 반복 가능한 습관을 설계합니다.', icon: 'refresh' },
-]
-
-const environmentFactors: { label: string; icon: MarketingIconName }[] = [
-  { label: '온도', icon: 'bolt' },
-  { label: '습도', icon: 'refresh' },
-  { label: '공기질', icon: 'leaf' },
-  { label: '소음', icon: 'alert' },
-  { label: '날씨', icon: 'globe' },
-  { label: '산책 환경', icon: 'pin' },
-  { label: '계절', icon: 'sprout' },
-]
-
-const recommendationCategories: string[] = [
-  '사료',
-  '간식',
-  '장난감',
-  '훈련',
-  '운동',
-  '산책',
-  '미용',
-  '보험',
-  '호텔',
-  '유치원',
-  '펫택시',
-  '용품',
-  '생활 서비스',
-]
-
-const shoppingSignalMap: { signal: string; need: string }[] = [
-  { signal: '운동 부족', need: '노즈워크 장난감 추천' },
-  { signal: '체중 증가', need: '사료 변경 제안' },
-  { signal: '스트레스 증가', need: '행동 완화 용품 추천' },
-]
-
-const digitalLifeHorizons: { label: string; desc: string; icon: MarketingIconName }[] = [
-  { label: '하루', desc: '식사 · 활동 · 배변 · 수면을 시간 단위로 기록합니다.', icon: 'clock' },
-  { label: '1주', desc: '컨디션 추세 · 감정 패턴 · 환경 상관을 요약합니다.', icon: 'trend' },
-  { label: '1개월', desc: '단기 변화 패턴과 생활 습관 변화를 비교합니다.', icon: 'chart' },
-  { label: '1년', desc: '계절 · 성장 · 생활 사이클을 누적해 봅니다.', icon: 'refresh' },
-  { label: '평생', desc: '생애 전주기 Life Companion Log로 이어집니다.', icon: 'heart' },
-]
-
-const reuseChains: { from: string; mid: string; note: string }[] = [
-  { from: '자람이', mid: 'Behavior Analysis', note: '행동 분석 · 해석 · 이상 탐지 · 코칭' },
-  { from: '시니어앤라이프', mid: 'Health Monitoring', note: '장기 추적 · 변화 감지 · 필요 시 리포트' },
-  { from: '베지케어', mid: 'Environment AI', note: '환경 데이터 분석 · 추천 엔진 구조' },
-]
-
-const roadmapAxis: { label: string; desc: string; icon: MarketingIconName; active?: boolean }[] = [
-  { label: 'Human', desc: '현재 Care Log — 사람 대상 AI Digital Care Log 운영 · 검증', icon: 'user', active: true },
-  { label: 'Animal', desc: 'Pet AI Research — 이 페이지가 다루는 반려동물 확장 연구', icon: 'heart' },
-  { label: 'Plant', desc: '베지케어 확장 — 환경 · 웰니스 AI Core 재사용', icon: 'leaf' },
-  { label: 'Robot', desc: 'AI Brain Vision — Robot Vision 연구로 이어지는 장기 방향', icon: 'robot' },
-]
-
-const valueColumns: { title: string; icon: MarketingIconName; items: string[] }[] = [
-  {
-    title: '보호자를 위한 가치',
-    icon: 'heart',
-    items: [
-      '기억이 아니라 기록으로 반려동물의 하루 전체를 이해합니다.',
-      '행동 · 감정 · 환경 신호를 이해하기 쉬운 언어로 번역받는 방향을 연구합니다.',
-      '병원은 필요할 때만 선택하는 경로이며, 매일 마주하는 것은 생활 추천입니다.',
-    ],
-  },
-  {
-    title: '비즈니스 파트너를 위한 가치 (펫테크 · 커머스 · 서비스)',
-    icon: 'handshake',
-    items: [
-      '검증된 AI Core를 재사용해 개발 비용 · 기간을 줄일 수 있습니다.',
-      '행동 · 환경 신호 기반의 비광고형 추천 구조를 펫테크 · 커머스 · 생활 서비스에 연동할 수 있습니다.',
-      '자람이 · 시니어앤라이프 · 베지케어와 같은 표준 위에서 확장됩니다.',
-    ],
-  },
-  {
-    title: '투자자 · R&D를 위한 가치',
-    icon: 'flask',
-    items: [
-      '하나의 AI Core가 사람 → 동물 → 식물 → 로봇으로 확장되는 재사용성을 보여줍니다.',
-      '병원 중심이 아닌 삶 전체 데이터 구조이기 때문에 확장 가능한 커머스 · 서비스 접점이 더 많습니다.',
-      '장기적으로 Robot Vision까지 이어지는 기술 로드맵을 제시합니다.',
-    ],
-  },
-]
-
-export default function PetAiResearchPage() {
+export default function PetAiPage() {
   return (
     <div className="company-page">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(techLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
       <Header />
-
       <CompanyPageHero
-        eyebrow="Dream AI Lab Research"
-        title="Pet AI Digital Care Log"
-        description={
-          <p>
-            Pet AI Digital Care Log는 반려동물의 행동 · 감정 · 환경 · 생활 전체를 관찰하고 이해하는 AI Brain
-            연구입니다. 병원은 그 중 하나의 선택지일 뿐, 중심이 아닙니다.
-          </p>
-        }
-        badges={stages.map((stage) => stage.label)}
-        status={
-          <p>
-            현재는 동물병원 중심 의료 서비스가 아니라, AI Digital Care Log를 반려동물의 삶 전체로 확장하는
-            연구·기술 개발 단계입니다.
-          </p>
-        }
+        eyebrow="Research · Life Companion Intelligence"
+        title={<>반려동물의 하루를 기록하고,<br className="hidden sm:block" /> 평생의 맥락을 이해합니다</>}
+        description={<p>Pet AI Digital Care Log는 행동·생활·환경을 시간축으로 연결하고, <strong>그 아이만의 기준선과 실제 반응</strong>을 학습해 보호자가 더 잘 이해하고 돌보도록 돕는 초개인화 AI 연구입니다.</p>}
+        badges={['Animal RWD', 'Individual baseline', 'Explainable hypothesis', 'Welfare first']}
+        status={<p><strong>현재 단계 · Research / Technology Development.</strong> 상용 서비스나 동물병원 진단 도구가 아니며, 연구 가설과 검증 구조를 공개합니다.</p>}
+        actions={[{ label: '하루 시나리오 보기', href: '#scenario' }, { label: 'R&D 협력 문의', href: '/contact?type=tech&service=pet-ai', variant: 'secondary' }]}
       />
+      <CompanyNarrativeNav current="/research" />
 
-      {/* 2. Philosophy banner */}
-      <section id="philosophy" className="scroll-mt-28 border-b border-slate-200 bg-slate-50 py-14">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <h2 className="text-2xl md:text-3xl font-bold text-slate-950 mb-3">의료 플랫폼이 아닙니다</h2>
-            <p className="text-slate-600 max-w-2xl mx-auto">
-              병원은 삶의 일부일 뿐입니다. 이 연구가 무엇이 아니고, 무엇인지를 먼저 분명히 합니다.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="rounded-2xl border border-red-200 bg-white p-6 shadow-sm md:p-7">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-red-50 text-red-600">
-                  <MarketingIcon name="alert" className="h-5 w-5" />
-                </div>
-                <h3 className="font-bold text-red-700">이것이 아닙니다</h3>
-              </div>
-              <ul className="space-y-2.5 text-sm text-slate-700">
-                {notStatements.map((item) => (
-                  <li key={item} className="flex gap-2">
-                    <span className="text-red-500 shrink-0">✕</span>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="rounded-2xl border border-emerald-200 bg-white p-6 shadow-sm md:p-7">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-50 text-emerald-600">
-                  <MarketingIcon name="sparkle" className="h-5 w-5" />
-                </div>
-                <h3 className="font-bold text-emerald-700">이것입니다</h3>
-              </div>
-              <ul className="space-y-2.5 text-sm text-slate-700">
-                {isStatements.map((item) => (
-                  <li key={item} className="flex gap-2">
-                    <span className="text-emerald-600 shrink-0">✓</span>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
+      <nav aria-label="Pet AI 페이지 목차" className="sticky top-16 z-20 border-b border-slate-200 bg-white/95 backdrop-blur">
+        <div className="mx-auto flex max-w-7xl gap-2 overflow-x-auto px-4 py-3 sm:px-6 lg:px-8">
+          {[['research-brief', '연구 정의'], ['scenario', '하루 시나리오'], ['life-intelligence', 'RWD·개인화'], ['architecture', '아키텍처'], ['signals', '행동 가설'], ['evidence', '검증'], ['governance', '동물복지'], ['faq', 'FAQ']].map(([id, label]) => <a key={id} href={`#${id}`} className="whitespace-nowrap rounded-full border border-slate-200 px-3 py-1.5 text-xs font-bold text-slate-600 hover:border-violet-300 hover:text-violet-700">{label}</a>)}
         </div>
-      </section>
+      </nav>
 
-      {/* 3. TOC pills */}
-      <section className="py-5 bg-white border-b border-gray-100 sticky top-16 z-30">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex gap-2 overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-            {tocSections.map((s) => (
-              <a
-                key={s.id}
-                href={`#${s.id}`}
-                className="shrink-0 whitespace-nowrap px-3 py-1.5 rounded-full text-xs font-medium bg-gray-100 text-gray-700 hover:bg-violet-100 hover:text-violet-800 transition-colors"
-              >
-                {s.label}
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
+      <section id="research-brief" className="company-section"><div className="company-container">
+        <div className="max-w-3xl"><p className="text-sm font-black uppercase tracking-wider text-violet-700">Research brief</p><h2 className="company-section-title mt-3">보호자가 “왜 그럴까”를 혼자 추측하지 않도록</h2><p className="company-section-lead">Pet AI는 감정을 단정하거나 질병을 진단하는 AI가 아닙니다. 흩어진 일상 신호를 맥락으로 연결하고, 가능한 이유와 다음 확인 순서를 설명하는 동반자형 AI를 연구합니다.</p></div>
+        <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">{capabilities.map((item) => <article key={item.title} className="company-card"><MarketingIcon name={item.icon} className="h-8 w-8 text-violet-700" /><h3 className="mt-5 text-lg font-black text-slate-950">{item.title}</h3><p className="mt-3 text-sm leading-6 text-slate-600">{item.body}</p></article>)}</div>
+        <div className="mt-8 rounded-2xl border border-violet-200 bg-violet-50 p-6 text-sm leading-7 text-slate-700"><strong className="text-violet-950">연구 범위:</strong> 생활 관찰·행동 변화·환경·보호자 기록·개체별 기준선·설명 가능한 돌봄 제안. <strong className="text-violet-950">현재 범위 밖:</strong> AI 단독 진단·처방, 감정의 확정, 검증 없는 자동 구매, 사람 승인 없는 로봇 행동.</div>
+      </div></section>
 
-      {/* Current stage */}
-      <section className="py-12 bg-white border-b border-gray-100">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-xl font-bold text-gray-900 mb-6 text-center">현재 단계</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-            {stages.map((s, i) => (
-              <div key={s.label} className="rounded-xl border border-violet-100 bg-violet-50/60 p-5 text-center">
-                <div className="text-xs font-bold text-violet-500 mb-2">0{i + 1}</div>
-                <h3 className="font-bold text-gray-900 mb-1 text-sm">{s.label}</h3>
-                <p className="text-xs text-gray-600">{s.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <section id="scenario" className="company-section bg-violet-50/50"><div className="company-container">
+        <div className="max-w-3xl"><p className="text-sm font-black uppercase tracking-wider text-violet-700">A day with Pet AI</p><h2 className="company-section-title mt-3">“오늘 밥을 덜 먹었어요”에서 시작하는 실제 사용 흐름</h2><p className="company-section-lead">한 번에 결론을 내리지 않고, 필요한 질문만 묻고 보호자가 확인한 사실을 쌓아 다음 도움까지 연결합니다.</p></div>
+        <div className="mt-10 space-y-4">{storySteps.map((step, index) => <article key={step.time} className="grid gap-5 rounded-2xl border border-violet-200 bg-white p-6 shadow-sm lg:grid-cols-[0.25fr_0.75fr_1fr_1fr]"><div><span className="rounded-full bg-violet-700 px-3 py-1 text-xs font-black text-white">{step.time}</span><p className="mt-3 text-xs font-bold text-violet-700">STEP {index + 1}</p></div><h3 className="text-lg font-black text-slate-950">{step.title}</h3><div><p className="text-xs font-black text-slate-500">AI가 보는 변화</p><p className="mt-2 text-sm leading-6 text-slate-600">{step.signal}</p></div><div><p className="text-xs font-black text-violet-700">질문 → 보호자 확인</p><p className="mt-2 text-sm font-semibold leading-6 text-slate-800">{step.question}</p><p className="mt-2 text-xs leading-5 text-slate-500">{step.support}</p></div></article>)}</div>
+      </div></section>
 
-      {/* 4. New Care Log definition */}
-      <section id="care-log" className="scroll-mt-28 py-14 bg-gray-50 border-b border-gray-100">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">AI Digital Care Log, 더 큰 개념</h2>
-          <div className="rounded-2xl border border-violet-200 bg-white p-7 md:p-10 shadow-sm">
-            <p className="text-lg md:text-xl font-semibold text-gray-900 leading-relaxed">
-              AI Digital Care Log = 사람, 동물, 식물, 그리고 미래의 로봇을 위해{' '}
-              <span className="text-violet-700">지속적으로 관찰</span>하고,{' '}
-              <span className="text-violet-700">기록</span>하고, 행동과 환경을{' '}
-              <span className="text-violet-700">이해 · 분석</span>하며,{' '}
-              <span className="text-violet-700">개인화된 판단</span>을 내리는 AI 지능형 플랫폼입니다.
-            </p>
-          </div>
-          <p className="text-gray-600 text-sm max-w-2xl mx-auto mt-6 leading-relaxed">
-            병원용 진료 기록만을 뜻하는 좁은 의미의 케어로그가 아닙니다. 반려동물이라면 하루의 산책 · 놀이 ·
-            식사 · 수면 · 기분까지 포함하는, 삶 전체를 담는 로그입니다. 병원 리포트는 이 큰 로그 안에서 필요할
-            때만 파생되는 결과물 중 하나입니다.
-          </p>
-        </div>
-      </section>
+      <ResearchLifeIntelligence mode="pet" />
 
-      {/* 5. Platform Vision Human -> Animal -> Plant -> Robot */}
-      <section id="platform-vision" className="scroll-mt-28 py-14 bg-white border-b border-gray-100">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-100 text-indigo-800 text-xs font-semibold mb-4">
-              <MarketingIcon name="globe" className="h-4 w-4" />
-              Universal AI Care Intelligence Platform
-            </div>
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
-              공통 학습 원리, 도메인별 재설계
-            </h2>
-            <p className="text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              관찰 · 기록 · 이해 · 학습 · 맞춤형 판단이라는 공통 질문을 사람·동물·식물·로봇의 서로 다른
-              환경과 책임 기준에 맞게 다시 설계합니다. 반려동물은 현재 제품과 구분해 검증하는 연구 축입니다.
-            </p>
-          </div>
-          <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3 mb-10 text-sm font-semibold">
-            {platformDomains.map((d, i) => (
-              <div key={d.label} className="flex items-center gap-2 md:gap-3">
-                <Link
-                  href={d.href}
-                  className={
-                    d.label === 'Animal'
-                      ? 'px-4 py-2 rounded-lg bg-violet-600 text-white shadow-sm hover:bg-violet-700 transition-colors'
-                      : 'px-4 py-2 rounded-lg bg-white border border-indigo-200 text-indigo-900 shadow-sm hover:border-indigo-400 transition-colors'
-                  }
-                >
-                  {d.label}
-                </Link>
-                {i < platformDomains.length - 1 && <span className="text-gray-400">→</span>}
-              </div>
-            ))}
-          </div>
-          <div className="rounded-2xl overflow-hidden border border-indigo-100 shadow-sm">
-            <picture>
-              <source media="(max-width: 768px)" srcSet="/images/research/one-ai-core-domains-mobile.svg" />
-              <img
-                src="/images/research/one-ai-core-domains.svg"
-                alt="공통 학습 원리를 사람 동물 식물 로봇 도메인별로 다시 설계하는 연구 방향"
-                className="w-full h-auto"
-                loading="lazy"
-                decoding="async"
-              />
-            </picture>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-6 text-center text-xs">
-            {platformDomains.map((d) => (
-              <Link
-                key={d.label}
-                href={d.href}
-                className="rounded-xl border border-gray-200 bg-gray-50 p-3 hover:border-indigo-200 hover:bg-indigo-50/50 transition-colors"
-              >
-                <div className="font-bold text-gray-900 mb-1">{d.label}</div>
-                <div className="text-gray-600">{d.desc}</div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+      <section id="architecture" className="company-section bg-slate-50"><div className="company-container">
+        <div className="max-w-3xl"><p className="company-eyebrow">Pet intelligence architecture</p><h2 className="company-section-title">영상 한 장이 아니라, 관찰과 확인과 결과의 폐쇄루프</h2></div>
+        <div className="mt-10 grid gap-4 lg:grid-cols-6">{[
+          ['01', 'Observe', '카메라·웨어러블·환경 센서·보호자 입력'], ['02', 'Normalize', '시간·대상·상황·데이터 품질을 표준화'], ['03', 'Baseline', '개체별 평소 범위와 장기 변화를 학습'], ['04', 'Hypothesize', '가능한 원인과 불확실성, 확인 질문을 생성'], ['05', 'Support', '놀이·산책·환경 조정·전문가 연결을 제안'], ['06', 'Review', '보호자 확인과 실제 반응으로 다음 판단을 조정'],
+        ].map(([n, title, body]) => <article key={n} className="rounded-2xl border border-slate-200 bg-white p-5"><p className="text-xs font-black text-violet-700">{n}</p><h3 className="mt-3 text-base font-black text-slate-950">{title}</h3><p className="mt-3 text-sm leading-6 text-slate-600">{body}</p></article>)}</div>
+        <div className="mt-8 grid gap-4 md:grid-cols-3">{[
+          ['기기 내 처리 우선', '가능한 경우 원본 영상 전체보다 사건·특징값을 기기에서 처리합니다.'], ['사실과 가설 분리', '관찰된 사실, 보호자가 확인한 사실, AI의 원인 후보를 구분해 표시합니다.'], ['전문가 전환', '위험·지속·불확실성이 기준을 넘으면 수의사 상담용 시간축 요약을 준비합니다.'],
+        ].map(([title, body]) => <article key={title} className="rounded-2xl border border-slate-200 bg-white p-5"><h3 className="font-black text-slate-950">{title}</h3><p className="mt-2 text-sm leading-6 text-slate-600">{body}</p></article>)}</div>
+      </div></section>
 
-      {/* 6. Life Companion overview */}
-      <section id="life-companion" className="scroll-mt-28 py-14 bg-violet-50/60 border-b border-violet-100">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">Pet AI = Life Companion Intelligence</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">
-              의료 플랫폼이 아니라, 반려의 삶 전체를 이해하는 AI Brain입니다. 병원은 그림 오른쪽 아래 점선
-              박스처럼 "일부" 기능으로만 존재합니다.
-            </p>
-          </div>
-          <div className="rounded-2xl overflow-hidden border border-violet-200 shadow-sm mb-10 bg-white">
-            <img
-              src="/images/research/pet-life-companion.svg"
-              alt="Pet AI Life Companion Intelligence — 관찰(Vision AI), 이해(Behavior/Emotion), 학습(패턴 축적/개인화), 생활 추천, Shopping AI, 병원은 점선으로 표시된 일부 기능"
-              className="w-full h-auto"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-          <div className="space-y-3 max-w-4xl mx-auto">
-            {lifeCompanionLoop.map((s) => (
-              <div
-                key={s.n}
-                className={`flex gap-4 items-start rounded-xl p-4 border ${
-                  s.n === 6
-                    ? 'bg-white/70 border-dashed border-gray-300'
-                    : 'bg-white border-gray-200'
-                }`}
-              >
-                <div className="flex shrink-0 items-center gap-2">
-                  <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-violet-50 border border-violet-200 text-violet-700">
-                    <MarketingIcon name={s.icon} className="h-5 w-5" />
-                  </span>
-                  <span className="flex h-9 w-9 items-center justify-center rounded-full bg-violet-600 text-white text-sm font-bold">
-                    {s.n}
-                  </span>
-                </div>
-                <div className="min-w-0 pt-1">
-                  <h3 className="font-bold text-gray-900 text-sm mb-1">{s.title}</h3>
-                  <p className="text-sm text-gray-700">{s.body}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <section id="signals" className="company-section"><div className="company-container">
+        <div className="max-w-3xl"><p className="text-sm font-black uppercase tracking-wider text-violet-700">Signals, not diagnoses</p><h2 className="company-section-title mt-3">행동을 감정 라벨 하나로 단정하지 않습니다</h2><p className="company-section-lead">같은 행동도 환경·건강·관계·과거 경험에 따라 의미가 달라집니다. AI는 복수 가설과 확인할 맥락을 제시합니다.</p></div>
+        <div className="mt-10 overflow-hidden rounded-2xl border border-slate-200 bg-white"><div className="hidden grid-cols-[0.7fr_1.1fr_1.2fr] bg-slate-950 px-6 py-4 text-xs font-black text-white md:grid"><span>관찰 신호</span><span>가능성 · 확정 아님</span><span>함께 확인할 맥락</span></div>{signalExamples.map(([signal, hypothesis, context]) => <div key={signal} className="grid gap-2 border-t border-slate-200 p-5 first:border-t-0 md:grid-cols-[0.7fr_1.1fr_1.2fr] md:px-6"><strong className="text-slate-950">{signal}</strong><span className="text-sm text-violet-800">{hypothesis}</span><span className="text-sm text-slate-600">{context}</span></div>)}</div>
+      </div></section>
 
-      {/* 7. Technology Architecture */}
-      <section id="tech-architecture" className="scroll-mt-28 py-14 bg-white border-b border-gray-100">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">Pet AI Technology Architecture</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Research stack — 상용 운영 스택이 아닙니다. Learning Engine과 Personal AI가 전체 계층을
-              가로지릅니다.
-            </p>
-          </div>
-          <div className="rounded-2xl overflow-hidden border border-violet-100 shadow-sm mb-6 bg-white">
-            <img
-              src="/images/research/pet-tech-architecture.svg"
-              alt="Pet AI Technology Architecture — Vision AI, OCR, Behavior, Emotion, Environment, Care Log, Personal, Recommend, Prediction, Robot API 계층과 Learning Engine + Personal AI"
-              className="w-full h-auto"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-          <div className="flex flex-wrap justify-center gap-2 mb-10">
-            {techArchitectureLayers.map((layer, i) => (
-              <span key={layer} className="inline-flex items-center gap-1 text-xs font-medium text-gray-600">
-                <span className="px-3 py-1 rounded-lg bg-white border border-gray-200">{layer}</span>
-                {i < techArchitectureLayers.length - 1 && <span className="text-gray-300">→</span>}
-              </span>
-            ))}
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {techReuseFromServices.map((item) => (
-              <div key={item.from} className="rounded-xl border border-gray-200 bg-gray-50 p-6 text-center">
-                <div className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-white border border-gray-200 text-violet-700">
-                  <MarketingIcon name={item.icon} className="h-5 w-5" />
-                </div>
-                <div className="font-bold text-primary-700 mb-1">{item.from}</div>
-                <div className="text-gray-400 my-1">↓</div>
-                <div className="text-sm font-semibold text-gray-700 mb-2">{item.to}</div>
-                <p className="text-xs text-gray-500 leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <section id="evidence" className="company-section bg-violet-50/50"><div className="company-container">
+        <div className="max-w-3xl"><p className="text-sm font-black uppercase tracking-wider text-violet-700">Research gates</p><h2 className="company-section-title mt-3">기능 수보다 데이터 품질과 동물복지를 먼저 검증합니다</h2><p className="company-section-lead">아래는 달성했다고 주장하는 수치가 아니라 연구와 파트너 PoC가 통과해야 할 게이트입니다.</p></div>
+        <div className="mt-10 grid gap-5 md:grid-cols-2">{gates.map(([title, body]) => <article key={title} className="rounded-2xl border border-violet-200 bg-white p-6"><h3 className="text-lg font-black text-violet-950">{title}</h3><p className="mt-3 text-sm leading-6 text-slate-600">{body}</p></article>)}</div>
+        <div className="mt-8 rounded-2xl bg-slate-950 p-6 text-sm leading-7 text-slate-300"><strong className="text-white">핵심 평가 항목:</strong> 보호자 수정 후 가설 품질, 위험 신호 누락·오탐, 추가 질문 수, 제안 후 행동·생활 변화, 보호자 부담, 전문가 전환 적시성, 데이터 철회·삭제 완료율. 연구 대상과 상황에 따라 사전 기준을 별도로 정합니다.</div>
+      </div></section>
 
-      {/* 8. Behavior Translation AI */}
-      <section id="behavior-translation" className="scroll-mt-28 py-14 bg-gray-50 border-b border-gray-100">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">Behavior Translation AI</h2>
-            <p className="text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              "왜?" 를 보호자 언어로 설명하는 엔진입니다. 자람이의 행동 분석 · 해석 기술을 반려동물 신호에
-              확장하는 연구입니다.
-            </p>
-          </div>
-          <div className="rounded-2xl overflow-hidden border border-violet-200 shadow-sm mb-8 bg-white">
-            <img
-              src="/images/research/pet-behavior-translation.svg"
-              alt="Behavior Translation AI — 짖음, 숨기, 신발 물기, 핥기, 산책 거부, 잠 증가, 공격성 같은 관찰된 행동이 AI 종합 해석을 거쳐 보호자 설명과 코칭으로 이어지는 흐름"
-              className="w-full h-auto"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-          <div className="bg-white rounded-2xl border border-violet-200 p-6 md:p-8">
-            <p className="text-sm font-semibold text-violet-800 mb-5 text-center">번역 예시 (연구 시나리오)</p>
-            <div className="grid sm:grid-cols-2 gap-4">
-              {behaviorSignals.map((b) => (
-                <div
-                  key={b.signal}
-                  className="rounded-xl border border-gray-100 bg-gray-50/70 p-4"
-                >
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="px-2 py-0.5 rounded-full bg-violet-100 text-violet-800 text-[11px] font-bold">
-                      {b.signal}
-                    </span>
-                  </div>
-                  <p className="text-sm text-gray-800 font-medium mb-1">{b.question}</p>
-                  <p className="text-xs text-gray-600 leading-relaxed">{b.interpretation}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      <section id="governance" className="company-section"><div className="company-container"><div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
+        <div><p className="company-eyebrow">Animal welfare · Data rights</p><h2 className="company-section-title">편리함보다 반려동물의 복지와 보호자의 통제권</h2><p className="company-section-lead">말할 수 없는 대상을 다루기 때문에 더 보수적으로 관찰하고, 확신보다 불확실성을 드러냅니다.</p></div>
+        <div className="grid gap-4 sm:grid-cols-2">{[
+          ['보호자 동의와 철회', '수집 목적·센서·보관기간·연구 이용을 나누고 언제든 철회·삭제할 수 있어야 합니다.'], ['동물에게 해가 없는 관찰', '훈련 데이터 확보를 위해 스트레스나 위험 상황을 의도적으로 만들지 않습니다.'], ['자동 구매 제한', '추천과 광고를 구분하고 건강·영양 제품은 검증되지 않은 효과를 주장하지 않습니다.'], ['사람의 최종 확인', 'AI 가설과 제안은 보호자가 수정·거부할 수 있으며 의료 판단은 수의사에게 남습니다.'], ['편향 점검', '품종·나이·털색·주거환경·카메라 조건에 따른 성능 차이를 따로 평가합니다.'], ['원본 최소화', '필요하지 않은 사생활 영상·음성의 외부 전송과 장기 보관을 최소화합니다.'],
+        ].map(([title, body]) => <article key={title} className="company-card"><h3 className="font-black text-slate-950">{title}</h3><p className="mt-2 text-sm leading-6 text-slate-600">{body}</p></article>)}</div>
+      </div></div></section>
 
-      {/* 9. Life Companion AI - daily life management */}
-      <section id="life-management" className="scroll-mt-28 py-14 bg-white border-b border-gray-100">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">Life Companion AI — 생활 관리</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">
-              운동량 · 기분 · 스트레스를 매일 관찰해, 오늘 필요한 생활 추천으로 바꾸는 연구입니다.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-10">
-            {lifeManagementMetrics.map((m) => (
-              <div key={m.title} className="rounded-xl border border-gray-200 bg-gray-50 p-5 text-center">
-                <div className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-white border border-gray-200 text-violet-700">
-                  <MarketingIcon name={m.icon} className="h-5 w-5" />
-                </div>
-                <h3 className="font-bold text-gray-900 text-sm mb-1">{m.title}</h3>
-                <p className="text-xs text-gray-600 leading-relaxed">{m.desc}</p>
-              </div>
-            ))}
-          </div>
-          <div className="max-w-3xl mx-auto text-center">
-            <p className="text-sm font-semibold text-gray-500 mb-3">→ 오늘의 생활 추천</p>
-            <div className="flex flex-wrap justify-center gap-3">
-              {lifeManagementActions.map((a) => (
-                <span
-                  key={a}
-                  className="px-4 py-2 rounded-lg bg-violet-50 border border-violet-200 text-sm font-medium text-violet-800"
-                >
-                  {a}
-                </span>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      <section id="faq" className="company-section bg-slate-50"><div className="company-container max-w-4xl"><p className="company-eyebrow">FAQ</p><h2 className="company-section-title">자주 묻는 질문</h2><div className="mt-8 divide-y divide-slate-200 rounded-2xl border border-slate-200 bg-white px-6">{faqItems.map((item) => <details key={item.q} className="group py-5"><summary className="cursor-pointer list-none font-black text-slate-950">{item.q}<span className="float-right text-violet-700 group-open:rotate-45">＋</span></summary><p className="mt-3 pr-6 text-sm leading-7 text-slate-600">{item.a}</p></details>)}</div></div></section>
 
-      {/* 10. Vision AI */}
-      <section id="vision-ai" className="scroll-mt-28 py-14 bg-gray-50 border-b border-gray-100">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-3 mb-4 justify-center">
-            <MarketingIcon name="camera" className="h-8 w-8 text-violet-700" />
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Vision AI</h2>
-          </div>
-          <p className="text-center text-gray-600 mb-10 max-w-2xl mx-auto">
-            카메라가 아래 여덟 가지 신호를 자동으로 관찰하면, AI가 자동 일지 · 자동 리포트로 정리하는 연구
-            방향입니다.
-          </p>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
-            {visionAiObservations.map((v) => (
-              <div key={v.label} className="rounded-xl border border-gray-200 bg-white p-4 text-center">
-                <div className="mx-auto mb-2 flex h-9 w-9 items-center justify-center rounded-lg bg-violet-50 text-violet-700">
-                  <MarketingIcon name={v.icon} className="h-4 w-4" />
-                </div>
-                <p className="text-sm font-semibold text-gray-800">{v.label}</p>
-              </div>
-            ))}
-          </div>
-          <div className="flex items-center justify-center gap-3 text-sm">
-            <span className="text-gray-400">관찰 8종</span>
-            <span className="text-violet-400">→</span>
-            <span className="px-4 py-2 rounded-lg bg-violet-600 text-white font-semibold">자동 일지 · 자동 리포트</span>
-          </div>
-        </div>
-      </section>
-
-      {/* 11. Emotion AI */}
-      <section id="emotion-ai" className="scroll-mt-28 py-14 bg-white border-b border-gray-100">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">Emotion AI</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">
-              행동 · 활동 · 환경 신호를 종합해 감정 상태의 경향을 추정하는 연구입니다. 진단이 아닌 경향 추정
-              입니다.
-            </p>
-          </div>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-            {emotionStates.map((e) => (
-              <div key={e.label} className="rounded-xl border border-indigo-100 bg-indigo-50/50 p-4 text-center">
-                <div className="text-sm font-bold text-indigo-900 mb-1">{e.label}</div>
-                <p className="text-[11px] text-gray-600 leading-relaxed">{e.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 12. Behavior Coaching */}
-      <section id="behavior-coaching" className="scroll-mt-28 py-14 bg-violet-50/60 border-b border-violet-100">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">Behavior Coaching</h2>
-            <p className="text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              자람이에서 검증한 행동 중재(Intervention) 구조를 반려동물로 확장합니다. 원인을 설명하는 것에서
-              멈추지 않고, 실행 가능한 교정 방향까지 함께 제안합니다.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4">
-            {behaviorCoachingMethods.map((m) => (
-              <div key={m.title} className="rounded-xl border border-gray-200 bg-white p-5">
-                <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-lg bg-violet-50 text-violet-700">
-                  <MarketingIcon name={m.icon} className="h-5 w-5" />
-                </div>
-                <h3 className="font-bold text-gray-900 text-sm mb-1">{m.title}</h3>
-                <p className="text-xs text-gray-600 leading-relaxed">{m.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 13. Environment AI */}
-      <section id="environment-ai" className="scroll-mt-28 py-14 bg-white border-b border-gray-100">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-semibold mb-4">
-              베지케어 확장
-            </div>
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">Environment AI</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">
-              베지케어의 환경 분석 구조를 반려동물의 생활 환경으로 확장해, 산책 · 실내 환경을 함께 살펴봅니다.
-            </p>
-          </div>
-          <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-3">
-            {environmentFactors.map((f) => (
-              <div key={f.label} className="rounded-xl border border-emerald-100 bg-emerald-50/50 p-4 text-center">
-                <div className="mx-auto mb-2 flex h-9 w-9 items-center justify-center rounded-lg bg-white border border-emerald-200 text-emerald-700">
-                  <MarketingIcon name={f.icon} className="h-4 w-4" />
-                </div>
-                <p className="text-xs font-semibold text-gray-800">{f.label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 14. Personal Recommendation Engine */}
-      <section id="recommendation" className="scroll-mt-28 py-14 bg-gray-50 border-b border-gray-100">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3 text-center">Personal Recommendation Engine</h2>
-          <p className="text-center text-gray-600 mb-8 max-w-2xl mx-auto">
-            누적 로그를 바탕으로 한 개인화 추천 가설입니다. 사료 · 용품부터 생활 서비스까지 넓은 범위를
-            연구합니다.
-          </p>
-          <div className="flex flex-wrap justify-center gap-3">
-            {recommendationCategories.map((item) => (
-              <span
-                key={item}
-                className="px-4 py-2 rounded-lg bg-white border border-gray-200 text-sm font-medium text-gray-700 shadow-sm"
-              >
-                {item}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 15. Shopping Intelligence */}
-      <section id="shopping-ai" className="scroll-mt-28 py-14 bg-white border-b border-gray-100">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">Shopping Intelligence</h2>
-            <p className="text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              광고가 아니라, 행동을 이해한 뒤의 필요 추천입니다. 신호 → AI 판단 → 추천의 흐름이며, 노출량이
-              아닌 필요에 기반합니다.
-            </p>
-          </div>
-          <div className="rounded-2xl overflow-hidden border border-violet-100 shadow-sm mb-8 bg-white">
-            <img
-              src="/images/research/pet-recommendation-engine.svg"
-              alt="Personal Recommendation / Shopping Intelligence — 운동 부족, 체중 증가, 스트레스 증가 같은 신호가 Care Log 기반 AI 판단을 거쳐 노즈워크 장난감, 사료 변경, 행동 완화 용품 등 비광고형 추천으로 이어지는 흐름"
-              className="w-full h-auto"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-          <div className="grid sm:grid-cols-3 gap-4 max-w-4xl mx-auto">
-            {shoppingSignalMap.map((s) => (
-              <div key={s.signal} className="rounded-xl border border-gray-200 bg-gray-50 p-5 text-center">
-                <p className="text-xs font-semibold text-gray-500 mb-2">신호</p>
-                <p className="text-sm font-bold text-gray-900 mb-3">{s.signal}</p>
-                <div className="text-violet-400 mb-3">↓</div>
-                <p className="text-xs font-semibold text-violet-600 mb-1">추천</p>
-                <p className="text-sm text-gray-700">{s.need}</p>
-              </div>
-            ))}
-          </div>
-          <p className="text-center text-xs text-gray-400 mt-6 max-w-2xl mx-auto">
-            * 광고 노출 기반 커머스가 아닌, 개인화 · 비광고형 추천 구조를 연구 방향으로 검토합니다.
-          </p>
-        </div>
-      </section>
-
-      {/* 16. AI Daily Report (mock UI, life-focused) */}
-      <section id="daily-report" className="scroll-mt-28 py-14 bg-gray-50 border-b border-gray-100">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3 text-center">AI Daily Report</h2>
-          <p className="text-center text-gray-600 mb-8">
-            병원 리포트가 아니라, 삶 중심의 하루 요약입니다. AI가 자동으로 오늘의 생활을 정리하는 연구 방향을
-            실제 화면처럼 구성한 예시입니다.
-          </p>
-          <div className="rounded-2xl border border-gray-200 bg-white shadow-md overflow-hidden">
-            <div className="bg-gradient-to-r from-violet-700 to-indigo-700 text-white px-5 py-4 flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                <div className="h-10 w-10 rounded-full bg-white/20 flex items-center justify-center font-bold">
-                  또리
-                </div>
-                <div>
-                  <p className="font-bold text-sm">또리 (골든리트리버 · 4세)</p>
-                  <p className="text-xs text-white/70">2026-07-20 · AI 데일리 리포트 (연구 시나리오)</p>
-                </div>
-              </div>
-              <span className="text-[10px] font-semibold px-2 py-1 rounded-full bg-amber-400/90 text-amber-950">
-                MOCK
-              </span>
-            </div>
-            <div className="grid grid-cols-3 divide-x divide-gray-100 border-b border-gray-100 text-center">
-              <div className="py-4">
-                <p className="text-xs text-gray-500 mb-1">활동량</p>
-                <p className="text-lg font-bold text-gray-900">
-                  74<span className="text-xs text-gray-400 font-normal">/100</span>
-                </p>
-                <p className="text-[11px] text-emerald-600">평소 범위</p>
-              </div>
-              <div className="py-4">
-                <p className="text-xs text-gray-500 mb-1">산책</p>
-                <p className="text-lg font-bold text-gray-900">38분</p>
-                <p className="text-[11px] text-amber-600">평소보다 ↓ 12분</p>
-              </div>
-              <div className="py-4">
-                <p className="text-xs text-gray-500 mb-1">놀이</p>
-                <p className="text-lg font-bold text-gray-900">22분</p>
-                <p className="text-[11px] text-gray-400">평소 범위</p>
-              </div>
-            </div>
-            <div className="grid grid-cols-2 divide-x divide-gray-100 border-b border-gray-100 text-center">
-              <div className="py-4">
-                <p className="text-xs text-gray-500 mb-1">식사 속도</p>
-                <p className="text-lg font-bold text-gray-900">보통</p>
-                <p className="text-[11px] text-gray-400">평소와 비슷</p>
-              </div>
-              <div className="py-4">
-                <p className="text-xs text-gray-500 mb-1">컨디션</p>
-                <p className="text-lg font-bold text-gray-900">양호</p>
-                <p className="text-[11px] text-gray-400">활기찬 편</p>
-              </div>
-            </div>
-            <div className="p-5">
-              <p className="text-xs font-semibold text-gray-500 mb-3">오늘의 관찰 기록</p>
-              <ul className="space-y-3 text-sm text-gray-800 leading-relaxed">
-                <li className="flex gap-3">
-                  <span className="text-xs text-gray-400 shrink-0 w-12">08:10</span>
-                  <span>아침 산책 20분, 활기차게 움직이는 모습이 관찰되었습니다.</span>
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-xs text-gray-400 shrink-0 w-12">13:20</span>
-                  <span>낮잠 시간이 평소보다 조금 길었습니다.</span>
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-xs text-gray-400 shrink-0 w-12">17:40</span>
-                  <span>오후 놀이 시간에 노즈워크 장난감에 높은 반응을 보였습니다.</span>
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-xs text-gray-400 shrink-0 w-12">19:00</span>
-                  <span>저녁 산책 시간이 평소보다 짧아, 짧은 추가 산책을 추천합니다.</span>
-                </li>
-              </ul>
-              <div className="mt-5 rounded-xl bg-violet-50 border border-violet-100 p-4">
-                <p className="text-xs font-semibold text-violet-700 mb-1">AI 요약 · 오늘의 추천</p>
-                <p className="text-sm text-gray-800 leading-relaxed">
-                  오늘은 전반적으로 컨디션이 양호합니다. 저녁 산책이 짧았던 만큼 10분 정도의 추가 산책이나
-                  실내 놀이를 추천합니다. 특별한 이상 신호는 관찰되지 않아 병원 연계가 필요한 상태는 아닙니다.
-                </p>
-              </div>
-            </div>
-          </div>
-          <p className="text-center text-xs text-gray-400 mt-4">
-            * 위 화면은 연구 방향을 보여주기 위한 목업이며, 실제 반려동물 데이터가 아닙니다.
-          </p>
-        </div>
-      </section>
-
-      {/* 17. Pet Digital Life */}
-      <section id="digital-life" className="scroll-mt-28 py-14 bg-white border-b border-gray-100">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">Pet Digital Life</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              하루 · 1주 · 1개월 · 1년 · 평생 — 병원 리포트만이 아니라 감정 · 환경 · 추천까지 함께 누적되는
-              생활 로그입니다.
-            </p>
-          </div>
-          <div className="rounded-2xl overflow-hidden border border-violet-100 shadow-sm mb-10 bg-gray-50">
-            <img
-              src="/images/research/pet-daily-life-scenarios.svg"
-              alt="Life Companion 시나리오 — 아침 수면 패턴/식사 속도/기분/산책 추천, 낮 혼자 있는 시간/짖음 증가/분리불안/노즈워크 추천, 저녁 활동량/산책/놀이 시간/추가 산책 추천, 주간 요약(컨디션 추세/감정 패턴/환경 상관), 필요 시만 병원 리포트"
-              className="w-full h-auto"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-            {digitalLifeHorizons.map((h) => (
-              <div key={h.label} className="rounded-xl border border-indigo-100 bg-indigo-50/50 p-5 text-center">
-                <div className="mb-2 flex h-9 w-9 items-center justify-center rounded-lg bg-white border border-indigo-200 text-indigo-700 mx-auto">
-                  <MarketingIcon name={h.icon} className="h-5 w-5" />
-                </div>
-                <div className="text-lg font-bold text-indigo-900 mb-1">{h.label}</div>
-                <p className="text-xs text-gray-600 leading-relaxed">{h.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 18. Hospital — small, optional */}
-      <section id="hospital" className="scroll-mt-28 py-10 bg-gray-50 border-b border-gray-100">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="rounded-2xl border border-dashed border-gray-300 bg-white p-6 md:p-7">
-            <div className="flex items-center gap-3 mb-3">
-              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gray-100 text-gray-500">
-                <MarketingIcon name="stethoscope" className="h-5 w-5" />
-              </div>
-              <h2 className="text-lg font-bold text-gray-800">병원 (전체 중 일부 기능)</h2>
-            </div>
-            <p className="text-sm text-gray-600 leading-relaxed">
-              병원 연계는 AI가 이상 신호를 판단했을 때만 작동하는 선택적 경로로 검토합니다. 평소에는 행동 ·
-              감정 · 환경 · 생활 추천이 중심이며, 병원용 리포트는 전체 Life Companion Log에서 필요할 때만
-              추출되는 하나의 출력물일 뿐, 이 연구의 중심이 아닙니다.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* 19. Robot Vision teaser */}
-      <section id="robot-vision" className="scroll-mt-28 py-14 bg-slate-900 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="rounded-2xl border border-white/15 bg-white/5 p-6 md:p-8">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/20 text-amber-200 text-xs font-semibold mb-4 border border-amber-400/30">
-              별도 연구 · Robot Vision
-            </div>
-            <div className="flex items-center gap-3 mb-4">
-              <MarketingIcon name="robot" className="h-8 w-8 text-amber-300" />
-              <h2 className="text-xl md:text-2xl font-bold">로봇 연동은 Robot Vision에서 다룹니다</h2>
-            </div>
-            <p className="text-white/80 leading-relaxed mb-6 max-w-2xl">
-              여기서 설명한 관찰 · 이해 · 추천 AI Brain은 로봇 없이도 성립합니다. 로봇이라는 물리적 실행체가
-              더해질 경우 — 로봇은 행동하고, AI Digital Care Log는 그 행동의 결과를 관찰 · 판단 · 학습합니다.
-              반려동물 돌봄 로봇을 포함한 이 확장은 Pet AI 단독이 아니라 자람이 · 시니어앤라이프 ·
-              토탈케어로그 · 에듀케어로그 · 베지케어를 함께 아우르는 별도의 도메인 횡단 연구인{' '}
-              <Link href="/research/robot-vision" className="text-amber-300 font-semibold hover:underline">
-                Robot Vision
-              </Link>
-              에서 자세히 다룹니다.
-            </p>
-            <Link
-              href="/research/robot-vision"
-              className="inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-amber-400 text-slate-900 font-semibold hover:bg-amber-300 text-sm"
-            >
-              Robot Vision 연구 보기 →
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* 20. Technology Reuse */}
-      <section id="tech-reuse" className="scroll-mt-28 py-14 bg-white border-b border-gray-100">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">Technology Reuse</h2>
-            <p className="text-gray-600">AI Core는 도메인마다 다시 만들지 않고 공통 기술을 재사용합니다.</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {reuseChains.map((c) => (
-              <div key={c.from} className="rounded-xl border border-gray-200 bg-gray-50 p-6 text-center">
-                <div className="font-bold text-primary-700 mb-1">{c.from}</div>
-                <div className="text-gray-400 my-2">↓</div>
-                <div className="text-sm font-semibold text-gray-700 mb-1">{c.mid}</div>
-                <div className="text-gray-400 my-2">↓</div>
-                <div className="font-bold text-violet-700 mb-3">Pet</div>
-                <p className="text-xs text-gray-500">{c.note}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 21. Roadmap */}
-      <section id="roadmap" className="scroll-mt-28 py-14 bg-gray-50 border-b border-gray-100">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">Universal AI Care Roadmap</h2>
-            <p className="text-gray-600">출시 일정이 아닌 연구 확장 방향입니다.</p>
-          </div>
-          <div className="rounded-2xl overflow-hidden border border-indigo-100 shadow-sm mb-8 bg-white">
-            <img
-              src="/images/research/pet-universal-roadmap.svg"
-              alt="Universal AI Care Roadmap — Human(현재 Care Log), Animal(Pet AI Research), Plant(베지케어 확장), Robot(AI Brain Vision)"
-              className="w-full h-auto"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-            {roadmapAxis.map((step) => (
-              <div
-                key={step.label}
-                className={`rounded-xl border p-5 ${
-                  step.active ? 'border-violet-300 bg-violet-50' : 'border-gray-200 bg-white'
-                }`}
-              >
-                <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-lg bg-white border border-gray-200 text-violet-700">
-                  <MarketingIcon name={step.icon} className="h-5 w-5" />
-                </div>
-                <h3 className="font-bold text-gray-900 text-sm mb-1">{step.label}</h3>
-                <p className="text-xs text-gray-600 leading-relaxed">{step.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 22. Value columns */}
-      <section id="value" className="scroll-mt-28 py-14 bg-white border-b border-gray-100">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-4">누구에게 어떤 가치인가</h2>
-          <p className="text-center text-gray-600 text-sm max-w-2xl mx-auto mb-10">
-            같은 연구라도 보호자 · 비즈니스 파트너 · 투자자가 얻는 가치는 다릅니다. 병원은 이 중 어떤
-            이해관계자에게도 첫 번째 가치가 아닙니다.
-          </p>
-          <div className="grid md:grid-cols-3 gap-5">
-            {valueColumns.map((col) => (
-              <div key={col.title} className="rounded-2xl border border-gray-200 bg-gray-50/70 p-6">
-                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-white border border-gray-200 text-violet-700">
-                  <MarketingIcon name={col.icon} className="h-6 w-6" />
-                </div>
-                <h3 className="font-bold text-gray-900 mb-4">{col.title}</h3>
-                <ul className="space-y-2.5 text-sm text-gray-700">
-                  {col.items.map((item, i) => (
-                    <li key={i} className="flex gap-2">
-                      <span className="text-violet-500 shrink-0">•</span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 23. FAQ */}
-      <section id="faq" className="scroll-mt-28 py-14 bg-gray-50 border-b border-gray-100">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-4">자주 묻는 질문</h2>
-          <p className="text-center text-gray-600 text-sm mb-10">
-            의료 앱이 아니라는 점, 상용 서비스가 아니라는 점, 병원은 선택적 기능이라는 점을 명확히 답합니다.
-          </p>
-          <div className="space-y-4">
-            {faqItems.map((item) => (
-              <details
-                key={item.q}
-                className="group rounded-xl border border-gray-200 bg-white p-5 [&_summary::-webkit-details-marker]:hidden"
-              >
-                <summary className="flex cursor-pointer items-start justify-between gap-3 font-bold text-gray-900 text-sm">
-                  {item.q}
-                  <span className="shrink-0 text-violet-500 transition-transform group-open:rotate-45">+</span>
-                </summary>
-                <p className="mt-3 text-sm text-gray-700 leading-relaxed">{item.a}</p>
-              </details>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Related links */}
-      <section className="py-14 bg-white border-b border-gray-100">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-xl font-bold text-gray-900 mb-6">관련 페이지</h2>
-          <div className="flex flex-wrap justify-center gap-3">
-            <Link
-              href="/research"
-              className="px-5 py-2.5 rounded-lg border border-gray-300 bg-white text-gray-800 font-semibold hover:bg-gray-50 text-sm"
-            >
-              Research 허브
-            </Link>
-            <Link
-              href="/research/robot-vision"
-              className="px-5 py-2.5 rounded-lg border border-gray-300 bg-white text-gray-800 font-semibold hover:bg-gray-50 text-sm"
-            >
-              Robot Vision
-            </Link>
-            <Link
-              href="/technology"
-              className="px-5 py-2.5 rounded-lg border border-gray-300 bg-white text-gray-800 font-semibold hover:bg-gray-50 text-sm"
-            >
-              기술
-            </Link>
-            <Link
-              href="/services/jarame"
-              className="px-5 py-2.5 rounded-lg border border-gray-300 bg-white text-gray-800 font-semibold hover:bg-gray-50 text-sm"
-            >
-              자람이
-            </Link>
-            <Link
-              href="/services/veggie"
-              className="px-5 py-2.5 rounded-lg border border-gray-300 bg-white text-gray-800 font-semibold hover:bg-gray-50 text-sm"
-            >
-              베지케어
-            </Link>
-            <Link
-              href="/contact?type=tech&service=research"
-              className="px-5 py-2.5 rounded-lg bg-indigo-600 text-white font-semibold hover:bg-indigo-700 text-sm"
-            >
-              R&D 문의
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* 24. CTA */}
-      <section className="py-14 bg-gradient-to-r from-violet-800 to-indigo-800 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl font-bold mb-4">연구 · 기술 협력 문의</h2>
-          <p className="text-white/85 mb-8 max-w-2xl mx-auto">
-            Pet AI Digital Care Log는 연구 · Future Vision 영역입니다. 제품 가입이 아닌 R&D · 기술 협력
-            관점으로 문의해 주세요. 보호자 체감 가치, 펫테크 · 커머스 · 서비스 파트너의 재사용 구조, 투자자
-            관점의 확장성 모두 같은 담당자가 안내합니다.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Link
-              href="/contact?type=tech&service=research"
-              className="inline-flex justify-center px-6 py-3 rounded-lg bg-white text-violet-800 font-semibold hover:bg-gray-100"
-            >
-              R&D 문의
-            </Link>
-            <Link
-              href="/research"
-              className="inline-flex justify-center px-6 py-3 rounded-lg border-2 border-white text-white font-semibold hover:bg-white/10"
-            >
-              Research 허브
-            </Link>
-            <Link
-              href="/technology"
-              className="inline-flex justify-center px-6 py-3 rounded-lg border-2 border-white/60 text-white font-semibold hover:bg-white/10"
-            >
-              기술 보기
-            </Link>
-          </div>
-        </div>
-      </section>
-
+      <section className="bg-violet-950 py-16 text-white"><div className="mx-auto max-w-4xl px-4 text-center sm:px-6"><p className="text-sm font-black uppercase tracking-wider text-violet-300">Research collaboration</p><h2 className="mt-4 text-3xl font-black">반려동물의 실제 삶에서 검증할 파트너를 찾습니다</h2><p className="mx-auto mt-4 max-w-2xl text-violet-100/80">동물행동·수의학·동물복지·Vision AI·웨어러블·펫 서비스 파트너와 데이터 권리와 평가 기준부터 함께 설계합니다.</p><div className="mt-8 flex flex-wrap justify-center gap-3"><Link href="/contact?type=tech&service=pet-ai" className="rounded-lg bg-violet-300 px-6 py-3 font-black text-violet-950 hover:bg-violet-200">R&D 협력 문의</Link><Link href="/research/robot-vision" className="rounded-lg border border-white/30 px-6 py-3 font-black hover:bg-white/10">Robot Vision 연결 보기</Link></div></div></section>
       <Footer />
     </div>
   )

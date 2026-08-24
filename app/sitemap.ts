@@ -125,19 +125,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: url('/research'),
-      lastModified: new Date(),
+      lastModified: new Date('2026-08-24'),
       changeFrequency: 'monthly',
       priority: 0.75,
     },
     {
       url: url('/research/pet-ai'),
-      lastModified: new Date(),
+      lastModified: new Date('2026-08-24'),
       changeFrequency: 'monthly',
       priority: 0.75,
     },
     {
       url: url('/research/robot-vision'),
-      lastModified: new Date(),
+      lastModified: new Date('2026-08-24'),
       changeFrequency: 'monthly',
       priority: 0.75,
     },

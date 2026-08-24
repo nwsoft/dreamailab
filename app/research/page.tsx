@@ -4,12 +4,13 @@ import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import CompanyPageHero from '../../components/CompanyPageHero'
 import CompanyNarrativeNav from '../../components/CompanyNarrativeNav'
+import ResearchLifeIntelligence from '../../components/ResearchLifeIntelligence'
 import { MarketingIcon } from '../../components/MarketingIcon'
 import { absoluteUrl, buildBreadcrumbJsonLd, buildPageMetadata, SITE_URL } from '../../lib/seo'
 
 const pagePath = '/research'
 const pageDescription =
-  '드림에이아이랩의 미래 연구 방향. 현재 사람과 현장을 연결하는 AI에서 출발해 Pet AI와 Robot Vision으로 맥락 이해와 상호작용 연구를 확장합니다.'
+  '드림에이아이랩의 미래 연구. 돌봄·교육·생활·금융에서 축적한 시간축 데이터와 판단·실행·결과 학습 구조를 Pet AI와 Robot Vision의 초개인화 Life Intelligence로 확장합니다.'
 
 export const metadata: Metadata = buildPageMetadata({
   title: '미래 연구 | Pet AI와 Robot Vision 연구 방향 - 드림에이아이랩',
@@ -30,7 +31,7 @@ const researchProjects = [
     stage: 'Research',
     stages: ['Research', 'Technology Development', 'Future Vision', 'Long-term Vision'],
     summary:
-      '의료 플랫폼이 아니라, 반려동물의 삶 전체(행동·감정·환경·생활 추천)를 AI가 지속적으로 관찰·이해·학습하는 Life Companion Intelligence 연구입니다. 병원은 필요할 때만 연결되는 선택지 중 하나이며, 상용 서비스가 아닙니다.',
+      '반려동물의 행동·생활·환경을 시간축으로 연결하고, 개체별 기준선과 실제 반응을 학습해 보호자의 이해와 돌봄을 돕는 Life Companion Intelligence 연구입니다.',
     href: '/research/pet-ai',
     accent: 'violet',
   },
@@ -40,7 +41,7 @@ const researchProjects = [
     stage: 'Research',
     stages: ['Research', 'Future Vision'],
     summary:
-      'AI Digital Care Log를 로봇의 AI Brain으로 확장하는 도메인 횡단 연구. 자람이·시니어앤라이프·토탈케어로그·에듀케어로그·베지케어·Pet AI의 데이터와 AI Core를 재사용하며, 상용 로봇 제품이 아닙니다.',
+      '돌봄·교육·생활·금융 등 인간 삶의 시간축 맥락과 현실의 결과를 연결해, 로봇이 누구에게 왜 지금 어떤 도움이 필요한지 이해하도록 만드는 Embodied AI 연구입니다.',
     href: '/research/robot-vision',
     accent: 'amber',
   },
@@ -56,15 +57,15 @@ export default function ResearchHubPage() {
       <Header />
 
       <CompanyPageHero
-        eyebrow="Research · What comes next"
-        title="현재 제품의 다음을 연구합니다"
+        eyebrow="Research · Life Intelligence"
+        title={<>현실의 삶에서 배우고,<br className="hidden sm:block" /> 다음 지능으로 확장합니다</>}
         description={
           <p>
-            드림에이아이랩은 사람과 현장의 맥락을 이해하는 기술에서 출발해, 반려동물의 삶과 로봇의
-            관찰·상호작용을 이해하는 AI를 탐색합니다. 미래 연구는 현재 서비스와 구분해 검증합니다.
+            드림에이아이랩은 돌봄·교육·생활·금융의 현실세계 기록과 결과를 이해하는 기술에서 출발해,
+            반려동물과 로봇까지 <strong>개별 존재의 맥락을 이해하는 AI</strong>를 연구합니다.
           </p>
         }
-        badges={['Current products first', 'Pet AI research', 'Robot Vision horizon']}
+        badges={['RWD · RWE', 'Outcome learning', 'Hyper-personalization', 'Pet · Robot research']}
         status={
           <p>
             연구의 공통 기반은{' '}
@@ -81,6 +82,8 @@ export default function ResearchHubPage() {
       />
       <CompanyNarrativeNav current="/research" />
 
+      <ResearchLifeIntelligence mode="hub" />
+
       <section className="border-b border-slate-200 bg-slate-50 py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex gap-4 items-start">
@@ -94,8 +97,9 @@ export default function ResearchHubPage() {
                   서비스(Products)
                 </Link>
                 는 현재 운영·Pilot·개발 중인 도메인 플랫폼입니다.{' '}
-                <strong>Research</strong>는 같은 AI Core를 새로운 대상(예: 반려동물)에 적용하기 위한
-                연구·기술 로드맵이며, 판매·가입·출시 예정이 아닙니다.
+                <strong>Research</strong>는 공통 아키텍처를 새로운 대상과 물리적 실행체에 적용하기 위한
+                연구·검증 로드맵입니다. 현재 제품의 데이터가 자동으로 연구에 합쳐진다는 뜻이 아니며,
+                목적별 동의·권한·품질 기준을 먼저 통과해야 합니다.
               </p>
             </div>
           </div>
@@ -111,9 +115,9 @@ export default function ResearchHubPage() {
           </div>
           <div className="mt-10 grid gap-5 lg:grid-cols-3">
             {[
-              { step: 'NOW · Products', title: '사람과 현장의 연결', description: '돌봄·교육·건강·가족·웰니스 서비스에서 AI Digital Care Log의 실제 운영성과 안전성을 먼저 검증합니다.', href: '/services' },
-              { step: 'NEXT · Research', title: 'Pet AI', description: '반려동물의 행동·감정·환경·생활 맥락을 지속적으로 이해하는 Life Companion Intelligence를 연구합니다.', href: '/research/pet-ai' },
-              { step: 'HORIZON · Research', title: 'Robot Vision', description: '로봇이 장면을 보는 데서 나아가 사람·환경·시간의 맥락을 이해하고 안전하게 상호작용하는 방향을 탐색합니다.', href: '/research/robot-vision' },
+              { step: 'NOW · Domain systems', title: '인간 삶의 시간축 지능', description: '돌봄·교육·건강·생활·금융에서 관찰→판단→실행→결과를 연결하고, 각 도메인의 안전·권한 안에서 개인화를 검증합니다.', href: '/services' },
+              { step: 'NEXT · Animal intelligence', title: 'Pet AI', description: '반려동물의 행동·환경을 개체별 기준선과 연결하고 실제 반응으로 다음 돌봄을 조정하는 Life Companion Intelligence를 연구합니다.', href: '/research/pet-ai' },
+              { step: 'HORIZON · Embodied AI', title: 'Robot Vision', description: '로봇이 장면을 인식하는 데서 나아가 인간 삶의 장기 맥락과 행동 권한을 이해하고 안전하게 돕는 방향을 연구합니다.', href: '/research/robot-vision' },
             ].map((item) => (
               <Link key={item.step} href={item.href} className="company-card group transition hover:border-primary-200 hover:bg-blue-50">
                 <p className="text-xs font-black uppercase tracking-wider text-primary-700">{item.step}</p>

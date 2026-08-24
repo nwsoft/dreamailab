@@ -687,9 +687,9 @@ export default function Home() {
             <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-violet-100 text-violet-800 mb-3">
               Research · Future Vision
             </div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">Research 도메인 확장</h2>
-            <p className="text-gray-600">
-              AI디지털케어로그 기반으로 확장을 연구 중인 Research·Future Vision 프로젝트 (6개 도메인 제품과 구분)
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">현실의 삶에서 배우는 다음 AI</h2>
+            <p className="mx-auto max-w-3xl text-gray-600">
+              돌봄·교육·생활·금융의 시간축 데이터와 실제 결과를 이해하는 구조를, 반려동물의 개체별 삶과 사람을 돕는 로봇의 초개인화 지능으로 확장해 연구합니다.
             </p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -701,8 +701,8 @@ export default function Home() {
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">Pet AI Digital Care Log</h3>
                   <p className="text-gray-700">
-                    반려 삶 전체(행동 · 감정 · 환경 · 생활 추천)를 AI가 이해하는 Research입니다. 병원은
-                    필요할 때만 연결되는 선택지 중 하나일 뿐, 중심이 아닙니다.
+                    반려동물의 행동·생활·환경을 시간축으로 연결하고, 개체별 기준선과 실제 반응을 학습해
+                    보호자의 이해와 돌봄을 돕는 Life Companion Intelligence 연구입니다.
                   </p>
                   <p className="text-sm text-violet-800 mt-2 font-medium">
                     기술 개발 초기 · 연구 개발 · 장기 비전 (출시 예정 아님)
@@ -732,8 +732,8 @@ export default function Home() {
                 <div>
                   <h3 className="text-2xl font-bold mb-2">Robot Vision</h3>
                   <p className="text-white/80">
-                    AI Digital Care Log를 로봇의 AI Brain으로 확장하는 도메인 횡단 연구. 자람이·시니어앤라이프·
-                    토탈케어로그·에듀케어로그·베지케어·Pet AI의 데이터와 AI Core를 재사용합니다.
+                    돌봄·교육·생활·금융 등 인간 삶의 장기 맥락과 결과를 바탕으로 로봇이 누구에게 왜 지금
+                    어떤 도움이 필요한지 이해하도록 만드는 Human Life Intelligence 연구입니다.
                   </p>
                   <p className="text-sm text-amber-300 mt-2 font-medium">
                     연구 개발 · 장기 비전 (상용 로봇 제품 아님)

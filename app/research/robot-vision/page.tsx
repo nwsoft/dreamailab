@@ -3,1112 +3,143 @@ import Link from 'next/link'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 import CompanyPageHero from '../../../components/CompanyPageHero'
+import CompanyNarrativeNav from '../../../components/CompanyNarrativeNav'
+import ResearchLifeIntelligence from '../../../components/ResearchLifeIntelligence'
 import { MarketingIcon, type MarketingIconName } from '../../../components/MarketingIcon'
 import { absoluteUrl, buildBreadcrumbJsonLd, buildPageMetadata, SITE_URL } from '../../../lib/seo'
 
 const pagePath = '/research/robot-vision'
-const pageDescription =
-  'Robot Vision — AI Digital Care Log를 로봇의 AI Brain으로 확장하는 연구 프로젝트. 로봇은 행동하고, Digital Care Log는 관찰·판단·학습합니다. 자람이·시니어앤라이프·토탈케어로그·에듀케어로그·베지케어·Pet AI 등 기존 서비스의 도메인 데이터와 AI Core를 재사용해 돌봄·교육·건강 세 축에서 로봇 연동 방향을 연구합니다. 상용 로봇 제품이 아닙니다.'
+const pageDescription = 'Robot Vision은 돌봄·교육·생활·금융 등 인간 삶의 시간축 데이터와 RWD/RWE, 판단·실행 결과를 바탕으로 로봇이 개인의 맥락을 이해하고 안전하게 돕는 초개인화 Embodied AI 연구입니다.'
 
 export const metadata: Metadata = buildPageMetadata({
-  title: 'Robot Vision | Research · Future Vision | 드림에이아이랩',
+  title: 'Robot Vision | 삶의 맥락을 이해하는 초개인화 로봇 AI 연구 - 드림에이아이랩',
   description: pageDescription,
   path: pagePath,
-  ogTitle: 'Robot Vision — Research (Dream AI Lab)',
+  ogTitle: 'Robot Vision — Human Life Intelligence for Embodied AI',
+  ogImage: '/images/research/robot-vision-og.png',
+  ogImageAlt: 'Robot Vision — 인간 삶의 맥락과 결과를 학습하는 드림에이아이랩 로봇 AI 연구',
   type: 'article',
 })
 
 const breadcrumbLd = buildBreadcrumbJsonLd([
   { name: '홈', url: `${SITE_URL}/` },
-  { name: 'Research', url: absoluteUrl('/research') },
+  { name: '미래 연구', url: absoluteUrl('/research') },
   { name: 'Robot Vision', url: absoluteUrl(pagePath) },
 ])
 
 const techLd = {
-  '@context': 'https://schema.org',
-  '@type': 'TechArticle',
-  headline: 'Robot Vision — AI Digital Care Log as Robot AI Brain',
-  description: pageDescription,
-  author: { '@type': 'Organization', name: 'Dream AI Lab' },
-  publisher: { '@type': 'Organization', name: 'Dream AI Lab', url: SITE_URL },
-  inLanguage: 'ko-KR',
-  dateModified: '2026-07-21',
-  about: {
-    '@type': 'Thing',
-    name: 'Robot Vision',
-    description: 'AI Digital Care Log를 로봇의 AI Brain으로 확장하는 도메인 횡단 연구 (상용 로봇 제품 아님)',
-  },
+  '@context': 'https://schema.org', '@type': 'TechArticle',
+  headline: 'Robot Vision — Human Life Intelligence for Embodied AI', description: pageDescription,
+  author: { '@type': 'Organization', name: 'Dream AI Lab' }, publisher: { '@type': 'Organization', name: 'Dream AI Lab', url: SITE_URL },
+  mainEntityOfPage: absoluteUrl(pagePath), inLanguage: 'ko-KR', datePublished: '2026-07-21', dateModified: '2026-08-24',
+  keywords: ['Robot Vision', 'Embodied AI', 'AI Digital Care Log', 'RWD', 'RWE', '초개인화 로봇', '돌봄 로봇'],
 }
 
-const faqItems: { q: string; a: string }[] = [
-  {
-    q: 'Robot Vision은 이미 판매 중인 로봇 제품인가요?',
-    a: '아닙니다. Robot Vision은 Research · Future Vision 단계입니다. 특정 로봇 하드웨어를 만들거나 판매하는 프로젝트가 아니라, AI Digital Care Log를 로봇의 AI Brain으로 확장할 수 있는지를 연구하는 기술 방향입니다. 출시 일정이나 가입·구매를 의미하지 않습니다.',
-  },
-  {
-    q: 'Pet AI Digital Care Log와 Robot Vision은 같은 프로젝트인가요?',
-    a: '아닙니다. Pet AI Digital Care Log는 반려동물(Animal) 도메인에 AI Digital Care Log를 적용하는 연구입니다. Robot Vision은 그보다 더 넓은 범위로, 돌봄·교육·건강 등 여러 도메인에서 이미 축적된 Care Log 데이터를 로봇이라는 물리적 실행체와 연결하는 도메인 횡단(cross-domain) 연구입니다. Pet AI는 Robot Vision이 다루는 여러 적용 축 중 하나로 연결될 수 있습니다.',
-  },
-  {
-    q: '로봇이 직접 사람을 만지거나 돌보는 건가요?',
-    a: '현재 연구 범위는 관찰·판단·안내·알림 중심입니다. 급식·이동 보조처럼 물리적 접촉이 필요한 행동은 안전 정책과 사람의 승인이 선행되는 범위에서만 장기적으로 검토하며, 지금 단계에서 상용화된 물리적 행위는 없습니다.',
-  },
-  {
-    q: '어떤 서비스의 데이터가 로봇 연동에 쓰이나요?',
-    a: '자람이·시니어앤라이프·토탈케어로그·에듀케어로그·베지케어·Pet AI Digital Care Log 등에서 이미 축적 중인 도메인 데이터와 AI Core(행동 분석·이상 탐지·리포트 생성 엔진 등)를 재사용하는 방향을 연구합니다. 새로운 로봇 전용 데이터베이스를 처음부터 만드는 것이 아닙니다.',
-  },
-  {
-    q: '동의 없이 로봇이 데이터를 로봇 제조사나 외부에 넘기나요?',
-    a: '아닙니다. 로봇은 데이터를 소유하지 않고, Care Log가 맥락을 소유한다는 원칙을 연구 전제로 두고 있습니다. 사용자 동의 범위를 벗어난 데이터 이전, 목적 외 활용, 제3자 판매는 연구 설계상 하지 않는 것을 원칙으로 합니다.',
-  },
-  {
-    q: '투자·기술 협력·로봇 하드웨어 파트너십은 어떻게 논의하나요?',
-    a: 'R&D·기술 협력 관점의 문의를 받고 있습니다. 페이지 하단 문의 채널을 통해 연구 단계, 재사용 가능한 AI Core 자산, 물리적 실행체(로봇) 파트너십 방향을 함께 설명드립니다.',
-  },
+const faqItems = [
+  { q: 'Robot Vision은 판매 중인 로봇 제품인가요?', a: '아닙니다. 현재는 드림에이아이랩의 Research · Future Vision입니다. 특정 하드웨어 판매나 출시 일정을 뜻하지 않으며, 삶의 맥락을 이해하는 AI Brain과 안전한 로봇 연동 조건을 연구합니다.' },
+  { q: '기존 로봇 AI와 무엇이 다른가요?', a: '장면 인식이나 단일 명령 수행을 넘어, 개인의 장기 기록·현재 상태·목표·위험·과거 개입 결과를 연결해 다음 도움을 판단하는 Human Life Intelligence를 중심에 둡니다.' },
+  { q: '돌봄·교육·금융 데이터가 한 데이터베이스에 합쳐지나요?', a: '아닙니다. 각 서비스의 원본 데이터는 동의·권한·법적 경계에 따라 분리합니다. 공유하는 것은 데이터 자체가 아니라 관찰·판단·실행·결과·복기라는 아키텍처와 검증 방법입니다.' },
+  { q: '로봇이 투자나 의료 결정을 대신하나요?', a: '아닙니다. 의료·금융처럼 규제와 전문 권한이 필요한 판단은 설명·알림·정보 전달 범위로 제한하고, 진단·처방·투자 권유·금융 실행은 각 법령과 승인 주체, 연결 시스템의 권한을 따릅니다.' },
+  { q: '로봇이 사람을 직접 만지거나 자율 행동하나요?', a: '현재 연구 중심은 관찰, 요약, 알림, 설명과 제안입니다. 사람 승인 없는 물리적 자율행동은 현재 범위가 아니며, 제한적 행동도 하드웨어 파트너·현장 책임자·안전 검증을 전제로 합니다.' },
+  { q: '연구·로봇 하드웨어 협력은 어떻게 진행하나요?', a: 'R&D 문의를 통해 대상 현장, 해결하려는 과업, 사용 가능한 센서, 데이터 권리, 행동 권한과 검증 지표를 먼저 정의한 뒤 PoC 범위를 협의합니다.' },
 ]
 
-const faqLd = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: faqItems.map((item) => ({
-    '@type': 'Question',
-    name: item.q,
-    acceptedAnswer: { '@type': 'Answer', text: item.a },
-  })),
-}
+const faqLd = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqItems.map((item) => ({ '@type': 'Question', name: item.q, acceptedAnswer: { '@type': 'Answer', text: item.a } })) }
 
-const stages = [
-  { label: 'Research', desc: '도메인 횡단 연구 과제 정의 · 가설 검증' },
-  { label: 'Future Vision', desc: '장기 방향 · 물리적 실행체(로봇) 파트너십 탐색' },
+const principles: { title: string; body: string; icon: MarketingIconName }[] = [
+  { title: '개인의 기준선', body: '평균적인 사람보다 이 사람의 평소 상태와 변화 폭을 먼저 이해합니다.', icon: 'user' },
+  { title: '시간의 맥락', body: '지금 보이는 장면을 수면·식사·학습·돌봄·환경의 이전 기록과 연결합니다.', icon: 'clock' },
+  { title: '도메인 지식', body: '돌봄·교육·건강·생활·금융마다 다른 위험과 전문 권한을 정책으로 분리합니다.', icon: 'blocks' },
+  { title: '결과로 학습', body: '제안이 실제 도움이 되었는지 기록하고 다음 판단을 개인에게 맞춥니다.', icon: 'refresh' },
 ]
 
-const tocSections: { id: string; label: string }[] = [
-  { id: 'why-separate', label: '왜 별도 연구인가' },
-  { id: 'core-idea', label: '핵심 아이디어' },
-  { id: 'architecture', label: '아키텍처' },
-  { id: 'data-flow', label: '데이터 흐름' },
-  { id: 'services', label: '서비스 연계' },
-  { id: 'domains', label: '돌봄 · 교육 · 건강' },
-  { id: 'scenarios', label: '시나리오' },
-  { id: 'tech-reuse', label: '재사용 기술' },
-  { id: 'data-usage', label: '데이터 사용 범위' },
-  { id: 'safety', label: '안전 · 윤리' },
-  { id: 'roadmap', label: '연구 로드맵' },
-  { id: 'value', label: '가치 제안' },
-  { id: 'faq', label: 'FAQ' },
+const scenarios = [
+  { label: '돌봄 · 시니어', prompt: '“오늘 평소보다 움직임이 적어요.”', context: '최근 수면·식사·활동 기준선, 복약 일정, 보호자 관찰, 현재 센서 신호를 함께 확인합니다.', action: '로봇은 먼저 말을 걸고 상태를 확인한 뒤, 필요할 때 보호자나 담당자에게 근거와 함께 알립니다.', outcome: '응답 여부와 후속 조치를 기록해 다음 이상 신호 판단의 기준을 조정합니다.' },
+  { label: '교육 · 발달', prompt: '“집중이 무너졌는데 학습을 계속해야 할까요?”', context: '개인별 집중 지속 시간, 과제 난이도, 감각 자극, 이전 휴식·중재 반응을 연결합니다.', action: '즉시 정답을 대신 주기보다 짧은 휴식, 난이도 조정, 시각 안내 중 적합한 선택을 제안합니다.', outcome: '어떤 지원 뒤 참여가 회복됐는지 교사·보호자가 확인하고 다음 수업에 반영합니다.' },
+  { label: '생활 · 금융 인터페이스', prompt: '“이번 달 지출이 평소와 다른데 무엇부터 볼까요?”', context: '연결 권한이 있는 개인 금융 맥락과 설정, 위험 기준, 설명 가능한 판단 결과만 불러옵니다.', action: '로봇은 NoahAI Labs 등 권한 있는 금융 시스템의 분석을 읽기 쉬운 말로 설명하고 확인 항목을 안내합니다.', outcome: '로봇이 자산을 임의 운용하지 않으며, 결정·실행·책임은 금융 시스템과 사용자의 승인 경계에 남습니다.' },
 ]
 
-type ServiceRobot = {
-  service: string
-  mark: string
-  url: string
-  domain: string
-  currentData: string
-  robotRole: string
-  examples: string[]
-  icon: MarketingIconName
-}
-
-const serviceRobotMap: ServiceRobot[] = [
-  {
-    service: '자람이',
-    mark: 'JR',
-    url: '/services/jarame',
-    domain: '발달 · 학습 · 행동',
-    currentData: '행동/학습 로그, 치료 루틴',
-    robotRole: '학습 보조 · 행동 코칭 로봇',
-    examples: ['학습 보조', '루틴 리마인드', '집중 이탈 감지 시 짧은 개입'],
-    icon: 'child',
-  },
-  {
-    service: '시니어앤라이프',
-    mark: 'SL',
-    url: '/services/senior',
-    domain: '시니어 · 노인돌봄',
-    currentData: '돌봄/낙상 신호, 복약/활력',
-    robotRole: '동행 · 순찰형 돌봄 로봇',
-    examples: ['순찰/알림', '동행 보조', '야간 이상 움직임 감지 시 확인'],
-    icon: 'accessibility',
-  },
-  {
-    service: '토탈케어로그',
-    mark: 'TC',
-    url: '/services/healthcare',
-    domain: '의료 · 건강',
-    currentData: '건강 로그, 약물/증상',
-    robotRole: '건강 측정 보조 · 리포트 전달 로봇',
-    examples: ['측정 보조', '병원 전 리포트 전달', '복약 리마인드'],
-    icon: 'stethoscope',
-  },
-  {
-    service: '에듀케어로그',
-    mark: 'ED',
-    url: '/services/educarelog',
-    domain: '교육',
-    currentData: '학습 반응, 맞춤 경로',
-    robotRole: '튜터링 · 집중 코칭 로봇',
-    examples: ['튜터링', '집중 코칭', '난이도 조절 신호 전달'],
-    icon: 'graduation',
-  },
-  {
-    service: '베지케어',
-    mark: 'VG',
-    url: '/services/veggie',
-    domain: '라이프스타일 · 영양',
-    currentData: '식습관 로그, 영양 목표',
-    robotRole: '식사 리마인드 · 환경 안내 로봇',
-    examples: ['식사 리마인드', '환경 안내', '식습관 변화 알림'],
-    icon: 'leaf',
-  },
+const authority = [
+  { level: 'L0', title: '관찰', body: '센서 신호를 기록하고 사람에게 보이게 합니다.', status: '현재 연구 중심' },
+  { level: 'L1', title: '요약 · 알림', body: '변화와 근거를 설명하고 담당자에게 알립니다.', status: '현재 연구 중심' },
+  { level: 'L2', title: '행동 제안', body: '선택지와 예상 영향을 제시하되 사람이 결정합니다.', status: '현재 연구 중심' },
+  { level: 'L3', title: '승인된 제한 행동', body: '사전 정의된 장소·과업·시간·중단 규칙 안에서만 수행합니다.', status: '파트너 PoC 검증 대상' },
+  { level: 'L4', title: '자율 물리 행동', body: '사람 승인 없이 접촉·이동·의료·금융 행위를 수행합니다.', status: '현재 범위 밖' },
 ]
 
-const petAiRobot: ServiceRobot = {
-  service: 'Pet AI Digital Care Log',
-  mark: 'PA',
-  url: '/research/pet-ai',
-  domain: '반려동물 (Research)',
-  currentData: '행동 관찰, 케어 로그',
-  robotRole: '펫 케어 로봇 (Research)',
-  examples: ['급식/놀이 보조', '이상 행동 감지 시 알림', '보호자 부재 시 관찰'],
-  icon: 'eye',
-}
-
-const marriageRobotNote =
-  '글로벌커플케어의 정착 데이터(언어 · 생활 정보)도 장기적으로 정착 안내 · 언어 보조 로봇 연구로 연결될 수 있는 확장 가능성이 있지만, 현재는 우선 검토 대상이 아닌 참고 축입니다.'
-
-const architectureLayers: { title: string; items: string[]; icon: MarketingIconName; accent: string }[] = [
-  {
-    title: 'Perception (인지)',
-    items: ['Vision / Audio', 'Sensor / Wearable', 'App / Manual Log', '현장 신호 수집'],
-    icon: 'camera',
-    accent: 'sky',
-  },
-  {
-    title: 'Care Log Brain (판단)',
-    items: ['Context Memory (타임라인)', 'Reasoning (상태/위험/목표)', 'Policy (안전/윤리/권한)', 'Planner (다음 행동 후보)'],
-    icon: 'brain',
-    accent: 'violet',
-  },
-  {
-    title: 'Action (행동)',
-    items: ['Speak / Guide', 'Remind / Alert', 'Assist / Fetch*', 'Report to Human'],
-    icon: 'robot',
-    accent: 'amber',
-  },
+const metrics = [
+  ['맥락 이해', '개인 기준선 변화와 원인 후보를 얼마나 일관되게 설명하는가'],
+  ['도움의 품질', '사용자·보호자·전문가가 제안을 이해하고 실제 과업 완료율이 높아졌는가'],
+  ['안전', '잘못된 알림, 누락, 권한 밖 행동, 사람의 중단·수정 원인을 추적하는가'],
+  ['개인화', '시간이 지날수록 불필요한 질문과 오탐을 줄이고 적합도를 높이는가'],
+  ['접근성', '고령자·장애인·디지털 취약 사용자가 학습 부담 없이 이용할 수 있는가'],
+  ['운영성', '장애·네트워크 단절·센서 오류에서 안전하게 멈추고 사람이 이어받는가'],
 ]
 
-const dataFlowStages: { n: number; title: string; items: string[]; icon: MarketingIconName }[] = [
-  {
-    n: 1,
-    title: '사용자 데이터',
-    items: ['행동/학습/건강', '복약/식사/수면', '센서/카메라', '보호자 입력'],
-    icon: 'upload',
-  },
-  {
-    n: 2,
-    title: 'AI Digital Care Log',
-    items: ['표준 스키마 정규화', '타임라인/에피소드', '멀티모달 분석', '위험/권고 생성', 'HITL 전문가 검토', '개인화 모델'],
-    icon: 'document',
-  },
-  {
-    n: 3,
-    title: 'Robot AI Brain',
-    items: ['상황 이해', '행동 후보 생성', '안전 규칙 필터', '실행 우선순위', '실패/성공 기록', '환류 학습'],
-    icon: 'cog',
-  },
-  {
-    n: 4,
-    title: '로봇 행동',
-    items: ['알림 / 안내', '루틴 보조', '교육 코칭', '돌봄 순찰'],
-    icon: 'robot',
-  },
-]
-
-const domainPillars: {
-  title: string;
-  subtitle: string;
-  services: string;
-  data: string;
-  judgment: string;
-  action: string;
-  icon: MarketingIconName;
-  accent: string;
-}[] = [
-  {
-    title: '돌봄 Care',
-    subtitle: '시니어앤라이프 · Pet AI',
-    services: '낙상/이상 감지, 복약/식사 리마인드, 순찰/동행 보조, 가족 알림 전달',
-    data: '활력 · 행동 · 위치',
-    judgment: '위험도 · 우선순위 판단',
-    action: '알림 · 접근 · 기록',
-    icon: 'heart',
-    accent: 'rose',
-  },
-  {
-    title: '교육 Education',
-    subtitle: '자람이 · 에듀케어로그',
-    services: '맞춤 학습 코칭, 집중/이탈 감지, 루틴/퀴즈 실행, 보호자/교사 리포트',
-    data: '학습 반응 · 정서',
-    judgment: '난이도 · 개입 시점 판단',
-    action: '힌트 · 격려 · 기록',
-    icon: 'graduation',
-    accent: 'indigo',
-  },
-  {
-    title: '건강 Health',
-    subtitle: '토탈케어로그 · 시니어앤라이프',
-    services: '증상/부작용 추적, 측정 보조/리마인드, 병원 전 Care Report, 생활습관 코칭',
-    data: '임상 · 생활 로그',
-    judgment: '위험 · 권고 판단',
-    action: '안내 · 전달 · 환류',
-    icon: 'stethoscope',
-    accent: 'emerald',
-  },
-]
-
-const scenarios: {
-  title: string;
-  based: string;
-  data: string;
-  steps: string[];
-  icon: MarketingIconName;
-}[] = [
-  {
-    title: '시니어 돌봄',
-    based: '자람이 아닌 시니어앤라이프',
-    data: '활동 / 복약 / 위치',
-    steps: [
-      'Care Log: 야간 움직임 감소 관찰',
-      'Brain: 낙상 위험 상승 판단',
-      'Robot: 음성 확인 + 조명',
-      '가족/센터 알림 전달',
-    ],
-    icon: 'accessibility',
-  },
-  {
-    title: '발달 · 학습 보조',
-    based: '자람이 · 에듀케어로그',
-    data: '학습 반응 / 정서',
-    steps: [
-      'Care Log: 집중도 하락 관찰',
-      'Brain: 난이도 하향 권고 판단',
-      'Robot: 짧은 휴식 안내',
-      '교사/보호자 리포트 전달',
-    ],
-    icon: 'graduation',
-  },
-  {
-    title: '건강 관리',
-    based: '토탈케어로그',
-    data: '약물 / 증상 / 활력',
-    steps: [
-      'Care Log: 부작용 패턴 감지',
-      'Brain: 병원 전 요약 리포트 생성',
-      'Robot: 복약 리마인드',
-      'Care Report 전달',
-    ],
-    icon: 'stethoscope',
-  },
-]
-
-const techReuseItems: { title: string; desc: string; icon: MarketingIconName }[] = [
-  {
-    title: 'Vision AI',
-    desc: '자람이 · Pet AI Digital Care Log에서 검증한 영상 기반 자세 추정 · 행동 인식 모델을 로봇 카메라 신호에 재적용하는 연구입니다.',
-    icon: 'camera',
-  },
-  {
-    title: 'Care Log 엔진',
-    desc: '표준 스키마로 타임라인·에피소드를 축적하는 Digital Care Log 엔진을 그대로 Robot Brain의 Context Memory로 재사용합니다.',
-    icon: 'document',
-  },
-  {
-    title: '행동 분석',
-    desc: '자람이(상용)·시니어앤라이프(Pilot)의 행동 패턴 분석·이상 탐지 설계와 단계적 현장 검증 방식을 로봇이 관찰하는 신호로 확장하는 방향을 연구합니다.',
-    icon: 'eye',
-  },
-  {
-    title: '건강 모니터링',
-    desc: '토탈케어로그의 증상·복약·생활 데이터 모니터링 구조를 로봇의 건강 리마인드 · 병원 전 리포트 기능으로 확장합니다.',
-    icon: 'pill',
-  },
-  {
-    title: '추천 엔진',
-    desc: '베지케어의 누적 로그 기반 추천 구조를 로봇의 다음 행동 제안(Planner)에 재사용하는 방향을 연구합니다.',
-    icon: 'target',
-  },
-  {
-    title: 'HITL (Human-in-the-loop)',
-    desc: '자람이 AI 리포트에서 이미 적용 중인 전문가 검토 구조를 Robot Brain의 안전 정책(Policy) 계층에 그대로 반영합니다.',
-    icon: 'shield',
-  },
-]
-
-const dataUsageByDomain: { domain: string; used: string; icon: MarketingIconName }[] = [
-  { domain: '돌봄', used: '활동량 · 낙상/이상 움직임 · 복약 시간 · 위치(실내 동선) 데이터', icon: 'heart' },
-  { domain: '교육', used: '학습 반응 · 집중/이탈 시점 · 정서 신호 · 루틴 수행 기록', icon: 'graduation' },
-  { domain: '건강', used: '증상 · 복약 기록 · 생활습관 로그 · 병원 전 요약에 필요한 최소 데이터', icon: 'stethoscope' },
-]
-
-const neverWithoutConsent: string[] = [
-  '동의 범위를 벗어난 목적으로 데이터를 재사용하지 않습니다.',
-  '로봇 제조사 · 외부 업체에 원본 데이터를 임의로 이전하지 않습니다.',
-  '가명·암호화 없이 원본 영상/음성을 장기 보관하지 않습니다.',
-  '의료적 판단(진단·처방)을 로봇이나 AI가 최종 결정하지 않습니다. 항상 사람(보호자·전문가)의 최종 확인을 전제로 합니다.',
-  '수집한 데이터를 광고·마케팅 목적으로 판매하지 않습니다.',
-]
-
-const safetyPrinciples: { title: string; desc: string; icon: MarketingIconName }[] = [
-  {
-    title: 'Human-in-the-loop (HITL)',
-    desc: '로봇의 판단은 참고안이며, 위험도가 높은 상황일수록 최종 확인은 보호자·전문가·가족에게 전달됩니다.',
-    icon: 'shield',
-  },
-  {
-    title: 'Fail-safe 우선',
-    desc: '불확실하거나 신호가 충돌할 때는 물리적 행동을 확대하지 않고, 알림·확인 요청으로 안전하게 축소하는 것을 원칙으로 합니다.',
-    icon: 'alert',
-  },
-  {
-    title: '권한 계층 (Policy)',
-    desc: 'Perception → Reasoning 이후 Action으로 넘어가기 전, 안전 규칙 필터(Policy)를 통과해야만 실행 후보가 살아남습니다.',
-    icon: 'lock',
-  },
-  {
-    title: '데이터 최소 수집',
-    desc: '로봇 연동에 필요한 최소한의 신호만 수집하며, 목적을 벗어난 상시 녹화 · 광범위 수집은 지향하지 않습니다.',
-    icon: 'scale',
-  },
-  {
-    title: '투명한 환류',
-    desc: '로봇 행동의 결과(성공/실패)는 다시 Care Log에 기록되어 보호자 · 전문가가 확인할 수 있도록 설계합니다.',
-    icon: 'refresh',
-  },
-  {
-    title: '물리적 행위의 제한',
-    desc: '이동·급식 보조처럼 물리적 접촉이 필요한 행동(Assist/Fetch)은 안전 정책 하에서만 장기 검토하며, 현재 상용화된 물리적 행위는 없습니다.',
-    icon: 'robot',
-  },
-]
-
-const roadmapSteps: { t: string; d: string; icon: MarketingIconName }[] = [
-  {
-    t: '1',
-    d: 'Human AI Digital Care Log — 자람이·시니어앤라이프·토탈케어로그·에듀케어로그·베지케어에서 베타·파일럿·개발 단계로 검증',
-    icon: 'document',
-  },
-  {
-    t: '2',
-    d: '서비스 도메인 심화 — 각 서비스에서 Care Log 데이터 폭과 깊이를 확장 (Pet AI 등 Research 포함)',
-    icon: 'trend',
-  },
-  {
-    t: '3',
-    d: 'Robot Brain 연구 — Care Log를 Context Memory · Reasoning · Policy · Planner 구조로 확장하는 기술 연구',
-    icon: 'brain',
-  },
-  {
-    t: '4',
-    d: '물리적 실행체(로봇) 파트너십 — 하드웨어 파트너와 함께 Perception · Action 계층을 실증하는 장기 방향',
-    icon: 'handshake',
-  },
-]
-
-const valueColumns: { title: string; icon: MarketingIconName; items: string[] }[] = [
-  {
-    title: '파트너(로봇 · 하드웨어)를 위한 가치',
-    icon: 'robot',
-    items: [
-      '로봇 하드웨어를 처음부터 새로 설계하지 않고, 이미 검증된 Care Log AI Brain을 연동할 수 있습니다.',
-      '돌봄 · 교육 · 건강 세 축 모두에서 실사용 데이터 기반 로직을 참고할 수 있습니다.',
-      'Perception · Action 계층만 하드웨어에 맞게 통합하면 되는 구조를 지향합니다.',
-    ],
-  },
-  {
-    title: '비즈니스 파트너를 위한 가치',
-    icon: 'handshake',
-    items: [
-      '자람이 · 시니어앤라이프 · 토탈케어로그 · 에듀케어로그 · 베지케어의 표준 위에서 확장되는 구조입니다.',
-      'API · 임베드 연동으로 기존 로봇 · IoT 플랫폼에 얹을 수 있는 방향을 연구합니다.',
-      '도메인별로 이미 쌓인 실사용 데이터를 리스크 낮게 재사용할 수 있습니다.',
-    ],
-  },
-  {
-    title: '투자자 · R&D를 위한 가치',
-    icon: 'flask',
-    items: [
-      '하나의 AI Core가 사람 → 여러 서비스 도메인 → 로봇으로 확장되는 재사용성을 보여줍니다.',
-      '베타·파일럿·개발 중인 여러 도메인에서 검증 중인 기술을 기반으로 로봇 연동 리스크를 낮추는 방향을 연구합니다.',
-      '돌봄 · 교육 · 건강을 동시에 아우르는 도메인 횡단 로드맵을 제시합니다.',
-    ],
-  },
-]
-
-export default function RobotVisionResearchPage() {
+export default function RobotVisionPage() {
   return (
     <div className="company-page">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(techLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
       <Header />
-
       <CompanyPageHero
-        eyebrow="Dream AI Lab Research"
-        title="Robot Vision"
-        description={
-          <p>
-            AI Digital Care Log를 로봇의 AI Brain으로 확장하는 도메인 횡단 연구 프로젝트
-          </p>
-        }
-        badges={stages.map((stage) => stage.label)}
-        status={
-          <p>
-            현재는 상용 로봇 제품이 아니라, 로봇이 <strong>무엇을 근거로 행동할지</strong> 결정하는 AI Brain
-            구조를 연구하는 단계입니다.
-          </p>
-        }
+        eyebrow="Research · Embodied AI"
+        title={<>사람을 보는 로봇에서,<br className="hidden sm:block" /> 삶의 맥락을 이해하는 로봇으로</>}
+        description={<p>Robot Vision은 돌봄·교육·생활·금융 등 인간 삶의 시간축 기록과 현실의 결과를 연결해, 로봇이 <strong>누구에게 왜 지금 어떤 도움이 필요한지</strong> 이해하도록 만드는 연구입니다.</p>}
+        badges={['Human Life Intelligence', 'RWD · RWE', 'Hyper-personalization', 'Safety by authority']}
+        status={<p><strong>현재 단계 · Research / Future Vision.</strong> 상용 로봇 판매나 출시 일정이 아니라 AI Brain, 권한 구조, 현장 검증 방법을 공개합니다.</p>}
+        actions={[{ label: '연구 구조 보기', href: '#research-brief' }, { label: 'R&D 협력 문의', href: '/contact?type=tech&service=robot-vision', variant: 'secondary' }]}
       />
+      <CompanyNarrativeNav current="/research" />
 
-      {/* 2. TOC pills */}
-      <section className="py-5 bg-white border-b border-gray-100 sticky top-16 z-30">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex gap-2 overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-            {tocSections.map((s) => (
-              <a
-                key={s.id}
-                href={`#${s.id}`}
-                className="shrink-0 whitespace-nowrap px-3 py-1.5 rounded-full text-xs font-medium bg-gray-100 text-gray-700 hover:bg-amber-100 hover:text-amber-900 transition-colors"
-              >
-                {s.label}
-              </a>
-            ))}
-          </div>
+      <nav aria-label="Robot Vision 페이지 목차" className="sticky top-16 z-20 border-b border-slate-200 bg-white/95 backdrop-blur">
+        <div className="mx-auto flex max-w-7xl gap-2 overflow-x-auto px-4 py-3 sm:px-6 lg:px-8">
+          {[['research-brief', '연구 정의'], ['life-intelligence', '삶의 데이터'], ['architecture', '아키텍처'], ['scenarios', '이용 장면'], ['authority', '행동 권한'], ['evidence', '검증'], ['governance', '안전'], ['faq', 'FAQ']].map(([id, label]) => <a key={id} href={`#${id}`} className="whitespace-nowrap rounded-full border border-slate-200 px-3 py-1.5 text-xs font-bold text-slate-600 hover:border-primary-300 hover:text-primary-700">{label}</a>)}
         </div>
-      </section>
+      </nav>
 
-      {/* Current stage */}
-      <section className="py-12 bg-white border-b border-gray-100">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-xl font-bold text-gray-900 mb-6 text-center">현재 단계</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {stages.map((s, i) => (
-              <div key={s.label} className="rounded-xl border border-amber-100 bg-amber-50/60 p-5 text-center">
-                <div className="text-xs font-bold text-amber-600 mb-2">0{i + 1}</div>
-                <h3 className="font-bold text-gray-900 mb-1">{s.label}</h3>
-                <p className="text-sm text-gray-600">{s.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <section id="research-brief" className="company-section"><div className="company-container">
+        <div className="max-w-3xl"><p className="company-eyebrow">Research brief</p><h2 className="company-section-title">로봇의 몸보다 먼저, 삶을 이해하는 두뇌를 설계합니다</h2><p className="company-section-lead">DAL의 질문은 “로봇이 무엇을 할 수 있는가”가 아니라 “어떤 근거와 권한으로 이 사람을 도와도 되는가”입니다.</p></div>
+        <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">{principles.map((item) => <article key={item.title} className="company-card"><MarketingIcon name={item.icon} className="h-8 w-8 text-primary-700" /><h3 className="mt-5 text-lg font-black text-slate-950">{item.title}</h3><p className="mt-3 text-sm leading-6 text-slate-600">{item.body}</p></article>)}</div>
+      </div></section>
 
-      {/* 3. Why separate from Pet Care */}
-      <section id="why-separate" className="scroll-mt-28 py-14 bg-gray-50 border-b border-gray-100">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-4">
-            왜 Pet AI와 별도 연구인가
-          </h2>
-          <p className="text-center text-gray-600 text-sm max-w-3xl mx-auto mb-10">
-            둘 다 로봇이라는 단어와 연결되지만, 연구 범위와 목적이 다릅니다.
-          </p>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="rounded-2xl border border-violet-200 bg-white p-6 md:p-7">
-              <div className="flex items-center gap-3 mb-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-violet-50 text-violet-700">
-                  <MarketingIcon name="eye" className="h-5 w-5" />
-                </div>
-                <h3 className="font-bold text-gray-900">Pet AI Digital Care Log</h3>
-              </div>
-              <p className="text-sm text-gray-700 leading-relaxed mb-4">
-                반려동물(Animal)이라는 <strong className="text-gray-900">하나의 도메인</strong>에 AI Digital
-                Care Log를 적용하는 연구입니다. 반려동물의 관찰 · 기록 · 해석 · 리포트가 중심이며, 로봇 연동은
-                그 안에서 다루는 장기 Future Vision 중 하나입니다.
-              </p>
-              <Link href="/research/pet-ai" className="text-violet-700 font-semibold text-sm hover:underline">
-                Pet AI Digital Care Log 연구 보기 →
-              </Link>
-            </div>
-            <div className="rounded-2xl border border-amber-200 bg-white p-6 md:p-7">
-              <div className="flex items-center gap-3 mb-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-amber-50 text-amber-700">
-                  <MarketingIcon name="robot" className="h-5 w-5" />
-                </div>
-                <h3 className="font-bold text-gray-900">Robot Vision</h3>
-              </div>
-              <p className="text-sm text-gray-700 leading-relaxed mb-4">
-                <strong className="text-gray-900">여러 도메인을 가로지르는(cross-domain)</strong> 로봇 실행
-                구조 연구입니다. 돌봄 · 교육 · 건강 등 DAL 서비스(베타·파일럿·개발 중)의 Care Log를 공통 AI Brain
-                구조로 다시 보고, 로봇이라는 물리적 실행체가 어떻게 그 판단을 행동으로 옮길 수 있는지를
-                연구합니다. Pet AI는 이 구조가 연결될 수 있는 여러 축 중 하나입니다.
-              </p>
-              <span className="text-amber-700 font-semibold text-sm">이 페이지에서 계속 다룹니다 ↓</span>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ResearchLifeIntelligence mode="robot" />
 
-      {/* 4. Core idea: Robot vs Care Log roles */}
-      <section id="core-idea" className="scroll-mt-28 py-14 bg-slate-900 text-white border-b border-slate-800">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-4">핵심 아이디어</h2>
-          <p className="text-center text-white/80 text-sm max-w-2xl mx-auto mb-10">
-            로봇은 행동하고, AI Digital Care Log는 관찰하고 판단하고 학습합니다. 역할이 분리되어야 두 축 모두
-            더 잘 발전할 수 있습니다.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-            <div className="rounded-2xl border border-amber-400/30 bg-amber-500/10 p-7">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-amber-400/20 text-amber-300">
-                  <MarketingIcon name="robot" className="h-6 w-6" />
-                </div>
-                <h3 className="text-xl font-bold text-amber-200">로봇 — 행동한다 (Acts)</h3>
-              </div>
-              <ul className="space-y-2.5 text-sm text-white/85">
-                <li className="flex gap-2">
-                  <span className="text-amber-300 shrink-0">•</span>
-                  <span>물리적 실행체로서 이동 · 알림 · 안내 · 보조를 담당합니다.</span>
-                </li>
-                <li className="flex gap-2">
-                  <span className="text-amber-300 shrink-0">•</span>
-                  <span>센서 · 카메라 · 오디오로 현장 신호를 수집하는 관찰 지점이기도 합니다.</span>
-                </li>
-                <li className="flex gap-2">
-                  <span className="text-amber-300 shrink-0">•</span>
-                  <span>스스로 판단을 처음부터 만들지 않고, Care Log Brain의 결정을 실행합니다.</span>
-                </li>
-              </ul>
-            </div>
-            <div className="rounded-2xl border border-violet-400/30 bg-violet-500/10 p-7">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-violet-400/20 text-violet-300">
-                  <MarketingIcon name="brain" className="h-6 w-6" />
-                </div>
-                <h3 className="text-xl font-bold text-violet-200">AI Digital Care Log — 관찰 · 판단 · 학습</h3>
-              </div>
-              <ul className="space-y-2.5 text-sm text-white/85">
-                <li className="flex gap-2">
-                  <span className="text-violet-300 shrink-0">•</span>
-                  <span>여러 서비스에서 축적된 데이터를 표준 타임라인으로 관찰(Observe)합니다.</span>
-                </li>
-                <li className="flex gap-2">
-                  <span className="text-violet-300 shrink-0">•</span>
-                  <span>위험도 · 우선순위 · 다음 행동 후보를 판단(Judge)합니다.</span>
-                </li>
-                <li className="flex gap-2">
-                  <span className="text-violet-300 shrink-0">•</span>
-                  <span>행동의 결과가 다시 기록되어 다음 판단 기준을 학습(Learn)합니다.</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <p className="text-center text-white/60 text-sm mt-8 max-w-2xl mx-auto">
-            같은 Care Log 코어가 Care · Education · Health 도메인에 공통으로 적용되며, 로봇은 도메인마다 다른
-            몸을 가질 수 있어도 판단 구조는 같은 Brain을 공유합니다.
-          </p>
-        </div>
-      </section>
+      <section id="architecture" className="company-section bg-slate-50"><div className="company-container">
+        <div className="max-w-3xl"><p className="company-eyebrow">System architecture</p><h2 className="company-section-title">센서에서 행동까지, 중간에 맥락·권한·검증을 둡니다</h2></div>
+        <div className="mt-10 grid gap-4 lg:grid-cols-5">{[
+          ['01', 'Perception', '카메라·음성·센서·앱·사람의 관찰'], ['02', 'Timeline', '개인의 과거와 현재를 연결하는 사건·상태 기록'], ['03', 'Context Brain', '기준선·목표·위험·도메인 지식으로 행동 후보 생성'], ['04', 'Policy Guardian', '동의·권한·안전·법적 경계로 행동을 허용하거나 차단'], ['05', 'Action & Review', '말·안내·알림·승인 행동 뒤 결과를 기록하고 복기'],
+        ].map(([step, title, body]) => <article key={step} className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"><p className="text-xs font-black text-primary-700">{step}</p><h3 className="mt-3 text-lg font-black text-slate-950">{title}</h3><p className="mt-3 text-sm leading-6 text-slate-600">{body}</p></article>)}</div>
+        <div className="mt-8 rounded-2xl border border-primary-100 bg-blue-50 p-6 text-sm leading-7 text-slate-700"><strong className="text-slate-950">초개인화의 입력:</strong> 개인 기준선 + 시간·환경 맥락 + 현재 상태 + 목표·위험 + 과거 행동 + 실제 결과. 모델이 사용자를 임의로 규정하지 않고, 근거와 불확실성을 함께 보여주며 사람이 수정할 수 있어야 합니다.</div>
+      </div></section>
 
-      {/* 5. Architecture diagram */}
-      <section id="architecture" className="scroll-mt-28 py-14 bg-white border-b border-gray-100">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
-              Robot Vision Architecture
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Perception → Care Log Brain → Action → Feedback으로 이어지는 구조입니다. AI Digital Care Log가
-              곧 Robot Brain입니다.
-            </p>
-          </div>
-          <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-sm mb-10 bg-white">
-            <img
-              src="/images/research/robot-architecture.svg"
-              alt="Robot Vision Architecture — Perception, Care Log Brain (Context Memory, Reasoning, Policy, Planner), Action, Feedback loop"
-              className="w-full h-auto"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {architectureLayers.map((layer) => (
-              <div key={layer.title} className="rounded-xl border border-gray-200 bg-gray-50 p-6">
-                <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-white border border-gray-200 text-slate-700">
-                  <MarketingIcon name={layer.icon} className="h-5 w-5" />
-                </div>
-                <h3 className="font-bold text-gray-900 mb-3">{layer.title}</h3>
-                <ul className="space-y-1.5 text-sm text-gray-600">
-                  {layer.items.map((item) => (
-                    <li key={item} className="flex gap-2">
-                      <span className="text-gray-400 shrink-0">·</span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-          <p className="text-center text-xs text-gray-400 mt-6">
-            * 물리적 행위(Assist/Fetch)는 안전 정책 하에서만 장기 검토합니다.
-          </p>
-        </div>
-      </section>
+      <section id="scenarios" className="company-section"><div className="company-container">
+        <div className="max-w-3xl"><p className="company-eyebrow">Human scenarios</p><h2 className="company-section-title">로봇은 명령을 수행하기 전에 상황을 묻고 이해합니다</h2></div>
+        <div className="mt-10 space-y-6">{scenarios.map((scenario, index) => <article key={scenario.label} className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm"><div className="grid lg:grid-cols-[0.75fr_1.25fr]"><div className="bg-slate-950 p-7 text-white"><p className="text-xs font-black uppercase tracking-wider text-sky-300">Scenario {index + 1} · {scenario.label}</p><h3 className="mt-4 text-2xl font-black leading-snug">{scenario.prompt}</h3></div><div className="grid gap-5 p-7 md:grid-cols-3">{[['맥락', scenario.context], ['도움', scenario.action], ['결과·경계', scenario.outcome]].map(([label, body]) => <div key={label}><p className="text-xs font-black text-primary-700">{label}</p><p className="mt-2 text-sm leading-6 text-slate-600">{body}</p></div>)}</div></div></article>)}</div>
+      </div></section>
 
-      {/* 6. Data flow diagram */}
-      <section id="data-flow" className="scroll-mt-28 py-14 bg-gray-50 border-b border-gray-100">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">사용자 데이터 → Care Log → Robot</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">동의 기반 데이터가 로봇 행동으로 이어지는 연구 구조입니다.</p>
-          </div>
-          <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-sm mb-10 bg-white">
-            <img
-              src="/images/research/robot-data-flow.svg"
-              alt="사용자 데이터가 AI Digital Care Log를 거쳐 Robot AI Brain, 로봇 행동으로 이어지고 다시 Care Log에 기록되는 흐름"
-              className="w-full h-auto"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-            {dataFlowStages.map((stage) => (
-              <div key={stage.n} className="rounded-xl border border-gray-200 bg-white p-5">
-                <div className="flex items-center gap-2 mb-3">
-                  <span className="flex h-7 w-7 items-center justify-center rounded-full bg-slate-800 text-white text-xs font-bold">
-                    {stage.n}
-                  </span>
-                  <MarketingIcon name={stage.icon} className="h-5 w-5 text-slate-600" />
-                </div>
-                <h3 className="font-bold text-gray-900 text-sm mb-2">{stage.title}</h3>
-                <ul className="space-y-1 text-xs text-gray-600">
-                  {stage.items.map((item) => (
-                    <li key={item}>· {item}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-          <div className="max-w-3xl mx-auto rounded-xl border border-amber-200 bg-amber-50/70 p-5 text-center">
-            <p className="text-sm font-semibold text-amber-900 leading-relaxed">
-              핵심 원칙: 로봇은 데이터를 소유하지 않고, Care Log가 맥락을 소유합니다.
-            </p>
-            <p className="text-xs text-amber-800 mt-2">
-              동의 · 최소수집 · 가명/암호화가 1단계부터 전제되며, Research 단계이지 상용 로봇 제품 · 판매가
-              아닙니다.
-            </p>
-          </div>
-        </div>
-      </section>
+      <section id="authority" className="company-section bg-amber-50/60"><div className="company-container">
+        <div className="max-w-3xl"><p className="text-sm font-black uppercase tracking-wider text-amber-700">Action authority</p><h2 className="company-section-title mt-3">할 수 있는 행동보다, 해도 되는 행동을 먼저 정합니다</h2><p className="company-section-lead">권한 수준은 기능 목록이 아니라 연구·PoC를 통과하기 위한 안전 게이트입니다.</p></div>
+        <div className="mt-10 grid gap-4 lg:grid-cols-5">{authority.map((item) => <article key={item.level} className="rounded-2xl border border-amber-200 bg-white p-5"><div className="flex items-center justify-between gap-2"><span className="rounded-full bg-slate-950 px-3 py-1 text-xs font-black text-white">{item.level}</span><span className="text-[11px] font-bold text-amber-800">{item.status}</span></div><h3 className="mt-4 text-lg font-black text-slate-950">{item.title}</h3><p className="mt-3 text-sm leading-6 text-slate-600">{item.body}</p></article>)}</div>
+      </div></section>
 
-      {/* 7. Service connections */}
-      <section id="services" className="scroll-mt-28 py-14 bg-white border-b border-gray-100">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
-              현재 서비스가 로봇에 연결되는 방식
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              새로운 로봇 서비스를 처음부터 만들지 않습니다. 베타·파일럿·개발 중인 서비스의 데이터와 AI Core가
-              각자의 방식으로 로봇 역할에 연결됩니다.
-            </p>
-          </div>
-          <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-sm mb-10 bg-white">
-            <img
-              src="/images/research/robot-service-map.svg"
-              alt="DAL Services x Robot Vision — 자람이, 시니어앤라이프, 토탈케어로그, 에듀케어로그, 베지케어, Pet AI가 각각 다른 로봇 역할로 연결되는 개념도"
-              className="w-full h-auto"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {serviceRobotMap.map((s) => (
-              <div key={s.service} className="rounded-xl border border-gray-200 bg-gray-50 p-6">
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white border border-gray-200 text-slate-700">
-                    <MarketingIcon name={s.icon} className="h-5 w-5" />
-                  </div>
-                  <div>
-                    <Link href={s.url} className="font-bold text-gray-900 text-sm hover:text-amber-700">
-                      {s.service}
-                    </Link>
-                    <p className="text-xs text-gray-500">{s.domain}</p>
-                  </div>
-                </div>
-                <p className="text-xs text-gray-500 mb-2">
-                  <span className="font-semibold text-gray-600">현재 데이터</span> · {s.currentData}
-                </p>
-                <p className="text-sm font-semibold text-amber-800 mb-2">→ {s.robotRole}</p>
-                <ul className="space-y-1 text-xs text-gray-600">
-                  {s.examples.map((ex) => (
-                    <li key={ex} className="flex gap-2">
-                      <span className="text-amber-500 shrink-0">·</span>
-                      <span>{ex}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-            <div className="rounded-xl border border-violet-200 bg-violet-50/60 p-6">
-              <div className="flex items-center gap-3 mb-3">
-                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white border border-violet-200 text-violet-700">
-                  <MarketingIcon name={petAiRobot.icon} className="h-5 w-5" />
-                </div>
-                <div>
-                  <Link href={petAiRobot.url} className="font-bold text-gray-900 text-sm hover:text-violet-700">
-                    {petAiRobot.service}
-                  </Link>
-                  <p className="text-xs text-gray-500">{petAiRobot.domain}</p>
-                </div>
-              </div>
-              <p className="text-xs text-gray-500 mb-2">
-                <span className="font-semibold text-gray-600">현재 데이터</span> · {petAiRobot.currentData}
-              </p>
-              <p className="text-sm font-semibold text-violet-800 mb-2">→ {petAiRobot.robotRole}</p>
-              <ul className="space-y-1 text-xs text-gray-600 mb-3">
-                {petAiRobot.examples.map((ex) => (
-                  <li key={ex} className="flex gap-2">
-                    <span className="text-violet-500 shrink-0">·</span>
-                    <span>{ex}</span>
-                  </li>
-                ))}
-              </ul>
-              <Link href={petAiRobot.url} className="text-violet-700 text-xs font-semibold hover:underline">
-                Pet AI Digital Care Log 연구 보기 →
-              </Link>
-            </div>
-          </div>
-          <p className="text-center text-xs text-gray-400 mt-8 max-w-2xl mx-auto">{marriageRobotNote}</p>
-        </div>
-      </section>
+      <section id="evidence" className="company-section"><div className="company-container">
+        <div className="max-w-3xl"><p className="company-eyebrow">Evidence before autonomy</p><h2 className="company-section-title">데모가 아니라, 사람에게 실제 도움이 되었는지 검증합니다</h2><p className="company-section-lead">아래는 달성 수치가 아니라 연구·PoC에서 사전에 정의할 평가 항목입니다.</p></div>
+        <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">{metrics.map(([title, body]) => <article key={title} className="company-card"><h3 className="text-lg font-black text-slate-950">{title}</h3><p className="mt-3 text-sm leading-6 text-slate-600">{body}</p></article>)}</div>
+        <div className="mt-8 grid gap-4 md:grid-cols-4">{['가설·대상·책임자 정의', '동의된 데이터와 기준선 확보', '관찰·알림 중심 샌드박스', '현장 결과 검증 후 권한 확대 판단'].map((item, index) => <div key={item} className="rounded-xl bg-slate-950 p-4 text-sm font-bold text-white"><span className="mr-2 text-sky-300">G{index + 1}</span>{item}</div>)}</div>
+      </div></section>
 
-      {/* 8. Care / Education / Health deep dive */}
-      <section id="domains" className="scroll-mt-28 py-14 bg-gray-50 border-b border-gray-100">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">돌봄 · 교육 · 건강 — 로봇 적용 축</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              동일한 Care Log 코어이지만, 도메인마다 로봇에게 요구되는 역할과 판단 기준이 달라집니다.
-            </p>
-          </div>
-          <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-sm mb-10 bg-white">
-            <img
-              src="/images/research/robot-domains-care-edu-health.svg"
-              alt="돌봄 교육 건강 로봇 적용 축 — 동일 Care Log 코어, 도메인별 데이터 판단 행동 구조"
-              className="w-full h-auto"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {domainPillars.map((d) => (
-              <div key={d.title} className="rounded-2xl border border-gray-200 bg-white p-6">
-                <div className="flex items-center gap-3 mb-2">
-                  <MarketingIcon name={d.icon} className="h-6 w-6 text-slate-700" />
-                  <h3 className="font-bold text-gray-900">{d.title}</h3>
-                </div>
-                <p className="text-xs text-gray-500 mb-4">{d.subtitle}</p>
-                <p className="text-sm text-gray-700 leading-relaxed mb-4">{d.services}</p>
-                <div className="space-y-2 text-xs">
-                  <div className="rounded-lg bg-gray-50 border border-gray-100 p-2.5">
-                    <span className="font-semibold text-gray-500">데이터</span>
-                    <span className="text-gray-700 ml-1">{d.data}</span>
-                  </div>
-                  <div className="rounded-lg bg-gray-50 border border-gray-100 p-2.5">
-                    <span className="font-semibold text-gray-500">판단</span>
-                    <span className="text-gray-700 ml-1">{d.judgment}</span>
-                  </div>
-                  <div className="rounded-lg bg-gray-50 border border-gray-100 p-2.5">
-                    <span className="font-semibold text-gray-500">행동</span>
-                    <span className="text-gray-700 ml-1">{d.action}</span>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <section id="governance" className="company-section bg-slate-50"><div className="company-container"><div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+        <div><p className="company-eyebrow">Safety · Rights · Governance</p><h2 className="company-section-title">로봇이 데이터를 소유하지 않습니다</h2><p className="company-section-lead">사용자와 현장이 데이터의 목적·접근·보관·철회를 통제하고, 로봇은 허용된 맥락만 일시적으로 사용합니다.</p></div>
+        <div className="grid gap-4 sm:grid-cols-2">{[
+          ['목적별 동의', '돌봄·연구·모델 개선·외부 연동을 하나의 포괄 동의로 묶지 않습니다.'], ['최소 수집', '과업에 필요한 센서와 기간만 사용하고 원본 영상·음성 보관을 최소화합니다.'], ['설명·수정', '왜 알림이나 제안이 나왔는지 보여주고 사용자와 전문가가 맥락을 고칩니다.'], ['즉시 중단', '사람이 언제든 행동을 중단하고 수동 운영으로 전환할 수 있어야 합니다.'], ['도메인 분리', '의료·금융·교육의 원본과 실행 권한을 서로 넘기지 않습니다.'], ['감사 가능성', '입력·판단 근거·정책·승인·행동·결과를 재현 가능한 기록으로 남깁니다.'],
+        ].map(([title, body]) => <article key={title} className="rounded-2xl border border-slate-200 bg-white p-5"><h3 className="font-black text-slate-950">{title}</h3><p className="mt-2 text-sm leading-6 text-slate-600">{body}</p></article>)}</div>
+      </div></div></section>
 
-      {/* 9. Scenario examples */}
-      <section id="scenarios" className="scroll-mt-28 py-14 bg-white border-b border-gray-100">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">시나리오 예시 (Research)</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              실제 출시 제품이 아닌, 기술 연결을 이해하기 위한 시나리오입니다.
-            </p>
-          </div>
-          <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-sm mb-10 bg-white">
-            <img
-              src="/images/research/robot-scenario-examples.svg"
-              alt="시나리오 예시 — 시니어 돌봄, 발달 학습 보조, 건강 관리 각각 Care Log 관찰부터 로봇 행동, 가족 알림까지의 흐름"
-              className="w-full h-auto"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {scenarios.map((sc) => (
-              <div key={sc.title} className="rounded-2xl border border-gray-200 bg-gray-50 p-6">
-                <div className="flex items-center gap-3 mb-1">
-                  <MarketingIcon name={sc.icon} className="h-6 w-6 text-slate-700" />
-                  <h3 className="font-bold text-gray-900">{sc.title}</h3>
-                </div>
-                <p className="text-xs text-gray-500 mb-1">기반: {sc.based}</p>
-                <p className="text-xs text-gray-500 mb-4">데이터: {sc.data}</p>
-                <ol className="space-y-2 text-sm text-gray-700">
-                  {sc.steps.map((step, i) => (
-                    <li key={step} className="flex gap-2">
-                      <span className="shrink-0 flex h-5 w-5 items-center justify-center rounded-full bg-slate-800 text-white text-[10px] font-bold">
-                        {i + 1}
-                      </span>
-                      <span>{step}</span>
-                    </li>
-                  ))}
-                </ol>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <section id="faq" className="company-section"><div className="company-container max-w-4xl"><p className="company-eyebrow">FAQ</p><h2 className="company-section-title">자주 묻는 질문</h2><div className="mt-8 divide-y divide-slate-200 rounded-2xl border border-slate-200 bg-white px-6">{faqItems.map((item) => <details key={item.q} className="group py-5"><summary className="cursor-pointer list-none font-black text-slate-950">{item.q}<span className="float-right text-primary-700 group-open:rotate-45">＋</span></summary><p className="mt-3 pr-6 text-sm leading-7 text-slate-600">{item.a}</p></details>)}</div></div></section>
 
-      {/* 10. Technology reuse */}
-      <section id="tech-reuse" className="scroll-mt-28 py-14 bg-gray-50 border-b border-gray-100">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">DAL 기술 재사용</h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">
-              로봇 전용 기술을 처음부터 만들지 않습니다. DAL 서비스에서 검증·전개 중인 여섯 가지 기술
-              축을 Robot Brain 구조에 재사용합니다.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
-            {techReuseItems.map((item) => (
-              <div key={item.title} className="rounded-xl border border-gray-200 bg-white p-6">
-                <div className="mb-3 text-slate-700">
-                  <MarketingIcon name={item.icon} className="h-8 w-8" />
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">{item.title}</h3>
-                <p className="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 11. Data usage & consent */}
-      <section id="data-usage" className="scroll-mt-28 py-14 bg-white border-b border-gray-100">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">어떤 데이터를 사용하는가</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              도메인별로 로봇 연동에 필요한 최소한의 데이터만 사용하는 것을 연구 원칙으로 합니다.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-10">
-            {dataUsageByDomain.map((d) => (
-              <div key={d.domain} className="rounded-xl border border-gray-200 bg-gray-50 p-6">
-                <div className="flex items-center gap-3 mb-3">
-                  <MarketingIcon name={d.icon} className="h-6 w-6 text-slate-700" />
-                  <h3 className="font-bold text-gray-900">{d.domain}</h3>
-                </div>
-                <p className="text-sm text-gray-600 leading-relaxed">{d.used}</p>
-              </div>
-            ))}
-          </div>
-          <div className="max-w-3xl mx-auto rounded-2xl border border-red-200 bg-red-50/60 p-6 md:p-7">
-            <div className="flex items-center gap-3 mb-4">
-              <MarketingIcon name="lock" className="h-6 w-6 text-red-700" />
-              <h3 className="font-bold text-red-900">동의 없이는 절대 하지 않는 것</h3>
-            </div>
-            <ul className="space-y-2.5 text-sm text-red-800">
-              {neverWithoutConsent.map((item) => (
-                <li key={item} className="flex gap-2">
-                  <span className="text-red-500 shrink-0">✕</span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* 12. Safety / Ethics / HITL */}
-      <section id="safety" className="scroll-mt-28 py-14 bg-slate-900 text-white border-b border-slate-800">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <h2 className="text-2xl md:text-3xl font-bold mb-3">안전 · 윤리 · Fail-safe 원칙</h2>
-            <p className="text-white/75 max-w-2xl mx-auto">
-              로봇이 사람의 삶에 개입하는 만큼, 기술보다 원칙을 먼저 정의합니다.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
-            {safetyPrinciples.map((p) => (
-              <div key={p.title} className="rounded-xl border border-white/15 bg-white/5 p-5">
-                <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-lg bg-white/10 text-amber-300">
-                  <MarketingIcon name={p.icon} className="h-5 w-5" />
-                </div>
-                <h3 className="font-bold text-white text-sm mb-2">{p.title}</h3>
-                <p className="text-xs text-white/75 leading-relaxed">{p.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 13. Roadmap */}
-      <section id="roadmap" className="scroll-mt-28 py-14 bg-gray-50 border-b border-gray-100">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">연구 방향 (로드맵)</h2>
-            <p className="text-gray-600">출시 일정이 아닌 연구 · 기술 개발 방향입니다.</p>
-          </div>
-          <ol className="max-w-2xl mx-auto space-y-4">
-            {roadmapSteps.map((step) => (
-              <li key={step.t} className="flex gap-4 items-start rounded-xl border border-gray-200 bg-white p-5">
-                <span className="shrink-0 flex h-9 w-9 items-center justify-center rounded-full bg-slate-800 text-white text-sm font-bold">
-                  {step.t}
-                </span>
-                <div className="flex items-start gap-2 pt-1">
-                  <MarketingIcon name={step.icon} className="h-5 w-5 text-amber-600 shrink-0 mt-0.5" />
-                  <span className="text-sm text-gray-700 leading-relaxed">{step.d}</span>
-                </div>
-              </li>
-            ))}
-          </ol>
-          <p className="text-center text-xs text-gray-400 mt-6">
-            * 특정 연도 · 출시일을 명시하지 않습니다. 서비스 도메인 심화 속도에 따라 연구 우선순위가 조정됩니다.
-          </p>
-        </div>
-      </section>
-
-      {/* 14. Value for partners / investors */}
-      <section id="value" className="scroll-mt-28 py-14 bg-white border-b border-gray-100">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-4">
-            파트너 · 투자자를 위한 가치
-          </h2>
-          <p className="text-center text-gray-600 text-sm max-w-2xl mx-auto mb-10">
-            로봇 하드웨어 파트너, 비즈니스 파트너, 투자자·R&D 관점에서 Robot Vision이 갖는 의미는 다릅니다.
-          </p>
-          <div className="grid md:grid-cols-3 gap-5">
-            {valueColumns.map((col) => (
-              <div key={col.title} className="rounded-2xl border border-gray-200 bg-gray-50/70 p-6">
-                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-white border border-gray-200 text-amber-700">
-                  <MarketingIcon name={col.icon} className="h-6 w-6" />
-                </div>
-                <h3 className="font-bold text-gray-900 mb-4">{col.title}</h3>
-                <ul className="space-y-2.5 text-sm text-gray-700">
-                  {col.items.map((item, i) => (
-                    <li key={i} className="flex gap-2">
-                      <span className="text-amber-500 shrink-0">•</span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 15. FAQ */}
-      <section id="faq" className="scroll-mt-28 py-14 bg-gray-50 border-b border-gray-100">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-4">자주 묻는 질문</h2>
-          <p className="text-center text-gray-600 text-sm mb-10">
-            연구 단계와 Pet AI와의 관계를 명확히 구분해 답합니다.
-          </p>
-          <div className="space-y-4">
-            {faqItems.map((item) => (
-              <details
-                key={item.q}
-                className="group rounded-xl border border-gray-200 bg-white p-5 [&_summary::-webkit-details-marker]:hidden"
-              >
-                <summary className="flex cursor-pointer items-start justify-between gap-3 font-bold text-gray-900 text-sm">
-                  {item.q}
-                  <span className="shrink-0 text-amber-600 transition-transform group-open:rotate-45">+</span>
-                </summary>
-                <p className="mt-3 text-sm text-gray-700 leading-relaxed">{item.a}</p>
-              </details>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 16. Related links */}
-      <section className="py-14 bg-white border-b border-gray-100">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-xl font-bold text-gray-900 mb-6">관련 페이지</h2>
-          <div className="flex flex-wrap justify-center gap-3">
-            <Link
-              href="/research"
-              className="px-5 py-2.5 rounded-lg border border-gray-300 bg-white text-gray-800 font-semibold hover:bg-gray-50 text-sm"
-            >
-              Research 허브
-            </Link>
-            <Link
-              href="/research/pet-ai"
-              className="px-5 py-2.5 rounded-lg border border-gray-300 bg-white text-gray-800 font-semibold hover:bg-gray-50 text-sm"
-            >
-              Pet AI Digital Care Log
-            </Link>
-            <Link
-              href="/technology"
-              className="px-5 py-2.5 rounded-lg border border-gray-300 bg-white text-gray-800 font-semibold hover:bg-gray-50 text-sm"
-            >
-              기술
-            </Link>
-            <Link
-              href="/services"
-              className="px-5 py-2.5 rounded-lg border border-gray-300 bg-white text-gray-800 font-semibold hover:bg-gray-50 text-sm"
-            >
-              서비스 (Products)
-            </Link>
-            <Link
-              href="/contact?type=tech&service=research"
-              className="px-5 py-2.5 rounded-lg bg-slate-800 text-white font-semibold hover:bg-slate-900 text-sm"
-            >
-              R&D 문의
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* 17. CTA */}
-      <section className="py-14 bg-gradient-to-r from-slate-900 to-zinc-900 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl font-bold mb-4">연구 · 기술 협력 문의</h2>
-          <p className="text-white/80 mb-8 max-w-2xl mx-auto">
-            Robot Vision은 연구 · Future Vision 영역입니다. 제품 가입이 아닌 R&D · 기술 협력 · 로봇 하드웨어
-            파트너십 관점으로 문의해 주세요. Care Log AI Brain 구조, 도메인별 재사용 가능한 기술 자산, 투자자
-            관점의 확장성 모두 같은 담당자가 안내합니다.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Link
-              href="/contact?type=tech&service=research"
-              className="inline-flex justify-center px-6 py-3 rounded-lg bg-amber-400 text-slate-900 font-semibold hover:bg-amber-300"
-            >
-              R&D 문의
-            </Link>
-            <Link
-              href="/research"
-              className="inline-flex justify-center px-6 py-3 rounded-lg border-2 border-white text-white font-semibold hover:bg-white/10"
-            >
-              Research 허브
-            </Link>
-            <Link
-              href="/research/pet-ai"
-              className="inline-flex justify-center px-6 py-3 rounded-lg border-2 border-white/60 text-white font-semibold hover:bg-white/10"
-            >
-              Pet AI Digital Care Log
-            </Link>
-          </div>
-        </div>
-      </section>
-
+      <section className="border-t border-slate-200 bg-slate-950 py-16 text-white"><div className="mx-auto max-w-4xl px-4 text-center sm:px-6"><p className="text-sm font-black uppercase tracking-wider text-sky-300">Research collaboration</p><h2 className="mt-4 text-3xl font-black">현장 문제와 행동 권한부터 함께 정의합니다</h2><p className="mx-auto mt-4 max-w-2xl text-slate-300">돌봄기관·교육현장·로봇 하드웨어·센서·HRI·접근성·안전 연구 파트너와 단계별 PoC를 논의합니다.</p><div className="mt-8 flex flex-wrap justify-center gap-3"><Link href="/contact?type=tech&service=robot-vision" className="rounded-lg bg-sky-400 px-6 py-3 font-black text-slate-950 hover:bg-sky-300">R&D 협력 문의</Link><Link href="/research" className="rounded-lg border border-white/30 px-6 py-3 font-black hover:bg-white/10">미래 연구 전체 보기</Link></div></div></section>
       <Footer />
     </div>
   )

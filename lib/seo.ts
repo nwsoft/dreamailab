@@ -238,6 +238,7 @@ export function buildPageMetadata(options: {
   path: string
   ogTitle?: string
   ogDescription?: string
+  ogImage?: string
   ogImageAlt?: string
   type?: 'website' | 'article'
 }): Metadata {
@@ -251,9 +252,11 @@ export function buildPageMetadata(options: {
       description: options.ogDescription ?? options.description,
       url: canonical,
       siteName: defaultOpenGraph.siteName,
-      images: options.ogImageAlt
-        ? [{ ...defaultOpenGraph.images[0], alt: options.ogImageAlt }]
-        : defaultOpenGraph.images,
+      images: options.ogImage
+        ? [{ url: absoluteUrl(options.ogImage), width: 1200, height: 630, alt: options.ogImageAlt ?? options.ogTitle ?? options.title }]
+        : options.ogImageAlt
+          ? [{ ...defaultOpenGraph.images[0], alt: options.ogImageAlt }]
+          : defaultOpenGraph.images,
       locale: defaultOpenGraph.locale,
       type: options.type ?? 'website',
     },
@@ -261,6 +264,7 @@ export function buildPageMetadata(options: {
       ...defaultTwitter,
       title: options.ogTitle ?? options.title,
       description: options.ogDescription ?? options.description,
+      ...(options.ogImage ? { images: [absoluteUrl(options.ogImage)] } : {}),
     },
     robots: {
       index: true,
