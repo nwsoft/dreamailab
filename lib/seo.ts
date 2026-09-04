@@ -154,7 +154,7 @@ export function buildNewsArticleJsonLd(
     headline: localized.title,
     description: localized.excerpt,
     datePublished: article.date,
-    dateModified: article.date,
+    dateModified: article.modifiedDate ?? article.date,
     inLanguage: locale === 'en' ? 'en-US' : 'ko-KR',
     articleSection: getCategoryName(article.category),
     author: {

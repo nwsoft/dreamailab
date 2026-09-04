@@ -44,6 +44,7 @@ export interface NewsArticle {
   content: string
   category: string
   date: string
+  modifiedDate?: string
   image: string
   featured: boolean
   author?: string
@@ -90,11 +91,12 @@ export const newsArticles: NewsArticle[] = [
   {
     id: 96,
     title:
-      'NoahAI, AI 커스텀을 ‘전략 스튜디오’로 정식화…세계 최초 ‘전략 검증 여권 생태계’ 목표',
+      'NoahAI, AI 커스텀을 ‘전략 스튜디오’로 정식화…세계 최초 ‘검증 여권형 전략 마켓’ 도전',
     excerpt:
-      'NoahAI Labs가 AI Custom의 공식 사용자 명칭을 Strategy Studio로 바꾸고, 전략 원문·실행 규칙·거래소별 PAPER·확인 체결·버전 여권·구매자 재검증을 잇는 새로운 전략 신뢰 생태계를 제시했다. 세계 최초 표현은 이 결합 범주와 목표에 한정한다.',
+      'NoahAI Labs가 백테스트와 자기신고 수익률 중심의 전략 유통 문제를 바꾸기 위해 AI Custom을 Strategy Studio로 정식화했다. 국면별 승률·순수익·낙폭과 검증 근거를 여권으로 확인하고 NoahAI에서 다시 검증·운용하는 세계 최초 결합 생태계를 목표로 한다.',
     category: 'press',
     date: '2026-09-04',
+    modifiedDate: '2026-09-05',
     image: '🧭',
     featured: true,
     author: 'NoahAI Labs',
@@ -174,6 +176,11 @@ export const newsArticles: NewsArticle[] = [
       '알고리즘 트레이딩',
       '검증 전략 허브',
       '투자전략 마켓',
+      '시장국면별 전략',
+      '전략 마켓플레이스',
+      '가짜 수익률 검증',
+      '백테스트 검증',
+      '알고리즘 전략 사기 예방',
     ],
     faq: [
       {
@@ -202,20 +209,35 @@ export const newsArticles: NewsArticle[] = [
           '아니다. 지원되는 제한형 실행 규칙으로 정확히 구조화할 수 있는 조건만 실행 대상으로 삼는다. 보호된 Pine 소스 우회, 임의 Python과 외부 라이브러리 전체 실행, 이해하지 못한 공식의 추측, 리페인팅 전략의 자동 승인은 지원하지 않으며 미해석 조건은 차단한다.',
       },
       {
+        question: '전략 마켓플레이스에서는 무엇을 비교할 수 있나요?',
+        answer:
+          '목표 사용자 경험은 전략 이름이나 최고 수익률만 보는 것이 아니다. 상승·하락·횡보·고변동 같은 시장국면별 승률과 비용 차감 순수익률, 최대낙폭, 연속 손실, 거래 수와 검증 기간을 함께 보고, 결과가 백테스트·OOS·PAPER·확인 체결 중 어느 단계인지 구분하는 것이다. 거래소, 현물·선물, 기준통화, 전략 버전과 마지막 검증 시각도 함께 확인한다. 다만 2026년 9월 5일 현재 공개 검증 전략은 0개로, 이는 전략 축적 뒤 제공할 목표 경험이다.',
+      },
+      {
+        question: '마켓에서 받은 전략을 NoahAI와 연동하면 어떻게 되나요?',
+        answer:
+          '전략 패키지는 비활성 검토 상태로 가져온 뒤 사용자 환경에서 무결성 확인과 재검증, PAPER, 최종 승인을 거친다. 승인된 전략도 선언된 시장국면과 거래소·자산 조건이 맞을 때만 신규 진입 후보가 되고, 맞지 않으면 HOLD하거나 기본 NoahAI 판단에 위임한다. 손실·포지션·레버리지 같은 공통 가드레일은 항상 우선하며 구매나 다운로드가 자동 LIVE 실행을 뜻하지 않는다.',
+      },
+      {
+        question: '검증 여권이 생기면 사기 전략과 가짜 수익률이 없어지나요?',
+        answer:
+          '완전히 없어진다고 보장할 수 없다. 대신 선택한 기간의 백테스트, 비용·슬리피지 누락, PAPER를 실체결처럼 표시한 결과, 다른 버전의 성과 재사용을 분리해 드러내고 구매자가 같은 버전을 다시 검증하게 한다. 검증 근거가 빈 전략이 높은 자기신고 수익률만으로 상위에 노출되기 어렵게 만드는 것이 목표다.',
+      },
+      {
         question: '전략 마켓에서 지금 유료 판매와 제작자 정산이 가능한가요?',
         answer:
-          '아니다. 현재 daltrading의 검증 전략 허브는 제출·검토·다운로드와 구매자 PAPER 재검증을 위한 무료 공개 베타 단계다. 포인트 구매, 계정별 유료 라이선스, 제작자 수익·정산과 분쟁 처리는 후속 Marketplace 범위다.',
+          '아니다. 현재 daltrading의 검증 전략 허브는 제출·검토·다운로드와 구매자 PAPER 재검증을 위한 무료 공개 베타이며, 공개 검증 전략은 아직 0개다. 포인트 구매, 계정별 유료 라이선스, 제작자 수익·정산과 분쟁 처리는 후속 Marketplace 범위다.',
       },
     ],
     content: `
-      <p class="text-sm text-gray-500 mb-6">[보도자료 · 2026-09-04]</p>
+      <p class="text-sm text-gray-500 mb-6">[보도자료 · 2026-09-04 · 2026-09-05 시장·마켓플레이스 설명 보강]</p>
       <p class="text-xl font-semibold text-gray-800 mb-4 leading-relaxed">
-        AI Custom에서 Strategy Studio로…전략 원문부터 실행·검증·재검증까지 하나의 생명주기로 연결
+        백테스트 수익률을 파는 시장에서, 전략의 원문·실행·국면별 결과를 증명하는 시장으로
       </p>
       <ul class="list-disc list-inside text-lg text-gray-800 mb-8 space-y-2 leading-relaxed">
-        <li>원문 의미와 실제 실행 규칙을 연결하고 미해석 조건은 승인·실행 차단</li>
-        <li>거래소·시장·통화·전략 버전별 PAPER와 확인 체결 근거 분리</li>
-        <li>제작자 증명에서 구매자 환경 재검증까지 이어지는 검증 여권 구상</li>
+        <li>국면별 승률·순수익·낙폭을 표본·비용·검증 단계와 함께 비교</li>
+        <li>전략 원문과 실행 규칙을 연결하고 미해석 조건과 버전 불일치를 차단</li>
+        <li>마켓에서 탐색한 전략을 NoahAI에서 재검증·승인한 뒤 국면에 맞춰 운용</li>
       </ul>
       <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-4">
         금융 AI 서비스 <strong>NoahAI</strong>를 운영하는 <strong>NoahAI Labs</strong>가 기존 &lsquo;AI 커스텀&rsquo; 기능의 공식 사용자 명칭을 <strong>&lsquo;NoahAI 전략 스튜디오(Strategy Studio)&rsquo;</strong>로 정식화하고, 전략이 무엇을 주장했는지부터 실제로 무엇을 실행했는지까지 증거로 연결하는 <strong>&lsquo;전략 검증 여권 생태계&rsquo;</strong>를 제품 방향으로 제시했다.
@@ -225,6 +247,20 @@ export const newsArticles: NewsArticle[] = [
         <img src="/images/news/news-96-noahai-strategy-studio-passport-og.jpg" alt="NoahAI 전략 스튜디오가 전략 원문, 실행 규칙, 거래소별 PAPER, 검증 여권, 구매자 재검증을 연결하는 생명주기" width="1200" height="630" class="h-auto w-full" loading="eager" decoding="async" />
         <figcaption class="px-5 py-3 text-sm text-slate-300">NoahAI가 제시한 전략 신뢰 생명주기. 각 단계의 구현·배포·운영 검증 상태는 구분해 공개한다.</figcaption>
       </figure>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">어떤 시장을 바꾸려는가</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        전략 스튜디오가 겨냥하는 곳은 전 세계 개인투자자·전략 제작자·Pine 사용자·알고리즘 트레이더가 전략 파일과 신호, 구독권을 만들고 공유하거나 판매하는 <strong>투자전략 유통·검증 시장</strong>이다. 지금까지 이 시장의 대표 상품은 코드, 매매 신호, 백테스트 리포트 또는 수익률 화면이었다. 하지만 구매자가 실제로 받는 전략이 판매 화면과 같은 버전인지, 같은 비용과 거래소 조건에서 재현되는지, 지금 시장국면에도 맞는지는 별개의 문제로 남았다.
+      </p>
+      <div class="grid md:grid-cols-2 gap-4 mb-8">
+        <div class="rounded-xl border border-rose-200 bg-rose-50 p-5"><h3 class="font-bold text-rose-950 mb-2">선택된 백테스트</h3><p class="text-gray-700 leading-relaxed">유리한 기간과 파라미터만 고르면 과거 성과가 크게 보일 수 있다. 과거 데이터 연구 자체는 유용하지만 미래 수익 증명은 아니다.</p></div>
+        <div class="rounded-xl border border-amber-200 bg-amber-50 p-5"><h3 class="font-bold text-amber-950 mb-2">비용이 빠진 수익률</h3><p class="text-gray-700 leading-relaxed">수수료·슬리피지·스프레드·부분체결이 빠지면 총수익은 실제 운용 결과보다 유리하게 보일 수 있다.</p></div>
+        <div class="rounded-xl border border-violet-200 bg-violet-50 p-5"><h3 class="font-bold text-violet-950 mb-2">시장국면을 숨긴 평균</h3><p class="text-gray-700 leading-relaxed">상승장에만 강한 전략도 전체 평균 하나로 제시하면 하락·횡보·고변동 구간의 취약점이 보이지 않는다.</p></div>
+        <div class="rounded-xl border border-slate-200 bg-slate-50 p-5"><h3 class="font-bold text-slate-950 mb-2">버전과 체결 근거 단절</h3><p class="text-gray-700 leading-relaxed">성과 화면과 판매 파일, 구매자가 실행한 규칙이 서로 다른 버전이어도 이를 대조할 공통 식별자와 원장이 부족하다.</p></div>
+      </div>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        미국 상품선물거래위원회(CFTC)는 인터넷에서 판매되는 거래 시스템의 가상 성과가 실제 시장 조건을 거치지 않아 성과를 과대·과소평가할 수 있고, 선택된 과거 거래나 수수료·비용 누락에도 주의해야 한다고 안내한다. TradingView도 전략 공개 시 현실적인 커미션과 표본, 리페인팅·미래 데이터 사용 여부를 검토 대상으로 둔다. (<a href="https://www.cftc.gov/LearnAndProtect/AdvisoriesAndArticles/fraudadv_tradingsystem.html" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">CFTC 인터넷 거래 시스템 경고</a>, <a href="https://www.tradingview.com/support/solutions/43000764681-strategy-publishing-rules/" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">TradingView 전략 공개 규칙</a>, <a href="https://www.tradingview.com/support/solutions/43000614705-strategy-produces-unrealistically-good-results-by-peeking-into-the-future/" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">TradingView 비현실적 백테스트 안내</a>)
+      </p>
 
       <h2 class="text-2xl font-bold text-gray-900 mb-4">AI 커스텀에서 ‘전략 스튜디오’로</h2>
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
@@ -246,6 +282,55 @@ export const newsArticles: NewsArticle[] = [
         컴파일러가 진입 조건이나 단위를 정확히 구조화하지 못하면 그럴듯한 값으로 채우지 않는다. <code>supported</code>, <code>needs_clarification</code>, <code>unsupported</code>로 구분하고, 실행 규칙이 비어 있으면 &lsquo;원문 보관·실행 규칙 미구조화&rsquo; 상태로 승인과 PAPER 적용을 차단한다.
       </p>
 
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">마켓플레이스에서 누구나 무엇을 확인하게 되는가</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        검증 전략이 충분히 축적되면 사용자는 &lsquo;수익률이 가장 높은 전략&rsquo;만 찾는 대신 자신의 목적·거래소·계정 규모·시장국면에 맞는 전략을 탐색하게 된다. 상승·하락·횡보·고변동 구간별 승률과 수익률을 볼 수 있지만, 숫자는 반드시 표본 수·기간·비용·위험·검증 단계와 함께 표시하는 것이 원칙이다.
+      </p>
+      <div class="overflow-x-auto mb-8 rounded-2xl border border-slate-200">
+        <table class="min-w-full divide-y divide-slate-200 text-left text-sm">
+          <thead class="bg-slate-900 text-white"><tr><th class="px-5 py-4 font-bold">확인 영역</th><th class="px-5 py-4 font-bold">검증 여권에서 함께 보는 정보</th><th class="px-5 py-4 font-bold">막으려는 오해</th></tr></thead>
+          <tbody class="divide-y divide-slate-200 bg-white text-slate-700">
+            <tr><th class="px-5 py-4 font-bold text-slate-900">시장국면</th><td class="px-5 py-4">상승·하락·횡보·고변동, 허용·금지 국면</td><td class="px-5 py-4">한 국면의 성과를 모든 시장에 일반화</td></tr>
+            <tr><th class="px-5 py-4 font-bold text-slate-900">성과·위험</th><td class="px-5 py-4">승률, 비용 차감 순수익률, MDD, 연속 손실, 거래 수와 기간</td><td class="px-5 py-4">최고 수익률 하나만 강조</td></tr>
+            <tr><th class="px-5 py-4 font-bold text-slate-900">증거 단계</th><td class="px-5 py-4">과거 재생, OOS·워크포워드, PAPER, 확인된 LIVE 체결</td><td class="px-5 py-4">모의 결과를 실제 체결처럼 표시</td></tr>
+            <tr><th class="px-5 py-4 font-bold text-slate-900">시장 계약</th><td class="px-5 py-4">거래소, 자산, 현물·선물, 시간봉, KRW·USDT, 비용·슬리피지</td><td class="px-5 py-4">다른 시장과 통화의 결과를 임의 합산</td></tr>
+            <tr><th class="px-5 py-4 font-bold text-slate-900">재현성</th><td class="px-5 py-4">전략 ID·버전, 원문·IR·패키지 해시, 데이터 스냅샷, 마지막 검증 시각</td><td class="px-5 py-4">판매한 전략과 성과를 낸 전략의 버전 불일치</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        사용자는 &lsquo;Binance 선물·횡보장·소액 계정·낙폭 우선&rsquo;처럼 조건을 좁혀 전략을 찾고, 제작자가 제출한 결과가 아니라 플랫폼이 확인한 증거 단계와 한계를 함께 읽게 된다. 다만 <a href="https://daltrading.net/strategies" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">현재 공개 검증 전략 허브</a>에서 검증 게이트를 통과한 전략은 <strong>2026년 9월 5일 기준 0개</strong>다. 따라서 이 문단은 상품 축적 뒤 제공할 마켓플레이스의 목표 사용자 경험이며, 지금 전략이 풍부하게 판매되고 있다는 뜻이 아니다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">마켓의 전략을 NoahAI와 연결하면</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        검증 여권의 게임체인저 가능성은 &lsquo;잘 설명된 상품 페이지&rsquo;에서 끝나지 않는다. 마켓에서 찾은 전략을 NoahAI 전략 스튜디오로 가져와 자신의 거래소·자산·비용 조건으로 다시 검증하고, 승인된 버전만 실제 운용 후보로 연결하는 폐쇄형 검증 루프를 지향한다.
+      </p>
+      <div class="rounded-2xl border border-cyan-200 bg-cyan-50 p-6 mb-8">
+        <p class="font-bold text-cyan-950 mb-3">탐색에서 운용 근거까지</p>
+        <p class="text-lg text-cyan-950 leading-relaxed"><strong>국면·목적별 탐색</strong> → <strong>검증 여권 확인</strong> → <strong>비활성 패키지 가져오기</strong> → <strong>내 환경 재검증·PAPER</strong> → <strong>사용자 최종 승인</strong> → <strong>국면 일치 시 주문 후보</strong> → <strong>결과를 같은 버전의 근거로 축적</strong></p>
+      </div>
+      <ul class="list-disc list-inside text-lg text-gray-700 mb-8 space-y-3 leading-relaxed">
+        <li><strong>국면이 맞으면:</strong> 승인된 전략을 신규 진입 후보로 평가하되 진입 조건과 공통 가드레일을 다시 통과해야 한다.</li>
+        <li><strong>국면이 맞지 않으면:</strong> 커스텀 신규 진입을 HOLD하거나 사용자가 정한 정책에 따라 기본 NoahAI 판단에 위임한다.</li>
+        <li><strong>위험 한도를 넘으면:</strong> 전략의 수익률과 관계없이 일일 손실, 포지션·집중도, 레버리지, 최소 주문, TP/SL, 중복 주문 방지와 긴급 정지가 우선한다.</li>
+        <li><strong>새 버전이면:</strong> 과거 버전의 성과를 이어 붙이지 않고 다시 검증한다. 다운로드·구매도 자동 승인이나 자동 LIVE 실행을 의미하지 않는다.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">무엇이 게임체인저인가</h2>
+      <div class="grid md:grid-cols-2 gap-4 mb-8">
+        <div class="rounded-xl border border-blue-200 bg-blue-50 p-5"><h3 class="font-bold text-blue-950 mb-2">제작자</h3><p class="text-gray-700 leading-relaxed">높은 수익률 화면을 홍보하는 사람에서, 원문·버전·비용·국면별 근거와 한계를 지속적으로 증명하는 공급자로 역할이 바뀐다.</p></div>
+        <div class="rounded-xl border border-emerald-200 bg-emerald-50 p-5"><h3 class="font-bold text-emerald-950 mb-2">구매자</h3><p class="text-gray-700 leading-relaxed">판매자의 계정에서 나온 숫자를 믿는 대신 같은 전략 버전을 자신의 환경에서 재검증하고 맞지 않으면 적용하지 않을 수 있다.</p></div>
+        <div class="rounded-xl border border-violet-200 bg-violet-50 p-5"><h3 class="font-bold text-violet-950 mb-2">플랫폼</h3><p class="text-gray-700 leading-relaxed">다운로드 수나 자기신고 수익률이 아니라 표본·최근성·강건성·위험·실행·증거 품질을 중심으로 탐색과 순위를 구성한다.</p></div>
+        <div class="rounded-xl border border-slate-200 bg-slate-50 p-5"><h3 class="font-bold text-slate-950 mb-2">전략 시장</h3><p class="text-gray-700 leading-relaxed">정적인 파일 판매에서 버전별 증거가 계속 갱신되는 신뢰 인프라로 이동한다. 검증이 약한 전략은 약하다는 사실 자체가 보이게 된다.</p></div>
+      </div>
+      <p class="text-xl font-semibold text-gray-900 mb-8 leading-relaxed border-l-4 border-cyan-500 pl-5">
+        경쟁의 단위가 &lsquo;누가 더 높은 수익률을 주장하는가&rsquo;에서 &lsquo;누가 같은 전략을 다시 검증할 수 있는 근거로 증명하는가&rsquo;로 바뀌는 것. NoahAI가 말하는 게임체인저는 바로 이 시장 규칙의 변화다.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        이 구조가 사기 전략을 세상에서 완전히 없애지는 못한다. 그러나 유리한 기간만 고른 백테스트, 비용을 뺀 수익률, PAPER를 실체결로 포장한 결과, 다른 버전의 성과를 가져온 광고를 서로 다른 증거로 분리하면 허위·과장의 비용은 높아지고 탐지 가능성은 커진다. 검증이 없는 전략도 &lsquo;검증 없음&rsquo;으로 보이게 하는 것이 핵심이다.
+      </p>
+
       <h2 class="text-2xl font-bold text-gray-900 mb-4">TradingView와 경쟁하기보다 그 다음 증거를 잇는다</h2>
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
         TradingView는 Pine Script 전략의 차트 기반 백테스트·포워드 테스트와 전략 리포트, 커뮤니티 공개 기능을 제공한다. Paid Spaces를 통해 유료 콘텐츠 제공 방식도 운영한다. 따라서 Pine, 백테스트, 포워드 테스트, 전략 공유·판매 자체는 NoahAI만의 최초 기능이 아니다. (<a href="https://www.tradingview.com/support/solutions/43000562362-what-are-strategies-backtesting-and-forward-testing/" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">TradingView 전략 테스트</a>, <a href="https://www.tradingview.com/support/solutions/43000765877-what-s-a-paid-space/" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">TradingView Paid Spaces</a>)
@@ -265,7 +350,7 @@ export const newsArticles: NewsArticle[] = [
         이는 2026년 9월 NoahAI Labs가 주요 차트·알고리즘 거래·전략 마켓 서비스를 비교한 자체 조사 기준의 범주 선언이다. 독립기관의 최초 인증이나 전 세계 서비스·특허·논문을 모두 망라한 전수조사 결과가 아니다. 공정거래위원회 안내처럼 &lsquo;최초&rsquo; 같은 배타적 표현은 객관적 근거와 명확한 비교 범위를 필요로 하므로, 이후 선행 서비스 조사표와 조사 시점·대상·판정 기준을 함께 공개하는 방식으로 범위를 좁혀 사용할 계획이다. (<a href="https://www.ftc.go.kr/www/contents.do?key=700" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">공정거래위원회 표시·광고 안내</a>)
       </p>
 
-      <h2 class="text-2xl font-bold text-gray-900 mb-4">2026년 9월 4일 현재 공개판과 남은 검증</h2>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">2026년 9월 5일 현재 공개판과 남은 검증</h2>
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
         2026년 9월 4일 NoahAI 공식 GitHub 배포 자산 기준 최신 Windows 공개판은 <strong>v3.9.1.21</strong>이다. 설치 파일, blockmap, <code>latest.yml</code>, 릴리스 매니페스트가 게시됐으며, 이번 계열에는 PAPER 포지션 복구, 비용·손익 분리, 거래소 귀속과 전략 버전 기록의 정합성 보강이 포함됐다. (<a href="https://github.com/nwsoft/ai-trading-client/releases/tag/v3.9.1.21" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">NoahAI v3.9.1.21 공개 자산</a>)
       </p>

@@ -22,7 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const entries: MetadataRoute.Sitemap = [
       {
         url: url(`/news/${article.id}`),
-        lastModified: new Date(article.date),
+        lastModified: new Date(article.modifiedDate ?? article.date),
         changeFrequency: 'weekly',
         priority: article.featured ? 0.8 : 0.6,
         ...(images.length ? { images } : {}),
@@ -31,7 +31,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     if (hasEnglishTranslation(article)) {
       entries.push({
         url: url(`/en/news/${article.id}`),
-        lastModified: new Date(article.date),
+        lastModified: new Date(article.modifiedDate ?? article.date),
         changeFrequency: 'weekly',
         priority: article.featured ? 0.75 : 0.55,
         ...(images.length ? { images } : {}),
