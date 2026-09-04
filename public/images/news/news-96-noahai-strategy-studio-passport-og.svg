@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">NoahAI 전략 스튜디오와 전략 검증 여권 생태계</title>
+  <desc id="desc">전략 원문에서 실행 규칙, 거래소별 PAPER, 검증 여권, 구매자 재검증으로 이어지는 생명주기</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#081426"/>
+      <stop offset="0.55" stop-color="#142b5f"/>
+      <stop offset="1" stop-color="#3b1d73"/>
+    </linearGradient>
+    <linearGradient id="passport" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#67e8f9"/>
+      <stop offset="1" stop-color="#a78bfa"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#020617" flood-opacity=".48"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1075" cy="65" r="230" fill="#22d3ee" opacity=".08"/>
+  <circle cx="105" cy="615" r="270" fill="#8b5cf6" opacity=".12"/>
+  <path d="M0 285C235 220 345 360 595 288s407-42 605-108" fill="none" stroke="#93c5fd" stroke-width="2" opacity=".14"/>
+
+  <rect x="70" y="48" width="335" height="42" rx="21" fill="#ffffff" opacity=".1"/>
+  <text x="238" y="76" text-anchor="middle" fill="#bae6fd" font-family="Arial, Apple SD Gothic Neo, sans-serif" font-size="20" font-weight="700">AI CUSTOM → STRATEGY STUDIO</text>
+  <text x="70" y="148" fill="#ffffff" font-family="Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="54" font-weight="800">전략의 주장부터 실행 근거까지</text>
+  <text x="70" y="211" fill="#ffffff" font-family="Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="54" font-weight="800">하나의 검증 여권으로</text>
+  <text x="70" y="255" fill="#cbd5e1" font-family="Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="22">원문 의미 추적 · 미해석 조건 차단 · 거래소별 PAPER · 구매자 재검증</text>
+
+  <g font-family="Apple SD Gothic Neo, Noto Sans KR, sans-serif" filter="url(#shadow)">
+    <g>
+      <rect x="70" y="330" width="170" height="118" rx="20" fill="#f8fafc"/>
+      <text x="155" y="373" text-anchor="middle" fill="#0f172a" font-size="24" font-weight="800">전략 원문</text>
+      <text x="155" y="407" text-anchor="middle" fill="#475569" font-size="17">Pine · 문서 · 자연어</text>
+    </g>
+    <g>
+      <rect x="275" y="330" width="170" height="118" rx="20" fill="#f8fafc"/>
+      <text x="360" y="373" text-anchor="middle" fill="#0f172a" font-size="24" font-weight="800">실행 규칙</text>
+      <text x="360" y="407" text-anchor="middle" fill="#475569" font-size="17">의미 추적 · 차단</text>
+    </g>
+    <g>
+      <rect x="480" y="330" width="170" height="118" rx="20" fill="#f8fafc"/>
+      <text x="565" y="373" text-anchor="middle" fill="#0f172a" font-size="24" font-weight="800">PAPER</text>
+      <text x="565" y="407" text-anchor="middle" fill="#475569" font-size="17">시장 · 통화 · 버전</text>
+    </g>
+    <g>
+      <rect x="685" y="306" width="220" height="166" rx="24" fill="url(#passport)"/>
+      <circle cx="735" cy="354" r="22" fill="#0f172a" opacity=".88"/>
+      <path d="M725 354l7 7 14-17" fill="none" stroke="#67e8f9" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="795" y="362" text-anchor="middle" fill="#0f172a" font-size="25" font-weight="900">검증 여권</text>
+      <rect x="718" y="393" width="154" height="7" rx="3.5" fill="#0f172a" opacity=".38"/>
+      <rect x="718" y="415" width="112" height="7" rx="3.5" fill="#0f172a" opacity=".26"/>
+      <text x="795" y="451" text-anchor="middle" fill="#0f172a" font-size="15" font-weight="700">STRATEGY PASSPORT</text>
+    </g>
+    <g>
+      <rect x="940" y="330" width="190" height="118" rx="20" fill="#f8fafc"/>
+      <text x="1035" y="373" text-anchor="middle" fill="#0f172a" font-size="24" font-weight="800">재검증</text>
+      <text x="1035" y="407" text-anchor="middle" fill="#475569" font-size="17">구매자 환경 확인</text>
+    </g>
+  </g>
+
+  <g fill="none" stroke="#67e8f9" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M242 389h29l-10-10m10 10-10 10"/>
+    <path d="M447 389h29l-10-10m10 10-10 10"/>
+    <path d="M652 389h29l-10-10m10 10-10 10"/>
+    <path d="M907 389h29l-10-10m10 10-10 10"/>
+  </g>
+
+  <rect x="70" y="520" width="1060" height="1" fill="#ffffff" opacity=".22"/>
+  <text x="70" y="574" fill="#ffffff" font-family="Arial, Apple SD Gothic Neo, sans-serif" font-size="24" font-weight="800">NOAHAI LABS</text>
+  <text x="1130" y="574" text-anchor="end" fill="#bae6fd" font-family="Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="21" font-weight="700">세계 최초 전략 검증 여권 생태계를 향해</text>
+  <text x="1130" y="604" text-anchor="end" fill="#94a3b8" font-family="Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="15">결합 생명주기 목표 · 개별 기능 최초 아님 · 수익 보장 아님</text>
+</svg>
