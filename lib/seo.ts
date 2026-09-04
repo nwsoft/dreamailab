@@ -146,6 +146,7 @@ export function buildNewsArticleJsonLd(
   const authorName = article.author ?? (locale === 'en' ? SITE_NAME_EN : SITE_NAME)
   const ogImages = newsOgImageMeta(article, locale)
   const imageUrl = ogImages[0]?.url ?? DEFAULT_OG_IMAGE
+  const contentImages = article.contentImages ?? []
 
   return {
     '@context': 'https://schema.org',
@@ -182,9 +183,20 @@ export function buildNewsArticleJsonLd(
       {
         '@type': 'ImageObject',
         url: imageUrl,
+        contentUrl: imageUrl,
         width: 1200,
         height: 630,
       },
+      ...contentImages.map((image) => ({
+        '@type': 'ImageObject',
+        url: absoluteUrl(image.url),
+        contentUrl: absoluteUrl(image.url),
+        width: image.width,
+        height: image.height,
+        name: image.alt,
+        description: image.alt,
+        ...(image.caption ? { caption: image.caption } : {}),
+      })),
     ],
     mainEntityOfPage: {
       '@type': 'WebPage',

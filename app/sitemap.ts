@@ -13,12 +13,19 @@ function url(path: string): string {
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const newsUrls = newsArticles.flatMap((article) => {
+    const images = [
+      article.ogImage,
+      ...(article.contentImages?.map((image) => image.url) ?? []),
+    ]
+      .filter((image): image is string => Boolean(image))
+      .map((image) => new URL(image, `${baseUrl}/`).toString())
     const entries: MetadataRoute.Sitemap = [
       {
         url: url(`/news/${article.id}`),
         lastModified: new Date(article.date),
         changeFrequency: 'weekly',
         priority: article.featured ? 0.8 : 0.6,
+        ...(images.length ? { images } : {}),
       },
     ]
     if (hasEnglishTranslation(article)) {
@@ -27,6 +34,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         lastModified: new Date(article.date),
         changeFrequency: 'weekly',
         priority: article.featured ? 0.75 : 0.55,
+        ...(images.length ? { images } : {}),
       })
     }
     return entries

@@ -29,6 +29,14 @@ export interface NewsEntityRef {
   sameAs?: string[]
 }
 
+export interface NewsImageRef {
+  url: string
+  width: number
+  height: number
+  alt: string
+  caption?: string
+}
+
 export interface NewsArticle {
   id: number
   title: string
@@ -46,6 +54,8 @@ export interface NewsArticle {
   ogImage?: string
   ogImageAlt?: string
   ogImageAltEn?: string
+  /** 기사 본문 실제 이미지 — JSON-LD ImageObject와 이미지 검색 설명에 사용 */
+  contentImages?: NewsImageRef[]
   /** JSON-LD about — 자람이 / NoahAI Labs 등 엔티티 구분 */
   about?: NewsEntityRef[]
   mentions?: NewsEntityRef[]
@@ -92,6 +102,24 @@ export const newsArticles: NewsArticle[] = [
     ogImage: '/images/news/news-96-noahai-strategy-studio-passport-og.jpg',
     ogImageAlt:
       'NoahAI 전략 스튜디오가 전략 원문, 실행 규칙, 거래소별 PAPER, 검증 여권, 구매자 재검증을 연결하는 생명주기',
+    contentImages: [
+      {
+        url: '/images/news/news-96-noahai-strategy-studio-binance-paper-missing-v39118.webp',
+        width: 1367,
+        height: 665,
+        alt: 'NoahAI 전략 스튜디오 v3.9.1.18 PAPER 전진검증 화면에서 Binance 결과가 빠지고 5개 거래소만 표시된 사례',
+        caption:
+          'v3.9.1.18에서 Binance PAPER 결과 누락을 확인한 실제 화면. 현재 정상 동작을 보여주는 화면이 아니라 정합성 보강의 출발점이 된 과거 증거다.',
+      },
+      {
+        url: '/images/news/news-96-noahai-strategy-studio-six-exchange-cost-zero.webp',
+        width: 1366,
+        height: 705,
+        alt: 'NoahAI 전략 스튜디오 PAPER 전진검증에 Binance, Bitget, Bithumb, Bybit, OKX, Upbit 6개 거래소가 표시되지만 Binance 비용이 0으로 나온 사례',
+        caption:
+          'Binance를 포함한 6개 거래소가 표시된 후속 실제 화면. 당시 Binance 비용 0 표시는 비용 근거·집계 경로를 추가로 점검해야 한다는 증거였으며 무수수료를 뜻하지 않는다.',
+      },
+    ],
     about: [
       {
         type: 'Organization',
@@ -241,6 +269,21 @@ export const newsArticles: NewsArticle[] = [
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
         2026년 9월 4일 NoahAI 공식 GitHub 배포 자산 기준 최신 Windows 공개판은 <strong>v3.9.1.21</strong>이다. 설치 파일, blockmap, <code>latest.yml</code>, 릴리스 매니페스트가 게시됐으며, 이번 계열에는 PAPER 포지션 복구, 비용·손익 분리, 거래소 귀속과 전략 버전 기록의 정합성 보강이 포함됐다. (<a href="https://github.com/nwsoft/ai-trading-client/releases/tag/v3.9.1.21" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">NoahAI v3.9.1.21 공개 자산</a>)
       </p>
+      <h3 class="text-xl font-bold text-gray-900 mb-4">실제 화면에서 확인된 누락과 비용 0 문제</h3>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        정합성 보강은 추상적인 계획에서 시작된 것이 아니다. v3.9.1.18 전략 스튜디오 화면에서는 PAPER 전진검증 결과에 Binance가 빠져 5개 거래소만 표시됐고, 후속 화면에서는 Binance가 포함된 6개 거래소가 보였지만 Binance 비용이 0으로 표시됐다. 이 두 화면은 결과가 어느 전략·거래소·비용 원장에 귀속되는지 끝까지 추적해야 했던 실제 문제를 보여준다.
+      </p>
+      <figure class="mb-8 overflow-hidden rounded-2xl border border-slate-700 bg-slate-950">
+        <img src="/images/news/news-96-noahai-strategy-studio-binance-paper-missing-v39118.webp" alt="NoahAI 전략 스튜디오 v3.9.1.18 PAPER 전진검증 화면에서 Binance 결과가 빠지고 5개 거래소만 표시된 사례" width="1367" height="665" class="h-auto w-full" loading="lazy" decoding="async" />
+        <figcaption class="px-5 py-3 text-sm leading-relaxed text-slate-300">v3.9.1.18에서 Binance PAPER 결과 누락을 확인한 실제 화면. 현재 정상 동작을 보여주는 화면이 아니라 정합성 보강의 출발점이 된 과거 증거다.</figcaption>
+      </figure>
+      <figure class="mb-8 overflow-hidden rounded-2xl border border-slate-700 bg-slate-950">
+        <img src="/images/news/news-96-noahai-strategy-studio-six-exchange-cost-zero.webp" alt="NoahAI 전략 스튜디오 PAPER 전진검증에 Binance, Bitget, Bithumb, Bybit, OKX, Upbit 6개 거래소가 표시되지만 Binance 비용이 0으로 나온 사례" width="1366" height="705" class="h-auto w-full" loading="lazy" decoding="async" />
+        <figcaption class="px-5 py-3 text-sm leading-relaxed text-slate-300">Binance를 포함한 6개 거래소가 표시된 후속 실제 화면. 당시 Binance 비용 0 표시는 비용 근거·집계 경로를 추가로 점검해야 한다는 증거였으며 무수수료를 뜻하지 않는다.</figcaption>
+      </figure>
+      <p class="text-sm text-gray-600 mb-8 leading-relaxed">
+        ※ 위 화면은 문제 발견 당시의 진단 증거다. v3.9.1.21 배포 자산의 수정과 별개로, 실제 계정·장시간 PAPER에서 비용·손익·전략 버전 귀속이 계속 일치하는지는 거래소별 운영 검증으로 확인해야 한다.
+      </p>
       <div class="grid md:grid-cols-3 gap-4 mb-8">
         <div class="bg-emerald-50 p-5 rounded-xl"><h3 class="font-bold text-emerald-950 mb-2">현재 공개</h3><p class="text-gray-700">v3.9.1.21 Windows 자산, 원문·규칙·버전·PAPER 근거, 패키지 무결성 검증</p></div>
         <div class="bg-amber-50 p-5 rounded-xl"><h3 class="font-bold text-amber-950 mb-2">증거 축적 중</h3><p class="text-gray-700">업데이트 보존, 6개 거래소 장시간 PAPER, 재시작·종료, 실제 계정 confirmed fill 대조</p></div>
@@ -301,6 +344,24 @@ export const newsArticles: NewsArticle[] = [
     ogImage: '/images/news/news-95-jarame-jds-visual-language-og.jpg',
     ogImageAlt:
       '자람이 JDS 의미 ID가 가정·센터·학교·병원에서 같은 시각언어로 이어지는 구조',
+    contentImages: [
+      {
+        url: '/images/news/news-95-jds-l1-l2-l3-meaning-expression-levels.webp',
+        width: 1800,
+        height: 771,
+        alt: '자람이 JDS에서 같은 물 주세요 의미 ID를 L1 실제 사진, L2 표준 시각자료, L3 단순 기호와 글자로 표현하는 단계',
+        caption:
+          '동일한 need.water 의미 ID를 유지하면서 사용자의 이해 방식에 따라 L1 실물·사진, L2 JDS 표준 시각자료, L3 기호·글자로 표현한다.',
+      },
+      {
+        url: '/images/news/news-95-jds-core-48-visual-language-cards.webp',
+        width: 1800,
+        height: 1122,
+        alt: '자람이 JDS Core 48 발달지원 시각언어 카드 선택 화면의 물 주세요, 화장실 가요, 도와주세요, 다시 해주세요, 더 주세요, 그만할게요, 쉬고 싶어요, 기다려 주세요 카드',
+        caption:
+          'JDS Core 48 실제 선택 화면. 요구·자기결정 범주의 물, 화장실, 도움, 반복, 더 하기, 중단, 휴식과 기다리기 시각카드를 확인하고 인쇄할 수 있다.',
+      },
+    ],
     about: [
       {
         type: 'Organization',
@@ -416,6 +477,10 @@ export const newsArticles: NewsArticle[] = [
       <p class="text-lg text-gray-700 mb-8 leading-relaxed">
         표현 모습이 달라도 의미 ID와 사용 규칙은 유지된다. JDS는 진단명이나 나이만으로 단계를 자동 결정하지 않고, 실제 반응과 선호, 상징 이해와 접근 방식을 확인하도록 설계됐다.
       </p>
+      <figure class="mb-10 overflow-hidden rounded-2xl border border-teal-100 bg-slate-50">
+        <img src="/images/news/news-95-jds-l1-l2-l3-meaning-expression-levels.webp" alt="자람이 JDS에서 같은 물 주세요 의미 ID를 L1 실제 사진, L2 표준 시각자료, L3 단순 기호와 글자로 표현하는 단계" width="1800" height="771" class="h-auto w-full" loading="lazy" decoding="async" />
+        <figcaption class="px-5 py-3 text-sm leading-relaxed text-slate-600">동일한 <code>need.water</code> 의미 ID를 유지하면서 사용자의 이해 방식에 따라 L1 실물·사진, L2 JDS 표준 시각자료, L3 기호·글자로 표현한다.</figcaption>
+      </figure>
 
       <h2 class="text-2xl font-bold text-gray-900 mb-4">Core 48에서 개인의 언어로</h2>
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
@@ -426,6 +491,10 @@ export const newsArticles: NewsArticle[] = [
         <p class="text-lg text-gray-800 leading-relaxed"><strong>Core 48 승인 시작 세트</strong> → <strong>Essential 150 문장 생성 의미 사전</strong> → <strong>Extended 500+ 환경별 모듈</strong> → <strong>Personal Vocabulary 개인 비공개 어휘</strong></p>
         <p class="text-sm text-gray-600 mt-4 leading-relaxed">Essential 150의 추가 102개 의미 ID는 현재 현장 검토안이다. 승인 그림 자산이나 임상·교육 표준이 아니며, Extended 500+와 개인 어휘는 후속 확장 단계다.</p>
       </div>
+      <figure class="mb-10 overflow-hidden rounded-2xl border border-teal-100 bg-slate-50">
+        <img src="/images/news/news-95-jds-core-48-visual-language-cards.webp" alt="자람이 JDS Core 48 발달지원 시각언어 카드 선택 화면의 물 주세요, 화장실 가요, 도와주세요, 다시 해주세요, 더 주세요, 그만할게요, 쉬고 싶어요, 기다려 주세요 카드" width="1800" height="1122" class="h-auto w-full" loading="lazy" decoding="async" />
+        <figcaption class="px-5 py-3 text-sm leading-relaxed text-slate-600">JDS Core 48 실제 선택 화면. 요구·자기결정 범주의 물, 화장실, 도움, 반복, 더 하기, 중단, 휴식과 기다리기 시각카드를 확인하고 인쇄할 수 있다.</figcaption>
+      </figure>
 
       <h2 class="text-2xl font-bold text-gray-900 mb-4">거절과 도움 요청도 자기결정의 언어</h2>
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
