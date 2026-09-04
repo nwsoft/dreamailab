@@ -11,9 +11,22 @@ const SECURITY_HEADERS: Record<string, string> = {
   'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
 }
 
+const NAVER_SITE_VERIFICATION_PATH = '/naver28e9a641b06783a89d3397b9f8632c2f.html'
+const NAVER_SITE_VERIFICATION_BODY =
+  'naver-site-verification: naver28e9a641b06783a89d3397b9f8632c2f.html'
+
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const url = new URL(request.url)
+
+    if (url.pathname === NAVER_SITE_VERIFICATION_PATH) {
+      return new Response(NAVER_SITE_VERIFICATION_BODY, {
+        headers: {
+          ...SECURITY_HEADERS,
+          'Content-Type': 'text/html; charset=utf-8',
+        },
+      })
+    }
 
     if (
       url.pathname === '/services/maeume' ||
