@@ -78,6 +78,214 @@ export function getLocalizedArticle(
 
 export const newsArticles: NewsArticle[] = [
   {
+    id: 95,
+    title:
+      '자람이, 국내 첫 ‘디지털케어로그 연계형 JDS 시각언어 규격’ 공개…“가정·센터·학교에서 같은 의미 쓴다”',
+    excerpt:
+      '정해성 CTO와 강수진 언어학 박사가 공동 설계한 JDS는 의미 ID, 개인별 표현 단계, 인쇄 자료와 AI 디지털케어로그를 하나의 규격으로 연결한다. 국내 최초 표현은 자람이 자체 조사 기준의 결합 구조에 한정한다.',
+    category: 'press',
+    date: '2026-09-04',
+    image: '🗣️',
+    featured: true,
+    author: '자람이팀',
+    authorUrl: 'https://jarame.or.kr/',
+    ogImage: '/images/news/news-95-jarame-jds-visual-language-og.jpg',
+    ogImageAlt:
+      '자람이 JDS 의미 ID가 가정·센터·학교·병원에서 같은 시각언어로 이어지는 구조',
+    about: [
+      {
+        type: 'Organization',
+        id: 'https://jarame.or.kr/#organization',
+        name: '자람이',
+        alternateName: ['Jarame'],
+        url: 'https://jarame.or.kr/',
+        description:
+          '발달장애인의 생활·치료·교육 기록을 연결하는 AI 디지털케어로그 적용 서비스',
+        sameAs: ['https://dreamailab.com/services/jarame/'],
+      },
+      {
+        type: 'DefinedTerm',
+        name: 'Jaram Design System',
+        alternateName: ['JDS', '자람이 발달지원 시각언어 규격'],
+        url: 'https://jarame.or.kr/design-system',
+        description:
+          '의미 ID와 개인별 표현 단계, 인쇄 자료, 디지털케어로그 적용 규칙을 연결하는 자람이의 발달지원 시각언어 규격',
+      },
+    ],
+    mentions: [
+      {
+        type: 'DefinedTerm',
+        id: 'https://dreamailab.com/technology/#ai-digital-care-log',
+        name: 'AI 디지털케어로그',
+        alternateName: ['AI Digital Care Log'],
+        url: 'https://dreamailab.com/technology/',
+      },
+      {
+        type: 'DefinedTerm',
+        name: '보완대체의사소통',
+        alternateName: ['AAC', 'Augmentative and Alternative Communication'],
+        url: 'https://www.myaac.or.kr/info/about.do',
+      },
+    ],
+    tags: [
+      '자람이',
+      'JDS',
+      'Jaram Design System',
+      '발달장애',
+      'AAC',
+      '보완대체의사소통',
+      '시각언어',
+      'Core 48',
+      'Essential 150',
+      'AI 디지털케어로그',
+      '정해성 CTO',
+      '강수진 박사',
+      '의사소통 지원',
+    ],
+    faq: [
+      {
+        question: 'JDS는 기존 AAC나 그림카드와 무엇이 다른가요?',
+        answer:
+          'JDS는 AAC를 대체하는 새로운 치료법이 아니다. 같은 의미 ID를 가정·센터·학교·병원과 자람이 앱·인쇄물에서 일관되게 사용하고, 한 의미를 사용자에 따라 실제 사진·표준 시각자료·기호와 글자로 표현하며, 사용 맥락을 디지털케어로그와 연결하도록 설계한 자람이의 발달지원 규격이다.',
+      },
+      {
+        question: 'Core 48은 국제적으로 정해진 48개 표준어휘인가요?',
+        answer:
+          '아니다. Core 48은 AAC 핵심어휘 접근과 발달지원 현장의 요구·자기결정·안전·감정·생활·사람·장소를 결합한 JDS의 승인 시작 세트다.',
+      },
+      {
+        question: 'Essential 150과 Extended 500+도 바로 사용할 수 있나요?',
+        answer:
+          'Core 48은 공개·인쇄할 수 있다. Essential 150의 추가 102개 의미는 현재 현장 검토안이며 승인 그림 자산이 아니다. Extended 500+와 Personal Vocabulary는 후속 확장 단계다.',
+      },
+      {
+        question: 'JDS가 임상·교육 효과가 입증된 표준인가요?',
+        answer:
+          '아니다. JDS v1은 발달지원 시각언어 규격이며 임상·교육 효과가 확정된 표준을 주장하지 않는다. 사용 전 당사자의 상징 이해, 감각·인지·운동 특성과 선호를 확인하고 보호자·치료사·교사 등 관련 전문가가 검토해야 한다.',
+      },
+      {
+        question: '국내 최초라는 표현은 어떤 범위인가요?',
+        answer:
+          'AAC나 그림상징 자체의 최초라는 뜻이 아니다. 자람이 자체 조사 기준으로 의미 ID, L1~L3 개인별 표현 단계, Core 48부터 개인 어휘까지의 확장 구조, 공개 인쇄 자료, AI 디지털케어로그 적용 규칙을 하나의 제품·시각언어·학습자료 규격으로 묶은 국내 첫 시도라는 제한된 의미다. 독립기관의 최초 인증이나 국내 전수조사 결과는 아니다.',
+      },
+    ],
+    content: `
+      <p class="text-sm text-gray-500 mb-6">[보도자료 · 2026-09-04]</p>
+      <p class="text-xl font-semibold text-gray-800 mb-4 leading-relaxed">
+        정해성 CTO·강수진 언어학 박사 공동 설계…그림 하나가 아니라 장소가 달라도 유지되는 ‘의미’를 설계
+      </p>
+      <ul class="list-disc list-inside text-lg text-gray-800 mb-8 space-y-2 leading-relaxed">
+        <li>Core 48 승인 시작 세트 공개·A4/PDF 인쇄 지원</li>
+        <li>실제 사진·JDS 표준 시각자료·기호와 글자의 3단계 표현</li>
+        <li>Essential 150은 현장 검토안, Extended 500+와 개인 어휘는 후속 확장</li>
+      </ul>
+      <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-4">
+        발달장애 통합지원 플랫폼 <strong>자람이</strong>가 발달장애인의 의사소통과 일상생활 지원을 위한 <strong>JDS(Jaram Design System) 발달지원 시각언어 규격</strong>을 공개했다. JDS는 자람이 제품 화면, 시각지원 자료, 학습·교육 템플릿과 AI 디지털케어로그 적용 규칙을 하나의 의미체계로 연결한다.
+      </p>
+      <figure class="mb-10 overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
+        <img src="/images/news/news-95-jarame-jds-visual-language-og.jpg" alt="자람이 JDS 의미 ID가 가정·센터·학교·병원에서 같은 시각언어로 이어지는 구조" width="1200" height="630" class="h-auto w-full" loading="eager" decoding="async" />
+        <figcaption class="px-5 py-3 text-sm text-slate-500">JDS는 같은 의미를 여러 생활환경에서 일관되게 사용하되, 표현 형태는 개인의 이해 수준에 맞게 선택한다.</figcaption>
+      </figure>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">장소가 바뀔 때마다 다시 배워야 했던 표현</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        발달장애인은 하루에도 가정, 학교, 치료센터, 병원 등 여러 환경을 오간다. 그러나 각 환경에서 사용하는 사진, 그림, 단어, 지시 방식과 시각자료가 서로 다르면 같은 뜻도 새로운 표현처럼 다시 이해해야 할 수 있다. 집에서는 특정 사진으로 &lsquo;물&rsquo;을 표현하고, 센터와 학교에서는 서로 다른 그림이나 기호를 쓰는 상황이 한 예다.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        JDS의 원칙은 <strong>&ldquo;같은 의미를, 어디서나 같은 시각언어로&rdquo;</strong>다. 발달장애인에게 환경별 표현을 반복 학습시키기보다 주변 사람이 하나의 의미체계를 공유해 예측 가능성과 이해를 돕자는 접근이다. 다만 특정 시각자료가 모든 사용자에게 같은 효과를 낸다고 가정하지 않으며, 개인별 이해 여부를 확인한다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">그림을 고정하는 대신 의미를 고정한다</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        JDS는 특정 그림 하나를 모든 사람에게 강요하지 않는다. 예를 들어 &lsquo;물을 원한다&rsquo;는 의미에는 <code>need.water</code>라는 의미 ID를 부여하고, 실제 표현은 사용자의 언어·인지·감각·운동 특성에 따라 달리할 수 있다.
+      </p>
+      <div class="grid md:grid-cols-3 gap-4 mb-8">
+        <div class="bg-cyan-50 p-5 rounded-xl"><h3 class="font-bold text-cyan-950 mb-2">L1 · 실물과 실제 사진</h3><p class="text-gray-700">본인의 컵, 교실, 가족처럼 높은 구체성이 필요한 사용자를 위한 단계다.</p></div>
+        <div class="bg-teal-50 p-5 rounded-xl"><h3 class="font-bold text-teal-950 mb-2">L2 · JDS 표준 시각자료</h3><p class="text-gray-700">여러 환경에서 같은 의미를 반복 사용할 때의 기본 표현 단계다.</p></div>
+        <div class="bg-indigo-50 p-5 rounded-xl"><h3 class="font-bold text-indigo-950 mb-2">L3 · 기호와 짧은 글자</h3><p class="text-gray-700">기호·문자를 빠르게 이해하고 탐색할 수 있는 사용자를 위한 단계다.</p></div>
+      </div>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        표현 모습이 달라도 의미 ID와 사용 규칙은 유지된다. JDS는 진단명이나 나이만으로 단계를 자동 결정하지 않고, 실제 반응과 선호, 상징 이해와 접근 방식을 확인하도록 설계됐다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Core 48에서 개인의 언어로</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        JDS의 첫 공개 세트인 <strong>Core 48</strong>은 국제적으로 정해진 48개 표준어휘가 아니다. AAC 핵심어휘 접근과 발달지원 현장에서 먼저 필요한 요구·자기결정, 안전·신체, 감정, 기본생활, 사람·장소의 의미를 결합한 JDS 시작 세트다. 현재 공개 페이지에서 개별 카드와 전환·지시수행·정서조절·사회성·언어인지 프리셋을 선택해 A4 또는 PDF로 인쇄할 수 있다.
+      </p>
+      <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 mb-8">
+        <p class="font-bold text-gray-900 mb-3">JDS 어휘 확장 구조</p>
+        <p class="text-lg text-gray-800 leading-relaxed"><strong>Core 48 승인 시작 세트</strong> → <strong>Essential 150 문장 생성 의미 사전</strong> → <strong>Extended 500+ 환경별 모듈</strong> → <strong>Personal Vocabulary 개인 비공개 어휘</strong></p>
+        <p class="text-sm text-gray-600 mt-4 leading-relaxed">Essential 150의 추가 102개 의미 ID는 현재 현장 검토안이다. 승인 그림 자산이나 임상·교육 표준이 아니며, Extended 500+와 개인 어휘는 후속 확장 단계다.</p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">거절과 도움 요청도 자기결정의 언어</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        의사소통 지원은 원하는 물건을 요청하는 데서 끝나지 않는다. &lsquo;아파요&rsquo;, &lsquo;싫어요&rsquo;, &lsquo;그만해주세요&rsquo;, &lsquo;도와주세요&rsquo;, &lsquo;쉬고 싶어요&rsquo;, &lsquo;시끄러워요&rsquo;처럼 상태·거절·도움 요청을 표현하는 수단은 당사자의 자기결정과 안전에 연결된다.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        JDS Core 48은 요구뿐 아니라 안전·신체 상태, 감정, 생활, 사람과 장소를 함께 다룬다. 사용자가 선택한 의미가 실제 의사인지 확인하고, 통증·위험·신체 경계·중단 요구처럼 오해 시 위험한 개념은 보호자와 전문가가 우선 검토하도록 한다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">보호자가 출력하고, 센터와 학교가 같은 의미를 공유</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        JDS Core 48은 전문가 전용 도구로 잠그지 않았다. 보호자와 치료사, 교사가 공개 페이지에서 낱장 카드와 시각일정표, 먼저–그다음 보드 등에 필요한 의미를 선택하고 인쇄할 수 있다. 아침의 &lsquo;세수하기 → 옷 입기 → 식사하기 → 학교 가기&rsquo; 순서를 보여주거나, 두 활동 중 하나를 당사자가 직접 고르게 하는 식으로 활용할 수 있다.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        다만 자람이가 학교·병원 시스템과 자동 연동된다는 의미는 아니다. 현재 목표는 같은 의미 ID와 기본 사용 규칙을 자료와 앱에서 공유할 수 있게 하는 것이며, 기관 적용은 각 기관의 절차와 당사자 동의, 개인정보·접근권한 검토를 거쳐야 한다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">그림카드와 디지털케어로그가 만나면 표현의 맥락이 남는다</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        JDS가 자람이 플랫폼 안에서 갖는 차별점은 시각자료를 AI 디지털케어로그의 관찰·지원 흐름과 연결하도록 설계했다는 점이다. 수업 중 자리이탈을 단순히 횟수로 적는 대신, 어떤 환경에서 당사자가 &lsquo;시끄러워요&rsquo; 또는 &lsquo;쉬고 싶어요&rsquo;를 표현했고 어떤 지원 뒤 반응이 달라졌는지를 함께 남길 수 있다.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        이는 행동을 곧바로 하나의 원인으로 해석하거나 자동 진단하는 기능이 아니다. <strong>환경 → 당사자 표현 → 제공한 지원 → 관찰된 반응 → 다음 조정</strong>의 흐름을 기록해 보호자와 전문가가 더 나은 질문을 검토할 수 있도록 돕는 구조다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">정해성 CTO·강수진 언어학 박사 공동 설계</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        자람이는 JDS를 드림에이아이랩 <strong>정해성 CTO</strong>와 대화분석·상호작용 언어학을 연구한 <strong>강수진 언어학 박사</strong>가 공동 설계했다고 밝혔다. 정 CTO는 제품·데이터 구조와 발달지원 현장의 연결을, 강 박사는 의미와 표현을 분리하고 대화 기능에 따라 어휘를 확장하는 언어 구조를 중심으로 설계에 참여했다.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        정 CTO는 &ldquo;표현하지 못한 의사가 행동으로 나타나는 것은 아닌지 먼저 살펴볼 수 있어야 한다&rdquo;며 &ldquo;당사자가 환경마다 새로운 표현법에 맞추도록 하기보다 주변 환경이 일관된 의미를 사용하도록 만드는 것이 JDS의 출발점&rdquo;이라고 설명했다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">‘국내 최초’는 AAC 자체가 아닌 결합 구조에 한정</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        국내에는 이미 한국형 AAC 그림상징, AAC 애플리케이션, 학교·가정 연계 연구와 현장 활용 사례가 존재한다. 따라서 JDS는 AAC나 그림카드, 가정–학교 연계 자체의 최초를 주장하지 않는다.
+      </p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        자람이가 밝힌 &lsquo;국내 첫 시도&rsquo;의 범위는 <strong>한국어 의미 ID, L1~L3 개인별 표현 단계, Core 48에서 Personal Vocabulary까지의 확장 구조, 공개 인쇄 자료, AI 디지털케어로그 적용 규칙을 하나의 제품 UI·시각언어·학습자료 규격으로 묶은 구조</strong>다. 이는 자람이 자체 조사 기준의 설명이며, 독립기관의 최초 인증이나 국내 모든 제품·연구를 전수조사한 결과는 아니다.
+      </p>
+      <p class="text-sm text-gray-600 mb-8 leading-relaxed">
+        참고: <a href="https://www.myaac.or.kr/info/about.do" target="_blank" rel="noopener noreferrer" class="text-primary-700 underline">나의AAC · AAC 소개</a> · <a href="https://www.nise.go.kr/jsp/field/2016-2/03.jsp" target="_blank" rel="noopener noreferrer" class="text-primary-700 underline">국립특수교육원 · 학급에서의 AAC 적용</a> · <a href="https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002297546" target="_blank" rel="noopener noreferrer" class="text-primary-700 underline">학교–가정 연계 AAC 연구</a>
+      </p>
+
+      <div class="bg-amber-50 border border-amber-200 rounded-2xl p-6 mb-8">
+        <h2 class="text-xl font-bold text-amber-950 mb-3">현재 공개 범위와 검증 경계</h2>
+        <p class="text-gray-800 leading-relaxed"><strong>공개·사용 가능:</strong> JDS v1 규격, Core 48 의미 ID·시각자료, 실전 프리셋, A4/PDF 인쇄, JSON 의미 사전.</p>
+        <p class="text-gray-800 leading-relaxed mt-2"><strong>현장 검토 중:</strong> Essential 150 추가 102개 의미 ID와 한국어 표면형·문장 생성 구조.</p>
+        <p class="text-gray-800 leading-relaxed mt-2"><strong>후속 단계:</strong> Extended 500+, 개인 사진·개인 어휘 교체 UI, 공동 자산 검수, 사용 결과 기반 혼동률·일반화 지표.</p>
+        <p class="text-gray-800 leading-relaxed mt-2"><strong>주장하지 않음:</strong> 임상·교육 효과 확정, 치료 대체, 모든 발달장애인에게 동일한 효과, 학교·병원 자동 연동.</p>
+      </div>
+
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        자람이는 앞으로 당사자·보호자·치료사·특수교사의 사용성 검토를 거쳐 JDS 어휘와 표현 단계를 확장하고, &lsquo;아이에 대한 기록&rsquo;에 더해 &lsquo;당사자가 직접 표현한 기록&rsquo;이 안전하게 축적될 수 있는 구조를 단계적으로 고도화할 계획이다.
+      </p>
+      <div class="bg-white border border-gray-200 rounded-xl p-6 mb-8">
+        <p class="font-semibold text-gray-900 mb-3">바로 확인하기</p>
+        <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+          <li><a href="https://jarame.or.kr/design-system" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">JDS 발달지원 시각언어·Core 48·Essential 150</a></li>
+          <li><a href="/services/jarame" class="text-primary-600 underline">드림에이아이랩 자람이 서비스 소개</a></li>
+          <li><a href="/technology#ai-digital-care-log" class="text-primary-600 underline">AI 디지털케어로그 기술</a></li>
+        </ul>
+      </div>
+      <p class="text-gray-600 text-sm border-t border-gray-200 pt-6 leading-relaxed">
+        ※ 본 글은 자람이의 JDS 공개 내용을 드림에이아이랩 뉴스센터에 보도자료로 기록한 것입니다. 현재 상태와 사용 범위는 자람이 JDS 공개 페이지를 기준으로 하며, JDS는 진단·처방·치료 또는 전문가의 최종 판단을 대체하지 않습니다.
+      </p>
+    `,
+  },
+  {
     id: 94,
     title: '드림에이아이랩, 신규 바이브코딩 프로젝트 ‘DAL Vibe Architect’ 마스터 비전 공개',
     excerpt:

@@ -77,6 +77,7 @@ const META_BY_ID = Object.fromEntries(
 /** 레거시·오분류 보정: 기사 ID → 표준 카테고리 */
 export const NEWS_ARTICLE_CATEGORY_BY_ID: Record<number, NewsCategoryId> = {
   // 2026 최신
+  95: 'press', // 자람이 JDS 발달지원 시각언어 규격 공개
   94: 'company', // DAL Vibe Architect 신규 프로젝트·한국형 소프트웨어 창작 인프라
   93: 'press', // 노아AI 상용 30일·34억 건 실전 데이터
   92: 'press', // 시니어앤라이프 재가 점유율 70%·80만·요양원 확대
