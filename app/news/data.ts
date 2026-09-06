@@ -91,7 +91,7 @@ export const newsArticles: NewsArticle[] = [
   {
     id: 96,
     title:
-      '“수익률 캡처 대신 실행 근거 본다”…노아에이아이랩스, 세계 최초 ‘전략 검증 여권’ 공개',
+      '“수익률 캡처 대신 실행 근거 본다”… 노아에이아이랩스, 세계 최초 ‘전략 검증 여권’ 공개',
     excerpt:
       'TradingView·Pine·문서 전략의 원문을 실행 규칙과 시장국면별 성과, 거래소별 PAPER 근거에 연결하고 사용자가 자신의 환경에서 다시 검증하도록 하는 전략 신뢰 생태계.',
     category: 'press',
@@ -268,7 +268,7 @@ export const newsArticles: NewsArticle[] = [
       </p>
 
       <figure class="mb-10 overflow-hidden rounded-2xl border border-slate-200 bg-slate-950">
-        <img src="/images/news/news-87-noahai-strategy-market-og.jpg" alt="상승장 횡보장 고변동장에 맞는 전략을 선별하고 검증 근거를 연결하는 NoahAI 전략 마켓플레이스" width="1200" height="630" class="h-auto w-full" loading="lazy" decoding="async" />
+        <img src="/images/news/news-87-noahai-strategy-market-og.jpg" alt="상승장 횡보장 고변동장에 맞는 전략을 선별하고 검증 근거를 연결하는 NoahAI 검증 전략 허브와 향후 마켓플레이스" width="1200" height="630" class="h-auto w-full" loading="lazy" decoding="async" />
         <figcaption class="px-5 py-3 text-sm text-slate-300">시장국면별로 적합한 전략을 찾고 검증 근거를 비교하는 NoahAI 전략 허브와 향후 마켓플레이스 구상.</figcaption>
       </figure>
 
