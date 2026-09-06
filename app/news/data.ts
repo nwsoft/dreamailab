@@ -91,9 +91,9 @@ export const newsArticles: NewsArticle[] = [
   {
     id: 96,
     title:
-      '노아에이아이랩스, AI 커스텀 ‘전략 스튜디오’로 정식화…세계 최초 ‘전략 검증 여권 마켓’ 구축 나선다',
+      '노아에이아이랩스, 세계 최초 ‘전략 검증 여권’ 생태계 공개…AI 커스텀은 ‘전략 스튜디오’로',
     excerpt:
-      '노아에이아이랩스가 AI 커스텀의 공식 명칭을 전략 스튜디오로 바꾸고, 시장국면별 승률·수익률과 검증 근거를 확인한 뒤 NoahAI에서 다시 검증·운용하는 전략 검증 여권형 마켓을 선보인다.',
+      '전략 원문과 실행 규칙, 시장국면별 성과를 하나의 여권으로 연결하고 마켓에서 고른 전략을 NoahAI에서 재검증·PAPER·운용까지 이어가는 새로운 전략 신뢰 생태계.',
     category: 'press',
     date: '2026-09-04',
     modifiedDate: '2026-09-05',
@@ -222,44 +222,45 @@ export const newsArticles: NewsArticle[] = [
     content: `
       <p class="text-sm text-gray-500 mb-6">[보도자료 · 2026-09-04]</p>
       <p class="text-xl font-bold text-gray-900 mb-3 leading-relaxed">
-        백테스트 수익률을 보여주는 데서 그치지 않고, 전략이 실제 시장에서 어떻게 작동했는지 확인하는 새로운 전략 유통 생태계
+        — 백테스트 수익률 넘어 원문·실행 규칙·시장국면별 검증 근거를 하나로 연결
       </p>
-      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
-        상승장·하락장·횡보장·고변동장별 승률과 수익률을 비교하고, 마켓에서 선택한 전략을 NoahAI에서 다시 검증해 운용까지 연결
+      <p class="text-xl font-bold text-gray-900 mb-8 leading-relaxed">
+        — 전략 마켓에서 고른 전략, NoahAI에서 재검증·PAPER·운용까지 연계
       </p>
 
-      <p class="text-lg text-gray-800 mb-8 leading-relaxed">
-        금융 AI 플랫폼 NoahAI를 운영하는 <strong>노아에이아이랩스(NoahAI Labs)</strong>가 투자전략의 제작과 검증, 유통, 운용을 하나로 연결하는 <strong>&lsquo;전략 검증 여권(Strategy Passport)&rsquo; 생태계</strong>를 공개했다. 기존 &lsquo;AI 커스텀&rsquo; 기능의 공식 명칭도 <strong>&lsquo;NoahAI 전략 스튜디오(Strategy Studio)&rsquo;</strong>로 정식화했다.
+      <p class="text-lg text-gray-800 mb-6 leading-relaxed">
+        금융 AI 플랫폼 <strong>NoahAI</strong>를 운영하는 <strong>노아에이아이랩스(NoahAI Labs)</strong>가 투자전략의 제작과 검증, 유통, 운용을 하나로 연결하는 <strong>&lsquo;전략 검증 여권(Strategy Passport)&rsquo; 생태계</strong>를 공개했다고 밝혔다. 기존 &lsquo;AI 커스텀&rsquo; 기능의 공식 명칭도 <strong>&lsquo;NoahAI 전략 스튜디오(Strategy Studio)&rsquo;</strong>로 정식화했다.
       </p>
-      <p class="text-lg text-gray-800 mb-10 leading-relaxed">
-        회사 측은 전략 원문과 실행 규칙, 시장국면별 검증 결과, 거래 근거와 사용자 재검증을 하나의 생명주기로 연결한 구조가 세계 최초라고 설명했다. 단순히 전략을 만들어 백테스트하는 도구를 넘어, 전략을 고르고 신뢰하는 기준까지 바꾸겠다는 구상이다.
+
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        그동안 온라인 투자전략 시장에서는 백테스트 수익률이나 계좌 화면이 전략의 성능을 설명하는 대표 자료로 활용돼 왔다. 그러나 유리한 기간만 선택했는지, 수수료와 슬리피지가 반영됐는지, 판매된 전략과 성과를 낸 전략이 같은 버전인지 사용자가 확인하기는 어려웠다. 상승장에서 성과가 좋았던 전략이 횡보장이나 급락장에서는 어떻게 작동하는지도 하나의 평균 수익률만으로는 알기 어려웠다.
       </p>
 
       <figure class="mb-10 overflow-hidden rounded-2xl border border-slate-200 bg-slate-950">
-        <img src="/images/news/news-96-noahai-strategy-studio-passport-og.jpg" alt="전략 원문부터 실행 규칙, PAPER 검증, 전략 검증 여권과 사용자 재검증까지 연결하는 NoahAI 전략 스튜디오" width="1200" height="630" class="h-auto w-full" loading="eager" decoding="async" />
-        <figcaption class="px-5 py-3 text-sm text-slate-300">전략의 원문과 실행, 검증 결과를 하나의 여권으로 연결하는 NoahAI 전략 스튜디오.</figcaption>
+        <img src="/images/news/news-96-noahai-strategy-studio-passport-og.jpg" alt="전략 원문부터 실행 규칙 PAPER 검증 전략 검증 여권과 사용자 재검증까지 연결하는 NoahAI 전략 스튜디오" width="1200" height="630" class="h-auto w-full" loading="eager" decoding="async" />
+        <figcaption class="px-5 py-3 text-sm text-slate-300">전략 원문과 실행 규칙, 검증 결과를 하나의 여권으로 연결하는 NoahAI 전략 스튜디오.</figcaption>
       </figure>
 
-      <h2 class="text-2xl font-bold text-gray-900 mb-4">백테스트 수익률만으로는 알 수 없었던 전략의 실제 모습</h2>
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        온라인 투자전략 시장에서는 백테스트 수익률이나 계좌 화면이 전략의 성능을 설명하는 대표적인 자료로 사용돼 왔다. 하지만 유리한 기간만 선택했는지, 수수료와 슬리피지가 반영됐는지, 판매된 전략과 성과를 낸 전략이 같은 버전인지 사용자가 확인하기는 쉽지 않았다.
-      </p>
-      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        하나의 평균 수익률만으로는 전략이 어떤 시장에서 강하고 약한지도 알기 어렵다. 상승장에서 높은 성과를 낸 전략이 횡보장이나 급락장에서는 전혀 다른 결과를 보일 수 있지만, 기존의 수익률 화면만으로는 이러한 차이가 충분히 드러나지 않았다.
-      </p>
-      <p class="text-lg text-gray-700 mb-10 leading-relaxed">
-        전략 스튜디오는 이 문제를 전략의 원문과 실제 실행 규칙을 연결하는 것에서 시작한다. 진입과 청산, 손절, 자금관리 조건이 실행 규칙에 어떻게 반영됐는지 사용자가 확인하고, 해석되지 않은 조건은 임의로 추정하지 않는다. 이후 검증 결과를 해당 전략의 ID와 버전에 연결해 하나의 검증 여권으로 관리한다.
+        전략 스튜디오는 Pine Script, TradingView 전략, 문서와 자연어로 작성된 투자 아이디어를 실행 가능한 규칙으로 구조화하고, 사용자가 원문과 변환된 규칙을 직접 확인하도록 설계됐다. 진입·청산·손절·자금관리 조건이 실제 실행 규칙에 어떻게 반영됐는지 확인한 뒤 승인하며, 해석되지 않은 조건은 임의로 추정해 실행하지 않는다.
       </p>
 
-      <h2 class="text-2xl font-bold text-gray-900 mb-4">시장국면별 승률과 수익률을 확인하는 전략 마켓</h2>
-      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        NoahAI의 전략 마켓에서는 누구나 전략의 전체 수익률뿐 아니라 <strong>상승장·하락장·횡보장·고변동장별 승률과 수익률</strong>을 확인할 수 있도록 설계됐다. 최대낙폭, 연속 손실, 거래 횟수와 검증 기간도 함께 제공해 높은 숫자 하나가 아니라 성과와 위험을 동시에 비교할 수 있게 한다.
+      <p class="text-lg text-gray-700 mb-5 leading-relaxed">
+        전략마다 발급되는 검증 여권에는 다음 정보가 함께 기록된다.
       </p>
+      <ul class="list-disc pl-6 text-lg text-gray-700 mb-8 space-y-3 leading-relaxed">
+        <li><strong>전략 원문과 실행 규칙:</strong> 어떤 아이디어가 어떤 조건으로 실제 실행되는지 확인</li>
+        <li><strong>전략 ID와 버전:</strong> 판매·검증·운용된 전략이 동일한 버전인지 구분</li>
+        <li><strong>시장과 비용 조건:</strong> 거래소, 자산, 현물·선물, 시간봉, 수수료와 슬리피지 기록</li>
+        <li><strong>검증 결과:</strong> 과거검증, 시장국면별 성과, 모의 운용(PAPER)과 확인된 거래 근거를 단계별로 표시</li>
+      </ul>
+
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        사용자는 거래소, 자산, 현물·선물, 시간봉, 계정 규모와 위험 성향에 따라 전략을 찾을 수 있다. 예를 들어 &lsquo;바이낸스 선물·횡보장·소액 계정·낙폭 우선&rsquo;처럼 자신에게 필요한 조건을 선택하면, 해당 환경에서 검증된 전략과 그 근거를 중심으로 비교하는 방식이다.
+        NoahAI의 전략 마켓에서는 누구나 전략의 전체 수익률뿐 아니라 <strong>상승장·하락장·횡보장·고변동장별 승률과 수익률</strong>을 확인할 수 있도록 설계됐다. 최대낙폭, 연속 손실, 거래 횟수와 검증 기간도 함께 제공해 높은 수익률 하나가 아니라 성과와 위험을 동시에 비교할 수 있게 한다.
       </p>
+
       <p class="text-lg text-gray-700 mb-8 leading-relaxed">
-        전략마다 발급되는 검증 여권에는 전략 원문과 실행 규칙, 버전, 적용 시장, 비용 조건, 과거검증, PAPER 전진검증과 확인된 거래 근거가 함께 기록된다. 사용자는 수익률이 얼마나 높다고 주장하는지를 넘어, 어떤 조건에서 만들어진 결과인지까지 확인할 수 있다.
+        사용자는 거래소, 자산, 현물·선물, 시간봉, 계정 규모와 위험 성향에 따라 전략을 찾을 수 있다. 예를 들어 &lsquo;바이낸스 선물·횡보장·소액 계정·낙폭 우선&rsquo;처럼 원하는 조건을 선택하면 해당 환경에서 검증된 전략과 근거를 중심으로 비교하는 방식이다.
       </p>
 
       <figure class="mb-10 overflow-hidden rounded-2xl border border-slate-200 bg-slate-950">
@@ -267,13 +268,10 @@ export const newsArticles: NewsArticle[] = [
         <figcaption class="px-5 py-3 text-sm text-slate-300">시장국면별로 적합한 전략을 찾고 검증 근거를 비교하는 NoahAI 전략 마켓플레이스.</figcaption>
       </figure>
 
-      <h2 class="text-2xl font-bold text-gray-900 mb-4">마켓에서 고른 전략, NoahAI에서 다시 검증하고 운용</h2>
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        사용자가 마켓에서 전략을 선택하면 과정은 다운로드에서 끝나지 않는다. 전략 스튜디오로 가져온 전략을 자신의 거래소와 자산, 수수료 조건에서 다시 검증하고 PAPER를 통해 확인한 뒤 최종적으로 승인할 수 있다.
+        마켓에서 선택한 전략은 NoahAI 전략 스튜디오로 가져와 자신의 거래소와 자산, 수수료 조건에서 다시 검증하고 PAPER로 확인한 뒤 승인할 수 있다. NoahAI와 연동하면 현재 시장국면과 승인된 전략의 적합성을 함께 판단해 전략에 유리한 국면에서는 운용 후보로 연결하고, 국면이 바뀌면 다른 승인 전략이나 NoahAI의 기본 판단으로 전환할 수 있다.
       </p>
-      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        NoahAI와 연동하면 현재 시장국면과 승인된 전략의 적합성을 함께 판단한다. 전략에 유리한 국면에서는 운용 후보로 연결하고, 국면이 바뀌면 맞지 않는 전략의 신규 진입을 멈추거나 다른 승인 전략으로 전환할 수 있다. 손실 한도와 포지션, 집중도, 레버리지 같은 공통 안전 기준도 전략보다 우선 적용된다.
-      </p>
+
       <p class="text-lg text-gray-700 mb-8 leading-relaxed">
         운용 결과는 다시 같은 전략 버전의 검증 여권에 축적된다. 전략을 찾고, 검증하고, 운용하고, 결과를 다시 확인하는 과정이 반복되면서 전략은 한 번 판매되고 끝나는 파일이 아니라 시간이 지날수록 근거가 쌓이는 디지털 자산으로 발전한다.
       </p>
@@ -283,39 +281,25 @@ export const newsArticles: NewsArticle[] = [
         <figcaption class="px-5 py-3 text-sm text-slate-600">전략 제작부터 검증, 승인, 운용, 결과 검토까지 반복되는 NoahAI의 전략 생명주기.</figcaption>
       </figure>
 
-      <h2 class="text-2xl font-bold text-gray-900 mb-4">수익률 경쟁에서 검증 근거 경쟁으로</h2>
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        전략 스튜디오가 가져올 가장 큰 변화는 전략 시장의 경쟁 기준이다. 전략 제작자는 높은 수익률 화면을 앞세우는 대신 자신의 전략이 어떤 시장에서 강하고 어떤 위험을 갖는지 검증 근거로 설명하게 된다. 검증 이력이 쌓인 전략은 더 높은 신뢰와 발견 가능성을 얻고, 제작자의 전문성도 객관적인 기록으로 축적된다.
-      </p>
-      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        투자자는 판매자의 설명을 그대로 믿는 대신 같은 전략 버전을 자신의 환경에서 다시 검증한 뒤 선택할 수 있다. 마켓 역시 다운로드 수나 자기신고 수익률이 아니라 표본의 충분성, 최근 검증 결과, 시장국면별 적합성, 위험과 실행 근거를 중심으로 전략을 보여줄 수 있다.
-      </p>
-      <p class="text-lg text-gray-700 mb-10 leading-relaxed">
-        이 구조가 정착하면 유리한 기간만 고른 백테스트, 비용을 제외한 수익률, 모의 결과를 실제 성과처럼 꾸민 화면이나 다른 버전의 성과를 가져온 광고는 설득력을 잃게 된다. 전략 판매를 막는 것이 아니라, 좋은 전략이 더 투명한 근거로 평가받는 시장을 만드는 것이 NoahAI의 목표다.
+        노아에이아이랩스는 전략 스튜디오와 검증 전략 마켓의 결합이 기존 전략 유통시장의 경쟁 기준을 바꿀 것으로 보고 있다. 전략 제작자는 높은 수익률 화면을 앞세우는 대신 어떤 시장에서 강하고 어떤 위험이 있는지를 검증 근거로 설명하게 되고, 사용자는 판매자의 설명을 그대로 믿는 대신 같은 전략 버전을 자신의 환경에서 다시 검증한 뒤 선택할 수 있다.
       </p>
 
-      <h2 class="text-2xl font-bold text-gray-900 mb-4">세계 최초 ‘전략 검증 여권 생태계’로 새로운 시장 개척</h2>
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        TradingView가 전략 작성과 백테스트, 공유 문화를 대중화했다면 NoahAI는 그 다음 단계인 전략 원문과 실행 규칙의 연결, 시장국면별 검증, 버전별 여권, 사용자 재검증과 실제 운용의 연결에 집중한다. 회사 측은 이 전 과정을 하나의 플랫폼 생명주기로 결합한 구조가 2026년 9월 자체 글로벌 주요 서비스 비교조사 기준 세계 최초라고 밝혔다.
+        이 구조가 정착하면 유리한 기간만 고른 백테스트, 비용을 제외한 수익률, 모의 결과를 실제 성과처럼 제시한 화면이나 다른 버전의 성과를 가져온 광고는 높은 숫자 하나만으로 신뢰를 얻기 어려워진다. 마켓 역시 다운로드 수나 자기신고 수익률이 아니라 표본, 최근성, 시장국면별 적합성, 위험과 실행 근거를 중심으로 전략을 보여줄 수 있다.
       </p>
+
       <p class="text-lg text-gray-700 mb-8 leading-relaxed">
-        NoahAI 전략 스튜디오와 검증 전략 마켓이 연결되면 전략 제작자는 자신의 아이디어를 검증 가능한 자산으로 성장시키고, 사용자는 세계 각지에서 만들어진 전략을 자신의 시장 환경에 맞게 확인해 활용할 수 있다. 노아에이아이랩스는 이를 통해 백테스트 도구와 자동매매 프로그램을 넘어 <strong>&lsquo;전략 신뢰 인프라&rsquo;</strong>라는 새로운 시장을 개척한다는 계획이다.
+        회사 측은 Pine·TradingView·문서 전략의 원문과 실행 규칙을 연결하고, 시장국면별 검증과 거래 근거를 버전별 여권으로 축적하며, 사용자가 자신의 환경에서 재검증해 NoahAI 운용까지 이어가는 전체 구조가 <strong>2026년 9월 자체 글로벌 주요 서비스 비교조사 기준 세계 최초</strong>라고 설명했다. 백테스트나 전략 판매라는 개별 기능이 아니라 전략의 제작부터 검증·유통·운용까지 하나의 생명주기로 연결한 것이 핵심이다.
       </p>
 
-      <div class="bg-primary-50 border-l-4 border-primary-600 p-6 mb-10 rounded-r-lg">
-        <p class="text-lg text-gray-800 leading-relaxed">
-          노아에이아이랩스는 &ldquo;좋은 전략의 기준은 가장 높은 수익률을 보여주는 화면이 아니라, 어떤 시장에서 어떻게 작동했고 누구나 같은 조건으로 다시 확인할 수 있는가에 있다&rdquo;며 &ldquo;전략 스튜디오를 통해 제작자는 실력과 근거로 인정받고, 사용자는 자신의 시장과 위험 수준에 맞는 전략을 선택하는 새로운 전략 문화를 만들겠다&rdquo;고 밝혔다.
-        </p>
-      </div>
+      <p class="text-lg text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-5">
+        노아에이아이랩스는 &ldquo;좋은 전략의 기준은 가장 높은 수익률을 보여주는 화면이 아니라, 어떤 시장에서 어떻게 작동했고 누구나 같은 조건으로 다시 확인할 수 있는가에 있다&rdquo;며 &ldquo;전략 스튜디오를 통해 제작자는 실력과 근거로 인정받고, 사용자는 자신의 시장과 위험 수준에 맞는 전략을 선택하는 새로운 전략 문화를 만들겠다&rdquo;고 전했다.
+      </p>
 
-      <div class="bg-white border border-gray-200 rounded-xl p-6 mb-8">
-        <p class="font-semibold text-gray-900 mb-3">관련 서비스</p>
-        <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
-          <li><a href="https://noahailabs.com/ko/product/strategy-studio" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">NoahAI 전략 스튜디오</a></li>
-          <li><a href="https://daltrading.net/strategies" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">NoahAI 검증 전략 마켓</a></li>
-          <li><a href="https://daltrading.net/strategies/guide" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">전략 등록·검증 안내</a></li>
-        </ul>
-      </div>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        노아에이아이랩스는 향후 검증 전략 허브를 기반으로 전략 등록과 검토, 사용자 재검증 체계를 확대하고 전략 라이선스와 제작자 보상까지 연결되는 마켓플레이스로 발전시킬 계획이다. 자세한 내용은 <a href="https://noahailabs.com/ko/product/strategy-studio" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">NoahAI 전략 스튜디오 공식 페이지</a>와 <a href="https://daltrading.net/strategies" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">검증 전략 허브</a>에서 확인할 수 있다.
+      </p>
 
       <p class="text-gray-600 text-sm border-t border-gray-200 pt-6 leading-relaxed">
         ※ 전략 검증 결과는 투자 판단을 돕기 위한 정보이며 미래 수익을 보장하지 않습니다.
