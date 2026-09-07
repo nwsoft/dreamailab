@@ -77,6 +77,7 @@ const META_BY_ID = Object.fromEntries(
 /** 레거시·오분류 보정: 기사 ID → 표준 카테고리 */
 export const NEWS_ARTICLE_CATEGORY_BY_ID: Record<number, NewsCategoryId> = {
   // 2026 최신
+  97: 'press', // 기술개발인의 날 계기 자람이 JDS 발달장애 맞춤 치료·학습 표준 기술
   96: 'press', // NoahAI AI 커스텀→전략 스튜디오·전략 검증 여권 생태계
   95: 'press', // 자람이 JDS 발달지원 시각언어 규격 공개
   94: 'company', // DAL Vibe Architect 신규 프로젝트·한국형 소프트웨어 창작 인프라

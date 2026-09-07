@@ -89,6 +89,202 @@ export function getLocalizedArticle(
 
 export const newsArticles: NewsArticle[] = [
   {
+    id: 97,
+    title:
+      '첫 ‘기술개발인의 날’이 조명한 민간 R&D… 자람이, 발달장애 맞춤 치료·학습 표준 기술 제시',
+    excerpt:
+      '국가가 기업 연구개발의 역할을 조명한 첫 법정 기념일을 계기로, 자람이는 JDS 시각언어 규격과 AI 디지털케어로그를 연결해 가정·센터·학교에서 같은 의미로 지원하는 발달장애 맞춤 치료·학습 기술 방향을 제시했다.',
+    category: 'press',
+    date: '2026-09-07',
+    modifiedDate: '2026-09-07',
+    image: '🏅',
+    featured: true,
+    author: '드림에이아이랩',
+    authorUrl: 'https://dreamailab.com/',
+    ogImage: '/images/news/news-95-jarame-jds-visual-language-og.jpg',
+    ogImageAlt:
+      '자람이 JDS 의미 ID와 AI 디지털케어로그가 가정·센터·학교의 발달장애 맞춤 치료·학습 지원을 연결하는 구조',
+    contentImages: [
+      {
+        url: '/images/news/news-95-jarame-jds-visual-language-og.jpg',
+        width: 1200,
+        height: 630,
+        alt: '자람이 JDS 의미 ID가 가정 센터 학교 병원에서 같은 시각언어로 이어지는 발달장애 치료 학습 지원 구조',
+        caption:
+          '자람이 JDS는 같은 의미를 가정·센터·학교에서 일관되게 쓰도록 설계된 발달지원 시각언어 규격이다.',
+      },
+      {
+        url: '/images/news/news-95-jds-l1-l2-l3-meaning-expression-levels.webp',
+        width: 1800,
+        height: 771,
+        alt: '자람이 JDS L1 실제 사진 L2 표준 시각자료 L3 단순 기호 글자 표현 단계',
+        caption:
+          'JDS는 같은 Meaning ID를 유지하면서 당사자의 이해 수준에 따라 L1 실물·사진, L2 표준 시각자료, L3 기호·글자로 표현한다.',
+      },
+      {
+        url: '/images/news/news-95-jds-core-48-visual-language-cards.webp',
+        width: 1800,
+        height: 1122,
+        alt: '자람이 JDS Core 48 물 주세요 화장실 가요 도와주세요 쉬고 싶어요 시각언어 카드 인쇄 화면',
+        caption:
+          'Core 48은 요구·자기결정, 안전·신체, 감정, 기본생활, 사람·장소 등 현장에서 먼저 필요한 의미를 중심으로 구성됐다.',
+      },
+    ],
+    about: [
+      {
+        type: 'Organization',
+        id: 'https://dreamailab.com/#organization',
+        name: '드림에이아이랩',
+        alternateName: ['Dream AI Lab', 'DAL'],
+        url: 'https://dreamailab.com/',
+        description: 'AI 디지털케어로그 기반 플랫폼·데이터 인프라 기업',
+      },
+      {
+        type: 'Organization',
+        id: 'https://jarame.or.kr/#organization',
+        name: '자람이',
+        alternateName: ['Jarame'],
+        url: 'https://jarame.or.kr/',
+        description:
+          '발달장애인의 의사소통과 생활·치료·교육 기록을 연결하는 AI 디지털케어로그 통합지원 플랫폼',
+        sameAs: ['https://dreamailab.com/services/jarame/'],
+      },
+      {
+        type: 'DefinedTerm',
+        name: 'Jaram Design System',
+        alternateName: ['JDS', '자람이 발달지원 시각언어 규격'],
+        url: 'https://jarame.or.kr/design-system',
+        description:
+          '의미 ID와 개인별 표현 단계, 인쇄 자료, 디지털케어로그 적용 규칙을 연결하는 자람이의 발달지원 시각언어 규격',
+      },
+    ],
+    mentions: [
+      {
+        type: 'DefinedTerm',
+        id: 'https://jarame.or.kr/tech-docs#ai-digital-care-log',
+        name: 'AI 디지털케어로그',
+        alternateName: ['AI Digital Care Log'],
+        url: 'https://jarame.or.kr/tech-docs',
+      },
+      {
+        type: 'DefinedTerm',
+        name: '기술개발인의 날',
+        alternateName: ['Technology Developers Day'],
+        url: 'https://eiec.kdi.re.kr/policy/callDownload.do?dtime=20260907164301&filenum=1&num=286446',
+        description:
+          '민간 연구개발과 기업 연구자의 역할을 조명하기 위해 2026년 처음 법정 국가기념일로 열린 행사',
+      },
+    ],
+    tags: [
+      '자람이',
+      '드림에이아이랩',
+      '기술개발인의 날',
+      '발달장애 맞춤 기술',
+      '발달장애 치료 표준',
+      '발달장애 학습 표준',
+      'JDS',
+      'Jaram Design System',
+      '시각언어',
+      'AI 디지털케어로그',
+      '의미 ID',
+      'Core 48',
+      'L1 L2 L3',
+      '발달지원 기술',
+      '정해성 CTO',
+      '강수진 박사',
+    ],
+    faq: [
+      {
+        question: '이 글은 2026 기술개발인의 날 정부포상 수상 기사인가요?',
+        answer:
+          '아니다. 공식 공개 보도와 주요 언론 보도에서 확인되는 2026 기술개발인의 날 과학기술포장 수상자는 고기옥, 류진호, 박우진, 이호기 4명이다. 이 기사는 정부포상 수상 보도가 아니라, 첫 법정 기념일이 조명한 민간 R&D 흐름 속에서 자람이 JDS 기술의 의미를 설명하는 회사 뉴스다.',
+      },
+      {
+        question: '자람이가 제시하는 발달장애 맞춤 치료·학습 표준 기술은 무엇인가요?',
+        answer:
+          'JDS 의미 ID, L1~L3 개인별 시각표현, Core 48 인쇄 자료, AI 디지털케어로그의 관찰·지원 흐름을 연결해 가정·센터·학교가 같은 의미로 지원하도록 만드는 발달지원 기술 구조다.',
+      },
+      {
+        question: 'JDS는 기존 그림카드와 무엇이 다른가요?',
+        answer:
+          '특정 그림 한 장을 표준으로 고정하는 것이 아니라 의미 ID를 중심에 두고, 같은 의미를 실제 사진, 표준 그림, 기호와 글자 등 당사자에게 맞는 표현 단계로 바꿔 사용할 수 있게 한다.',
+      },
+      {
+        question: 'AI 디지털케어로그와 연결되면 무엇이 달라지나요?',
+        answer:
+          '행동 횟수만 기록하는 것이 아니라 어떤 환경에서 어떤 표현이 나왔고, 어떤 지원을 제공했으며, 반응이 어떻게 바뀌었는지 맥락을 남길 수 있다. 이 기록은 가정·치료·교육 현장의 맞춤형 지원 근거가 된다.',
+      },
+    ],
+    content: `
+      <p class="text-sm text-gray-500 mb-6">[회사 뉴스 · 2026-09-07]</p>
+      <p class="text-xl font-semibold text-gray-800 mb-3 leading-relaxed">— 첫 법정 국가기념일이 된 기술개발인의 날, 기업 연구개발의 사회문제 해결 역할 조명</p>
+      <p class="text-xl font-semibold text-gray-800 mb-8 leading-relaxed">— 자람이 JDS, 의미 ID·개인별 표현 단계·AI 디지털케어로그를 연결한 발달장애 맞춤 치료·학습 지원 체계 제시</p>
+
+      <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-4">
+        과학기술정보통신부가 2026년 9월 7일 서울 페어몬트 앰배서더에서 첫 법정 국가기념일로 지정된 <strong>&lsquo;2026 기술개발인의 날&rsquo;</strong> 기념식을 열고 민간 연구개발과 기술경영의 역할을 조명했다. 기업 연구자가 국가 산업의 기반 기술을 만들어 왔다는 메시지가 강조된 가운데, 드림에이아이랩은 발달장애인의 일상·치료·학습 현장을 연결하는 <strong>자람이 JDS(Jaram Design System) 시각언어 규격</strong>을 통해 사회문제 해결형 R&amp;D의 방향을 제시하고 있다.
+      </p>
+
+      <figure class="mb-10 overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
+        <img src="/images/news/news-95-jarame-jds-visual-language-og.jpg" alt="자람이 JDS 의미 ID와 AI 디지털케어로그가 가정 센터 학교의 발달장애 맞춤 치료 학습 지원을 연결하는 구조" width="1200" height="630" class="h-auto w-full" loading="eager" decoding="async" />
+        <figcaption class="px-5 py-3 text-sm text-slate-500">자람이 JDS는 같은 의미를 여러 생활환경에서 일관되게 사용하고, 표현 방식은 당사자의 이해 특성에 맞게 선택하도록 설계됐다.</figcaption>
+      </figure>
+
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        올해 처음 법정 국가기념일로 열린 기술개발인의 날은 반도체, 신약, 메모리, 항공, 철강, 전력기기, 조선 등 산업 현장에서 기술을 개발해 온 기업 연구자의 공로를 기리는 행사다. <a href="https://eiec.kdi.re.kr/policy/callDownload.do?dtime=20260907164301&amp;filenum=1&amp;num=286446" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">과기정통부 발표</a>와 주요 언론 보도에 따르면 이날 정부포상 55점, 부총리표창 35점, 우수연구자상 11점이 수여됐고 과학기술포장은 고기옥 한국항공우주산업 팀장, 류진호 포스코 연구위원, 박우진 LS일렉트릭 연구단장, 이호기 삼성중공업 센터장 등 4명이 받았다.
+      </p>
+
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        드림에이아이랩은 이 같은 민간 R&amp;D의 의미가 전통 제조와 첨단 산업을 넘어 발달장애, 돌봄, 치료·교육 현장으로도 확장돼야 한다고 보고 있다. 발달장애인은 가정, 치료센터, 학교, 병원 등 여러 환경을 오가지만 장소마다 쓰는 사진, 그림, 지시어, 기록 방식이 다르면 같은 의미도 매번 새로 이해해야 한다. 이 문제는 단순한 편의 문제가 아니라 예측 가능성, 의사표현, 자기결정권, 치료·학습의 연속성과 연결된다.
+      </p>
+
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        자람이 JDS는 이 문제를 <strong>&ldquo;같은 의미를, 어디서나 같은 시각언어로&rdquo;</strong>라는 원칙으로 해결하려는 발달지원 기술이다. 핵심은 특정 그림 한 장을 강제로 표준화하는 것이 아니라 <strong>의미 ID(Meaning ID)</strong>를 중심에 두는 것이다. 예를 들어 &lsquo;물을 원한다&rsquo;는 의미에 <code>need.water</code>라는 ID를 부여하면, 실제 표현은 사용자에 따라 실물 사진, JDS 표준 그림, 단순 기호와 글자로 달라질 수 있다.
+      </p>
+
+      <figure class="mb-10 overflow-hidden rounded-2xl border border-teal-100 bg-slate-50">
+        <img src="/images/news/news-95-jds-l1-l2-l3-meaning-expression-levels.webp" alt="자람이 JDS L1 실제 사진 L2 표준 시각자료 L3 단순 기호 글자 표현 단계" width="1800" height="771" class="h-auto w-full" loading="lazy" decoding="async" />
+        <figcaption class="px-5 py-3 text-sm leading-relaxed text-slate-600">동일한 <code>need.water</code> 의미 ID를 유지하면서 L1 실물·사진, L2 JDS 표준 시각자료, L3 기호·글자로 표현 단계를 바꿀 수 있다.</figcaption>
+      </figure>
+
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        JDS의 L1~L3 구조는 사용자를 하나의 능력 수준으로 고정하지 않는다. L1은 본인의 컵, 교실, 가족 사진처럼 높은 구체성이 필요한 경우에 쓰고, L2는 여러 환경에서 공통으로 사용할 수 있는 JDS 표준 시각자료를 제공한다. L3는 기호와 짧은 글자를 빠르게 이해하는 사용자를 위한 단계다. 중요한 것은 표현의 모양이 달라져도 같은 Meaning ID가 유지돼 치료사, 교사, 보호자가 같은 의미를 공유할 수 있다는 점이다.
+      </p>
+
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        첫 공개 세트인 <strong>Core 48</strong>은 요구·자기결정, 안전·신체, 감정, 기본생활, 사람·장소 등 현장에서 먼저 필요한 48개 의미로 구성됐다. 보호자와 특수교사, 치료사는 자람이 JDS 페이지에서 필요한 카드를 선택해 낱장 카드, 선택판, 먼저–그다음 보드, 시각일정표 형태로 A4 인쇄하거나 PDF로 저장해 활용할 수 있다.
+      </p>
+
+      <figure class="mb-10 overflow-hidden rounded-2xl border border-teal-100 bg-slate-50">
+        <img src="/images/news/news-95-jds-core-48-visual-language-cards.webp" alt="자람이 JDS Core 48 물 주세요 화장실 가요 도와주세요 쉬고 싶어요 시각언어 카드 인쇄 화면" width="1800" height="1122" class="h-auto w-full" loading="lazy" decoding="async" />
+        <figcaption class="px-5 py-3 text-sm leading-relaxed text-slate-600">자람이 JDS Core 48 화면. 요구와 자기결정에 필요한 시각카드를 선택해 현장에서 바로 출력할 수 있다.</figcaption>
+      </figure>
+
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        JDS가 단순 그림카드와 다른 지점은 <strong>AI 디지털케어로그</strong>와 연결된다는 점이다. 예를 들어 수업 중 자리이탈이 반복되는 상황에서 기존 기록은 &lsquo;자리이탈 3회&rsquo;로 끝날 수 있다. 그러나 당사자가 &lsquo;시끄러워요&rsquo;, &lsquo;쉬고 싶어요&rsquo;, &lsquo;도와주세요&rsquo; 같은 의미를 선택해 표현할 수 있고, 그 표현 뒤에 제공된 지원과 반응이 기록된다면 데이터의 성격이 달라진다.
+      </p>
+
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        자람이의 관찰·지원 흐름은 <strong>환경 → 당사자 표현 → 제공 지원 → 관찰 반응 → 조정</strong>으로 이어진다. 이는 행동을 단순히 교정 대상으로 보는 방식에서 벗어나, 행동 뒤에 있는 의사와 욕구를 이해하고 다음 지원을 조정하기 위한 근거를 남기는 구조다. 같은 의미 ID를 기반으로 가정·센터·학교가 기록을 이어가면 치료와 학습의 단절을 줄일 수 있다.
+      </p>
+
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        드림에이아이랩 정해성 CTO와 대화분석·상호작용 언어학 전문가 강수진 박사가 공동 설계한 JDS는 한국어 의미 ID, L1~L3 개인별 표현 단계, Core 48 인쇄 자료, 자람이 서비스 UI, AI 디지털케어로그 적용 규칙을 하나로 묶은 발달지원 규격이다. 회사는 이를 발달장애 맞춤 치료·학습의 공통 언어를 만드는 기술 기반으로 보고 있다.
+      </p>
+
+      <p class="text-lg text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-5">
+        정해성 CTO는 &ldquo;발달장애인의 행동을 먼저 문제로 단정하기보다, 표현하지 못한 의사가 행동으로 나타나는 것은 아닌지 살펴볼 수 있어야 한다&rdquo;며 &ldquo;자람이는 가정·센터·학교가 같은 의미를 공유하고, 당사자가 자신에게 맞는 방식으로 표현할 수 있는 치료·학습 지원 기술을 고도화해 나가겠다&rdquo;고 말했다.
+      </p>
+
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        자람이는 향후 Core 48을 기반으로 Essential 150, Extended 500+와 Personal Vocabulary로 어휘 체계를 확장하고, 가정·치료센터·학교·지역사회에서 활용 가능한 시각자료와 케어로그 연계 규칙을 단계적으로 고도화할 계획이다. 상세 내용과 Core 48 시각자료 출력은 <a href="https://jarame.or.kr/design-system" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">자람이 JDS 공식 페이지</a>에서 확인할 수 있다.
+      </p>
+
+      <p class="text-gray-600 text-sm border-t border-gray-200 pt-6 leading-relaxed">
+        ※ 이 글은 2026 기술개발인의 날 정부포상 수상 보도가 아니라, 첫 법정 국가기념일이 조명한 민간 R&amp;D 흐름을 바탕으로 자람이 JDS 기술의 의미를 설명하는 회사 뉴스다. JDS는 발달지원 시각언어 규격이며 진단·처방·치료나 전문가의 최종 판단을 대체하지 않는다.
+      </p>
+    `,
+  },
+  {
     id: 96,
     title:
       '“수익률 캡처 대신 실행 근거 본다”… 노아에이아이랩스, 세계 최초 ‘전략 검증 여권’ 공개',
