@@ -9,7 +9,7 @@ import { MarketingIcon, type MarketingIconName } from '../../../components/Marke
 import { absoluteUrl, buildBreadcrumbJsonLd, buildPageMetadata, SITE_URL } from '../../../lib/seo'
 
 const pagePath = '/research/robot-vision'
-const pageDescription = 'Robot Vision은 돌봄·교육·생활·금융 등 인간 삶의 시간축 데이터와 RWD/RWE, 판단·실행 결과를 바탕으로 로봇이 개인의 맥락을 이해하고 안전하게 돕는 초개인화 Embodied AI 연구입니다.'
+const pageDescription = 'Robot Vision은 삶의 시간축 데이터와 권한·감사 구조를 바탕으로 로봇이 개인의 맥락을 이해하도록 연구합니다. 자람이는 건강·돌봄 여권의 장치별 최소권한 연결 기반을 먼저 구현했습니다.'
 
 export const metadata: Metadata = buildPageMetadata({
   title: 'Robot Vision | 삶의 맥락을 이해하는 초개인화 로봇 AI 연구 - 드림에이아이랩',
@@ -31,13 +31,14 @@ const techLd = {
   '@context': 'https://schema.org', '@type': 'TechArticle',
   headline: 'Robot Vision — Human Life Intelligence for Embodied AI', description: pageDescription,
   author: { '@type': 'Organization', name: 'Dream AI Lab' }, publisher: { '@type': 'Organization', name: 'Dream AI Lab', url: SITE_URL },
-  mainEntityOfPage: absoluteUrl(pagePath), inLanguage: 'ko-KR', datePublished: '2026-07-21', dateModified: '2026-08-24',
-  keywords: ['Robot Vision', 'Embodied AI', 'AI Digital Care Log', 'RWD', 'RWE', '초개인화 로봇', '돌봄 로봇'],
+  mainEntityOfPage: absoluteUrl(pagePath), inLanguage: 'ko-KR', datePublished: '2026-07-21', dateModified: '2026-09-11',
+  keywords: ['Robot Vision', 'Embodied AI', 'AI Digital Care Log', 'RWD', 'RWE', '초개인화 로봇', '돌봄 로봇', '자람이 건강 돌봄 여권', '발달장애인 로봇 돌봄'],
 }
 
 const faqItems = [
   { q: 'Robot Vision은 판매 중인 로봇 제품인가요?', a: '아닙니다. 현재는 드림에이아이랩의 Research · Future Vision입니다. 특정 하드웨어 판매나 출시 일정을 뜻하지 않으며, 삶의 맥락을 이해하는 AI Brain과 안전한 로봇 연동 조건을 연구합니다.' },
   { q: '기존 로봇 AI와 무엇이 다른가요?', a: '장면 인식이나 단일 명령 수행을 넘어, 개인의 장기 기록·현재 상태·목표·위험·과거 개입 결과를 연결해 다음 도움을 판단하는 Human Life Intelligence를 중심에 둡니다.' },
+  { q: '자람이에는 Robot Vision과 연결할 실제 기반이 있나요?', a: '있습니다. 자람이 건강·돌봄 여권에는 보호자·당사자 동의, 관리자 확인, 장치별 최소권한 토큰, 만료·폐기, 허용된 측정값 기록과 접근 감사가 구현돼 있습니다. 특정 로봇 하드웨어와의 상용 연동은 별도 PoC와 안전검증이 필요한 다음 단계입니다.' },
   { q: '돌봄·교육·금융 데이터가 한 데이터베이스에 합쳐지나요?', a: '아닙니다. 각 서비스의 원본 데이터는 동의·권한·법적 경계에 따라 분리합니다. 공유하는 것은 데이터 자체가 아니라 관찰·판단·실행·결과·복기라는 아키텍처와 검증 방법입니다.' },
   { q: '로봇이 투자나 의료 결정을 대신하나요?', a: '아닙니다. 의료·금융처럼 규제와 전문 권한이 필요한 판단은 설명·알림·정보 전달 범위로 제한하고, 진단·처방·투자 권유·금융 실행은 각 법령과 승인 주체, 연결 시스템의 권한을 따릅니다.' },
   { q: '로봇이 사람을 직접 만지거나 자율 행동하나요?', a: '현재 연구 중심은 관찰, 요약, 알림, 설명과 제안입니다. 사람 승인 없는 물리적 자율행동은 현재 범위가 아니며, 제한적 행동도 하드웨어 파트너·현장 책임자·안전 검증을 전제로 합니다.' },
@@ -76,6 +77,14 @@ const metrics = [
   ['운영성', '장애·네트워크 단절·센서 오류에서 안전하게 멈추고 사람이 이어받는가'],
 ]
 
+const jarameBridge = [
+  ['01', '사람이 기록', '건강·응급정보, 의사소통 방법, 복약·검진과 생활관리 계획을 출처별로 정리합니다.'],
+  ['02', '사람이 승인', '보호자 또는 성인 당사자가 장치가 볼 항목, 목적과 기간을 결정합니다.'],
+  ['03', '장치 권한 발급', '시설·로봇·측정기마다 읽기와 측정 기록 범위를 분리한 토큰을 발급합니다.'],
+  ['04', '최소정보 사용', '장치는 허용된 요약만 읽고, 조회와 측정 결과는 감사 이력에 남깁니다.'],
+  ['05', '즉시 중단', '분실·교체·철회 시 토큰을 폐기하고 이후 접근을 차단합니다.'],
+]
+
 export default function RobotVisionPage() {
   return (
     <div className="company-page">
@@ -95,13 +104,23 @@ export default function RobotVisionPage() {
 
       <nav aria-label="Robot Vision 페이지 목차" className="sticky top-16 z-20 border-b border-slate-200 bg-white/95 backdrop-blur">
         <div className="mx-auto flex max-w-7xl gap-2 overflow-x-auto px-4 py-3 sm:px-6 lg:px-8">
-          {[['research-brief', '연구 정의'], ['life-intelligence', '삶의 데이터'], ['architecture', '아키텍처'], ['scenarios', '이용 장면'], ['authority', '행동 권한'], ['evidence', '검증'], ['governance', '안전'], ['faq', 'FAQ']].map(([id, label]) => <a key={id} href={`#${id}`} className="whitespace-nowrap rounded-full border border-slate-200 px-3 py-1.5 text-xs font-bold text-slate-600 hover:border-primary-300 hover:text-primary-700">{label}</a>)}
+          {[['research-brief', '연구 정의'], ['jarame-bridge', '자람이 구현'], ['life-intelligence', '삶의 데이터'], ['architecture', '아키텍처'], ['scenarios', '이용 장면'], ['authority', '행동 권한'], ['evidence', '검증'], ['governance', '안전'], ['faq', 'FAQ']].map(([id, label]) => <a key={id} href={`#${id}`} className="whitespace-nowrap rounded-full border border-slate-200 px-3 py-1.5 text-xs font-bold text-slate-600 hover:border-primary-300 hover:text-primary-700">{label}</a>)}
         </div>
       </nav>
 
       <section id="research-brief" className="company-section"><div className="company-container">
         <div className="max-w-3xl"><p className="company-eyebrow">Research brief</p><h2 className="company-section-title">로봇의 몸보다 먼저, 삶을 이해하는 두뇌를 설계합니다</h2><p className="company-section-lead">DAL의 질문은 “로봇이 무엇을 할 수 있는가”가 아니라 “어떤 근거와 권한으로 이 사람을 도와도 되는가”입니다.</p></div>
         <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">{principles.map((item) => <article key={item.title} className="company-card"><MarketingIcon name={item.icon} className="h-8 w-8 text-primary-700" /><h3 className="mt-5 text-lg font-black text-slate-950">{item.title}</h3><p className="mt-3 text-sm leading-6 text-slate-600">{item.body}</p></article>)}</div>
+      </div></section>
+
+      <section id="jarame-bridge" className="company-section bg-emerald-50/70"><div className="company-container">
+        <div className="max-w-4xl"><p className="text-sm font-black uppercase tracking-wider text-emerald-700">Vision to working foundation</p><h2 className="company-section-title mt-3">로봇 비전을 공상으로 두지 않기 위해, 자람이에 연결 기반을 먼저 만들었습니다</h2><p className="company-section-lead">Robot Vision이 상위 연구라면, 자람이 건강·돌봄 여권은 그 원칙을 발달장애 돌봄에 적용한 현재의 소프트웨어 기반입니다. 로봇이 사람을 처음 만났을 때 무엇을 알아야 하고, 누가 그 접근을 허용하며, 문제가 생기면 어떻게 끊을지를 먼저 구현했습니다.</p></div>
+        <div className="mt-10 grid gap-4 lg:grid-cols-5">{jarameBridge.map(([step, title, body]) => <article key={step} className="rounded-2xl border border-emerald-200 bg-white p-5 shadow-sm"><p className="text-xs font-black text-emerald-700">{step} · 자람이</p><h3 className="mt-3 text-lg font-black text-slate-950">{title}</h3><p className="mt-3 text-sm leading-6 text-slate-600">{body}</p></article>)}</div>
+        <div className="mt-8 grid gap-5 lg:grid-cols-2">
+          <article className="rounded-2xl border border-emerald-200 bg-white p-6"><p className="text-xs font-black uppercase tracking-wider text-emerald-700">현재 구현·자동 검증</p><h3 className="mt-3 text-xl font-black text-slate-950">건강·응급정보 구조화부터 장치 토큰 폐기까지</h3><ul className="mt-4 space-y-2 text-sm leading-6 text-slate-700"><li>• 보호자·당사자 동의와 관리자 계정·역할 확인</li><li>• 장치별 최소권한, 최대 90일 만료와 즉시 폐기</li><li>• 허용된 측정값 기록, 중복 방지와 접근 감사</li><li>• PDF·JSON·QR·FHIR 형식의 제한된 인수인계</li></ul></article>
+          <article className="rounded-2xl border border-amber-200 bg-amber-50 p-6"><p className="text-xs font-black uppercase tracking-wider text-amber-700">다음 현장 검증</p><h3 className="mt-3 text-xl font-black text-slate-950">특정 로봇의 센서와 물리 행동은 파트너 PoC 영역</h3><p className="mt-4 text-sm leading-7 text-slate-700">현재 구현은 안전한 정보 연결 기반입니다. 실제 카메라·음성·이동·접촉·투약 등은 로봇 제조사와 시설 책임자가 과업·중단 규칙·오류 대응을 정하고 별도 안전검증을 통과해야 합니다. 상용 로봇 연동 완료를 주장하지 않습니다.</p></article>
+        </div>
+        <div className="mt-8 flex flex-wrap gap-3"><a href="https://jarame.or.kr/health-passport-guide" target="_blank" rel="noopener noreferrer" className="rounded-lg bg-emerald-700 px-5 py-3 font-black text-white hover:bg-emerald-800">자람이 건강·돌봄 여권 보기</a><Link href="/news/98" className="rounded-lg border border-emerald-300 bg-white px-5 py-3 font-black text-emerald-800 hover:bg-emerald-50">보호자 이후 돌봄 기사 보기</Link></div>
       </div></section>
 
       <ResearchLifeIntelligence mode="robot" />

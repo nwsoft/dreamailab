@@ -49,6 +49,8 @@ AI디지털케어로그는 일상생활과 행동·습관부터 돌봄·교육·
 - DAL Vibe Architect / Master Vision v1.0 (EN): https://dreamailab.com/en/services/vibe-architect/
 - About (EN): https://dreamailab.com/en/about/
 - Jarame: https://dreamailab.com/services/jarame/
+- Robot Vision and its implemented Jarame bridge: https://dreamailab.com/research/robot-vision/
+- Jarame health and care passport, including guardian-approved device tokens for facilities, care robots, wearables, and measurement devices: https://jarame.or.kr/health-passport-guide
 - Peter Pan father Jeon Gyeong-cheol and the question of care continuity after a guardian; Jarame proposes a 90-day field validation before the 2028 developmental-disability information hub (KO): https://dreamailab.com/news/98/
 
 ## Latest news (2026)

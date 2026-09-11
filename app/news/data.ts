@@ -157,6 +157,14 @@ export const newsArticles: NewsArticle[] = [
         description:
           '보건복지부 발달장애인 돌봄 국가책임제 추진방안에 포함된 정보 공유·연계 과제',
       },
+      {
+        type: 'DefinedTerm',
+        name: 'Robot Vision',
+        alternateName: ['돌봄 로봇 비전', '발달장애인 로봇 돌봄'],
+        url: 'https://dreamailab.com/research/robot-vision/',
+        description:
+          '삶의 시간축 맥락과 사람의 승인 범위 안에서 로봇이 안전하게 돕도록 하는 드림에이아이랩의 Embodied AI 연구',
+      },
     ],
     tags: [
       '피터팬 아빠',
@@ -171,6 +179,9 @@ export const newsArticles: NewsArticle[] = [
       '발달장애인 특화 정보허브',
       '발달장애인 건강관리',
       '건강·돌봄 여권',
+      '발달장애인 로봇 돌봄',
+      '돌봄 로봇',
+      'Robot Vision',
       'AI 디지털케어로그',
       '자람이',
       '90일 현장 실증',
@@ -196,6 +207,11 @@ export const newsArticles: NewsArticle[] = [
         question: '보호자가 지정하면 누구나 모든 기록을 볼 수 있나요?',
         answer:
           '아니다. 당사자 또는 권한 있는 보호자가 공유 대상·목적·항목·기간을 정하고, 연결된 계정과 기관·대리 관계를 확인한 뒤 승인된 범위만 열람하도록 설계한다. 진단·처방과 법적 대리권 판단은 권한 있는 전문가와 기관의 책임이다.',
+      },
+      {
+        question: '돌봄 로봇 이야기는 아직 공상적인 미래 구상인가요?',
+        answer:
+          '특정 로봇 하드웨어와의 상용 연동은 아직 파트너 PoC가 필요한 연구 영역이다. 그러나 자람이에는 보호자·당사자 동의, 관리자 확인, 장치별 최소권한 토큰, 만료·폐기, 허용된 측정값 기록과 접근 감사가 구현돼 있다. 로봇이 안전하게 정보를 받을 소프트웨어 연결 기반을 먼저 만든 것이다.',
       },
     ],
     content: `
@@ -247,6 +263,28 @@ export const newsArticles: NewsArticle[] = [
         자람이는 의료진의 진단·처방, 국가의 후견·자격 결정, 시설의 법적 책임을 대신하지 않는다. 필요한 기록을 연결하고, 승인된 사람이 이해하며, 다음 진료와 돌봄을 준비하도록 지원한다.
       </p>
 
+      <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">돌봄 로봇을 공상으로 두지 않는 연결 설계</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        드림에이아이랩은 <a href="https://dreamailab.com/research/robot-vision/" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">Robot Vision</a>에서 로봇의 몸보다 먼저 &ldquo;어떤 근거와 권한으로 이 사람을 도와도 되는가&rdquo;를 설계해야 한다고 제시한다. 자람이는 이 비전을 말로만 남겨 두지 않기 위해 건강·돌봄 여권에 실제 연결 기반을 먼저 만들었다.
+      </p>
+      <ol class="list-decimal pl-6 text-lg text-gray-700 mb-8 space-y-3 leading-relaxed">
+        <li>보호자·당사자·의료진이 건강·응급·의사소통 정보를 출처별로 기록한다.</li>
+        <li>보호자 또는 성인 당사자가 로봇·시설 장치가 볼 항목, 목적과 기간을 정한다.</li>
+        <li>관리자가 계정과 역할을 확인하고 장치별 최소권한 토큰을 발급한다.</li>
+        <li>연결 장치는 허용된 요약만 읽고, 별도 승인된 경우에만 측정값을 기록한다.</li>
+        <li>조회·측정 이력은 감사기록에 남고, 분실·교체·철회 시 토큰을 즉시 폐기한다.</li>
+      </ol>
+      <div class="grid md:grid-cols-2 gap-5 mb-8">
+        <div class="rounded-2xl border border-emerald-200 bg-emerald-50 p-6">
+          <h3 class="text-xl font-bold text-emerald-950 mb-3">현재 자람이에 구현된 기반</h3>
+          <p class="text-gray-700 leading-relaxed">장치별 읽기·측정 권한, 최대 90일 만료, 1회 표시 토큰, 즉시 폐기, 측정 중복 방지, 접근 감사와 건강정보 암호화가 구현·자동 검증돼 있다.</p>
+        </div>
+        <div class="rounded-2xl border border-amber-200 bg-amber-50 p-6">
+          <h3 class="text-xl font-bold text-amber-950 mb-3">하드웨어 파트너와 검증할 영역</h3>
+          <p class="text-gray-700 leading-relaxed">특정 로봇의 카메라·음성·이동·접촉·투약 같은 물리 행동은 아직 상용 연동을 주장하지 않는다. 제조사와 시설 책임자가 과업과 중단 규칙을 정한 뒤 별도 PoC와 안전검증을 거쳐야 한다.</p>
+        </div>
+      </div>
+
       <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">2028년까지 기다리지 말고 90일간 검증하자</h2>
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
         드림에이아이랩과 자람이는 보건복지부가 정보허브 개발·조달 범위를 확정하기 전에 국내 기존 시스템을 조사하고, 공개 기준으로 90일 현장 실증을 진행할 것을 제안한다. 지역발달장애인지원센터 1곳과 돌봄·치료기관 1~2곳의 작은 규모로 시작해도 된다.
@@ -268,6 +306,7 @@ export const newsArticles: NewsArticle[] = [
           발달장애인의 건강·복약·검진·생활지원 정보와 공유 원칙은 자람이 공개 안내에서 확인할 수 있다. 정부·지자체·기관의 90일 실증과 기술 설명 협력도 제안받는다.
         </p>
         <p class="mb-2"><a href="https://jarame.or.kr/health-passport-guide" target="_blank" rel="noopener noreferrer" class="font-semibold text-primary-700 underline">자람이 건강·돌봄 여권 안내 보기 →</a></p>
+        <p class="mb-2"><a href="https://dreamailab.com/research/robot-vision/" target="_blank" rel="noopener noreferrer" class="font-semibold text-primary-700 underline">드림에이아이랩 Robot Vision과 자람이 연결 구조 보기 →</a></p>
         <p class="mb-2"><a href="https://jarame.or.kr/service" target="_blank" rel="noopener noreferrer" class="font-semibold text-primary-700 underline">자람이 서비스와 역할별 기능 보기 →</a></p>
         <p><a href="/public" class="font-semibold text-primary-700 underline">드림에이아이랩 공공 협력 문의 →</a></p>
       </div>
