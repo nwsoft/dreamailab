@@ -89,6 +89,195 @@ export function getLocalizedArticle(
 
 export const newsArticles: NewsArticle[] = [
   {
+    id: 98,
+    title:
+      '‘피터팬 아빠’ 전경철 작가가 남긴 질문…보호자 이후에도 돌봄 기록은 이어지는가',
+    excerpt:
+      '중증 자폐 아들의 미래를 준비한 전경철 작가의 삶은 보호자 부재 이후의 거처뿐 아니라 건강·생활·복약·의사소통 기록을 누가 어떻게 이어받을 것인지 묻는다. 보건복지부가 2028년 이후 발달장애인 특화 정보허브를 예고한 지금, 자람이는 기존 구현체 조사와 90일 현장 실증을 제안한다.',
+    category: 'insight',
+    date: '2026-09-11',
+    modifiedDate: '2026-09-11',
+    image: '🤝',
+    featured: true,
+    author: '드림에이아이랩',
+    authorUrl: 'https://dreamailab.com/',
+    ogImage: '/images/news/news-98-peterpan-care-continuity-og.png',
+    ogImageAlt:
+      '아버지가 발달장애인 당사자의 건강과 생활 기록을 다음 돌봄자와 공동체에 안전하게 인계하는 상징적 일러스트',
+    contentImages: [
+      {
+        url: '/images/news/news-98-peterpan-care-continuity-og.png',
+        width: 1734,
+        height: 907,
+        alt: '보호자가 바뀌어도 발달장애인의 건강 돌봄 기록이 다음 돌봄자와 공동체로 이어지는 모습',
+        caption:
+          '거처를 마련하는 일과 함께, 한 사람을 이해하는 건강·생활·복약·의사소통 기록도 다음 돌봄자에게 안전하게 이어져야 한다.',
+      },
+    ],
+    about: [
+      {
+        type: 'Organization',
+        id: 'https://dreamailab.com/#organization',
+        name: '드림에이아이랩',
+        alternateName: ['Dream AI Lab', 'DAL'],
+        url: 'https://dreamailab.com/',
+        description: 'AI 디지털케어로그 기반 플랫폼·데이터 인프라 기술 조직',
+      },
+      {
+        type: 'SoftwareApplication',
+        id: 'https://jarame.or.kr/#software',
+        name: '자람이',
+        alternateName: ['Jarame', '자람이 AI 디지털케어로그'],
+        url: 'https://jarame.or.kr/',
+        description:
+          '발달장애인의 생활·치료·교육·복약·돌봄 기록을 당사자 중심으로 연결하는 AI 디지털케어로그 플랫폼',
+      },
+      {
+        type: 'DefinedTerm',
+        id: 'https://dreamailab.com/technology/#ai-digital-care-log',
+        name: 'AI 디지털케어로그',
+        alternateName: ['AI Digital Care Log', 'DAL'],
+        url: 'https://dreamailab.com/technology/',
+      },
+    ],
+    mentions: [
+      {
+        type: 'DefinedTerm',
+        name: '건강·돌봄 여권',
+        alternateName: ['발달장애인 건강관리', '평생 돌봄 인수인계'],
+        url: 'https://jarame.or.kr/health-passport-guide',
+        description:
+          '건강·복약·생활지원 정보와 다음 돌봄자 인수인계 범위를 당사자 또는 보호자의 동의에 따라 관리하는 자람이 기능',
+      },
+      {
+        type: 'DefinedTerm',
+        name: '발달장애인 특화 정보허브',
+        alternateName: ['발달장애인 정보허브'],
+        url: 'https://www.mohw.go.kr/board.es?mid=a10503010100&bid=0027&act=view&list_no=1491939',
+        description:
+          '보건복지부 발달장애인 돌봄 국가책임제 추진방안에 포함된 정보 공유·연계 과제',
+      },
+    ],
+    tags: [
+      '피터팬 아빠',
+      '전경철 작가',
+      '안녕 피터팬',
+      '발달장애인',
+      '중증 자폐',
+      '발달장애인 보호자 사후',
+      '부모 사후 돌봄',
+      '보호자 부재',
+      '발달장애인 돌봄 국가책임제',
+      '발달장애인 특화 정보허브',
+      '발달장애인 건강관리',
+      '건강·돌봄 여권',
+      'AI 디지털케어로그',
+      '자람이',
+      '90일 현장 실증',
+      '드림에이아이랩',
+    ],
+    faq: [
+      {
+        question: '피터팬 아빠 전경철 작가의 이야기가 자람이와 직접 관련이 있나요?',
+        answer:
+          '전경철 작가와 자람이 사이의 공식 제휴나 사용 관계를 의미하지 않는다. 고인이 사회에 남긴 보호자 부재 이후의 돌봄이라는 공익적 질문을 살피고, 그중 건강·생활 기록의 인수인계를 어떻게 준비할 수 있는지 자람이의 관점에서 제안하는 글이다.',
+      },
+      {
+        question: '자람이가 보건복지부의 공식 정보허브로 선정됐나요?',
+        answer:
+          '아니다. 보건복지부의 선정·협약·조달 결과를 발표하는 글이 아니다. 2028년 이후 정보허브 개발 전에 자람이를 포함한 기존 구현체를 공개 기준으로 조사하고 90일간 실증하자는 제안이다.',
+      },
+      {
+        question: '건강·돌봄 여권에는 어떤 정보를 기록하나요?',
+        answer:
+          '기저질환, 알레르기, 복약, 체중·혈당·혈압, 검진·치과 일정, 식사·활동·수면 계획과 의사소통·도전행동 지원 정보를 한 사람의 인수인계 정보로 정리한다.',
+      },
+      {
+        question: '보호자가 지정하면 누구나 모든 기록을 볼 수 있나요?',
+        answer:
+          '아니다. 당사자 또는 권한 있는 보호자가 공유 대상·목적·항목·기간을 정하고, 연결된 계정과 기관·대리 관계를 확인한 뒤 승인된 범위만 열람하도록 설계한다. 진단·처방과 법적 대리권 판단은 권한 있는 전문가와 기관의 책임이다.',
+      },
+    ],
+    content: `
+      <p class="text-sm text-gray-500 mb-6">[인사이트 · 2026-09-11]</p>
+      <p class="text-xl font-semibold text-gray-800 mb-3 leading-relaxed">— &lsquo;안녕, 피터팬&rsquo;의 저자가 남긴 보호자 부재 이후의 삶이라는 질문</p>
+      <p class="text-xl font-semibold text-gray-800 mb-8 leading-relaxed">— 2028년 발달장애인 특화 정보허브 전에 기존 구현체 조사와 90일 현장 실증 필요</p>
+
+      <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-4">
+        &lsquo;피터팬 아빠&rsquo;로 알려진 전경철 작가는 중증 자폐가 있는 아들의 미래를 준비하기 위해 전국의 돌봄시설을 찾아다녔다. 그의 삶이 남긴 질문은 거처에서 끝나지 않는다. <strong>보호자가 더 이상 곁에 없을 때, 다음 돌봄자는 이 사람의 건강과 생활, 복약, 의사소통 방식과 불안을 낮추는 방법을 어떻게 알 수 있는가.</strong>
+      </p>
+
+      <figure class="mb-10 overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
+        <img src="/images/news/news-98-peterpan-care-continuity-og.png" alt="보호자가 바뀌어도 발달장애인의 건강 돌봄 기록이 다음 돌봄자와 공동체로 이어지는 모습" width="1734" height="907" class="h-auto w-full" loading="eager" decoding="async" />
+        <figcaption class="px-5 py-3 text-sm leading-relaxed text-slate-600">실제 인물을 재현하지 않은 상징적 일러스트. 거처와 사람뿐 아니라 한 사람을 이해하는 기록도 다음 돌봄자에게 이어져야 한다.</figcaption>
+      </figure>
+
+      <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">전경철 작가가 사회에 남긴 질문</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        전경철 작가는 중증 자폐성 장애가 있는 아들을 오랫동안 홀로 돌봤다. 말기 암 진단을 받은 뒤에는 혼자 남을 아들의 거처를 찾기 위해 전국의 시설 약 1,000곳에 문의했고, 그 여정을 에세이 <strong>&lsquo;안녕, 피터팬&rsquo;</strong>에 담았다. 그는 2026년 9월 5일 별세했다. 이 과정과 고인의 뜻은 <a href="https://www.seoul.co.kr/news/peoples/2026/09/07/20260907023008" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">서울신문 보도</a>, <a href="https://www.donga.com/news/Society/article/all/20260906/134614634/1" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">동아일보 보도</a> 등 여러 언론을 통해 알려졌다.
+      </p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        이 글은 전경철 작가 또는 유족·관련 단체와 자람이 사이의 제휴나 사용 관계를 말하는 글이 아니다. 고인이 사회에 던진 <strong>&ldquo;부모가 떠난 뒤 발달장애인은 어떻게 살아갈 것인가&rdquo;</strong>라는 공익적 질문에서, 아직 충분히 다뤄지지 않은 기록의 인수인계를 살펴보려는 것이다.
+      </p>
+
+      <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">거처가 정해져도 정보가 끊기면 돌봄은 다시 시작된다</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        다음 돌봄자가 알아야 할 것은 장애명이나 병명만이 아니다. 기저질환, 알레르기, 복용약, 검진과 치과 일정, 음식 선호, 수면과 배변, 통증을 표현하는 방식, 도전행동의 전조, 불안을 낮추는 말과 행동, 익숙한 병원과 연락 순서가 함께 전달돼야 한다.
+      </p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        그러나 이 정보는 보호자의 기억, 휴대전화 메모, 기관별 종이 일지와 메신저에 흩어지기 쉽다. 보호자가 갑자기 아프거나 사망하고 시설·활동지원사·치료사가 바뀌면 다음 돌봄자는 같은 사람을 처음부터 다시 파악해야 한다. 복약과 진료 일정이 빠지고, 익숙한 의사소통 방법이 사라지며, 피할 수 있었던 불안과 행동 위기가 반복될 수 있다.
+      </p>
+
+      <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">정부도 수기 기록과 정보 단절을 문제로 지목했다</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        보건복지부는 2026년 9월 10일 <a href="https://www.mohw.go.kr/board.es?mid=a10503010100&amp;bid=0027&amp;act=view&amp;list_no=1491939" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">&lsquo;발달장애인 돌봄 국가책임제 추진방안&rsquo;</a>을 발표했다. 추진방안은 서비스 제공 뒤 수기 일지를 작성하고 데이터 축적·관리체계와 가족·제공기관 간 소통이 부족한 현실을 지적했다. 앞으로 식사·수면·컨디션·투약·도전행동 등을 실시간으로 관찰·기록하고 공유하는 방향을 제시했으며, 발달장애인 특화 정보허브 앱 개발을 2028년 이후 과제로 포함했다.
+      </p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        전경철 작가의 별세와 정부 발표 사이의 직접적인 인과관계를 단정할 수는 없다. 다만 두 사건은 같은 질문을 보여준다. 국가가 돌봄서비스와 주거·후견을 확대하는 동안, 한 사람을 이해하는 기록을 어떻게 안전하게 이어 줄 것인가.
+      </p>
+
+      <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">보호자가 없어도 이어지는 건강·돌봄 여권</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        자람이는 가정·치료·교육·복약·생활지원 기록을 발달장애인 한 사람의 시간축으로 연결하는 AI 디지털케어로그 플랫폼이다. <a href="https://jarame.or.kr/health-passport-guide" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">건강·돌봄 여권 안내</a>에서는 기저질환, 알레르기, 체중·혈당·혈압, 치과·건강검진, 식사·활동·수면·복약 계획을 인수인계 정보로 정리하는 방법을 공개하고 있다.
+      </p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        보호자 또는 성인 당사자가 공유 대상·목적·항목·기간을 정하고, 관리자가 다음 보호자·시설·지원인의 계정과 역할을 확인한 뒤 승인된 범위만 열람하게 한다. 접근 이력을 남기고 PDF·JSON·QR·FHIR 형식으로 내보낼 수 있다. <a href="https://jarame.or.kr/tech-docs/data-interop" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">FHIR·데이터 연계 설명</a>은 표준 형식 내보내기가 특정 병원 EMR과의 상용 양방향 연동을 뜻하지 않는다는 경계도 밝히고 있다.
+      </p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        자람이는 의료진의 진단·처방, 국가의 후견·자격 결정, 시설의 법적 책임을 대신하지 않는다. 필요한 기록을 연결하고, 승인된 사람이 이해하며, 다음 진료와 돌봄을 준비하도록 지원한다.
+      </p>
+
+      <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">2028년까지 기다리지 말고 90일간 검증하자</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        드림에이아이랩과 자람이는 보건복지부가 정보허브 개발·조달 범위를 확정하기 전에 국내 기존 시스템을 조사하고, 공개 기준으로 90일 현장 실증을 진행할 것을 제안한다. 지역발달장애인지원센터 1곳과 돌봄·치료기관 1~2곳의 작은 규모로 시작해도 된다.
+      </p>
+      <ul class="list-disc pl-6 text-lg text-gray-700 mb-8 space-y-3 leading-relaxed">
+        <li>보호자와 기관의 중복 입력 시간이 줄었는가</li>
+        <li>담당자나 시설이 바뀌어도 복약·검진·치과 일정과 생활 특성이 누락되지 않았는가</li>
+        <li>당사자와 보호자가 누가 무엇을 왜 보는지 이해하고 철회할 수 있었는가</li>
+        <li>모든 열람과 변경을 나중에 확인할 수 있는가</li>
+        <li>다른 시스템으로 옮길 수 있는 형식으로 자료를 내보낼 수 있는가</li>
+      </ul>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        이 제안은 자람이를 정부 시스템으로 지정해 달라는 요구가 아니다. 자람이를 포함한 기존 구현체를 같은 기준으로 검증하고, 어느 제품을 사용하더라도 지켜야 할 동의·권한·감사·접근성·데이터 이동성 기준을 함께 만들자는 제안이다.
+      </p>
+
+      <div class="my-10 rounded-2xl border border-teal-200 bg-teal-50 p-6">
+        <h3 class="text-2xl font-bold text-teal-950 mb-3">보호자 이후의 돌봄을 오늘부터 준비하려면</h3>
+        <p class="text-lg text-teal-950 leading-relaxed mb-4">
+          발달장애인의 건강·복약·검진·생활지원 정보와 공유 원칙은 자람이 공개 안내에서 확인할 수 있다. 정부·지자체·기관의 90일 실증과 기술 설명 협력도 제안받는다.
+        </p>
+        <p class="mb-2"><a href="https://jarame.or.kr/health-passport-guide" target="_blank" rel="noopener noreferrer" class="font-semibold text-primary-700 underline">자람이 건강·돌봄 여권 안내 보기 →</a></p>
+        <p class="mb-2"><a href="https://jarame.or.kr/service" target="_blank" rel="noopener noreferrer" class="font-semibold text-primary-700 underline">자람이 서비스와 역할별 기능 보기 →</a></p>
+        <p><a href="/public" class="font-semibold text-primary-700 underline">드림에이아이랩 공공 협력 문의 →</a></p>
+      </div>
+
+      <p class="text-sm text-gray-500 mt-10 leading-relaxed">
+        편집자 주: 대표 이미지는 전경철 작가나 가족의 실제 모습을 재현하지 않은 상징적 일러스트다. 본 글은 공개 보도를 바탕으로 고인이 남긴 사회적 질문을 다루며, 유족·피터팬 관련 단체·보건복지부와 드림에이아이랩 또는 자람이 사이의 제휴·선정 관계를 의미하지 않는다.
+      </p>
+    `,
+  },
+  {
     id: 97,
     title:
       '첫 ‘기술개발인의 날’이 조명한 민간 R&D… 자람이, 발달장애 맞춤 치료·학습 표준 기술 제시',
