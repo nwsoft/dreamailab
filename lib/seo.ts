@@ -93,7 +93,9 @@ export function buildNewsMetadata(
   if (options?.alternateLocales?.en) languages['en-US'] = options.alternateLocales.en
 
   return {
-    title: `${localized.title} - ${siteLabel}`,
+    // 영문 하위 레이아웃의 title template이 사이트명을 다시 붙이지 않도록
+    // 기사 제목 전체를 absolute title로 지정한다.
+    title: { absolute: `${localized.title} - ${siteLabel}` },
     description: localized.excerpt,
     alternates: {
       canonical,

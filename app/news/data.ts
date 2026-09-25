@@ -89,6 +89,315 @@ export function getLocalizedArticle(
 
 export const newsArticles: NewsArticle[] = [
   {
+    id: 99,
+    title:
+      '국제결혼 업체 입점부터 문의·정산까지…글로벌커플케어, 글로벌 파트너 운영 플랫폼 고도화',
+    excerpt:
+      '검색 가능한 업체 홈페이지와 국가별 서비스, 문의 CRM, 성과형 공정수수료, 단계별 정산 원장, Telegram·Slack·Discord·LINE 업무 알림을 하나의 파트너 운영 흐름으로 연결했다.',
+    category: 'press',
+    date: '2026-09-26',
+    modifiedDate: '2026-09-26',
+    image: '🌐',
+    featured: true,
+    author: '드림에이아이랩',
+    authorUrl: 'https://dreamailab.com/',
+    ogImage: '/images/news/news-99-globalcouplecare-partner-platform-og.jpg',
+    ogImageAlt:
+      '글로벌 파트너들이 공개 홈페이지, 국가별 서비스, 문의 CRM, 정산 원장과 개인정보 보호형 메신저 알림을 하나의 운영 플랫폼에서 관리하는 모습',
+    ogImageAltEn:
+      'Global partners managing public pages, country-specific services, inquiry CRM, settlement records, and privacy-safe messenger alerts in one operating platform',
+    contentImages: [
+      {
+        url: '/images/news/news-99-globalcouplecare-partner-platform-og.jpg',
+        width: 1200,
+        height: 630,
+        alt: '국제결혼 업체와 해외 현지 파트너, 크리에이터, 운영자가 글로벌커플케어에서 검색 유입부터 문의와 정산까지 연결하는 구조',
+        caption:
+          '글로벌커플케어는 흩어진 소개와 상담을 검색 가능한 공개 자산, 권한이 분리된 운영 흐름, 확인 가능한 거래 기록으로 연결한다.',
+      },
+    ],
+    about: [
+      {
+        type: 'Organization',
+        id: 'https://globalcouplecare.com/#organization',
+        name: '글로벌커플케어',
+        alternateName: ['Global Couple Care', 'GCC'],
+        url: 'https://globalcouplecare.com/',
+        description:
+          '국제결혼 정보·업체 비교·글로벌 파트너 협업·정착 준비를 연결하는 드림에이아이랩 운영 플랫폼',
+        sameAs: ['https://dreamailab.com/services/marriage/'],
+      },
+      {
+        type: 'Organization',
+        id: 'https://dreamailab.com/#organization',
+        name: '드림에이아이랩',
+        alternateName: ['Dream AI Lab', 'DAL'],
+        url: 'https://dreamailab.com/',
+        description: '글로벌커플케어를 개발·운영하는 사람 중심 AI 기술 기업',
+      },
+    ],
+    mentions: [
+      {
+        type: 'DefinedTerm',
+        name: '국제결혼 업체 입점',
+        alternateName: ['국제결혼중개업체 입점', '글로벌 파트너 입점'],
+        url: 'https://globalcouplecare.com/agency/proposal',
+        description:
+          '업체의 운영 국가와 서비스를 검색 가능한 공개 페이지로 만들고 회원 문의를 관리하는 글로벌커플케어 파트너 참여 경로',
+      },
+      {
+        type: 'DefinedTerm',
+        name: '공정수수료 성장제',
+        alternateName: ['성과형 수수료', '파트너 등급 수수료'],
+        url: 'https://globalcouplecare.com/partners',
+        description:
+          '파트너의 검증·운영·완료 거래와 분쟁 이력을 반영하고 신규 거래부터 등급별 요율을 확정하는 정책',
+      },
+      {
+        type: 'DefinedTerm',
+        name: '파트너 업무 알림',
+        alternateName: ['Telegram 업무 알림', 'LINE 업무 알림', 'Slack 업무 알림', 'Discord 업무 알림'],
+        url: 'https://globalcouplecare.com/notifications',
+        description:
+          '문의·채팅·매칭·계약·결제·정산 등 업무 사건을 인앱과 승인된 외부 메신저로 연결하는 알림 구조',
+      },
+    ],
+    tags: [
+      '글로벌커플케어',
+      'Global Couple Care',
+      '국제결혼 플랫폼',
+      '국제결혼 업체 입점',
+      '국제결혼중개업체',
+      '국제결혼 업체 비교',
+      '국제결혼 업체 수수료',
+      '글로벌 파트너',
+      '해외 현지 파트너',
+      '국제결혼 CRM',
+      '파트너 홈페이지',
+      '성과형 수수료',
+      '단계별 정산',
+      '텔레그램 알림',
+      'LINE 알림',
+      '드림에이아이랩',
+    ],
+    faq: [
+      {
+        question: '글로벌커플케어에는 국제결혼중개업체만 입점할 수 있나요?',
+        answer:
+          '아니다. 필요한 인허가를 갖춘 국내·해외 업체뿐 아니라 해외 거주자, 크리에이터, 커뮤니티 운영자와 현지 지원 파트너도 실제 활동 범위와 확인 절차에 따라 참여를 제안할 수 있다. 각 유형의 업무 권한과 계약 책임은 분리된다.',
+      },
+      {
+        question: '국제결혼 업체 입점은 무료인가요?',
+        answer:
+          '현재 공개된 초기 파트너 안내에는 무료 입점과 무료 공개 홈페이지가 포함된다. 검증, 고급 CRM, 번역·현지화, 캠페인, 거래 인프라 등 추가 기능은 개통 시점과 개별 계약에 따라 조건이 달라질 수 있으므로 신청 전 최신 화면과 계약 조건을 확인해야 한다.',
+      },
+      {
+        question: '글로벌커플케어의 업체 수수료는 어떻게 정해지나요?',
+        answer:
+          '공개 정책상 정상요율은 Standard 5.5%에서 Platinum 3.5%까지이며, 창립 파트너는 2027년 9월 30일까지 0.5%p 할인이 적용된다. 변경된 등급은 다음 신규 거래부터 적용하고 이미 확정된 거래 요율은 소급 변경하지 않는다. PG 비용, 부가세와 개별 계약 조건은 별도다.',
+      },
+      {
+        question: 'Telegram·Slack·Discord·LINE 알림은 바로 사용할 수 있나요?',
+        answer:
+          '업체별 설정과 전송 구조가 배포돼 있으며, 각 업체가 자신의 공식 토큰 또는 Webhook을 저장한 뒤 테스트 발송의 실제 수신을 확인해야 자동 알림을 켤 수 있다. Kakao 알림톡은 승인 템플릿과 발송 사업자 연동이 필요한 별도 범위이며 현재 지원 채널로 안내하지 않는다.',
+      },
+      {
+        question: '글로벌커플케어가 국제결혼 상대를 직접 추천하거나 중개하나요?',
+        answer:
+          '플랫폼 운영자는 결혼 상대방 선정·추천이나 혼인을 위한 상담·알선을 직접 수행하지 않는다. 독립 업체와 파트너의 공개 정보 비교, 문의, 계약·운영 기록을 연결하며 실제 중개·전문 서비스의 책임과 인허가는 해당 제공자에게 있다.',
+      },
+      {
+        question: '결제와 정산 기능은 실제 송금까지 자동으로 처리하나요?',
+        answer:
+          '거래 당시 등급·요율·플랫폼 수수료·업체 정산액과 단계별 지급 증빙을 보존하는 운영 구조는 구축됐다. 다만 실제 PG 결제와 은행 지급은 관련 계약, 심사와 운영 설정이 활성화된 범위에서만 제공되며 화면에 활성화되지 않은 결제·에스크로를 이용 가능하다고 간주해서는 안 된다.',
+      },
+    ],
+    content: `
+      <p class="text-sm text-gray-500 mb-6">[보도자료 · 2026-09-26]</p>
+      <p class="text-xl font-semibold text-gray-800 mb-3 leading-relaxed">— 공개 업체 홈페이지·국가별 서비스·문의 CRM을 연결해 카카오·밴드·유튜브 중심 영업을 검색 가능한 사업 자산으로 전환</p>
+      <p class="text-xl font-semibold text-gray-800 mb-3 leading-relaxed">— Standard 5.5%부터 Platinum 3.5%까지 성과형 공정수수료와 거래 시점 요율·정산액 원장 구축</p>
+      <p class="text-xl font-semibold text-gray-800 mb-8 leading-relaxed">— 문의·매칭·계약·결제·정산 업무를 Telegram·Slack·Discord·LINE과 연결하는 개인정보 보호형 알림 구조 배포</p>
+
+      <figure class="mb-10 overflow-hidden rounded-2xl border border-slate-200 bg-slate-950">
+        <img src="/images/news/news-99-globalcouplecare-partner-platform-og.jpg" alt="국제결혼 업체와 해외 현지 파트너, 크리에이터, 운영자가 글로벌커플케어에서 검색 유입부터 문의와 정산까지 연결하는 구조" width="1200" height="630" class="h-auto w-full" loading="eager" decoding="async" />
+        <figcaption class="px-5 py-3 text-sm leading-relaxed text-slate-300">공개 페이지에서 시작된 검색 유입을 문의·후속 일정·계약·정산·업무 알림으로 이어 주는 글로벌커플케어 파트너 운영 구조.</figcaption>
+      </figure>
+
+      <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-5">
+        드림에이아이랩이 운영하는 국제결혼 정보·업체 비교·정착 플랫폼 <strong>글로벌커플케어(Global Couple Care, GCC)</strong>가 국제결혼 업체와 글로벌 파트너의 공개 홍보부터 문의 관리, 거래 기록, 정산과 외부 메신저 알림까지 잇는 파트너 운영 플랫폼으로 고도화됐다. 이번 업데이트의 핵심은 기능을 하나 더 추가하는 데 있지 않다. 업체가 외부 메신저와 SNS에 흩어 두었던 영업과 운영 기록을 <strong>검색 가능한 자산과 확인 가능한 업무 흐름</strong>으로 바꾸는 데 있다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-5">국제결혼 업체 영업, 왜 공개 검색 자산이 필요한가</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        국제결혼 업체의 실제 영업은 카카오톡, 밴드, 유튜브, 오픈채팅과 소개 네트워크에서 시작되는 경우가 많다. 이런 채널은 빠르게 사람을 만날 수 있지만, 운영 국가와 서비스 범위, 비용·환불 기준, 업체의 확인 정보가 한 화면에 남기 어렵다. 문의가 어느 콘텐츠와 국가 서비스에서 시작됐는지 추적하기도 어렵고 담당자가 바뀌면 상담 맥락이 단절되기 쉽다.
+      </p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        글로벌커플케어는 업체마다 검색 가능한 고유 공개 페이지를 제공하고, 운영 국가·도시와 서비스 단위, 대표 영상, 공개 동의가 확인된 프로필, FAQ와 문의 동선을 한곳에 모은다. 유튜브 설명란이나 SNS 프로필에는 이 주소를 연결하고, 사용자는 국가별 정보와 국제결혼 업체 비교 페이지에서 같은 업체를 다시 발견할 수 있다. 이는 새 홈페이지를 다시 만드는 작업이 아니라 <strong>업체가 이미 가진 채널을 검색·신뢰·상담 전환 구조로 연결하는 방식</strong>이다.
+      </p>
+
+      <div class="my-10 grid gap-4 md:grid-cols-2">
+        <div class="rounded-2xl border border-blue-200 bg-blue-50 p-6">
+          <p class="text-sm font-bold uppercase tracking-wider text-blue-700 mb-2">01 · Search</p>
+          <h3 class="text-xl font-bold text-blue-950 mb-3">검색 가능한 파트너 홈페이지</h3>
+          <p class="text-blue-950 leading-relaxed">업체명뿐 아니라 베트남·필리핀·일본 등 국가와 지역, 서비스 종류, 비용 확인 질문에서 발견되는 공개 자산을 만든다.</p>
+        </div>
+        <div class="rounded-2xl border border-violet-200 bg-violet-50 p-6">
+          <p class="text-sm font-bold uppercase tracking-wider text-violet-700 mb-2">02 · Inquiry</p>
+          <h3 class="text-xl font-bold text-violet-950 mb-3">문의 출처와 후속 상담 기록</h3>
+          <p class="text-violet-950 leading-relaxed">어느 국가·서비스·콘텐츠에서 문의가 시작됐는지 남기고 일정, 담당자, 후속 상태를 이어서 관리한다.</p>
+        </div>
+        <div class="rounded-2xl border border-teal-200 bg-teal-50 p-6">
+          <p class="text-sm font-bold uppercase tracking-wider text-teal-700 mb-2">03 · Operations</p>
+          <h3 class="text-xl font-bold text-teal-950 mb-3">역할과 권한이 분리된 운영</h3>
+          <p class="text-teal-950 leading-relaxed">국내 업체·해외 업체·크리에이터·커뮤니티 운영자·현지 파트너가 실제 업무 범위에 맞는 권한으로 참여한다.</p>
+        </div>
+        <div class="rounded-2xl border border-amber-200 bg-amber-50 p-6">
+          <p class="text-sm font-bold uppercase tracking-wider text-amber-700 mb-2">04 · Ledger</p>
+          <h3 class="text-xl font-bold text-amber-950 mb-3">거래 시점 수수료와 정산 기록</h3>
+          <p class="text-amber-950 leading-relaxed">거래가 만들어질 때 적용 등급·요율·플랫폼 수수료·업체 정산액과 정책 버전을 확정해 이후 변경과 분리한다.</p>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-5">업체만이 아니라 크리에이터·커뮤니티·현지 파트너까지</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        글로벌커플케어의 파트너 구조는 국제결혼중개업체 한 유형에만 고정되지 않는다. 국내 업체와 해외 현지 업체, 크리에이터, 커뮤니티 운영자, 해외 거주자와 현지 지원 파트너가 소개·콘텐츠·상담·통역·일정·생활 지원 등 자신이 실제로 수행할 수 있는 활동을 제안할 수 있다. 필요한 인허가와 책임은 활동 종류와 국가에 따라 별도로 확인한다.
+      </p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        플랫폼은 파트너 유형과 상업 등급을 분리한다. <strong>파트너 유형</strong>은 어떤 업무를 할 수 있는지를 정하고, <strong>Standard·Verified·Silver·Gold·Platinum 등급</strong>은 검증·정보 충실도·문의 응답·완료 거래·고객평가·분쟁 이력 등 운영 품질을 반영한다. 높은 등급이라고 법적 인허가가 자동 부여되거나 모든 업무 권한이 열리는 구조가 아니다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-5">성과가 쌓일수록 낮아지는 공정수수료 성장제</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        공개된 정상요율은 Standard 5.5%, Verified 5.0%, Silver 4.5%, Gold 4.0%, Platinum 3.5%다. 창립 파트너는 2027년 9월 30일까지 각 등급에서 0.5%p 할인을 적용받는다. 등급 변경은 다음 신규 거래부터 반영되며, 이미 생성된 거래의 확정 요율은 바뀌지 않는다. 기존 계약 당사자에게 새로운 정책을 소급 적용하지 않고 동의 이후 신규 거래부터 적용하는 원칙도 함께 둔다.
+      </p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        이 구조는 플랫폼 비용을 소비자에게 &lsquo;GCC 추가부담금&rsquo;이라는 별도 항목으로 전가하기 위한 것이 아니다. 업체가 정한 실제 서비스 가격에서 기본 금액, 포함·별도 비용, 환불 조건과 단계별 지급 조건을 같은 형식으로 공개해 비교 가능성을 높이고, 좋은 운영 이력이 쌓인 파트너의 플랫폼 비용을 낮추는 방향이다. PG 비용·부가세·해외송금과 개별 계약 조건은 플랫폼 수수료와 구분해 거래 전에 표시한다.
+      </p>
+
+      <div class="my-10 overflow-hidden rounded-2xl border border-slate-200">
+        <div class="bg-slate-950 px-6 py-5 text-white">
+          <h3 class="text-xl font-bold">검색 유입에서 정산까지 이어지는 파트너 운영 흐름</h3>
+        </div>
+        <div class="grid md:grid-cols-6">
+          ${['공개 페이지', '회원 문의', '상담·일정', '계약·결제', '단계별 정산', '결과·복기']
+            .map(
+              (label, index) =>
+                `<div class="border-t border-slate-200 p-5 md:border-l md:border-t-0"><p class="text-xs font-bold text-primary-700 mb-2">0${index + 1}</p><p class="font-bold text-slate-900">${label}</p></div>`
+            )
+            .join('')}
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-5">문의가 와도 놓치지 않도록, 메신저 알림을 업무 사건과 연결</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        파트너 운영에서는 공개 페이지를 만드는 것만큼 새로운 문의에 제때 대응하는 일이 중요하다. 글로벌커플케어는 문의, 채팅, 매칭, 미팅, 계약, 결제, 정산, 여행·웨딩 예약, 지원 요청과 운영 문의가 발생했을 때 인앱 알림과 외부 메신저 전송을 연결하는 구조를 배포했다. 현재 설정 대상은 <strong>Telegram Bot API, Slack Incoming Webhook, Discord Webhook, LINE Messaging API</strong>다.
+      </p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        자동 알림은 설정값만 저장했다고 바로 켜지지 않는다. 각 업체가 자신의 공식 토큰 또는 Webhook을 등록하고 <strong>저장 → 테스트 발송 → 실제 수신 확인 → 자동 알림 활성화</strong> 순서를 통과해야 한다. 연결 정보를 바꾸면 검증 상태가 해제돼 다시 확인하도록 설계했다. 전송 실패는 영속 대기열에서 중복을 방지하고 재시도·실패 이력을 남겨 운영자가 원인을 확인할 수 있다.
+      </p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        외부 메신저에는 고객 이름, 연락처, 문의 본문, 계약 내용 같은 개인정보를 보내지 않는다. &lsquo;새로운 문의가 있습니다&rsquo;처럼 업무 종류와 로그인 링크만 전달하고 상세 내용은 권한이 확인된 플랫폼 화면에서 열도록 했다. 카카오 알림톡은 발신 프로필·승인 템플릿·발송 사업자 계약이 필요한 별도 연동 범위이므로 현재 지원 채널로 포함하지 않았다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-5">운영 구조는 배포, 실제 결제·수신은 파트너별 활성화 게이트</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        이번 고도화에는 파트너 유형·등급·권한 관리, 거래 당시 수수료 스냅샷, 단계별 지급 증빙, 메신저 채널 설정과 전송 대기열, 관리자 모니터링 화면이 포함됐다. 다만 운영 구조의 배포와 개별 파트너의 실제 외부 서비스 이용은 구분해야 한다. 실제 PG 결제·은행 지급은 관련 계약과 운영 설정이 활성화된 경우에만 제공되며, 메신저 자동 알림도 각 업체의 실제 수신 테스트를 통과한 채널만 켤 수 있다.
+      </p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        글로벌커플케어는 국제결혼 상대를 직접 선정·추천하거나 혼인을 알선하는 사업자가 아니다. 독립 업체와 파트너가 공개한 정보를 사용자가 비교하고 문의하도록 돕고, 계약과 운영 기록을 더 투명하게 연결하는 플랫폼이다. 국제결혼중개업, 여행, 행정, 법률 등 인허가가 필요한 서비스는 실제 제공자의 자격과 책임 범위가 우선한다.
+      </p>
+
+      <blockquote class="my-10 rounded-2xl border-l-4 border-primary-600 bg-slate-50 p-6 text-lg leading-relaxed text-slate-800">
+        글로벌커플케어의 목표는 국제결혼 시장에 또 하나의 광고 목록을 만드는 것이 아니다. 정직하게 운영하는 업체와 실제 기여하는 글로벌 파트너가 검색에서 발견되고, 문의에 대응하며, 계약 조건과 결과를 기록해 장기적인 신뢰 자산을 쌓을 수 있는 사업 기반을 만드는 것이다.
+      </blockquote>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-5">어떤 파트너에게 필요한가</h2>
+      <ul class="mb-8 list-disc space-y-3 pl-6 text-lg leading-relaxed text-gray-700">
+        <li>자체 홈페이지가 약하거나 카카오톡·밴드·유튜브 중심으로 영업하는 국제결혼 업체</li>
+        <li>베트남·필리핀·태국·일본·중국·우즈베키스탄 등 국가별 서비스를 나눠 보여줘야 하는 업체</li>
+        <li>국제커플·정착·문화 정보를 만드는 크리에이터와 커뮤니티 운영자</li>
+        <li>통역·일정·생활·정착을 지원할 수 있는 해외 거주자와 현지 파트너</li>
+        <li>문의 출처, 상담 상태, 계약과 정산 이력을 한 흐름으로 관리하려는 운영 조직</li>
+      </ul>
+
+      <div class="my-10 rounded-2xl border border-primary-200 bg-primary-50 p-7">
+        <p class="text-sm font-bold uppercase tracking-wider text-primary-700 mb-2">Global partner onboarding</p>
+        <h2 class="text-2xl font-bold text-primary-950 mb-4">운영 가능한 국가 1~2개와 대표 서비스부터 시작할 수 있습니다</h2>
+        <p class="text-lg leading-relaxed text-primary-950 mb-6">처음부터 모든 국가와 상품을 올릴 필요는 없다. 공개 가능한 업체 소개, 실제 운영 국가, 대표 서비스와 상담 채널을 정리하면 공개 랜딩과 문의 동선을 먼저 만들 수 있다.</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="https://globalcouplecare.com/agency/proposal" target="_blank" rel="noopener noreferrer" class="rounded-lg bg-primary-700 px-5 py-3 font-bold text-white">국제결혼 업체 입점 제안 보기 →</a>
+          <a href="https://globalcouplecare.com/partners" target="_blank" rel="noopener noreferrer" class="rounded-lg border border-primary-300 bg-white px-5 py-3 font-bold text-primary-800">글로벌 파트너 참여 방식 보기 →</a>
+          <a href="/services/marriage" class="rounded-lg border border-slate-300 bg-white px-5 py-3 font-bold text-slate-800">DAL 서비스 소개 보기 →</a>
+        </div>
+      </div>
+
+      <p class="text-sm leading-relaxed text-gray-500 border-t border-gray-200 pt-6">
+        ※ 공개 수수료와 초기 입점 조건은 2026년 9월 25일 기준이며 향후 변경될 수 있다. 최신 조건은 글로벌커플케어 파트너 페이지와 전자 계약을 기준으로 확인해야 한다. 본 글은 특정 업체의 인허가·거래 성과·수익을 보증하지 않으며, 실제 결제·에스크로·외부 송금·메신저 자동 알림은 각 기능의 계약·설정·수신 검증이 완료된 범위에서만 활성화된다.
+      </p>
+    `,
+    i18n: {
+      en: {
+        title:
+          'Global Couple Care upgrades its international partner operating platform from search visibility to inquiries and settlement',
+        excerpt:
+          'Public partner pages, country-specific services, inquiry CRM, performance-based fair fees, staged settlement records, and privacy-safe Telegram, Slack, Discord, and LINE notifications now form one operating flow.',
+        faq: [
+          { question: 'Can only licensed marriage agencies join Global Couple Care?', answer: 'No. Subject to role-specific checks and applicable licensing, overseas residents, creators, community operators, and local support partners may propose activities they can actually perform. Permissions and contractual responsibilities remain separated by partner type.' },
+          { question: 'Is partner onboarding free?', answer: 'The current early-partner offer includes free onboarding and a free public partner page. Verification, advanced CRM, localization, campaigns, and transaction infrastructure may carry separate terms when activated.' },
+          { question: 'How are partner fees determined?', answer: 'Published standard rates range from 5.5% for Standard to 3.5% for Platinum. Founding partners receive a 0.5 percentage-point discount through September 30, 2027. A changed tier applies only to new transactions, not retroactively.' },
+          { question: 'Are Telegram, Slack, Discord, and LINE alerts immediately active?', answer: 'The configuration and delivery structure is deployed, but each partner must save its own official credentials, send a test, confirm actual receipt, and only then enable automatic alerts.' },
+        ],
+        content: `
+          <p class="text-sm text-gray-500 mb-6">[Press release · September 25, 2026]</p>
+          <p class="text-xl font-semibold text-gray-800 mb-3 leading-relaxed">— Searchable partner pages, country-specific services, and inquiry CRM turn scattered social-channel outreach into a durable business asset</p>
+          <p class="text-xl font-semibold text-gray-800 mb-3 leading-relaxed">— Performance-based fees range from 5.5% for Standard to 3.5% for Platinum, with transaction-time fee and payout records</p>
+          <p class="text-xl font-semibold text-gray-800 mb-8 leading-relaxed">— Privacy-safe Telegram, Slack, Discord, and LINE alerts connect inquiries, matching, contracts, payments, and settlements</p>
+
+          <figure class="mb-10 overflow-hidden rounded-2xl border border-slate-200 bg-slate-950">
+            <img src="/images/news/news-99-globalcouplecare-partner-platform-og.jpg" alt="International agencies, overseas local partners, creators, and operators managing search traffic, inquiries, and settlement through Global Couple Care" width="1200" height="630" class="h-auto w-full" loading="eager" decoding="async" />
+            <figcaption class="px-5 py-3 text-sm leading-relaxed text-slate-300">Global Couple Care connects public discovery with inquiries, follow-up, contracts, settlement records, and operational alerts.</figcaption>
+          </figure>
+
+          <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-5">
+            Global Couple Care (GCC), an international marriage information, agency-comparison, and settlement-preparation platform operated by Dream AI Lab, has expanded into a partner operating platform that connects public promotion, inquiry management, transaction records, settlement, and external messenger alerts. The goal is not to add another isolated feature. It is to turn fragmented outreach and operations into <strong>searchable assets and accountable workflows</strong>.
+          </p>
+
+          <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-5">From social-channel outreach to a searchable partner asset</h2>
+          <p class="text-lg text-gray-700 mb-6 leading-relaxed">Many international marriage agencies rely on KakaoTalk, Band, YouTube, open chats, and personal referrals. These channels can create contact quickly, but they rarely keep operating countries, service scope, costs, refund conditions, verified information, and inquiry history together.</p>
+          <p class="text-lg text-gray-700 mb-6 leading-relaxed">GCC provides each partner with a searchable public page that can combine operating countries and cities, country-specific services, representative video, consented public profiles, FAQs, and inquiry routes. A single page can be linked from YouTube descriptions and social profiles while remaining discoverable through country information and agency-comparison pages.</p>
+
+          <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-5">A network for agencies, creators, communities, and local partners</h2>
+          <p class="text-lg text-gray-700 mb-6 leading-relaxed">Participation is not limited to one agency category. Subject to applicable licensing and role-specific checks, domestic and overseas agencies, creators, community operators, overseas residents, and local support partners may propose work involving content, inquiries, interpretation, schedules, daily-life support, or professional services.</p>
+          <p class="text-lg text-gray-700 mb-6 leading-relaxed">Partner type and commercial tier remain separate. Partner type defines permitted work. Standard, Verified, Silver, Gold, and Platinum tiers reflect operating quality signals such as verification, information completeness, inquiry response, completed payments, reviews, and dispute history. A higher tier does not grant a legal license or automatically unlock unrelated permissions.</p>
+
+          <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-5">Fair fees that improve with verified performance</h2>
+          <p class="text-lg text-gray-700 mb-6 leading-relaxed">Published normal rates are 5.5% for Standard, 5.0% for Verified, 4.5% for Silver, 4.0% for Gold, and 3.5% for Platinum. Founding partners receive a 0.5 percentage-point discount through September 30, 2027. Tier changes apply only to new transactions; a rate already fixed for an existing transaction is not rewritten retroactively.</p>
+          <p class="text-lg text-gray-700 mb-6 leading-relaxed">The platform fee is not presented to consumers as a separate “GCC surcharge.” Partners set their service prices, while GCC standardizes how base prices, included and excluded items, refund terms, and payment milestones are disclosed. Payment-gateway costs, taxes, remittance, and individual contract terms remain separate.</p>
+
+          <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-5">Operational events connected to privacy-safe messenger alerts</h2>
+          <p class="text-lg text-gray-700 mb-6 leading-relaxed">GCC has deployed a structure that can connect in-app events—including inquiries, chat, matching, meetings, contracts, payments, settlements, travel or wedding reservations, and support requests—to Telegram Bot API, Slack Incoming Webhook, Discord Webhook, and LINE Messaging API.</p>
+          <p class="text-lg text-gray-700 mb-6 leading-relaxed">Automatic delivery is not enabled by merely saving a setting. Each partner follows the sequence <strong>save → test send → confirm actual receipt → enable automatic alerts</strong>. External messages exclude customer names, contact details, inquiry text, and contract content. They carry only an event type and a secure login link; details remain inside the permission-controlled platform.</p>
+
+          <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-5">Deployed operating structure, partner-specific activation gates</h2>
+          <p class="text-lg text-gray-700 mb-6 leading-relaxed">The upgraded platform includes partner type, tier and permission management; transaction-time commission snapshots; staged payout evidence; messenger channel configuration; a durable delivery queue; and administrator monitoring. Actual payment-gateway processing and bank payouts remain available only after the required contracts, reviews, and production settings are activated. Messenger automation is enabled only for a channel whose real receipt has been confirmed by that partner.</p>
+          <p class="text-lg text-gray-700 mb-8 leading-relaxed">Global Couple Care does not select or recommend marriage partners or directly broker marriages. It connects public information, comparisons, inquiries, and operating records among independent providers and users. Each provider remains responsible for licenses and regulated professional services.</p>
+
+          <div class="my-10 rounded-2xl border border-primary-200 bg-primary-50 p-7">
+            <p class="text-sm font-bold uppercase tracking-wider text-primary-700 mb-2">Global partner onboarding</p>
+            <h2 class="text-2xl font-bold text-primary-950 mb-4">Start with one or two countries and one representative service</h2>
+            <p class="text-lg leading-relaxed text-primary-950 mb-6">Partners do not need to publish every country or offering at once. A public page and inquiry route can start with verified basic information, actual operating countries, a representative service, and a contact channel.</p>
+            <div class="flex flex-wrap gap-3">
+              <a href="https://globalcouplecare.com/agency/proposal" target="_blank" rel="noopener noreferrer" class="rounded-lg bg-primary-700 px-5 py-3 font-bold text-white">Agency onboarding proposal →</a>
+              <a href="https://globalcouplecare.com/partners" target="_blank" rel="noopener noreferrer" class="rounded-lg border border-primary-300 bg-white px-5 py-3 font-bold text-primary-800">Global partner network →</a>
+            </div>
+          </div>
+
+          <p class="text-sm leading-relaxed text-gray-500 border-t border-gray-200 pt-6">Published fees and early-partner terms are current as of September 25, 2026 and may change. The latest GCC partner pages and electronic agreements govern. This article does not guarantee licensing, transaction results, or income. Payments, escrow, external transfers, and automatic messenger alerts activate only after their respective contractual, configuration, and receipt-verification gates are completed.</p>
+        `,
+      },
+    },
+  },
+  {
     id: 98,
     title:
       '‘피터팬 아빠’ 전경철 작가가 남긴 질문…보호자 이후에도 돌봄 기록은 이어지는가',
