@@ -77,6 +77,9 @@ const META_BY_ID = Object.fromEntries(
 /** 레거시·오분류 보정: 기사 ID → 표준 카테고리 */
 export const NEWS_ARTICLE_CATEGORY_BY_ID: Record<number, NewsCategoryId> = {
   // 2026 최신
+  102: 'press', // NoahAI 시장국면·LEARNING·AI 어시스턴트 고도화
+  101: 'press', // NoahAI PAPER·전략 여권·무료 전략 허브
+  100: 'insight', // 워뇨띠 공개 자료를 검증 가능한 전략 가설로 변환
   99: 'press', // 글로벌커플케어 국제결혼 업체·글로벌 파트너 운영 플랫폼 고도화
   98: 'insight', // 피터팬 아빠 전경철 작가가 남긴 보호자 이후 돌봄·기록 인수인계 질문
   97: 'press', // 기술개발인의 날 계기 자람이 JDS 발달장애 맞춤 치료·학습 표준 기술

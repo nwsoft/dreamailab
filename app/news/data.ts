@@ -89,6 +89,448 @@ export function getLocalizedArticle(
 
 export const newsArticles: NewsArticle[] = [
   {
+    id: 102,
+    title:
+      '전략이 없어도 시작하는 AI 자동매매…NoahAI, 시장국면·LEARNING·AI 어시스턴트 고도화',
+    excerpt:
+      '기본 NoahAI 선택부터 주문 없는 학습, 가상자금 PAPER, 시장국면 판단, 맥락형 AI 설명까지 연결한다. TradingView 사용자는 기존 전략을 버리지 않고 검증·운영 보조 계층으로 활용할 수 있다.',
+    category: 'press',
+    date: '2026-09-26',
+    modifiedDate: '2026-09-26',
+    image: '🧠',
+    featured: true,
+    author: 'NoahAI Labs',
+    authorUrl: 'https://noahailabs.com/',
+    ogImage: '/images/news/news-102-noahai-learning-market-regime-assistant-og.jpg',
+    ogImageAlt:
+      'NoahAI가 서로 다른 시장국면을 판단하고 LEARNING, PAPER, LIVE 경로와 AI 어시스턴트를 안전 게이트로 연결하는 모습',
+    ogImageAltEn:
+      'NoahAI connecting market regime detection, LEARNING, PAPER, LIVE lanes, and an AI assistant through a safety gate',
+    contentImages: [
+      {
+        url: '/images/news/news-102-noahai-learning-market-regime-assistant-og.jpg',
+        width: 1200,
+        height: 630,
+        alt: '상승·하락·횡보·고변동 시장국면과 NoahAI 학습, PAPER, LIVE, AI 어시스턴트가 분리된 운영 구조',
+        caption:
+          'NoahAI는 시장을 하나의 상태로 단정하지 않고 국면·위험·실행 모드를 분리해 판단과 주문 사이에 안전 경계를 둔다.',
+      },
+    ],
+    about: [
+      {
+        type: 'Organization',
+        id: 'https://noahailabs.com/#organization',
+        name: 'NoahAI Labs',
+        alternateName: ['노아에이아이랩스', 'Noah AI Labs'],
+        url: 'https://noahailabs.com/',
+        description: '금융 AI 서비스 NoahAI를 개발·운영하는 기술 기업',
+        sameAs: ['https://dreamailab.com/services/finance/'],
+      },
+      {
+        type: 'SoftwareApplication',
+        id: 'https://noahailabs.com/#noahai',
+        name: 'NoahAI',
+        alternateName: ['노아AI', '노아에이아이'],
+        url: 'https://noahailabs.com/ko/product',
+        description:
+          '암호화폐·주식·ETF의 학습, PAPER, 전략 검증과 사용자 승인형 운용을 연결하는 금융 AI 소프트웨어',
+      },
+    ],
+    mentions: [
+      {
+        type: 'DefinedTerm',
+        name: '시장국면',
+        alternateName: ['Market Regime', '레짐 분석'],
+        url: 'https://noahailabs.com/ko/product',
+        description:
+          '상승·하락·횡보·고변동 등 현재 시장 상태를 전략 적합성 및 위험 판단과 연결하는 NoahAI 기능',
+      },
+      {
+        type: 'SoftwareApplication',
+        name: 'TradingView',
+        alternateName: ['트레이딩뷰', 'Pine Script'],
+        url: 'https://www.tradingview.com/pine-script-docs/concepts/strategies/',
+        description:
+          'Pine Script 전략의 시뮬레이션과 전략 리포트를 제공하는 차트·전략 생태계',
+      },
+    ],
+    tags: [
+      'AI 자동매매',
+      '코인 자동매매 프로그램',
+      '주식 자동매매',
+      'NoahAI',
+      '노아에이아이랩스',
+      '시장국면',
+      'LEARNING 모드',
+      'PAPER 트레이딩',
+      'AI 트레이딩 봇',
+      'AI 어시스턴트',
+      'TradingView 연동',
+      '트레이딩뷰 자동매매',
+      'Pine Script 전략',
+      '알고리즘 트레이딩',
+      '자동매매 전략 만들기',
+    ],
+    faq: [
+      {
+        question: '투자전략이 없어도 NoahAI를 시작할 수 있나요?',
+        answer:
+          '가능하다. 처음 사용 흐름에서 기본 NoahAI를 선택하면 커스텀 전략을 억지로 만들지 않고 기존 시장판단·후보선정·위험관리 경로를 이용할 수 있다. LEARNING과 PAPER는 실제 주문과 분리된다.',
+      },
+      {
+        question: 'LEARNING 모드는 실제 주문을 내나요?',
+        answer:
+          '아니다. LEARNING은 시장데이터, 후보, 시장국면, 위험과 주문 후보가 어떤 이유로 허용·차단됐는지를 기록하지만 외부 주문과 계좌 상태 변경은 막는다.',
+      },
+      {
+        question: '시장국면 기능은 무엇을 하나요?',
+        answer:
+          '전략이 언제 유리하거나 불리할 수 있는지 판단하기 위한 시장 상태 정보다. 거래량이나 가격 입력이 없거나 비정상이면 0으로 단정하지 않고 알 수 없음으로 처리해 잘못된 국면 판단을 줄인다.',
+      },
+      {
+        question: 'NoahAI가 TradingView를 대체하나요?',
+        answer:
+          '대체가 목표가 아니다. TradingView와 Pine은 차트·전략 원본으로 활용하고, NoahAI는 원문과 변환 규칙 비교, 시장국면·계좌 위험, PAPER 근거, 승인과 실행 기록을 잇는 검증·운영 보조 계층을 지향한다.',
+      },
+      {
+        question: 'AI 어시스턴트가 설정을 바꾸거나 자동으로 거래하나요?',
+        answer:
+          '아니다. 현재 화면·전략·PAPER 문맥을 설명하고 검토용 초안을 전략 스튜디오로 보낼 수 있지만 설정 변경, 전략 저장·승인, PAPER나 LIVE 시작은 사용자의 별도 확인 없이는 수행하지 않는다.',
+      },
+    ],
+    content: `
+      <p class="text-sm text-gray-500 mb-6">[제품 업데이트 · 2026-09-26]</p>
+      <p class="text-xl font-bold text-gray-900 mb-3 leading-relaxed">— 전략이 없는 초보자는 ‘기본 NoahAI’, 전략이 있는 사용자는 자연어·Pine·문서 가져오기</p>
+      <p class="text-xl font-bold text-gray-900 mb-8 leading-relaxed">— 시장국면과 위험을 분리하고 LEARNING → PAPER → 사용자 승인형 운용으로 이어지는 안전한 시작</p>
+
+      <p class="text-lg text-gray-800 mb-6 leading-relaxed">
+        금융 AI 기업 <strong>노아에이아이랩스(NoahAI Labs)</strong>가 NoahAI의 처음 사용 흐름과 시장국면 판단, <strong>LEARNING·PAPER·LIVE 분리</strong>, AI 어시스턴트를 고도화했다. 사용자는 전문 전략을 먼저 만들지 않아도 <strong>기본 NoahAI</strong>로 시작할 수 있고, 자신만의 아이디어가 있다면 자연어·Pine Script·TradingView 자료·문서에서 전략 스튜디오로 이어갈 수 있다.
+      </p>
+
+      <figure class="mb-10 overflow-hidden rounded-2xl border border-slate-200 bg-slate-950">
+        <img src="/images/news/news-102-noahai-learning-market-regime-assistant-og.jpg" alt="상승 하락 횡보 고변동 시장국면과 NoahAI 학습 PAPER LIVE AI 어시스턴트 운영 구조" width="1200" height="630" class="h-auto w-full" loading="eager" decoding="async" />
+        <figcaption class="px-5 py-3 text-sm text-slate-300">시장국면을 읽는 판단과 주문 권한을 분리하고, 학습·가상 운용·실제 운용 사이에 사용자 승인과 위험 게이트를 둔다.</figcaption>
+      </figure>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">전략을 모르면 ‘기본 NoahAI’, 알고 있다면 그대로 가져온다</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        기존 자동매매 도구는 사용자가 지표, 진입식, 청산식, API와 위험 설정을 먼저 이해해야 하는 경우가 많았다. NoahAI의 5분 시작 흐름은 <strong>기본 NoahAI에 맡기기·관리형 예제로 배우기·내 전략 가져오기</strong> 중 하나를 고르게 한다. 기본 NoahAI를 선택했다고 사용자의 독립 전략이 완성된 것처럼 표시하지 않으며, 커스텀 전략에 부족한 조건도 AI가 임의로 만들어 채우지 않는다.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        LEARNING 모드에서는 시장데이터, 후보선정, 기본·커스텀 AI 판단, 시장국면, 위험, 수량과 청산 계획, 최종 주문 후보, 허용·차단 이유를 학습 기록으로 남기되 실제 주문 API 호출과 신규 주문은 막는다. PAPER에서는 별도 가상자금과 가상 포지션·체결 원장으로 전략과 기본 판단을 관찰할 수 있다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">시장국면은 ‘무엇을 살까’보다 ‘언제 이 전략을 쓸까’를 묻는다</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        같은 전략도 상승·하락·횡보·고변동장에서 결과가 달라질 수 있다. NoahAI는 시장국면을 전략 적합성과 연결하고, 계좌 위험 제한은 별도 가드레일로 유지한다. 입력이 없거나 비정상인 거래량은 0으로 바꾸지 않고 <strong>알 수 없음</strong>으로 처리하며, 평평한 RSI 같은 경계값도 잘못된 신호가 되지 않도록 보정했다.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        암호화폐 7개 거래소와 국내 4개 증권사 연결은 기관마다 다른 주문 규격을 유지하면서도 LEARNING/PAPER/LIVE → 판단 → 차단 또는 주문 → 체결·청산 → 원장 → 설명이라는 공통 외곽 흐름을 사용한다. 다만 실제 LIVE는 API 인증, 거래 대상, 명시적 시작 확인과 계좌별 위험 제한을 모두 통과해야 한다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">AI 어시스턴트는 실행자가 아니라 ‘현재 상태를 설명하는 조종석’</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        AI 어시스턴트는 현재 기관과 실행 모드, 시작 상태, 관리 중 포지션, TP·SL, 적용 전략 버전, 최근 신호와 HOLD 이유, PAPER 통계를 문맥으로 읽고 답한다. 전략 상담 결과는 전략 스튜디오의 편집 가능한 초안으로 보낼 수 있지만, <strong>자동 저장·승인·PAPER·LIVE는 하지 않는다.</strong> 위험예산이나 실행 조건이 부족하면 이유와 질문을 한 번에 이해하기 쉽게 제시하고 사용자가 확정한 답만 별도 근거로 기록한다.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">TradingView 사용자가 기존 작업을 버릴 필요는 없다</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        TradingView의 Pine 전략은 브로커 에뮬레이터로 과거·실시간 바에서 주문을 시뮬레이션하고 전략 리포트를 제공한다. NoahAI는 이 생태계를 대체한다고 주장하지 않는다. Pine과 TradingView 아이디어를 원본으로 가져와 변환된 실행 규칙과 비교하고, 시장국면·위험·버전별 PAPER·실행 근거를 연결하는 <strong>검증·운영 보조 프로그램</strong>을 지향한다. TradingView의 전략 동작 범위는 <a href="https://www.tradingview.com/pine-script-docs/concepts/strategies/" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">공식 Pine 전략 문서</a>에서 확인할 수 있다.
+      </p>
+
+      <div class="my-10 rounded-2xl border border-amber-200 bg-amber-50 p-6">
+        <p class="font-bold text-amber-950 mb-2">현재 제공 범위</p>
+        <p class="text-amber-900 leading-relaxed">공개 기준선은 v3.9.1.46이다. v3.9.1.47의 Level 5 비용 민감도 비교, 확장 과거재생과 진단 보강은 소스 후보로서 공개 설치본·실계좌·Windows 환경 검증과 분리한다. Level 5 역시 주문 권한 확대가 아닌 읽기 전용 연구 비교다.</p>
+      </div>
+
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        노아에이아이랩스의 사업적 차별점은 AI가 매수·매도를 말하는 한 장면이 아니라, 사용자의 지식과 기본 AI 판단이 <strong>원문 → 규칙 → 시장국면 → 위험 → PAPER → 승인 → 실행 결과</strong>로 이어지는 전체 생명주기에 있다. 이는 전통 알고리즘 사용자가 기존 전략을 버리지 않고 검증 수준을 높이고, 초보자는 실제 투자금 없이 구조를 이해하는 공통 진입점이 된다.
+      </p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">자세한 제품 구조는 <a href="https://noahailabs.com/ko/product" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">NoahAI 공식 제품 안내</a>와 <a href="/services/finance" class="text-primary-600 underline">드림에이아이랩 금융 AI 소개</a>에서 확인할 수 있다.</p>
+      <p class="text-gray-600 text-sm border-t border-gray-200 pt-6 leading-relaxed">※ 본 기사는 제품의 기능과 설계 방향을 설명하며 투자자문이나 수익 보장이 아닙니다. PAPER와 과거재생 결과는 실제 체결 및 미래 성과와 다를 수 있습니다.</p>
+    `,
+    i18n: {
+      en: {
+        title: 'AI Trading Without a Custom Strategy: NoahAI Advances Market Regimes, LEARNING and Its AI Assistant',
+        excerpt: 'Users can start with baseline NoahAI, order-free LEARNING, virtual PAPER, market-regime context and a read-only assistant. TradingView remains a source ecosystem, while NoahAI adds validation and operations.',
+        content: `<p class="text-sm text-gray-500 mb-6">[Product update · September 26, 2026]</p><p class="text-lg text-gray-800 mb-6 leading-relaxed"><strong>NoahAI Labs</strong> has refined NoahAI's onboarding, market-regime context, separation of LEARNING, PAPER and LIVE, and its contextual AI assistant. Beginners can explicitly choose baseline NoahAI without inventing a custom strategy; experienced users can bring natural language, Pine, TradingView references and documents into Strategy Studio.</p><figure class="mb-10 overflow-hidden rounded-2xl border border-slate-200 bg-slate-950"><img src="/images/news/news-102-noahai-learning-market-regime-assistant-og.jpg" alt="NoahAI market regimes, learning, paper, live and AI assistant architecture" width="1200" height="630" class="h-auto w-full" /><figcaption class="px-5 py-3 text-sm text-slate-300">Decision context and order authority remain separate, with user approval and risk gates between learning, simulation and live operation.</figcaption></figure><h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">Learn first, simulate next, approve before live</h2><p class="text-lg text-gray-700 mb-6 leading-relaxed">LEARNING records market data, candidates, regime, risk, sizing, exit plans and allow/block reasons without sending orders. PAPER uses virtual positions and a separate ledger. LIVE still requires credentials, an explicit start and account risk checks.</p><p class="text-lg text-gray-700 mb-6 leading-relaxed">The assistant explains the current venue, mode, positions, strategy version, recent signal and PAPER evidence. It can send an editable draft to Strategy Studio, but cannot silently change settings, approve a strategy or start PAPER/LIVE.</p><h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">A companion layer for TradingView users</h2><p class="text-lg text-gray-700 mb-6 leading-relaxed">NoahAI does not claim to replace TradingView. It treats Pine and TradingView material as source input, then connects rule comparison, market regimes, risk, versioned PAPER evidence and operating records. See the <a href="https://www.tradingview.com/pine-script-docs/concepts/strategies/" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">official TradingView strategy documentation</a>.</p><p class="text-gray-600 text-sm border-t border-gray-200 pt-6 leading-relaxed">This article describes product capabilities and direction, not investment advice or a return guarantee. Simulated and historical results may differ from live execution.</p>`,
+        faq: [
+          { question: 'Can I start NoahAI without my own strategy?', answer: 'Yes. Baseline NoahAI is an explicit path, while custom strategies remain a separate option.' },
+          { question: 'Does LEARNING place real orders?', answer: 'No. It records decisions and reasons while blocking external state changes and new orders.' },
+          { question: 'Does NoahAI replace TradingView?', answer: 'No. TradingView and Pine remain source ecosystems; NoahAI aims to add validation, risk and operating evidence.' },
+        ],
+      },
+    },
+  },
+  {
+    id: 101,
+    title:
+      '투자금 없이 자동매매 전략 검증…NoahAI PAPER·전략 여권·무료 전략 허브',
+    excerpt:
+      '가상자금 PAPER에서 버전별 전략 근거를 만들고, 전략 여권의 E0~E5 증거 단계와 무료 공개 허브로 공유·재검증하는 흐름을 연결한다.',
+    category: 'press',
+    date: '2026-09-26',
+    modifiedDate: '2026-09-26',
+    image: '🛂',
+    featured: true,
+    author: 'NoahAI Labs',
+    authorUrl: 'https://noahailabs.com/',
+    ogImage: '/images/news/news-101-noahai-paper-passport-hub-og.jpg',
+    ogImageAlt:
+      '가상자금 PAPER 기록이 전략 버전과 검증 증거를 거쳐 전략 여권 및 무료 전략 허브로 연결되는 모습',
+    ogImageAltEn:
+      'Virtual PAPER records connecting strategy versions and evidence to a strategy passport and free strategy hub',
+    contentImages: [
+      {
+        url: '/images/news/news-101-noahai-paper-passport-hub-og.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'NoahAI PAPER 검증, 버전 원장, 전략 검증 여권, 전략 허브의 근거 중심 연결 구조',
+        caption:
+          '전략을 수익률 캡처가 아니라 원문·버전·비용·위험·재현 가능한 실행 근거로 비교하는 NoahAI의 검증 흐름.',
+      },
+    ],
+    about: [
+      {
+        type: 'Organization',
+        id: 'https://noahailabs.com/#organization',
+        name: 'NoahAI Labs',
+        alternateName: ['노아에이아이랩스', 'Noah AI Labs'],
+        url: 'https://noahailabs.com/',
+        sameAs: ['https://dreamailab.com/services/finance/'],
+      },
+      {
+        type: 'SoftwareApplication',
+        id: 'https://noahailabs.com/#strategy-studio',
+        name: 'NoahAI Strategy Studio',
+        alternateName: ['NoahAI 전략 스튜디오', 'AI 커스텀'],
+        url: 'https://noahailabs.com/ko/product/strategy-studio',
+        description: '전략 원문, 규칙, 버전, PAPER와 검증 근거를 연결하는 NoahAI 작업 공간',
+      },
+    ],
+    mentions: [
+      {
+        type: 'DefinedTerm',
+        name: '전략 검증 여권',
+        alternateName: ['Strategy Validation Passport', 'Strategy Passport'],
+        url: 'https://noahailabs.com/ko/product/strategy-studio',
+        description: '전략 원문, 버전, 검증 범위, 비용, 위험과 실행 근거를 연결한 증거 묶음',
+      },
+      {
+        type: 'Organization',
+        name: 'NoahAI 검증 전략 허브',
+        alternateName: ['NoahAI Verified Strategy Hub'],
+        url: 'https://daltrading.net/strategies',
+        description: '전략 패키지를 공개하고 각 사용자가 다시 검증하도록 설계된 무료 공개 베타',
+      },
+    ],
+    tags: [
+      '자동매매 모의투자',
+      '코인 페이퍼 트레이딩',
+      'PAPER 트레이딩',
+      '투자금 없이 자동매매',
+      '자동매매 전략 검증',
+      '전략 백테스트',
+      '전략 여권',
+      '전략 마켓플레이스',
+      '자동매매 전략 공유',
+      'NoahAI 전략 허브',
+      'NoahAI',
+      '노아에이아이랩스',
+      '알고리즘 트레이딩',
+    ],
+    faq: [
+      {
+        question: '실제 투자금이 없어도 자동매매 전략을 검증할 수 있나요?',
+        answer: '가능하다. NoahAI PAPER는 실제 잔고와 분리된 가상자금·가상 포지션·체결 원장을 사용하며 실제 주문 API를 소유하지 않는 경로로 전략을 관찰한다.',
+      },
+      {
+        question: '전략 여권의 E0~E5는 수익률 등급인가요?',
+        answer: '아니다. 원문과 구조 확인부터 재현 가능한 검증, OOS·PAPER·확인 체결 등 어떤 근거가 축적됐는지를 구분하는 증거 단계다. 높은 수익을 보장하는 점수가 아니다.',
+      },
+      {
+        question: '전략 허브는 현재 유료 마켓플레이스인가요?',
+        answer: '현재는 무료 공개 베타다. 유료 판매, 결제, 환불, 분쟁, 제작자 정산은 향후 단계이며 현재 제공 완료 기능으로 표현하지 않는다.',
+      },
+      {
+        question: '허브에서 받은 전략은 바로 LIVE로 실행되나요?',
+        answer: '아니다. 비활성 상태로 가져온 뒤 원문과 규칙을 확인하고 자신의 기관·종목·비용 조건에서 재검증해 PAPER와 사용자 승인을 거쳐야 한다.',
+      },
+    ],
+    content: `
+      <p class="text-sm text-gray-500 mb-6">[서비스 해설 · 2026-09-26]</p>
+      <p class="text-xl font-bold text-gray-900 mb-3 leading-relaxed">— 실제 시드 없이 가상자금으로 전략의 실행과 비용·위험을 확인</p>
+      <p class="text-xl font-bold text-gray-900 mb-8 leading-relaxed">— 자기신고 수익률 대신 전략 버전과 재현 가능한 근거를 보여주는 검증 여권·무료 허브</p>
+
+      <p class="text-lg text-gray-800 mb-6 leading-relaxed">자동매매를 처음 접하는 사람에게 가장 큰 장벽은 코딩만이 아니다. 아직 이해하지 못한 전략에 실제 투자금을 넣어야 한다는 부담, 백테스트 화면이 실제 운용에서도 같을지 알 수 없다는 불신이 더 크다. 노아에이아이랩스는 이 시작점을 <strong>실제 시드 없는 전략 제작과 PAPER 검증</strong>으로 바꾸고 있다.</p>
+
+      <figure class="mb-10 overflow-hidden rounded-2xl border border-slate-200 bg-slate-950"><img src="/images/news/news-101-noahai-paper-passport-hub-og.jpg" alt="NoahAI PAPER 전략 버전 검증 여권과 무료 전략 허브 연결 구조" width="1200" height="630" class="h-auto w-full" loading="eager" decoding="async" /><figcaption class="px-5 py-3 text-sm text-slate-300">같은 전략 버전의 원문·규칙·가상 체결·비용·위험을 연결하고, 공개 근거와 개인 계정 기록은 분리한다.</figcaption></figure>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">PAPER는 수익률 데모가 아니라 ‘실제 운용 전 증거 만들기’</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">NoahAI PAPER는 실제 계좌 잔고와 분리된 가상자금, 가상 포지션과 체결 원장을 사용한다. 기관·종목·현물/선물·통화·전략 key와 버전별로 진입과 청산, 비용, 보유시간, 위험 제한과 결정 이유를 연결한다. 일시정지 뒤 같은 검증 시도를 재개할 수 있고, 다른 버전이 조용히 실행 권한을 덮어쓰지 못하게 막는다.</p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">투자금이 없어도 전략을 만들고 PAPER로 관찰할 수 있다는 것은 초보자에게는 안전한 학습 경로이고, 제작자에게는 수익률 주장보다 재현 가능한 근거를 쌓는 출발점이다. 다만 PAPER 체결은 실제 호가·유동성·지연과 다를 수 있으므로 LIVE 성과 증명이 아니다.</p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">전략 여권은 ‘얼마 벌었나’보다 ‘무엇이 검증됐나’를 보여준다</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">전략 검증 여권은 원문 출처와 해시, 실행 규칙, 전략 ID·버전, 기관·종목·시간봉, 비용과 위험 가정, 과거재생·OOS·PAPER·확인 체결 범위를 같은 증거 묶음으로 연결한다. E0~E5는 수익률 순위가 아니라 <strong>검증 근거의 단계</strong>이며, E0는 공개 가능한 구조를 확인한 시작점이지 검증 완료나 권리 보증을 뜻하지 않는다.</p>
+      <ul class="list-disc pl-6 text-lg text-gray-700 mb-8 space-y-3 leading-relaxed"><li><strong>원문 보존:</strong> 자연어·Pine·문서와 사용자가 확정한 보완 답변을 분리해 기록</li><li><strong>버전 분리:</strong> v1의 결과를 바뀐 v2에 자동 승계하지 않음</li><li><strong>증거 분리:</strong> 개인 로컬 PAPER 파일은 자동으로 공개 랭킹 근거가 되지 않음</li><li><strong>실행 분리:</strong> 과거 성과, PAPER 권한, LIVE 권한과 계좌 위험을 각각 판단</li></ul>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">무료 전략 허브에서 발견하고, 내 환경에서 다시 검증한다</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">현재 <a href="https://daltrading.net/strategies" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">NoahAI 검증 전략 허브</a>는 무료 공개 베타다. 제작자가 <code>.noahstrategy</code> 패키지를 제출하면 자산·기관·시장국면·검증 대상과 구조를 확인하고, 권리 자기선언을 거쳐 E0로 공개할 수 있다. 사용자는 목적에 맞는 전략을 내려받아 비활성 상태로 가져온 뒤 자신의 거래소·증권사, 종목, 비용과 위험 조건에서 다시 확인한다.</p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">허브는 자기신고 수익률이나 다운로드 수만으로 전략을 줄 세우지 않는다. 원문 추적 가능성, 표본, 재현성, OOS·워크포워드, 비용·위험과 서명된 실행 근거를 중심으로 보여준다. 유료 라이선스와 제작자 정산을 포함한 마켓플레이스는 후속 사업 단계이며, 현재의 무료 허브와 구분한다.</p>
+
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">이 구조는 전략 제작자에게는 검증 가능한 디지털 자산을 만들 기회를, 예비 사용자에게는 실제 돈을 투입하기 전에 전략이 자신에게 맞는지 확인할 권리를 준다. 노아에이아이랩스는 전략 파일 판매가 아니라 <strong>전략의 출처·버전·결과가 시간이 지나도 이어지는 신뢰 인프라</strong>를 사업 기반으로 확장하고 있다.</p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">전략 제작과 검증 흐름은 <a href="https://noahailabs.com/ko/product/strategy-studio" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">NoahAI 전략 스튜디오</a>에서 확인할 수 있다.</p>
+      <p class="text-gray-600 text-sm border-t border-gray-200 pt-6 leading-relaxed">※ PAPER·과거재생·검증 등급은 실제 수익이나 미래 성과를 보장하지 않습니다. 전략에는 원금 손실 위험이 있으며 LIVE 적용은 사용자의 별도 판단과 승인 대상입니다.</p>
+    `,
+    i18n: {
+      en: {
+        title: 'Validate Automated Trading Strategies Without Capital: NoahAI PAPER, Strategy Passport and Free Hub',
+        excerpt: 'NoahAI connects virtual PAPER evidence to versioned strategy passports and a free public hub, allowing users to revalidate a strategy in their own venue and cost environment.',
+        content: `<p class="text-sm text-gray-500 mb-6">[Service explainer · September 26, 2026]</p><p class="text-lg text-gray-800 mb-6 leading-relaxed">NoahAI separates strategy learning from the pressure to fund a live account. PAPER uses virtual capital, positions and fills, while preserving venue, symbol, cost, risk, strategy key and version evidence.</p><figure class="mb-10 overflow-hidden rounded-2xl border border-slate-200 bg-slate-950"><img src="/images/news/news-101-noahai-paper-passport-hub-og.jpg" alt="NoahAI PAPER, strategy passport and free hub" width="1200" height="630" class="h-auto w-full" /><figcaption class="px-5 py-3 text-sm text-slate-300">Source, rules, version, virtual execution and evidence remain connected without treating a screenshot as proof.</figcaption></figure><h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">Evidence stages, not a return leaderboard</h2><p class="text-lg text-gray-700 mb-6 leading-relaxed">The E0–E5 passport ladder indicates what evidence exists. E0 is a publication starting point, not verified performance or rights. Local PAPER exports do not automatically improve a public score.</p><p class="text-lg text-gray-700 mb-6 leading-relaxed">The <a href="https://daltrading.net/strategies" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">NoahAI Verified Strategy Hub</a> is currently a free public beta. Paid licensing, refunds, disputes and creator settlement remain future marketplace work. A downloaded package is imported inactive and must be reviewed, revalidated and approved by the user.</p><p class="text-gray-600 text-sm border-t border-gray-200 pt-6 leading-relaxed">PAPER, replay and evidence levels do not guarantee live or future performance. Strategies can lose capital.</p>`,
+        faq: [
+          { question: 'Can I validate a strategy without investment capital?', answer: 'Yes. NoahAI PAPER uses separate virtual capital, positions and fills.' },
+          { question: 'Are E0–E5 return grades?', answer: 'No. They describe the level and provenance of evidence, not guaranteed profitability.' },
+          { question: 'Is the hub a paid marketplace today?', answer: 'No. It is currently a free public beta; paid marketplace operations remain a future stage.' },
+        ],
+      },
+    },
+  },
+  {
+    id: 100,
+    title:
+      '워뇨띠 매매법을 그대로 복제할 수 있을까…NoahAI는 공개 자료를 ‘검증 가능한 전략 가설’로 바꾼다',
+    excerpt:
+      '유명 트레이더의 인터뷰·자료를 성과 신화가 아닌 출처·원칙·가설·미지원 조건으로 분해하고, 사용자 승인과 PAPER 검증으로 이어가는 방법을 제시한다.',
+    category: 'insight',
+    date: '2026-09-26',
+    modifiedDate: '2026-09-26',
+    image: '🔬',
+    featured: true,
+    author: 'NoahAI Labs',
+    authorUrl: 'https://noahailabs.com/',
+    ogImage: '/images/news/news-100-noahai-public-strategy-research-og.jpg',
+    ogImageAlt:
+      '공개 인터뷰와 매매 자료가 출처 보존, 가설 표시, 전략 규칙 검토를 거쳐 PAPER 대시보드로 연결되는 모습',
+    ogImageAltEn:
+      'Public interviews and trading material moving through provenance, hypothesis labeling, rule review, and PAPER validation',
+    contentImages: [
+      {
+        url: '/images/news/news-100-noahai-public-strategy-research-og.jpg',
+        width: 1200,
+        height: 630,
+        alt: '유명 트레이더 공개 자료를 출처가 남는 전략 연구 가설과 PAPER 검증으로 변환하는 NoahAI 구조',
+        caption:
+          '공개 자료에서 확인된 원칙과 시스템이 추가한 연구 가설을 구분해야 유명 트레이더의 이름이 검증되지 않은 성과 주장으로 소비되지 않는다.',
+      },
+    ],
+    about: [
+      {
+        type: 'Organization',
+        id: 'https://noahailabs.com/#organization',
+        name: 'NoahAI Labs',
+        alternateName: ['노아에이아이랩스', 'Noah AI Labs'],
+        url: 'https://noahailabs.com/',
+        sameAs: ['https://dreamailab.com/services/finance/'],
+      },
+      {
+        type: 'SoftwareApplication',
+        id: 'https://noahailabs.com/#strategy-studio',
+        name: 'NoahAI Strategy Studio',
+        alternateName: ['NoahAI 전략 스튜디오', 'AI 커스텀'],
+        url: 'https://noahailabs.com/ko/product/strategy-studio',
+        description: '공개 자료와 사용자 전략을 출처가 남는 실행 규칙·버전·검증 흐름으로 바꾸는 작업 공간',
+      },
+    ],
+    mentions: [
+      {
+        type: 'DefinedTerm',
+        name: '워뇨띠 공개 매매 원칙',
+        alternateName: ['AOA trading principles', '워뇨띠 매매법'],
+        url: 'https://www.bitmex.com/blog/whale-trader-talks-aoa',
+        description: 'BitMEX가 2025년 공개한 AOA 인터뷰에 담긴 위험관리와 시장 상황별 판단 원칙',
+      },
+      {
+        type: 'DefinedTerm',
+        name: '연구 가설',
+        alternateName: ['Research Hypothesis'],
+        url: 'https://noahailabs.com/ko/product/strategy-studio',
+        description: '원문에 직접 확인되지 않아 별도 검증과 사용자 승인이 필요한 전략 조건',
+      },
+    ],
+    tags: [
+      '워뇨띠 매매법',
+      '워뇨띠 전략',
+      '워뇨띠 자동매매',
+      'AOA 트레이더',
+      '코인 자동매매 전략',
+      'AI 자동매매 전략',
+      '유명 트레이더 전략',
+      '자동매매 전략 만들기',
+      '전략 스튜디오',
+      'PAPER 트레이딩',
+      'TradingView 전략',
+      'Pine Script',
+      'NoahAI',
+      '노아에이아이랩스',
+    ],
+    faq: [
+      {
+        question: 'NoahAI가 워뇨띠의 실제 매매전략을 그대로 복제하나요?',
+        answer: '아니다. 공개 인터뷰와 배포 자료로 확인 가능한 원칙을 출처와 함께 구조화하고, 추가 조건은 연구 가설로 표시한다. 공개 자료만으로 재량 판단 전체나 실제 성과를 재현할 수 있다고 주장하지 않는다.',
+      },
+      {
+        question: '워뇨띠 또는 AOA와 공식 제휴한 전략인가요?',
+        answer: '아니다. 공개 자료 기반 독립 연구이며 당사자의 승인·제휴·공식 전략 또는 성과 계승을 뜻하지 않는다.',
+      },
+      {
+        question: '유튜브나 PDF, TradingView 전략도 같은 방식으로 만들 수 있나요?',
+        answer: '원문을 가져와 출처, 진입·청산·위험 조건과 미지원 표현을 분리할 수 있다. 다만 모든 Pine이나 영상의 의미를 완전 자동 실행한다고 보장하지 않으며, 모호한 조건은 사용자에게 질문하고 지원되지 않으면 차단한다.',
+      },
+      {
+        question: '생성된 전략은 바로 실제 자동매매에 적용되나요?',
+        answer: '아니다. 초안 분석, 규칙 확인, 사용자 승인, 선택적 과거재생, PAPER와 위험 검사를 거친다. AI가 만든 예시는 자동 승인이나 LIVE 권한이 아니다.',
+      },
+    ],
+    content: `
+      <p class="text-sm text-gray-500 mb-6">[전략 연구 인사이트 · 2026-09-26]</p>
+      <p class="text-xl font-bold text-gray-900 mb-3 leading-relaxed">— 유명 트레이더의 결과를 복제한다고 말하지 않고 공개 원칙과 추가 가설을 분리</p>
+      <p class="text-xl font-bold text-gray-900 mb-8 leading-relaxed">— 출처 해시·미지원 조건·사용자 승인·PAPER로 ‘따라 하기’를 검증 가능한 연구 과정으로 전환</p>
+
+      <p class="text-lg text-gray-800 mb-6 leading-relaxed">“워뇨띠 매매법을 자동매매 전략으로 만들 수 있을까?” 코인 투자자가 자주 검색하는 질문이다. 결론부터 말하면 공개 인터뷰만으로 한 사람의 실제 재량 판단과 성과를 그대로 복제할 수는 없다. 그러나 공개 자료에서 확인되는 원칙을 <strong>출처가 남는 규칙과 검증 가능한 가설</strong>로 바꾸고, 무엇을 새로 가정했는지 투명하게 표시하는 일은 가능하다.</p>
+
+      <figure class="mb-10 overflow-hidden rounded-2xl border border-slate-200 bg-slate-950"><img src="/images/news/news-100-noahai-public-strategy-research-og.jpg" alt="유명 트레이더 공개 인터뷰와 자료를 출처가 남는 전략 연구 가설 및 PAPER 검증으로 변환하는 NoahAI" width="1200" height="630" class="h-auto w-full" loading="eager" decoding="async" /><figcaption class="px-5 py-3 text-sm text-slate-300">확인된 원칙, 해석이 필요한 조건, 시스템이 추가한 연구 가설을 서로 다른 근거로 보존한다.</figcaption></figure>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">공개 인터뷰가 말하는 것은 ‘비밀 진입식’보다 위험관리다</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed"><a href="https://www.bitmex.com/blog/whale-trader-talks-aoa" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">BitMEX가 2025년 공개한 AOA 인터뷰</a>에는 진입 시점보다 위험관리, 시장 상황에 따른 진입, FOMO를 피하는 태도와 포트폴리오 전체 레버리지 관리가 주요 원칙으로 제시된다. 그러나 이런 원칙만으로 정확한 지표 임계값, 주문 시점, 청산식과 예외 판단을 모두 알 수는 없다.</p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">따라서 “워뇨띠 전략”이라는 이름 아래 임의의 EMA·RSI·캔들 조건을 넣고 당사자의 실제 전략처럼 판매하면 출처와 추정이 섞인다. NoahAI는 공개 자료에서 직접 확인되는 문장과 시스템이 실험을 위해 추가한 조건을 분리해 후자를 <strong>research_hypothesis(연구 가설)</strong>로 표시한다.</p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">NoahAI가 공개 자료를 전략으로 바꾸는 6단계</h2>
+      <ol class="list-decimal pl-6 text-lg text-gray-700 mb-8 space-y-3 leading-relaxed"><li><strong>원문 수집:</strong> 인터뷰·PDF·표·Pine·영상 등 사용자가 사용할 권리가 있는 자료를 가져온다.</li><li><strong>출처 고정:</strong> 파일과 텍스트의 SHA-256을 보존해 어느 자료에서 시작했는지 남긴다.</li><li><strong>원칙 추출:</strong> 진입·청산·위험·시장국면에 관한 명시적 문장을 구조화한다.</li><li><strong>가설 분리:</strong> 원문에 없는 EMA·RSI·캔들·수치 조건은 연구 가설로 표시한다.</li><li><strong>사용자 확인:</strong> 모호하거나 지원되지 않는 조건은 추측하지 않고 질문하거나 실행을 차단한다.</li><li><strong>PAPER 검증:</strong> 승인된 버전만 가상자금으로 관찰하고 비용·위험·국면별 근거를 같은 버전에 축적한다.</li></ol>
+
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">최근 NoahAI 연구 도구는 원본 PDF와 데이터 파일의 해시를 보존한 3개의 미승인 연구 패키지를 생성하고, 추가된 기술 조건을 연구 가설로 구분하는 회귀 검사를 통과했다. 이는 <strong>당사자의 공식 전략, 제휴, 승인 또는 과거 성과를 계승했다는 뜻이 아니다.</strong> 현재 시장에서 수익성이 검증됐다는 뜻도 아니며, 연구 패키지는 사용자 계정에 자동 등록되거나 LIVE에 적용되지 않는다.</p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">TradingView·Pine 사용자도 ‘원문과 실제 실행 규칙’을 비교한다</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">TradingView 전략은 Pine 코드로 주문을 시뮬레이션하고 성과 리포트를 제공하지만, 시뮬레이션 체결은 실제 체결과 다를 수 있다. NoahAI 전략 스튜디오는 Pine 원문과 변환 결과를 같은 화면에서 비교하고, 지원되는 제한된 식만 실행 규칙으로 만든다. 모든 Pine의 의미 동등성이나 모든 웹훅 운영을 완료했다고 주장하지 않는다.</p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">이 접근은 유명인의 이름을 빌린 전략 판매보다 범용적이다. 투자 서적, 리서치 문서, 유튜브 강의, 자신의 매매 노트도 같은 방식으로 출처·규칙·가설·검증 결과를 분리할 수 있다. 사용자는 코딩 언어를 먼저 배우기보다 “어떤 상황에서 진입하고, 언제 틀렸다고 판단하며, 한 번에 얼마까지 위험을 감수할 것인가”라는 질문에 답한다.</p>
+
+      <p class="text-lg text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-5">핵심은 대가의 성과를 복제한다는 약속이 아니다. 공개된 지식을 검증 가능한 구조로 바꾸고, 확인되지 않은 부분은 확인되지 않았다고 표시하며, 사용자가 실제 돈을 넣기 전에 PAPER에서 스스로 검토할 수 있게 하는 것이다.</p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">전략 제작 흐름은 <a href="https://noahailabs.com/ko/product/strategy-studio" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">NoahAI 전략 스튜디오</a>에서 확인할 수 있다.</p>
+      <p class="text-gray-600 text-sm border-t border-gray-200 pt-6 leading-relaxed">※ 본 연구는 공개 자료를 사용한 독립적 기술 연구이며 AOA·워뇨띠와의 제휴·승인·공식 전략을 의미하지 않습니다. 특정 전략, 과거 성과, PAPER 결과는 미래 수익을 보장하지 않습니다.</p>
+    `,
+    i18n: {
+      en: {
+        title: 'Can a Famous Trader\'s Method Be Copied? NoahAI Turns Public Material into Testable Strategy Hypotheses',
+        excerpt: 'NoahAI separates sourced principles from added research hypotheses, preserving provenance and requiring user review and PAPER validation instead of implying copied performance.',
+        content: `<p class="text-sm text-gray-500 mb-6">[Strategy research insight · September 26, 2026]</p><p class="text-lg text-gray-800 mb-6 leading-relaxed">A public interview cannot reproduce a trader's complete discretionary process or historical performance. It can, however, become a source-traceable research package in which confirmed principles and added hypotheses are clearly separated.</p><figure class="mb-10 overflow-hidden rounded-2xl border border-slate-200 bg-slate-950"><img src="/images/news/news-100-noahai-public-strategy-research-og.jpg" alt="NoahAI transforms public trading material into source-traceable hypotheses and PAPER validation" width="1200" height="630" class="h-auto w-full" /><figcaption class="px-5 py-3 text-sm text-slate-300">Sourced principles, ambiguous conditions and system-added research hypotheses remain distinct.</figcaption></figure><p class="text-lg text-gray-700 mb-6 leading-relaxed">The <a href="https://www.bitmex.com/blog/whale-trader-talks-aoa" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">2025 BitMEX AOA interview</a> emphasizes risk management, market-dependent entries, avoiding FOMO and portfolio-wide leverage discipline. It does not disclose a complete executable rule set.</p><p class="text-lg text-gray-700 mb-6 leading-relaxed">NoahAI preserves source hashes, extracts explicit principles, labels added EMA, RSI, candle or numeric conditions as research hypotheses, asks about ambiguity and blocks unsupported execution. Generated packages remain unapproved research: they do not imply affiliation, endorsement, copied performance or proven current-market profitability.</p><p class="text-gray-600 text-sm border-t border-gray-200 pt-6 leading-relaxed">This is independent research based on public material and does not imply an affiliation with or endorsement by AOA. No strategy or simulated result guarantees future returns.</p>`,
+        faq: [
+          { question: 'Does NoahAI copy AOA\'s actual strategy?', answer: 'No. It structures principles visible in public material and labels added conditions as research hypotheses.' },
+          { question: 'Is this an official partnership or endorsed strategy?', answer: 'No. It is independent research based on public material.' },
+          { question: 'Does a generated package go live automatically?', answer: 'No. It remains unapproved until the user reviews, validates, approves and passes separate PAPER and risk gates.' },
+        ],
+      },
+    },
+  },
+  {
     id: 99,
     title:
       '국제결혼 업체 입점부터 문의·정산까지…글로벌커플케어, 글로벌 파트너 운영 플랫폼 고도화',
