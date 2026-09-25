@@ -91,9 +91,9 @@ export const newsArticles: NewsArticle[] = [
   {
     id: 102,
     title:
-      '노아에이아이랩스, 전략 없이도 시작하는 NoahAI 시장국면·LEARNING·AI 어시스턴트 고도화',
+      '노아에이아이랩스, NoahAI 공개판 v3.9.1.46 고도화…초보자 시작·시장국면·AI 어시스턴트 강화',
     excerpt:
-      '기본 NoahAI, 주문 없는 LEARNING, 가상자금 PAPER, 시장국면 판단과 맥락형 AI 설명을 하나의 단계적 운용 흐름으로 연결했다.',
+      '공개판 v3.9.1.46에서 기본 NoahAI 시작 경로, 주문 없는 LEARNING, 가상자금 PAPER, 시장국면 판단과 사용자 승인형 AI 어시스턴트를 강화했다.',
     category: 'press',
     date: '2026-09-26',
     modifiedDate: '2026-09-26',
@@ -165,8 +165,8 @@ export const newsArticles: NewsArticle[] = [
       'PAPER 트레이딩',
       'AI 트레이딩 봇',
       'AI 어시스턴트',
-      'TradingView 연동',
-      '트레이딩뷰 자동매매',
+      'TradingView 전략 가져오기',
+      'Pine 전략 검증',
       'Pine Script 전략',
       '알고리즘 트레이딩',
       '자동매매 전략 만들기',
@@ -200,12 +200,12 @@ export const newsArticles: NewsArticle[] = [
     ],
     content: `
       <p class="text-sm text-gray-500 mb-6">[보도자료 · 서울 · 2026-09-26]</p>
-      <p class="text-xl font-bold text-gray-900 mb-3 leading-relaxed">— 별도 전략이 없는 이용자는 기본 NoahAI, 전략 보유자는 자연어·Pine·문서 가져오기 제공</p>
+      <p class="text-xl font-bold text-gray-900 mb-3 leading-relaxed">— 공개판 v3.9.1.46에서 기본 NoahAI·관리형 예제·이용자 전략의 세 가지 시작 경로 제공</p>
       <p class="text-xl font-bold text-gray-900 mb-3 leading-relaxed">— 시장국면 판단과 LEARNING·PAPER·LIVE 실행 경계를 분리해 단계적 운용 지원</p>
-      <p class="text-xl font-bold text-gray-900 mb-8 leading-relaxed">— TradingView 이용자의 기존 전략을 검증·운영 근거와 연결하는 보조 계층 지향</p>
+      <p class="text-xl font-bold text-gray-900 mb-8 leading-relaxed">— AI 어시스턴트는 설명과 편집 가능한 초안을 제공하고 저장·승인·주문은 이용자가 결정</p>
 
-      <p class="text-lg text-gray-800 mb-6 leading-relaxed"><strong>서울 — 금융 AI 기업 노아에이아이랩스(NoahAI Labs)는</strong> NoahAI의 처음 사용 흐름, 시장국면 판단, LEARNING·PAPER·LIVE 실행 경계와 AI 어시스턴트를 고도화했다고 26일 밝혔다.</p>
-      <p class="text-lg text-gray-700 mb-8 leading-relaxed">이번 업데이트는 자동매매를 시작하기 위해 이용자가 먼저 복잡한 전략식과 시스템 구조를 익혀야 했던 진입장벽을 낮추는 데 초점을 맞췄다. 별도 전략이 없는 이용자는 <strong>기본 NoahAI</strong>를 선택할 수 있으며, 기존 투자 아이디어가 있는 이용자는 자연어·Pine Script·TradingView 자료·문서를 NoahAI 전략 스튜디오로 가져올 수 있다.</p>
+      <p class="text-lg text-gray-800 mb-6 leading-relaxed"><strong>서울 — 금융 AI 기업 노아에이아이랩스(NoahAI Labs)는</strong> NoahAI 공개판 v3.9.1.46에서 처음 사용 흐름, 시장국면 판단, LEARNING·PAPER·LIVE 실행 경계와 AI 어시스턴트를 고도화했다고 26일 밝혔다.</p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">이번 업데이트는 이용자가 복잡한 전략식과 시스템 구조부터 익혀야 했던 진입장벽을 낮추는 데 초점을 맞췄다. 별도 전략이 없는 이용자는 <strong>기본 NoahAI</strong>, 안내된 구조로 시작하려는 이용자는 <strong>관리형 예제</strong>, 기존 아이디어가 있는 이용자는 <strong>자신의 전략</strong>을 선택할 수 있다. 자연어·Pine Script·문서는 전략 스튜디오에서 검토 가능한 규칙으로 정리할 수 있다.</p>
 
       <figure class="mb-10 overflow-hidden rounded-2xl border border-slate-200 bg-slate-950"><img src="/images/news/news-102-noahai-learning-market-regime-assistant-og.jpg" alt="상승 하락 횡보 고변동 시장국면과 NoahAI 학습 PAPER LIVE AI 어시스턴트 운영 구조" width="1200" height="630" class="h-auto w-full" loading="eager" decoding="async" /><figcaption class="px-5 py-3 text-sm text-slate-300">NoahAI는 시장 판단과 주문 권한을 분리하고 학습·가상 운용·실제 운용 사이에 사용자 승인과 위험 게이트를 둔다.</figcaption></figure>
 
@@ -213,14 +213,12 @@ export const newsArticles: NewsArticle[] = [
       <ul class="list-disc pl-6 text-lg text-gray-700 mb-8 space-y-3 leading-relaxed"><li><strong>선택형 시작 방식:</strong> 기본 NoahAI, 관리형 예제, 이용자 전략 가져오기 중 목적에 맞는 경로 선택</li><li><strong>주문 없는 LEARNING:</strong> 후보선정·시장국면·위험·수량·청산 계획과 허용·차단 이유를 기록하되 실제 주문은 차단</li><li><strong>가상자금 PAPER:</strong> 실제 계좌와 분리된 가상 포지션·체결 원장으로 전략과 기본 판단을 관찰</li><li><strong>시장국면 정합성:</strong> 누락·비정상 데이터를 0으로 단정하지 않고 알 수 없음으로 처리해 잘못된 판단을 축소</li><li><strong>맥락형 AI 어시스턴트:</strong> 기관·실행 모드·포지션·TP·SL·전략 버전·최근 신호와 PAPER 통계를 바탕으로 현재 상태 설명</li></ul>
 
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">AI 어시스턴트는 이용자 대신 설정을 변경하거나 거래를 시작하지 않는다. 상담 결과는 전략 스튜디오의 편집 가능한 초안으로 전달되며, 전략 저장과 승인, PAPER 및 LIVE 시작은 각각 이용자의 별도 확인을 거쳐야 한다. 실행 조건이 부족하거나 원문이 모호한 경우에도 AI가 임의의 진입·청산 조건을 생성하지 않고 필요한 질문을 제시한다.</p>
-      <p class="text-lg text-gray-700 mb-8 leading-relaxed">암호화폐 7개 거래소와 국내 4개 증권사 연결은 기관별 주문 규격을 유지하면서 LEARNING/PAPER/LIVE → 판단 → 차단 또는 주문 → 체결·청산 → 원장 → 설명이라는 공통 운영 흐름을 사용한다. 실제 LIVE는 API 인증, 주문 대상, 명시적 시작 확인과 계좌별 위험 제한을 모두 통과한 경우에만 가능하다.</p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">LEARNING은 외부 주문 없이 판단 근거를 기록하고, PAPER는 실제 계좌와 분리된 가상자금으로 전략을 관찰한다. LIVE는 이 두 모드와 자동으로 이어지지 않으며 API 인증, 주문 대상, 명시적 시작 확인과 계좌별 위험 제한을 별도로 통과해야 한다.</p>
 
       <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">TradingView 대체 아닌 검증·운영 보조</h2>
-      <p class="text-lg text-gray-700 mb-6 leading-relaxed">노아에이아이랩스는 NoahAI를 TradingView의 차트·Pine 생태계를 대체하는 제품이 아니라, 기존 전략 원문과 변환된 실행 규칙을 비교하고 시장국면·계좌 위험·버전별 PAPER·실행 근거를 연결하는 보조 계층으로 정의했다. TradingView 전략의 시뮬레이션 범위는 <a href="https://www.tradingview.com/pine-script-docs/concepts/strategies/" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">공식 Pine 전략 문서</a>에서 확인할 수 있다.</p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">NoahAI는 TradingView의 차트·Pine 생태계를 대체한다고 주장하지 않는다. Pine 또는 TradingView에서 작성한 전략 자료를 가져와 원문과 실행 규칙을 비교하고, 시장국면·계좌 위험·버전별 PAPER 근거를 함께 검토하는 보조 흐름을 제공한다. 이는 TradingView API나 웹훅을 통한 직접 주문 연동을 뜻하지 않는다. TradingView 전략의 시뮬레이션 범위는 <a href="https://www.tradingview.com/pine-script-docs/concepts/strategies/" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">공식 Pine 전략 문서</a>에서 확인할 수 있다.</p>
 
-      <p class="text-lg text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-5">노아에이아이랩스는 “이번 고도화의 목적은 이용자에게 더 많은 기술용어를 학습시키는 것이 아니라, 전략이 없는 사람과 기존 전략을 가진 사람 모두가 자신의 수준에서 안전하게 시작하도록 만드는 것”이라며 “판단·설명·검증·승인의 기록을 연결해 AI 자동매매의 신뢰 기준을 높여가겠다”고 밝혔다.</p>
-
-      <div class="my-10 rounded-2xl border border-amber-200 bg-amber-50 p-6"><p class="font-bold text-amber-950 mb-2">배포 범위</p><p class="text-amber-900 leading-relaxed">현재 공개 기준선은 v3.9.1.46이다. v3.9.1.47의 Level 5 비용 민감도 비교, 확장 과거재생과 진단 보강은 소스 후보이며 공개 설치본·실계좌·Windows 환경 검증과 구분된다. Level 5도 주문 권한 확대가 아닌 읽기 전용 연구 비교 기능이다.</p></div>
+      <div class="my-10 rounded-2xl border border-amber-200 bg-amber-50 p-6"><p class="font-bold text-amber-950 mb-2">공개 범위</p><p class="text-amber-900 leading-relaxed">이 보도자료의 공개 제품 기준선은 v3.9.1.46이다. v3.9.1.47의 비용 민감도 비교, 확장 과거재생과 진단 보강은 내부 소스 후보이며 공개 설치본·Windows 환경·실계좌 검증을 마친 기능으로 소개하지 않는다.</p></div>
 
       <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">노아에이아이랩스 소개</h2>
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">노아에이아이랩스는 암호화폐·주식·ETF의 데이터 분석, 전략 설계, PAPER 검증과 사용자 승인형 운용을 연결하는 금융 AI 소프트웨어 NoahAI를 개발한다. 제품 정보는 <a href="https://noahailabs.com/ko/product" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">NoahAI 공식 제품 안내</a>에서 확인할 수 있다.</p>
@@ -228,9 +226,9 @@ export const newsArticles: NewsArticle[] = [
     `,
     i18n: {
       en: {
-        title: 'NoahAI Labs Advances Market-Regime, LEARNING and AI Assistant Workflows for Users Without a Custom Strategy',
-        excerpt: 'Users can start with baseline NoahAI, order-free LEARNING, virtual PAPER, market-regime context and a read-only assistant. TradingView remains a source ecosystem, while NoahAI adds validation and operations.',
-        content: `<p class="text-sm text-gray-500 mb-6">[Press release · Seoul · September 26, 2026]</p><p class="text-xl font-bold text-gray-900 mb-3 leading-relaxed">— Baseline NoahAI for users without a custom strategy; natural-language, Pine and document imports for strategy owners</p><p class="text-xl font-bold text-gray-900 mb-8 leading-relaxed">— Separate LEARNING, PAPER and LIVE boundaries with market-regime context and explicit user approval</p><p class="text-lg text-gray-800 mb-6 leading-relaxed"><strong>SEOUL — NoahAI Labs announced</strong> an upgrade to NoahAI's onboarding, market-regime analysis, execution-mode boundaries and contextual AI assistant.</p><figure class="mb-10 overflow-hidden rounded-2xl border border-slate-200 bg-slate-950"><img src="/images/news/news-102-noahai-learning-market-regime-assistant-og.jpg" alt="NoahAI market regimes, learning, paper, live and AI assistant architecture" width="1200" height="630" class="h-auto w-full" /><figcaption class="px-5 py-3 text-sm text-slate-300">User approval and risk gates separate learning, simulation and live operation.</figcaption></figure><h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">Key updates</h2><p class="text-lg text-gray-700 mb-6 leading-relaxed">Users may choose baseline NoahAI, a managed example or their own strategy. LEARNING records candidates, regimes, risk, sizing and allow/block reasons without sending orders. PAPER uses virtual positions and a separate ledger, while LIVE still requires credentials, explicit activation and account-level risk checks.</p><p class="text-lg text-gray-700 mb-6 leading-relaxed">The assistant explains venue, execution mode, positions, strategy version, recent signals and PAPER evidence. It may send an editable draft to Strategy Studio, but cannot silently change settings, approve a strategy or start PAPER/LIVE.</p><h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">A validation and operations companion to TradingView</h2><p class="text-lg text-gray-700 mb-6 leading-relaxed">NoahAI does not position itself as a TradingView replacement. It connects Pine and TradingView source material to rule comparison, market regimes, risk, versioned PAPER evidence and operating records.</p><p class="text-lg text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-5">“The goal is not to make users learn more technical terminology, but to give both first-time users and experienced strategy owners a safer starting point,” NoahAI Labs said.</p><p class="text-gray-600 text-sm border-t border-gray-200 pt-6 leading-relaxed">This press release describes product capabilities and deployment scope, not investment advice or a return guarantee. Simulated and historical results may differ from live execution.</p>`,
+        title: 'NoahAI Labs Advances Public Release v3.9.1.46 with Easier Onboarding, Market-Regime Context and AI Assistance',
+        excerpt: 'Public release v3.9.1.46 adds three starting paths, order-free LEARNING, virtual PAPER, market-regime context and a user-controlled AI assistant.',
+        content: `<p class="text-sm text-gray-500 mb-6">[Press release · Seoul · September 26, 2026]</p><p class="text-xl font-bold text-gray-900 mb-3 leading-relaxed">— Public release v3.9.1.46 offers baseline NoahAI, a managed example and a user-owned strategy as separate starting paths</p><p class="text-xl font-bold text-gray-900 mb-8 leading-relaxed">— LEARNING, PAPER and LIVE remain distinct; the assistant can explain and draft but cannot approve, save or trade for the user</p><p class="text-lg text-gray-800 mb-6 leading-relaxed"><strong>SEOUL — NoahAI Labs announced</strong> an upgrade to onboarding, market-regime analysis, execution-mode boundaries and its contextual AI assistant in NoahAI public release v3.9.1.46.</p><figure class="mb-10 overflow-hidden rounded-2xl border border-slate-200 bg-slate-950"><img src="/images/news/news-102-noahai-learning-market-regime-assistant-og.jpg" alt="NoahAI market regimes, learning, paper, live and AI assistant architecture" width="1200" height="630" class="h-auto w-full" /><figcaption class="px-5 py-3 text-sm text-slate-300">User approval and risk gates separate learning, simulation and live operation.</figcaption></figure><h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">What changed in the public release</h2><p class="text-lg text-gray-700 mb-6 leading-relaxed">Users may choose baseline NoahAI, a managed example or their own strategy. LEARNING records candidates, regimes, risk and allow/block reasons without sending orders. PAPER uses virtual positions and a separate ledger. LIVE does not activate automatically from either mode and still requires credentials, explicit activation and account-level risk checks.</p><p class="text-lg text-gray-700 mb-6 leading-relaxed">The assistant explains venue, execution mode, positions, strategy version, recent signals and PAPER evidence. It may send an editable draft to Strategy Studio, but cannot silently change settings, approve a strategy, save it or start PAPER/LIVE.</p><h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">A validation companion to TradingView material</h2><p class="text-lg text-gray-700 mb-6 leading-relaxed">NoahAI does not claim to replace TradingView. Users may import Pine or TradingView strategy material for source-to-rule comparison and review it with market-regime, risk and versioned PAPER evidence. This does not mean direct order integration through the TradingView API or webhooks.</p><div class="my-10 rounded-2xl border border-amber-200 bg-amber-50 p-6"><p class="font-bold text-amber-950 mb-2">Release boundary</p><p class="text-amber-900 leading-relaxed">This announcement covers public release v3.9.1.46. Cost-sensitivity comparison, expanded historical replay and diagnostics under v3.9.1.47 remain internal source candidates, not verified public Windows or live-account capabilities.</p></div><p class="text-gray-600 text-sm border-t border-gray-200 pt-6 leading-relaxed">This press release describes product capabilities and release scope, not investment advice or a return guarantee. Simulated and historical results may differ from live execution.</p>`,
         faq: [
           { question: 'Can I start NoahAI without my own strategy?', answer: 'Yes. Baseline NoahAI is an explicit path, while custom strategies remain a separate option.' },
           { question: 'Does LEARNING place real orders?', answer: 'No. It records decisions and reasons while blocking external state changes and new orders.' },
@@ -242,10 +240,10 @@ export const newsArticles: NewsArticle[] = [
   {
     id: 101,
     title:
-      '노아에이아이랩스, 투자금 없는 자동매매 전략 검증 위한 PAPER·전략 여권·무료 허브 공개',
+      '자동매매 PAPER란? 투자금 없이 전략을 검증하는 NoahAI 사용 가이드',
     excerpt:
-      '가상자금 PAPER에서 만든 버전별 실행 근거를 전략 여권의 E0~E5 증거 단계와 무료 공개 허브에 연결해 재검증 가능한 전략 유통 구조를 제시했다.',
-    category: 'press',
+      '과거재생·PAPER·LIVE의 차이부터 전략 여권과 무료 전략 허브까지, 실제 주문 전에 전략을 단계적으로 확인하는 방법을 설명한다.',
+    category: 'updates',
     date: '2026-09-26',
     modifiedDate: '2026-09-26',
     image: '🛂',
@@ -335,42 +333,35 @@ export const newsArticles: NewsArticle[] = [
       },
     ],
     content: `
-      <p class="text-sm text-gray-500 mb-6">[보도자료 · 서울 · 2026-09-26]</p>
-      <p class="text-xl font-bold text-gray-900 mb-3 leading-relaxed">— 실제 투자금 없이 전략의 실행·비용·위험을 확인하는 가상자금 PAPER 제공</p>
-      <p class="text-xl font-bold text-gray-900 mb-3 leading-relaxed">— 원문·버전·검증 범위를 E0~E5 증거 단계로 연결하는 전략 검증 여권 적용</p>
-      <p class="text-xl font-bold text-gray-900 mb-8 leading-relaxed">— 무료 공개 전략 허브에서 발견·다운로드·이용자 환경 재검증 지원</p>
-
-      <p class="text-lg text-gray-800 mb-6 leading-relaxed"><strong>서울 — 노아에이아이랩스(NoahAI Labs)는</strong> 실제 투자금 없이 자동매매 전략을 제작·검증하고, 검증 근거를 버전별 전략 여권과 무료 공개 허브로 연결하는 NoahAI 전략 유통 구조를 공개했다고 26일 밝혔다.</p>
-      <p class="text-lg text-gray-700 mb-8 leading-relaxed">이번 공개는 수익률 화면이나 제작자의 설명만으로 전략을 선택하던 방식에서 벗어나, 전략 원문과 실행 규칙, 적용 시장, 비용·위험 가정과 PAPER 근거를 이용자가 직접 확인하고 자신의 환경에서 다시 검증하도록 하는 데 목적이 있다.</p>
+      <p class="text-sm text-gray-500 mb-6">[사용 가이드 · 2026-09-26]</p>
+      <p class="text-lg text-gray-800 mb-6 leading-relaxed"><strong>PAPER 트레이딩은 실제 투자금을 넣지 않고 가상자금으로 전략의 작동 과정을 관찰하는 단계다.</strong> 자동매매를 처음 접하는 이용자라면 수익률 한 장보다 전략이 어떤 조건에서 진입·청산했고 비용과 위험을 어떻게 반영했는지 먼저 확인해야 한다.</p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">이 가이드는 NoahAI에서 전략을 선택하거나 만든 뒤 과거재생, PAPER, 전략 여권을 거쳐 LIVE 적용 여부를 판단하는 순서를 설명한다. PAPER는 손실 가능성을 없애는 기능도, 미래 수익을 증명하는 기능도 아니다. 실제 자금과 주문 권한을 분리한 상태에서 실행 규칙을 확인하는 안전한 중간 단계다.</p>
 
       <figure class="mb-10 overflow-hidden rounded-2xl border border-slate-200 bg-slate-950"><img src="/images/news/news-101-noahai-paper-passport-hub-og.jpg" alt="NoahAI PAPER 전략 버전 검증 여권과 무료 전략 허브 연결 구조" width="1200" height="630" class="h-auto w-full" loading="eager" decoding="async" /><figcaption class="px-5 py-3 text-sm text-slate-300">NoahAI는 같은 전략 버전의 원문·규칙·가상 체결·비용·위험을 연결하고 공개 근거와 개인 계정 기록을 분리한다.</figcaption></figure>
 
-      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">실제 시드 없는 PAPER 검증</h2>
-      <p class="text-lg text-gray-700 mb-6 leading-relaxed">NoahAI PAPER는 실제 계좌 잔고와 분리된 가상자금, 가상 포지션과 체결 원장을 사용한다. 기관·종목·현물/선물·통화·전략 key와 버전별로 진입·청산, 비용, 보유시간, 위험 제한과 결정 이유를 기록한다. 이용자는 투자금을 투입하지 않고 전략을 관찰할 수 있으며, 일시정지 후에도 같은 검증 시도의 기록을 보존해 재개할 수 있다.</p>
-      <p class="text-lg text-gray-700 mb-8 leading-relaxed">다른 전략 버전이 검증 중인 버전의 실행 권한을 조용히 교체하지 못하도록 분리했으며, PAPER 체결과 실제 LIVE 체결도 별도 근거로 관리한다. PAPER 결과는 실제 호가·유동성·지연을 모두 재현하는 수익 증명이 아니라 실제 운용 전 확인을 위한 가상 검증이다.</p>
+      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">과거재생·PAPER·LIVE는 서로 다른 확인 단계</h2>
+      <div class="my-8 grid gap-4 md:grid-cols-3"><div class="rounded-2xl border border-slate-200 bg-slate-50 p-6"><p class="text-sm font-bold text-primary-700 mb-2">01 · 과거재생</p><h3 class="text-xl font-bold text-slate-950 mb-3">과거 데이터로 규칙 확인</h3><p class="text-slate-700 leading-relaxed">정해진 과거 구간에서 진입·청산 규칙과 비용 가정을 반복 확인한다. 미래 성과를 보장하지 않는다.</p></div><div class="rounded-2xl border border-blue-200 bg-blue-50 p-6"><p class="text-sm font-bold text-blue-700 mb-2">02 · PAPER</p><h3 class="text-xl font-bold text-blue-950 mb-3">현재 시장에서 가상 운용</h3><p class="text-blue-950 leading-relaxed">실제 잔고와 주문 API를 쓰지 않고 가상 포지션·체결·비용·판단 이유를 기록한다.</p></div><div class="rounded-2xl border border-amber-200 bg-amber-50 p-6"><p class="text-sm font-bold text-amber-700 mb-2">03 · LIVE</p><h3 class="text-xl font-bold text-amber-950 mb-3">별도 승인 후 실제 운용</h3><p class="text-amber-950 leading-relaxed">API 인증, 주문 대상, 위험 제한과 사용자의 명시적 시작 확인이 필요한 독립 단계다.</p></div></div>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">NoahAI에서 확인하는 5단계</h2>
+      <ol class="list-decimal pl-6 text-lg text-gray-700 mb-8 space-y-4 leading-relaxed"><li><strong>전략 선택 또는 작성:</strong> 기본 예제, 자연어 아이디어, Pine·문서 자료 중 출발점을 고른다.</li><li><strong>실행 규칙 확인:</strong> 진입·청산, 종목, 시간봉, 비용과 위험 제한이 실제로 실행 가능한 형태인지 검토한다.</li><li><strong>과거재생 선택:</strong> 필요한 경우 과거 구간과 표본을 정해 규칙의 일관성을 먼저 확인한다.</li><li><strong>PAPER 시작:</strong> 가상자금과 별도 원장으로 현재 시장에서 신호·포지션·체결과 차단 이유를 관찰한다.</li><li><strong>전략 여권 검토:</strong> 같은 전략 버전에 어떤 근거가 쌓였는지 확인한 뒤 LIVE 적용 여부를 별도로 판단한다.</li></ol>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">NoahAI PAPER는 기관·종목·현물/선물·통화·전략 key와 버전별로 진입·청산, 비용, 보유시간, 위험 제한과 결정 이유를 기록한다. 다른 전략 버전이 검증 중인 버전을 조용히 교체하지 못하도록 분리하며, PAPER 체결과 실제 LIVE 체결도 별도 근거로 관리한다.</p>
 
       <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">수익률 등급 아닌 E0~E5 증거 단계</h2>
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">전략 검증 여권은 원문 출처와 해시, 실행 규칙, 전략 ID·버전, 기관·종목·시간봉, 비용·위험 가정, 과거재생·OOS·PAPER·확인 체결 범위를 하나의 증거 묶음으로 연결한다. E0~E5는 수익률 점수가 아니라 <strong>어떤 근거가 확인됐는지를 나타내는 단계</strong>다. E0는 구조 확인을 거친 공개 시작점이며 검증 완료, 권리 보증 또는 수익성을 뜻하지 않는다.</p>
       <ul class="list-disc pl-6 text-lg text-gray-700 mb-8 space-y-3 leading-relaxed"><li>전략 원문과 이용자가 확정한 보완 답변을 별도 근거로 보존</li><li>전략이 변경되면 새 버전으로 관리하고 기존 성과를 자동 승계하지 않음</li><li>개인 로컬 PAPER 기록을 공개 순위 근거로 자동 사용하지 않음</li><li>과거 성과, PAPER 진행, LIVE 권한과 계좌 위험을 각각 분리해 판단</li></ul>
 
-      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">무료 공개 전략 허브 운영</h2>
+      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">무료 공개 전략 허브에서 시작할 때</h2>
       <p class="text-lg text-gray-700 mb-6 leading-relaxed"><a href="https://daltrading.net/strategies" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">NoahAI 검증 전략 허브</a>는 현재 무료 공개 베타로 운영된다. 제작자가 <code>.noahstrategy</code> 패키지를 제출하면 시스템이 자산·기관·시장국면·검증 대상과 실행 구조를 확인하고, 제작자의 권리 자기선언을 거쳐 E0로 공개할 수 있다.</p>
       <p class="text-lg text-gray-700 mb-8 leading-relaxed">이용자가 내려받은 전략은 비활성 상태로 가져오며, 원문과 실행 규칙을 확인한 뒤 자신의 거래소·증권사, 종목, 비용과 위험 조건에서 재검증하고 PAPER와 승인을 거쳐야 한다. 허브는 자기신고 수익률이나 다운로드 수 대신 출처 추적성, 표본, 재현성, OOS·워크포워드, 비용·위험과 확인 가능한 실행 근거를 중심으로 전략을 보여준다.</p>
 
-      <p class="text-lg text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-5">노아에이아이랩스는 “전략 시장에서 필요한 것은 가장 높은 숫자를 보여주는 화면이 아니라, 같은 전략 버전이 어떤 조건에서 어떻게 검증됐는지 이용자가 다시 확인할 수 있는 구조”라며 “투자금이 없는 예비 이용자와 전략 제작자 모두가 검증 근거를 쌓을 수 있는 생태계를 확대하겠다”고 밝혔다.</p>
-
-      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">향후 계획</h2>
-      <p class="text-lg text-gray-700 mb-8 leading-relaxed">현재 서비스는 무료 공개 허브 단계다. 유료 전략 판매, 결제·환불·분쟁 처리와 제작자 정산을 포함한 마켓플레이스는 후속 사업 단계로 검토하며 현재 제공 기능과 구분한다. 전략 제작과 검증 흐름은 <a href="https://noahailabs.com/ko/product/strategy-studio" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">NoahAI 전략 스튜디오</a>에서 확인할 수 있다.</p>
-
-      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">노아에이아이랩스 소개</h2>
-      <p class="text-lg text-gray-700 mb-6 leading-relaxed">노아에이아이랩스는 투자 아이디어의 구조화, 전략 버전 관리, 과거재생, PAPER 검증과 사용자 승인형 운용을 연결하는 금융 AI 소프트웨어 NoahAI를 개발한다.</p>
+      <div class="my-10 rounded-2xl border border-primary-200 bg-primary-50 p-6"><p class="font-bold text-primary-950 mb-2">현재 제공 범위</p><p class="text-primary-900 leading-relaxed">전략 허브는 무료 공개 베타다. 유료 판매, 결제·환불·분쟁 처리와 제작자 정산은 향후 검토 단계이며 현재 제공 기능이 아니다. 전략 제작과 PAPER 흐름은 <a href="https://noahailabs.com/ko/product/strategy-studio" target="_blank" rel="noopener noreferrer" class="font-bold underline">NoahAI 전략 스튜디오</a>에서 확인할 수 있다.</p></div>
       <p class="text-gray-600 text-sm border-t border-gray-200 pt-6 leading-relaxed">※ PAPER·과거재생·검증 단계는 실제 수익이나 미래 성과를 보장하지 않습니다. 전략에는 원금 손실 위험이 있으며 LIVE 적용은 이용자의 별도 판단과 승인 대상입니다.</p>
     `,
     i18n: {
       en: {
-        title: 'NoahAI Labs Unveils Capital-Free PAPER Validation, Strategy Passport and Free Strategy Hub',
-        excerpt: 'NoahAI connects virtual PAPER evidence to versioned strategy passports and a free public hub, allowing users to revalidate a strategy in their own venue and cost environment.',
-        content: `<p class="text-sm text-gray-500 mb-6">[Press release · Seoul · September 26, 2026]</p><p class="text-xl font-bold text-gray-900 mb-3 leading-relaxed">— Virtual-capital PAPER testing without funding a live account</p><p class="text-xl font-bold text-gray-900 mb-8 leading-relaxed">— E0–E5 evidence stages connect versioned strategy records to a free public hub</p><p class="text-lg text-gray-800 mb-6 leading-relaxed"><strong>SEOUL — NoahAI Labs announced</strong> a strategy distribution framework that links capital-free PAPER testing with versioned Strategy Passports and the free NoahAI Verified Strategy Hub.</p><figure class="mb-10 overflow-hidden rounded-2xl border border-slate-200 bg-slate-950"><img src="/images/news/news-101-noahai-paper-passport-hub-og.jpg" alt="NoahAI PAPER, strategy passport and free hub" width="1200" height="630" class="h-auto w-full" /><figcaption class="px-5 py-3 text-sm text-slate-300">Source, rules, version, virtual execution and evidence remain connected without treating a screenshot as proof.</figcaption></figure><h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">Versioned evidence before live use</h2><p class="text-lg text-gray-700 mb-6 leading-relaxed">PAPER uses virtual capital, positions and fills while preserving venue, symbol, cost, risk, strategy key and version evidence. The E0–E5 passport ladder describes what evidence exists; it is not a profitability grade. E0 is a publication starting point, not verified performance or rights.</p><p class="text-lg text-gray-700 mb-6 leading-relaxed">The <a href="https://daltrading.net/strategies" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">NoahAI Verified Strategy Hub</a> is currently a free public beta. Downloaded packages enter inactive and require review, revalidation, PAPER and user approval. Paid licensing, refunds, disputes and creator settlement remain future marketplace work.</p><p class="text-lg text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-5">“A strategy market needs reproducible evidence for the same version, not just the highest screenshot,” NoahAI Labs said.</p><p class="text-gray-600 text-sm border-t border-gray-200 pt-6 leading-relaxed">PAPER, replay and evidence levels do not guarantee live or future performance. Strategies can lose capital.</p>`,
+        title: 'What Is Automated-Trading PAPER? A Practical NoahAI Guide to Testing Without Investment Capital',
+        excerpt: 'Learn the difference between historical replay, PAPER and LIVE, then review versioned evidence through Strategy Passport before deciding whether to use real capital.',
+        content: `<p class="text-sm text-gray-500 mb-6">[User guide · September 26, 2026]</p><p class="text-lg text-gray-800 mb-6 leading-relaxed"><strong>PAPER trading observes a strategy with virtual capital before any live funding or order permission.</strong> It is a safety step for checking rules, costs, risk and decision records—not proof of future profit.</p><figure class="mb-10 overflow-hidden rounded-2xl border border-slate-200 bg-slate-950"><img src="/images/news/news-101-noahai-paper-passport-hub-og.jpg" alt="NoahAI PAPER, strategy passport and free hub" width="1200" height="630" class="h-auto w-full" /><figcaption class="px-5 py-3 text-sm text-slate-300">Source, rules, version, virtual execution and evidence stay connected without treating a screenshot as proof.</figcaption></figure><h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">Replay, PAPER and LIVE are different stages</h2><p class="text-lg text-gray-700 mb-6 leading-relaxed">Historical replay checks rules on a selected past period. PAPER observes virtual positions and fills in current market conditions without using the live balance or order API. LIVE is a separate stage that requires credentials, risk limits and an explicit user start.</p><h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">A five-step workflow</h2><ol class="list-decimal pl-6 text-lg text-gray-700 mb-8 space-y-3 leading-relaxed"><li>Choose a baseline example or create a strategy from an idea, Pine source or document.</li><li>Confirm executable entry, exit, market, timeframe, cost and risk rules.</li><li>Use historical replay when a past-period consistency check is needed.</li><li>Run PAPER with virtual capital and review signals, positions, fills and block reasons.</li><li>Read the Strategy Passport for that exact version before making a separate LIVE decision.</li></ol><h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">Evidence levels, not return grades</h2><p class="text-lg text-gray-700 mb-6 leading-relaxed">The E0–E5 passport ladder describes what evidence exists; it is not a profitability grade. E0 is a publication starting point, not verified performance or rights. The <a href="https://daltrading.net/strategies" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">NoahAI Verified Strategy Hub</a> is currently a free public beta. Downloaded packages enter inactive and require review, revalidation, PAPER and user approval. Paid licensing, refunds, disputes and creator settlement remain future work.</p><p class="text-gray-600 text-sm border-t border-gray-200 pt-6 leading-relaxed">PAPER, replay and evidence levels do not guarantee live or future performance. Strategies can lose capital.</p>`,
         faq: [
           { question: 'Can I validate a strategy without investment capital?', answer: 'Yes. NoahAI PAPER uses separate virtual capital, positions and fills.' },
           { question: 'Are E0–E5 return grades?', answer: 'No. They describe the level and provenance of evidence, not guaranteed profitability.' },
@@ -382,7 +373,7 @@ export const newsArticles: NewsArticle[] = [
   {
     id: 100,
     title:
-      '워뇨띠 매매법을 그대로 복제할 수 있을까…공개 자료를 ‘검증 가능한 전략 가설’로 읽는 법',
+      '유명 트레이더의 매매법을 그대로 복제할 수 있을까…공개 자료를 ‘검증 가능한 전략 가설’로 읽는 법',
     excerpt:
       '유명 트레이더의 공개 인터뷰에서 확인할 수 있는 것과 알 수 없는 것을 구분하고, 성과 신화가 아닌 검증 가능한 연구 대상으로 읽는 기준을 살펴본다.',
     category: 'insight',
@@ -428,10 +419,10 @@ export const newsArticles: NewsArticle[] = [
     mentions: [
       {
         type: 'DefinedTerm',
-        name: '워뇨띠 공개 매매 원칙',
+        name: 'AOA 공개 매매 원칙',
         alternateName: ['AOA trading principles', '워뇨띠 매매법'],
         url: 'https://www.bitmex.com/blog/whale-trader-talks-aoa',
-        description: 'BitMEX가 2025년 공개한 AOA 인터뷰에 담긴 위험관리와 시장 상황별 판단 원칙',
+        description: 'BitMEX가 2025년 공개한 AOA 인터뷰에 담긴 위험관리와 시장 상황별 판단 원칙. 이 글은 AOA와 워뇨띠의 동일성을 단정하지 않는다.',
       },
       {
         type: 'DefinedTerm',
@@ -477,9 +468,10 @@ export const newsArticles: NewsArticle[] = [
     ],
     content: `
       <p class="text-sm text-gray-500 mb-6">[인사이트 · 2026-09-26 · 드림에이아이랩 편집팀]</p>
+      <div class="mb-8 rounded-2xl border border-amber-200 bg-amber-50 p-6"><p class="font-bold text-amber-950 mb-2">편집자 고지</p><p class="text-amber-900 leading-relaxed">드림에이아이랩과 노아에이아이랩스는 별도 조직이며, 이 글은 드림에이아이랩이 노아AI 기술 문서와 공개 자료를 검토해 작성한 편집 인사이트다. NoahAI는 관계 서비스 사례로 소개되며 독립적인 제품 비교평가가 아니다. 국내에서 ‘워뇨띠 매매법’으로 검색되는 자료 가운데 이 글이 직접 확인한 1차 출처는 BitMEX의 AOA 인터뷰이며, 이 글은 AOA와 워뇨띠라는 별칭의 동일성을 독립적으로 단정하지 않는다.</p></div>
       <p class="text-xl font-semibold text-gray-800 mb-8 leading-relaxed">유명 트레이더의 공개 자료를 전략으로 옮길 때 중요한 것은 ‘얼마나 닮았는가’가 아니라, 원문에서 확인한 사실과 새로 만든 가설을 얼마나 정직하게 구분하는가다.</p>
 
-      <p class="text-lg text-gray-800 mb-6 leading-relaxed">“워뇨띠 매매법을 자동매매로 구현할 수 있을까?”라는 질문에는 성공 신화와 비밀 전략에 대한 기대가 함께 들어 있다. 하지만 공개 인터뷰와 거래 기록으로 확인할 수 있는 것은 생각보다 제한적이다. 결과가 남아 있다고 해서 진입 당시 무엇을 보고 판단했는지, 같은 상황에서 언제 예외를 적용했는지까지 알 수 있는 것은 아니다.</p>
+      <p class="text-lg text-gray-800 mb-6 leading-relaxed">‘유명 트레이더의 매매법을 자동매매로 구현할 수 있을까?’라는 질문에는 성공 신화와 비밀 전략에 대한 기대가 함께 들어 있다. 하지만 공개 인터뷰와 거래 기록으로 확인할 수 있는 것은 생각보다 제한적이다. 결과가 남아 있다고 해서 진입 당시 무엇을 보고 판단했는지, 같은 상황에서 언제 예외를 적용했는지까지 알 수 있는 것은 아니다.</p>
       <p class="text-lg text-gray-700 mb-8 leading-relaxed">따라서 이 질문에 대한 책임 있는 답은 “그대로 복제할 수 있다”가 아니다. <strong>공개된 원칙은 원칙으로, 해석은 해석으로, 추가한 조건은 연구 가설로 분리한 뒤 각각 검증할 수 있다</strong>는 쪽에 가깝다.</p>
 
       <figure class="mb-10 overflow-hidden rounded-2xl border border-slate-200 bg-slate-950"><img src="/images/news/news-100-noahai-public-strategy-research-og.jpg" alt="유명 트레이더 공개 인터뷰와 자료를 출처가 남는 전략 연구 가설 및 PAPER 검증으로 변환하는 과정" width="1200" height="630" class="h-auto w-full" loading="eager" decoding="async" /><figcaption class="px-5 py-3 text-sm text-slate-300">공개된 사실, 해석이 필요한 조건, 시스템이 추가한 연구 가설이 한 덩어리로 섞이지 않아야 한다.</figcaption></figure>
@@ -489,11 +481,11 @@ export const newsArticles: NewsArticle[] = [
       <p class="text-lg text-gray-700 mb-8 leading-relaxed">이 원칙들은 분명 중요한 자료지만, 그 자체로는 프로그램이 실행할 수 있는 완성된 전략이 아니다. “시장 상황이 좋다”는 말을 코드로 옮기려면 어떤 데이터와 시간봉을 볼지, 어느 값을 경계로 삼을지, 예외 상황을 어떻게 처리할지 정해야 한다. 바로 이 순간부터 원문이 아니라 설계자의 해석이 개입한다.</p>
 
       <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">‘유명인 전략’이라는 이름이 가설을 사실처럼 보이게 만든다</h2>
-      <p class="text-lg text-gray-700 mb-6 leading-relaxed">문제는 해석이 들어가는 것 자체가 아니다. 해석을 숨긴 채 당사자의 실제 전략인 것처럼 보이게 만드는 데 있다. 공개 자료에 없는 EMA·RSI·캔들 조건을 추가하면서 이를 “워뇨띠 전략”이라고 부르면, 이용자는 공개된 원칙과 제작자가 만든 가설을 구분하기 어렵다. 특정 구간의 성과가 좋게 나왔을 때는 그 결과마저 원래 트레이더의 실력과 연결해 받아들일 수 있다.</p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">문제는 해석이 들어가는 것 자체가 아니다. 해석을 숨긴 채 당사자의 실제 전략인 것처럼 보이게 만드는 데 있다. 공개 자료에 없는 EMA·RSI·캔들 조건을 추가하면서 이를 유명 트레이더의 공식 전략이라고 부르면, 이용자는 공개된 원칙과 제작자가 만든 가설을 구분하기 어렵다. 특정 구간의 성과가 좋게 나왔을 때는 그 결과마저 원래 트레이더의 실력과 연결해 받아들일 수 있다.</p>
       <p class="text-lg text-gray-700 mb-8 leading-relaxed">검증 가능한 접근은 반대 방향으로 간다. 원문 파일과 인터뷰의 출처를 보존하고, 직접 확인되는 문장을 구조화하며, 원문에 없는 수치와 조건에는 <strong>연구 가설</strong>이라는 이름표를 붙인다. 모호한 부분은 AI가 자연스럽게 채운 것처럼 감추지 않고 사용자에게 되묻거나 실행 대상에서 제외한다.</p>
 
       <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">복제의 문제가 아니라 검증 단위의 문제</h2>
-      <p class="text-lg text-gray-700 mb-6 leading-relaxed">NoahAI의 공개자료 연구 패키지는 이 구분을 실제 시스템에서 시험한 사례다. 원본 PDF와 데이터 파일의 해시를 보존하고, 공개 원칙에서 직접 나오지 않은 기술 조건을 <code>research_hypothesis</code>로 표시한 미승인 연구 패키지를 만들었다. 이 패키지는 당사자의 승인이나 제휴, 공식 전략, 과거 성과를 계승하지 않으며 사용자 계정이나 LIVE 운용에 자동 등록되지 않는다.</p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">NoahAI의 공개자료 연구 패키지는 이 구분을 내부적으로 시험한 사례다. 원본 자료와 데이터 파일의 해시를 보존하고, 공개 원칙에서 직접 나오지 않은 기술 조건을 <code>research_hypothesis</code>로 표시한 <strong>내부 소스 후보·미승인 연구 패키지</strong>를 만들었다. 이는 공개 설치본의 사용자 기능이나 외부 시장 성과로 검증된 결과가 아니다. 당사자의 승인·제휴·공식 전략 또는 과거 성과를 계승하지 않으며 사용자 계정이나 LIVE 운용에 자동 등록되지 않는다.</p>
       <p class="text-lg text-gray-700 mb-8 leading-relaxed">여기서 중요한 것은 NoahAI라는 제품명보다 검증 단위다. 전략의 이름이 아니라 <strong>어느 원문에서 출발했고, 누가 어떤 조건을 추가했으며, 어떤 버전이 어느 시장과 비용 조건에서 시험됐는가</strong>가 남아야 한다. 그래야 결과가 좋거나 나쁠 때 무엇을 평가해야 하는지 알 수 있다.</p>
 
       <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">TradingView와 Pine 전략에도 같은 질문이 필요하다</h2>
@@ -501,13 +493,13 @@ export const newsArticles: NewsArticle[] = [
       <p class="text-lg text-gray-700 mb-8 leading-relaxed">결국 공개 인터뷰, 투자 서적, 유튜브 강의, Pine 코드와 개인 매매 노트는 모두 같은 질문 앞에 놓인다. 무엇이 원문이고 무엇이 해석인가. 어떤 조건이 실행 가능하며 어떤 부분은 아직 가설인가. 어느 결과가 실제 체결이고 어느 결과가 PAPER 또는 과거 시뮬레이션인가.</p>
 
       <p class="text-lg text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-5">대가의 이름을 붙이는 것은 쉽다. 어려운 일은 그 이름을 지운 뒤에도 전략의 출처·가정·위험·검증 결과가 스스로 설명되게 만드는 것이다. AI 자동매매 시장의 신뢰는 바로 그 지점에서 시작돼야 한다.</p>
-      <p class="text-gray-600 text-sm border-t border-gray-200 pt-6 leading-relaxed">※ 이 글은 공개 자료를 분석한 편집 인사이트이며 AOA·워뇨띠와의 제휴·승인·공식 전략을 의미하지 않습니다. 특정 전략과 PAPER·과거 결과는 미래 수익을 보장하지 않습니다.</p>
+      <p class="text-gray-600 text-sm border-t border-gray-200 pt-6 leading-relaxed">※ 이 글은 공개 자료를 분석한 편집 인사이트다. 드림에이아이랩과 노아에이아이랩스는 별도 조직이며, NoahAI 사례는 관계 서비스의 내부 연구 후보를 설명한 것으로 독립 비교평가나 공개 기능 검증이 아니다. AOA 또는 워뇨띠와의 제휴·승인·공식 전략을 의미하지 않으며 두 이름의 동일성도 단정하지 않는다. 특정 전략과 PAPER·과거 결과는 미래 수익을 보장하지 않는다.</p>
     `,
     i18n: {
       en: {
         title: 'Can a Famous Trader\'s Method Be Copied? How to Read Public Material as Testable Strategy Hypotheses',
         excerpt: 'NoahAI separates sourced principles from added research hypotheses, preserving provenance and requiring user review and PAPER validation instead of implying copied performance.',
-        content: `<p class="text-sm text-gray-500 mb-6">[Strategy research insight · September 26, 2026]</p><p class="text-lg text-gray-800 mb-6 leading-relaxed">A public interview cannot reproduce a trader's complete discretionary process or historical performance. It can, however, become a source-traceable research package in which confirmed principles and added hypotheses are clearly separated.</p><figure class="mb-10 overflow-hidden rounded-2xl border border-slate-200 bg-slate-950"><img src="/images/news/news-100-noahai-public-strategy-research-og.jpg" alt="NoahAI transforms public trading material into source-traceable hypotheses and PAPER validation" width="1200" height="630" class="h-auto w-full" /><figcaption class="px-5 py-3 text-sm text-slate-300">Sourced principles, ambiguous conditions and system-added research hypotheses remain distinct.</figcaption></figure><p class="text-lg text-gray-700 mb-6 leading-relaxed">The <a href="https://www.bitmex.com/blog/whale-trader-talks-aoa" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">2025 BitMEX AOA interview</a> emphasizes risk management, market-dependent entries, avoiding FOMO and portfolio-wide leverage discipline. It does not disclose a complete executable rule set.</p><p class="text-lg text-gray-700 mb-6 leading-relaxed">NoahAI preserves source hashes, extracts explicit principles, labels added EMA, RSI, candle or numeric conditions as research hypotheses, asks about ambiguity and blocks unsupported execution. Generated packages remain unapproved research: they do not imply affiliation, endorsement, copied performance or proven current-market profitability.</p><p class="text-gray-600 text-sm border-t border-gray-200 pt-6 leading-relaxed">This is independent research based on public material and does not imply an affiliation with or endorsement by AOA. No strategy or simulated result guarantees future returns.</p>`,
+        content: `<p class="text-sm text-gray-500 mb-6">[Strategy research insight · September 26, 2026]</p><div class="mb-8 rounded-2xl border border-amber-200 bg-amber-50 p-6"><p class="font-bold text-amber-950 mb-2">Editorial disclosure</p><p class="text-amber-900 leading-relaxed">Dream AI Lab and NoahAI Labs are separate organizations. Dream AI Lab prepared this editorial insight from public material and NoahAI technical documents; NoahAI is a related-service case study, not an independent product comparison. The primary source reviewed here is BitMEX's AOA interview. This article does not independently establish that AOA and the Korean alias often searched with this topic refer to the same person.</p></div><p class="text-lg text-gray-800 mb-6 leading-relaxed">A public interview cannot reproduce a trader's complete discretionary process or historical performance. It can, however, become a source-traceable research package in which confirmed principles and added hypotheses are clearly separated.</p><figure class="mb-10 overflow-hidden rounded-2xl border border-slate-200 bg-slate-950"><img src="/images/news/news-100-noahai-public-strategy-research-og.jpg" alt="NoahAI transforms public trading material into source-traceable hypotheses and PAPER validation" width="1200" height="630" class="h-auto w-full" /><figcaption class="px-5 py-3 text-sm text-slate-300">Sourced principles, ambiguous conditions and system-added research hypotheses remain distinct.</figcaption></figure><p class="text-lg text-gray-700 mb-6 leading-relaxed">The <a href="https://www.bitmex.com/blog/whale-trader-talks-aoa" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">2025 BitMEX AOA interview</a> emphasizes risk management, market-dependent entries, avoiding FOMO and portfolio-wide leverage discipline. It does not disclose a complete executable rule set.</p><p class="text-lg text-gray-700 mb-6 leading-relaxed">In an internal source candidate, NoahAI preserves source hashes, extracts explicit principles and labels added EMA, RSI, candle or numeric conditions as research hypotheses. This unapproved research package is not a verified public-client capability or market result. It does not imply affiliation, endorsement, copied performance or proven current-market profitability.</p><p class="text-gray-600 text-sm border-t border-gray-200 pt-6 leading-relaxed">Dream AI Lab and NoahAI Labs are separate organizations. This related-service case study is not an independent comparison. It does not imply affiliation with AOA, establish alias identity or guarantee future returns.</p>`,
         faq: [
           { question: 'Does NoahAI copy AOA\'s actual strategy?', answer: 'No. It structures principles visible in public material and labels added conditions as research hypotheses.' },
           { question: 'Is this an official partnership or endorsed strategy?', answer: 'No. It is independent research based on public material.' },
@@ -519,9 +511,9 @@ export const newsArticles: NewsArticle[] = [
   {
     id: 99,
     title:
-      '국제결혼 업체 입점부터 문의·정산까지…글로벌커플케어, 글로벌 파트너 운영 플랫폼 고도화',
+      '드림에이아이랩, 글로벌커플케어 파트너 운영체계 고도화…입점·문의·수수료·정산 원장 연결',
     excerpt:
-      '검색 가능한 업체 홈페이지와 국가별 서비스, 문의 CRM, 성과형 공정수수료, 단계별 정산 원장, Telegram·Slack·Discord·LINE 업무 알림을 하나의 파트너 운영 흐름으로 연결했다.',
+      '검색 가능한 파트너 페이지와 문의 CRM, 등급별 수수료, 거래 시점 정산 원장, 외부 메신저 알림 설정을 연결했다. 실제 PG·은행 지급과 자동 알림은 파트너별 활성화 조건을 거친다.',
     category: 'press',
     date: '2026-09-26',
     modifiedDate: '2026-09-26',
@@ -575,7 +567,7 @@ export const newsArticles: NewsArticle[] = [
       },
       {
         type: 'DefinedTerm',
-        name: '공정수수료 성장제',
+        name: '등급별 파트너 수수료',
         alternateName: ['성과형 수수료', '파트너 등급 수수료'],
         url: 'https://globalcouplecare.com/partners',
         description:
@@ -641,134 +633,37 @@ export const newsArticles: NewsArticle[] = [
       },
     ],
     content: `
-      <p class="text-sm text-gray-500 mb-6">[보도자료 · 2026-09-26]</p>
-      <p class="text-xl font-semibold text-gray-800 mb-3 leading-relaxed">— 공개 업체 홈페이지·국가별 서비스·문의 CRM을 연결해 카카오·밴드·유튜브 중심 영업을 검색 가능한 사업 자산으로 전환</p>
-      <p class="text-xl font-semibold text-gray-800 mb-3 leading-relaxed">— Standard 5.5%부터 Platinum 3.5%까지 성과형 공정수수료와 거래 시점 요율·정산액 원장 구축</p>
-      <p class="text-xl font-semibold text-gray-800 mb-8 leading-relaxed">— 문의·매칭·계약·결제·정산 업무를 Telegram·Slack·Discord·LINE과 연결하는 개인정보 보호형 알림 구조 배포</p>
+      <p class="text-sm text-gray-500 mb-6">[보도자료 · 서울 · 2026-09-26]</p>
+      <p class="text-xl font-semibold text-gray-800 mb-3 leading-relaxed">— 검색 가능한 파트너 페이지와 국가별 서비스, 문의 CRM을 하나의 운영 흐름으로 연결</p>
+      <p class="text-xl font-semibold text-gray-800 mb-3 leading-relaxed">— Standard 5.5%~Platinum 3.5% 등급별 요율과 거래 시점 수수료·정산 예정액 원장 적용</p>
+      <p class="text-xl font-semibold text-gray-800 mb-8 leading-relaxed">— Telegram·Slack·Discord·LINE 알림 설정 구조 배포, 파트너별 실제 수신 확인 후 자동 알림 활성화</p>
 
-      <figure class="mb-10 overflow-hidden rounded-2xl border border-slate-200 bg-slate-950">
-        <img src="/images/news/news-99-globalcouplecare-partner-platform-og.jpg" alt="국제결혼 업체와 해외 현지 파트너, 크리에이터, 운영자가 글로벌커플케어에서 검색 유입부터 문의와 정산까지 연결하는 구조" width="1200" height="630" class="h-auto w-full" loading="eager" decoding="async" />
-        <figcaption class="px-5 py-3 text-sm leading-relaxed text-slate-300">공개 페이지에서 시작된 검색 유입을 문의·후속 일정·계약·정산·업무 알림으로 이어 주는 글로벌커플케어 파트너 운영 구조.</figcaption>
-      </figure>
+      <p class="text-lg text-gray-800 mb-8 leading-relaxed"><strong>서울 — 드림에이아이랩은</strong> 국제결혼 정보·업체 비교·정착 플랫폼 글로벌커플케어(Global Couple Care, GCC)의 파트너 운영체계를 고도화했다고 26일 밝혔다. 공개 파트너 페이지에서 시작된 문의를 상담 상태, 계약 기록, 등급별 수수료와 거래 시점 정산 원장까지 연결하고, 운영 사건을 외부 메신저 알림 설정과 연계했다.</p>
 
-      <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-5">
-        드림에이아이랩이 운영하는 국제결혼 정보·업체 비교·정착 플랫폼 <strong>글로벌커플케어(Global Couple Care, GCC)</strong>가 국제결혼 업체와 글로벌 파트너의 공개 홍보부터 문의 관리, 거래 기록, 정산과 외부 메신저 알림까지 잇는 파트너 운영 플랫폼으로 고도화됐다. 이번 업데이트의 핵심은 기능을 하나 더 추가하는 데 있지 않다. 업체가 외부 메신저와 SNS에 흩어 두었던 영업과 운영 기록을 <strong>검색 가능한 자산과 확인 가능한 업무 흐름</strong>으로 바꾸는 데 있다.
-      </p>
+      <figure class="mb-10 overflow-hidden rounded-2xl border border-slate-200 bg-slate-950"><img src="/images/news/news-99-globalcouplecare-partner-platform-og.jpg" alt="국제결혼 업체와 글로벌 파트너의 공개 페이지 문의 수수료 정산 원장 알림 설정 구조" width="1200" height="630" class="h-auto w-full" loading="eager" decoding="async" /><figcaption class="px-5 py-3 text-sm leading-relaxed text-slate-300">글로벌커플케어는 검색 가능한 공개 정보와 문의·권한·거래 기록을 하나의 파트너 운영 흐름으로 연결한다.</figcaption></figure>
 
-      <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-5">국제결혼 업체 영업, 왜 공개 검색 자산이 필요한가</h2>
-      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        국제결혼 업체의 실제 영업은 카카오톡, 밴드, 유튜브, 오픈채팅과 소개 네트워크에서 시작되는 경우가 많다. 이런 채널은 빠르게 사람을 만날 수 있지만, 운영 국가와 서비스 범위, 비용·환불 기준, 업체의 확인 정보가 한 화면에 남기 어렵다. 문의가 어느 콘텐츠와 국가 서비스에서 시작됐는지 추적하기도 어렵고 담당자가 바뀌면 상담 맥락이 단절되기 쉽다.
-      </p>
-      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        글로벌커플케어는 업체마다 검색 가능한 고유 공개 페이지를 제공하고, 운영 국가·도시와 서비스 단위, 대표 영상, 공개 동의가 확인된 프로필, FAQ와 문의 동선을 한곳에 모은다. 유튜브 설명란이나 SNS 프로필에는 이 주소를 연결하고, 사용자는 국가별 정보와 국제결혼 업체 비교 페이지에서 같은 업체를 다시 발견할 수 있다. 이는 새 홈페이지를 다시 만드는 작업이 아니라 <strong>업체가 이미 가진 채널을 검색·신뢰·상담 전환 구조로 연결하는 방식</strong>이다.
-      </p>
+      <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-5">파트너 공개 정보부터 거래 기록까지 연결</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">국제결혼 업체와 글로벌 파트너는 운영 국가·도시, 서비스 범위, 대표 콘텐츠, FAQ와 문의 경로를 공개 페이지에 정리할 수 있다. 문의가 접수되면 출처, 담당자, 후속 일정과 상담 상태를 이어서 관리한다. 파트너 유형과 권한은 국내·해외 업체, 크리에이터, 커뮤니티 운영자, 현지 지원 파트너 등 실제 수행 업무에 따라 분리하며, 필요한 인허가와 계약 책임은 각 제공자에게 있다.</p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">상업 등급은 Standard, Verified, Silver, Gold, Platinum으로 구분한다. 공개 정상요율은 5.5%에서 3.5%이며 창립 파트너는 2027년 9월 30일까지 0.5%p 할인을 적용받는다. 거래가 만들어질 때 적용 등급·요율·플랫폼 수수료·정산 예정액과 정책 버전을 원장에 남겨 이후 등급 변경과 분리한다.</p>
 
-      <div class="my-10 grid gap-4 md:grid-cols-2">
-        <div class="rounded-2xl border border-blue-200 bg-blue-50 p-6">
-          <p class="text-sm font-bold uppercase tracking-wider text-blue-700 mb-2">01 · Search</p>
-          <h3 class="text-xl font-bold text-blue-950 mb-3">검색 가능한 파트너 홈페이지</h3>
-          <p class="text-blue-950 leading-relaxed">업체명뿐 아니라 베트남·필리핀·일본 등 국가와 지역, 서비스 종류, 비용 확인 질문에서 발견되는 공개 자산을 만든다.</p>
-        </div>
-        <div class="rounded-2xl border border-violet-200 bg-violet-50 p-6">
-          <p class="text-sm font-bold uppercase tracking-wider text-violet-700 mb-2">02 · Inquiry</p>
-          <h3 class="text-xl font-bold text-violet-950 mb-3">문의 출처와 후속 상담 기록</h3>
-          <p class="text-violet-950 leading-relaxed">어느 국가·서비스·콘텐츠에서 문의가 시작됐는지 남기고 일정, 담당자, 후속 상태를 이어서 관리한다.</p>
-        </div>
-        <div class="rounded-2xl border border-teal-200 bg-teal-50 p-6">
-          <p class="text-sm font-bold uppercase tracking-wider text-teal-700 mb-2">03 · Operations</p>
-          <h3 class="text-xl font-bold text-teal-950 mb-3">역할과 권한이 분리된 운영</h3>
-          <p class="text-teal-950 leading-relaxed">국내 업체·해외 업체·크리에이터·커뮤니티 운영자·현지 파트너가 실제 업무 범위에 맞는 권한으로 참여한다.</p>
-        </div>
-        <div class="rounded-2xl border border-amber-200 bg-amber-50 p-6">
-          <p class="text-sm font-bold uppercase tracking-wider text-amber-700 mb-2">04 · Ledger</p>
-          <h3 class="text-xl font-bold text-amber-950 mb-3">거래 시점 수수료와 정산 기록</h3>
-          <p class="text-amber-950 leading-relaxed">거래가 만들어질 때 적용 등급·요율·플랫폼 수수료·업체 정산액과 정책 버전을 확정해 이후 변경과 분리한다.</p>
-        </div>
-      </div>
+      <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-5">외부 메신저 알림은 실제 수신 확인 후 활성화</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">문의·채팅·계약·결제·정산 등 운영 사건을 Telegram Bot API, Slack Incoming Webhook, Discord Webhook, LINE Messaging API와 연결할 수 있는 설정·전송 대기열·관리자 모니터링 구조를 배포했다. 자동 알림은 설정 저장만으로 켜지지 않는다. 각 파트너가 공식 토큰 또는 Webhook을 등록하고 <strong>저장 → 테스트 발송 → 실제 수신 확인 → 자동 알림 활성화</strong> 절차를 마쳐야 한다.</p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">외부 메시지에는 고객 이름, 연락처, 문의 본문과 계약 내용을 싣지 않고 업무 종류와 보안 로그인 경로만 전달하도록 설계했다. 카카오 알림톡은 승인 템플릿과 발송 사업자 계약이 필요한 별도 연동 범위로 현재 지원 채널에 포함하지 않는다.</p>
 
-      <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-5">업체만이 아니라 크리에이터·커뮤니티·현지 파트너까지</h2>
-      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        글로벌커플케어의 파트너 구조는 국제결혼중개업체 한 유형에만 고정되지 않는다. 국내 업체와 해외 현지 업체, 크리에이터, 커뮤니티 운영자, 해외 거주자와 현지 지원 파트너가 소개·콘텐츠·상담·통역·일정·생활 지원 등 자신이 실제로 수행할 수 있는 활동을 제안할 수 있다. 필요한 인허가와 책임은 활동 종류와 국가에 따라 별도로 확인한다.
-      </p>
-      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        플랫폼은 파트너 유형과 상업 등급을 분리한다. <strong>파트너 유형</strong>은 어떤 업무를 할 수 있는지를 정하고, <strong>Standard·Verified·Silver·Gold·Platinum 등급</strong>은 검증·정보 충실도·문의 응답·완료 거래·고객평가·분쟁 이력 등 운영 품질을 반영한다. 높은 등급이라고 법적 인허가가 자동 부여되거나 모든 업무 권한이 열리는 구조가 아니다.
-      </p>
+      <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-5">현재 운영 범위와 활성화 조건</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">파트너 페이지, 문의 관리, 권한, 등급별 수수료 정책, 거래 시점 원장과 단계별 지급 증빙 구조는 배포됐다. 다만 <strong>현재 운영 환경의 결제 모드는 샌드박스이며 실제 PG 결제와 은행 지급은 활성화되지 않았다.</strong> 실제 결제·외부 송금·에스크로는 PG·금융기관 계약, 심사와 운영 설정을 마친 범위에서만 별도로 제공된다. 메신저 자동 알림도 파트너별 실제 수신 확인 전에는 활성 기능으로 간주하지 않는다.</p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">공개 파트너 운영 인프라는 배포됐으며 일반 공개 파트너 등록은 초기 모집 단계다. 글로벌커플케어는 국제결혼 상대를 직접 선정·추천하거나 혼인을 알선하지 않는다. 독립 업체와 파트너가 공개한 정보의 비교와 문의, 계약·운영 기록을 연결하며 실제 중개·여행·행정·법률 서비스의 인허가와 책임은 해당 제공자에게 있다.</p>
 
-      <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-5">성과가 쌓일수록 낮아지는 공정수수료 성장제</h2>
-      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        공개된 정상요율은 Standard 5.5%, Verified 5.0%, Silver 4.5%, Gold 4.0%, Platinum 3.5%다. 창립 파트너는 2027년 9월 30일까지 각 등급에서 0.5%p 할인을 적용받는다. 등급 변경은 다음 신규 거래부터 반영되며, 이미 생성된 거래의 확정 요율은 바뀌지 않는다. 기존 계약 당사자에게 새로운 정책을 소급 적용하지 않고 동의 이후 신규 거래부터 적용하는 원칙도 함께 둔다.
-      </p>
-      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        이 구조는 플랫폼 비용을 소비자에게 &lsquo;GCC 추가부담금&rsquo;이라는 별도 항목으로 전가하기 위한 것이 아니다. 업체가 정한 실제 서비스 가격에서 기본 금액, 포함·별도 비용, 환불 조건과 단계별 지급 조건을 같은 형식으로 공개해 비교 가능성을 높이고, 좋은 운영 이력이 쌓인 파트너의 플랫폼 비용을 낮추는 방향이다. PG 비용·부가세·해외송금과 개별 계약 조건은 플랫폼 수수료와 구분해 거래 전에 표시한다.
-      </p>
-
-      <div class="my-10 overflow-hidden rounded-2xl border border-slate-200">
-        <div class="bg-slate-950 px-6 py-5 text-white">
-          <h3 class="text-xl font-bold">검색 유입에서 정산까지 이어지는 파트너 운영 흐름</h3>
-        </div>
-        <div class="grid md:grid-cols-6">
-          ${['공개 페이지', '회원 문의', '상담·일정', '계약·결제', '단계별 정산', '결과·복기']
-            .map(
-              (label, index) =>
-                `<div class="border-t border-slate-200 p-5 md:border-l md:border-t-0"><p class="text-xs font-bold text-primary-700 mb-2">0${index + 1}</p><p class="font-bold text-slate-900">${label}</p></div>`
-            )
-            .join('')}
-        </div>
-      </div>
-
-      <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-5">문의가 와도 놓치지 않도록, 메신저 알림을 업무 사건과 연결</h2>
-      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        파트너 운영에서는 공개 페이지를 만드는 것만큼 새로운 문의에 제때 대응하는 일이 중요하다. 글로벌커플케어는 문의, 채팅, 매칭, 미팅, 계약, 결제, 정산, 여행·웨딩 예약, 지원 요청과 운영 문의가 발생했을 때 인앱 알림과 외부 메신저 전송을 연결하는 구조를 배포했다. 현재 설정 대상은 <strong>Telegram Bot API, Slack Incoming Webhook, Discord Webhook, LINE Messaging API</strong>다.
-      </p>
-      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        자동 알림은 설정값만 저장했다고 바로 켜지지 않는다. 각 업체가 자신의 공식 토큰 또는 Webhook을 등록하고 <strong>저장 → 테스트 발송 → 실제 수신 확인 → 자동 알림 활성화</strong> 순서를 통과해야 한다. 연결 정보를 바꾸면 검증 상태가 해제돼 다시 확인하도록 설계했다. 전송 실패는 영속 대기열에서 중복을 방지하고 재시도·실패 이력을 남겨 운영자가 원인을 확인할 수 있다.
-      </p>
-      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        외부 메신저에는 고객 이름, 연락처, 문의 본문, 계약 내용 같은 개인정보를 보내지 않는다. &lsquo;새로운 문의가 있습니다&rsquo;처럼 업무 종류와 로그인 링크만 전달하고 상세 내용은 권한이 확인된 플랫폼 화면에서 열도록 했다. 카카오 알림톡은 발신 프로필·승인 템플릿·발송 사업자 계약이 필요한 별도 연동 범위이므로 현재 지원 채널로 포함하지 않았다.
-      </p>
-
-      <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-5">운영 구조는 배포, 실제 결제·수신은 파트너별 활성화 게이트</h2>
-      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        이번 고도화에는 파트너 유형·등급·권한 관리, 거래 당시 수수료 스냅샷, 단계별 지급 증빙, 메신저 채널 설정과 전송 대기열, 관리자 모니터링 화면이 포함됐다. 다만 운영 구조의 배포와 개별 파트너의 실제 외부 서비스 이용은 구분해야 한다. 실제 PG 결제·은행 지급은 관련 계약과 운영 설정이 활성화된 경우에만 제공되며, 메신저 자동 알림도 각 업체의 실제 수신 테스트를 통과한 채널만 켤 수 있다.
-      </p>
-      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        글로벌커플케어는 국제결혼 상대를 직접 선정·추천하거나 혼인을 알선하는 사업자가 아니다. 독립 업체와 파트너가 공개한 정보를 사용자가 비교하고 문의하도록 돕고, 계약과 운영 기록을 더 투명하게 연결하는 플랫폼이다. 국제결혼중개업, 여행, 행정, 법률 등 인허가가 필요한 서비스는 실제 제공자의 자격과 책임 범위가 우선한다.
-      </p>
-
-      <blockquote class="my-10 rounded-2xl border-l-4 border-primary-600 bg-slate-50 p-6 text-lg leading-relaxed text-slate-800">
-        글로벌커플케어의 목표는 국제결혼 시장에 또 하나의 광고 목록을 만드는 것이 아니다. 정직하게 운영하는 업체와 실제 기여하는 글로벌 파트너가 검색에서 발견되고, 문의에 대응하며, 계약 조건과 결과를 기록해 장기적인 신뢰 자산을 쌓을 수 있는 사업 기반을 만드는 것이다.
-      </blockquote>
-
-      <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-5">어떤 파트너에게 필요한가</h2>
-      <ul class="mb-8 list-disc space-y-3 pl-6 text-lg leading-relaxed text-gray-700">
-        <li>자체 홈페이지가 약하거나 카카오톡·밴드·유튜브 중심으로 영업하는 국제결혼 업체</li>
-        <li>베트남·필리핀·태국·일본·중국·우즈베키스탄 등 국가별 서비스를 나눠 보여줘야 하는 업체</li>
-        <li>국제커플·정착·문화 정보를 만드는 크리에이터와 커뮤니티 운영자</li>
-        <li>통역·일정·생활·정착을 지원할 수 있는 해외 거주자와 현지 파트너</li>
-        <li>문의 출처, 상담 상태, 계약과 정산 이력을 한 흐름으로 관리하려는 운영 조직</li>
-      </ul>
-
-      <div class="my-10 rounded-2xl border border-primary-200 bg-primary-50 p-7">
-        <p class="text-sm font-bold uppercase tracking-wider text-primary-700 mb-2">Global partner onboarding</p>
-        <h2 class="text-2xl font-bold text-primary-950 mb-4">운영 가능한 국가 1~2개와 대표 서비스부터 시작할 수 있습니다</h2>
-        <p class="text-lg leading-relaxed text-primary-950 mb-6">처음부터 모든 국가와 상품을 올릴 필요는 없다. 공개 가능한 업체 소개, 실제 운영 국가, 대표 서비스와 상담 채널을 정리하면 공개 랜딩과 문의 동선을 먼저 만들 수 있다.</p>
-        <div class="flex flex-wrap gap-3">
-          <a href="https://globalcouplecare.com/agency/proposal" target="_blank" rel="noopener noreferrer" class="rounded-lg bg-primary-700 px-5 py-3 font-bold text-white">국제결혼 업체 입점 제안 보기 →</a>
-          <a href="https://globalcouplecare.com/partners" target="_blank" rel="noopener noreferrer" class="rounded-lg border border-primary-300 bg-white px-5 py-3 font-bold text-primary-800">글로벌 파트너 참여 방식 보기 →</a>
-          <a href="/services/marriage" class="rounded-lg border border-slate-300 bg-white px-5 py-3 font-bold text-slate-800">DAL 서비스 소개 보기 →</a>
-        </div>
-      </div>
-
-      <p class="text-sm leading-relaxed text-gray-500 border-t border-gray-200 pt-6">
-        ※ 공개 수수료와 초기 입점 조건은 2026년 9월 25일 기준이며 향후 변경될 수 있다. 최신 조건은 글로벌커플케어 파트너 페이지와 전자 계약을 기준으로 확인해야 한다. 본 글은 특정 업체의 인허가·거래 성과·수익을 보증하지 않으며, 실제 결제·에스크로·외부 송금·메신저 자동 알림은 각 기능의 계약·설정·수신 검증이 완료된 범위에서만 활성화된다.
-      </p>
+      <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-5">글로벌커플케어 소개</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">글로벌커플케어는 드림에이아이랩이 개발·운영하는 국제결혼 정보·업체 비교·글로벌 파트너 협업·정착 준비 플랫폼이다. 파트너 참여 조건은 <a href="https://globalcouplecare.com/agency/proposal" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">공식 입점 안내</a>에서 확인할 수 있다.</p>
+      <p class="text-sm leading-relaxed text-gray-500 border-t border-gray-200 pt-6">※ 수수료와 초기 입점 조건은 2026년 9월 26일 기준이며 변경될 수 있다. 최신 화면과 전자 계약이 우선한다. 본 자료는 특정 업체의 인허가·거래 성과·수익을 보증하지 않는다.</p>
     `,
     i18n: {
       en: {
         title:
-          'Global Couple Care upgrades its international partner operating platform from search visibility to inquiries and settlement',
+          'Dream AI Lab Upgrades Global Couple Care Partner Operations Across Onboarding, Inquiries, Fees and Settlement Records',
         excerpt:
-          'Public partner pages, country-specific services, inquiry CRM, performance-based fair fees, staged settlement records, and privacy-safe Telegram, Slack, Discord, and LINE notifications now form one operating flow.',
+          'Public partner pages, inquiry CRM, tiered fees, transaction-time settlement records and privacy-safe messenger configuration now form one operating flow; real payments and automatic delivery remain activation-gated.',
         faq: [
           { question: 'Can only licensed marriage agencies join Global Couple Care?', answer: 'No. Subject to role-specific checks and applicable licensing, overseas residents, creators, community operators, and local support partners may propose activities they can actually perform. Permissions and contractual responsibilities remain separated by partner type.' },
           { question: 'Is partner onboarding free?', answer: 'The current early-partner offer includes free onboarding and a free public partner page. Verification, advanced CRM, localization, campaigns, and transaction infrastructure may carry separate terms when activated.' },
@@ -776,51 +671,22 @@ export const newsArticles: NewsArticle[] = [
           { question: 'Are Telegram, Slack, Discord, and LINE alerts immediately active?', answer: 'The configuration and delivery structure is deployed, but each partner must save its own official credentials, send a test, confirm actual receipt, and only then enable automatic alerts.' },
         ],
         content: `
-          <p class="text-sm text-gray-500 mb-6">[Press release · September 25, 2026]</p>
-          <p class="text-xl font-semibold text-gray-800 mb-3 leading-relaxed">— Searchable partner pages, country-specific services, and inquiry CRM turn scattered social-channel outreach into a durable business asset</p>
-          <p class="text-xl font-semibold text-gray-800 mb-3 leading-relaxed">— Performance-based fees range from 5.5% for Standard to 3.5% for Platinum, with transaction-time fee and payout records</p>
-          <p class="text-xl font-semibold text-gray-800 mb-8 leading-relaxed">— Privacy-safe Telegram, Slack, Discord, and LINE alerts connect inquiries, matching, contracts, payments, and settlements</p>
-
-          <figure class="mb-10 overflow-hidden rounded-2xl border border-slate-200 bg-slate-950">
-            <img src="/images/news/news-99-globalcouplecare-partner-platform-og.jpg" alt="International agencies, overseas local partners, creators, and operators managing search traffic, inquiries, and settlement through Global Couple Care" width="1200" height="630" class="h-auto w-full" loading="eager" decoding="async" />
-            <figcaption class="px-5 py-3 text-sm leading-relaxed text-slate-300">Global Couple Care connects public discovery with inquiries, follow-up, contracts, settlement records, and operational alerts.</figcaption>
-          </figure>
-
-          <p class="text-lg font-semibold text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-5">
-            Global Couple Care (GCC), an international marriage information, agency-comparison, and settlement-preparation platform operated by Dream AI Lab, has expanded into a partner operating platform that connects public promotion, inquiry management, transaction records, settlement, and external messenger alerts. The goal is not to add another isolated feature. It is to turn fragmented outreach and operations into <strong>searchable assets and accountable workflows</strong>.
-          </p>
-
-          <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-5">From social-channel outreach to a searchable partner asset</h2>
-          <p class="text-lg text-gray-700 mb-6 leading-relaxed">Many international marriage agencies rely on KakaoTalk, Band, YouTube, open chats, and personal referrals. These channels can create contact quickly, but they rarely keep operating countries, service scope, costs, refund conditions, verified information, and inquiry history together.</p>
-          <p class="text-lg text-gray-700 mb-6 leading-relaxed">GCC provides each partner with a searchable public page that can combine operating countries and cities, country-specific services, representative video, consented public profiles, FAQs, and inquiry routes. A single page can be linked from YouTube descriptions and social profiles while remaining discoverable through country information and agency-comparison pages.</p>
-
-          <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-5">A network for agencies, creators, communities, and local partners</h2>
-          <p class="text-lg text-gray-700 mb-6 leading-relaxed">Participation is not limited to one agency category. Subject to applicable licensing and role-specific checks, domestic and overseas agencies, creators, community operators, overseas residents, and local support partners may propose work involving content, inquiries, interpretation, schedules, daily-life support, or professional services.</p>
-          <p class="text-lg text-gray-700 mb-6 leading-relaxed">Partner type and commercial tier remain separate. Partner type defines permitted work. Standard, Verified, Silver, Gold, and Platinum tiers reflect operating quality signals such as verification, information completeness, inquiry response, completed payments, reviews, and dispute history. A higher tier does not grant a legal license or automatically unlock unrelated permissions.</p>
-
-          <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-5">Fair fees that improve with verified performance</h2>
-          <p class="text-lg text-gray-700 mb-6 leading-relaxed">Published normal rates are 5.5% for Standard, 5.0% for Verified, 4.5% for Silver, 4.0% for Gold, and 3.5% for Platinum. Founding partners receive a 0.5 percentage-point discount through September 30, 2027. Tier changes apply only to new transactions; a rate already fixed for an existing transaction is not rewritten retroactively.</p>
-          <p class="text-lg text-gray-700 mb-6 leading-relaxed">The platform fee is not presented to consumers as a separate “GCC surcharge.” Partners set their service prices, while GCC standardizes how base prices, included and excluded items, refund terms, and payment milestones are disclosed. Payment-gateway costs, taxes, remittance, and individual contract terms remain separate.</p>
-
-          <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-5">Operational events connected to privacy-safe messenger alerts</h2>
-          <p class="text-lg text-gray-700 mb-6 leading-relaxed">GCC has deployed a structure that can connect in-app events—including inquiries, chat, matching, meetings, contracts, payments, settlements, travel or wedding reservations, and support requests—to Telegram Bot API, Slack Incoming Webhook, Discord Webhook, and LINE Messaging API.</p>
-          <p class="text-lg text-gray-700 mb-6 leading-relaxed">Automatic delivery is not enabled by merely saving a setting. Each partner follows the sequence <strong>save → test send → confirm actual receipt → enable automatic alerts</strong>. External messages exclude customer names, contact details, inquiry text, and contract content. They carry only an event type and a secure login link; details remain inside the permission-controlled platform.</p>
-
-          <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-5">Deployed operating structure, partner-specific activation gates</h2>
-          <p class="text-lg text-gray-700 mb-6 leading-relaxed">The upgraded platform includes partner type, tier and permission management; transaction-time commission snapshots; staged payout evidence; messenger channel configuration; a durable delivery queue; and administrator monitoring. Actual payment-gateway processing and bank payouts remain available only after the required contracts, reviews, and production settings are activated. Messenger automation is enabled only for a channel whose real receipt has been confirmed by that partner.</p>
-          <p class="text-lg text-gray-700 mb-8 leading-relaxed">Global Couple Care does not select or recommend marriage partners or directly broker marriages. It connects public information, comparisons, inquiries, and operating records among independent providers and users. Each provider remains responsible for licenses and regulated professional services.</p>
-
-          <div class="my-10 rounded-2xl border border-primary-200 bg-primary-50 p-7">
-            <p class="text-sm font-bold uppercase tracking-wider text-primary-700 mb-2">Global partner onboarding</p>
-            <h2 class="text-2xl font-bold text-primary-950 mb-4">Start with one or two countries and one representative service</h2>
-            <p class="text-lg leading-relaxed text-primary-950 mb-6">Partners do not need to publish every country or offering at once. A public page and inquiry route can start with verified basic information, actual operating countries, a representative service, and a contact channel.</p>
-            <div class="flex flex-wrap gap-3">
-              <a href="https://globalcouplecare.com/agency/proposal" target="_blank" rel="noopener noreferrer" class="rounded-lg bg-primary-700 px-5 py-3 font-bold text-white">Agency onboarding proposal →</a>
-              <a href="https://globalcouplecare.com/partners" target="_blank" rel="noopener noreferrer" class="rounded-lg border border-primary-300 bg-white px-5 py-3 font-bold text-primary-800">Global partner network →</a>
-            </div>
-          </div>
-
-          <p class="text-sm leading-relaxed text-gray-500 border-t border-gray-200 pt-6">Published fees and early-partner terms are current as of September 25, 2026 and may change. The latest GCC partner pages and electronic agreements govern. This article does not guarantee licensing, transaction results, or income. Payments, escrow, external transfers, and automatic messenger alerts activate only after their respective contractual, configuration, and receipt-verification gates are completed.</p>
+          <p class="text-sm text-gray-500 mb-6">[Press release · Seoul · September 26, 2026]</p>
+          <p class="text-xl font-semibold text-gray-800 mb-3 leading-relaxed">— Searchable partner pages and country-specific services connect to inquiry CRM</p>
+          <p class="text-xl font-semibold text-gray-800 mb-3 leading-relaxed">— Tiered rates from 5.5% for Standard to 3.5% for Platinum are recorded with transaction-time fee and settlement data</p>
+          <p class="text-xl font-semibold text-gray-800 mb-8 leading-relaxed">— Telegram, Slack, Discord and LINE configuration is deployed; each partner must confirm actual receipt before automatic alerts are enabled</p>
+          <p class="text-lg text-gray-800 mb-8 leading-relaxed"><strong>SEOUL — Dream AI Lab announced</strong> an upgrade to partner operations for Global Couple Care (GCC), its international marriage information, agency-comparison and settlement-preparation platform. Public partner pages now connect to inquiry status, contract records, tiered fees, transaction-time settlement records and external messenger configuration.</p>
+          <figure class="mb-10 overflow-hidden rounded-2xl border border-slate-200 bg-slate-950"><img src="/images/news/news-99-globalcouplecare-partner-platform-og.jpg" alt="Global Couple Care public pages, inquiry CRM, tiered fees, settlement records and messenger configuration" width="1200" height="630" class="h-auto w-full" loading="eager" decoding="async" /><figcaption class="px-5 py-3 text-sm leading-relaxed text-slate-300">GCC connects searchable public information with permissioned inquiry and transaction records.</figcaption></figure>
+          <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-5">Partner discovery and operating records</h2>
+          <p class="text-lg text-gray-700 mb-6 leading-relaxed">Partners can organize operating countries, cities, service scope, representative content, FAQs and inquiry routes on a public page. New inquiries retain source, owner, follow-up schedule and status. Partner roles and permissions remain separate for agencies, creators, community operators and local support partners; licenses and regulated responsibilities remain with each provider.</p>
+          <p class="text-lg text-gray-700 mb-8 leading-relaxed">Published normal rates range from 5.5% for Standard to 3.5% for Platinum. Founding partners receive a 0.5 percentage-point discount through September 30, 2027. The applicable tier, rate, platform fee, expected partner settlement and policy version are preserved when a transaction is created.</p>
+          <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-5">Receipt-gated messenger automation</h2>
+          <p class="text-lg text-gray-700 mb-6 leading-relaxed">Configuration, a durable delivery queue and administrator monitoring have been deployed for Telegram Bot API, Slack Incoming Webhook, Discord Webhook and LINE Messaging API. Automatic delivery follows <strong>save → test send → confirm actual receipt → enable automatic alerts</strong>. External messages omit customer names, contact details, inquiry text and contract content.</p>
+          <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-5">Current operating boundary</h2>
+          <p class="text-lg text-gray-700 mb-6 leading-relaxed">Partner pages, inquiry management, permissions, tiered-fee policy, transaction-time records and staged payout evidence are deployed. However, <strong>the current payment mode is sandbox; production payment-gateway processing and bank payouts are not active.</strong> Payments, escrow and external transfers require separate contracts, reviews and production configuration. Messenger automation is not considered active for a partner until actual receipt is confirmed.</p>
+          <p class="text-lg text-gray-700 mb-8 leading-relaxed">Public partner infrastructure is deployed and general public-partner onboarding remains at an early stage. GCC does not select or recommend marriage partners or directly broker marriages. Independent providers remain responsible for licenses and regulated services.</p>
+          <p class="text-lg text-gray-700 mb-6 leading-relaxed">Partner conditions are available on the <a href="https://globalcouplecare.com/agency/proposal" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">official onboarding page</a>.</p>
+          <p class="text-sm leading-relaxed text-gray-500 border-t border-gray-200 pt-6">Fees and early-partner terms are current as of September 26, 2026 and may change. The latest product screens and electronic agreements govern. This release does not guarantee licensing, transaction results or income.</p>
         `,
       },
     },
