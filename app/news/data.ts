@@ -91,9 +91,9 @@ export const newsArticles: NewsArticle[] = [
   {
     id: 102,
     title:
-      '노아에이아이랩스, NoahAI 공개판 v3.9.1.46 고도화…초보자 시작·시장국면·AI 어시스턴트 강화',
+      '노아AI, 전략 없는 초보자도 시작하도록 첫 화면 개편…시장 상황 설명하는 AI 강화',
     excerpt:
-      '공개판 v3.9.1.46에서 기본 NoahAI 시작 경로, 주문 없는 LEARNING, 가상자금 PAPER, 시장국면 판단과 사용자 승인형 AI 어시스턴트를 강화했다.',
+      '공개판 v3.9.1.46부터 이용자는 기본 운용, 예제 전략, 직접 만든 전략 가운데 하나를 골라 시작할 수 있다. 실제 주문 전에는 학습과 모의운용으로 작동 과정을 살펴볼 수 있다.',
     category: 'press',
     date: '2026-09-26',
     modifiedDate: '2026-09-26',
@@ -175,60 +175,62 @@ export const newsArticles: NewsArticle[] = [
       {
         question: '투자전략이 없어도 NoahAI를 시작할 수 있나요?',
         answer:
-          '가능하다. 처음 사용 흐름에서 기본 NoahAI를 선택하면 커스텀 전략을 억지로 만들지 않고 기존 시장판단·후보선정·위험관리 경로를 이용할 수 있다. LEARNING과 PAPER는 실제 주문과 분리된다.',
+          '가능하다. 기본 NoahAI나 준비된 예제로 시작해 실제 주문 없이 시장을 관찰하고 모의운용부터 해볼 수 있다.',
       },
       {
         question: 'LEARNING 모드는 실제 주문을 내나요?',
         answer:
-          '아니다. LEARNING은 시장데이터, 후보, 시장국면, 위험과 주문 후보가 어떤 이유로 허용·차단됐는지를 기록하지만 외부 주문과 계좌 상태 변경은 막는다.',
+          '아니다. 시장을 관찰하고 매매 후보와 판단 이유만 기록한다. 실제 계좌의 돈이나 주문에는 영향을 주지 않는다.',
       },
       {
         question: '시장국면 기능은 무엇을 하나요?',
         answer:
-          '전략이 언제 유리하거나 불리할 수 있는지 판단하기 위한 시장 상태 정보다. 거래량이나 가격 입력이 없거나 비정상이면 0으로 단정하지 않고 알 수 없음으로 처리해 잘못된 국면 판단을 줄인다.',
+          '현재 시장이 상승, 하락, 횡보, 변동성 확대 가운데 어느 상황에 가까운지 보여준다. 자료가 부족하면 억지로 결론을 내리지 않고 판단할 수 없다고 표시한다.',
       },
       {
         question: 'NoahAI가 TradingView를 대체하나요?',
         answer:
-          '대체가 목표가 아니다. TradingView와 Pine은 차트·전략 원본으로 활용하고, NoahAI는 원문과 변환 규칙 비교, 시장국면·계좌 위험, PAPER 근거, 승인과 실행 기록을 잇는 검증·운영 보조 계층을 지향한다.',
+          '아니다. TradingView에서 만든 전략 자료를 가져와 규칙과 모의운용 결과를 함께 살펴보는 보조 도구다.',
       },
       {
         question: 'AI 어시스턴트가 설정을 바꾸거나 자동으로 거래하나요?',
         answer:
-          '아니다. 현재 화면·전략·PAPER 문맥을 설명하고 검토용 초안을 전략 스튜디오로 보낼 수 있지만 설정 변경, 전략 저장·승인, PAPER나 LIVE 시작은 사용자의 별도 확인 없이는 수행하지 않는다.',
+          '아니다. 현재 상태를 설명하고 전략 초안을 정리해 주지만, 전략을 저장하거나 실제 거래를 시작하는 결정은 이용자가 한다.',
       },
     ],
     content: `
       <p class="text-sm text-gray-500 mb-6">[보도자료 · 서울 · 2026-09-26]</p>
-      <p class="text-xl font-bold text-gray-900 mb-3 leading-relaxed">— 공개판 v3.9.1.46에서 기본 NoahAI·관리형 예제·이용자 전략의 세 가지 시작 경로 제공</p>
-      <p class="text-xl font-bold text-gray-900 mb-3 leading-relaxed">— 시장국면 판단과 LEARNING·PAPER·LIVE 실행 경계를 분리해 단계적 운용 지원</p>
-      <p class="text-xl font-bold text-gray-900 mb-8 leading-relaxed">— AI 어시스턴트는 설명과 편집 가능한 초안을 제공하고 저장·승인·주문은 이용자가 결정</p>
+      <p class="text-xl font-bold text-gray-900 mb-3 leading-relaxed">— 기본 운용·예제 전략·직접 만든 전략 중 이용자에게 맞는 시작 방식 선택</p>
+      <p class="text-xl font-bold text-gray-900 mb-3 leading-relaxed">— 상승·하락·횡보 등 시장 상황과 매매를 멈춘 이유를 쉬운 말로 설명</p>
+      <p class="text-xl font-bold text-gray-900 mb-8 leading-relaxed">— 학습·모의운용·실제운용을 나눠 초보자의 실수와 원치 않는 주문 방지</p>
 
-      <p class="text-lg text-gray-800 mb-6 leading-relaxed"><strong>서울 — 금융 AI 기업 노아에이아이랩스(NoahAI Labs)는</strong> NoahAI 공개판 v3.9.1.46에서 처음 사용 흐름, 시장국면 판단, LEARNING·PAPER·LIVE 실행 경계와 AI 어시스턴트를 고도화했다고 26일 밝혔다.</p>
-      <p class="text-lg text-gray-700 mb-8 leading-relaxed">이번 업데이트는 이용자가 복잡한 전략식과 시스템 구조부터 익혀야 했던 진입장벽을 낮추는 데 초점을 맞췄다. 별도 전략이 없는 이용자는 <strong>기본 NoahAI</strong>, 안내된 구조로 시작하려는 이용자는 <strong>관리형 예제</strong>, 기존 아이디어가 있는 이용자는 <strong>자신의 전략</strong>을 선택할 수 있다. 자연어·Pine Script·문서는 전략 스튜디오에서 검토 가능한 규칙으로 정리할 수 있다.</p>
+      <p class="text-lg text-gray-800 mb-6 leading-relaxed"><strong>서울 — 금융 AI 기업 노아에이아이랩스(NoahAI Labs)가 자동매매 프로그램 NoahAI의 첫 사용 과정을 대폭 간소화했다.</strong> 투자 전략을 미리 만들어 놓지 않은 초보자도 기본 운용 방식을 고르면 시작할 수 있고, 자신만의 아이디어가 있는 이용자는 글이나 전략 문서를 불러와 규칙을 다듬을 수 있다.</p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">26일 공개한 v3.9.1.46 업데이트의 핵심은 ‘무엇을 입력해야 할지 모르는 사람’에게 빈 화면부터 보여주지 않는 것이다. 앱을 처음 열면 NoahAI의 기본 판단을 이용할지, 준비된 예제로 연습할지, 직접 만든 전략을 사용할지 선택한다. 복잡한 수식과 전문용어를 먼저 공부해야 했던 기존 자동매매 프로그램의 진입장벽을 낮추려는 변화다.</p>
 
       <figure class="mb-10 overflow-hidden rounded-2xl border border-slate-200 bg-slate-950"><img src="/images/news/news-102-noahai-learning-market-regime-assistant-og.jpg" alt="상승 하락 횡보 고변동 시장국면과 NoahAI 학습 PAPER LIVE AI 어시스턴트 운영 구조" width="1200" height="630" class="h-auto w-full" loading="eager" decoding="async" /><figcaption class="px-5 py-3 text-sm text-slate-300">NoahAI는 시장 판단과 주문 권한을 분리하고 학습·가상 운용·실제 운용 사이에 사용자 승인과 위험 게이트를 둔다.</figcaption></figure>
 
-      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">주요 고도화 내용</h2>
-      <ul class="list-disc pl-6 text-lg text-gray-700 mb-8 space-y-3 leading-relaxed"><li><strong>선택형 시작 방식:</strong> 기본 NoahAI, 관리형 예제, 이용자 전략 가져오기 중 목적에 맞는 경로 선택</li><li><strong>주문 없는 LEARNING:</strong> 후보선정·시장국면·위험·수량·청산 계획과 허용·차단 이유를 기록하되 실제 주문은 차단</li><li><strong>가상자금 PAPER:</strong> 실제 계좌와 분리된 가상 포지션·체결 원장으로 전략과 기본 판단을 관찰</li><li><strong>시장국면 정합성:</strong> 누락·비정상 데이터를 0으로 단정하지 않고 알 수 없음으로 처리해 잘못된 판단을 축소</li><li><strong>맥락형 AI 어시스턴트:</strong> 기관·실행 모드·포지션·TP·SL·전략 버전·최근 신호와 PAPER 통계를 바탕으로 현재 상태 설명</li></ul>
+      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">실제 돈을 쓰기 전, 두 번의 연습 단계</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">초보자가 자동매매를 어려워하는 이유는 전략을 만드는 일보다 프로그램이 어떤 판단을 내렸는지 알기 어렵기 때문이다. NoahAI는 실제 주문에 앞서 <strong>LEARNING</strong>과 <strong>PAPER</strong>라는 두 단계를 둔다. LEARNING은 시장을 관찰하며 어떤 종목을 후보로 골랐고 왜 매매하지 않았는지 기록하는 단계다. 주문은 발생하지 않는다.</p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">PAPER는 가상의 돈으로 매수와 매도를 연습하는 모의운용이다. 실제 계좌 잔액은 건드리지 않지만, 진입 가격과 청산 시점, 수수료를 반영한 결과가 남는다. 실제 돈이 오가는 LIVE 운용은 자동으로 켜지지 않는다. 이용자가 계좌 연결과 위험 한도를 설정하고 시작 버튼을 눌러야 한다.</p>
 
-      <p class="text-lg text-gray-700 mb-6 leading-relaxed">AI 어시스턴트는 이용자 대신 설정을 변경하거나 거래를 시작하지 않는다. 상담 결과는 전략 스튜디오의 편집 가능한 초안으로 전달되며, 전략 저장과 승인, PAPER 및 LIVE 시작은 각각 이용자의 별도 확인을 거쳐야 한다. 실행 조건이 부족하거나 원문이 모호한 경우에도 AI가 임의의 진입·청산 조건을 생성하지 않고 필요한 질문을 제시한다.</p>
-      <p class="text-lg text-gray-700 mb-8 leading-relaxed">LEARNING은 외부 주문 없이 판단 근거를 기록하고, PAPER는 실제 계좌와 분리된 가상자금으로 전략을 관찰한다. LIVE는 이 두 모드와 자동으로 이어지지 않으며 API 인증, 주문 대상, 명시적 시작 확인과 계좌별 위험 제한을 별도로 통과해야 한다.</p>
+      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">지금 시장이 왜 위험한지도 설명</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">시장국면 기능은 현재 시장을 상승, 하락, 횡보, 변동성 확대 등으로 나눠 보여준다. 전략이 평소에는 잘 작동해도 급락장에서는 위험할 수 있기 때문이다. 가격이나 거래량 자료가 부족하면 억지로 결론을 내리지 않고 판단할 수 없는 상태라고 표시한다.</p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">AI 어시스턴트는 현재 선택한 시장과 운용 방식, 보유 포지션, 최근 신호를 바탕으로 ‘왜 매수하지 않았는지’ 또는 ‘어떤 위험 조건에 걸렸는지’를 설명한다. 이용자가 말로 적은 전략 아이디어를 초안으로 정리해 주기도 한다. 다만 AI가 몰래 전략을 저장하거나 실제 거래를 시작하지는 않는다. 조건이 모호하면 임의로 채워 넣지 않고, 이용자가 결정해야 할 부분을 쉬운 말로 알려준다.</p>
 
-      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">TradingView 대체 아닌 검증·운영 보조</h2>
-      <p class="text-lg text-gray-700 mb-8 leading-relaxed">NoahAI는 TradingView의 차트·Pine 생태계를 대체한다고 주장하지 않는다. Pine 또는 TradingView에서 작성한 전략 자료를 가져와 원문과 실행 규칙을 비교하고, 시장국면·계좌 위험·버전별 PAPER 근거를 함께 검토하는 보조 흐름을 제공한다. 이는 TradingView API나 웹훅을 통한 직접 주문 연동을 뜻하지 않는다. TradingView 전략의 시뮬레이션 범위는 <a href="https://www.tradingview.com/pine-script-docs/concepts/strategies/" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">공식 Pine 전략 문서</a>에서 확인할 수 있다.</p>
+      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">TradingView 전략도 가져와 비교</h2>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">TradingView나 Pine Script로 만든 전략이 있다면 NoahAI 전략 스튜디오로 가져와 원문과 변환된 규칙을 나란히 살펴볼 수 있다. 기존 전략을 버리고 NoahAI로 옮기라는 의미가 아니라, 모의운용 기록과 위험관리 설명을 덧붙여 보는 방식이다. 현재 기능은 전략 자료를 가져와 검토하는 수준이며 TradingView 웹훅을 통한 직접 주문 연동은 아니다.</p>
 
-      <div class="my-10 rounded-2xl border border-amber-200 bg-amber-50 p-6"><p class="font-bold text-amber-950 mb-2">공개 범위</p><p class="text-amber-900 leading-relaxed">이 보도자료의 공개 제품 기준선은 v3.9.1.46이다. v3.9.1.47의 비용 민감도 비교, 확장 과거재생과 진단 보강은 내부 소스 후보이며 공개 설치본·Windows 환경·실계좌 검증을 마친 기능으로 소개하지 않는다.</p></div>
+      <div class="my-10 rounded-2xl border border-amber-200 bg-amber-50 p-6"><h2 class="text-xl font-bold text-amber-950 mb-2">현재 이용할 수 있는 버전</h2><p class="text-amber-900 leading-relaxed">이번 발표는 공개판 v3.9.1.46을 기준으로 한다. 비용 변화에 따른 성과 비교와 더 긴 과거 데이터 재생 등 v3.9.1.47 후보 기능은 아직 개발·검증 중이며 공개 설치판에는 포함되지 않았다.</p></div>
 
       <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">노아에이아이랩스 소개</h2>
-      <p class="text-lg text-gray-700 mb-6 leading-relaxed">노아에이아이랩스는 암호화폐·주식·ETF의 데이터 분석, 전략 설계, PAPER 검증과 사용자 승인형 운용을 연결하는 금융 AI 소프트웨어 NoahAI를 개발한다. 제품 정보는 <a href="https://noahailabs.com/ko/product" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">NoahAI 공식 제품 안내</a>에서 확인할 수 있다.</p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">노아에이아이랩스는 암호화폐·주식·ETF의 데이터 분석, 전략 설계, PAPER 검증과 이용자 승인형 운용을 연결하는 금융 AI 소프트웨어 NoahAI를 개발한다. 자세한 제품 소개는 <a href="https://noahailabs.com/ko/product" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">NoahAI 공식 홈페이지</a>에 공개돼 있다.</p>
       <p class="text-gray-600 text-sm border-t border-gray-200 pt-6 leading-relaxed">※ 본 보도자료는 제품 기능과 배포 범위를 설명하기 위한 자료이며 투자자문이나 수익 보장이 아닙니다. PAPER와 과거재생 결과는 실제 체결 및 미래 성과와 다를 수 있습니다.</p>
     `,
     i18n: {
       en: {
-        title: 'NoahAI Labs Advances Public Release v3.9.1.46 with Easier Onboarding, Market-Regime Context and AI Assistance',
-        excerpt: 'Public release v3.9.1.46 adds three starting paths, order-free LEARNING, virtual PAPER, market-regime context and a user-controlled AI assistant.',
-        content: `<p class="text-sm text-gray-500 mb-6">[Press release · Seoul · September 26, 2026]</p><p class="text-xl font-bold text-gray-900 mb-3 leading-relaxed">— Public release v3.9.1.46 offers baseline NoahAI, a managed example and a user-owned strategy as separate starting paths</p><p class="text-xl font-bold text-gray-900 mb-8 leading-relaxed">— LEARNING, PAPER and LIVE remain distinct; the assistant can explain and draft but cannot approve, save or trade for the user</p><p class="text-lg text-gray-800 mb-6 leading-relaxed"><strong>SEOUL — NoahAI Labs announced</strong> an upgrade to onboarding, market-regime analysis, execution-mode boundaries and its contextual AI assistant in NoahAI public release v3.9.1.46.</p><figure class="mb-10 overflow-hidden rounded-2xl border border-slate-200 bg-slate-950"><img src="/images/news/news-102-noahai-learning-market-regime-assistant-og.jpg" alt="NoahAI market regimes, learning, paper, live and AI assistant architecture" width="1200" height="630" class="h-auto w-full" /><figcaption class="px-5 py-3 text-sm text-slate-300">User approval and risk gates separate learning, simulation and live operation.</figcaption></figure><h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">What changed in the public release</h2><p class="text-lg text-gray-700 mb-6 leading-relaxed">Users may choose baseline NoahAI, a managed example or their own strategy. LEARNING records candidates, regimes, risk and allow/block reasons without sending orders. PAPER uses virtual positions and a separate ledger. LIVE does not activate automatically from either mode and still requires credentials, explicit activation and account-level risk checks.</p><p class="text-lg text-gray-700 mb-6 leading-relaxed">The assistant explains venue, execution mode, positions, strategy version, recent signals and PAPER evidence. It may send an editable draft to Strategy Studio, but cannot silently change settings, approve a strategy, save it or start PAPER/LIVE.</p><h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">A validation companion to TradingView material</h2><p class="text-lg text-gray-700 mb-6 leading-relaxed">NoahAI does not claim to replace TradingView. Users may import Pine or TradingView strategy material for source-to-rule comparison and review it with market-regime, risk and versioned PAPER evidence. This does not mean direct order integration through the TradingView API or webhooks.</p><div class="my-10 rounded-2xl border border-amber-200 bg-amber-50 p-6"><p class="font-bold text-amber-950 mb-2">Release boundary</p><p class="text-amber-900 leading-relaxed">This announcement covers public release v3.9.1.46. Cost-sensitivity comparison, expanded historical replay and diagnostics under v3.9.1.47 remain internal source candidates, not verified public Windows or live-account capabilities.</p></div><p class="text-gray-600 text-sm border-t border-gray-200 pt-6 leading-relaxed">This press release describes product capabilities and release scope, not investment advice or a return guarantee. Simulated and historical results may differ from live execution.</p>`,
+        title: 'NoahAI Makes It Easier for First-Time Users to Start Without a Ready-Made Strategy',
+        excerpt: 'Public release v3.9.1.46 lets users begin with baseline operation, a guided example or their own strategy, then learn and simulate before considering live trading.',
+        content: `<p class="text-sm text-gray-500 mb-6">[Press release · Seoul · September 26, 2026]</p><p class="text-lg text-gray-800 mb-6 leading-relaxed"><strong>NoahAI Labs has simplified the first-time experience of its automated-trading software NoahAI.</strong> Users without a ready-made strategy can begin with baseline operation, while experienced users can bring in an idea, document or Pine strategy for review.</p><p class="text-lg text-gray-700 mb-8 leading-relaxed">The v3.9.1.46 update replaces the blank starting point with three clear choices: baseline NoahAI, a guided example, or a user-owned strategy. It also separates observation, virtual practice and live trading so new users can understand what the software is doing before real money is involved.</p><figure class="mb-10 overflow-hidden rounded-2xl border border-slate-200 bg-slate-950"><img src="/images/news/news-102-noahai-learning-market-regime-assistant-og.jpg" alt="NoahAI market regimes, learning, paper, live and AI assistant architecture" width="1200" height="630" class="h-auto w-full" /><figcaption class="px-5 py-3 text-sm text-slate-300">NoahAI separates market observation, virtual practice and live trading.</figcaption></figure><h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">Practice before using real money</h2><p class="text-lg text-gray-700 mb-6 leading-relaxed">LEARNING watches the market and records why a trade candidate was accepted or rejected without placing an order. PAPER then uses virtual money to record entries, exits and estimated costs. LIVE trading never turns on automatically; the user must connect an account, set risk limits and start it.</p><h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">Plain-language explanations</h2><p class="text-lg text-gray-700 mb-6 leading-relaxed">The market-regime feature describes whether conditions look rising, falling, sideways or unusually volatile. The AI assistant explains recent signals and block reasons in context. It can organize a user's idea into an editable draft, but it cannot secretly save a strategy or start trading.</p><h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">Working alongside TradingView</h2><p class="text-lg text-gray-700 mb-6 leading-relaxed">Users may bring Pine or TradingView strategy material into Strategy Studio to compare the source with the converted rules and add PAPER evidence. This is an import-and-review workflow, not direct TradingView webhook order integration.</p><div class="my-10 rounded-2xl border border-amber-200 bg-amber-50 p-6"><p class="font-bold text-amber-950 mb-2">Current release</p><p class="text-amber-900 leading-relaxed">This announcement covers public release v3.9.1.46. Cost-sensitivity comparison and expanded historical replay planned for v3.9.1.47 remain under development and are not included in the public installer.</p></div><p class="text-gray-600 text-sm border-t border-gray-200 pt-6 leading-relaxed">This article describes product features, not investment advice or a promise of returns. Simulated results can differ from live trading.</p>`,
         faq: [
           { question: 'Can I start NoahAI without my own strategy?', answer: 'Yes. Baseline NoahAI is an explicit path, while custom strategies remain a separate option.' },
           { question: 'Does LEARNING place real orders?', answer: 'No. It records decisions and reasons while blocking external state changes and new orders.' },
@@ -240,10 +242,10 @@ export const newsArticles: NewsArticle[] = [
   {
     id: 101,
     title:
-      '자동매매 PAPER란? 투자금 없이 전략을 검증하는 NoahAI 사용 가이드',
+      '자동매매 PAPER란? 실제 돈 없이 전략을 시험하는 NoahAI 사용법',
     excerpt:
-      '과거재생·PAPER·LIVE의 차이부터 전략 여권과 무료 전략 허브까지, 실제 주문 전에 전략을 단계적으로 확인하는 방법을 설명한다.',
-    category: 'updates',
+      '실제 돈을 넣지 않고 자동매매를 연습하는 PAPER의 개념과 과거 데이터 시험, 실전 운용의 차이를 초보자 눈높이에서 풀어봤다.',
+    category: 'insight',
     date: '2026-09-26',
     modifiedDate: '2026-09-26',
     image: '🛂',
@@ -317,51 +319,51 @@ export const newsArticles: NewsArticle[] = [
     faq: [
       {
         question: '실제 투자금이 없어도 자동매매 전략을 검증할 수 있나요?',
-        answer: '가능하다. NoahAI PAPER는 실제 잔고와 분리된 가상자금·가상 포지션·체결 원장을 사용하며 실제 주문 API를 소유하지 않는 경로로 전략을 관찰한다.',
+        answer: '가능하다. PAPER는 실제 계좌 대신 가상자금으로 매수와 매도를 기록하므로 돈을 넣지 않고 전략의 작동 과정을 살펴볼 수 있다.',
       },
       {
         question: '전략 여권의 E0~E5는 수익률 등급인가요?',
-        answer: '아니다. 원문과 구조 확인부터 재현 가능한 검증, OOS·PAPER·확인 체결 등 어떤 근거가 축적됐는지를 구분하는 증거 단계다. 높은 수익을 보장하는 점수가 아니다.',
+        answer: '아니다. 전략의 출처와 시험 기록이 어느 정도 쌓였는지를 보여주는 표시다. 단계가 높다고 수익이 보장되는 것은 아니다.',
       },
       {
         question: '전략 허브는 현재 유료 마켓플레이스인가요?',
-        answer: '현재는 무료 공개 베타다. 유료 판매, 결제, 환불, 분쟁, 제작자 정산은 향후 단계이며 현재 제공 완료 기능으로 표현하지 않는다.',
+        answer: '아니다. 현재는 전략을 무료로 공개하고 내려받는 베타 서비스다. 유료 판매와 제작자 정산은 아직 제공하지 않는다.',
       },
       {
         question: '허브에서 받은 전략은 바로 LIVE로 실행되나요?',
-        answer: '아니다. 비활성 상태로 가져온 뒤 원문과 규칙을 확인하고 자신의 기관·종목·비용 조건에서 재검증해 PAPER와 사용자 승인을 거쳐야 한다.',
+        answer: '아니다. 내려받은 전략은 꺼진 상태로 들어온다. 내용을 읽고 자신의 시장에서 PAPER로 연습한 뒤 실제 사용할지 결정한다.',
       },
     ],
     content: `
-      <p class="text-sm text-gray-500 mb-6">[사용 가이드 · 2026-09-26]</p>
-      <p class="text-lg text-gray-800 mb-6 leading-relaxed"><strong>PAPER 트레이딩은 실제 투자금을 넣지 않고 가상자금으로 전략의 작동 과정을 관찰하는 단계다.</strong> 자동매매를 처음 접하는 이용자라면 수익률 한 장보다 전략이 어떤 조건에서 진입·청산했고 비용과 위험을 어떻게 반영했는지 먼저 확인해야 한다.</p>
-      <p class="text-lg text-gray-700 mb-8 leading-relaxed">이 가이드는 NoahAI에서 전략을 선택하거나 만든 뒤 과거재생, PAPER, 전략 여권을 거쳐 LIVE 적용 여부를 판단하는 순서를 설명한다. PAPER는 손실 가능성을 없애는 기능도, 미래 수익을 증명하는 기능도 아니다. 실제 자금과 주문 권한을 분리한 상태에서 실행 규칙을 확인하는 안전한 중간 단계다.</p>
+      <p class="text-sm text-gray-500 mb-6">[인사이트 · 서비스 해설 · 2026-09-26]</p>
+      <p class="text-lg text-gray-800 mb-6 leading-relaxed"><strong>자동매매를 처음 시작하는 사람에게 가장 큰 불안은 ‘설정을 잘못해 실제 돈을 잃으면 어떡하지’라는 걱정이다.</strong> PAPER 트레이딩은 이 부담을 줄이기 위해 실제 계좌 대신 가상의 돈으로 매수와 매도를 연습하는 방식이다.</p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">예를 들어 비트코인 가격이 일정 수준을 넘으면 사고, 5% 떨어지면 파는 전략을 만들었다고 해보자. PAPER를 켜면 프로그램은 현재 시장을 따라가며 가상 매수와 매도를 기록한다. 이용자는 돈을 넣지 않은 상태에서 전략이 너무 자주 거래하는지, 수수료를 빼고도 결과가 남는지, 손실을 제한하는 규칙이 제대로 작동하는지 살펴볼 수 있다.</p>
 
       <figure class="mb-10 overflow-hidden rounded-2xl border border-slate-200 bg-slate-950"><img src="/images/news/news-101-noahai-paper-passport-hub-og.jpg" alt="NoahAI PAPER 전략 버전 검증 여권과 무료 전략 허브 연결 구조" width="1200" height="630" class="h-auto w-full" loading="eager" decoding="async" /><figcaption class="px-5 py-3 text-sm text-slate-300">NoahAI는 같은 전략 버전의 원문·규칙·가상 체결·비용·위험을 연결하고 공개 근거와 개인 계정 기록을 분리한다.</figcaption></figure>
 
-      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">과거재생·PAPER·LIVE는 서로 다른 확인 단계</h2>
-      <div class="my-8 grid gap-4 md:grid-cols-3"><div class="rounded-2xl border border-slate-200 bg-slate-50 p-6"><p class="text-sm font-bold text-primary-700 mb-2">01 · 과거재생</p><h3 class="text-xl font-bold text-slate-950 mb-3">과거 데이터로 규칙 확인</h3><p class="text-slate-700 leading-relaxed">정해진 과거 구간에서 진입·청산 규칙과 비용 가정을 반복 확인한다. 미래 성과를 보장하지 않는다.</p></div><div class="rounded-2xl border border-blue-200 bg-blue-50 p-6"><p class="text-sm font-bold text-blue-700 mb-2">02 · PAPER</p><h3 class="text-xl font-bold text-blue-950 mb-3">현재 시장에서 가상 운용</h3><p class="text-blue-950 leading-relaxed">실제 잔고와 주문 API를 쓰지 않고 가상 포지션·체결·비용·판단 이유를 기록한다.</p></div><div class="rounded-2xl border border-amber-200 bg-amber-50 p-6"><p class="text-sm font-bold text-amber-700 mb-2">03 · LIVE</p><h3 class="text-xl font-bold text-amber-950 mb-3">별도 승인 후 실제 운용</h3><p class="text-amber-950 leading-relaxed">API 인증, 주문 대상, 위험 제한과 사용자의 명시적 시작 확인이 필요한 독립 단계다.</p></div></div>
+      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">백테스트와 PAPER는 무엇이 다른가</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">과거재생 또는 백테스트는 이미 지나간 시장 자료에 전략을 적용해 보는 시험이다. 빠르게 여러 해의 결과를 볼 수 있지만, 당시의 실제 주문 지연과 거래량을 완벽히 되살리기는 어렵다. PAPER는 지금 움직이는 시장을 따라가며 가상으로 거래한다. 시간이 실제로 흘러야 결과가 쌓이는 대신, 현재 시장에서 전략이 어떻게 반응하는지 볼 수 있다.</p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">LIVE는 이 둘과 다르다. LIVE를 시작하면 실제 계좌의 돈으로 주문이 나간다. NoahAI는 PAPER가 끝났다고 LIVE를 자동으로 켜지 않는다. 계좌 연결, 거래 대상, 투자 한도와 시작 여부는 이용자가 직접 정한다.</p>
 
-      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">NoahAI에서 확인하는 5단계</h2>
-      <ol class="list-decimal pl-6 text-lg text-gray-700 mb-8 space-y-4 leading-relaxed"><li><strong>전략 선택 또는 작성:</strong> 기본 예제, 자연어 아이디어, Pine·문서 자료 중 출발점을 고른다.</li><li><strong>실행 규칙 확인:</strong> 진입·청산, 종목, 시간봉, 비용과 위험 제한이 실제로 실행 가능한 형태인지 검토한다.</li><li><strong>과거재생 선택:</strong> 필요한 경우 과거 구간과 표본을 정해 규칙의 일관성을 먼저 확인한다.</li><li><strong>PAPER 시작:</strong> 가상자금과 별도 원장으로 현재 시장에서 신호·포지션·체결과 차단 이유를 관찰한다.</li><li><strong>전략 여권 검토:</strong> 같은 전략 버전에 어떤 근거가 쌓였는지 확인한 뒤 LIVE 적용 여부를 별도로 판단한다.</li></ol>
-      <p class="text-lg text-gray-700 mb-8 leading-relaxed">NoahAI PAPER는 기관·종목·현물/선물·통화·전략 key와 버전별로 진입·청산, 비용, 보유시간, 위험 제한과 결정 이유를 기록한다. 다른 전략 버전이 검증 중인 버전을 조용히 교체하지 못하도록 분리하며, PAPER 체결과 실제 LIVE 체결도 별도 근거로 관리한다.</p>
+      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">전략을 고르면 무엇이 기록되나</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">이용자는 준비된 예제를 고르거나, 자신의 투자 아이디어를 글로 적거나, Pine Script와 문서 자료를 불러올 수 있다. NoahAI는 어떤 종목을 언제 사고팔지, 손실을 어디까지 허용할지처럼 실제 실행에 필요한 조건을 정리한다. 조건이 빠져 있으면 임의로 매매 규칙을 만들지 않고 이용자가 정하도록 남겨 둔다.</p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">PAPER가 시작되면 가상 매수·매도 시점, 보유 기간, 예상 수수료, 손익과 거래하지 않은 이유가 전략 버전별로 쌓인다. 전략을 고친 뒤에는 새 버전으로 기록되기 때문에, 이전 결과를 새 전략의 성과처럼 섞어 보여주지 않는다.</p>
 
-      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">수익률 등급 아닌 E0~E5 증거 단계</h2>
-      <p class="text-lg text-gray-700 mb-6 leading-relaxed">전략 검증 여권은 원문 출처와 해시, 실행 규칙, 전략 ID·버전, 기관·종목·시간봉, 비용·위험 가정, 과거재생·OOS·PAPER·확인 체결 범위를 하나의 증거 묶음으로 연결한다. E0~E5는 수익률 점수가 아니라 <strong>어떤 근거가 확인됐는지를 나타내는 단계</strong>다. E0는 구조 확인을 거친 공개 시작점이며 검증 완료, 권리 보증 또는 수익성을 뜻하지 않는다.</p>
-      <ul class="list-disc pl-6 text-lg text-gray-700 mb-8 space-y-3 leading-relaxed"><li>전략 원문과 이용자가 확정한 보완 답변을 별도 근거로 보존</li><li>전략이 변경되면 새 버전으로 관리하고 기존 성과를 자동 승계하지 않음</li><li>개인 로컬 PAPER 기록을 공개 순위 근거로 자동 사용하지 않음</li><li>과거 성과, PAPER 진행, LIVE 권한과 계좌 위험을 각각 분리해 판단</li></ul>
+      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">‘전략 여권’은 수익률 성적표가 아니다</h2>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">NoahAI는 전략의 출처와 버전, 시험에 사용한 시장, 수수료 조건, 과거재생과 PAPER 기록을 ‘전략 여권’에 묶는다. E0부터 E5까지의 표시는 수익률 순위가 아니라 자료가 얼마나 쌓였는지를 나타낸다. E0 전략이 공개됐다고 해서 수익성이 검증됐다는 뜻은 아니며, 단계가 높아도 미래 수익을 보장하지 않는다.</p>
 
       <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">무료 공개 전략 허브에서 시작할 때</h2>
-      <p class="text-lg text-gray-700 mb-6 leading-relaxed"><a href="https://daltrading.net/strategies" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">NoahAI 검증 전략 허브</a>는 현재 무료 공개 베타로 운영된다. 제작자가 <code>.noahstrategy</code> 패키지를 제출하면 시스템이 자산·기관·시장국면·검증 대상과 실행 구조를 확인하고, 제작자의 권리 자기선언을 거쳐 E0로 공개할 수 있다.</p>
-      <p class="text-lg text-gray-700 mb-8 leading-relaxed">이용자가 내려받은 전략은 비활성 상태로 가져오며, 원문과 실행 규칙을 확인한 뒤 자신의 거래소·증권사, 종목, 비용과 위험 조건에서 재검증하고 PAPER와 승인을 거쳐야 한다. 허브는 자기신고 수익률이나 다운로드 수 대신 출처 추적성, 표본, 재현성, OOS·워크포워드, 비용·위험과 확인 가능한 실행 근거를 중심으로 전략을 보여준다.</p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed"><a href="https://daltrading.net/strategies" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">NoahAI 검증 전략 허브</a>에서는 다른 사람이 공개한 전략을 무료로 내려받아 살펴볼 수 있다. 내려받은 전략은 곧바로 거래를 시작하지 않고 꺼진 상태로 들어온다. 이용자는 자신의 거래소와 종목, 투자 규모에 맞춰 PAPER로 다시 돌려본 뒤 사용할지 결정한다.</p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">허브는 아직 무료 공개 베타 단계다. 전략을 사고파는 유료 마켓과 제작자 정산 기능은 제공하지 않는다. 현재 목표는 높은 수익률을 내세우는 판매장이 아니라, 전략이 어디에서 왔고 어떤 조건에서 시험됐는지를 비교하는 공간을 만드는 데 있다.</p>
 
-      <div class="my-10 rounded-2xl border border-primary-200 bg-primary-50 p-6"><p class="font-bold text-primary-950 mb-2">현재 제공 범위</p><p class="text-primary-900 leading-relaxed">전략 허브는 무료 공개 베타다. 유료 판매, 결제·환불·분쟁 처리와 제작자 정산은 향후 검토 단계이며 현재 제공 기능이 아니다. 전략 제작과 PAPER 흐름은 <a href="https://noahailabs.com/ko/product/strategy-studio" target="_blank" rel="noopener noreferrer" class="font-bold underline">NoahAI 전략 스튜디오</a>에서 확인할 수 있다.</p></div>
-      <p class="text-gray-600 text-sm border-t border-gray-200 pt-6 leading-relaxed">※ PAPER·과거재생·검증 단계는 실제 수익이나 미래 성과를 보장하지 않습니다. 전략에는 원금 손실 위험이 있으며 LIVE 적용은 이용자의 별도 판단과 승인 대상입니다.</p>
+      <div class="my-10 rounded-2xl border border-primary-200 bg-primary-50 p-6"><p class="font-bold text-primary-950 mb-2">처음 시작한다면</p><p class="text-primary-900 leading-relaxed">처음부터 실제 계좌를 연결하기보다 작은 가상자금으로 PAPER를 충분히 돌려보고, 거래 횟수와 손실 폭, 수수료를 함께 살펴보는 편이 안전하다. 전략 제작과 모의운용 기능은 <a href="https://noahailabs.com/ko/product/strategy-studio" target="_blank" rel="noopener noreferrer" class="font-bold underline">NoahAI 전략 스튜디오</a>에 안내돼 있다.</p></div>
+      <p class="text-gray-600 text-sm border-t border-gray-200 pt-6 leading-relaxed">※ PAPER·과거재생·검증 단계는 실제 수익이나 미래 성과를 보장하지 않습니다. 전략에는 원금 손실 위험이 있으며 LIVE 운용은 위험을 충분히 이해한 이용자가 직접 켜야 합니다.</p>
     `,
     i18n: {
       en: {
         title: 'What Is Automated-Trading PAPER? A Practical NoahAI Guide to Testing Without Investment Capital',
         excerpt: 'Learn the difference between historical replay, PAPER and LIVE, then review versioned evidence through Strategy Passport before deciding whether to use real capital.',
-        content: `<p class="text-sm text-gray-500 mb-6">[User guide · September 26, 2026]</p><p class="text-lg text-gray-800 mb-6 leading-relaxed"><strong>PAPER trading observes a strategy with virtual capital before any live funding or order permission.</strong> It is a safety step for checking rules, costs, risk and decision records—not proof of future profit.</p><figure class="mb-10 overflow-hidden rounded-2xl border border-slate-200 bg-slate-950"><img src="/images/news/news-101-noahai-paper-passport-hub-og.jpg" alt="NoahAI PAPER, strategy passport and free hub" width="1200" height="630" class="h-auto w-full" /><figcaption class="px-5 py-3 text-sm text-slate-300">Source, rules, version, virtual execution and evidence stay connected without treating a screenshot as proof.</figcaption></figure><h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">Replay, PAPER and LIVE are different stages</h2><p class="text-lg text-gray-700 mb-6 leading-relaxed">Historical replay checks rules on a selected past period. PAPER observes virtual positions and fills in current market conditions without using the live balance or order API. LIVE is a separate stage that requires credentials, risk limits and an explicit user start.</p><h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">A five-step workflow</h2><ol class="list-decimal pl-6 text-lg text-gray-700 mb-8 space-y-3 leading-relaxed"><li>Choose a baseline example or create a strategy from an idea, Pine source or document.</li><li>Confirm executable entry, exit, market, timeframe, cost and risk rules.</li><li>Use historical replay when a past-period consistency check is needed.</li><li>Run PAPER with virtual capital and review signals, positions, fills and block reasons.</li><li>Read the Strategy Passport for that exact version before making a separate LIVE decision.</li></ol><h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">Evidence levels, not return grades</h2><p class="text-lg text-gray-700 mb-6 leading-relaxed">The E0–E5 passport ladder describes what evidence exists; it is not a profitability grade. E0 is a publication starting point, not verified performance or rights. The <a href="https://daltrading.net/strategies" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">NoahAI Verified Strategy Hub</a> is currently a free public beta. Downloaded packages enter inactive and require review, revalidation, PAPER and user approval. Paid licensing, refunds, disputes and creator settlement remain future work.</p><p class="text-gray-600 text-sm border-t border-gray-200 pt-6 leading-relaxed">PAPER, replay and evidence levels do not guarantee live or future performance. Strategies can lose capital.</p>`,
+        content: `<p class="text-sm text-gray-500 mb-6">[Service explainer · September 26, 2026]</p><p class="text-lg text-gray-800 mb-6 leading-relaxed"><strong>For many first-time users, the biggest fear is losing real money because of a bad setting.</strong> PAPER trading reduces that risk by simulating buys and sells with virtual money instead of a funded account.</p><p class="text-lg text-gray-700 mb-8 leading-relaxed">If a strategy says “buy after a breakout and sell after a five-percent fall,” PAPER follows the live market and records virtual trades. The user can see whether the strategy trades too often, how estimated fees change the result and whether the loss limit behaves as intended.</p><figure class="mb-10 overflow-hidden rounded-2xl border border-slate-200 bg-slate-950"><img src="/images/news/news-101-noahai-paper-passport-hub-og.jpg" alt="NoahAI PAPER, strategy passport and free hub" width="1200" height="630" class="h-auto w-full" /><figcaption class="px-5 py-3 text-sm text-slate-300">NoahAI keeps the source, version, virtual trades, costs and risk records together.</figcaption></figure><h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">Backtesting, PAPER and LIVE</h2><p class="text-lg text-gray-700 mb-6 leading-relaxed">A backtest applies rules to a past period. PAPER follows today's market with virtual money. LIVE sends real orders from a funded account. NoahAI never turns on LIVE merely because a PAPER run has finished; the user still chooses the account, market, risk limit and start time.</p><h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">What the Strategy Passport means</h2><p class="text-lg text-gray-700 mb-6 leading-relaxed">The Strategy Passport groups the source, version, market, cost assumptions and test records. E0 through E5 are evidence stages, not return scores. A higher stage does not promise future profit.</p><h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">A free strategy hub</h2><p class="text-lg text-gray-700 mb-6 leading-relaxed">The <a href="https://daltrading.net/strategies" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">NoahAI Verified Strategy Hub</a> lets users download public strategies for free. A downloaded strategy arrives switched off, allowing the user to read it and run PAPER in a personal environment before deciding whether to use it. The hub is a public beta; paid sales and creator settlement are not available today.</p><p class="text-gray-600 text-sm border-t border-gray-200 pt-6 leading-relaxed">PAPER and historical results do not guarantee future returns. Any live strategy can lose capital.</p>`,
         faq: [
           { question: 'Can I validate a strategy without investment capital?', answer: 'Yes. NoahAI PAPER uses separate virtual capital, positions and fills.' },
           { question: 'Are E0–E5 return grades?', answer: 'No. They describe the level and provenance of evidence, not guaranteed profitability.' },
@@ -373,9 +375,9 @@ export const newsArticles: NewsArticle[] = [
   {
     id: 100,
     title:
-      '유명 트레이더의 매매법을 그대로 복제할 수 있을까…공개 자료를 ‘검증 가능한 전략 가설’로 읽는 법',
+      '유명 트레이더의 매매법, AI로 그대로 복제할 수 있을까',
     excerpt:
-      '유명 트레이더의 공개 인터뷰에서 확인할 수 있는 것과 알 수 없는 것을 구분하고, 성과 신화가 아닌 검증 가능한 연구 대상으로 읽는 기준을 살펴본다.',
+      '공개 인터뷰에는 투자 원칙이 담겨 있지만 언제 사고팔지 정하는 세부 규칙은 빠져 있다. AI가 빈칸을 채우는 순간 누구의 전략이 되는지 살펴봤다.',
     category: 'insight',
     date: '2026-09-26',
     modifiedDate: '2026-09-26',
@@ -451,55 +453,52 @@ export const newsArticles: NewsArticle[] = [
     faq: [
       {
         question: 'NoahAI가 워뇨띠의 실제 매매전략을 그대로 복제하나요?',
-        answer: '아니다. 공개 인터뷰와 배포 자료로 확인 가능한 원칙을 출처와 함께 구조화하고, 추가 조건은 연구 가설로 표시한다. 공개 자료만으로 재량 판단 전체나 실제 성과를 재현할 수 있다고 주장하지 않는다.',
+        answer: '아니다. 공개 인터뷰에서 직접 확인한 원칙과 개발 과정에서 새로 더한 조건을 나눠 연구한다. 공개 자료만으로 실제 매매를 그대로 재현할 수 있다고 보지 않는다.',
       },
       {
         question: '워뇨띠 또는 AOA와 공식 제휴한 전략인가요?',
-        answer: '아니다. 공개 자료 기반 독립 연구이며 당사자의 승인·제휴·공식 전략 또는 성과 계승을 뜻하지 않는다.',
+        answer: '아니다. 공개 자료를 바탕으로 한 내부 연구 사례이며 당사자의 승인이나 제휴를 받은 공식 전략이 아니다.',
       },
       {
         question: '유튜브나 PDF, TradingView 전략도 같은 방식으로 만들 수 있나요?',
-        answer: '원문을 가져와 출처, 진입·청산·위험 조건과 미지원 표현을 분리할 수 있다. 다만 모든 Pine이나 영상의 의미를 완전 자동 실행한다고 보장하지 않으며, 모호한 조건은 사용자에게 질문하고 지원되지 않으면 차단한다.',
+        answer: '자료를 가져와 원문과 매수·매도 규칙을 나눠 정리할 수 있다. 뜻이 분명하지 않은 부분은 자동으로 지어내지 않고 사람이 정하도록 남긴다.',
       },
       {
         question: '생성된 전략은 바로 실제 자동매매에 적용되나요?',
-        answer: '아니다. 초안 분석, 규칙 확인, 사용자 승인, 선택적 과거재생, PAPER와 위험 검사를 거친다. AI가 만든 예시는 자동 승인이나 LIVE 권한이 아니다.',
+        answer: '아니다. 먼저 내용을 읽고 과거 데이터와 PAPER로 시험한다. 실제 계좌에 적용할지는 이용자가 따로 결정한다.',
       },
     ],
     content: `
       <p class="text-sm text-gray-500 mb-6">[인사이트 · 2026-09-26 · 드림에이아이랩 편집팀]</p>
-      <div class="mb-8 rounded-2xl border border-amber-200 bg-amber-50 p-6"><p class="font-bold text-amber-950 mb-2">편집자 고지</p><p class="text-amber-900 leading-relaxed">드림에이아이랩과 노아에이아이랩스는 별도 조직이며, 이 글은 드림에이아이랩이 노아AI 기술 문서와 공개 자료를 검토해 작성한 편집 인사이트다. NoahAI는 관계 서비스 사례로 소개되며 독립적인 제품 비교평가가 아니다. 국내에서 ‘워뇨띠 매매법’으로 검색되는 자료 가운데 이 글이 직접 확인한 1차 출처는 BitMEX의 AOA 인터뷰이며, 이 글은 AOA와 워뇨띠라는 별칭의 동일성을 독립적으로 단정하지 않는다.</p></div>
-      <p class="text-xl font-semibold text-gray-800 mb-8 leading-relaxed">유명 트레이더의 공개 자료를 전략으로 옮길 때 중요한 것은 ‘얼마나 닮았는가’가 아니라, 원문에서 확인한 사실과 새로 만든 가설을 얼마나 정직하게 구분하는가다.</p>
-
-      <p class="text-lg text-gray-800 mb-6 leading-relaxed">‘유명 트레이더의 매매법을 자동매매로 구현할 수 있을까?’라는 질문에는 성공 신화와 비밀 전략에 대한 기대가 함께 들어 있다. 하지만 공개 인터뷰와 거래 기록으로 확인할 수 있는 것은 생각보다 제한적이다. 결과가 남아 있다고 해서 진입 당시 무엇을 보고 판단했는지, 같은 상황에서 언제 예외를 적용했는지까지 알 수 있는 것은 아니다.</p>
-      <p class="text-lg text-gray-700 mb-8 leading-relaxed">따라서 이 질문에 대한 책임 있는 답은 “그대로 복제할 수 있다”가 아니다. <strong>공개된 원칙은 원칙으로, 해석은 해석으로, 추가한 조건은 연구 가설로 분리한 뒤 각각 검증할 수 있다</strong>는 쪽에 가깝다.</p>
+      <p class="text-xl font-semibold text-gray-800 mb-8 leading-relaxed">유명 트레이더의 인터뷰 몇 편만 있으면 AI가 같은 매매를 해낼 수 있을까. 결론부터 말하면 공개 자료만으로 그 사람의 전략을 그대로 복제하기는 어렵다. 인터뷰에는 생각과 원칙이 담기지만, 프로그램이 주문을 내리는 데 필요한 숫자와 예외 규칙까지 모두 나오지는 않기 때문이다.</p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">그렇다고 공개 자료가 쓸모없는 것은 아니다. 어디까지가 당사자가 직접 말한 내용이고, 어디부터가 이를 프로그램으로 옮긴 사람의 해석인지를 나눠 기록하면 새로운 전략을 연구하는 출발점이 될 수 있다.</p>
 
       <figure class="mb-10 overflow-hidden rounded-2xl border border-slate-200 bg-slate-950"><img src="/images/news/news-100-noahai-public-strategy-research-og.jpg" alt="유명 트레이더 공개 인터뷰와 자료를 출처가 남는 전략 연구 가설 및 PAPER 검증으로 변환하는 과정" width="1200" height="630" class="h-auto w-full" loading="eager" decoding="async" /><figcaption class="px-5 py-3 text-sm text-slate-300">공개된 사실, 해석이 필요한 조건, 시스템이 추가한 연구 가설이 한 덩어리로 섞이지 않아야 한다.</figcaption></figure>
 
-      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">공개 인터뷰에는 철학이 있지만 완성된 실행식은 없다</h2>
-      <p class="text-lg text-gray-700 mb-6 leading-relaxed"><a href="https://www.bitmex.com/blog/whale-trader-talks-aoa" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">BitMEX가 2025년 공개한 AOA 인터뷰</a>에서 두드러지는 것은 특정 지표의 비밀값보다 위험관리다. 진입 시점보다 위험관리가 중요하다는 관점, 시장 상황에 따라 진입을 달리하는 태도, FOMO를 피하고 포트폴리오 전체 레버리지를 통제한다는 원칙이 소개된다.</p>
-      <p class="text-lg text-gray-700 mb-8 leading-relaxed">이 원칙들은 분명 중요한 자료지만, 그 자체로는 프로그램이 실행할 수 있는 완성된 전략이 아니다. “시장 상황이 좋다”는 말을 코드로 옮기려면 어떤 데이터와 시간봉을 볼지, 어느 값을 경계로 삼을지, 예외 상황을 어떻게 처리할지 정해야 한다. 바로 이 순간부터 원문이 아니라 설계자의 해석이 개입한다.</p>
+      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">“위험을 관리하라”는 말만으로는 주문할 수 없다</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed"><a href="https://www.bitmex.com/blog/whale-trader-talks-aoa" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">BitMEX가 2025년 공개한 AOA 인터뷰</a>에는 위험관리, 시장 상황에 따른 진입, 과도한 추격매수 자제, 전체 투자금 대비 레버리지 조절 같은 원칙이 나온다. 투자자가 읽기에는 의미 있는 조언이지만 컴퓨터는 이 말만으로 주문을 낼 수 없다.</p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">가령 ‘시장이 좋을 때 진입한다’는 원칙을 자동매매로 만들려면 시장이 좋다는 기준부터 정해야 한다. 최근 며칠의 가격을 볼지, 거래량도 함께 볼지, 가격이 얼마나 올라야 매수할지 숫자가 필요하다. 인터뷰에 없는 이 숫자를 누군가 정하는 순간, 그것은 원래 트레이더의 전략이 아니라 새로 만든 해석이 된다.</p>
 
-      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">‘유명인 전략’이라는 이름이 가설을 사실처럼 보이게 만든다</h2>
-      <p class="text-lg text-gray-700 mb-6 leading-relaxed">문제는 해석이 들어가는 것 자체가 아니다. 해석을 숨긴 채 당사자의 실제 전략인 것처럼 보이게 만드는 데 있다. 공개 자료에 없는 EMA·RSI·캔들 조건을 추가하면서 이를 유명 트레이더의 공식 전략이라고 부르면, 이용자는 공개된 원칙과 제작자가 만든 가설을 구분하기 어렵다. 특정 구간의 성과가 좋게 나왔을 때는 그 결과마저 원래 트레이더의 실력과 연결해 받아들일 수 있다.</p>
-      <p class="text-lg text-gray-700 mb-8 leading-relaxed">검증 가능한 접근은 반대 방향으로 간다. 원문 파일과 인터뷰의 출처를 보존하고, 직접 확인되는 문장을 구조화하며, 원문에 없는 수치와 조건에는 <strong>연구 가설</strong>이라는 이름표를 붙인다. 모호한 부분은 AI가 자연스럽게 채운 것처럼 감추지 않고 사용자에게 되묻거나 실행 대상에서 제외한다.</p>
+      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">유명인의 이름이 붙으면 가설도 사실처럼 보인다</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">문제는 해석을 더하는 데 있지 않다. 새로 만든 조건을 숨긴 채 유명 트레이더가 실제로 사용한 공식 전략처럼 소개하는 데 있다. 인터뷰에 없는 이동평균선이나 RSI 수치를 넣고 특정 인물의 이름을 붙이면, 이용자는 원래 발언과 제작자의 아이디어를 구분하기 어렵다.</p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">더 안전한 방법은 출처를 그대로 남기는 것이다. 인터뷰에서 직접 확인한 원칙은 ‘공개 발언’, 프로그램을 만들며 추가한 숫자와 조건은 ‘연구 가설’로 표시한다. 뜻이 모호한 부분은 AI가 그럴듯하게 채우지 않고 사람이 정하도록 남긴다.</p>
 
-      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">복제의 문제가 아니라 검증 단위의 문제</h2>
-      <p class="text-lg text-gray-700 mb-6 leading-relaxed">NoahAI의 공개자료 연구 패키지는 이 구분을 내부적으로 시험한 사례다. 원본 자료와 데이터 파일의 해시를 보존하고, 공개 원칙에서 직접 나오지 않은 기술 조건을 <code>research_hypothesis</code>로 표시한 <strong>내부 소스 후보·미승인 연구 패키지</strong>를 만들었다. 이는 공개 설치본의 사용자 기능이나 외부 시장 성과로 검증된 결과가 아니다. 당사자의 승인·제휴·공식 전략 또는 과거 성과를 계승하지 않으며 사용자 계정이나 LIVE 운용에 자동 등록되지 않는다.</p>
-      <p class="text-lg text-gray-700 mb-8 leading-relaxed">여기서 중요한 것은 NoahAI라는 제품명보다 검증 단위다. 전략의 이름이 아니라 <strong>어느 원문에서 출발했고, 누가 어떤 조건을 추가했으며, 어떤 버전이 어느 시장과 비용 조건에서 시험됐는가</strong>가 남아야 한다. 그래야 결과가 좋거나 나쁠 때 무엇을 평가해야 하는지 알 수 있다.</p>
+      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">NoahAI가 시험한 방식</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">NoahAI 개발 과정에서도 공개 자료를 자동매매 규칙으로 바꾸는 내부 실험이 진행됐다. 원본 자료를 보존하고, 원문에서 직접 찾을 수 없는 조건에는 ‘연구 가설’ 표시를 붙였다. 이렇게 만든 전략은 곧바로 실제 계좌에 등록하지 않고, 아직 승인되지 않은 연구 자료로 남긴다.</p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">핵심은 유명인의 이름이 아니라 기록이다. 어떤 자료에서 시작했는지, 누가 어떤 조건을 보탰는지, 어느 시장에서 어떤 수수료를 적용해 시험했는지가 남아야 결과가 좋거나 나쁠 때 원인을 따져볼 수 있다. 이 기능은 현재 내부 개발 후보이며 공개 설치판의 완성 기능이나 검증된 투자 성과를 뜻하지 않는다.</p>
 
-      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">TradingView와 Pine 전략에도 같은 질문이 필요하다</h2>
-      <p class="text-lg text-gray-700 mb-6 leading-relaxed">코드가 있다고 불확실성이 사라지는 것도 아니다. TradingView의 Pine 전략은 브로커 에뮬레이터를 통해 주문을 시뮬레이션하고 리포트를 제공하지만, 시뮬레이션 체결과 실제 체결은 다를 수 있다. 다른 시스템으로 옮길 때는 지원되는 표현, 봉 확정 시점, 비용과 슬리피지, 포지션 관리 방식의 차이를 다시 확인해야 한다.</p>
-      <p class="text-lg text-gray-700 mb-8 leading-relaxed">결국 공개 인터뷰, 투자 서적, 유튜브 강의, Pine 코드와 개인 매매 노트는 모두 같은 질문 앞에 놓인다. 무엇이 원문이고 무엇이 해석인가. 어떤 조건이 실행 가능하며 어떤 부분은 아직 가설인가. 어느 결과가 실제 체결이고 어느 결과가 PAPER 또는 과거 시뮬레이션인가.</p>
+      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">코드가 있어도 실제 거래와는 차이가 난다</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">TradingView의 Pine Script처럼 이미 코드로 작성된 전략도 그대로 옮기면 끝나는 것은 아니다. 과거 차트에서 계산한 가격과 실제 주문이 체결되는 가격은 다를 수 있고, 거래 수수료와 주문 지연도 결과를 바꾼다. 다른 프로그램으로 옮길 때는 매수·매도 시점과 비용 계산 방식이 같은지 다시 살펴야 한다.</p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">인터뷰, 투자서, 유튜브 강의, Pine 코드 어느 것에서 출발하든 기준은 같다. 원문과 새로 만든 해석을 나누고, 과거 시험과 가상거래, 실제 거래의 결과를 섞지 않는 것이다.</p>
 
-      <p class="text-lg text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-5">대가의 이름을 붙이는 것은 쉽다. 어려운 일은 그 이름을 지운 뒤에도 전략의 출처·가정·위험·검증 결과가 스스로 설명되게 만드는 것이다. AI 자동매매 시장의 신뢰는 바로 그 지점에서 시작돼야 한다.</p>
-      <p class="text-gray-600 text-sm border-t border-gray-200 pt-6 leading-relaxed">※ 이 글은 공개 자료를 분석한 편집 인사이트다. 드림에이아이랩과 노아에이아이랩스는 별도 조직이며, NoahAI 사례는 관계 서비스의 내부 연구 후보를 설명한 것으로 독립 비교평가나 공개 기능 검증이 아니다. AOA 또는 워뇨띠와의 제휴·승인·공식 전략을 의미하지 않으며 두 이름의 동일성도 단정하지 않는다. 특정 전략과 PAPER·과거 결과는 미래 수익을 보장하지 않는다.</p>
+      <p class="text-lg text-gray-800 mb-8 leading-relaxed border-l-4 border-primary-600 pl-5">유명 트레이더의 이름을 전략에 붙이는 일은 쉽다. 더 중요한 일은 그 이름을 빼더라도 전략의 출처와 추가된 조건, 위험과 시험 결과를 누구나 이해할 수 있게 남기는 것이다.</p>
+      <p class="text-gray-600 text-sm border-t border-gray-200 pt-6 leading-relaxed">※ 이 글이 직접 확인한 1차 출처는 BitMEX의 AOA 인터뷰다. 국내에서 함께 언급되는 AOA와 워뇨띠가 같은 인물인지는 이 글에서 단정하지 않는다. 당사자와의 제휴나 승인을 받은 공식 전략도 아니다. 드림에이아이랩과 노아에이아이랩스는 별도 조직이며, NoahAI 사례는 관계 서비스의 내부 연구를 설명하기 위해 포함했다.</p>
     `,
     i18n: {
       en: {
-        title: 'Can a Famous Trader\'s Method Be Copied? How to Read Public Material as Testable Strategy Hypotheses',
-        excerpt: 'NoahAI separates sourced principles from added research hypotheses, preserving provenance and requiring user review and PAPER validation instead of implying copied performance.',
-        content: `<p class="text-sm text-gray-500 mb-6">[Strategy research insight · September 26, 2026]</p><div class="mb-8 rounded-2xl border border-amber-200 bg-amber-50 p-6"><p class="font-bold text-amber-950 mb-2">Editorial disclosure</p><p class="text-amber-900 leading-relaxed">Dream AI Lab and NoahAI Labs are separate organizations. Dream AI Lab prepared this editorial insight from public material and NoahAI technical documents; NoahAI is a related-service case study, not an independent product comparison. The primary source reviewed here is BitMEX's AOA interview. This article does not independently establish that AOA and the Korean alias often searched with this topic refer to the same person.</p></div><p class="text-lg text-gray-800 mb-6 leading-relaxed">A public interview cannot reproduce a trader's complete discretionary process or historical performance. It can, however, become a source-traceable research package in which confirmed principles and added hypotheses are clearly separated.</p><figure class="mb-10 overflow-hidden rounded-2xl border border-slate-200 bg-slate-950"><img src="/images/news/news-100-noahai-public-strategy-research-og.jpg" alt="NoahAI transforms public trading material into source-traceable hypotheses and PAPER validation" width="1200" height="630" class="h-auto w-full" /><figcaption class="px-5 py-3 text-sm text-slate-300">Sourced principles, ambiguous conditions and system-added research hypotheses remain distinct.</figcaption></figure><p class="text-lg text-gray-700 mb-6 leading-relaxed">The <a href="https://www.bitmex.com/blog/whale-trader-talks-aoa" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">2025 BitMEX AOA interview</a> emphasizes risk management, market-dependent entries, avoiding FOMO and portfolio-wide leverage discipline. It does not disclose a complete executable rule set.</p><p class="text-lg text-gray-700 mb-6 leading-relaxed">In an internal source candidate, NoahAI preserves source hashes, extracts explicit principles and labels added EMA, RSI, candle or numeric conditions as research hypotheses. This unapproved research package is not a verified public-client capability or market result. It does not imply affiliation, endorsement, copied performance or proven current-market profitability.</p><p class="text-gray-600 text-sm border-t border-gray-200 pt-6 leading-relaxed">Dream AI Lab and NoahAI Labs are separate organizations. This related-service case study is not an independent comparison. It does not imply affiliation with AOA, establish alias identity or guarantee future returns.</p>`,
+        title: 'Can AI Really Copy a Famous Trader\'s Method?',
+        excerpt: 'Public interviews may reveal principles, but they rarely include every number and exception needed for automated trading. The missing rules change who really owns the resulting strategy.',
+        content: `<p class="text-sm text-gray-500 mb-6">[Insight · September 26, 2026]</p><p class="text-lg text-gray-800 mb-6 leading-relaxed"><strong>Can AI reproduce a famous trader's method from a handful of interviews?</strong> Not exactly. Interviews may reveal ideas and risk principles, but software still needs precise numbers for when to buy, sell or stay out of the market.</p><figure class="mb-10 overflow-hidden rounded-2xl border border-slate-200 bg-slate-950"><img src="/images/news/news-100-noahai-public-strategy-research-og.jpg" alt="Public trading material becoming source-traceable hypotheses and PAPER research" width="1200" height="630" class="h-auto w-full" /><figcaption class="px-5 py-3 text-sm text-slate-300">The source and every added assumption should remain visible.</figcaption></figure><h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">A principle is not an order rule</h2><p class="text-lg text-gray-700 mb-6 leading-relaxed">The <a href="https://www.bitmex.com/blog/whale-trader-talks-aoa" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">2025 BitMEX AOA interview</a> discusses risk management, market-dependent entries, avoiding FOMO and controlling leverage. A computer, however, cannot act on “enter when the market looks good” until someone defines what “good” means.</p><h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">When an interpretation becomes a new strategy</h2><p class="text-lg text-gray-700 mb-6 leading-relaxed">Adding a moving average, RSI threshold or candle pattern may be reasonable research, but it should not be presented as the trader's official rule. A safer process preserves the interview as the source and labels every added number as a research hypothesis.</p><h2 class="text-2xl font-bold text-gray-900 mt-10 mb-5">What NoahAI is testing</h2><p class="text-lg text-gray-700 mb-6 leading-relaxed">In an internal development experiment, NoahAI kept the source material and marked rules not found in the original as added hypotheses. The resulting package remains unapproved research and does not enter a live account automatically. This is not a completed public feature or verified market performance.</p><p class="text-gray-600 text-sm border-t border-gray-200 pt-6 leading-relaxed">The primary source reviewed here is BitMEX's AOA interview. This article does not establish that AOA and a Korean alias often discussed with it are the same person, nor does it imply endorsement or affiliation. Dream AI Lab and NoahAI Labs are separate organizations; NoahAI appears as a related-service research example.</p>`,
         faq: [
           { question: 'Does NoahAI copy AOA\'s actual strategy?', answer: 'No. It structures principles visible in public material and labels added conditions as research hypotheses.' },
           { question: 'Is this an official partnership or endorsed strategy?', answer: 'No. It is independent research based on public material.' },
@@ -511,9 +510,9 @@ export const newsArticles: NewsArticle[] = [
   {
     id: 99,
     title:
-      '드림에이아이랩, 글로벌커플케어 파트너 운영체계 고도화…입점·문의·수수료·정산 원장 연결',
+      '글로벌커플케어, 국제결혼 업체 입점부터 상담·정산 기록까지 한곳에',
     excerpt:
-      '검색 가능한 파트너 페이지와 문의 CRM, 등급별 수수료, 거래 시점 정산 원장, 외부 메신저 알림 설정을 연결했다. 실제 PG·은행 지급과 자동 알림은 파트너별 활성화 조건을 거친다.',
+      '검색용 업체 페이지와 고객 문의, 상담 진행 상황, 수수료 계산을 한 화면에서 관리한다. 새 문의는 텔레그램·라인 등 업체가 사용하는 메신저로 알릴 수 있다.',
     category: 'press',
     date: '2026-09-26',
     modifiedDate: '2026-09-26',
@@ -604,66 +603,70 @@ export const newsArticles: NewsArticle[] = [
       {
         question: '글로벌커플케어에는 국제결혼중개업체만 입점할 수 있나요?',
         answer:
-          '아니다. 필요한 인허가를 갖춘 국내·해외 업체뿐 아니라 해외 거주자, 크리에이터, 커뮤니티 운영자와 현지 지원 파트너도 실제 활동 범위와 확인 절차에 따라 참여를 제안할 수 있다. 각 유형의 업무 권한과 계약 책임은 분리된다.',
+          '아니다. 국제결혼 업체 외에도 현지 통역·생활 지원 파트너, 콘텐츠 제작자와 커뮤니티 운영자가 자신이 맡을 수 있는 업무를 제안할 수 있다. 인허가가 필요한 서비스는 자격을 갖춘 업체만 제공한다.',
       },
       {
         question: '국제결혼 업체 입점은 무료인가요?',
         answer:
-          '현재 공개된 초기 파트너 안내에는 무료 입점과 무료 공개 홈페이지가 포함된다. 검증, 고급 CRM, 번역·현지화, 캠페인, 거래 인프라 등 추가 기능은 개통 시점과 개별 계약에 따라 조건이 달라질 수 있으므로 신청 전 최신 화면과 계약 조건을 확인해야 한다.',
+          '현재 초기 파트너에게는 무료 입점과 공개 업체 페이지를 제공한다. 번역, 광고 캠페인과 추가 운영 기능은 이용 범위와 계약에 따라 비용이 달라질 수 있다.',
       },
       {
         question: '글로벌커플케어의 업체 수수료는 어떻게 정해지나요?',
         answer:
-          '공개 정책상 정상요율은 Standard 5.5%에서 Platinum 3.5%까지이며, 창립 파트너는 2027년 9월 30일까지 0.5%p 할인이 적용된다. 변경된 등급은 다음 신규 거래부터 적용하고 이미 확정된 거래 요율은 소급 변경하지 않는다. PG 비용, 부가세와 개별 계약 조건은 별도다.',
+          'Standard 5.5%부터 Platinum 3.5%까지 등급별로 다르다. 등급이 바뀌면 새 거래부터 새 요율을 적용하고, 이미 시작된 거래의 수수료는 바꾸지 않는다.',
       },
       {
         question: 'Telegram·Slack·Discord·LINE 알림은 바로 사용할 수 있나요?',
         answer:
-          '업체별 설정과 전송 구조가 배포돼 있으며, 각 업체가 자신의 공식 토큰 또는 Webhook을 저장한 뒤 테스트 발송의 실제 수신을 확인해야 자동 알림을 켤 수 있다. Kakao 알림톡은 승인 템플릿과 발송 사업자 연동이 필요한 별도 범위이며 현재 지원 채널로 안내하지 않는다.',
+          '업체가 연결 정보를 등록한 뒤 시험 메시지를 실제로 받아야 자동 알림을 켤 수 있다. 카카오 알림톡은 현재 지원하지 않는다.',
       },
       {
         question: '글로벌커플케어가 국제결혼 상대를 직접 추천하거나 중개하나요?',
         answer:
-          '플랫폼 운영자는 결혼 상대방 선정·추천이나 혼인을 위한 상담·알선을 직접 수행하지 않는다. 독립 업체와 파트너의 공개 정보 비교, 문의, 계약·운영 기록을 연결하며 실제 중개·전문 서비스의 책임과 인허가는 해당 제공자에게 있다.',
+          '아니다. 글로벌커플케어는 업체 정보를 비교하고 문의할 수 있도록 돕는 플랫폼이다. 실제 국제결혼 상담과 중개는 자격을 갖춘 독립 업체가 담당한다.',
       },
       {
         question: '결제와 정산 기능은 실제 송금까지 자동으로 처리하나요?',
         answer:
-          '거래 당시 등급·요율·플랫폼 수수료·업체 정산액과 단계별 지급 증빙을 보존하는 운영 구조는 구축됐다. 다만 실제 PG 결제와 은행 지급은 관련 계약, 심사와 운영 설정이 활성화된 범위에서만 제공되며 화면에 활성화되지 않은 결제·에스크로를 이용 가능하다고 간주해서는 안 된다.',
+          '아직 아니다. 수수료와 정산 예정액을 계산하고 기록하는 기능은 있지만 실제 카드 결제와 업체 계좌 송금은 운영하지 않는다.',
       },
     ],
     content: `
       <p class="text-sm text-gray-500 mb-6">[보도자료 · 서울 · 2026-09-26]</p>
-      <p class="text-xl font-semibold text-gray-800 mb-3 leading-relaxed">— 검색 가능한 파트너 페이지와 국가별 서비스, 문의 CRM을 하나의 운영 흐름으로 연결</p>
-      <p class="text-xl font-semibold text-gray-800 mb-3 leading-relaxed">— Standard 5.5%~Platinum 3.5% 등급별 요율과 거래 시점 수수료·정산 예정액 원장 적용</p>
-      <p class="text-xl font-semibold text-gray-800 mb-8 leading-relaxed">— Telegram·Slack·Discord·LINE 알림 설정 구조 배포, 파트너별 실제 수신 확인 후 자동 알림 활성화</p>
+      <p class="text-xl font-semibold text-gray-800 mb-3 leading-relaxed">— 업체별 홈페이지에서 고객 문의와 상담 진행 상황을 이어서 관리</p>
+      <p class="text-xl font-semibold text-gray-800 mb-3 leading-relaxed">— 계약 당시 수수료와 업체가 받을 금액을 장부에 남겨 이후 변경 방지</p>
+      <p class="text-xl font-semibold text-gray-800 mb-8 leading-relaxed">— 텔레그램·슬랙·디스코드·라인으로 새 문의와 주요 업무 알림 전달</p>
 
-      <p class="text-lg text-gray-800 mb-8 leading-relaxed"><strong>서울 — 드림에이아이랩은</strong> 국제결혼 정보·업체 비교·정착 플랫폼 글로벌커플케어(Global Couple Care, GCC)의 파트너 운영체계를 고도화했다고 26일 밝혔다. 공개 파트너 페이지에서 시작된 문의를 상담 상태, 계약 기록, 등급별 수수료와 거래 시점 정산 원장까지 연결하고, 운영 사건을 외부 메신저 알림 설정과 연계했다.</p>
+      <p class="text-lg text-gray-800 mb-8 leading-relaxed"><strong>서울 — 국제결혼 업체가 온라인 입점부터 고객 상담, 계약과 정산 예정액까지 한곳에서 관리할 수 있는 서비스가 마련됐다.</strong> 드림에이아이랩은 국제결혼 정보·업체 비교 플랫폼 글로벌커플케어(Global Couple Care, GCC)의 파트너 관리 기능을 확대했다고 26일 밝혔다.</p>
 
       <figure class="mb-10 overflow-hidden rounded-2xl border border-slate-200 bg-slate-950"><img src="/images/news/news-99-globalcouplecare-partner-platform-og.jpg" alt="국제결혼 업체와 글로벌 파트너의 공개 페이지 문의 수수료 정산 원장 알림 설정 구조" width="1200" height="630" class="h-auto w-full" loading="eager" decoding="async" /><figcaption class="px-5 py-3 text-sm leading-relaxed text-slate-300">글로벌커플케어는 검색 가능한 공개 정보와 문의·권한·거래 기록을 하나의 파트너 운영 흐름으로 연결한다.</figcaption></figure>
 
-      <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-5">파트너 공개 정보부터 거래 기록까지 연결</h2>
-      <p class="text-lg text-gray-700 mb-6 leading-relaxed">국제결혼 업체와 글로벌 파트너는 운영 국가·도시, 서비스 범위, 대표 콘텐츠, FAQ와 문의 경로를 공개 페이지에 정리할 수 있다. 문의가 접수되면 출처, 담당자, 후속 일정과 상담 상태를 이어서 관리한다. 파트너 유형과 권한은 국내·해외 업체, 크리에이터, 커뮤니티 운영자, 현지 지원 파트너 등 실제 수행 업무에 따라 분리하며, 필요한 인허가와 계약 책임은 각 제공자에게 있다.</p>
-      <p class="text-lg text-gray-700 mb-8 leading-relaxed">상업 등급은 Standard, Verified, Silver, Gold, Platinum으로 구분한다. 공개 정상요율은 5.5%에서 3.5%이며 창립 파트너는 2027년 9월 30일까지 0.5%p 할인을 적용받는다. 거래가 만들어질 때 적용 등급·요율·플랫폼 수수료·정산 예정액과 정책 버전을 원장에 남겨 이후 등급 변경과 분리한다.</p>
+      <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-5">카카오톡과 전화에 흩어진 상담을 한곳으로</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">국제결혼 업체의 상담은 카카오톡, 밴드, 유튜브, 전화처럼 여러 채널에서 시작된다. 고객이 어느 국가의 어떤 서비스를 보고 연락했는지 기록이 흩어지기 쉽고, 담당자가 바뀌면 이전 상담 내용을 다시 확인하기도 어렵다.</p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">글로벌커플케어에 입점한 업체는 운영 국가와 도시, 서비스 내용, 비용 안내, 영상과 자주 묻는 질문을 자체 페이지에 올릴 수 있다. 고객이 페이지에서 문의하면 담당자와 상담 일정, 진행 상태가 함께 저장된다. 업체뿐 아니라 현지 통역과 생활 지원 파트너, 콘텐츠 제작자도 자신이 맡은 업무 범위에 맞춰 참여할 수 있다.</p>
 
-      <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-5">외부 메신저 알림은 실제 수신 확인 후 활성화</h2>
-      <p class="text-lg text-gray-700 mb-6 leading-relaxed">문의·채팅·계약·결제·정산 등 운영 사건을 Telegram Bot API, Slack Incoming Webhook, Discord Webhook, LINE Messaging API와 연결할 수 있는 설정·전송 대기열·관리자 모니터링 구조를 배포했다. 자동 알림은 설정 저장만으로 켜지지 않는다. 각 파트너가 공식 토큰 또는 Webhook을 등록하고 <strong>저장 → 테스트 발송 → 실제 수신 확인 → 자동 알림 활성화</strong> 절차를 마쳐야 한다.</p>
-      <p class="text-lg text-gray-700 mb-8 leading-relaxed">외부 메시지에는 고객 이름, 연락처, 문의 본문과 계약 내용을 싣지 않고 업무 종류와 보안 로그인 경로만 전달하도록 설계했다. 카카오 알림톡은 승인 템플릿과 발송 사업자 계약이 필요한 별도 연동 범위로 현재 지원 채널에 포함하지 않는다.</p>
+      <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-5">수수료는 거래가 시작될 때 확정</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">파트너 수수료는 Standard 5.5%에서 Platinum 3.5%까지 등급별로 다르다. 창립 파트너는 2027년 9월 30일까지 각 등급에서 0.5%포인트를 할인받는다. 등급이 오르면 이후 새로 시작하는 거래부터 낮아진 수수료가 적용된다.</p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">계약이 만들어지는 시점에 당시 등급과 수수료율, 플랫폼 수수료, 업체가 받을 예정 금액을 전자 장부에 남긴다. 나중에 등급이나 정책이 달라지더라도 이미 시작된 거래의 계산이 바뀌지 않도록 하기 위해서다.</p>
 
-      <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-5">현재 운영 범위와 활성화 조건</h2>
-      <p class="text-lg text-gray-700 mb-6 leading-relaxed">파트너 페이지, 문의 관리, 권한, 등급별 수수료 정책, 거래 시점 원장과 단계별 지급 증빙 구조는 배포됐다. 다만 <strong>현재 운영 환경의 결제 모드는 샌드박스이며 실제 PG 결제와 은행 지급은 활성화되지 않았다.</strong> 실제 결제·외부 송금·에스크로는 PG·금융기관 계약, 심사와 운영 설정을 마친 범위에서만 별도로 제공된다. 메신저 자동 알림도 파트너별 실제 수신 확인 전에는 활성 기능으로 간주하지 않는다.</p>
-      <p class="text-lg text-gray-700 mb-8 leading-relaxed">공개 파트너 운영 인프라는 배포됐으며 일반 공개 파트너 등록은 초기 모집 단계다. 글로벌커플케어는 국제결혼 상대를 직접 선정·추천하거나 혼인을 알선하지 않는다. 독립 업체와 파트너가 공개한 정보의 비교와 문의, 계약·운영 기록을 연결하며 실제 중개·여행·행정·법률 서비스의 인허가와 책임은 해당 제공자에게 있다.</p>
+      <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-5">새 문의는 평소 쓰는 메신저로 알려준다</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">업체가 고객 문의를 놓치지 않도록 텔레그램, 슬랙, 디스코드, 라인 알림도 추가했다. 새 문의나 계약, 결제·정산 관련 업무가 생기면 업체가 선택한 메신저로 알림을 보낸다. 고객 이름과 연락처, 상담 내용은 외부 메신저에 표시하지 않고 로그인 후 플랫폼 안에서만 보도록 했다.</p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">업체가 메신저 연결 정보를 입력하면 먼저 시험 알림을 보낸다. 실제 휴대전화나 업무 채널에서 메시지를 받은 것이 확인된 뒤에만 자동 알림을 켤 수 있다. 카카오 알림톡은 이번 지원 대상에 포함되지 않았다.</p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-5">실제 결제와 송금은 아직 시작 전</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">이번에 배포한 범위는 업체 페이지, 상담 관리, 수수료 계산과 정산 기록, 메신저 알림 기능이다. <strong>신용카드 등 실제 결제와 업체 계좌로 돈을 보내는 기능은 아직 운영하지 않는다.</strong> 현재 결제 화면은 시험용 환경이며 PG사 및 금융기관과의 계약·심사가 마무리된 뒤 실제 운영을 시작할 예정이다.</p>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">글로벌커플케어의 일반 공개 파트너 모집도 초기 단계다. 플랫폼은 결혼 상대를 직접 골라주거나 혼인을 알선하지 않는다. 이용자가 독립된 국제결혼 업체와 파트너의 정보를 비교하고 문의할 수 있도록 돕고, 실제 중개와 여행·행정·법률 서비스는 자격을 갖춘 각 제공자가 책임진다.</p>
 
       <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-5">글로벌커플케어 소개</h2>
-      <p class="text-lg text-gray-700 mb-6 leading-relaxed">글로벌커플케어는 드림에이아이랩이 개발·운영하는 국제결혼 정보·업체 비교·글로벌 파트너 협업·정착 준비 플랫폼이다. 파트너 참여 조건은 <a href="https://globalcouplecare.com/agency/proposal" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">공식 입점 안내</a>에서 확인할 수 있다.</p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">글로벌커플케어는 드림에이아이랩이 개발·운영하는 국제결혼 정보·업체 비교·정착 준비 플랫폼이다. 국제결혼 업체와 현지 파트너의 참여 방법은 <a href="https://globalcouplecare.com/agency/proposal" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">공식 입점 안내</a>에 소개돼 있다.</p>
       <p class="text-sm leading-relaxed text-gray-500 border-t border-gray-200 pt-6">※ 수수료와 초기 입점 조건은 2026년 9월 26일 기준이며 변경될 수 있다. 최신 화면과 전자 계약이 우선한다. 본 자료는 특정 업체의 인허가·거래 성과·수익을 보증하지 않는다.</p>
     `,
     i18n: {
       en: {
         title:
-          'Dream AI Lab Upgrades Global Couple Care Partner Operations Across Onboarding, Inquiries, Fees and Settlement Records',
+          'Global Couple Care Brings Agency Onboarding, Customer Inquiries and Settlement Records Into One Place',
         excerpt:
-          'Public partner pages, inquiry CRM, tiered fees, transaction-time settlement records and privacy-safe messenger configuration now form one operating flow; real payments and automatic delivery remain activation-gated.',
+          'International marriage agencies can manage public profiles, customer inquiries, consultation progress and fee records in one service, with optional messenger alerts for new work.',
         faq: [
           { question: 'Can only licensed marriage agencies join Global Couple Care?', answer: 'No. Subject to role-specific checks and applicable licensing, overseas residents, creators, community operators, and local support partners may propose activities they can actually perform. Permissions and contractual responsibilities remain separated by partner type.' },
           { question: 'Is partner onboarding free?', answer: 'The current early-partner offer includes free onboarding and a free public partner page. Verification, advanced CRM, localization, campaigns, and transaction infrastructure may carry separate terms when activated.' },
@@ -672,19 +675,19 @@ export const newsArticles: NewsArticle[] = [
         ],
         content: `
           <p class="text-sm text-gray-500 mb-6">[Press release · Seoul · September 26, 2026]</p>
-          <p class="text-xl font-semibold text-gray-800 mb-3 leading-relaxed">— Searchable partner pages and country-specific services connect to inquiry CRM</p>
-          <p class="text-xl font-semibold text-gray-800 mb-3 leading-relaxed">— Tiered rates from 5.5% for Standard to 3.5% for Platinum are recorded with transaction-time fee and settlement data</p>
-          <p class="text-xl font-semibold text-gray-800 mb-8 leading-relaxed">— Telegram, Slack, Discord and LINE configuration is deployed; each partner must confirm actual receipt before automatic alerts are enabled</p>
-          <p class="text-lg text-gray-800 mb-8 leading-relaxed"><strong>SEOUL — Dream AI Lab announced</strong> an upgrade to partner operations for Global Couple Care (GCC), its international marriage information, agency-comparison and settlement-preparation platform. Public partner pages now connect to inquiry status, contract records, tiered fees, transaction-time settlement records and external messenger configuration.</p>
+          <p class="text-xl font-semibold text-gray-800 mb-3 leading-relaxed">— Public agency pages connect directly to customer inquiries and follow-up records</p>
+          <p class="text-xl font-semibold text-gray-800 mb-3 leading-relaxed">— The fee rate and expected agency settlement are fixed in the record when a transaction begins</p>
+          <p class="text-xl font-semibold text-gray-800 mb-8 leading-relaxed">— Telegram, Slack, Discord and LINE can notify partners about new work</p>
+          <p class="text-lg text-gray-800 mb-8 leading-relaxed"><strong>SEOUL — International marriage agencies can now manage online onboarding, customer consultations, contracts and expected settlement amounts in one place.</strong> Dream AI Lab announced an expansion of partner-management features for Global Couple Care (GCC).</p>
           <figure class="mb-10 overflow-hidden rounded-2xl border border-slate-200 bg-slate-950"><img src="/images/news/news-99-globalcouplecare-partner-platform-og.jpg" alt="Global Couple Care public pages, inquiry CRM, tiered fees, settlement records and messenger configuration" width="1200" height="630" class="h-auto w-full" loading="eager" decoding="async" /><figcaption class="px-5 py-3 text-sm leading-relaxed text-slate-300">GCC connects searchable public information with permissioned inquiry and transaction records.</figcaption></figure>
-          <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-5">Partner discovery and operating records</h2>
-          <p class="text-lg text-gray-700 mb-6 leading-relaxed">Partners can organize operating countries, cities, service scope, representative content, FAQs and inquiry routes on a public page. New inquiries retain source, owner, follow-up schedule and status. Partner roles and permissions remain separate for agencies, creators, community operators and local support partners; licenses and regulated responsibilities remain with each provider.</p>
-          <p class="text-lg text-gray-700 mb-8 leading-relaxed">Published normal rates range from 5.5% for Standard to 3.5% for Platinum. Founding partners receive a 0.5 percentage-point discount through September 30, 2027. The applicable tier, rate, platform fee, expected partner settlement and policy version are preserved when a transaction is created.</p>
-          <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-5">Receipt-gated messenger automation</h2>
-          <p class="text-lg text-gray-700 mb-6 leading-relaxed">Configuration, a durable delivery queue and administrator monitoring have been deployed for Telegram Bot API, Slack Incoming Webhook, Discord Webhook and LINE Messaging API. Automatic delivery follows <strong>save → test send → confirm actual receipt → enable automatic alerts</strong>. External messages omit customer names, contact details, inquiry text and contract content.</p>
-          <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-5">Current operating boundary</h2>
-          <p class="text-lg text-gray-700 mb-6 leading-relaxed">Partner pages, inquiry management, permissions, tiered-fee policy, transaction-time records and staged payout evidence are deployed. However, <strong>the current payment mode is sandbox; production payment-gateway processing and bank payouts are not active.</strong> Payments, escrow and external transfers require separate contracts, reviews and production configuration. Messenger automation is not considered active for a partner until actual receipt is confirmed.</p>
-          <p class="text-lg text-gray-700 mb-8 leading-relaxed">Public partner infrastructure is deployed and general public-partner onboarding remains at an early stage. GCC does not select or recommend marriage partners or directly broker marriages. Independent providers remain responsible for licenses and regulated services.</p>
+          <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-5">From scattered messages to one consultation record</h2>
+          <p class="text-lg text-gray-700 mb-6 leading-relaxed">Agencies often receive inquiries through KakaoTalk, YouTube, phone calls and social media. GCC gives each partner a public page for countries, services, prices and FAQs, then keeps the source, owner, next appointment and status of each inquiry together.</p>
+          <p class="text-lg text-gray-700 mb-8 leading-relaxed">Published rates range from 5.5% for Standard to 3.5% for Platinum. When a transaction begins, GCC records the tier, fee rate, platform fee and expected agency settlement so later policy changes do not rewrite the original calculation.</p>
+          <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-5">Messenger alerts without exposing customer details</h2>
+          <p class="text-lg text-gray-700 mb-6 leading-relaxed">Partners may connect Telegram, Slack, Discord or LINE. A test message must arrive before automatic alerts are switched on. External messages contain only the work type and a secure login path, not a customer's name, contact information or consultation text.</p>
+          <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-5">Payments are not live yet</h2>
+          <p class="text-lg text-gray-700 mb-6 leading-relaxed">The deployed release covers partner pages, inquiry management, fee calculations, settlement records and messenger alerts. <strong>Production card payments and bank payouts are not active.</strong> The current payment environment is a sandbox and will require separate payment-provider and financial-institution approval before launch.</p>
+          <p class="text-lg text-gray-700 mb-8 leading-relaxed">General public-partner onboarding is still at an early stage. GCC does not select or recommend marriage partners or directly broker marriages. Licensed independent providers remain responsible for regulated services.</p>
           <p class="text-lg text-gray-700 mb-6 leading-relaxed">Partner conditions are available on the <a href="https://globalcouplecare.com/agency/proposal" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">official onboarding page</a>.</p>
           <p class="text-sm leading-relaxed text-gray-500 border-t border-gray-200 pt-6">Fees and early-partner terms are current as of September 26, 2026 and may change. The latest product screens and electronic agreements govern. This release does not guarantee licensing, transaction results or income.</p>
         `,
