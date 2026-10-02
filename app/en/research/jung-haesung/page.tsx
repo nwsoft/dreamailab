@@ -55,7 +55,7 @@ export default function JungHaesungEnglishProfilePage() {
                 url: englishUrl,
                 name: 'Jung Haesung – AI Researcher',
                 inLanguage: 'en-US',
-                dateModified: '2026-08-04',
+                dateModified: '2026-10-02',
                 mainEntity: { '@id': JUNG_HAESUNG_PERSON_ID },
                 about: { '@id': AI_DIGITAL_CARE_LOG_ID },
               },
@@ -80,6 +80,14 @@ export default function JungHaesungEnglishProfilePage() {
           {
             heading: 'Architecture flow',
             body: AI_DIGITAL_CARE_LOG_FLOW_EN,
+          },
+          {
+            heading: 'Recent product architecture · October 2, 2026',
+            body: 'NoahAI connects strategy definitions, PAPER evaluation, explainable judgment, execution authority and outcome records, with monthly personal-finance planning and assistant guidance. The documented public baseline is v3.9.2.1; v3.9.2.2 insurance comparison remains a development candidate. Jarame connects nine roles through consent, structured observations, purpose-specific reports and a health and care passport. Global Couple Care separates partner roles, commercial tiers and operational permissions, linking inquiries and contracts with notification queues and audit records. VeggieCare extends lifestyle logs into recipes, nutrition guidance, center operations, approved products and consent-based research governance. Live payments, external clinical or school integrations and model learning are subject to each product’s stated scope.',
+          },
+          {
+            heading: 'Strategy validation passport ecosystem',
+            body: 'NoahAI defines its world-first strategy validation passport ecosystem as a single lifecycle connecting source meaning, executable rules, version-specific evidence, package integrity, distribution and recipient revalidation. Strategy Studio structures supported rules; the passport preserves provenance, version, conditions and evidence; the Hub distributes packages for renewed verification in the recipient’s environment. E0 structural checks and E1 unverified creator-local results are excluded from verified rankings. Hash mismatches block imports, signatures are checked when present, and imported strategies remain inactive pending review. Integrity checks do not authenticate every input claim or guarantee future returns. Paid sales and settlement remain a separate stage. Industrial automation and agent-policy applications are research directions.',
           },
           {
             heading: 'Selected publications',

@@ -96,6 +96,10 @@ export const jungHaesungPersonSchema = {
     '시간축 맥락 데이터',
     '개인화 모델',
     'RWD·RWE 현장 실증',
+    '전략 버전·PAPER 평가·검증 여권',
+    '역할·동의 기반 협업과 건강·돌봄여권',
+    '파트너 업무 권한·알림 대기열·감사 기록',
+    '생활·영양 케어로그와 연구 데이터 거버넌스',
   ],
   subjectOf: [
     { '@type': 'WebPage', url: AI_DIGITAL_CARE_LOG_URL, name: 'AI 디지털케어로그 핵심 기술' },

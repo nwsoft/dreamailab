@@ -124,3 +124,8 @@ Agency SaaS · Marketplace · Consumer App · Data & Risk
 - [ ] 허브 status Commercial
 - [ ] globalcouplecare.com 오픈·기능 변경 시 본 MD·외부 정합 재검
 - [ ] 정착 연계 ↔ educarelog·totalcarelog MD 교차 일치
+
+
+## 2026-10-02 연구·제품 적용 정합
+
+서비스 페이지에 분야별 `ResearchApplications`를 연결했다. 현행 구현과 제한은 [연구자 업데이트 근거](../RESEARCHER_PROFILE_UPDATE_20261002.md)를 따른다.

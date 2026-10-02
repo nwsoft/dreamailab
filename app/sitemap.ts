@@ -151,7 +151,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: url('/research/jung-haesung'),
-      lastModified: new Date('2026-08-04'),
+      lastModified: new Date('2026-10-02'),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
@@ -211,7 +211,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: url('/en/research/jung-haesung'),
-      lastModified: new Date('2026-08-04'),
+      lastModified: new Date('2026-10-02'),
       changeFrequency: 'monthly',
       priority: 0.75,
     },

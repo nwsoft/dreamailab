@@ -113,3 +113,8 @@
 - [ ] JSON-LD 서비스명·FAQ와 본문 일치
 - [ ] CTA가 jarame.or.kr로만 연결(DAL `/contact` 혼선 없음)
 - [ ] jarame.or.kr 기능·톤 변경 시 본 MD `last_reviewed` 갱신
+
+
+## 2026-10-02 연구·제품 적용 정합
+
+서비스 페이지에 분야별 `ResearchApplications`를 연결했다. 현행 구현과 제한은 [연구자 업데이트 근거](../RESEARCHER_PROFILE_UPDATE_20261002.md)를 따른다.

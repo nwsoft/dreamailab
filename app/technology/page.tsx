@@ -1,3 +1,5 @@
+import StrategyPassportResearch from '../../components/StrategyPassportResearch'
+import ResearchApplications from '../../components/ResearchApplications'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Header from '../../components/Header'
@@ -142,6 +144,8 @@ export default function TechnologyPage() {
       </section>
 
       <PageClosingSection title="기술은 실제 제품과 운영에서 완성됩니다" description="현재 서비스와 사업 구조에서 공통 아키텍처가 어떻게 다른 산업의 가치로 이어지는지 확인해 보세요." primary={{ label: '서비스 포트폴리오', href: '/services' }} secondary={[{ label: '비즈니스 구조', href: '/business' }]} />
+      <StrategyPassportResearch />
+      <ResearchApplications />
       <Footer />
     </div>
   )

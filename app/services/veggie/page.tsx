@@ -1,3 +1,4 @@
+import ResearchApplications from '../../../components/ResearchApplications'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Header from '../../../components/Header'
@@ -981,6 +982,7 @@ export default function VeggieService() {
         </div>
       </section>
 
+      <ResearchApplications domain="VeggieCare" />
       <Footer />
     </div>
   )

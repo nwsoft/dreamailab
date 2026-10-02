@@ -1,6 +1,6 @@
 # 베지케어 (VeggieCare) — 스펙 요약 (웹·플랫폼 정합)
 
-- **last_reviewed:** 2026-07-06
+- **last_reviewed:** 2026-10-02
 - **canonical 웹:** https://dreamailab.com/services/veggie
 - **외부 플랫폼:** https://veggie.care
 - **DAL 도메인:** 라이프스타일 (VG) · **상태:** Beta
@@ -51,12 +51,12 @@
 
 | 기능 | 코드 | DAL |
 |------|------|-----|
-| 베지케어로그 CRUD + AI 인사이트 | `me/carelog.tsx` (UI) · API mount 진행 | ✅ UI 반영 · API 🔄 |
+| 베지케어로그 CRUD + AI 인사이트 | `me/carelog.tsx` (UI) · API 마운트 완료 | ✅ UI·API 제공 |
 | 영양소 가이드·오늘의 식단 | `/nutrients`, `/today` | DAL 반영 |
 | 문의·커뮤니티 AI | `inquiries`, `community_ai` | DAL 반영 |
 | 레시피·맛집·커뮤니티·챌린지 | pages | ✅ 반영 |
 | 베지 마켓·정기배송·파트너 | `market`, `subscriptions`, `partner/` | ✅ 본 MD·페이지 |
-| OpenAI 레시피 | PRIORITY §7 미완 | 「차기」 표기 |
+| OpenAI 레시피 | 선택적 OpenAI·스텁 폴백 | 조건부 제공 |
 
 ## 지향 모드 (`supportModes`) — **로드맵**
 
@@ -119,3 +119,8 @@
 - [ ] totalcarelog.md 베지케어 연계 섹션 상호 일치
 - [ ] veggie.care AI·데이터 오픈 시 status·CTA 갱신
 - [ ] 외부 마케팅 수치를 IR·홈에 이식하지 않음
+
+
+## 2026-10-02 연구·제품 적용 정합
+
+서비스 페이지에 분야별 `ResearchApplications`를 연결했다. 현행 구현과 제한은 [연구자 업데이트 근거](../RESEARCHER_PROFILE_UPDATE_20261002.md)를 따른다.

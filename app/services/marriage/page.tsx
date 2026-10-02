@@ -1,3 +1,4 @@
+import ResearchApplications from '../../../components/ResearchApplications'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Header from '../../../components/Header'
@@ -1292,6 +1293,7 @@ export default function MarriageService() {
         </div>
       </section>
 
+      <ResearchApplications domain="Global Couple Care" />
       <Footer />
     </div>
   )

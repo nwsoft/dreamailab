@@ -1,8 +1,10 @@
+import StrategyPassportResearch from '../../../components/StrategyPassportResearch'
 import type { Metadata } from 'next'
 import type { ReactNode } from 'react'
 import Link from 'next/link'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
+import ResearchApplications from '../../../components/ResearchApplications'
 import {
   AI_DIGITAL_CARE_LOG_FLOW_KO,
   AI_DIGITAL_CARE_LOG_PUBLIC_KO,
@@ -113,7 +115,7 @@ const profilePageSchema = {
   url: JUNG_HAESUNG_URL,
   name: 'AI 연구자 정해성',
   inLanguage: 'ko-KR',
-  dateModified: '2026-08-17',
+  dateModified: '2026-10-02',
   mainEntity: { '@id': JUNG_HAESUNG_PERSON_ID },
   about: { '@id': AI_DIGITAL_CARE_LOG_ID },
 }
@@ -220,6 +222,9 @@ export default function JungHaesungProfilePage() {
             </p>
           </div>
         </section>
+
+        <StrategyPassportResearch />
+      <ResearchApplications />
 
         <section className="border-t border-slate-200 bg-white py-14">
           <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">

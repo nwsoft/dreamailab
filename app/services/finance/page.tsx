@@ -1,3 +1,4 @@
+import StrategyPassportResearch from '../../../components/StrategyPassportResearch'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Header from '../../../components/Header'
@@ -6,13 +7,13 @@ import Footer from '../../../components/Footer'
 const pageCanonical = 'https://dreamailab.com/services/finance/'
 
 export const metadata: Metadata = {
-  title: '노아AI 최신 운영 안내 (v3.8.9.27) | Noah AI Labs 이전 완료',
+  title: '노아AI 최신 운영 안내 (v3.9.2.1) | Noah AI Labs 이전 완료',
   description:
     '정해성 AI 연구자가 AI디지털케어로그의 범용성을 금융·재테크 시장에서 실증하기 위해 설계·개발·사업화한 NoahAI의 독립 운영과 최신 기준을 안내합니다.',
   keywords: [
     '노아AI',
     'Noah AI Labs',
-    'v3.8.9.27',
+    'v3.9.2.1',
     '자동업데이트',
     '거래소 검증 UX',
     'AI 금융 인프라',
@@ -21,9 +22,9 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: pageCanonical },
   openGraph: {
-    title: '노아AI 최신 운영 안내 (v3.8.9.27)',
+    title: '노아AI 최신 운영 안내 (v3.9.2.1)',
     description:
-      '노아AI는 Noah AI Labs로 이전되었고, 최신 운영 기준(v3.8.9.27)과 업데이트 핵심 변경사항을 이 페이지에서 요약합니다.',
+      '노아AI는 Noah AI Labs로 이전되었고, 최신 운영 기준(v3.9.2.1)과 업데이트 핵심 변경사항을 이 페이지에서 요약합니다.',
     url: pageCanonical,
     siteName: 'Dream AI Lab',
     type: 'article',
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: '노아AI 최신 운영 안내 (v3.8.9.27)',
+    title: '노아AI 최신 운영 안내 (v3.9.2.1)',
     description: '이전 완료 후 최신 운영 기준과 공식 확인 경로를 제공합니다.',
   },
   robots: { index: true, follow: true },
@@ -41,11 +42,11 @@ export default function FinanceServiceNoticePage() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: '노아AI 최신 운영 안내 (v3.8.9.27)',
+    headline: '노아AI 최신 운영 안내 (v3.9.2.1)',
     description:
-      'Dream AI Lab의 노아AI 안내 페이지. Noah AI Labs 이전 완료 및 최신 운영 기준(v3.8.9.27) 요약.',
+      'Dream AI Lab의 노아AI 안내 페이지. Noah AI Labs 이전 완료 및 최신 운영 기준(v3.9.2.1) 요약.',
     datePublished: '2026-07-06T00:00:00+09:00',
-    dateModified: '2026-08-04T00:00:00+09:00',
+    dateModified: '2026-10-02T00:00:00+09:00',
     inLanguage: 'ko-KR',
     mainEntityOfPage: pageCanonical,
     about: {
@@ -53,7 +54,7 @@ export default function FinanceServiceNoticePage() {
       name: 'NoahAI',
       applicationCategory: 'FinanceApplication',
       operatingSystem: 'Windows',
-      softwareVersion: '3.8.9.27',
+      softwareVersion: '3.9.2.1',
     },
     publisher: {
       '@type': 'Organization',
@@ -77,7 +78,7 @@ export default function FinanceServiceNoticePage() {
             <strong>Noah AI Labs</strong>에서 독립 운영되고 있습니다.
           </p>
           <p className="mt-5 inline-flex items-center rounded-full bg-white/15 px-4 py-2 text-sm font-semibold">
-            최신 운영 기준: v3.8.9.27 · 기준일: 2026-07-06
+            최신 운영 기준: v3.9.2.1 · 기준일: 2026-10-02
           </p>
         </div>
       </section>
@@ -104,10 +105,10 @@ export default function FinanceServiceNoticePage() {
           <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-6 md:p-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">이번 기준선 핵심 반영</h2>
             <ul className="space-y-2 text-gray-800 text-sm md:text-base">
-              <li>• 자동업데이트 경로 정합: 설치 위치 우선 캐시 + LocalAppData/TEMP 폴백</li>
-              <li>• 업데이트 진행률 가시성: 다운로드 진행률(%)·수신량(MB)·완료 경로 노출</li>
-              <li>• 거래소 검증 UX 강화: Bitget/Bybit/OKX 실패 원인별 조치 가이드</li>
-              <li>• 시작/정지 응답성 개선: 비동기 처리 + lazy connect + 초기 동기 수집 제거</li>
+              <li>• Strategy Studio: 전략 정의·버전과 PAPER 평가를 검증 여권·Strategy Hub로 연결</li>
+              <li>• 자산통합·생활금융: 수입·소비·내 계좌 이체 구분, 월간 계획과 목표 점검</li>
+              <li>• AI 어시스턴트: 기능·오류 안내와 생활금융 질문 연결</li>
+              <li>• v3.9.2.2: 보험 이해·보장 비교·상담 연계 개발 후보. 공개 제공 완료와 구분</li>
             </ul>
           </div>
         </div>
@@ -118,7 +119,7 @@ export default function FinanceServiceNoticePage() {
           <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">공식 확인 경로</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             <a
-              href="https://noahailabs.com/ko"
+              href="https://noahailabs.com/ko/product/status"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white rounded-xl p-6 border border-gray-200 hover:border-indigo-300 transition-colors"
@@ -162,6 +163,7 @@ export default function FinanceServiceNoticePage() {
         </div>
       </section>
 
+      <StrategyPassportResearch />
       <Footer />
     </div>
   )

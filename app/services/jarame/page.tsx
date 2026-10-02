@@ -1,3 +1,4 @@
+import ResearchApplications from '../../../components/ResearchApplications'
 import type { Metadata } from 'next'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
@@ -2716,6 +2717,7 @@ export default function JarameService() {
         </div>
       </section>
 
+      <ResearchApplications domain="자람이" />
       <Footer />
     </div>
   )
