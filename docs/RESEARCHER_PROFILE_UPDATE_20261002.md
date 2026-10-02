@@ -42,3 +42,21 @@
 사용자 지적에 따라 `noahai_client/docs/STRATEGY_VALIDATION_MARKET_POSITIONING_39119.md`와 `AI_CUSTOM_STRATEGY_SHARING_AND_PASSPORT.md`, `trading/strategy_package.py`, NoahAI 공식 전략 여권 페이지를 추가 대조했다. 세계 최초의 대상은 원문·실행 규칙·버전별 근거·무결성 패키지·유통·사용자 재검증의 통합 생태계라는 NoahAI의 정의로 귀속해 설명한다. 독립 선행 사례 조사를 완료했다고 표기하지 않는다.
 
 한국어 프로필·기술·금융 페이지에 별도 `StrategyPassportResearch` 설명을 추가하고 영어 프로필과 공통 카드도 보강했다. 해시 불일치 차단, 조건부 서명 검사, 비활성 가져오기 코드와 E0/E1 랭킹 제외 계약을 설명한다. E2~E5 계약을 모든 기관에서 실제 근거 취득 완료한 것으로 표현하지 않는다. 해시만으로 입력 주장 자체의 진실성을 보장하거나 모든 사기를 원천 불가능하게 만든다고 표현하지 않는다. 금융 전략 유통이 현재 적용이며 산업 자동화·AI 에이전트는 확장 연구 방향이다.
+
+## 최종 운영 배포 · 2026-10-02 KST
+
+아래 기록이 앞선 배포 전 상태를 대체한다.
+
+| 사이트 | 배포 소스 | 운영 근거 |
+|---|---|---|
+| DreamAI Lab | `685bb02842ef27c5a01dfb877ed50d61cd8d8a8b` | Cloudflare Worker `dreamailab`, version `2230b77d-89d9-430d-a9be-291308b7c31f`. 프로필·기술·금융 설명 공개 확인. |
+| NoahAI Labs | `6170851ff82e7259a9e8cfd66f2646f5729f4a4a` | 최신 origin/main 기반 Cloudflare Production/main Pages `52fa146b`; founder-origin 새 여권 설명 공개 확인. |
+| Global Couple Care | 소개 파일 소스 `53255130683d43b6a8331d962f0301ed51ff4f0d` | GitHub 배포는 SSH reachability timeout. 직접 서버 격리 빌드 후 프런트 교체. 기존 운영 미커밋 변경 보존. 전체 서버 HEAD가 이 커밋과 동일하다는 뜻은 아님. 페이지 SHA256 `ac6023818c7695aa956319325aa5a70d71dd37dd4515b0380c371892a45d7e49`. frontend/backend active. |
+| VeggieCare | `52c6db563d5040bb0f93b096d106e57ad16e0efb` | Backend CI `36981276724` 및 Deploy `36981426944` 성공. 서버 HEAD 동일, `/healthz` 정상, 기술 페이지 새 설명 공개 확인. |
+| 자람이 | `6674c6764bd6215e9b8e8f0a3613ee0a3faefe23` | 프런트 정적 빌드·SEO 76개·문서 분류·npm audit 0건 확인 후 dist 교체. 서버 소스 HEAD 동일, backend/nginx active. 전체 백엔드 배포 아님. |
+
+다섯 사이트 실제 브라우저에서 새 연구자 설명을 확인했다. 최종 측정에서 화면 가로 넘침 없음. 공개 HTTP 확인 기록과 프로필 화면은 로컬 `output/researcher-release-20261002/`에 저장했다. 검색 재색인이나 외부 AI 응답 갱신은 검증하지 않았다.
+
+자람이 통합 사전검사는 기존 backend PyJWT 2.13.0·urllib3 2.7.0의 16개 감사 항목에서 중단돼 전체 37단계 통과를 주장하지 않는다. 이번 배포는 소개 변경 프런트로 한정했고 backend·DB·권한은 변경하지 않았다. 프런트 Axios만 패치 버전으로 갱신해 감사 0건을 확인했다.
+
+복구용 기존 산출물: GCC `/home/ubuntu/gcc-researcher-backup.3eFfZr`, 자람이 `/home/ubuntu/jarame-researcher-backup.Hh8mLK`. 기존 사용자 작업과 운영 데이터를 보존했다.
